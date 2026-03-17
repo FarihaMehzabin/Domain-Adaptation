@@ -57,6 +57,10 @@ prepare_runtime_dir() {
   mkdir -p "$RUNTIME_DIR"
 }
 
+git_is_locked() {
+  [ -e "$REPO_ROOT/.git/index.lock" ]
+}
+
 run_once() {
   ensure_repo || {
     log "Repository not found at $REPO_ROOT"
@@ -71,7 +75,15 @@ run_once() {
     return 0
   fi
 
-  git -C "$REPO_ROOT" add -A -- "$REPORTS_PATH"
+  if git_is_locked; then
+    log "Git index is locked; skipping this cycle."
+    return 0
+  fi
+
+  if ! git -C "$REPO_ROOT" add -A -- "$REPORTS_PATH"; then
+    log "git add failed; skipping this cycle."
+    return 1
+  fi
 
   if git -C "$REPO_ROOT" diff --cached --quiet -- "$REPORTS_PATH"; then
     log "No report changes to commit."
@@ -81,8 +93,16 @@ run_once() {
   local message
   message="${REPORT_AUTOPUSH_MESSAGE:-reports: auto-sync $(date -u +%Y-%m-%dT%H:%M:%SZ)}"
 
-  git -C "$REPO_ROOT" commit -m "$message" -- "$REPORTS_PATH"
-  git -C "$REPO_ROOT" push "$REMOTE_NAME" "$BRANCH_NAME"
+  if ! git -C "$REPO_ROOT" commit -m "$message" -- "$REPORTS_PATH"; then
+    log "git commit failed; skipping this cycle."
+    return 1
+  fi
+
+  if ! git -C "$REPO_ROOT" push "$REMOTE_NAME" "$BRANCH_NAME"; then
+    log "git push failed; will retry next cycle."
+    return 1
+  fi
+
   log "Pushed report changes to $REMOTE_NAME/$BRANCH_NAME"
 }
 
