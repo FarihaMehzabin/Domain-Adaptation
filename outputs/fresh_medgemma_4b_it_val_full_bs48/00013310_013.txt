@@ -1,0 +1,42 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is labeled AP.
+   - patient position: portable with confidence 90% + the image is labeled "portable".
+   - portable-likelihood: high + the image is burned-in label.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? lateral chest walls? The image shows the apices, costophrenic angles, and costal margins. The image is cropped, leaving the lateral chest walls partially obscured.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are diffusely hazy. Mediastinum is unremarkable. Bones are unremarkable. Diaphragms are unremarkable. Costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines present, likely representing medical devices. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the right side. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, tip position not visible, confidence 90%
+   - nasogastric tube: present, tip position not visible, confidence 90%
+   - central venous catheter: present, tip position not visible, confidence 90%
+   - right picc line: present, tip position not visible, confidence 90%
+   - left subclavian line: present, tip position not visible, confidence 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: diffuse bilateral infiltrates are present, appearing as hazy opacities throughout both lung fields. There is no evidence of pleural effusion.
+   - mediastinum/heart: the mediastinum is unremarkable. The heart size is difficult to assess due to the diffuse lung infiltrates.
+   - diaphragms/upper abdomen: the diaphragms are unremarkable. The upper abdomen is not well visualized due to the patient's position and the presence of multiple lines.
+   - bones/soft tissues: the bones are unremarkable. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Diffuse bilateral pulmonary infiltrates.
+   - Multiple medical devices are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is a portable AP radiograph, which limits the visualization of the lateral chest.
+   - The diffuse lung infiltrates obscure the visualization of the heart size and mediastinal structures.
+   - The tip positions of the central venous catheter, right picc line, and left subclavian line are not clearly visible.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

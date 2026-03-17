@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is labeled AP.
+   - patient position: portable with confidence 90% + the image is a portable chest X-ray.
+   - portable-likelihood: high + the image is a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are well visualized. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are multiple lines and tubes present. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES
+   - endotracheal tube: present, course: midline, tip position: unknown, confidence 90%
+   - nasogastric tube: present, course: unknown, tip position: unknown, confidence 90%
+   - central venous catheter: present, course: right internal jugular, tip position: superior vena cava, confidence 90%
+   - Swan-Ganz catheter: present, course: right internal jugular, tip position: right pulmonary artery, confidence 90%
+   - chest tubes: present, course: bilateral, tip position: unknown, confidence 90%
+   - arterial line: present, course: right internal jugular, tip position: unknown, confidence 90%
+   - pacemaker/defibrillator: present, course: unknown, tip position: unknown, confidence 90%
+   - other lines/tubes: present, course: unknown, tip position: unknown, confidence 90%
+
+4) FINDINGS
+   - lungs/pleura: diffuse bilateral infiltrates are present.
+   - mediastinum/heart: the heart size is difficult to assess due to the infiltrates. The mediastinum is unremarkable.
+   - diaphragms/upper abdomen: diaphragms are visible. The upper abdomen is not well visualized due to the patient's position and the presence of multiple lines and tubes.
+   - bones/soft tissues: the bony structures are visible.
+
+5) IMPRESSION
+   - Diffuse bilateral infiltrates are present.
+   - Multiple lines and tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The heart size is difficult to assess due to the infiltrates.
+   - The tip positions of the lines and tubes are not clearly visible.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR
