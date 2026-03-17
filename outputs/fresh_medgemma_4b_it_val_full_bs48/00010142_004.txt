@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest radiograph.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + the image appears to be a standard chest radiograph, not a portable.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + adequate inspiration is present. Posterior rib count is estimable.
+   - penetration: adequate with confidence 90% + adequate penetration is present. Vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + no significant motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are not well visualized.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles (The lungs are generally clear, but there is some increased opacity in the right lower lung field. The mediastinum is unremarkable. The bones are unremarkable. The diaphragms are well visualized. The costophrenic angles are obscured by the image cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are multiple lines and tubes present, likely representing medical devices. The image does not show any obvious grid/moiré artifacts, banding, or detector dropout. There are no compression artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is the left. There is a burned-in label top-left, but the content is not visible.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image has low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - Right picc line: present, course: right subclavian vein, tip position: indeterminate, confidence 80%
+   - Left picc line: present, course: left subclavian vein, tip position: indeterminate, confidence 80%
+   - Nasogastric tube: present, course: likely into the stomach, tip position: indeterminate, confidence 70%
+   - ETT: absent
+
+4) FINDINGS
+   - lungs/pleura:
+     - Right lower lung field: increased opacity, likely representing atelectasis or consolidation.
+     - Left lung: clear.
+     - Pleural surfaces: clear.
+   - mediastinum/heart:
+     - Mediastinum: unremarkable.
+     - Heart size: appears mildly enlarged.
+     - Cardiomediastinal silhouette: unremarkable.
+   - diaphragms/upper abdomen:
+     - Diaphragms: well visualized.
+     - Upper abdomen: unremarkable.
+   - bones/soft tissues:
+     - Bones: unremarkable.
+     - Soft tissues: unremarkable.
+
+5) IMPRESSION
+   - Right lower lung field opacity, likely representing atelectasis or consolidation.
+   - Mild cardiomegaly.
+   - Multiple medical devices are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image is cropped, obscuring the apices and costophrenic angles.
+   - The tip position of the picc lines and nasogastric tube is indeterminate.
+   - The content of the burned-in label top-left is not visible.
+
+7) DOMAIN VECTOR
