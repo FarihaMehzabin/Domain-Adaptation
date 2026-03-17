@@ -1,0 +1,33 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + adequate inspiration is present.
+   - penetration: adequate with confidence 90% + adequate penetration is present.
+   - motion blur: none with confidence 95% + no significant motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are well-visualized. The mediastinum is clearly defined. The bones are well-visualized. The diaphragms and costophrenic angles are clearly visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are surgical clips/foreign bodies present in the anterior mediastinum.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present. Burned-in text is present at the top-left corner
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - surgical clips/foreign bodies: present, anterior mediastinum, course: anterior mediastinum, tip position: anterior mediastinum, confidence 95%
+
+4) FINDINGS
+   - lungs/pleura: lungs are clear. No pleural effusion is identified.
+   - mediastinum/heart: The heart size is within normal limits. The mediastinum is unremarkable.
+   - diaphragms/upper abdomen: The diaphragms are well-visualized. The upper abdomen is unremarkable.
+   - bones/soft tissues: The ribs are intact. No acute fractures are identified.
+
+5) IMPRESSION
+   - Surgical clips/foreign bodies in the anterior mediastinum.
+
+6) LIMITATIONS / UNCERTAINTY
+   - No clinical history is available.
+   - The presence and nature of the surgical clips/foreign bodies are not fully characterized.
+   - The image quality is adequate, but further evaluation may be needed if clinical suspicion for a specific condition is high.
+
+7) DOMAIN VECTOR
