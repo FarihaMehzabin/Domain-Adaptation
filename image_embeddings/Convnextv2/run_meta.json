@@ -1,0 +1,26 @@
+{
+  "run_date_utc": "2026-03-09T01:50:29.386360+00:00",
+  "model_id": "facebook/convnextv2-base-22k-224",
+  "images_dir": "/workspace/data/nih_cxr14/split_images/train",
+  "output_dir": "/workspace/outputs/nih_cxr14_convnextv2_embeddings",
+  "num_input_images": 78571,
+  "num_embedded_images": 78571,
+  "num_failed_images": 0,
+  "embedding_dim": 1024,
+  "batch_size": 64,
+  "num_workers": 4,
+  "device_requested": "cuda",
+  "device_resolved": "cuda",
+  "fp16_on_cuda": true,
+  "recursive": true,
+  "max_images": null,
+  "extensions": [
+    ".jpeg",
+    ".jpg",
+    ".png"
+  ],
+  "organized_top_level_non_images": true,
+  "organize_dry_run": false,
+  "top_level_moves_count": 0,
+  "top_level_moves": []
+}

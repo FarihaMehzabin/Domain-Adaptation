@@ -1,0 +1,16 @@
+{
+  "run_date_utc": "2026-03-09T00:59:23.126373+00:00",
+  "model_id": "microsoft/BiomedVLP-CXR-BERT-specialized",
+  "embedding_dim": 128,
+  "num_reports": 78571,
+  "pooling": "cls",
+  "max_length": 512,
+  "batch_size": 32,
+  "device_requested": "cuda",
+  "device_resolved": "cuda:0",
+  "precision_mode": "bf16",
+  "reports_dir": "/workspace/report_gen/4B/reports_final",
+  "txt_glob": "*.txt",
+  "nan_rows_initial": 0,
+  "nan_rows_final": 0
+}

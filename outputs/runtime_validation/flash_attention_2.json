@@ -1,0 +1,37 @@
+{
+  "runtime_name": "flash_attention_2",
+  "model_id": "google/medgemma-4b-it",
+  "prompt_path": "/workspace/prompt.txt",
+  "prompt_mode": "compact",
+  "attn_implementation": "flash_attention_2",
+  "budget": {
+    "input_tokens": 559,
+    "sliding_window": 1024,
+    "attn_implementation": "flash_attention_2"
+  },
+  "validation_image": "/workspace/data/nih_cxr14/raw/images_001/images/00000006_000.png",
+  "targets": [
+    {
+      "max_new_tokens": 512,
+      "status": "ok",
+      "elapsed_seconds": 28.170865535736084,
+      "generated_chars": 2125,
+      "generated_tokens_estimate": 512
+    },
+    {
+      "max_new_tokens": 935,
+      "status": "ok",
+      "elapsed_seconds": 29.599369287490845,
+      "generated_chars": 2208,
+      "generated_tokens_estimate": 554
+    },
+    {
+      "max_new_tokens": 1200,
+      "status": "ok",
+      "elapsed_seconds": 29.333624362945557,
+      "generated_chars": 2208,
+      "generated_tokens_estimate": 554
+    }
+  ],
+  "passed": true
+}
