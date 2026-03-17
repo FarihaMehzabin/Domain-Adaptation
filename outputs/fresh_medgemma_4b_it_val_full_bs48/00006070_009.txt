@@ -1,0 +1,35 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the costophrenic angles and apices not fully visible. The costal margins are not well defined.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles (lungs are generally clear, mediastinum is visible, bones are visible, diaphragms are visible, and costophrenic angles are not fully visible due to cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (no obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low/med/high) with confidence 90% + edge enhancement (low/med/high) with confidence 90% + inversion suspected (no) with confidence 95% + noise texture (low/med/high) with confidence 90%
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Indeterminate: No devices or lines are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: lungs are clear bilaterally. No pleural effusion or pneumothorax is identified.
+   - mediastinum/heart: the heart size is within normal limits. The mediastinum is unremarkable.
+   - diaphragms/upper abdomen: diaphragms are visible. The upper abdomen is not well visualized due to cropping.
+   - bones/soft tissues: ribs are visible. No acute fractures are identified.
+
+5) IMPRESSION
+   - No acute cardiopulmonary abnormalities are identified.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The costophrenic angles and apices are not fully visualized due to image cropping.
+   - The upper abdomen is not well visualized.
+   - No devices or lines are clearly visible.
+
+7) DOMAIN VECTOR
