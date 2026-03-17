@@ -1,0 +1,37 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + the image appears to be a standard chest X-ray, not a portable.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + the image is not blurry.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs show diffuse bilateral infiltrates. The mediastinum is unremarkable. The bones are unremarkable. The diaphragms are unremarkable. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines present, likely representing medical devices. There is no evidence of grid or moiré artifacts. There is no evidence of banding or detector dropout. There is no evidence of compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. There is burned-in text present at the top-left corner
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube: present, course: midline, tip position: not visible, confidence 90%
+   - nasogastric tube: present, course: midline, tip position: not visible, confidence 90%
+   - central venous catheter: present, course: right subclavian, tip position: not visible, confidence 90%
+   - lines: multiple lines are present, likely representing medical devices. The exact course and tip positions are not visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: diffuse bilateral infiltrates are present throughout both lung fields. The infiltrates appear to be more prominent in the lower lung zones. There is no evidence of pleural effusion.
+   - mediastinum/heart: The mediastinum is unremarkable. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are unremarkable. The upper abdomen is unremarkable.
+   - bones/soft tissues: The bones are unremarkable. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION
+   - Diffuse bilateral infiltrates.
+   - Multiple medical devices are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The exact tip positions of the central venous catheter and nasogastric tube are not visible.
+   - The extent of the infiltrates is difficult to fully assess due to the image quality and the presence of medical devices.
+   - The presence of multiple lines makes it difficult to identify all of the medical devices.
+
+7) DOMAIN VECTOR

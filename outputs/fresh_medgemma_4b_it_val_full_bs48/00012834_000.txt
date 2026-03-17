@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is taken from anterior to posterior.
+   - patient position: portable with confidence 90% + patient is sitting or leaning forward.
+   - portable-likelihood: high + image is likely taken in a portable setting.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 85% + posterior rib count is estimable.
+   - penetration: adequate with confidence 90% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + image shows the upper chest and part of the abdomen.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + lungs are visible, mediastinum is visible, bones are visible, and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + there are multiple lines and wires visible in the image.
+   - markers/overlays: laterality marker present? burned-in text present? + a laterality marker is present. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - nasogastric tube: present, course: from the mouth to the stomach, tip position: not visible, confidence 80%
+   - endotracheal tube: present, course: from the trachea to the carina, tip position: not visible, confidence 80%
+   - central venous catheter: present, course: from the subclavian vein to the superior vena cava, tip position: not visible, confidence 80%
+   - multiple lines/wires: present, course: various, tip position: not visible, confidence 70%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral diffuse interstitial opacities are present, with a more prominent appearance in the lower lung zones.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in size and contour.
+     - the heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is partially visualized.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+     - the soft tissues of the chest wall are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral diffuse interstitial opacities, concerning for pulmonary edema, infection, or other inflammatory process.
+   - Endotracheal and central venous catheters are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip position of the nasogastric tube, endotracheal tube, and central venous catheter is not clearly visualized.
+   - The upper abdomen is only partially visualized.
+   - The extent of the interstitial opacities is not fully defined.
+
+7) DOMAIN VECTOR
