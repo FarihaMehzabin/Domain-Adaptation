@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is standing.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the upper chest and abdomen. The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are well-aerated. The mediastinum is well-defined. The bones are well-defined. The diaphragms are well-defined. The costophrenic angles are well-defined.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are surgical clips/sternal wires present.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present. There is burned-in text present at the top-left corner
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - central venous catheter: present, right subclavian, tip position not visible, confidence 80%
+   - sternal wires: present, multiple, course: anterior to posterior, tip position: not visible, confidence 95%
+   - surgical clips: present, multiple, course: anterior to posterior, tip position: not visible, confidence 95%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: multiple rounded opacities are present, largest measuring approximately 4 cm in diameter.
+     - left lung: clear.
+     - pleural surfaces: clear.
+   - mediastinum/heart
+     - heart size: normal.
+     - mediastinal contours: normal.
+     - great vessels: normal.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - liver: appears normal in size and contour.
+     - spleen: appears normal in size and contour.
+     - bowel loops: air-filled bowel loops are present in the upper abdomen.
+   - bones/soft tissues
+     - ribs: normal.
+     - clavicles: normal.
+     - scapulae: normal.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Multiple rounded opacities in the right lung. Further evaluation with CT is recommended.
+   - Central venous catheter in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The exact location and nature of the lung opacities are not clearly defined on this single view.
+   - The tip position of the central venous catheter is not clearly visible.
+
+7) DOMAIN VECTOR
