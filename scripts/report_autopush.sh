@@ -129,7 +129,7 @@ start() {
   fi
 
   rm -f "$PID_FILE"
-  nohup "$SCRIPT_PATH" daemon >>"$LOG_FILE" 2>&1 < /dev/null &
+  setsid "$SCRIPT_PATH" daemon >>"$LOG_FILE" 2>&1 < /dev/null &
   local pid=$!
   echo "$pid" > "$PID_FILE"
 
