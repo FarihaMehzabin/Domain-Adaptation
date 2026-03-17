@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely upright.
+   - portable-likelihood: low + the image appears to be a standard chest X-ray, not a portable.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear well-expanded.
+   - penetration: adequate with confidence 90% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially obscured.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are generally well-visualized. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the right side. Burned-in text is present at the top-left corner
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES
+   - endotracheal tube: present, tip position not clearly visible, confidence 70% + an endotracheal tube is present, but the tip position is not clearly visualized.
+   - central venous catheter: present, tip position not clearly visible, confidence 70% + a central venous catheter is present, but the tip position is not clearly visualized.
+   - nasogastric tube: present, tip position not clearly visible, confidence 70% + a nasogastric tube is present, but the tip position is not clearly visualized.
+   - other lines/tubes: indeterminate + other lines/tubes are present, but their positions and types are not clearly visualized.
+
+4) FINDINGS
+   - lungs/pleura:
+     - left lower lobe opacity: present, obscuring the costophrenic angle, with confidence 90% + there is a significant opacity in the left lower lobe, obscuring the costophrenic angle. The etiology is unclear.
+     - right lung: clear with confidence 95% + the right lung appears clear.
+     - pleural effusion: possible, left side, with confidence 60% + there is a possible left pleural effusion, obscuring the costophrenic angle.
+   - mediastinum/heart:
+     - mediastinum: unremarkable with confidence 90% + the mediastinum appears unremarkable.
+     - heart size: not well visualized, but appears normal with confidence 70% + the heart size is not well visualized due to the left lower lobe opacity, but it appears normal.
+   - diaphragms/upper abdomen:
+     - diaphragms: visible with confidence 90% + the diaphragms are visible.
+     - upper abdomen: not well visualized with confidence 60% + the upper abdomen is not well visualized due to the left lower lobe opacity.
+   - bones/soft tissues:
+     - ribs: visible with confidence 90% + the ribs are visible.
+     - clavicles: visible with confidence 90% + the clavicles are visible.
+     - other soft tissues: unremarkable with confidence 90% + other soft tissues are unremarkable.
+
+5) IMPRESSION
+   - Left lower lobe opacity, obscuring the costophrenic angle. Etiology is unclear.
+   - Possible left pleural effusion.
+   - Endotracheal tube, nasogastric tube, and central venous catheter are present, but the tip positions are not clearly visualized.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image is cropped, obscuring the apices and costophrenic angles.
+   - The tip positions of the endotracheal tube, nasogastric tube, and central venous catheter are not clearly visualized.
+   - The left lower lobe opacity's etiology is unclear.
+
+7) DOMAIN VECTOR
