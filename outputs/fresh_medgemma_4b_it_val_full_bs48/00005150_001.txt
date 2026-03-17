@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: The image is a PA chest X-ray.
+   - patient position: Upright with confidence 90% + evidence: The patient is in an upright position.
+   - portable-likelihood: Low with evidence: The image appears to be a standard chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: None with confidence 95% + evidence: The image appears to be free of significant rotation.
+   - inspiration: Adequate with confidence 90% + evidence: The lungs are well-expanded.
+   - penetration: Adequate with confidence 95% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: None with confidence 95% + evidence: There is no obvious motion blur.
+   - collimation/anatomic coverage: Apices? Costophrenic angles? Lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: Lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: Lines, grid/moiré, banding, detector dropout, compression artifacts: There are no obvious artifacts.
+   - markers/overlays: Laterality marker present? Burned-in text present? Laterality marker is present on the left side. Burned-in text is present at the top-left corner
+
+3) DEVICES / LINES / TUBES
+   - pacemaker: Present, course: Right atrium to right ventricle, tip position: Right ventricle, confidence 95%
+   - pacemaker: Present, course: Left atrium to left ventricle, tip position: Left ventricle, confidence 95%
+   - central line: Present, course: Internal jugular vein, tip position: Unknown, confidence 50%
+   - right-sided port: Present, course: Right subclavian vein, tip position: Unknown, confidence 50%
+   - sternal wires: Present, course: Anterior to posterior, tip position: Unknown, confidence 50%
+
+4) FINDINGS
+   - lungs/pleura: There is a hazy opacity in the right lower lung field. The left lung appears clear. No pleural effusion is identified.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues: The ribs are intact. The clavicles are intact.
+
+5) IMPRESSION
+   - Right lower lung field opacity.
+   - Pacemaker present.
+   - Central line present, course and tip position uncertain.
+   - Right-sided port present, course and tip position uncertain.
+   - Sternal wires present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip position of the central line and right-sided port is not clearly visible.
+   - The image is cropped at the bottom, limiting the assessment of the lower lung fields.
+   - The presence of multiple devices obscures the visualization of some structures.
+
+7) DOMAIN VECTOR

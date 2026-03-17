@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is standing.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? - apices are visible. costophrenic angles are visible. lateral chest walls are visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles - lungs are clear. mediastinum is clear. bones are clear. diaphragms are clear. costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. - no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? - a laterality marker is present. burned-in text is present (top-left)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) - contrast is low. edge enhancement is low. no inversion is suspected. noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Indeterminate: No devices are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - No focal consolidations are identified.
+     - No pleural effusions are identified.
+     - No pneumothorax is identified.
+     - There is a small, round opacity in the left lung, likely a granuloma or nodule.
+   - mediastinum/heart
+     - The heart size is normal.
+     - The mediastinal contours are normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are intact.
+     - The clavicles are intact.
+     - The scapulae are intact.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Small nodule in the left lung. Further evaluation with a CT scan of the chest is recommended.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - No devices are clearly visible.
+   - The small nodule in the left lung is difficult to characterize definitively on a single PA chest X-ray.
+   - The small nodule in the left lung is difficult to characterize definitively on a single PA chest X-ray.
+
+7) DOMAIN VECTOR
