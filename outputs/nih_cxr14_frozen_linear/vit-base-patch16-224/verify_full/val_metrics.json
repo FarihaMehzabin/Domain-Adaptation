@@ -1,0 +1,31 @@
+{
+  "macro_auroc": 0.7696069160410527,
+  "per_label": {
+    "atelectasis": {
+      "auroc": 0.7296005651027008,
+      "average_precision": 0.23787248433256875,
+      "f1_threshold_from_val": 0.5811027884483337
+    },
+    "cardiomegaly": {
+      "auroc": 0.7396451994045135,
+      "average_precision": 0.06759802732944084,
+      "f1_threshold_from_val": 0.6225984692573547
+    },
+    "consolidation": {
+      "auroc": 0.7400876965038027,
+      "average_precision": 0.09783704280350357,
+      "f1_threshold_from_val": 0.7015122771263123
+    },
+    "edema": {
+      "auroc": 0.830757879727422,
+      "average_precision": 0.08681030838697296,
+      "f1_threshold_from_val": 0.7155058979988098
+    },
+    "pleural_effusion": {
+      "auroc": 0.8079432394668251,
+      "average_precision": 0.3273875023700714,
+      "f1_threshold_from_val": 0.614334225654602
+    }
+  },
+  "split": "val"
+}

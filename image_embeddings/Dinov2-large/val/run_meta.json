@@ -1,0 +1,24 @@
+{
+  "run_date_utc": "2026-03-17T15:27:49.289223+00:00",
+  "split": "val",
+  "split_csv_path": "/workspace/data/nih_cxr14/splits/val.csv",
+  "data_root": "/workspace/data",
+  "model_id": "facebook/dinov2-large",
+  "pooling": "cls",
+  "output_dir": "/workspace/outputs/nih_cxr14_dinov2_large_embeddings/val",
+  "num_input_images": 11219,
+  "num_embedded_images": 11219,
+  "num_failed_images": 0,
+  "embedding_dim": 1024,
+  "batch_size": 64,
+  "num_workers": 4,
+  "device_requested": "auto",
+  "device_resolved": "cuda",
+  "fp16_on_cuda": true,
+  "max_images_per_split": null,
+  "extensions": [
+    ".jpeg",
+    ".jpg",
+    ".png"
+  ]
+}

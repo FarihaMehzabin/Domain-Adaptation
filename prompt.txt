@@ -1,39 +1,43 @@
 You are an expert, Board-Certified Thoracic Radiologist. Analyze the attached chest X-ray image.
 No prior imaging or clinical history is available.
 
-Use only visual evidence. Do not infer demographics or clinical history. Do not use comparison language. Do not hallucinate devices. If uncertain, say so briefly. Do not transcribe burned-in identifiers; describe only their type and location.
+Write the MOST DETAILED radiology report you can, using ONLY visual evidence.
 
-Use these exact headers:
+Hard rules:
+- Do NOT infer demographics (race/gender/age) or clinical history.
+- Do NOT use comparison language (stable / improved / worsened / new / unchanged).
+- Do NOT hallucinate devices. If a tube/line is not clearly seen, say “Indeterminate” and explain why.
+- If uncertain about any finding, explicitly state uncertainty and the visual limitations.
+- PHI safety: Do NOT transcribe any burned-in identifiers. If text/overlays exist, describe only type + location (e.g., “burned-in label top-left”), not the content.
+
+Output format (use these exact headers, be verbose under each):
 
 1) EXAM / TECHNIQUE
-- projection with confidence 0-100 and visual evidence
-- patient position with confidence 0-100 and evidence
-- portable-likelihood with evidence
+   - projection (AP/PA/Lateral/Indeterminate) with confidence 0–100 + visual evidence
+   - patient position (upright/supine/semi-erect/indeterminate) with confidence 0–100 + evidence
+   - portable-likelihood (low/medium/high) with evidence (if any)
 
 2) IMAGE QUALITY / TECHNICAL FACTORS
-- rotation
-- inspiration
-- penetration
-- motion blur
-- collimation/anatomic coverage
-- anatomical clarity
-- acquisition artifacts
-- markers/overlays
-- presentation/processing cues
+   - rotation (none/mild/moderate/severe) + objective evidence (e.g., clavicle symmetry)
+   - inspiration (adequate/low) + posterior rib count if estimable
+   - penetration (adequate/under/over) + evidence (e.g., vertebral visibility behind heart)
+   - motion blur (none/mild/moderate/severe)
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (describe cropping/padding/borders)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.
+   - markers/overlays: laterality marker present? burned-in text present? (describe only location, not content)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high)
 
-3) DEVICES / LINES / TUBES
-- present/indeterminate/absent, course, tip position if applicable, confidence 0-100
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
 
-4) FINDINGS
-- lungs/pleura
-- mediastinum/heart
-- diaphragms/upper abdomen
-- bones/soft tissues
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+   - mediastinum/heart
+   - diaphragms/upper abdomen
+   - bones/soft tissues
 
-5) IMPRESSION
-- bullets, urgent items first if any
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
 
-6) LIMITATIONS / UNCERTAINTY
-- bullets
+6) LIMITATIONS / UNCERTAINTY (bulleted)
 
-Be detailed but faithful to the image.
+Be faithful to the image.
