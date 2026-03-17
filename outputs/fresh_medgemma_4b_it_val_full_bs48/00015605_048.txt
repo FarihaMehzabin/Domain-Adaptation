@@ -1,0 +1,39 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + visual appearance favors AP projection.
+   - patient position: portable with confidence 90% + image is labeled "PORTABLE"
+   - portable-likelihood: high + image is burned-in label
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles appear symmetrical
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? lateral chest walls? The image shows the apices, costophrenic angles, and costal margins. The image is cropped, leaving the lateral chest walls partially obscured.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are poorly visualized due to the patient's body habitus and the image quality. The mediastinum is partially obscured by the patient's body. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines and tubes present. The image shows some mild grid artifact. There is no evidence of detector dropout or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube: present, tip position not visible with confidence 80%
+   - nasogastric tube: present, course not visible with confidence 80%
+   - central venous catheter: present, tip position not visible with confidence 80%
+   - multiple lines: present, course not visible with confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: diffuse bilateral infiltrates are present, obscuring lung markings. There is a large opacity in the left lower lung field.
+   - mediastinum/heart: the mediastinum is obscured by the patient's body habitus. The heart size is not well visualized.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is not well visualized.
+   - bones/soft tissues: the ribs are visible. The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Diffuse bilateral infiltrates, likely representing pulmonary edema or pneumonia.
+   - The endotracheal tube tip is not visualized.
+   - The nasogastric tube and central venous catheter courses are not visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image quality is suboptimal due to patient body habitus and the portable nature of the study.
+   - The mediastinum and heart are not well visualized.
+   - The tip positions of the endotracheal tube, nasogastric tube, and central venous catheter are not visualized.
+   - The left lower lung field opacity is difficult to characterize due to the poor image quality.
+
+7) DOMAIN VECTOR
