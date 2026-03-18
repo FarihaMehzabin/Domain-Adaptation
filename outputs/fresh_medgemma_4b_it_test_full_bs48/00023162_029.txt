@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + the image appears to be a standard chest X-ray, not a portable.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + adequate inspiration is present. Posterior rib count is estimable.
+   - penetration: adequate with confidence 90% + adequate penetration is present. Vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + no significant motion blur is evident.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles (The lungs are relatively clear, but there are numerous small nodular opacities scattered throughout. The mediastinum is unremarkable. The bones are well-defined. The diaphragms are visible. The costophrenic angles are obscured by the image cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are several lines present, likely representing external devices. The presence of these lines is not unusual for this type of image. No obvious grid/moiré artifacts are present. No banding or detector dropout is evident. No compression artifacts are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. Burned-in text is present at the top-left corner, but the content is not discernible.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right-sided picc line: present, course: right subclavian vein, tip position: indeterminate, confidence 90%
+   - Left-sided picc line: present, course: left subclavian vein, tip position: indeterminate, confidence 90%
+   - EKG leads: present, course: on the chest, tip position: indeterminate, confidence 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Numerous small nodular opacities are scattered throughout both lung fields. The distribution is not uniform.
+     - No pleural effusion is identified.
+     - No pneumothorax is identified.
+   - mediastinum/heart
+     - The mediastinum is unremarkable.
+     - The heart size is within normal limits.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible.
+     - The upper abdomen is not well visualized due to the image cropping.
+   - bones/soft tissues
+     - The ribs are well-defined.
+     - The clavicles are visible.
+     - The sternum is visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Numerous small nodular opacities in both lungs. Further evaluation with CT chest is recommended to characterize these findings.
+   - Right-sided and left-sided picc lines are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is cropped, obscuring the apices and costophrenic angles.
+   - The content of the burned-in text at the top-left corner is not discernible.
+   - The tip position of the picc lines is indeterminate.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR
