@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving a small amount of padding at the costophrenic angles.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are well-visualized. The mediastinum is well-visualized. Bones are well-visualized. Diaphragms are well-visualized. Costophrenic angles are partially obscured by padding.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is the left. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - central line: present, course: internal jugular, tip position: indeterminate, confidence 80% + a central line is present, but the tip position is not clearly visible.
+   - catheter: present, course: indeterminate, tip position: indeterminate, confidence 60% + a catheter is present, but the tip position is not clearly visible.
+
+4) FINDINGS
+   - lungs/pleura:
+     - left upper lobe: increased opacity with reticular pattern, suggestive of interstitial lung disease.
+     - right lung: relatively clear, with some subtle reticular changes in the lung periphery.
+     - pleural surfaces: clear.
+   - mediastinum/heart:
+     - mediastinal contours: normal.
+     - heart size: normal.
+   - diaphragms/upper abdomen:
+     - diaphragms: well-defined.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues:
+     - ribs: unremarkable.
+     - clavicles: unremarkable.
+
+5) IMPRESSION
+   - Increased opacity in the left upper lobe with reticular pattern, suggestive of interstitial lung disease.
+   - Presence of a central line.
+   - Presence of a catheter.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip position of the central line and catheter is not clearly visible.
+   - The image is cropped, limiting the assessment of the costophrenic angles.
+   - The presence of a catheter is indeterminate.
+
+7) DOMAIN VECTOR
