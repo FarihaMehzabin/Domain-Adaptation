@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the upper chest and lower mediastinum. The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are clear. The mediastinum is well-defined. The bones are well-defined. The diaphragms are well-defined. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present, indicating the left side is on the right. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Heart: present, normal size and shape
+   - Lungs: present, clear
+   - Mediastinum: present, normal width
+   - Diaphragm: present, normal position
+   - Bones: present, normal
+   - Lines/tubes: Indeterminate + No lines or tubes are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - No focal consolidation, pleural effusion, or pneumothorax is identified.
+     - There is a hazy opacity in the right lower lung field.
+   - mediastinum/heart
+     - The heart size is normal.
+     - The mediastinal contours are normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are normal in position.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are normal.
+     - The clavicles are normal.
+     - The scapulae are normal.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Hazy opacity in the right lower lung field. Further evaluation with CT is recommended to rule out pneumonia or other pathology.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices and costophrenic angles are not fully visualized.
+   - The hazy opacity in the right lower lung field could be due to various causes, including pneumonia, atelectasis, or other pathology.
+   - The presence of the burned-in label top-left is a limitation.
+
+7) DOMAIN VECTOR

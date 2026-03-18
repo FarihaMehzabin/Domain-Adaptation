@@ -1,0 +1,43 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the apices, costophrenic angles, and lateral chest walls. There is some padding at the costophrenic angles.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are well-aerated. The mediastinum is clearly visible. The bones are well-defined. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are lines present. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present. There is burned-in text present at the top-left corner
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - central line: present, course: internal jugular, tip position: indeterminate, confidence 90% + A central line is present. The tip position is not clearly visible.
+   - catheter: present, course: indeterminate, tip position: indeterminate, confidence 90% + A catheter is present. The course and tip position are not clearly visible.
+
+4) FINDINGS
+   - lungs/pleura
+     - right lung: clear with confidence 95% + The right lung appears clear.
+     - left lung: opacity present in the lower lung field with confidence 90% + There is an opacity in the lower left lung field. The exact nature of the opacity is indeterminate.
+   - mediastinum/heart
+     - mediastinum: normal in size and contour with confidence 95% + The mediastinum appears normal in size and contour.
+     - heart: normal size with confidence 95% + The heart size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: visible with confidence 95% + The diaphragms are visible.
+     - upper abdomen: partially visible with confidence 85% + The upper abdomen is partially visible.
+   - bones/soft tissues
+     - ribs: intact with confidence 95% + The ribs appear intact.
+     - clavicles: intact with confidence 95% + The clavicles appear intact.
+     - scapulae: intact with confidence 95% + The scapulae appear intact.
+
+5) IMPRESSION
+   - Left lower lobe opacity.
+   - Central line present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip position of the central line is not clearly visible.
+   - The exact nature of the left lower lobe opacity is indeterminate.
+
+7) DOMAIN VECTOR
