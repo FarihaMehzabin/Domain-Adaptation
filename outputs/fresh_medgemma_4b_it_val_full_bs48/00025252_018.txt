@@ -1,0 +1,38 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is labeled AP.
+   - patient position: portable with confidence 90% + the image is labeled "portable".
+   - portable-likelihood: high + the image is a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, with the upper portion of the image showing the clavicles and the lower portion showing the abdomen.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are visible, mediastinum is visible, bones are visible, diaphragms are visible, and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines present, likely representing vascular structures and/or external devices. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES
+   - central venous catheter (CVC): present, course: right internal jugular vein, tip position: indeterminate, confidence 90% + the CVC is present and courses into the right internal jugular vein. The tip position is not clearly visible.
+   - chest tube: present, course: left subclavian vein, tip position: indeterminate, confidence 90% + the chest tube is present and courses into the left subclavian vein. The tip position is not clearly visible.
+   - other lines/tubes: indeterminate + there are other lines/tubes present, but their exact course and tip positions are not clearly visible.
+
+4) FINDINGS
+   - lungs/pleura: bilateral pulmonary edema is present, with increased interstitial markings and hazy opacities. There is a large opacity in the left lower lung field, which could represent a pleural effusion or consolidation. The right lung appears relatively clear.
+   - mediastinum/heart: the mediastinum is unremarkable. The heart size is not well assessed due to the overlying pulmonary edema.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is incompletely visualized due to the image being cropped.
+   - bones/soft tissues: the bones are intact. There are surgical clips present in the right upper chest.
+
+5) IMPRESSION
+   - Bilateral pulmonary edema.
+   - Large opacity in the left lower lung field, concerning for pleural effusion or consolidation.
+   - Presence of CVC and chest tube.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image is a portable chest X-ray, which may be limited in terms of image quality and anatomical coverage.
+   - The tip positions of the CVC and chest tube are not clearly visible.
+   - The upper abdomen is incompletely visualized.
+   - The heart size is not well assessed.
+
+7) DOMAIN VECTOR
