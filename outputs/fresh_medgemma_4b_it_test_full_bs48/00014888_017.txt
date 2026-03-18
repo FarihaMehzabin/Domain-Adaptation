@@ -1,0 +1,37 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: Image is a PA chest radiograph.
+   - patient position: upright with confidence 90% + evidence: Patient is likely in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a standard PA chest radiograph, not a portable study.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: The image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + evidence: Adequate inspiration is present. Posterior rib count is estimable.
+   - penetration: adequate with confidence 90% + evidence: Adequate penetration is present. Vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + evidence: No significant motion blur is evident.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (describe cropping/padding/borders) The apices are not fully visualized due to the upper edge of the image being cropped. The costophrenic angles are not fully visualized due to the lower edge of the image being cropped. The lateral chest walls are adequately visualized.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles) The lungs are adequately visualized. The mediastinum is adequately visualized. The bones are adequately visualized. The diaphragms are adequately visualized. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. There are multiple lines present, likely representing medical devices. The presence of these lines is not unusual in this setting.
+   - markers/overlays: laterality marker present? burned-in text present? (describe only location, not content) A laterality marker is present, indicating the left side is on the left. Burned-in text is present in the top-left corner
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - Central venous catheter (CVC): present, course: likely internal jugular vein, tip position: not visualized. Confidence: 90%.
+   - Indeterminate: The exact type and course of the other lines are not clearly identifiable.
+
+4) FINDINGS
+   - lungs/pleura: There is a large opacity in the right hemithorax, obscuring the right lung. The left lung appears relatively clear, with some increased interstitial markings. There is no obvious pleural effusion.
+   - mediastinum/heart: The mediastinum is midline. The heart size is not well assessed due to the opacity in the right hemithorax.
+   - diaphragms/upper abdomen: The diaphragms are visualized. The upper abdomen is not well visualized due to the opacity in the right hemithorax.
+   - bones/soft tissues: The ribs and clavicles are visualized. There are surgical clips present in the left axilla.
+
+5) IMPRESSION
+   - Large opacity in the right hemithorax, obscuring the right lung. The etiology is uncertain and could be due to a pleural effusion, atelectasis, or consolidation.
+   - The left lung appears relatively clear.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The right hemithorax is largely obscured, limiting the assessment of the lung parenchyma and mediastinal structures.
+   - The tip position of the CVC is not visualized.
+   - The upper edge of the image is cropped, limiting visualization of the apices.
+   - The lower edge of the image is cropped, limiting visualization of the costophrenic angles.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR
