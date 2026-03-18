@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are well-visualized. The mediastinum is clearly defined. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are well-visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present, indicating the left side is on the right. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian central line: present, course: right subclavian vein, tip position: indeterminate, confidence 80% + The right subclavian central line is present, but the tip position is not clearly visible.
+   - left subclavian central line: present, course: left subclavian vein, tip position: indeterminate, confidence 80% + The left subclavian central line is present, but the tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right upper lobe: hazy opacity with possible consolidation, concerning for pneumonia.
+     - right lower lobe: hazy opacity with possible consolidation, concerning for pneumonia.
+     - left upper lobe: hazy opacity with possible consolidation, concerning for pneumonia.
+     - left lower lobe: hazy opacity with possible consolidation, concerning for pneumonia.
+     - pleural surfaces: clear with no pleural effusion.
+   - mediastinum/heart
+     - heart size: normal with confidence 90% + heart size is within normal limits.
+     - mediastinal contours: normal with confidence 95% + mediastinal contours are unremarkable.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined with confidence 95% + diaphragms are clear.
+     - upper abdomen: unremarkable with confidence 90% + no acute abdominal findings are identified.
+   - bones/soft tissues
+     - ribs: intact with confidence 95% + ribs are intact.
+     - clavicles: intact with confidence 95% + clavicles are intact.
+     - soft tissues: unremarkable with confidence 90% + no subcutaneous emphysema or other soft tissue abnormalities are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right upper lobe, right lower lobe, left upper lobe, and left lower lobe opacities are concerning for pneumonia. Further evaluation with CT chest is recommended.
+   - Right subclavian central line and left subclavian central line are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip position of the central lines is not clearly visualized.
+   - The extent of the lung opacities is not fully defined on this single view.
+   - The presence of pneumonia cannot be definitively confirmed without further imaging.
+
+7) DOMAIN VECTOR
