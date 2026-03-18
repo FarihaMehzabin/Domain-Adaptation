@@ -1,0 +1,35 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is labeled AP.
+   - patient position: portable with confidence 90% + the patient is lying supine.
+   - portable-likelihood: high + the image is a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs are well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + the image is not blurry.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are relatively clear, with some increased interstitial markings. The mediastinum is unremarkable. The bones are well-defined. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines and wires visible in the image, likely representing medical devices. There is no evidence of grid or moiré artifacts. There is no evidence of banding or detector dropout. There is no evidence of compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - Central venous catheter (CVC): present, right internal jugular vein, tip position not clearly visible. Confidence 80%.
+   - Multiple lines/tubes: present, course and tip positions not clearly visible. Confidence 70%.
+
+4) FINDINGS
+   - lungs/pleura: Increased interstitial markings are present throughout both lungs. No pleural effusion is identified.
+   - mediastinum/heart: The mediastinum is unremarkable. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is incompletely visualized due to the patient's position.
+   - bones/soft tissues: The bones are well-defined. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION
+   - Increased interstitial markings bilaterally.
+   - Multiple lines/tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip position of the central venous catheter is not clearly visible.
+   - The upper abdomen is incompletely visualized.
+   - The exact course and tip position of the multiple lines/tubes are not clearly visible.
+
+7) DOMAIN VECTOR
