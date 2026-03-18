@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: portable with confidence 90% + patient is in a portable position.
+   - portable-likelihood: high + the image is a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + adequate inspiration is present.
+   - penetration: adequate with confidence 90% + adequate penetration is present.
+   - motion blur: none with confidence 95% + no significant motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, with the upper and lower portions of the image missing.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are visible. The mediastinum is visible. The bones are visible. The diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are lines present. There is a grid pattern. There is some banding. There is no detector dropout or compression artifact.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present. There is burned-in text present at the top-left corner
+
+3) DEVICES / LINES / TUBES
+   - endotracheal tube: present, course: midline, tip position: indeterminate, confidence 80% + An endotracheal tube is present, but the tip position is not clearly visible.
+   - nasogastric tube: present, course: midline, tip position: indeterminate, confidence 80% + A nasogastric tube is present, but the tip position is not clearly visible.
+   - right subclavian central line: present, course: right subclavian, tip position: indeterminate, confidence 80% + A right subclavian central line is present, but the tip position is not clearly visible.
+   - left subclavian central line: present, course: left subclavian, tip position: indeterminate, confidence 80% + A left subclavian central line is present, but the tip position is not clearly visible.
+   - right picc line: present, course: right upper extremity, tip position: indeterminate, confidence 80% + A right picc line is present, but the tip position is not clearly visible.
+
+4) FINDINGS
+   - lungs/pleura
+     - right lung: hazy opacity in the lower lung field, likely representing a pleural effusion.
+     - left lung: hazy opacity in the lower lung field, likely representing a pleural effusion.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum is midline.
+     - the heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is not well visualized due to the patient's position and the image's cropping.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+
+5) IMPRESSION
+   - Bilateral pleural effusions are present.
+   - The endotracheal tube and nasogastric tube courses are present, but the tip positions are not clearly visualized.
+   - The central lines and picc line courses are present, but the tip positions are not clearly visualized.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip positions of the endotracheal tube, nasogastric tube, central lines, and picc line are not clearly visualized.
+   - The upper and lower portions of the image are missing, limiting the assessment of the upper abdomen and the full extent of the pleural effusions.
+   - The patient is in a portable position, which can affect the image quality and the accuracy of the measurements.
+
+7) DOMAIN VECTOR
