@@ -1,0 +1,39 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is labeled AP.
+   - patient position: portable with confidence 90% + the image is a portable chest X-ray.
+   - portable-likelihood: high + the image is a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + the image is not blurry.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, with the upper and lower portions of the image missing.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs show diffuse bilateral opacities. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines and tubes present in the image. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - nasogastric tube: present, course: from the mouth to the stomach, tip position: not visible. Confidence 90%.
+   - endotracheal tube: present, course: from the trachea to the carina, tip position: not visible. Confidence 90%.
+   - central venous catheter: present, course: from the subclavian vein to the superior vena cava, tip position: not visible. Confidence 90%.
+   - chest tube: present, course: from the pleural space to the outside of the body, tip position: not visible. Confidence 90%.
+   - multiple lines: present, course: various, tip position: not visible. Confidence 90%.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: diffuse bilateral opacities are present throughout both lung fields. The opacities are not localized to a specific area. There is no evidence of pleural effusion.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is not readily apparent due to the diffuse lung opacities.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is not well visualized due to the patient's position and the presence of multiple lines and tubes.
+   - bones/soft tissues: The ribs and clavicles are visible. There is no evidence of acute fractures.
+
+5) IMPRESSION
+   - Diffuse bilateral pulmonary opacities.
+   - Multiple lines and tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image is a portable chest X-ray, which may be limited in terms of anatomical detail.
+   - The patient's position and the presence of multiple lines and tubes may obscure the visualization of certain structures.
+   - The tip position of the central venous catheter and the chest tube is not visible.
+   - The heart size is not readily apparent due to the diffuse lung opacities.
+
+7) DOMAIN VECTOR
