@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the upper chest and mediastinum. The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are visible. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are multiple lines and tubes present. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present. There is no burned-in text
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - right internal jugular central venous catheter: present, course: right internal jugular vein, tip position: indeterminate, confidence 90%
+   - right subclavian central venous catheter: present, course: right subclavian vein, tip position: indeterminate, confidence 90%
+   - right chest tube: present, course: right pleural space, tip position: indeterminate, confidence 90%
+   - right picc line: present, course: right subclavian vein, tip position: indeterminate, confidence 90%
+   - multiple other lines/tubes: present, course: various, tip position: indeterminate, confidence 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: opacification is present, with multiple lines and tubes within the lung field. The extent of the opacification is difficult to assess due to the presence of the lines and tubes.
+     - left lung: clear with confidence 95% + The left lung appears clear.
+     - pleural effusion: indeterminate + There is no obvious pleural effusion.
+   - mediastinum/heart
+     - heart size: normal with confidence 90% + The heart size appears normal.
+     - mediastinal contours: normal with confidence 90% + The mediastinal contours appear normal.
+   - diaphragms/upper abdomen
+     - diaphragms: visible with confidence 95% + The diaphragms are visible.
+     - upper abdomen: partially visible with confidence 80% + The upper abdomen is partially visible.
+   - bones/soft tissues
+     - ribs: visible with confidence 95% + The ribs are visible.
+     - clavicles: visible with confidence 95% + The clavicles are visible.
+     - soft tissues: normal with confidence 90% + The soft tissues appear normal.
+
+5) IMPRESSION
+   - Multiple lines and tubes are present within the chest, likely for central venous access and/or drainage. The tip positions are indeterminate.
+   - The right lung shows opacification, which could be due to various causes, including fluid, consolidation, or atelectasis. Further evaluation is needed to determine the etiology.
+   - The left lung appears clear.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip positions of the central lines are indeterminate.
+   - The extent of the right lung opacification is difficult to assess due to the presence of the lines and tubes.
+   - The upper abdomen is only partially visible.
+
+7) DOMAIN VECTOR
