@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest radiograph.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest radiograph.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are well-aerated. The mediastinum is clearly visible. The bones are well-defined. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are multiple lines present in the image. The presence of lines is likely due to external devices.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present. Burned-in text is present at the top-left corner
+
+3) DEVICES / LINES / TUBES
+   - chest tube (left): present, course: left chest, tip position: indeterminate, confidence 90% + A chest tube is present in the left hemithorax. The tip position is not clearly visible.
+   - chest tube (right): present, course: right chest, tip position: indeterminate, confidence 90% + A chest tube is present in the right hemithorax. The tip position is not clearly visible.
+   - lines: present, course: indeterminate, tip position: indeterminate, confidence 90% + Multiple lines are present in the image. The course and tip positions are not clearly visible.
+   - catheter: present, course: indeterminate, tip position: indeterminate, confidence 90% + A catheter is present in the image. The course and tip position are not clearly visible.
+
+4) FINDINGS
+   - lungs/pleura
+     - lungs: clear bilaterally with confidence 95% + The lungs appear clear without evidence of consolidation, effusion, or pneumothorax.
+     - pleura: unremarkable with confidence 95% + No pleural effusion or pneumothorax is identified.
+   - mediastinum/heart
+     - mediastinum: unremarkable with confidence 95% + The mediastinum is within normal limits.
+     - heart: unremarkable with confidence 95% + The heart size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: visible with confidence 95% + The diaphragms are well-defined.
+     - upper abdomen: unremarkable with confidence 90% + The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - bones: unremarkable with confidence 95% + The bones are unremarkable.
+     - soft tissues: subcutaneous emphysema is present in the left chest wall with confidence 90% + There is subcutaneous emphysema in the left chest wall.
+
+5) IMPRESSION
+   - Two chest tubes are present in the chest.
+   - Subcutaneous emphysema is present in the left chest wall.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip positions of the chest tubes are not clearly visible.
+   - The course and tip positions of the lines and catheter are not clearly visible.
+   - The presence of lines and catheter is indeterminate.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image shows the chest from the back.
+   - patient position: upright with confidence 90% + patient is standing or sitting upright.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the entire chest, including the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are well-visualized, the mediastinum is clear, the bones are visible, and the diaphragms and costophrenic angles are well-defined.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are multiple lines and tubes present, but no obvious grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present, indicating the left side. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube: present, course: midline, tip position: approximately 4 cm above the carina with confidence 95%
+   - nasogastric tube: present, course: stomach with confidence 90%
+   - central venous catheter: present, course: superior vena cava with confidence 95%
+   - right internal jugular central line: present, course: superior vena cava with confidence 95%
+   - multiple other lines/tubes: present, course: various locations, tip positions: indeterminate with confidence 50%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - diffuse bilateral infiltrates: present, appearing as hazy opacities throughout both lung fields with confidence 95%.
+   - mediastinum/heart
+     - mediastinal contours: normal with confidence 95%.
+     - heart size: normal with confidence 90%.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined with confidence 95%.
+     - upper abdomen: bowel loops are present, but the visualization is limited due to the infiltrates.
+   - bones/soft tissues
+     - ribs: visible with confidence 95%.
+     - clavicles: visible with confidence 95%.
+     - soft tissues: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Diffuse bilateral pulmonary infiltrates.
+   - Multiple lines and tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited visualization of the upper abdomen due to the infiltrates.
+   - Tip positions of the lines/tubes are indeterminate.
+   - The cause of the pulmonary infiltrates is not determined.
+
+7) DOMAIN VECTOR

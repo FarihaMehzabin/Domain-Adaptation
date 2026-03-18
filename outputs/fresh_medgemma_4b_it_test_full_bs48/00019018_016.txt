@@ -1,0 +1,39 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest radiograph.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is likely a standard PA chest radiograph, not a portable.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? lateral chest walls? The image shows the entire chest, including the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are diffusely hazy, mediastinum is unremarkable, bones are well-defined, diaphragms are visible, and costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines present, likely representing various medical devices. There is no evidence of grid/moiré artifacts, banding, or detector dropout. There are no obvious compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left, but the content is not visible
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube (ETT): present, course: midline, tip position: not visible, confidence 90%
+   - nasogastric tube (NGT): present, course: midline, tip position: not visible, confidence 90%
+   - central venous catheter (CVC): present, course: right internal jugular, tip position: not visible, confidence 90%
+   - left internal jugular central venous catheter (CVC): present, course: left internal jugular, tip position: not visible, confidence 90%
+   - arterial line: present, course: right internal jugular, tip position: not visible, confidence 90%
+   - chest tube: indeterminate, course: not visible, tip position: not visible, confidence 10%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: lungs are diffusely hazy, with increased interstitial markings. There is no evidence of pleural effusion or pneumothorax.
+   - mediastinum/heart: mediastinum is unremarkable. Heart size is normal.
+   - diaphragms/upper abdomen: diaphragms are visible. The upper abdomen is not well visualized.
+   - bones/soft tissues: bones are well-defined. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION
+   - Diffuse bilateral pulmonary infiltrates.
+   - Multiple medical devices are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip positions of the central venous catheters and arterial line are not clearly visible.
+   - The upper abdomen is not well visualized.
+   - The exact cause of the pulmonary infiltrates is not determined.
+
+7) DOMAIN VECTOR
