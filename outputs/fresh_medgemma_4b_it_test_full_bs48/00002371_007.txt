@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image shows the chest from the posterior aspect.
+   - patient position: upright with confidence 90% + patient is standing or sitting upright.
+   - portable-likelihood: low + image is likely a portable chest radiograph.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the upper chest and abdomen. The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are visible. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are multiple lines present, likely representing medical devices. The presence of lines is a technical artifact.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present, indicating the left side is on the left. There is burned-in text present at the top-left corner
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - central line: present, internal jugular vein, tip position not visible, confidence 90%
+   - nasogastric tube: present, course not visible, tip position not visible, confidence 90%
+   - endotracheal tube: present, tip position not visible, confidence 90%
+   - other lines: present, multiple lines are present, course not visible, tip position not visible, confidence 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral lung fields are visible.
+     - there are hazy opacities in the lower lung fields, bilaterally. The exact etiology is indeterminate.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum is within normal limits.
+     - the heart size is normal.
+     - the cardiac silhouette is unremarkable.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is visible.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+     - the soft tissues of the chest wall are visible.
+
+5) IMPRESSION
+   - Multiple medical devices are present.
+   - Bilateral hazy opacities in the lower lung fields are present. The etiology is indeterminate.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip positions of the central line, nasogastric tube, and endotracheal tube are not visible.
+   - The exact etiology of the bilateral hazy opacities in the lower lung fields is indeterminate.
+   - The image is a portable chest radiograph, which may have limited anatomical coverage.
+
+7) DOMAIN VECTOR
