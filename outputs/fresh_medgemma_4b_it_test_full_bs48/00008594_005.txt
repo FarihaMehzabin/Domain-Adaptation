@@ -1,0 +1,38 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is likely a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the upper and lower borders.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are well-aerated. The mediastinum is clearly visible. The bones are well-defined. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are multiple lines present, likely representing medical devices. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present, indicating the left side is on the right. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES
+   - endotracheal tube: present, course: midline, tip position: indeterminate, confidence 85%
+   - nasogastric tube: present, course: midline, tip position: indeterminate, confidence 80%
+   - central venous catheter: present, course: right subclavian, tip position: indeterminate, confidence 80%
+   - chest tube: present, course: right, tip position: indeterminate, confidence 85%
+   - lines: indeterminate, course: multiple, tip position: indeterminate, confidence 70%
+
+4) FINDINGS
+   - lungs/pleura: lungs are clear. No pleural effusion is identified.
+   - mediastinum/heart: The heart size is normal. The mediastinum is unremarkable.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is unremarkable.
+   - bones/soft tissues: The bones are unremarkable.
+
+5) IMPRESSION
+   - Multiple medical devices are present.
+   - The lungs are clear.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip positions of the endotracheal tube, nasogastric tube, central venous catheter, and chest tube are indeterminate.
+   - The image is cropped at the upper and lower borders, limiting the assessment of the lung apices and costophrenic angles.
+   - The presence of multiple lines may obscure the visualization of some structures.
+
+7) DOMAIN VECTOR

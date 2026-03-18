@@ -1,0 +1,36 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the costophrenic angles not fully visible. The apices are not fully visible due to the cropping.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles (lungs are generally clear, mediastinum is visible, bones are visible, diaphragms are visible, and costophrenic angles are not fully visible due to cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (no obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, pointing to the left side. Burned-in text is present at the top-left corner.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - sternal wires: present, multiple, course: anterior to posterior, tip position: not visible. Confidence: 95%
+   - surgical clips: present, multiple, course: anterior to posterior, tip position: not visible. Confidence: 95%
+   - indwelling lines/tubes: indeterminate + no obvious lines or tubes are visible.
+
+4) FINDINGS
+   - lungs/pleura: right lung appears to have some degree of opacity/consolidation, with possible pleural effusion. The left lung appears clear.
+   - mediastinum/heart: mediastinum is within normal limits. Heart size is difficult to assess due to the cropping of the image.
+   - diaphragms/upper abdomen: diaphragms are visible. The upper abdomen is not fully visualized due to the cropping.
+   - bones/soft tissues: ribs are visible.
+
+5) IMPRESSION
+   - Right lung opacity/consolidation with possible pleural effusion.
+   - Surgical clips and sternal wires are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image is cropped, limiting visualization of the costophrenic angles and the upper abdomen.
+   - The extent of the right lung opacity/consolidation and pleural effusion is difficult to fully assess due to the cropping.
+   - The heart size is difficult to assess due to the cropping.
+
+7) DOMAIN VECTOR

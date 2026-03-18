@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image shows a frontal view of the chest.
+   - patient position: upright with confidence 90% + patient is standing or sitting upright.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving the upper and lower portions of the chest.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are well-visualized. The mediastinum is clearly visible. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are well-visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are lines present in the image, likely from medical devices. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present, indicating the left side is on the left. There is burned-in text present at the top-left corner, but the content is not visible
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube: present, course: midline, tip position: indeterminate, confidence 80% + The endotracheal tube is visible in the midline. The tip position is not clearly visible.
+   - nasogastric tube: present, course: likely terminating in the stomach, tip position: indeterminate, confidence 70% + A nasogastric tube is visible, likely terminating in the stomach. The tip position is not clearly visible.
+   - central venous catheter: present, course: likely terminating in the superior vena cava, tip position: indeterminate, confidence 60% + A central venous catheter is visible, likely terminating in the superior vena cava. The tip position is not clearly visible.
+   - lines: indeterminate + There are multiple lines present in the image, but their exact course and tip positions are not clearly defined.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: opaque, likely due to a large pleural effusion.
+     - left lung: clear.
+   - mediastinum/heart
+     - mediastinum: unremarkable.
+     - heart: size is difficult to assess due to the opacity in the right hemithorax.
+   - diaphragms/upper abdomen
+     - diaphragms: well-visualized.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: well-visualized.
+     - clavicles: well-visualized.
+
+5) IMPRESSION
+   - Large right pleural effusion.
+   - Endotracheal tube, nasogastric tube, and central venous catheter are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip positions of the endotracheal tube, nasogastric tube, and central venous catheter are not clearly visible.
+   - The heart size is difficult to assess due to the opacity in the right hemithorax.
+   - The image is cropped, limiting the assessment of the lung bases.
+
+7) DOMAIN VECTOR
