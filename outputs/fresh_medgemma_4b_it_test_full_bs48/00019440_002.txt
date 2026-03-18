@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + the image appears to be a standard chest X-ray, not a portable.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + adequate inspiration is present.
+   - penetration: adequate with confidence 90% + adequate penetration is present.
+   - motion blur: none with confidence 95% + no significant motion blur is evident.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are visible, but the apices and costophrenic angles are obscured. The mediastinum is visible. The bones are visible. The diaphragms are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the right. Burned-in text is present at the top-left corner
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Thoracic spine stabilization device: present, course: bilateral, tip position: indeterminate.
+   - Indeterminate: indeterminate.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: The lungs appear clear, with no obvious consolidation, effusion, or pneumothorax. The costophrenic angles are obscured.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is difficult to assess due to the obscuration of the left heart border.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is not well visualized due to the cropping of the image.
+   - bones/soft tissues: The ribs are visible. The clavicles are visible. The scapulae are visible. The presence of the thoracic spine stabilization device is noted.
+
+5) IMPRESSION
+   - The lungs are clear.
+   - The mediastinum is within normal limits.
+   - The heart size is difficult to assess due to the obscuration of the left heart border.
+   - The thoracic spine stabilization device is present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The apices and costophrenic angles are obscured, limiting the assessment of the lungs.
+   - The left heart border is obscured, limiting the assessment of the heart size.
+   - The upper abdomen is not well visualized.
+   - The tip position of the thoracic spine stabilization device is indeterminate.
+
+7) DOMAIN VECTOR
