@@ -1,0 +1,53 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? - apices are visible. costophrenic angles are visible. lateral chest walls are visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles - lungs are clear. mediastinum is clear. bones are clear. diaphragms are clear. costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. - no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? - a laterality marker is present, indicating the left side is on the right. burned-in text is present at the top-left corner
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Heart: present, normal size with confidence 95%
+   - Lungs: present, clear with confidence 95%
+   - Mediastinum: present, normal with confidence 95%
+   - Diaphragms: present, normal with confidence 95%
+   - Bones: present, normal with confidence 95%
+   - Tubes/Lines/Catheters: Indeterminate, no tubes or lines are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - There are multiple opacities in the right upper lobe, possibly representing consolidation or nodules.
+     - The left lung appears clear.
+     - No pleural effusion is identified.
+   - mediastinum/heart:
+     - The heart size is normal.
+     - The mediastinal contours are normal.
+   - diaphragms/upper abdomen:
+     - The diaphragms are normal.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues:
+     - The ribs are normal.
+     - The clavicles are normal.
+     - The scapulae are normal.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Multiple opacities in the right upper lobe. Further evaluation with CT is recommended to characterize these findings.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image quality is adequate, but the resolution is limited.
+   - The presence of the burned-in text obscures the upper portion of the image.
+   - The presence of the laterality marker may be misleading.
+   - The multiple opacities in the right upper lobe are difficult to characterize on a single chest X-ray.
+   - The absence of a lateral view limits the assessment of the lung fields.
+
+7) DOMAIN VECTOR
