@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image shows the chest from the back.
+   - patient position: upright with confidence 90% + patient is standing or sitting upright.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the entire chest, including the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are visible, the mediastinum is well-defined, the bones are visible, and the diaphragms and costophrenic angles are clearly seen.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are multiple lines and tubes present, including a central line, a chest tube, and a possible endotracheal tube. There is also a possible grid pattern.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present, indicating the left side is on the left. There is burned-in text present at the top-left corner
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - Central line: present, course: internal jugular vein, tip position: indeterminate, confidence 90%
+   - Chest tube: present, course: right pleural space, tip position: indeterminate, confidence 90%
+   - Endotracheal tube: present, course: trachea, tip position: indeterminate, confidence 90%
+   - Other lines/tubes: present, course: indeterminate, tip position: indeterminate, confidence 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: increased opacity, possibly consolidation or edema, with possible pleural effusion.
+     - Left lung: increased opacity, possibly consolidation or edema.
+     - Pleural effusions: possible, right side more likely.
+   - mediastinum/heart
+     - Heart size: normal.
+     - Mediastinal width: normal.
+     - Cardiomediastinal silhouette: unremarkable.
+   - diaphragms/upper abdomen
+     - Diaphragms: visible.
+     - Upper abdomen: unremarkable.
+   - bones/soft tissues
+     - Bones: unremarkable.
+     - Soft tissues: unremarkable.
+
+5) IMPRESSION
+   - Bilateral pulmonary opacities, possibly representing pneumonia, pulmonary edema, or other inflammatory processes.
+   - Possible right pleural effusion.
+   - Multiple lines and tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The presence and exact location of the tip of the central line, chest tube, and endotracheal tube are indeterminate.
+   - The exact nature of the pulmonary opacities is indeterminate.
+   - The presence and size of the pleural effusion are indeterminate.
+
+7) DOMAIN VECTOR
