@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely upright.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the upper chest and abdomen. The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are visible. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are some lines present, but they are not clearly defined. There is no obvious grid or moiré pattern. There is no obvious banding. There is no obvious detector dropout. There is no obvious compression artifact.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - lines: Indeterminate + No lines are clearly visible.
+   - tubes: Indeterminate + No tubes are clearly visible.
+
+4) FINDINGS
+   - lungs/pleura:
+     - right lung: opacity in the right lung field, obscuring the right costophrenic angle. The opacity is not clearly defined.
+     - left lung: clear with confidence 95% + The left lung appears clear.
+   - mediastinum/heart:
+     - mediastinum: unremarkable with confidence 95% + The mediastinum appears unremarkable.
+     - heart: cardiomegaly is suspected with confidence 80% + The heart appears enlarged.
+   - diaphragms/upper abdomen:
+     - diaphragms: diaphragms are visible with confidence 95% + The diaphragms are visible.
+     - upper abdomen: the upper abdomen is visible with confidence 90% + The upper abdomen is visible.
+   - bones/soft tissues:
+     - ribs: ribs are visible with confidence 95% + The ribs are visible.
+     - clavicles: clavicles are visible with confidence 95% + The clavicles are visible.
+     - scapulae: scapulae are visible with confidence 95% + The scapulae are visible.
+     - other: there are metallic foreign bodies present in the right upper chest.
+
+5) IMPRESSION
+   - Right lung opacity, obscuring the right costophrenic angle.
+   - Cardiomegaly is suspected.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The right lung opacity is not clearly defined.
+   - Cardiomegaly is suspected based on the size of the heart.
+   - The presence of metallic foreign bodies in the right upper chest limits the assessment of the underlying lung tissue.
+   - The image quality is adequate, but there are some artifacts that could potentially obscure subtle findings.
+
+7) DOMAIN VECTOR

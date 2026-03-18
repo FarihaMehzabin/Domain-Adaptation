@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely upright.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the upper chest, including the apices, costophrenic angles, and lateral chest walls. There is some padding at the costophrenic angles.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are visible. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are some lines visible in the image. There is some grid/moiré artifact. There is some banding visible. There is no detector dropout. There are no compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present. There is burned-in text present at the top-left of the image
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - right-sided chest tube: present, course: right hemithorax, tip position: indeterminate, confidence 90% + A chest tube is present on the right side. The tip position is not clearly visible.
+   - right-sided port-a-cath: present, course: right subclavian vein, tip position: indeterminate, confidence 90% + A port-a-cath is present on the right side. The tip position is not clearly visible.
+   - surgical clips: present, location: mediastinum, confidence 95% + Surgical clips are present in the mediastinum.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a large area of opacity in the right lung, likely representing a large pleural effusion or consolidation. There is also some subcutaneous emphysema in the right chest wall.
+     - left lung: the left lung appears relatively clear.
+   - mediastinum/heart
+     - mediastinum: the mediastinum is midline.
+     - heart: the heart size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: the diaphragms are visible.
+     - upper abdomen: the upper abdomen is not well visualized.
+   - bones/soft tissues
+     - ribs: the ribs are visible.
+     - clavicles: the clavicles are visible.
+     - soft tissues: there is some subcutaneous emphysema in the right chest wall.
+
+5) IMPRESSION
+   - Large right pleural effusion or consolidation.
+   - Right-sided chest tube in place.
+   - Right-sided port-a-cath in place.
+   - Surgical clips in the mediastinum.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip position of the chest tube and port-a-cath is not clearly visible.
+   - The upper abdomen is not well visualized.
+   - The extent of the right lung opacity is not fully defined.
+
+7) DOMAIN VECTOR

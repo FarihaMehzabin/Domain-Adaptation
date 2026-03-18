@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a posteroanterior (PA) chest X-ray.
+   - patient position: upright with confidence 90% + the patient is likely in an upright position.
+   - portable-likelihood: low + the image appears to be a standard PA chest X-ray, not a portable study.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + adequate inspiration is present. Posterior rib count is estimable.
+   - penetration: adequate with confidence 90% + adequate penetration is present. Vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + no significant motion blur is evident.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving a small amount of padding at the edges.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are visible. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side. Burned-in text is present at the top-left corner
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Indeterminate: No devices or lines are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - The left lung appears to be opacified, with increased density and haziness. The right lung appears relatively clear.
+     - There is a possible pleural effusion on the left side, although it is difficult to assess due to the opacification of the lung.
+   - mediastinum/heart:
+     - The mediastinum appears within normal limits. The heart size is difficult to assess due to the opacification of the left lung.
+   - diaphragms/upper abdomen:
+     - The diaphragms are visible. The upper abdomen is not well visualized due to the opacification of the left lung.
+   - bones/soft tissues:
+     - The ribs are visible. The clavicles are visible. The soft tissues are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Opacification of the left lung, potentially due to pneumonia or other infiltrative process.
+   - Possible left pleural effusion.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited visualization of the left lung due to opacification.
+   - Limited visualization of the upper abdomen.
+   - The presence of the burned-in text obscures the upper left corner of the image.
+   - The presence of the laterality marker may be inaccurate.
+
+7) DOMAIN VECTOR
