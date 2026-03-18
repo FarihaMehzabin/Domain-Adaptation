@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low with evidence (image is likely a portable chest X-ray due to the presence of multiple lines and tubes).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the clavicles appear symmetrical.
+   - inspiration: adequate with confidence 85% + the lungs appear well-expanded.
+   - penetration: adequate with confidence 90% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the top and bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are well-visualized. The mediastinum is clearly visible. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are well-visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines and tubes present. The image is not grid or moiré. There is no evidence of banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present on the left side of the image. There is burned-in text present at the top-left corner
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube: present, course: midline, tip position: approximately 4 cm above the carina, confidence 95%
+   - nasogastric tube: present, course: midline, tip position: not visualized, confidence 70%
+   - right subclavian central line: present, course: right subclavian vein, tip position: not visualized, confidence 80%
+   - left subclavian central line: present, course: left subclavian vein, tip position: not visualized, confidence 80%
+   - pacemaker/defibrillator: present, course: right atrium, tip position: not visualized, confidence 75%
+   - chest tube: present, course: right pleural space, tip position: not visualized, confidence 70%
+   - other lines/tubes: indeterminate, course: unknown, tip position: unknown, confidence 50%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: bilateral pleural effusions are present, obscuring the costophrenic angles. The lungs are otherwise clear.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are well-visualized. The upper abdomen is not well visualized due to the presence of the nasogastric tube and other lines.
+   - bones/soft tissues: The bones are well-visualized. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION
+   - Bilateral pleural effusions.
+   - Multiple lines and tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip position of the nasogastric tube and central lines is not clearly visualized.
+   - The upper abdomen is not well visualized.
+   - The presence of multiple lines and tubes may obscure underlying pathology.
+
+7) DOMAIN VECTOR

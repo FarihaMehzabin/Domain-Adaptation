@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is taken from anterior to posterior.
+   - patient position: portable with confidence 90% + patient is lying on a portable radiographic device.
+   - portable-likelihood: high with evidence (portable device, patient position).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 85% + posterior rib count is estimable.
+   - penetration: adequate with confidence 90% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, with the upper and lower borders of the image being slightly padded.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are relatively clear, mediastinum is visible, bones are visible, and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines present, likely representing medical devices. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is the patient's right side. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube: present, course: central, tip position: unknown, confidence 95%
+   - nasogastric tube: present, course: central, tip position: unknown, confidence 95%
+   - right internal jugular central venous catheter: present, course: central, tip position: superior vena cava, confidence 95%
+   - left internal jugular central venous catheter: present, course: central, tip position: superior vena cava, confidence 95%
+   - right subclavian central venous catheter: present, course: central, tip position: superior vena cava, confidence 95%
+   - pacemaker/defibrillator: present, course: right atrium, tip position: right ventricle, confidence 95%
+   - arterial line: indeterminate, course: unknown, tip position: unknown, confidence 50%
+   - chest tube: indeterminate, course: unknown, tip position: unknown, confidence 50%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: bilateral pleural effusions are present, obscuring the costophrenic angles. The lungs appear relatively clear otherwise.
+   - mediastinum/heart: the mediastinum is within normal limits. The heart size is difficult to assess due to the overlying pleural effusions.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is not well visualized due to the overlying devices and pleural effusions.
+   - bones/soft tissues: the ribs are visible. The clavicles are symmetrical.
+
+5) IMPRESSION
+   - Bilateral pleural effusions.
+   - Multiple central venous catheters are present.
+   - Endotracheal tube and nasogastric tube are present.
+   - Pacemaker/defibrillator is present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip positions of the central venous catheters and the nasogastric tube are not clearly visualized.
+   - The upper abdomen is not well visualized.
+   - The heart size is difficult to assess due to the overlying pleural effusions.
+   - The arterial line and chest tube are indeterminate.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is taken from anterior to posterior.
+   - patient position: portable with confidence 90% + patient is lying on a portable radiographic device.
+   - portable-likelihood: high + image is taken on a portable device.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the entire chest, including the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are somewhat obscured by overlying devices and edema. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are multiple lines and tubes visible. There is some evidence of grid/moiré artifact. There is some evidence of banding artifact. There is no evidence of detector dropout or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - tracheostomy tube: present, course: midline, tip position: unknown, confidence 95%
+   - nasogastric tube: present, course: midline, tip position: unknown, confidence 95%
+   - central venous catheter: present, course: right subclavian, tip position: superior vena cava, confidence 95%
+   - multiple lines: present, course: unknown, tip position: unknown, confidence 90%
+   - chest tubes: present, course: right, tip position: unknown, confidence 95%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - diffuse bilateral infiltrates: present, appearance: hazy, density: high, confidence 95% + The lungs show diffuse bilateral infiltrates, appearing hazy and with high density.
+   - mediastinum/heart
+     - cardiomegaly: possible, appearance: enlarged, confidence 85% + The heart appears enlarged.
+     - mediastinal widening: possible, appearance: increased density, confidence 80% + The mediastinum appears widened.
+   - diaphragms/upper abdomen
+     - diaphragmatic flattening: possible, appearance: depressed, confidence 75% + The diaphragms appear flattened.
+     - bowel loops: present, appearance: air-filled, confidence 90% + Bowel loops are visible.
+   - bones/soft tissues
+     - ribs: visible, appearance: normal, confidence 95% + Ribs are visible.
+     - clavicles: visible, appearance: normal, confidence 95% + Clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Diffuse bilateral pulmonary infiltrates.
+   - Possible cardiomegaly and mediastinal widening.
+   - Possible diaphragmatic flattening.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The presence and extent of the pulmonary infiltrates are difficult to fully assess due to the overlying devices and edema.
+   - The tip positions of the central venous catheter and the nasogastric tube are not clearly visible.
+   - The tip position of the chest tubes is not clearly visible.
+   - The degree of cardiomegaly is difficult to assess.
+   - The degree of mediastinal widening is difficult to assess.
+   - The degree of diaphragmatic flattening is difficult to assess.
+
+7) DOMAIN VECTOR
