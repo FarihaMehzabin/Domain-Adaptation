@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest radiograph.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + the image appears to be a standard PA chest radiograph, not a portable.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + adequate inspiration is present. Posterior rib count is estimable.
+   - penetration: adequate with confidence 90% + adequate penetration is present. Vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + no significant motion blur is evident.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are not fully visualized.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles (The lungs are generally well-visualized. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured by cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are no obvious artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the right side is the right. There is a burned-in label top-left, but the content is not visible.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - chest tube (right side): present, course: right pleural space, tip position: not visualized, confidence 90% + a chest tube is present on the right side. The tip position is not clearly visualized due to the image cropping.
+   - catheter (right side): present, course: right pleural space, tip position: not visualized, confidence 90% + a catheter is present on the right side. The tip position is not clearly visualized due to the image cropping.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: There is a large area of opacity in the right lower lung field, likely representing a large pleural effusion or consolidation. The lung markings are somewhat obscured by the opacity.
+     - Left lung: The left lung appears clear.
+     - Pleural effusion: There is a large pleural effusion on the right side.
+   - mediastinum/heart
+     - Mediastinum: The mediastinum is midline.
+     - Heart: The heart size is within normal limits.
+   - diaphragms/upper abdomen
+     - Diaphragms: The diaphragms are well-visualized.
+     - Upper abdomen: The upper abdomen is not well visualized due to the image cropping.
+   - bones/soft tissues
+     - Ribs: The ribs are visible.
+     - Clavicles: The clavicles are visible.
+     - Scapulae: The scapulae are visible.
+
+5) IMPRESSION
+   - Large right pleural effusion.
+   - Right-sided chest tube in place.
+   - No acute findings in the left lung.
+
+6) LIMITATIONS / UNCERTAINTY
+   - Image is cropped, obscuring the apices and costophrenic angles.
+   - The tip position of the chest tube is not clearly visualized.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR
