@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, with the costophrenic angles and apices being cut off.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are visible, mediastinum is visible, bones are visible, and diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines present, likely representing medical devices. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - right subclavian central line: present, course: right subclavian vein, tip position: indeterminate, confidence 90%
+   - left subclavian central line: present, course: left subclavian vein, tip position: indeterminate, confidence 90%
+   - endotracheal tube: present, course: trachea, tip position: indeterminate, confidence 90%
+   - nasogastric tube: present, course: stomach, tip position: indeterminate, confidence 90%
+   - chest tubes: present, course: right chest, tip position: indeterminate, confidence 90%
+   - other lines/tubes: indeterminate, course: indeterminate, tip position: indeterminate, confidence 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: there are areas of increased opacity in the lungs, particularly in the left lung. There is also some increased density in the right lung. There is no evidence of pleural effusion.
+   - mediastinum/heart: the mediastinum is unremarkable. The heart size is normal.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is somewhat obscured by the overlying lung opacities.
+   - bones/soft tissues: the ribs are visible. There is no evidence of pneumothorax.
+
+5) IMPRESSION
+   - Multiple medical devices are present, including central lines, an endotracheal tube, a nasogastric tube, and chest tubes.
+   - There are areas of increased opacity in the lungs, which could be due to various causes, including pneumonia, pulmonary edema, or atelectasis. Further evaluation is needed to determine the etiology.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image is limited by the presence of multiple medical devices, which obscure the underlying anatomy.
+   - The tip positions of the central lines and endotracheal tube are indeterminate.
+   - The upper abdomen is poorly visualized.
+   - The cause of the lung opacities is uncertain.
+
+7) DOMAIN VECTOR
