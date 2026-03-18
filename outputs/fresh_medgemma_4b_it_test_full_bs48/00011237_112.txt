@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is labeled AP.
+   - patient position: portable with confidence 90% + the image is labeled "portable".
+   - portable-likelihood: high + the image is a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles appear symmetrical.
+   - inspiration: adequate with confidence 85% + posterior rib count is estimable.
+   - penetration: adequate with confidence 90% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, with the upper and lower borders of the image being slightly padded.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are relatively clear, but there are areas of increased opacity. The mediastinum is visible. Bones are well-defined. Diaphragms are visible. Costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are lines present in the image.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. A burned-in label is present at the top-left corner
+
+3) DEVICES / LINES / TUBES
+   - endotracheal tube: present, course: midline, tip position: indeterminate, confidence 80%
+   - nasogastric tube: present, course: midline, tip position: indeterminate, confidence 80%
+   - central venous catheter: present, course: superior vena cava, tip position: indeterminate, confidence 80%
+   - pacemaker/defibrillator: present, course: left pectoral region, tip position: indeterminate, confidence 80%
+   - chest tube: indeterminate, course: indeterminate, tip position: indeterminate, confidence 50%
+
+4) FINDINGS
+   - lungs/pleura: bilateral opacities are present, particularly in the lower lung zones. There is a possible pleural effusion on the right side.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is difficult to assess due to the overlying opacities.
+   - diaphragms/upper abdomen: Diaphragms are visible. The upper abdomen is not well visualized due to the patient's position and the presence of overlying structures.
+   - bones/soft tissues: Bones are intact. There are surgical clips in the right axilla.
+
+5) IMPRESSION
+   - Bilateral pulmonary opacities, possibly representing pneumonia or edema.
+   - Possible right pleural effusion.
+   - Endotracheal tube, nasogastric tube, central venous catheter, pacemaker/defibrillator, and chest tube are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image is a portable chest X-ray, which may be limited in terms of anatomical detail.
+   - The patient's position and the presence of overlying structures may obscure the visualization of certain structures.
+   - The tip positions of the endotracheal tube, nasogastric tube, central venous catheter, pacemaker/defibrillator, and chest tube are indeterminate.
+   - The presence of bilateral pulmonary opacities makes it difficult to assess the heart size.
+
+7) DOMAIN VECTOR
