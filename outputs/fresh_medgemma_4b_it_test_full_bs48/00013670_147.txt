@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + the image appears to be a standard chest X-ray, not a portable.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + adequate inspiration is present. Posterior rib count is estimable.
+   - penetration: adequate with confidence 90% + adequate penetration is present. Vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + no significant motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, with the upper and lower portions of the image missing.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are somewhat obscured by overlying devices and lines. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are numerous lines and tubes present. The image is not processed with grid or moiré. There is no evidence of banding or detector dropout. There is no evidence of compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side. Burned-in text is present at the top-left corner
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - tracheostomy tube: present, course: midline, tip position: unknown, confidence 95%
+   - central venous catheter: present, course: internal jugular vein, tip position: superior vena cava, confidence 90%
+   - multiple lines: present, course: unknown, tip position: unknown, confidence 80%
+   - right-sided chest tube: present, course: right hemithorax, tip position: unknown, confidence 90%
+   - right-sided picc line: present, course: right upper extremity, tip position: unknown, confidence 85%
+   - feeding tube: present, course: stomach, tip position: unknown, confidence 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: The lungs are diffusely hazy, with increased interstitial markings. There is a large opacity in the right upper lung field. There is a small pleural effusion in the right hemithorax.
+   - mediastinum/heart: The mediastinum is slightly widened. The heart size is difficult to assess due to the overlying opacity.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is not well visualized due to the overlying devices and lines.
+   - bones/soft tissues: The ribs are visible. The clavicles are visible. The soft tissues are unremarkable.
+
+5) IMPRESSION
+   - Right upper lobe opacity, concerning for pneumonia or other process.
+   - Right pleural effusion.
+   - Multiple lines and tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - Limited visualization of the lung parenchyma due to overlying devices and lines.
+   - Difficulty in assessing the heart size due to the opacity.
+   - The tip position of the central venous catheter, right-sided chest tube, right-sided picc line, and feeding tube are not clearly visualized.
+   - The tip position of the multiple lines is not clearly visualized.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? Adequate coverage of the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: good anatomical clarity.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): Low contrast, low edge enhancement, no inversion suspected, low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - sternal wires: present, course: midline, tip position: not visualized. Confidence 95%.
+   - heart: not visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - right lung: there is a right lower lobe opacity, which could represent consolidation, atelectasis, or other pathology.
+     - left lung: there is a left lower lobe opacity, which could represent consolidation, atelectasis, or other pathology.
+     - pleural effusions: there are small bilateral pleural effusions, likely layering posteriorly.
+   - mediastinum/heart:
+     - heart size: heart size is within normal limits.
+     - mediastinal contours: mediastinal contours are unremarkable.
+   - diaphragms/upper abdomen:
+     - diaphragms: diaphragms are visualized.
+     - upper abdomen: the upper abdomen is unremarkable.
+   - bones/soft tissues:
+     - ribs: ribs are visualized.
+     - clavicles: clavicles are visualized.
+     - soft tissues: soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right lower lobe and left lower lobe opacities, concerning for pneumonia, atelectasis, or other pathology.
+   - Small bilateral pleural effusions.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The presence and extent of the opacities are difficult to fully assess due to the low contrast.
+   - The tip position of the sternal wires is not visualized.
+   - The presence of the burned-in label is not relevant to the interpretation of the chest X-ray.
+
+7) DOMAIN VECTOR
