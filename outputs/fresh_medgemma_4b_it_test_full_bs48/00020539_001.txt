@@ -1,0 +1,43 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 90% + adequate inspiration is present.
+   - penetration: adequate with confidence 95% + adequate penetration is present.
+   - motion blur: none with confidence 95% + no significant motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, with the upper and lower borders of the image being slightly padded.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are well-visualized. The mediastinum is well-visualized. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are well-visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the right. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - heart: present, normal size with confidence 95%
+   - lungs: present, normal lung markings with confidence 95%
+   - trachea: present, midline with confidence 95%
+   - esophagus: present, midline with confidence 95%
+   - heart catheter: indeterminate, no catheter is seen with confidence 90%
+   - central line: indeterminate, no central line is seen with confidence 90%
+   - pacemaker: indeterminate, no pacemaker is seen with confidence 90%
+   - chest tube: indeterminate, no chest tube is seen with confidence 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: Multiple rounded opacities are present in the lungs, most notably in the right upper lobe. The lung fields are otherwise clear. No pleural effusion is identified.
+   - mediastinum/heart: The mediastinum is unremarkable. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are well-visualized. The upper abdomen is unremarkable.
+   - bones/soft tissues: The ribs are well-visualized. The clavicles are well-visualized. The soft tissues are unremarkable.
+
+5) IMPRESSION
+   - Multiple rounded opacities in the lungs, most notably in the right upper lobe.
+   - Normal heart size.
+   - No acute pulmonary process identified.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image is a single view, limiting the assessment of the lung fields.
+   - The multiple rounded opacities in the lungs are difficult to characterize without further imaging.
+   - The presence of a burned-in label limits the ability to assess the entire image.
+   - The image is cropped, limiting the assessment of the lung apices.
+
+7) DOMAIN VECTOR
