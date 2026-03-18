@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely upright.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the apices, costophrenic angles, and lateral chest walls. There is some padding at the costophrenic angles.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are visible. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are surgical clips present in the mediastinum.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present. There is burned-in text present at the top-left corner
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - sternal wires: present, course: midline, tip position: indeterminate, confidence 90%
+   - surgical clips: present, course: mediastinum, tip position: indeterminate, confidence 95%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral pulmonary opacities are present. The opacities are not uniform in distribution.
+     - There is a large opacity in the left upper lobe.
+     - There are multiple smaller opacities throughout both lungs.
+     - No pleural effusion is identified.
+     - No pneumothorax is identified.
+   - mediastinum/heart
+     - The heart size is normal.
+     - The mediastinal contours are normal.
+     - The great vessels are normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are normal.
+     - The upper abdomen is not well visualized.
+   - bones/soft tissues
+     - The ribs are normal.
+     - The clavicles are normal.
+     - The scapulae are normal.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral pulmonary opacities.
+   - Large opacity in the left upper lobe.
+   - Multiple smaller opacities throughout both lungs.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The upper abdomen is not well visualized.
+   - The exact etiology of the pulmonary opacities is indeterminate.
+   - The tip position of the sternal wires is indeterminate.
+
+7) DOMAIN VECTOR
