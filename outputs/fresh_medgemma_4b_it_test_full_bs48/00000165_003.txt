@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the upper chest and mediastinum. The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are well-aerated. The mediastinum is well-defined. The bones are well-defined. The diaphragms are well-defined. The costophrenic angles are well-defined.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line: present, course: right subclavian vein, tip position: indeterminate, confidence 80%
+   - right chest tube: present, course: right pleural space, tip position: indeterminate, confidence 80%
+   - surgical clips: present, location: right upper chest, number: multiple, confidence 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear, no focal consolidation, pleural effusion, or pneumothorax is identified.
+     - pleura: no pleural effusion or pneumothorax is identified.
+   - mediastinum/heart
+     - mediastinum: normal size and contour.
+     - heart: normal size and contour.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: no acute fractures are identified.
+     - clavicles: symmetrical.
+     - surgical clips: present, location: right upper chest, number: multiple, confidence 90%
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right subclavian line and right chest tube are present.
+   - Multiple surgical clips are present in the right upper chest.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip position of the right subclavian line and right chest tube is indeterminate.
+   - The image is a single view, and the lower lung fields are not fully visualized.
+   - The presence of surgical clips in the right upper chest is noted, but the exact location and extent of the surgical procedure are not fully visualized.
+
+7) DOMAIN VECTOR
