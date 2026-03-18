@@ -1,0 +1,39 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is likely a standard PA chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the upper lung fields, costophrenic angles, and lateral chest walls. The image is cropped at the lower border.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are clear. Mediastinum is visible. Bones are visible. Diaphragms are visible. Costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines present, likely representing medical devices. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - right subclavian central line: present, course: right subclavian vein, tip position: indeterminate, confidence 90%
+   - left subclavian central line: present, course: left subclavian vein, tip position: indeterminate, confidence 90%
+   - left chest tube: present, course: left pleural space, tip position: indeterminate, confidence 90%
+   - right chest tube: present, course: right pleural space, tip position: indeterminate, confidence 90%
+   - esophageal probe: present, course: esophagus, tip position: indeterminate, confidence 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: There is a large opacity in the left hemithorax, likely representing a pleural effusion. The right lung appears clear. There is no evidence of pneumothorax.
+   - mediastinum/heart: The mediastinum is midline. The heart size is difficult to assess due to the opacity in the left hemithorax.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is not well visualized due to the opacity in the left hemithorax.
+   - bones/soft tissues: The ribs are visible. The clavicles are visible.
+
+5) IMPRESSION
+   - Large left pleural effusion.
+   - Two chest tubes are present in the pleural space.
+   - Central lines are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The left hemithorax is obscured by a large opacity, making it difficult to assess the underlying lung parenchyma and mediastinal structures.
+   - The tip positions of the central lines and chest tubes are indeterminate.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

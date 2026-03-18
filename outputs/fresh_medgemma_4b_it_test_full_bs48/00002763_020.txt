@@ -1,0 +1,42 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: semi-erect with confidence 80% + patient is likely in a semi-erect position.
+   - portable-likelihood: high with evidence (portable marker present)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 90% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 85% + posterior rib count is estimable.
+   - penetration: adequate with confidence 90% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, with the upper portion of the image missing.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are somewhat obscured by overlying devices and edema. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines and tubes present. The image is not grid or moiré. There is no evidence of banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. A burned-in label is present at the top-left corner
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image has low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - central line: present, course: internal jugular, tip position: indeterminate, confidence 80%
+   - endotracheal tube: present, course: trachea, tip position: indeterminate, confidence 80%
+   - nasogastric tube: present, course: stomach, tip position: indeterminate, confidence 80%
+   - chest tube: present, course: right pleural space, tip position: indeterminate, confidence 80%
+   - multiple other lines/tubes: present, course: indeterminate, tip position: indeterminate, confidence 70%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: There is significant bilateral pulmonary edema, with increased opacity in both lung fields. There is a possible pleural effusion on the left side.
+   - mediastinum/heart: The heart size is difficult to assess due to the overlying edema. The mediastinum is unremarkable.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is not well visualized due to the overlying devices and edema.
+   - bones/soft tissues: The bones are visible. There are no obvious fractures.
+
+5) IMPRESSION
+   - Bilateral pulmonary edema.
+   - Possible left pleural effusion.
+   - Multiple lines and tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image is a portable chest X-ray, which may be limited in terms of image quality and anatomical detail.
+   - The image is cropped, which may limit the assessment of the upper lung fields.
+   - The tip positions of the central line, endotracheal tube, and nasogastric tube are indeterminate.
+   - The heart size is difficult to assess due to the overlying edema.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR
