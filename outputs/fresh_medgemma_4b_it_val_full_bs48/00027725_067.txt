@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is labeled AP.
+   - patient position: portable with confidence 90% + the image is labeled "portable".
+   - portable-likelihood: high + the image is a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving some padding on the costophrenic angles.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are diffusely hazy. Mediastinum is visible. Bones are visible. Diaphragms are visible. Costophrenic angles are partially obscured by padding.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: lines are present, likely from medical devices. Grid/moiré is not apparent. Banding is not apparent. Detector dropout is not apparent. Compression artifacts are not apparent.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. A burned-in label is present on the top-left corner, but the content is not visible
+
+3) DEVICES / LINES / TUBES
+   - endotracheal tube: present, course: midline, tip position: not visible, confidence 90%
+   - nasogastric tube: present, course: midline, tip position: not visible, confidence 90%
+   - central venous catheter: present, course: right subclavian, tip position: not visible, confidence 90%
+   - chest tubes: present, course: bilateral, tip position: not visible, confidence 90%
+   - lines: numerous lines are present, likely representing various medical devices. The exact course and tip positions are not visible.
+
+4) FINDINGS
+   - lungs/pleura: diffuse bilateral infiltrates are present, obscuring lung markings. The infiltrates appear to be relatively uniform in density. No pleural effusion is identified.
+   - mediastinum/heart: the mediastinum is midline. The heart size is difficult to assess due to the infiltrates.
+   - diaphragms/upper abdomen: diaphragms are visible. The upper abdomen is not well visualized due to the patient's position and the presence of medical devices.
+   - bones/soft tissues: bones are intact. Soft tissues are not well visualized due to the patient's position and the presence of medical devices.
+
+5) IMPRESSION
+   - Diffuse bilateral infiltrates.
+   - Multiple medical devices are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image is a portable chest X-ray, which limits the anatomical coverage.
+   - The diffuse infiltrates obscure the lung markings, making it difficult to assess the lung parenchyma.
+   - The tip positions of the central venous catheter and chest tubes are not visible.
+   - The upper abdomen is not well visualized.
+   - The exact course and tip positions of the nasogastric tube and endotracheal tube are not visible.
+
+7) DOMAIN VECTOR
