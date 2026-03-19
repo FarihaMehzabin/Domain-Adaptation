@@ -1,0 +1,36 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest radiograph.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest radiograph.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + no significant rotation is apparent.
+   - inspiration: adequate with confidence 90% + adequate inspiration is present.
+   - penetration: adequate with confidence 95% + adequate penetration is present.
+   - motion blur: none with confidence 95% + no motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, obscuring the apices and costophrenic angles. Costal margins are visible.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles (lungs are clear. Mediastinum is visible. Bones are visible. Diaphragms and costophrenic angles are not fully visible due to cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (no obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (Low contrast, low edge enhancement, no inversion suspected, low noise texture.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - sternal wires: present, multiple, course: anterior to posterior, tip position: not visible. confidence 95%
+   - pacemaker leads: indeterminate, course: not visible, tip position: not visible. confidence 10%
+
+4) FINDINGS
+   - lungs/pleura: lungs are clear. No pleural effusion or pneumothorax is identified.
+   - mediastinum/heart: the heart size is mildly enlarged. The mediastinal contours are unremarkable.
+   - diaphragms/upper abdomen: diaphragms are visible. The upper abdomen is not well visualized due to cropping.
+   - bones/soft tissues: no acute bony abnormalities are identified.
+
+5) IMPRESSION
+   - Mild cardiomegaly.
+   - No acute pulmonary process identified.
+
+6) LIMITATIONS / UNCERTAINTY
+   - Limited visualization of the apices and costophrenic angles due to image cropping.
+   - The tip position of the pacemaker leads is not visible.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR
