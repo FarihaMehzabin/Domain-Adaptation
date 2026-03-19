@@ -1,0 +1,36 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is standing.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the upper chest and abdomen. The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are well-aerated. The mediastinum is well-defined. The bones are well-defined. The diaphragms are well-defined. The costophrenic angles are well-defined.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are multiple lines present, likely representing medical devices. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present, indicating the left side is the left. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES
+   - central line (e.g., subclavian, internal jugular): present, course: likely internal jugular, tip position: indeterminate, confidence 85%
+   - catheter (e.g., IV, PICC): present, course: likely subclavian, tip position: indeterminate, confidence 80%
+   - pacemaker/defibrillator: present, course: likely subclavian, tip position: indeterminate, confidence 80%
+   - other: indeterminate
+
+4) FINDINGS
+   - lungs/pleura: lungs are clear. No pleural effusion is identified.
+   - mediastinum/heart: The heart size is normal. The mediastinum is unremarkable.
+   - diaphragms/upper abdomen: The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues: The bones are unremarkable. There are multiple devices present.
+
+5) IMPRESSION
+   - Multiple medical devices are present.
+   - No acute pulmonary process is identified.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip position of the central line, catheter, and pacemaker/defibrillator is indeterminate.
+   - The image quality is adequate, but the presence of multiple devices limits the ability to fully assess the underlying anatomy.
+
+7) DOMAIN VECTOR
