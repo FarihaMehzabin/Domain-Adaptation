@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior view of the chest.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low with evidence (image is likely a portable chest radiograph).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the clavicles appear symmetrical.
+   - inspiration: adequate with confidence 85% + the lungs appear well expanded.
+   - penetration: adequate with confidence 90% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, with the costophrenic angles and apices being cut off.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are cut off.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines present, likely representing medical devices. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube: present, course: midline, tip position: approximately 4 cm above the carina, confidence 95%
+   - nasogastric tube: present, course: midline, tip position: not visualized, confidence 60%
+   - central venous catheter: present, course: right subclavian, tip position: not visualized, confidence 60%
+   - left subclavian line: present, course: left subclavian, tip position: not visualized, confidence 60%
+   - pacemaker/defibrillator: present, course: right atrium, tip position: not visualized, confidence 60%
+   - chest tube: present, course: left pleural space, tip position: not visualized, confidence 60%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: The lungs are clear bilaterally. There is no evidence of pneumothorax or pleural effusion.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues: The ribs are intact. The clavicles are intact. The soft tissues are unremarkable.
+
+5) IMPRESSION
+   - The patient is intubated.
+   - Multiple lines and tubes are present.
+   - The lungs are clear.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The costophrenic angles are cut off, limiting assessment for pleural effusions.
+   - The tip positions of the central venous catheter, left subclavian line, pacemaker/defibrillator, and chest tube are not visualized.
+   - The tip position of the nasogastric tube is not visualized.
+
+7) DOMAIN VECTOR
