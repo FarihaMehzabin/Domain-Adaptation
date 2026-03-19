@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image shows the chest from the posterior-anterior direction.
+   - patient position: upright with confidence 90% + patient is standing or sitting upright.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the entire chest, including the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles with confidence 95% + Lung fields are clear. Mediastinum is well-defined. Bones are visible. Diaphragms are visible. Costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are multiple lines present, likely representing medical devices. The presence of lines is not further characterized.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present, indicating the left side of the image. Burned-in text is present at the top-left corner
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - left chest tube: present, course: from the apex to the base, tip position: indeterminate, confidence 90%
+   - left subclavian line: present, course: from the subclavian vein to the superior vena cava, tip position: indeterminate, confidence 90%
+   - right chest tube: present, course: from the apex to the base, tip position: indeterminate, confidence 90%
+
+4) FINDINGS
+   - lungs/pleura:
+     - left lung: opacification is present in the left lung field, likely representing a pleural effusion or consolidation.
+     - right lung: clear with confidence 95%
+   - mediastinum/heart:
+     - mediastinum: normal in size and position with confidence 95%
+     - heart: normal in size and position with confidence 95%
+   - diaphragms/upper abdomen:
+     - diaphragms: visible and well-defined with confidence 95%
+     - upper abdomen: partially visible, with bowel loops seen.
+   - bones/soft tissues:
+     - ribs: visible and intact with confidence 95%
+     - clavicles: visible and intact with confidence 95%
+     - subcutaneous emphysema: present in the left chest wall with confidence 90%
+
+5) IMPRESSION
+   - Left-sided chest tubes are present.
+   - Left lung opacification, likely representing a pleural effusion or consolidation.
+   - Left subclavian line is present.
+   - Right chest tube is present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - Tip position of chest tubes is indeterminate.
+   - The presence and extent of the left lung opacification are indeterminate.
+   - The presence and extent of subcutaneous emphysema are indeterminate.
+
+7) DOMAIN VECTOR
