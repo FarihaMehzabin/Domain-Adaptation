@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is labeled AP.
+   - patient position: portable with confidence 90% + patient is in a portable position.
+   - portable-likelihood: high + the image is a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 85% + posterior rib count is estimable.
+   - penetration: adequate with confidence 90% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving the upper portion of the chest and the upper abdomen.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are visible, the mediastinum is visible, the bones are visible, and the diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are lines and possible grid/moiré artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present. There is burned-in text present at the top-left corner
+
+3) DEVICES / LINES / TUBES
+   - endotracheal tube: present, course: midline, tip position: unknown, confidence 90%
+   - nasogastric tube: present, course: midline, tip position: unknown, confidence 90%
+   - left subclavian central line: present, course: left subclavian vein, tip position: unknown, confidence 90%
+   - right subclavian central line: present, course: right subclavian vein, tip position: unknown, confidence 90%
+   - esophageal probe: present, course: midline, tip position: unknown, confidence 90%
+
+4) FINDINGS
+   - lungs/pleura: bilateral diffuse opacities are present, with more prominent involvement in the left lung. There is also a large opacity in the right upper lung field.
+   - mediastinum/heart: The mediastinum is unremarkable. The heart size is difficult to assess due to the lung opacities.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is incompletely visualized.
+   - bones/soft tissues: The ribs are visible. The clavicles are visible.
+
+5) IMPRESSION
+   - Bilateral diffuse lung opacities, more prominent in the left lung.
+   - Large opacity in the right upper lung field.
+   - Endotracheal tube, nasogastric tube, left subclavian central line, right subclavian central line, and esophageal probe are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image is a portable chest X-ray, which may be limited in its ability to fully evaluate the chest.
+   - The lung opacities obscure the visualization of the heart and mediastinum.
+   - The tip positions of the central lines are not clearly visible.
+   - The upper abdomen is incompletely visualized.
+   - The presence of grid/moiré artifacts may affect the image quality.
+
+7) DOMAIN VECTOR
