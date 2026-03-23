@@ -2,7 +2,6 @@ image_embeddings/**/*.npy filter=lfs diff=lfs merge=lfs -text
 report_embeddings/**/*.npy filter=lfs diff=lfs merge=lfs -text
 outputs/** filter=lfs diff=lfs merge=lfs -text
 fused_embeddings/** filter=lfs diff=lfs merge=lfs -text
-report_embeddings/** filter=lfs diff=lfs merge=lfs -text
 image_embeddings/** filter=lfs diff=lfs merge=lfs -text
 outputs/nih_cxr14_frozen_fused_linear/** -filter -diff -merge -text
 outputs/nih_cxr14_frozen_report_linear/** -filter -diff -merge -text
