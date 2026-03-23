@@ -1,24 +1,3 @@
-{
-  "run_date_utc": "2026-03-17T16:27:02.096365+00:00",
-  "split": "val",
-  "split_csv_path": "/workspace/data/nih_cxr14/splits/val.csv",
-  "data_root": "/workspace/data",
-  "model_id": "google/vit-base-patch16-224",
-  "pooling": "auto",
-  "output_dir": "/workspace/image_embeddings/vit-base-patch16-224/train/val",
-  "num_input_images": 11219,
-  "num_embedded_images": 11219,
-  "num_failed_images": 0,
-  "embedding_dim": 768,
-  "batch_size": 64,
-  "num_workers": 4,
-  "device_requested": "auto",
-  "device_resolved": "cuda",
-  "fp16_on_cuda": true,
-  "max_images_per_split": null,
-  "extensions": [
-    ".jpeg",
-    ".jpg",
-    ".png"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:08e01636539278411b1b02f29948430fb7148b4617ce88707e2633c04fbeff5a
+size 641
