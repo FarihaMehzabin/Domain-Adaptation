@@ -1,0 +1,83 @@
+{
+  "batch_policy": {
+    "accum_steps": 1,
+    "effective_batch": 1024,
+    "micro_batch": 1024,
+    "tuned_safe_micro_batch": 78571
+  },
+  "device_requested": "auto",
+  "device_resolved": "cuda",
+  "dtype": "float32",
+  "label_names": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion"
+  ],
+  "model": {
+    "hidden_layers": [],
+    "input_dim": 128,
+    "output_dim": 5,
+    "type": "linear"
+  },
+  "optimizer": {
+    "learning_rate": 0.001,
+    "name": "AdamW",
+    "weight_decay": 0.0001
+  },
+  "paths": {
+    "manifest_csv": "/workspace/manifest_nih_cxr14 .csv",
+    "output_dir": "/workspace/outputs/nih_cxr14_frozen_report_linear/20260323T081157Z",
+    "test_embeddings": "/workspace/report_embeddings/test/microsoft__BiomedVLP-CXR-BERT-specialized/embeddings.npy",
+    "test_report_ids": "/workspace/report_embeddings/test/microsoft__BiomedVLP-CXR-BERT-specialized/report_ids.json",
+    "train_embeddings": "/workspace/report_embeddings/BiomedVLP-CXR-BERT-specialized/embeddings.npy",
+    "train_report_ids": "/workspace/report_embeddings/train/BiomedVLP-CXR-BERT-specialized/report_ids.json",
+    "val_embeddings": "/workspace/report_embeddings/val/microsoft__BiomedVLP-CXR-BERT-specialized/embeddings.npy",
+    "val_report_ids": "/workspace/report_embeddings/val/microsoft__BiomedVLP-CXR-BERT-specialized/report_ids.json"
+  },
+  "pos_weight": {
+    "atelectasis": 8.69772895581338,
+    "cardiomegaly": 39.52140278494069,
+    "consolidation": 23.3631007751938,
+    "edema": 47.71109733415995,
+    "pleural_effusion": 7.455768402927249
+  },
+  "run_date_utc": "2026-03-23T08:11:57.784001+00:00",
+  "seed": 3407,
+  "split_sizes": {
+    "test": 22330,
+    "train": 78571,
+    "val": 11219
+  },
+  "train_label_counts": {
+    "atelectasis": {
+      "negatives": 70469,
+      "positives": 8102
+    },
+    "cardiomegaly": {
+      "negatives": 76632,
+      "positives": 1939
+    },
+    "consolidation": {
+      "negatives": 75346,
+      "positives": 3225
+    },
+    "edema": {
+      "negatives": 76958,
+      "positives": 1613
+    },
+    "pleural_effusion": {
+      "negatives": 69279,
+      "positives": 9292
+    }
+  },
+  "training": {
+    "early_stopping_metric": "val_macro_auroc",
+    "early_stopping_patience": 5,
+    "max_epochs": 50,
+    "shuffle_test": false,
+    "shuffle_train": true,
+    "shuffle_val": false
+  }
+}
