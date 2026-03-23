@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Train a frozen-embedding multilabel classifier on NIH CXR14 DINOv2 features."""
+"""Train a frozen-embedding multilabel classifier on NIH CXR14 report embeddings."""
 
 from __future__ import annotations
 
@@ -62,20 +62,29 @@ LABEL_SPECS = [
 LABEL_COLUMNS = [column for column, _ in LABEL_SPECS]
 LABEL_NAMES = [name for _, name in LABEL_SPECS]
 
-DEFAULT_TRAIN_EMBEDDINGS = Path("/workspace/fused_embeddings/Dinov2-large/train/embeddings.npy")
-DEFAULT_VAL_EMBEDDINGS = Path("/workspace/fused_embeddings/Dinov2-large/val/embeddings.npy")
-DEFAULT_TEST_EMBEDDINGS = Path("/workspace/fused_embeddings/Dinov2-large/test/embeddings.npy")
-
-DEFAULT_TRAIN_SPLIT_CSV = Path("/workspace/data/nih_cxr14/splits/train.csv")
-DEFAULT_VAL_SPLIT_CSV = Path("/workspace/data/nih_cxr14/splits/val.csv")
-DEFAULT_TEST_SPLIT_CSV = Path("/workspace/data/nih_cxr14/splits/test.csv")
 DEFAULT_MANIFEST_CSV = Path("/workspace/manifest_nih_cxr14 .csv")
 
-DEFAULT_TRAIN_IMAGE_PATHS = Path("/workspace/fused_embeddings/Dinov2-large/train/image_paths.txt")
-DEFAULT_VAL_IMAGE_PATHS = Path("/workspace/fused_embeddings/Dinov2-large/val/image_paths.txt")
-DEFAULT_TEST_IMAGE_PATHS = Path("/workspace/fused_embeddings/Dinov2-large/test/image_paths.txt")
+DEFAULT_TRAIN_EMBEDDINGS = Path(
+    "/workspace/report_embeddings/BiomedVLP-CXR-BERT-specialized/embeddings.npy"
+)
+DEFAULT_VAL_EMBEDDINGS = Path(
+    "/workspace/report_embeddings/val/microsoft__BiomedVLP-CXR-BERT-specialized/embeddings.npy"
+)
+DEFAULT_TEST_EMBEDDINGS = Path(
+    "/workspace/report_embeddings/test/microsoft__BiomedVLP-CXR-BERT-specialized/embeddings.npy"
+)
 
-DEFAULT_OUTPUT_ROOT = Path("/workspace/outputs/nih_cxr14_frozen_fused_linear")
+DEFAULT_TRAIN_REPORT_IDS = Path(
+    "/workspace/report_embeddings/train/BiomedVLP-CXR-BERT-specialized/report_ids.json"
+)
+DEFAULT_VAL_REPORT_IDS = Path(
+    "/workspace/report_embeddings/val/microsoft__BiomedVLP-CXR-BERT-specialized/report_ids.json"
+)
+DEFAULT_TEST_REPORT_IDS = Path(
+    "/workspace/report_embeddings/test/microsoft__BiomedVLP-CXR-BERT-specialized/report_ids.json"
+)
+
+DEFAULT_OUTPUT_ROOT = Path("/workspace/outputs/nih_cxr14_frozen_report_linear")
 
 
 @dataclass
@@ -83,9 +92,9 @@ class SplitData:
     name: str
     features: torch.Tensor
     labels: torch.Tensor
-    csv_path: Path
+    manifest_path: Path
     embeddings_path: Path
-    image_paths_path: Path
+    report_ids_path: Path
 
     @property
     def num_samples(self) -> int:
@@ -106,18 +115,15 @@ class BatchPolicy:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Train a linear multilabel classifier on frozen DINOv2 NIH CXR14 embeddings."
+        description="Train a linear multilabel classifier on frozen NIH CXR14 report embeddings."
     )
+    parser.add_argument("--manifest-csv", type=Path, default=DEFAULT_MANIFEST_CSV)
     parser.add_argument("--train-embeddings", type=Path, default=DEFAULT_TRAIN_EMBEDDINGS)
     parser.add_argument("--val-embeddings", type=Path, default=DEFAULT_VAL_EMBEDDINGS)
     parser.add_argument("--test-embeddings", type=Path, default=DEFAULT_TEST_EMBEDDINGS)
-    parser.add_argument("--train-split-csv", type=Path, default=DEFAULT_TRAIN_SPLIT_CSV)
-    parser.add_argument("--val-split-csv", type=Path, default=DEFAULT_VAL_SPLIT_CSV)
-    parser.add_argument("--test-split-csv", type=Path, default=DEFAULT_TEST_SPLIT_CSV)
-    parser.add_argument("--manifest-csv", type=Path, default=DEFAULT_MANIFEST_CSV)
-    parser.add_argument("--train-image-paths", type=Path, default=DEFAULT_TRAIN_IMAGE_PATHS)
-    parser.add_argument("--val-image-paths", type=Path, default=DEFAULT_VAL_IMAGE_PATHS)
-    parser.add_argument("--test-image-paths", type=Path, default=DEFAULT_TEST_IMAGE_PATHS)
+    parser.add_argument("--train-report-ids", type=Path, default=DEFAULT_TRAIN_REPORT_IDS)
+    parser.add_argument("--val-report-ids", type=Path, default=DEFAULT_VAL_REPORT_IDS)
+    parser.add_argument("--test-report-ids", type=Path, default=DEFAULT_TEST_REPORT_IDS)
     parser.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT_ROOT)
     parser.add_argument("--run-name", type=str, default="")
     parser.add_argument("--device", type=str, default="auto")
@@ -188,141 +194,98 @@ def resolve_device(requested: str) -> torch.device:
     return device
 
 
-def read_split_rows(csv_path: Path) -> list[dict[str, str]]:
-    if not csv_path.exists():
-        raise FileNotFoundError(f"Split CSV not found: {csv_path}")
-    with csv_path.open("r", encoding="utf-8", newline="") as handle:
+def read_manifest_rows(manifest_csv: Path) -> list[dict[str, str]]:
+    if not manifest_csv.exists():
+        raise FileNotFoundError(f"Manifest CSV not found: {manifest_csv}")
+    with manifest_csv.open("r", encoding="utf-8", newline="") as handle:
         reader = csv.DictReader(handle)
         if reader.fieldnames is None:
-            raise ValueError(f"Split CSV {csv_path} is missing a header row.")
-        missing_columns = [column for column in LABEL_COLUMNS + ["image_path"] if column not in reader.fieldnames]
+            raise ValueError(f"Manifest CSV {manifest_csv} is missing a header row.")
+        missing_columns = [column for column in LABEL_COLUMNS + ["image_path", "split"] if column not in reader.fieldnames]
         if missing_columns:
-            raise ValueError(f"Split CSV {csv_path} is missing columns: {missing_columns}")
+            raise ValueError(f"Manifest CSV {manifest_csv} is missing columns: {missing_columns}")
         return list(reader)
 
 
-def read_manifest_rows(csv_path: Path, split_name: str) -> list[dict[str, str]]:
-    if not csv_path.exists():
-        raise FileNotFoundError(f"Manifest CSV not found: {csv_path}")
-    with csv_path.open("r", encoding="utf-8", newline="") as handle:
-        reader = csv.DictReader(handle)
-        if reader.fieldnames is None:
-            raise ValueError(f"Manifest CSV {csv_path} is missing a header row.")
-        required = LABEL_COLUMNS + ["image_path", "split"]
-        missing_columns = [column for column in required if column not in reader.fieldnames]
-        if missing_columns:
-            raise ValueError(f"Manifest CSV {csv_path} is missing columns: {missing_columns}")
-        rows = [row for row in reader if row.get("split") == split_name]
-    if not rows:
-        raise ValueError(f"Manifest CSV {csv_path} has no rows for split '{split_name}'.")
-    return rows
-
-
-def reorder_rows_by_image_paths(rows: list[dict[str, str]], image_paths: list[str], split_name: str) -> list[dict[str, str]]:
-    rows_by_basename: dict[str, dict[str, str]] = {}
-    for row in rows:
-        basename = Path(row["image_path"]).name
-        if basename in rows_by_basename:
-            raise ValueError(f"{split_name}: duplicate image in manifest: {basename}")
-        rows_by_basename[basename] = row
-    ordered: list[dict[str, str]] = []
-    missing: list[str] = []
-    for image_path in image_paths:
-        basename = Path(image_path).name
-        row = rows_by_basename.get(basename)
-        if row is None:
-            if len(missing) < 5:
-                missing.append(basename)
-            continue
-        ordered.append(row)
-    if len(ordered) != len(image_paths):
-        raise ValueError(
-            f"{split_name}: missing manifest rows for {len(image_paths) - len(ordered)} images. "
-            f"Examples: {missing}"
-        )
-    return ordered
-
-
-def read_image_paths(image_paths_path: Path) -> list[str]:
-    if not image_paths_path.exists():
-        raise FileNotFoundError(f"Image paths file not found: {image_paths_path}")
-    paths = [line.strip() for line in image_paths_path.read_text(encoding="utf-8").splitlines() if line.strip()]
-    if not paths:
-        raise ValueError(f"Image paths file is empty: {image_paths_path}")
-    return paths
+def read_report_ids(report_ids_path: Path) -> list[str]:
+    if not report_ids_path.exists():
+        raise FileNotFoundError(f"Report IDs file not found: {report_ids_path}")
+    payload = json.loads(report_ids_path.read_text(encoding="utf-8"))
+    if not isinstance(payload, list) or not payload:
+        raise ValueError(f"Report IDs file is empty or invalid: {report_ids_path}")
+    return [str(item) for item in payload]
 
 
 def load_embedding_array(embeddings_path: Path) -> np.ndarray:
     if not embeddings_path.exists():
         raise FileNotFoundError(f"Embeddings file not found: {embeddings_path}")
-    array = np.load(embeddings_path)
+    array = np.load(embeddings_path, allow_pickle=True)
     if array.ndim != 2:
         raise ValueError(f"Expected a 2D embedding array at {embeddings_path}, found shape {array.shape}.")
     array = np.asarray(array, dtype=np.float32)
     return np.ascontiguousarray(array)
 
 
-def validate_alignment(split_name: str, rows: list[dict[str, str]], embeddings: np.ndarray, image_paths: list[str]) -> None:
+def build_manifest_lookup(rows: list[dict[str, str]]) -> dict[str, dict[str, str]]:
+    lookup: dict[str, dict[str, str]] = {}
+    for row in rows:
+        basename = Path(row["image_path"]).stem
+        lookup[basename] = row
+    return lookup
+
+
+def validate_alignment(
+    split_name: str,
+    rows: list[dict[str, str]],
+    embeddings: np.ndarray,
+    report_ids: list[str],
+    manifest_lookup: dict[str, dict[str, str]],
+) -> None:
     if len(rows) != embeddings.shape[0]:
         raise ValueError(
             f"{split_name}: split row count ({len(rows)}) does not match embedding rows ({embeddings.shape[0]})."
         )
-    if len(rows) != len(image_paths):
+    if len(rows) != len(report_ids):
         raise ValueError(
-            f"{split_name}: split row count ({len(rows)}) does not match image_paths entries ({len(image_paths)})."
+            f"{split_name}: split row count ({len(rows)}) does not match report_ids entries ({len(report_ids)})."
         )
 
-    for index, (row, image_path) in enumerate(zip(rows, image_paths)):
-        split_basename = Path(row["image_path"]).name
-        embedding_basename = Path(image_path).name
-        if split_basename != embedding_basename:
-            raise ValueError(
-                f"{split_name}: image order mismatch at row {index}: "
-                f"split has {split_basename}, embeddings have {embedding_basename}."
-            )
+    missing_ids = [report_id for report_id in report_ids if report_id not in manifest_lookup]
+    if missing_ids:
+        preview = ", ".join(missing_ids[:3])
+        raise ValueError(f"{split_name}: report_ids missing in manifest split: {preview}")
 
 
-def build_labels(rows: list[dict[str, str]]) -> torch.Tensor:
-    labels = np.zeros((len(rows), len(LABEL_COLUMNS)), dtype=np.float32)
-    for row_index, row in enumerate(rows):
+def build_labels(report_ids: list[str], manifest_lookup: dict[str, dict[str, str]]) -> torch.Tensor:
+    labels = np.zeros((len(report_ids), len(LABEL_COLUMNS)), dtype=np.float32)
+    for row_index, report_id in enumerate(report_ids):
+        row = manifest_lookup[report_id]
         for label_index, column in enumerate(LABEL_COLUMNS):
             labels[row_index, label_index] = float(row[column])
     return torch.from_numpy(labels)
 
 
-def load_split_from_manifest(split_name: str, manifest_path: Path, embeddings_path: Path, image_paths_path: Path) -> SplitData:
-    image_paths = read_image_paths(image_paths_path)
-    rows = read_manifest_rows(manifest_path, split_name)
-    rows = reorder_rows_by_image_paths(rows, image_paths, split_name)
+def load_split(
+    split_name: str,
+    manifest_rows: list[dict[str, str]],
+    embeddings_path: Path,
+    report_ids_path: Path,
+) -> SplitData:
     embeddings = load_embedding_array(embeddings_path)
-    validate_alignment(split_name, rows, embeddings, image_paths)
+    report_ids = read_report_ids(report_ids_path)
+
+    manifest_lookup = build_manifest_lookup(manifest_rows)
+    validate_alignment(split_name, manifest_rows, embeddings, report_ids, manifest_lookup)
 
     features = torch.from_numpy(embeddings)
-    labels = build_labels(rows)
+    labels = build_labels(report_ids, manifest_lookup)
     return SplitData(
         name=split_name,
         features=features,
         labels=labels,
-        csv_path=manifest_path,
+        manifest_path=DEFAULT_MANIFEST_CSV,
         embeddings_path=embeddings_path,
-        image_paths_path=image_paths_path,
-    )
-
-def load_split(split_name: str, csv_path: Path, embeddings_path: Path, image_paths_path: Path) -> SplitData:
-    rows = read_split_rows(csv_path)
-    embeddings = load_embedding_array(embeddings_path)
-    image_paths = read_image_paths(image_paths_path)
-    validate_alignment(split_name, rows, embeddings, image_paths)
-
-    features = torch.from_numpy(embeddings)
-    labels = build_labels(rows)
-    return SplitData(
-        name=split_name,
-        features=features,
-        labels=labels,
-        csv_path=csv_path,
-        embeddings_path=embeddings_path,
-        image_paths_path=image_paths_path,
+        report_ids_path=report_ids_path,
     )
 
 
@@ -557,7 +520,9 @@ def summarize_predictions(targets: np.ndarray, probabilities: np.ndarray) -> dic
     }
 
 
-def evaluate_model(model: nn.Module, dataloader: DataLoader, device: torch.device) -> tuple[dict[str, Any], np.ndarray, np.ndarray]:
+def evaluate_model(
+    model: nn.Module, dataloader: DataLoader, device: torch.device
+) -> tuple[dict[str, Any], np.ndarray, np.ndarray]:
     model.eval()
     targets_list: list[np.ndarray] = []
     probabilities_list: list[np.ndarray] = []
@@ -725,15 +690,14 @@ def main() -> int:
 
     seed_everything(args.seed)
 
-    use_manifest = args.manifest_csv is not None and args.manifest_csv.exists()
-    if use_manifest:
-        train_split = load_split_from_manifest("train", args.manifest_csv, args.train_embeddings, args.train_image_paths)
-        val_split = load_split_from_manifest("val", args.manifest_csv, args.val_embeddings, args.val_image_paths)
-        test_split = load_split_from_manifest("test", args.manifest_csv, args.test_embeddings, args.test_image_paths)
-    else:
-        train_split = load_split("train", args.train_split_csv, args.train_embeddings, args.train_image_paths)
-        val_split = load_split("val", args.val_split_csv, args.val_embeddings, args.val_image_paths)
-        test_split = load_split("test", args.test_split_csv, args.test_embeddings, args.test_image_paths)
+    manifest_rows = read_manifest_rows(args.manifest_csv)
+    train_rows = [row for row in manifest_rows if row["split"] == "train"]
+    val_rows = [row for row in manifest_rows if row["split"] == "val"]
+    test_rows = [row for row in manifest_rows if row["split"] == "test"]
+
+    train_split = load_split("train", train_rows, args.train_embeddings, args.train_report_ids)
+    val_split = load_split("val", val_rows, args.val_embeddings, args.val_report_ids)
+    test_split = load_split("test", test_rows, args.test_embeddings, args.test_report_ids)
 
     if train_split.embedding_dim != val_split.embedding_dim or train_split.embedding_dim != test_split.embedding_dim:
         raise ValueError(
@@ -785,16 +749,13 @@ def main() -> int:
             "shuffle_test": False,
         },
         "paths": {
+            "manifest_csv": args.manifest_csv,
             "train_embeddings": args.train_embeddings,
             "val_embeddings": args.val_embeddings,
             "test_embeddings": args.test_embeddings,
-            "train_split_csv": args.train_split_csv,
-            "val_split_csv": args.val_split_csv,
-            "test_split_csv": args.test_split_csv,
-            "manifest_csv": args.manifest_csv,
-            "train_image_paths": args.train_image_paths,
-            "val_image_paths": args.val_image_paths,
-            "test_image_paths": args.test_image_paths,
+            "train_report_ids": args.train_report_ids,
+            "val_report_ids": args.val_report_ids,
+            "test_report_ids": args.test_report_ids,
             "output_dir": output_dir,
         },
         "split_sizes": {
