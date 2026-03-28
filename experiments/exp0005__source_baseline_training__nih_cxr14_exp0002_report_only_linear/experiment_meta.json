@@ -1,0 +1,87 @@
+{
+  "argv": [
+    "/workspace/scripts/04_train_frozen_multilabel_baseline.py",
+    "--embedding-root",
+    "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test",
+    "--experiment-name",
+    "nih_cxr14_exp0002_report_only_linear",
+    "--batch-size",
+    "512",
+    "--epochs",
+    "30",
+    "--lr",
+    "1e-3",
+    "--weight-decay",
+    "1e-4",
+    "--patience",
+    "5",
+    "--seed",
+    "1337",
+    "--device",
+    "auto",
+    "--fp16-on-cuda"
+  ],
+  "best_epoch": 30,
+  "checkpoint_path": "/workspace/experiments/exp0005__source_baseline_training__nih_cxr14_exp0002_report_only_linear/best.ckpt",
+  "device_resolved": "cuda",
+  "embedding_root": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test",
+  "experiment_dir": "/workspace/experiments/exp0005__source_baseline_training__nih_cxr14_exp0002_report_only_linear",
+  "experiment_id": "exp0005",
+  "experiment_name": "exp0005__source_baseline_training__nih_cxr14_exp0002_report_only_linear",
+  "experiment_number": 5,
+  "input_dim": 128,
+  "macro_metrics": {
+    "test": {
+      "auroc": 0.7035937754275841,
+      "average_precision": 0.12912735637651138,
+      "ece": 0.3943823174221318,
+      "f1_at_0.5": 0.15996892426316942,
+      "f1_at_tuned_thresholds": 0.19119202529363588
+    },
+    "val": {
+      "auroc": 0.6987178163848714,
+      "average_precision": 0.12351295028177535,
+      "ece": 0.39483249507073825,
+      "f1_at_0.5": 0.159969993402949,
+      "f1_at_tuned_thresholds": 0.19194443817298273
+    }
+  },
+  "manifest_csv": "/workspace/manifest_nih_cxr14_all14.csv",
+  "num_labels": 14,
+  "operation_label": "source_baseline_training",
+  "run_date_utc": "2026-03-28T20:09:11.159777+00:00",
+  "selection_metric": "macro_auroc",
+  "split_inputs": {
+    "test": {
+      "embedding_dim": 128,
+      "embeddings_path": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test/test/embeddings.npy",
+      "first_row_id": "00000001_000",
+      "num_rows": 22330,
+      "sidecar_format": "json_list",
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test/test/report_ids.json"
+    },
+    "train": {
+      "embedding_dim": 128,
+      "embeddings_path": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test/train/embeddings.npy",
+      "first_row_id": "00000002_000",
+      "num_rows": 78571,
+      "sidecar_format": "json_list",
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test/train/report_ids.json"
+    },
+    "val": {
+      "embedding_dim": 128,
+      "embeddings_path": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test/val/embeddings.npy",
+      "first_row_id": "00000006_000",
+      "num_rows": 11219,
+      "sidecar_format": "json_list",
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test/val/report_ids.json"
+    }
+  },
+  "stopped_early": false,
+  "test_metrics_path": "/workspace/experiments/exp0005__source_baseline_training__nih_cxr14_exp0002_report_only_linear/test_metrics.json",
+  "thresholds_path": "/workspace/experiments/exp0005__source_baseline_training__nih_cxr14_exp0002_report_only_linear/val_f1_thresholds.json",
+  "val_metrics_path": "/workspace/experiments/exp0005__source_baseline_training__nih_cxr14_exp0002_report_only_linear/val_metrics.json"
+}
