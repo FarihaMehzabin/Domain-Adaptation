@@ -1,0 +1,55 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (supine) with confidence 100 + patient is supine.
+   - portable-likelihood (high) with evidence (portable X-ray machine).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + posterior rib count is difficult to estimate.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are not well visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are visible, but the image is cropped. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not well visualized due to cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the right. Burned-in text is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 80 + the image appears to be a standard chest X-ray. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 80 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (present) with confidence 90 + a line is seen entering the right subclavian vein.
+   - left subclavian line (present) with confidence 90 + a line is seen entering the left subclavian vein.
+   - right internal jugular central line (present) with confidence 90 + a line is seen entering the right internal jugular vein.
+   - endotracheal tube (present) with confidence 90 + a tube is seen entering the right main bronchus.
+   - nasogastric tube (present) with confidence 90 + a tube is seen entering the stomach.
+   - chest tube (present) with confidence 90 + a tube is seen entering the left hemithorax.
+   - right atrial catheter (present) with confidence 90 + a line is seen entering the right atrium.
+   - left subclavian line (present) with confidence 90 + a line is seen entering the left subclavian vein.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a large opacity in the right upper lobe, which could represent a mass, consolidation, or atelectasis.
+     - left lung: there is a small opacity in the left upper lobe, which could represent a mass, consolidation, or atelectasis.
+     - pleural effusion: there is no evidence of pleural effusion.
+   - mediastinum/heart
+     - the mediastinum is unremarkable.
+     - the heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are unremarkable.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the bones are unremarkable.
+     - the soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - large opacity in the right upper lobe.
+   - small opacity in the left upper lobe.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is a portable AP chest X-ray, which is limited in its ability to visualize the apices and costophrenic angles.
+   - The inspiration is low, which can make it difficult to visualize the lung fields.
+   - The presence of multiple lines and tubes makes it difficult to assess the lung fields.
+   - The image is cropped, obscuring the apices and costophrenic angles.
+
+7) DOMAIN VECTOR

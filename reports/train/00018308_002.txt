@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: The image is an anteroposterior (AP) chest X-ray.
+   - patient position: Upright with confidence 90% + evidence: The patient is in an upright position.
+   - portable-likelihood: Medium with evidence: The image appears to be a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: None with confidence 95% + evidence: The image appears to be free of significant rotation.
+   - inspiration: Adequate with confidence 85% + evidence: The lungs appear to be well-expanded.
+   - penetration: Adequate with confidence 90% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: None with confidence 95% + evidence: There is no evidence of motion blur.
+   - collimation/anatomic coverage: Apices? Costophrenic angles? Lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the top and bottom.
+   - anatomical clarity: Lungs/Mediastinum/Bones/Diaphragms & Costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: Lines, grid/moiré, banding, detector dropout, compression artifacts: There are no obvious artifacts.
+   - markers/overlays: Laterality marker present? Burned-in text present? A laterality marker is present. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: Contrast (low/med/high), Edge enhancement (low/med/high), Inversion suspected (yes/no), Noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right-sided chest tube: Present, course: Right main bronchus, tip position: Mediastinum, confidence 95%
+   - Left-sided chest tube: Present, course: Left main bronchus, tip position: Mediastinum, confidence 95%
+   - Indeterminate: The presence of a line/tube in the left upper chest is indeterminate.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: There is a large area of consolidation in the right upper lobe. There is also some increased opacity in the right lower lobe. There is a small amount of pleural effusion in the right pleural space.
+     - Left lung: There is some increased opacity in the left lower lobe. There is a small amount of pleural effusion in the left pleural space.
+   - mediastinum/heart
+     - The mediastinum is midline. The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are intact. The clavicles are intact. There is subcutaneous emphysema in the right chest wall.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right upper lobe consolidation with associated pleural effusion.
+   - Left lower lobe opacity with associated pleural effusion.
+   - Right-sided chest tube in place.
+   - Left-sided chest tube in place.
+   - Subcutaneous emphysema in the right chest wall.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The presence of the line/tube in the left upper chest is indeterminate.
+   - The extent of the consolidation in the right upper lobe is difficult to assess due to the overlying chest tube.
+   - The presence of the line/tube in the left upper chest is indeterminate.
+
+7) DOMAIN VECTOR

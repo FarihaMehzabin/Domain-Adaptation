@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (portable label on image).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 90 + the patient is likely in a semi-upright position.
+   - penetration (adequate) with confidence 95 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving the upper and lower portions of the chest visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are visible, the mediastinum is visible, the bones are visible, and the diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion are present. Noise texture (low) with confidence 90 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Tracheostomy tube (present) with confidence 100 + a tracheostomy tube is present in the midline of the upper chest.
+   - Indeterminate (present) with confidence 90 + a line is present in the right upper chest, but the tip position is not clearly visible.
+   - Indeterminate (present) with confidence 90 + a line is present in the left upper chest, but the tip position is not clearly visible.
+   - Indeterminate (present) with confidence 90 + a line is present in the right lower chest, but the tip position is not clearly visible.
+   - Indeterminate (present) with confidence 90 + a line is present in the left lower chest, but the tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: There is increased opacity in the right lung, particularly in the mid and lower zones. This could represent consolidation, edema, or other pathology.
+     - Left lung: There is increased opacity in the left lung, particularly in the mid and lower zones. This could represent consolidation, edema, or other pathology.
+     - Pleura: No obvious pleural effusion or pneumothorax is identified.
+   - mediastinum/heart
+     - Mediastinum: The mediastinum appears within normal limits in size and contour.
+     - Heart: The heart size is difficult to assess due to the increased opacity in the lungs.
+   - diaphragms/upper abdomen
+     - Diaphragms: The diaphragms are visible.
+     - Upper abdomen: The upper abdomen is not well visualized due to the patient's position and the presence of the tracheostomy tube.
+   - bones/soft tissues
+     - Bones: The ribs and clavicles are visible.
+     - Soft tissues: The soft tissues are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Increased opacity in both lungs, concerning for pneumonia, pulmonary edema, or other process.
+   - Tracheostomy tube in place.
+   - Lines present in the chest, but tip positions are not clearly visible.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited visualization of the heart size due to increased lung opacity.
+   - Tip positions of the lines are not clearly visible.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

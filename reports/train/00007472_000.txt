@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is PA view.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image covers the apices, costophrenic angles, and costal margins).
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are well-visualized, mediastinum is clear, bones are well-visualized, and costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the left side is the left).
+   - presentation/processing cues: contrast (low) with confidence 100 + image contrast is low. edge enhancement (low) with confidence 100 + edge enhancement is low. inversion suspected (no) with confidence 100 + no evidence of inversion. noise texture (low) with confidence 100 + low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Cardiac Monitor Leads: present, course: multiple, tip position: unknown, confidence 100
+   - IV Catheter: indeterminate, course: unknown, tip position: unknown, confidence 100
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Bilateral diffuse interstitial opacities, predominantly in the lower lung zones.
+     - Some areas of more consolidated opacity, particularly in the lower lung fields.
+     - No pleural effusion is identified.
+     - No pneumothorax is identified.
+   - mediastinum/heart
+     - The mediastinum is unremarkable in appearance.
+     - The heart size is within normal limits.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-visualized.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The bony structures are unremarkable.
+     - Soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral diffuse interstitial opacities, predominantly in the lower lung zones, with some areas of consolidation.
+   - The etiology of these findings is uncertain and requires further evaluation.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The limited image quality and lack of clinical context make it difficult to determine the exact etiology of the findings.
+   - The presence of multiple cardiac monitor leads makes it difficult to assess the heart size and function.
+   - The IV catheter is indeterminate.
+
+7) DOMAIN VECTOR

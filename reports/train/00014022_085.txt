@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (AP portable) with confidence 100 + image is labeled "AP portable"
+   - patient position (upright) with confidence 100 + image is labeled "AP portable"
+   - portable-likelihood (high) with evidence (image is labeled "AP portable")
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image shows the apices, costophrenic angles, and costal margins)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are well-visualized, mediastinum is well-visualized, bones are well-visualized, and diaphragms and costophrenic angles are well-visualized
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the image is a left lateral view. burned-in label top-left)
+   - presentation/processing cues: contrast (low) with confidence 100, edge enhancement (low) with confidence 100, inversion suspected (no) with confidence 100, noise texture (low) with confidence 100
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian central line (present, course: right subclavian vein, tip position: indeterminate) with confidence 100
+   - endotracheal tube (present, course: trachea, tip position: indeterminate) with confidence 100
+   - nasogastric tube (present, course: stomach, tip position: indeterminate) with confidence 100
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral opacities, predominantly in the lower lung zones, with a reticular pattern.
+     - possible pleural effusion on the left side, but difficult to assess due to overlying structures.
+     - there is some increased opacity in the right upper lobe.
+   - mediastinum/heart
+     - the heart size is normal.
+     - the mediastinal contours are normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-visualized.
+     - the upper abdomen is not well visualized.
+   - bones/soft tissues
+     - the bony structures are normal.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - bilateral pulmonary opacities, likely representing pulmonary edema or infection.
+   - possible left pleural effusion.
+   - right subclavian central line, endotracheal tube, and nasogastric tube are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is a portable AP view, which limits the assessment of the lung bases.
+   - The tip position of the central line, endotracheal tube, and nasogastric tube is indeterminate.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

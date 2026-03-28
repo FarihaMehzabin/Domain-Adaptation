@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. with confidence 100 + there are several lines present, likely representing medical devices. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) with confidence 100 + the image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture appears to be low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right subclavian central line (present) with confidence 95 + A right subclavian central line is present, coursing from the right subclavian vein into the superior vena cava. The tip is likely in the superior vena cava.
+   - Left subclavian central line (present) with confidence 95 + A left subclavian central line is present, coursing from the left subclavian vein into the superior vena cava. The tip is likely in the superior vena cava.
+   - Indeterminate (present) with confidence 80 + There are several lines present, likely representing medical devices. The exact course and tip position are indeterminate.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There are bilateral interstitial opacities, more prominent in the lung apices.
+     - There is no evidence of pleural effusion.
+     - There is no evidence of pneumothorax.
+   - mediastinum/heart
+     - The mediastinum is within normal limits.
+     - The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are intact.
+     - The clavicles are intact.
+     - The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral interstitial opacities, more prominent in the lung apices.
+   - Presence of two central venous catheters.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The exact course and tip position of the indeterminate lines are not clearly visible.
+   - The presence of the lines is only confirmed by the presence of the lines.
+
+7) DOMAIN VECTOR

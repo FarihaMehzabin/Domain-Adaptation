@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the patient's position. The costophrenic angles are not well visualized due to the patient's position. The lateral chest walls are not well visualized due to the patient's position.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are relatively clear, although there is some increased opacity. The mediastinum is well-defined. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are not well visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. with confidence 100 + there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (burned-in label top-left) with confidence 100 + a burned-in label is present in the top-left corner.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) with confidence 95 + an endotracheal tube is present, terminating approximately 4 cm above the carina.
+   - nasogastric tube (NGT) with confidence 90 + a nasogastric tube is present, coursing below the diaphragm and terminating in the stomach.
+   - central venous catheter (CVC) with confidence 90 + a central venous catheter is present, terminating in the superior vena cava.
+   - left subclavian line with confidence 90 + a left subclavian line is present, terminating in the superior vena cava.
+   - indeterminate (tube/line) with confidence 10 + there is an indeterminate tube/line in the upper abdomen.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral diffuse opacities with confidence 90 + there are diffuse, bilateral opacities throughout both lung fields. The pattern is consistent with pulmonary edema or diffuse alveolar process.
+   - mediastinum/heart
+     - mediastinal contours are normal with confidence 100 + the mediastinal contours are normal. The heart size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms are well-visualized with confidence 100 + the diaphragms are well-visualized.
+     - indeterminate (tube/line) with confidence 10 + there is an indeterminate tube/line in the upper abdomen.
+   - bones/soft tissues
+     - bones are unremarkable with confidence 100 + the bones are unremarkable.
+     - soft tissues are unremarkable with confidence 100 + the soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral diffuse pulmonary opacities.
+   - Endotracheal tube in place.
+   - Nasogastric tube in place.
+   - Central venous catheter in place.
+   - Left subclavian line in place.
+   - Indeterminate tube/line in the upper abdomen.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited visualization of the apices, costophrenic angles, and lateral chest walls due to patient positioning.
+   - The indeterminate tube/line in the upper abdomen cannot be fully evaluated.
+
+7) DOMAIN VECTOR

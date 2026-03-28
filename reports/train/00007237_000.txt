@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is standing.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the patient is likely in a good inspiratory phase.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be cropped, with the costophrenic angles not fully visible. The apices are not well visualized due to the cropping.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are clear. The mediastinum is well-defined. The bones are intact. The diaphragms are visible. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, indicating the image is of the right side. Burned-in text is present in the upper left corner, but the content is not readable.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to be a standard chest X-ray.
+   - edge enhancement (low) with confidence 100 + no obvious edge enhancement.
+   - inversion suspected (no) with confidence 100 + no obvious signs of inversion.
+   - noise texture (low) with confidence 100 + the image has a low level of noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - IVC (indeterminate) with confidence 50 + no IVC is visible.
+   - central line (indeterminate) with confidence 50 + no central line is visible.
+   - pacemaker (indeterminate) with confidence 50 + no pacemaker is visible.
+   - ETT (indeterminate) with confidence 50 + no ETT is visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+     - pleura: unremarkable.
+   - mediastinum/heart
+     - mediastinum: normal size and contour.
+     - heart: normal size and cardiomediastinal silhouette.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: intact.
+     - clavicles: symmetrical.
+     - scapulae: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute cardiopulmonary abnormalities identified.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The costophrenic angles are not fully visualized due to image cropping.
+   - The apices are not well visualized due to image cropping.
+   - The presence of IVC, central line, pacemaker, and ETT are indeterminate due to lack of visualization.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (image is taken in a non-hospital setting).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be relatively free of rotation.
+   - inspiration (low) with confidence 80 + the lung volumes appear low.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + the image is not significantly blurred.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the patient's position. The costophrenic angles are not well visualized due to the patient's position. The lateral chest walls are not well visualized due to the patient's position.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat obscured by the patient's position. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not well visualized.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are some lines visible in the image, likely from the equipment. The image does not appear to have grid or moiré artifacts. There is no evidence of banding or detector dropout. There are no compression artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian catheter (present) with confidence 90 + a catheter is seen in the right subclavian vein, terminating in the superior vena cava.
+   - right chest tube (present) with confidence 90 + a chest tube is seen in the right hemithorax, terminating in the pleural space.
+   - indeterminate (indeterminate) with confidence 100 + no other lines or tubes are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - there are bilateral patchy opacities, more prominent in the lower lung zones.
+     - there is a small amount of pleural effusion on the right side.
+     - there is some subcutaneous emphysema in the right chest wall.
+   - mediastinum/heart
+     - the mediastinum is unremarkable.
+     - the heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - right-sided chest tube in place.
+   - right-sided pleural effusion.
+   - subcutaneous emphysema in the right chest wall.
+   - bilateral patchy opacities, likely representing pulmonary edema or atelectasis.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is a portable chest radiograph, which limits the visualization of the apices and costophrenic angles.
+   - The lung volumes are low, which can obscure the underlying anatomy.
+   - The presence of subcutaneous emphysema can make it difficult to assess the lung parenchyma.
+
+7) DOMAIN VECTOR

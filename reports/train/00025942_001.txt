@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is labeled "AP"
+   - patient position (upright) with confidence 100 + image is labeled "PORTABLE"
+   - portable-likelihood (high) with evidence (labeling)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is good
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image shows the upper chest, but the costophrenic angles are not fully visualized. The apices are not fully visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are clear, mediastinum is well-defined, bones are visible, diaphragms are visible, and costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the left side is on the left. Burned-in text is present in the upper left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 100, edge enhancement (low) with confidence 100, inversion suspected (no) with confidence 100, noise texture (low) with confidence 100
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - central line (none) with confidence 100
+   - catheter (none) with confidence 100
+   - pacemaker (none) with confidence 100
+   - chest tube (none) with confidence 100
+   - ETT (none) with confidence 100
+   - NG tube (none) with confidence 100
+   - IV line (none) with confidence 100
+   - other (none) with confidence 100
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+     - pleura: unremarkable.
+   - mediastinum/heart
+     - mediastinum: normal size and contour.
+     - heart: normal size and contour.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: no acute fractures are identified.
+     - clavicles: symmetrical.
+     - scapulae: unremarkable.
+     - other: no acute soft tissue abnormalities are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute cardiopulmonary abnormalities identified.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Costophrenic angles are not fully visualized.
+   - The apices are not fully visualized.
+   - The burned-in text in the upper left corner is not legible.
+
+7) DOMAIN VECTOR

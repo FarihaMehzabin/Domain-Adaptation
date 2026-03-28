@@ -1,0 +1,56 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is PA view.
+   - patient position (upright) with confidence 100 + patient is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be a standard chest PA view, with adequate coverage of the apices, costophrenic angles, and costal margins.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are well-aerated, the mediastinum is clearly visible, the bones are well-defined, and the diaphragms and costophrenic angles are clearly visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None identified.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian catheter (present, course: right subclavian vein, tip position: indeterminate, confidence 80)
+   - left subclavian catheter (present, course: left subclavian vein, tip position: indeterminate, confidence 80)
+   - right internal jugular central line (present, course: right internal jugular vein, tip position: indeterminate, confidence 80)
+   - enteric tube (present, course: likely into the stomach, tip position: indeterminate, confidence 80)
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - left lower lobe opacity (present, size: moderate, density: hazy, location: left lower lobe, confidence 95)
+     - right lung (clear) with confidence 100
+     - left upper lobe (clear) with confidence 100
+     - right lung base (clear) with confidence 100
+     - pleural effusion (possible, left side, small) with confidence 70
+     - no pneumothorax (no evidence of pneumothorax) with confidence 100
+   - mediastinum/heart
+     - heart size (normal) with confidence 100
+     - mediastinal contours (normal) with confidence 100
+     - no obvious mediastinal widening (no evidence of mediastinal widening) with confidence 100
+   - diaphragms/upper abdomen
+     - diaphragms (well-defined) with confidence 100
+     - upper abdomen (normal) with confidence 100
+   - bones/soft tissues
+     - ribs (normal) with confidence 100
+     - clavicles (normal) with confidence 100
+     - no acute fractures (no acute fractures identified) with confidence 100
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Left lower lobe opacity, concerning for pneumonia or atelectasis.
+   - Possible small left pleural effusion.
+   - Central lines are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Tip positions of central lines are indeterminate.
+   - The left lower lobe opacity is difficult to fully characterize without additional imaging.
+   - The presence of a pleural effusion is only suggested by the hazy appearance of the left lower lobe.
+
+7) DOMAIN VECTOR

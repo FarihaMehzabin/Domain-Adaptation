@@ -1,0 +1,42 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is AP.
+   - patient position: portable with confidence 90% + the image is a portable chest X-ray.
+   - portable-likelihood: high with evidence (portable marker present).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimated to be 9.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also not fully visualized.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are somewhat obscured by overlying structures. Mediastinum is visible. Bones are visible. Diaphragms are visible. Costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are several lines present, likely from medical devices. The presence of these lines is not unusual for a portable chest X-ray.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: not visualized, confidence 90%
+   - nasogastric tube: present, course: midline, tip position: not visualized, confidence 90%
+   - central venous catheter: present, course: right subclavian, tip position: not visualized, confidence 90%
+   - pacemaker/defibrillator: present, course: right pectoral, tip position: not visualized, confidence 90%
+   - lines/tubes: indeterminate, course: multiple, tip position: not visualized, confidence 50%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: bilateral opacities are present, likely representing pulmonary edema. The lung fields are not fully visualized due to the image being cropped.
+   - mediastinum/heart: the mediastinum is unremarkable. The heart size is difficult to assess due to the opacities.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is not fully visualized.
+   - bones/soft tissues: the ribs are visible. The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - pulmonary edema.
+   - multiple lines/tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is a portable chest X-ray and is cropped, limiting the visualization of the apices and costophrenic angles.
+   - The tip positions of the central venous catheter, nasogastric tube, pacemaker/defibrillator, and lines/tubes are not visualized.
+   - The heart size is difficult to assess due to the opacities.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is labeled AP
+   - patient position (upright) with confidence 100 + image is upright
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is good
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image covers the apices, costophrenic angles, and costal margins)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are clear, mediastinum is well-defined, bones are visible, and costophrenic angles are clear
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, burned-in text is present at the top-left corner)
+   - presentation/processing cues: contrast (low) with confidence 100 + edge enhancement is low, inversion suspected (no) with confidence 100 + noise texture is low
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line: present, course: right subclavian vein, tip position: indeterminate, confidence 100
+   - left subclavian line: present, course: left subclavian vein, tip position: indeterminate, confidence 100
+   - right internal jugular line: present, course: right internal jugular vein, tip position: indeterminate, confidence 100
+   - left internal jugular line: present, course: left internal jugular vein, tip position: indeterminate, confidence 100
+   - catheter: present, course: abdominal, tip position: indeterminate, confidence 100
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear bilaterally, no focal consolidation, pleural effusions, or pneumothorax identified.
+     - pleura: unremarkable.
+   - mediastinum/heart
+     - mediastinum: normal size and contour.
+     - heart: normal size and cardiomediastinal silhouette.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: bowel loops are present, but the specific contents are not well visualized due to the low contrast.
+   - bones/soft tissues
+     - bones: ribs, clavicles, and spine are unremarkable.
+     - soft tissues: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Two central venous catheters are present.
+   - A catheter is present in the upper abdomen.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The catheter tip positions are indeterminate.
+   - The abdominal catheter is not well visualized.
+
+7) DOMAIN VECTOR

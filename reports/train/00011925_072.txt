@@ -1,0 +1,56 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior chest radiograph.
+   - patient position: semi-erect with confidence 90% + patient is in a semi-erect position.
+   - portable-likelihood: low with evidence (patient is in a hospital setting, but the image is not taken in a portable fashion)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 90% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 95% + the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + the image is not blurred.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the top and bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are relatively clear, but there is some increased opacity in the right lung. The mediastinum is well-defined. The bones are clearly visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are several lines present in the image, likely from medical devices. There is no evidence of grid/moiré artifacts, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the right side is on the right. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: unknown, confidence 80%
+   - nasogastric tube: present, course: unknown, tip position: unknown, confidence 60%
+   - central venous catheter: present, course: right subclavian, tip position: superior vena cava, confidence 90%
+   - pacemaker/defibrillator: present, course: right atrium, tip position: right ventricle, confidence 95%
+   - chest tubes: present, course: bilateral, tip position: unknown, confidence 70%
+   - lines/tubes: indeterminate, course: unknown, tip position: unknown, confidence 50%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: increased opacity in the right lung, likely representing a combination of edema and consolidation.
+     - left lung: relatively clear, with no obvious consolidation or pleural effusion.
+     - pleural effusion: possible small left pleural effusion, but difficult to assess due to overlying structures.
+   - mediastinum/heart
+     - cardiomegaly: the heart appears enlarged.
+     - mediastinal widening: the mediastinum appears widened, likely due to the presence of multiple lines and tubes.
+   - diaphragms/upper abdomen
+     - diaphragms: diaphragms are visible.
+     - upper abdomen: the upper abdomen is largely obscured by the overlying structures.
+   - bones/soft tissues
+     - ribs: ribs are visible.
+     - clavicles: clavicles are visible.
+     - soft tissues: soft tissues are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - cardiomegaly.
+   - possible small left pleural effusion.
+   - increased opacity in the right lung, likely representing a combination of edema and consolidation.
+   - mediastinal widening.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip position of the endotracheal tube and nasogastric tube is unknown.
+   - The tip position of the chest tubes is unknown.
+   - The presence of multiple lines and tubes makes it difficult to assess the extent of the pulmonary edema and consolidation.
+   - The image is cropped at the top and bottom, which may limit the assessment of the costophrenic angles.
+
+7) DOMAIN VECTOR

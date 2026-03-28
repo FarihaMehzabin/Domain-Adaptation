@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is labeled AP
+   - patient position (portable) with confidence 100 + image is labeled portable
+   - portable-likelihood (high) + image is a portable chest X-ray
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with some padding at the costophrenic angles)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, burned-in label top-left)
+   - presentation/processing cues: contrast (low), edge enhancement (low), inversion suspected (no), noise texture (low)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - right subclavian line (present) with confidence 100 + line is seen coursing from the right subclavian vein into the superior vena cava
+   - right picc line (present) with confidence 100 + line is seen coursing from the right subclavian vein into the superior vena cava
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs are clear bilaterally, without evidence of consolidation, effusion, or pneumothorax.
+     - costophrenic angles are clear.
+   - mediastinum/heart
+     - the mediastinum is unremarkable.
+     - the heart size is within normal limits.
+     - the aorta is unremarkable.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-defined.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the clavicles are unremarkable.
+     - the ribs are unremarkable.
+     - the scapulae are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right subclavian line in place.
+   - Right picc line in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable chest X-ray, which may be limited by patient positioning and image quality.
+   - The costophrenic angles are partially obscured by the patient's body habitus.
+
+7) DOMAIN VECTOR

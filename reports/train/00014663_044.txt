@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is labeled AP
+   - patient position (upright) with confidence 100 + image is labeled AP
+   - portable-likelihood (high) with evidence (portable equipment visible)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with some loss of the costophrenic angles)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, top-left. burned-in label top-left)
+   - presentation/processing cues: contrast (low) with confidence 100, edge enhancement (low) with confidence 100, inversion suspected (no) with confidence 100, noise texture (low) with confidence 100
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian catheter (present) with confidence 100 + catheter is seen coursing from the right subclavian vein into the superior vena cava.
+   - catheter tip position (indeterminate) with confidence 100 + catheter tip position is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - there is a hazy opacity in the left lower lung field, which could represent atelectasis or consolidation.
+     - the right lung appears clear.
+     - there is no evidence of pneumothorax or pleural effusion.
+   - mediastinum/heart
+     - the mediastinum is unremarkable.
+     - the heart size is within normal limits.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-defined.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are intact.
+     - the clavicles are intact.
+     - there is no evidence of subcutaneous emphysema.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - hazy opacity in the left lower lung field, which could represent atelectasis or consolidation.
+   - right subclavian catheter in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - image is cropped, with some loss of the costophrenic angles.
+   - catheter tip position is not clearly visualized.
+
+7) DOMAIN VECTOR

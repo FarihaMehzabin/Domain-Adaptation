@@ -1,0 +1,53 @@
+1) EXAM / TECHNIQUE
+   - projection (AP, portable) with confidence 100 + image is a portable AP chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (high) with evidence (portable marker present).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 90 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 95 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the patient's position. The costophrenic angles are not well visualized due to the patient's position. The lateral chest walls are not well visualized due to the patient's position. The image is cropped at the level of the clavicles.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (lungs are relatively clear, but there is increased opacity in the right lung. The mediastinum is well-defined. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are not well visualized.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are multiple lines present, likely from medical devices. The presence of these lines is not unusual in a portable radiograph.)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. Burned-in label top-left.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Chest Tube (right) (present, course: right hemithorax, tip position: indeterminate, confidence 80)
+   - Central Line (left) (present, course: left subclavian vein, tip position: indeterminate, confidence 80)
+   - Endotracheal Tube (present, course: trachea, tip position: indeterminate, confidence 80)
+   - Nasogastric Tube (present, course: stomach, tip position: indeterminate, confidence 80)
+   - Foley Catheter (present, course: bladder, tip position: indeterminate, confidence 80)
+   - IV Catheter (right) (present, course: right upper extremity, tip position: indeterminate, confidence 80)
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: diffuse, bilateral opacities are present, with a more prominent appearance in the right lung. This could represent pulmonary edema, pneumonia, or other infiltrative processes.
+     - Left lung: diffuse, bilateral opacities are present, with a more prominent appearance in the left lung. This could represent pulmonary edema, pneumonia, or other infiltrative processes.
+     - Pleura: no pleural effusion is identified.
+   - mediastinum/heart
+     - Mediastinum: the mediastinum is within normal limits in size and contour.
+     - Heart: the heart size is normal.
+   - diaphragms/upper abdomen
+     - Diaphragms: the diaphragms are well-visualized.
+     - Upper abdomen: the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - Bones: the bones are intact.
+     - Soft tissues: no significant soft tissue abnormalities are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral pulmonary opacities, right greater than left.
+   - Multiple medical devices are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices of the lungs are not well visualized.
+   - The costophrenic angles are not well visualized.
+   - The lateral chest walls are not well visualized.
+   - The tip positions of the central line, endotracheal tube, nasogastric tube, Foley catheter, and IV catheter are indeterminate.
+   - The presence of multiple lines may obscure the underlying anatomy.
+
+7) DOMAIN VECTOR

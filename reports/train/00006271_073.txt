@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be rotationally correct.
+   - inspiration (adequate) with confidence 90 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 95 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to be a standard chest radiograph.
+   - edge enhancement (low) with confidence 90 + edge enhancement is present, but not excessive.
+   - inversion suspected (no) with confidence 100 + no evidence of inversion.
+   - noise texture (low) with confidence 95 + the image has a low level of noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, course: midline, tip position: approximately 4 cm above the carina, confidence 95 + an endotracheal tube is present, its tip is approximately 4 cm above the carina.
+   - nasogastric tube (NGT) present, course: midline, tip position: not clearly visualized, confidence 70 + a nasogastric tube is present, but the tip is not clearly visualized.
+   - right subclavian central line (SC line) present, course: right subclavian vein, tip position: not clearly visualized, confidence 60 + a right subclavian central line is present, but the tip is not clearly visualized.
+   - right picc line present, course: right subclavian vein, tip position: not clearly visualized, confidence 60 + a right picc line is present, but the tip is not clearly visualized.
+   - left picc line present, course: left subclavian vein, tip position: not clearly visualized, confidence 60 + a left picc line is present, but the tip is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - diffuse bilateral opacities present, with a reticular pattern. The opacities are more prominent in the lower lung zones. No pleural effusion is identified.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in width. The heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are intact. The clavicles are intact. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - diffuse bilateral pulmonary opacities, likely representing pulmonary edema or other diffuse lung process.
+   - endotracheal tube in place.
+   - nasogastric tube in place.
+   - right subclavian central line in place.
+   - right picc line in place.
+   - left picc line in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - the tip position of the nasogastric tube and central lines is not clearly visualized.
+   - the extent of the pulmonary opacities is difficult to fully assess due to the diffuse nature of the findings.
+
+7) DOMAIN VECTOR

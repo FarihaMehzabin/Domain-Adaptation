@@ -1,0 +1,42 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "PORTABLE" label in top-left corner.
+   - portable-likelihood (high) with evidence (label).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are visible, mediastinum is visible, bones are visible, and diaphragms and costophrenic angles are visible, although the apices and costophrenic angles are not fully visualized due to cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 90 + the image appears to have low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Central Venous Catheter (CVC): present, course: internal jugular vein, tip position: indeterminate, confidence 80 + a CVC is present, but the tip position is not clearly visible.
+   - Chest Tube: present, course: left chest, tip position: indeterminate, confidence 80 + a chest tube is present, but the tip position is not clearly visible.
+   - Indeterminate: present, course: indeterminate, tip position: indeterminate, confidence 100 + there are multiple lines/tubes present, but their exact course and tip positions are not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - No obvious consolidation, pleural effusion, or pneumothorax is identified. The lung fields appear relatively clear, although the apices are not fully visualized.
+   - mediastinum/heart
+     - The mediastinum appears within normal limits in size and contour. The heart size is not well assessed due to the limited visualization of the apices.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible. The upper abdomen is not well visualized due to the cropping of the image.
+   - bones/soft tissues
+     - The ribs are visible. The clavicles are visible and appear symmetrical.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Chest tube and central venous catheter are present.
+   - The apices and costophrenic angles are not fully visualized due to cropping.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited visualization of the apices and costophrenic angles.
+   - Tip positions of the chest tube and central venous catheter are not clearly visible.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

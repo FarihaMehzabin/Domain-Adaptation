@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is labeled "AP"
+   - patient position (upright) with confidence 100 + image is labeled "PORTABLE"
+   - portable-likelihood (high) with evidence (labeling)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image shows the upper chest, but the apices and costophrenic angles are not fully visualized due to the image extent)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the image is likely a left lateral view, but the image is labeled "AP")
+   - presentation/processing cues: contrast (low) with confidence 100, edge enhancement (low) with confidence 100, inversion suspected (no) with confidence 100, noise texture (low) with confidence 100
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - PICC line: present, course: right subclavian vein, tip position: indeterminate, confidence 80 (the tip of the PICC line is not clearly visualized, but it is present in the upper right atrium)
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear, no focal consolidation, pleural effusion, or pneumothorax identified.
+     - pleura: unremarkable.
+   - mediastinum/heart
+     - mediastinum: unremarkable.
+     - heart: size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: diaphragmatic domes are visible.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - bones: ribs are unremarkable.
+     - soft tissues: subcutaneous tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right subclavian PICC line in place, tip position not clearly visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are not fully visualized due to the image extent.
+   - The tip position of the PICC line is not clearly visualized.
+
+7) DOMAIN VECTOR

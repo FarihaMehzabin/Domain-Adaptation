@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + image is a portable chest radiograph.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + posterior rib count is estimated to be 9.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are diffusely hazy. The mediastinum is unremarkable. The bones are unremarkable. The diaphragms are unremarkable. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are some faint lines visible, but they are not clearly defined.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 80 + edge enhancement (low) with confidence 80 + inversion suspected (no) with confidence 100 + noise texture (low) with confidence 80
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (Indeterminate) with confidence 60 + A catheter is seen coursing from the right internal jugular vein into the superior vena cava. The tip position is not clearly visible.
+   - Left Internal Jugular Central Venous Catheter (Indeterminate) with confidence 60 + A catheter is seen coursing from the left internal jugular vein into the superior vena cava. The tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Diffuse, bilateral, reticular opacities are present throughout both lung fields. The pattern is suggestive of interstitial lung disease.
+     - There is no evidence of pleural effusion.
+   - mediastinum/heart
+     - The mediastinum is unremarkable in appearance.
+     - The heart size is within normal limits.
+   - diaphragms/upper abdomen
+     - The diaphragms are unremarkable.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The bones are unremarkable.
+     - The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Diffuse bilateral reticular opacities, suggestive of interstitial lung disease.
+   - Presence of two central venous catheters.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable chest radiograph, which may be limited by patient positioning and technique.
+   - The apices and costophrenic angles are obscured.
+   - The tip position of the central venous catheters is not clearly visible.
+   - The presence of artifacts may obscure subtle findings.
+
+7) DOMAIN VECTOR

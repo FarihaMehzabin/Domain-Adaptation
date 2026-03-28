@@ -1,0 +1,54 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest X-ray.
+   - patient position: upright with confidence 90% + evidence: the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian catheter: present, course: right subclavian vein, tip position: indeterminate, confidence 80%
+   - left subclavian catheter: present, course: left subclavian vein, tip position: indeterminate, confidence 80%
+   - chest tube: present, course: right hemithorax, tip position: indeterminate, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a large opacity in the right lower lung field. The opacity is irregular in contour.
+     - left lung: there is a smaller opacity in the left lower lung field. The opacity is also irregular in contour.
+     - pleural surfaces: the pleural surfaces are clear. No pleural effusion is identified.
+   - mediastinum/heart
+     - heart size: normal.
+     - mediastinal contours: normal.
+     - great vessels: normal.
+   - diaphragms/upper abdomen
+     - diaphragms: the diaphragms are well-defined.
+     - upper abdomen: the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - ribs: the ribs are intact.
+     - clavicles: the clavicles are symmetrical.
+     - other: no other significant abnormalities are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right lower lobe opacity.
+   - Left lower lobe opacity.
+   - Right subclavian catheter.
+   - Left subclavian catheter.
+   - Chest tube.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip position of the catheters and chest tube is indeterminate.
+   - The extent of the lung opacities is not fully defined.
+   - The presence of any underlying pulmonary vascular congestion is not fully assessed.
+
+7) DOMAIN VECTOR

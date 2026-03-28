@@ -1,0 +1,53 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: The image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + evidence: The patient is likely in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a standard chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: The clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: The lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: No obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be adequately cropped to include the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? The left side is marked with a "L". There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: absent with confidence 95%
+   - nasogastric tube: absent with confidence 95%
+   - central line: absent with confidence 95%
+   - pacemaker/defibrillator: absent with confidence 95%
+   - chest tube: absent with confidence 95%
+   - IV line: absent with confidence 95%
+   - other: indeterminate with confidence 95%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - bilateral lung fields are present.
+     - there is increased opacity in the lung fields bilaterally, which could be due to a variety of etiologies including pulmonary edema, infection, or other inflammatory processes.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart:
+     - the mediastinum is within normal limits in size and contour.
+     - the heart size is normal.
+     - no obvious cardiomegaly is present.
+   - diaphragms/upper abdomen:
+     - the diaphragms are well-defined.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues:
+     - the ribs are intact.
+     - the clavicles are intact.
+     - the scapulae are intact.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - increased opacity in the lung fields bilaterally.
+   - no acute findings are identified.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image quality is adequate, but further evaluation may be needed to fully characterize the increased opacity in the lung fields.
+   - The absence of clinical information limits the ability to provide a definitive diagnosis.
+
+7) DOMAIN VECTOR

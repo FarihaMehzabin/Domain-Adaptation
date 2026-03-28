@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is standing.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be relatively free of rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear, the mediastinum is well-defined, the bones are visible, and the diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? (burned-in label top-left) with confidence 100 + a burned-in label is present in the top-left corner.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Indeterminate (no devices are clearly visible) with confidence 100 + no tubes, lines, or other devices are clearly visible in the image.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - The lungs are clear bilaterally. No focal consolidations, effusions, or pneumothoraces are identified. The costophrenic angles are sharp.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in width. The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are intact. The clavicles are intact. The visualized soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - No acute cardiopulmonary abnormalities identified.
+   - The image is limited by the cropped view.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Limited view of the apices and costophrenic angles.
+   - No devices are visible.
+   - No clinical history is available.
+
+7) DOMAIN VECTOR

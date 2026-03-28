@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (portable equipment visible).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the patient is likely in a semi-upright position.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and the lateral chest walls. The costophrenic angles are not fully visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat obscured by the patient's body habitus. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visualized.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (No obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to be processed with low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Port-a-cath (right upper chest) with confidence 90 + a port-a-cath is present on the right upper chest. The catheter tip is not visible.
+   - Indeterminate (left upper chest) with confidence 80 + an indeterminate device is present on the left upper chest. The device is not clearly identifiable.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There is increased opacity in the left lower lung field, obscuring the costophrenic angle. The etiology is indeterminate.
+     - There is increased opacity in the right lower lung field, obscuring the costophrenic angle. The etiology is indeterminate.
+     - There is no evidence of pneumothorax.
+     - There is no evidence of pleural effusion.
+   - mediastinum/heart
+     - The mediastinum is widened. The etiology is indeterminate.
+     - The heart size is enlarged. The etiology is indeterminate.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible.
+     - The upper abdomen is not well visualized due to the patient's body habitus.
+   - bones/soft tissues
+     - The ribs are visible.
+     - The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Increased opacity in the left lower lung field and right lower lung field, obscuring the costophrenic angles. Etiology is indeterminate.
+   - Widened mediastinum. Etiology is indeterminate.
+   - Enlarged heart. Etiology is indeterminate.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is a portable chest radiograph, which limits the visualization of the apices and lateral chest walls.
+   - The patient's body habitus obscures the visualization of the diaphragms and upper abdomen.
+   - The etiology of the increased opacity in the lungs and the widened mediastinum is indeterminate.
+   - The tip position of the port-a-cath is not visible.
+
+7) DOMAIN VECTOR

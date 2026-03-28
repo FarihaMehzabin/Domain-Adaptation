@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 90 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 95 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image appears to be cropped, with the apices and costophrenic angles not fully visible. The lateral chest walls are also not fully visible due to cropping.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are diffusely hazy and have a reticular pattern. The mediastinum is somewhat prominent. The bones are well-defined. The diaphragms are visible, but the costophrenic angles are not fully visualized due to cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are several lines present in the image, likely from external devices. The presence of these lines is not unusual in this setting.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the right side is on the right. There is a burned-in label top-left, but the content is not visible.)
+   - presentation/processing cues: contrast (low), edge enhancement (low), inversion suspected (no), noise texture (low)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (Right IJ CVC): present, course: right internal jugular vein, tip position: indeterminate, confidence 90
+   - Right subclavian central venous catheter (Right subclavian CVC): present, course: right subclavian vein, tip position: indeterminate, confidence 90
+   - Nasogastric tube: present, course: from the nose to the stomach, tip position: indeterminate, confidence 80
+   - Indeterminate: The tip position of the central venous catheters is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Diffuse bilateral reticular opacities are present throughout both lung fields. The pattern is suggestive of pulmonary edema or diffuse alveolar damage. There is no obvious pleural effusion.
+   - mediastinum/heart
+     - The mediastinum appears somewhat prominent. The heart size is difficult to assess due to the diffuse lung opacities.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible, but the upper abdomen is not fully visualized due to cropping.
+   - bones/soft tissues
+     - The bones are well-defined. There are no obvious fractures or dislocations.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Diffuse bilateral reticular opacities, suggestive of pulmonary edema or diffuse alveolar damage.
+   - The tip position of the central venous catheters is not clearly visible.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are not fully visualized due to cropping.
+   - The tip position of the central venous catheters is not clearly visible.
+   - The heart size is difficult to assess due to the diffuse lung opacities.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: upright with confidence 90% + evidence: the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest radiograph, but the quality is adequate.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 90% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving the upper and lower portions of the chest.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present. There is a burned-in label top-left.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - chest tube: present, right side, course: from the right hemithorax to the right upper abdomen, tip position: indeterminate, confidence 80%
+   - catheter: present, indeterminate, course: from the right upper abdomen to the right hemithorax, tip position: indeterminate, confidence 70%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a large amount of air in the right hemithorax, with a large pleural effusion. The lung markings are not well-defined.
+     - left lung: clear with no evidence of consolidation, effusion, or pneumothorax.
+   - mediastinum/heart
+     - the mediastinum is midline. The heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are visible. The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large right pleural effusion with air in the right hemithorax.
+   - Right-sided chest tube in place.
+   - Catheter in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip position of the chest tube and catheter are indeterminate.
+   - The image is cropped, limiting the assessment of the lung bases.
+   - The presence of air in the right hemithorax could be due to a pneumothorax, but this cannot be definitively determined on this single image.
+
+7) DOMAIN VECTOR

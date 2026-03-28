@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is standing.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be relatively free of rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image appears to be cropped, with the apices and costophrenic angles not fully visible. The lateral chest walls are also not fully visible due to cropping.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are generally clear, but there is some increased opacity in the right lower lung field. The mediastinum is unremarkable. The bones are well-defined. The diaphragms are visible. The costophrenic angles are not fully visible due to cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are some lines visible in the image, but they are not clearly defined and may be due to the image processing.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the right side is on the left.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right internal jugular central venous catheter (indeterminate) with confidence 50 + a catheter is present in the right internal jugular vein, but the tip position is not clearly visible.
+   - left internal jugular central venous catheter (indeterminate) with confidence 50 + a catheter is present in the left internal jugular vein, but the tip position is not clearly visible.
+   - right subclavian central venous catheter (indeterminate) with confidence 50 + a catheter is present in the right subclavian vein, but the tip position is not clearly visible.
+   - left subclavian central venous catheter (indeterminate) with confidence 50 + a catheter is present in the left subclavian vein, but the tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lower lung field: increased opacity, possibly representing atelectasis or consolidation.
+     - otherwise, the lungs are clear without evidence of pneumothorax or pleural effusion.
+   - mediastinum/heart
+     - the mediastinum is unremarkable.
+     - the heart size is within normal limits.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the bones are well-defined.
+     - there are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right lower lung field opacity, possibly representing atelectasis or consolidation. Further evaluation with a lateral decubitus radiograph or CT scan may be warranted to differentiate between these possibilities.
+   - Central venous catheters are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is cropped, limiting the visualization of the apices and costophrenic angles.
+   - The tip positions of the central venous catheters are not clearly visible.
+   - The right lower lung field opacity is difficult to fully evaluate due to the limited image quality.
+
+7) DOMAIN VECTOR

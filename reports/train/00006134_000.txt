@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized. The costophrenic angles are not well visualized. The lateral chest walls are not well visualized due to the presence of overlying devices.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are clear. The mediastinum is well-defined. The bones are well-defined. The diaphragms are well-defined. The costophrenic angles are not well visualized.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are several lines and tubes present, likely representing medical devices. The presence of these lines obscures the visualization of the costophrenic angles.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the right side is on the right. There is a burned-in label top-left, but the content is not visible.)
+   - presentation/processing cues: contrast (low), edge enhancement (low), inversion suspected (no), noise texture (low)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Swan-Ganz catheter (present, indeterminate, right pulmonary artery, tip position not visible)
+   - Central line (present, indeterminate, internal jugular vein, tip position not visible)
+   - Nasogastric tube (present, indeterminate, stomach, tip position not visible)
+   - Chest tube (present, indeterminate, right pleural space, tip position not visible)
+   - ETT (present, indeterminate, trachea, tip position not visible)
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - The lungs are clear bilaterally, without evidence of focal consolidation, pleural effusion, or pneumothorax.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in width. The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The bony structures are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - The lungs are clear.
+   - The mediastinum and heart are normal in size and contour.
+   - Several medical devices are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The costophrenic angles are not well visualized due to the presence of overlying devices.
+   - The tip position of the Swan-Ganz catheter, central line, nasogastric tube, chest tube, and ETT are not clearly visible.
+   - The presence of lines and tubes obscures the visualization of the costophrenic angles.
+
+7) DOMAIN VECTOR

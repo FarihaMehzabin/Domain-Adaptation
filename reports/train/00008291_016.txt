@@ -1,0 +1,43 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: upright with confidence 90% + evidence: the patient is positioned in an upright position.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest radiograph, but the quality is adequate.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + evidence: the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are relatively clear, the mediastinum is visible, the bones are well-defined, and the costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: there are multiple lines and other artifacts present, likely due to the nature of the image.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present. There is a burned-in label top-left.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube: present, tip position: unknown, confidence 70%
+   - nasogastric tube: present, course: unknown, tip position: unknown, confidence 60%
+   - right internal jugular central venous catheter: present, course: right internal jugular vein, tip position: at the cavoatrial junction, confidence 80%
+   - left internal jugular central venous catheter: present, course: left internal jugular vein, tip position: at the cavoatrial junction, confidence 80%
+   - left subclavian central venous catheter: present, course: left subclavian vein, tip position: at the cavoatrial junction, confidence 80%
+   - right chest tube: present, course: right pleural space, tip position: unknown, confidence 70%
+   - left chest tube: present, course: left pleural space, tip position: unknown, confidence 70%
+   - esophageal probe: present, course: esophagus, tip position: unknown, confidence 60%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: there is diffuse bilateral pulmonary edema, with increased interstitial markings and perihilar haziness. There is also a small right pleural effusion.
+   - mediastinum/heart: the mediastinum is widened. The heart size is difficult to assess due to the pulmonary edema.
+   - diaphragms/upper abdomen: the diaphragms are somewhat obscured by the pulmonary edema. The upper abdomen is not well visualized.
+   - bones/soft tissues: the bones are intact. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral pulmonary edema.
+   - Right pleural effusion.
+   - Widened mediastinum.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The endotracheal tube and nasogastric tube tip positions are not clearly visible.
+   - The esophageal probe tip position is not clearly visible.
+   - The pulmonary edema makes it difficult to assess the heart size and the presence of any underlying lung pathology.
+   - The image quality is somewhat limited by the presence of artifacts.
+
+7) DOMAIN VECTOR

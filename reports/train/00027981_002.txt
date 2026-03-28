@@ -1,0 +1,54 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + image is a portable chest X-ray.
+   - portable-likelihood (high) with evidence (image is a portable chest X-ray).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the lower lung fields are less inflated than the upper lung fields.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat obscured by the patient's body habitus and the low inspiration. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are no obvious artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to be a standard chest X-ray.
+   - edge enhancement (low) with confidence 90 + edge enhancement is present.
+   - inversion suspected (no) with confidence 100 + no obvious signs of inversion.
+   - noise texture (low) with confidence 90 + the image has a low level of noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) (present) with confidence 95 + the ETT is seen terminating in the upper trachea.
+   - nasogastric tube (NGT) (present) with confidence 90 + the NGT is seen coursing into the stomach.
+   - central line (CL) (present) with confidence 80 + a central line is seen terminating in the superior vena cava.
+   - catheter (present) with confidence 70 + a catheter is seen terminating in the right atrium.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral opacities are present, particularly in the lower lung fields. The exact nature of these opacities is indeterminate due to the low inspiration and patient habitus.
+     - there is some blunting of the costophrenic angles, which could be due to small pleural effusions or overlying soft tissue.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in size and contour.
+     - the heart size is difficult to assess due to the low inspiration and patient habitus.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is largely obscured by the patient's body habitus.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - endotracheal tube in place.
+   - nasogastric tube in place.
+   - central line in place.
+   - bilateral lower lung opacities, likely due to atelectasis or other pulmonary process.
+   - possible small pleural effusions.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - low inspiration limits assessment of lung volumes and heart size.
+   - patient habitus obscures the lower lung fields and upper abdomen.
+   - the exact nature of the lung opacities is indeterminate.
+   - the tip position of the central line is not clearly defined.
+
+7) DOMAIN VECTOR

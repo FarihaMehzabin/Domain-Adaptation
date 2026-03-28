@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: The image is a PA chest X-ray.
+   - patient position: Upright with confidence 90% + evidence: The patient is in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a standard chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: The image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 90% + evidence: The lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: There is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are well-visualized. The mediastinum is clearly defined. The bones are well-visualized. The diaphragms and costophrenic angles are clearly visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? The image has a laterality marker (L) on the left side. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image has low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Left subclavian line: present, course: from the left subclavian vein, tip position: indeterminate, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral diffuse opacities: There are widespread, hazy opacities throughout both lung fields. The pattern is not clearly defined, but it appears to be more prominent in the lower lung zones.
+     - no pleural effusion: No pleural effusion is identified.
+     - no pneumothorax: No pneumothorax is identified.
+   - mediastinum/heart
+     - mediastinal contours: The mediastinum appears within normal limits.
+     - heart size: The heart size is normal.
+     - no obvious cardiomegaly: No obvious cardiomegaly is identified.
+   - diaphragms/upper abdomen
+     - diaphragmatic contours: The diaphragms are well-defined.
+     - upper abdomen: The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - bony structures: The bony structures are unremarkable.
+     - soft tissues: No significant soft tissue abnormalities are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral diffuse lung opacities. The differential diagnosis includes pneumonia, pulmonary edema, ARDS, and other inflammatory processes. Further evaluation is warranted.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The extent and etiology of the lung opacities are not fully defined.
+   - The tip position of the left subclavian line is indeterminate.
+
+7) DOMAIN VECTOR

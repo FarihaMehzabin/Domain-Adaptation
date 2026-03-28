@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (medium) with evidence (image quality, lack of full body view)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image shows the upper chest and part of the abdomen. The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate) with evidence (lines are present, but their origin is unclear)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the right. Burned-in text is present in the upper left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + there is no evidence of inversion. Noise texture (low) with confidence 100 + the image has low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right internal jugular central venous catheter (indeterminate) with confidence 50 + a catheter is present in the right internal jugular vein, but the tip position is not clearly visualized.
+   - endotracheal tube (absent) with confidence 100 + no endotracheal tube is visible.
+   - nasogastric tube (absent) with confidence 100 + no nasogastric tube is visible.
+   - other lines/tubes (indeterminate) with confidence 50 + other lines/tubes are present, but their exact location and tip position are not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear. No focal consolidation, pleural effusion, or pneumothorax is identified.
+     - pleura: unremarkable.
+   - mediastinum/heart
+     - mediastinum: normal in width. The heart size is normal.
+     - heart: normal in size and contour.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: bowel loops are present, but the visualization is limited due to the image quality and the presence of overlying structures.
+   - bones/soft tissues
+     - bones: ribs are clearly visible.
+     - soft tissues: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute cardiopulmonary abnormalities are identified.
+   - The right internal jugular central venous catheter is present, but the tip position is not clearly visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices of the lungs are not fully visualized.
+   - The costophrenic angles are not fully visualized.
+   - The lateral chest walls are not fully visualized.
+   - The tip position of the right internal jugular central venous catheter is not clearly visualized.
+   - The visualization of the upper abdomen is limited.
+
+7) DOMAIN VECTOR

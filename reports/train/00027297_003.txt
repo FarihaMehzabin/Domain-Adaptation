@@ -1,0 +1,36 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest X-ray.
+   - patient position: upright with confidence 90% + evidence: the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also partially obscured.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear. The mediastinum is unremarkable. The bones are well-defined. The diaphragms are visible. The costophrenic angles are not fully visualized due to cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the right. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - nasogastric tube: present, course: likely enters the stomach, tip position: not visualized, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: lungs are clear. No pleural effusion or pneumothorax is identified.
+   - mediastinum/heart: the mediastinum is unremarkable. The heart size is normal.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is partially visualized.
+   - bones/soft tissues: the bones are well-defined. No obvious soft tissue abnormalities are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Nasogastric tube is present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are not fully visualized due to cropping.
+   - The tip of the nasogastric tube is not visualized.
+
+7) DOMAIN VECTOR

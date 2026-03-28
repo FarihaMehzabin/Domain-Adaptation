@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is a PA chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 90 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 95 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - catheter, central line (Indeterminate) with confidence 50 + there is a linear radiopaque structure in the upper mediastinum, but it is not clearly identifiable as a central line. The tip position is indeterminate.
+   - surgical clips (present) with confidence 100 + multiple surgical clips are seen in the upper mediastinum, likely related to prior surgery.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - The lungs are clear bilaterally. There is no evidence of consolidation, pleural effusion, or pneumothorax.
+   - mediastinum/heart
+     - The mediastinum is unremarkable. The heart size is within normal limits.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are intact. The clavicles are intact. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute cardiopulmonary abnormalities are identified.
+   - Surgical clips in the upper mediastinum.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The central line is not clearly visualized.
+   - The tip position of the central line is indeterminate.
+
+7) DOMAIN VECTOR

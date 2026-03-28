@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is AP.
+   - patient position: portable with confidence 90% + the patient is in a portable position.
+   - portable-likelihood: high with evidence (patient is not in a standard radiology position).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + the patient is in a good inspiratory position.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + no obvious motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, with the upper and lower borders of the image being slightly padded.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are somewhat obscured by overlying structures. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are several lines present in the image, likely representing external devices. There is no evidence of grid/moiré artifacts, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the right side is on the right. There is a burned-in label top-left, but the content is not visible.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (Central Line): Present, course: right internal jugular vein, tip position: indeterminate, confidence 80%. The catheter tip is not clearly visible.
+   - Right-sided Chest Tube: Present, course: right chest, tip position: indeterminate, confidence 70%. The catheter tip is not clearly visible.
+   - Right-sided PICC Line: Present, course: right subclavian vein, tip position: indeterminate, confidence 75%. The catheter tip is not clearly visible.
+   - Other lines/tubes: Indeterminate.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: There are bilateral opacities, particularly in the lower lung fields. The opacities are likely due to pulmonary edema and/or pleural effusions. The lung markings are somewhat obscured by the overlying opacities.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is difficult to assess due to the overlying opacities.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is not well visualized due to the patient's position and the overlying opacities.
+   - bones/soft tissues: The bones are visible. There is no evidence of acute fractures.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral pulmonary edema and/or pleural effusions.
+   - Right internal jugular central venous catheter, right-sided chest tube, and right-sided PICC line are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image quality is limited by the patient's portable position and the presence of overlying structures.
+   - The tip position of the central line, chest tube, and PICC line is not clearly visible.
+   - The heart size is difficult to assess due to the overlying opacities.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

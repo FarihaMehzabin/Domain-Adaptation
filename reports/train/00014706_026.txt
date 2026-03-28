@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is AP.
+   - patient position: portable with confidence 90% + the patient is in a portable position.
+   - portable-likelihood: high with evidence (patient is in a portable setting).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + the patient is in a good inspiratory position.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + no obvious motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are visible, the mediastinum is visible, the bones are visible, and the diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are lines present, likely from the patient's clothing or equipment.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line: present, course: right subclavian vein, tip position: indeterminate, confidence 80%
+   - right picc line: present, course: right subclavian vein, tip position: indeterminate, confidence 80%
+   - indeterminate: indeterminate, course: indeterminate, tip position: indeterminate, confidence 10%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: There are bilateral patchy opacities, more prominent in the lower lung fields. The costophrenic angles are clear. No pleural effusion is identified.
+   - mediastinum/heart: The heart size appears enlarged. The mediastinal contours are unremarkable.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is not well visualized due to the patient's position.
+   - bones/soft tissues: The bony structures are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Cardiomegaly.
+   - Bilateral patchy opacities, likely representing pulmonary edema or other infiltrative process.
+   - Right subclavian line and right picc line are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The upper abdomen is not well visualized.
+   - The tip position of the right subclavian line and right picc line is indeterminate.
+   - The presence of lines and other artifacts may obscure subtle findings.
+
+7) DOMAIN VECTOR

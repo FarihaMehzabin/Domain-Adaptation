@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (supine) with confidence 100 + patient is lying on their back.
+   - portable-likelihood (high) with evidence (portable X-ray machine).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the lung volumes are low, and the posterior rib count is not easily estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat obscured by the low inspiration. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are no obvious artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 90 + the noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Tracheostomy tube (present) with confidence 100 + a tracheostomy tube is present, terminating in the trachea.
+   - Indeterminate (present) with confidence 90 + an indeterminate device is present, likely a central venous catheter. The catheter tip is not clearly visible.
+   - Indeterminate (present) with confidence 90 + an indeterminate device is present, likely a nasogastric tube. The tube tip is not clearly visible.
+   - Indeterminate (present) with confidence 90 + an indeterminate device is present, likely a chest tube. The tube tip is not clearly visible.
+   - Indeterminate (present) with confidence 90 + an indeterminate device is present, likely a Foley catheter. The catheter tip is not clearly visible.
+   - Indeterminate (present) with confidence 90 + an indeterminate device is present, likely a peripheral intravenous catheter. The catheter tip is not clearly visible.
+   - Indeterminate (present) with confidence 90 + an indeterminate device is present, likely a urinary catheter. The catheter tip is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There is increased opacity in the right lung, likely representing a pleural effusion. The left lung appears relatively clear, but there is some increased density in the lower lung field.
+     - There is no obvious pneumothorax.
+   - mediastinum/heart
+     - The mediastinum is midline. The heart size is difficult to assess due to the low inspiration.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible. The upper abdomen is not well visualized due to the low inspiration and the presence of overlying devices.
+   - bones/soft tissues
+     - The ribs are visible. The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right pleural effusion.
+   - Low lung volumes.
+   - Multiple indwelling lines/tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Low inspiration limits visualization of the lung fields.
+   - The image is a portable X-ray, which may have limited field of view.
+   - The tip positions of the indwelling lines/tubes are not clearly visible.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

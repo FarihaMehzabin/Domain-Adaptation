@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior chest X-ray.
+   - patient position: upright with confidence 90% + the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs are well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image covers the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are well-visualized. The mediastinum is clearly defined. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are well-visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the right. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Central line: absent
+   - Chest tube: absent
+   - Swan-Ganz catheter: absent
+   - Other lines/tubes: indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - The left lung appears to be opacified, with a hazy appearance. There is a possible area of consolidation or fluid collection in the left lung.
+     - The right lung appears clear.
+     - There is no obvious pleural effusion or pneumothorax.
+   - mediastinum/heart:
+     - The mediastinum is within normal limits in size and contour.
+     - The heart size is normal.
+   - diaphragms/upper abdomen:
+     - The diaphragms are well-visualized.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues:
+     - The ribs are well-visualized.
+     - The clavicles are well-visualized.
+     - The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Opacification of the left lung, concerning for pneumonia, atelectasis, or other process.
+   - No obvious pneumothorax or pleural effusion.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited assessment of the left lung due to opacification.
+   - No assessment of the right lung.
+   - No assessment of the heart size or mediastinal structures.
+   - No assessment of the upper abdomen.
+
+7) DOMAIN VECTOR

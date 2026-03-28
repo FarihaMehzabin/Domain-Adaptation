@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized due to the patient's body habitus.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker present, pointing to the left. Burned-in text present, top-left, "1234567890") with confidence 100 + a laterality marker is present, pointing to the left. A burned-in text label is present, top-left.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Left subclavian line (Indeterminate) with confidence 50 + A line is present in the left upper extremity, but the tip position is not clearly visualized.
+   - Indeterminate with confidence 50 + The tip of the line is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There are some areas of increased density in the lung fields, particularly in the lower lung zones. The differential diagnosis includes atelectasis, pneumonia, or other infiltrates.
+     - The pleural spaces are clear.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in size and contour.
+     - The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are intact.
+     - The clavicles are intact.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Increased density in the lung fields, particularly in the lower lung zones. Further evaluation with a lateral chest radiograph or CT scan may be warranted to determine the etiology.
+   - Left subclavian line present, but tip position not clearly visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices of the lungs are not fully visualized.
+   - The costophrenic angles are not fully visualized.
+   - The tip position of the left subclavian line is not clearly visualized.
+
+7) DOMAIN VECTOR

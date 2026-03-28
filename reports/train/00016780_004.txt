@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is PA view.
+   - patient position (upright) with confidence 100 + patient is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be a standard PA chest X-ray, with adequate coverage of the apices, costophrenic angles, and costal margins.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are well-aerated, the mediastinum is clearly visible, the bones are well-defined, and the diaphragms and costophrenic angles are sharp.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (present) with confidence 100 + the line is seen coursing from the right subclavian vein into the superior vena cava. The tip position is not clearly visible.
+   - left subclavian line (present) with confidence 100 + the line is seen coursing from the left subclavian vein into the superior vena cava. The tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lower lobe opacity (present) with confidence 95 + there is a large opacity in the right lower lobe, obscuring the right hemidiaphragm. The opacity is likely a pleural effusion, but a consolidation cannot be excluded.
+     - left lung (clear) with confidence 100 + the left lung is clear.
+     - no pneumothorax (present) with confidence 100 + no pneumothorax is identified.
+     - no pulmonary edema (present) with confidence 100 + no pulmonary edema is identified.
+   - mediastinum/heart
+     - heart size (normal) with confidence 100 + the heart size is within normal limits.
+     - mediastinal contours (normal) with confidence 100 + the mediastinal contours are normal.
+   - diaphragms/upper abdomen
+     - diaphragms (visible) with confidence 100 + the diaphragms are visible.
+     - upper abdomen (visible) with confidence 100 + the upper abdomen is visible.
+   - bones/soft tissues
+     - ribs (visible) with confidence 100 + the ribs are visible.
+     - clavicles (visible) with confidence 100 + the clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right lower lobe opacity, likely a pleural effusion.
+   - Right subclavian line and left subclavian line present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip position of the subclavian lines is not clearly visible.
+   - The nature of the right lower lobe opacity is uncertain (pleural effusion vs. consolidation).
+   - No clinical history is available.
+
+7) DOMAIN VECTOR

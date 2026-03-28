@@ -1,0 +1,58 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "PORTABLE" label.
+   - portable-likelihood (high) with evidence (label).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (low) with confidence 80 + posterior rib count is difficult to estimate.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with some loss of the apices and costophrenic angles. The costal margins are not well visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (lungs: adequate. Mediastinum: adequate. Bones: adequate. Diaphragms: adequate. Costophrenic angles: limited visualization.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker present, pointing to the left. Burned-in label top-left.)
+   - presentation/processing cues: contrast (low) with confidence 80 + image appears to be underexposed. Edge enhancement (low) with confidence 80 + edge enhancement is present. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 80 + low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - chest tube (left) (present) with confidence 95 + a chest tube is present in the left hemithorax. The course is not clearly visualized.
+   - chest tube (right) (present) with confidence 95 + a chest tube is present in the right hemithorax. The course is not clearly visualized.
+   - endotracheal tube (present) with confidence 90 + an endotracheal tube is present, but the tip position is not clearly visualized.
+   - nasogastric tube (present) with confidence 90 + a nasogastric tube is present, but the tip position is not clearly visualized.
+   - central line (present) with confidence 90 + a central line is present, but the tip position is not clearly visualized.
+   - other lines/tubes (indeterminate) with confidence 50 + indeterminate.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral opacities are present, particularly in the lower lung zones. The opacities are likely due to pulmonary edema and/or consolidation.
+     - there is evidence of a large pleural effusion on the left side.
+     - there is a small pleural effusion on the right side.
+     - there is evidence of pneumothorax on the left side.
+   - mediastinum/heart
+     - the mediastinum is widened.
+     - the heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are elevated.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the bones are intact.
+     - there is subcutaneous emphysema in the chest wall.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - bilateral pulmonary edema and/or consolidation.
+   - large left pleural effusion.
+   - small right pleural effusion.
+   - pneumothorax on the left side.
+   - widened mediastinum.
+   - subcutaneous emphysema.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - limited visualization of the apices and costophrenic angles.
+   - limited visualization of the chest tube courses.
+   - limited visualization of the endotracheal tube tip position.
+   - limited visualization of the nasogastric tube tip position.
+   - limited visualization of the central line tip position.
+   - limited visualization of the chest tube courses.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,42 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is taken from the front, with the patient's chest facing the detector.
+   - patient position: semi-erect with confidence 90% + evidence: the patient is not fully upright, and the image is not fully lateral.
+   - portable-likelihood: medium with evidence: the image appears to be taken in a portable setting, given the limited field of view and the presence of multiple lines/tubes.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical, suggesting no significant rotation.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded, and there is no obvious evidence of poor inspiration.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart, indicating adequate penetration.
+   - motion blur: none with confidence 95% + evidence: there is no obvious motion blur in the image.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, with the upper and lower portions of the chest being cut off.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are relatively clear, with some increased density in the lower lung fields. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: there are multiple lines and tubes present, which are likely medical devices. The image does not show any obvious grid/moiré patterns, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side of the image. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image has low contrast and low edge enhancement. There is no obvious inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: not visible, confidence 90%
+   - nasogastric tube: present, course: midline, tip position: not visible, confidence 90%
+   - central venous catheter: present, course: right subclavian, tip position: not visible, confidence 90%
+   - left picc line: present, course: left subclavian, tip position: not visible, confidence 90%
+   - multiple lines/tubes: present, course: various, tip position: not visible, confidence 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: increased density in the lower lung fields bilaterally. The upper lung fields are relatively clear. There is no obvious pleural effusion.
+   - mediastinum/heart: the mediastinum is within normal limits. The heart size is difficult to assess due to the limited field of view and the presence of overlying structures.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is not well visualized due to the limited field of view.
+   - bones/soft tissues: the bones are visible. There are no obvious fractures or dislocations.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Increased density in the lower lung fields bilaterally.
+   - Multiple lines/tubes present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Limited field of view due to the portable nature of the image.
+   - Difficulty in assessing heart size due to the limited field of view and the presence of overlying structures.
+   - Tip positions of the lines/tubes are not visible.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,56 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is AP.
+   - patient position: portable with confidence 90% + the patient is in a portable position.
+   - portable-likelihood: high with evidence (patient is in a portable setting).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + the patient is in a good inspiratory position.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + no obvious motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to cover the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are well-visualized. The mediastinum is clearly defined. The bones are visible. The diaphragms are well-visualized. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are several lines present, likely from external devices. The presence of these lines is not unusual in a portable setting.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to be processed with low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line: present, course: right subclavian vein, tip position: indeterminate, confidence 80%
+   - left subclavian line: present, course: left subclavian vein, tip position: indeterminate, confidence 80%
+   - enteric tube: present, course: likely esophageal, tip position: not visualized, confidence 70%
+   - right atrial catheter: present, course: right atrium, tip position: not visualized, confidence 70%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - there is increased opacity in the left lung field, which could represent consolidation, edema, or atelectasis.
+     - the right lung appears clear.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart:
+     - the mediastinum is within normal limits in size and contour.
+     - the heart size is normal.
+     - the pulmonary vasculature is normal.
+   - diaphragms/upper abdomen:
+     - the diaphragms are well-visualized.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues:
+     - the ribs are visible.
+     - the clavicles are visible.
+     - the soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - increased opacity in the left lung field, etiology uncertain.
+   - enteric tube is present, but the tip is not visualized.
+   - right subclavian line is present, but the tip is not visualized.
+   - left subclavian line is present, but the tip is not visualized.
+   - right atrial catheter is present, but the tip is not visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - the tip position of the enteric tube, right subclavian line, and left subclavian line are not visualized.
+   - the tip position of the right atrial catheter is not visualized.
+   - the increased opacity in the left lung field could be due to a variety of etiologies.
+
+7) DOMAIN VECTOR

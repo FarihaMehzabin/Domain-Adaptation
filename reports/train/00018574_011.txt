@@ -1,0 +1,43 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is labeled AP
+   - patient position (upright) with confidence 100 + image is labeled AP
+   - portable-likelihood (high) with evidence (portable marker present)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is good
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, but apices and costophrenic angles are visible)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, burned-in text "AP" top-left)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (R subclavian line) present, course: right subclavian vein to superior vena cava, tip position: indeterminate, confidence 80
+   - right picc line (R picc line) present, course: right subclavian vein to superior vena cava, tip position: indeterminate, confidence 80
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear, no focal consolidation, pleural effusion, or pneumothorax identified.
+     - pleura: unremarkable.
+   - mediastinum/heart
+     - mediastinum: unremarkable.
+     - heart: cardiomegaly is present.
+   - diaphragms/upper abdomen
+     - diaphragms: diaphragms are visible.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - bones: bones are unremarkable.
+     - soft tissues: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Cardiomegaly.
+   - Right subclavian line and right picc line are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable chest X-ray, which may be limited by patient positioning and image quality.
+   - The tip position of the right subclavian line and right picc line is indeterminate.
+
+7) DOMAIN VECTOR

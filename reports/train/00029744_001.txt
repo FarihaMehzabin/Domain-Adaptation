@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (supine) with confidence 100 + patient is lying on their back.
+   - portable-likelihood (high) with evidence (image is likely obtained on a portable device).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the lung volumes are low, and the posterior rib count is not clearly visible.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are not fully visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat clear, but the low inspiration limits assessment. The mediastinum is visible. The bones are visible. The diaphragms are visible, but the costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (No obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the right side is on the right.)
+   - presentation/processing cues: contrast (low) with confidence 80 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 80 + the noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - central line (none) with confidence 100 + no central line is visible.
+   - picc line (none) with confidence 100 + no picc line is visible.
+   - endotracheal tube (none) with confidence 100 + no endotracheal tube is visible.
+   - nasogastric tube (none) with confidence 100 + no nasogastric tube is visible.
+   - chest tube (none) with confidence 100 + no chest tube is visible.
+   - pacemaker/defibrillator (none) with confidence 100 + no pacemaker or defibrillator is visible.
+   - other (none) with confidence 100 + no other devices are visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: The lungs appear clear, but the low inspiration limits assessment. There is no obvious consolidation, effusion, or pneumothorax.
+     - pleura: The pleura are not clearly visualized due to the low inspiration.
+   - mediastinum/heart
+     - mediastinum: The mediastinum is within normal limits in size and contour.
+     - heart: The heart size is difficult to assess due to the low inspiration. The cardiac silhouette appears normal.
+   - diaphragms/upper abdomen
+     - diaphragms: The diaphragms are visible.
+     - upper abdomen: The upper abdomen is not well visualized due to the low inspiration.
+   - bones/soft tissues
+     - bones: The bones are intact.
+     - soft tissues: The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Low inspiration limits assessment.
+   - No acute findings are identified.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Low inspiration limits assessment of lung volumes and cardiac size.
+   - Obscured costophrenic angles.
+   - Limited visualization of the upper abdomen.
+
+7) DOMAIN VECTOR

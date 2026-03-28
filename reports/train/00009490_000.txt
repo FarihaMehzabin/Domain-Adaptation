@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is PA view.
+   - patient position (upright) with confidence 100 + patient is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be a standard PA chest X-ray, with adequate coverage of the apices, costophrenic angles, and costal margins.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are well-aerated, the mediastinum is clearly visible, the bones are well-defined, and the diaphragms and costophrenic angles are sharp.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None identified.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the right side is on the left.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (absent) with confidence 100 + no line is visible in the right subclavian region.
+   - catheter (absent) with confidence 100 + no catheter is visible.
+   - pacemaker (absent) with confidence 100 + no pacemaker is visible.
+   - other lines/tubes (absent) with confidence 100 + no other lines or tubes are visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lower lobe opacity (present) with confidence 95 + there is a hazy opacity in the right lower lobe, obscuring the right hemidiaphragm. The opacity is not well-defined.
+     - left lung (clear) with confidence 100 + the left lung is clear.
+     - pleural effusion (possible) with confidence 60 + there is a possible small pleural effusion in the right lower hemithorax, obscuring the right hemidiaphragm.
+     - pneumothorax (absent) with confidence 100 + no pneumothorax is identified.
+   - mediastinum/heart
+     - mediastinum (normal) with confidence 100 + the mediastinum is within normal limits.
+     - heart size (normal) with confidence 100 + the heart size is normal.
+     - cardiomediastinal silhouette (normal) with confidence 100 + the cardiomediastinal silhouette is normal.
+   - diaphragms/upper abdomen
+     - diaphragms (normal) with confidence 100 + the diaphragms are normal.
+     - upper abdomen (normal) with confidence 100 + the upper abdomen is normal.
+   - bones/soft tissues
+     - ribs (normal) with confidence 100 + the ribs are normal.
+     - clavicles (normal) with confidence 100 + the clavicles are normal.
+     - soft tissues (normal) with confidence 100 + the soft tissues are normal.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right lower lobe opacity, possibly representing pneumonia or atelectasis.
+   - Possible small right pleural effusion.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image quality is adequate, but the low contrast and edge enhancement may limit the ability to fully evaluate the lung parenchyma.
+   - The right lower lobe opacity is not well-defined, and the cause is uncertain.
+   - The presence of a pleural effusion is only possible, not definite.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is standing.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be relatively well-rotated.
+   - inspiration (adequate) with confidence 100 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - sternal wires (present) with confidence 100 + multiple sternal wires are visible, likely post-surgical.
+   - surgical clips (present) with confidence 100 + surgical clips are present in the upper mediastinum.
+   - central line (indeterminate) with confidence 50 + there is a possible central line, but it is not clearly visible. The tip position is indeterminate.
+   - pacemaker/defibrillator (indeterminate) with confidence 50 + there is a possible pacemaker/defibrillator, but it is not clearly visible. The tip position is indeterminate.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+     - pleura: unremarkable.
+   - mediastinum/heart
+     - mediastinum: the mediastinum is within normal limits in size and contour.
+     - heart: the heart size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: the diaphragms are well-defined.
+     - upper abdomen: the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - ribs: the ribs are unremarkable.
+     - clavicles: the clavicles are unremarkable.
+     - other: surgical clips are present in the upper mediastinum.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute cardiopulmonary abnormalities are identified.
+   - Surgical clips are present in the upper mediastinum.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The central line and pacemaker/defibrillator are not clearly visualized.
+   - The tip position of the central line and pacemaker/defibrillator is indeterminate.
+
+7) DOMAIN VECTOR

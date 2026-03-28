@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "Portable" label.
+   - portable-likelihood (high) with evidence (label).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are visible, mediastinum is visible, bones are visible, and diaphragms and costophrenic angles are visible, although the apices and costophrenic angles are obscured.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 90 + the image appears to have low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian central line: present, course: right subclavian vein, tip position: indeterminate, confidence 90
+   - left subclavian central line: present, course: left subclavian vein, tip position: indeterminate, confidence 90
+   - left chest tube: present, course: left hemithorax, tip position: indeterminate, confidence 90
+   - right chest tube: present, course: right hemithorax, tip position: indeterminate, confidence 90
+   - endotracheal tube: present, course: trachea, tip position: indeterminate, confidence 90
+   - nasogastric tube: present, course: stomach, tip position: indeterminate, confidence 90
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - left lung: opacities are present, particularly in the lower lung fields. There is also evidence of pleural effusion.
+     - right lung: clear.
+   - mediastinum/heart
+     - mediastinum: midline.
+     - heart: size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: visible.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: visible.
+     - clavicles: visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Left-sided chest tube placement.
+   - Right-sided chest tube placement.
+   - Central venous access lines present.
+   - Left lung opacities and pleural effusion.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices and costophrenic angles are obscured, limiting assessment of the lung apices and pleural spaces.
+   - The tip positions of the central lines and chest tubes are indeterminate.
+   - The presence and extent of the left lung opacities and pleural effusion are difficult to fully assess due to the image quality and obscuration of the lung apices.
+
+7) DOMAIN VECTOR

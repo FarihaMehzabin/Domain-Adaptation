@@ -1,0 +1,42 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is taken from anterior to posterior.
+   - patient position: upright with confidence 90% + evidence: patient is standing or sitting upright.
+   - portable-likelihood: low with evidence: the image is likely obtained in a portable setting, but the quality is adequate.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image is not rotated.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image is cropped at the apices and costophrenic angles. The lateral chest walls are partially visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? Laterality marker is present on the right side. Burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image is presented with low contrast and low edge enhancement. No inversion is suspected. Noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - tracheostomy tube: present, tip position: midline, confidence 95% + evidence: a tracheostomy tube is present in the midline.
+   - right-sided central venous catheter: present, course: right subclavian, tip position: indeterminate, confidence 60% + evidence: a right-sided central venous catheter is present, but the tip position is not clearly visible.
+   - left-sided central venous catheter: present, course: left subclavian, tip position: indeterminate, confidence 60% + evidence: a left-sided central venous catheter is present, but the tip position is not clearly visible.
+   - enteric tube: present, course: likely gastric, tip position: indeterminate, confidence 50% + evidence: an enteric tube is present, but the tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: there is increased opacity in the right lung, likely representing a pleural effusion. The left lung appears clear.
+   - mediastinum/heart: the mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: the diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues: the bones are intact. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right pleural effusion.
+   - Central venous catheters present.
+   - Tracheostomy tube present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Tip position of central venous catheters is indeterminate.
+   - Tip position of enteric tube is indeterminate.
+   - The image is a single view, limiting assessment of the entire chest.
+
+7) DOMAIN VECTOR

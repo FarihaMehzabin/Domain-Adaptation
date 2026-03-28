@@ -1,0 +1,43 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is taken from anterior to posterior.
+   - patient position: supine with confidence 90% + evidence: patient is lying flat on the table.
+   - portable-likelihood: low with evidence: the image is likely obtained in a hospital setting, but the lack of a clear background and the presence of multiple lines suggest it is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are visible. The costophrenic angles are obscured by the image cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: there are multiple lines present in the image, likely representing medical devices. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left, but the content is not visible.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (IJCV): present, course: right internal jugular vein, tip position: indeterminate, confidence 90%
+   - Left Internal Jugular Central Venous Catheter (IJCV): present, course: left internal jugular vein, tip position: indeterminate, confidence 90%
+   - Nasogastric Tube: present, course: likely passes through the stomach, tip position: indeterminate, confidence 80%
+   - Swan-Ganz Catheter: present, course: right pulmonary artery, tip position: indeterminate, confidence 85%
+   - Multiple other lines/tubes: present, course: indeterminate, tip position: indeterminate, confidence 70%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: there is increased opacity in the lower lung fields, likely representing pleural effusions. The upper lung fields are clear.
+   - mediastinum/heart: the mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is not well visualized due to the image cropping.
+   - bones/soft tissues: the bones are intact. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral pleural effusions.
+   - Central venous catheters present.
+   - Nasogastric tube present.
+   - Swan-Ganz catheter present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Image cropping limits visualization of the apices and costophrenic angles.
+   - Tip positions of central venous catheters are indeterminate.
+   - Nasogastric tube and Swan-Ganz catheter courses are not fully visualized.
+
+7) DOMAIN VECTOR

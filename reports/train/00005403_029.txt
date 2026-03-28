@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is standing.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the lung fields are well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also not fully visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are diffusely hazy and ill-defined. The mediastinum is unremarkable. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are not fully visualized.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (No obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to have low contrast. edge enhancement (low) with confidence 100 + the image does not appear to have significant edge enhancement. inversion suspected (no) with confidence 100 + no evidence of inversion. noise texture (low) with confidence 100 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (present) with confidence 100 + the line is seen entering the right subclavian vein.
+   - left subclavian line (present) with confidence 100 + the line is seen entering the left subclavian vein.
+   - indeterminate (indeterminate) with confidence 100 + no other lines or tubes are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - diffuse bilateral infiltrates/opacities are present throughout both lung fields. The infiltrates are not localized to a specific area.
+   - mediastinum/heart
+     - the mediastinum is unremarkable. The heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-visualized. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the bones are well-visualized. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Diffuse bilateral pulmonary infiltrates.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices and costophrenic angles are not fully visualized.
+   - The presence of multiple lines and tubes makes it difficult to assess for subtle abnormalities.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is taken from the front, with the patient's chest facing the detector.
+   - patient position: supine with confidence 90% + evidence: the patient is lying flat on their back.
+   - portable-likelihood: high with evidence: the image is likely taken on a portable chest X-ray machine, given the lack of a standard radiology room setup.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical, suggesting no significant rotation.
+   - inspiration: low with confidence 80% + evidence: the lung volumes appear low, and the posterior rib count is difficult to estimate.
+   - penetration: adequate with confidence 90% + evidence: the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are also partially obscured.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are poorly visualized due to low inspiration and significant overlying soft tissue. The mediastinum is partially visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: there are numerous lines and artifacts likely due to the portable nature of the imaging.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement. There is no obvious inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: unknown, confidence 85%
+   - nasogastric tube: present, course: unknown, tip position: unknown, confidence 70%
+   - central venous catheter: present, course: right subclavian, tip position: unknown, confidence 80%
+   - chest tubes: present, course: bilateral, tip position: unknown, confidence 75%
+   - lines/tubes: indeterminate, course: unknown, tip position: unknown, confidence 60%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: diffuse bilateral opacities are present throughout both lung fields. The opacities appear to be widespread and may represent pulmonary edema, consolidation, or other infiltrative processes. There is no obvious pleural effusion.
+   - mediastinum/heart: the mediastinum is somewhat crowded due to the numerous overlying structures. The heart size is difficult to assess due to the low lung volumes and opacities.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is largely obscured by the overlying chest structures.
+   - bones/soft tissues: the ribs are visible. The clavicles are visible. The soft tissues are largely obscured by the opacities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Diffuse bilateral pulmonary opacities.
+   - Multiple lines and tubes are present.
+   - The endotracheal tube tip position is not clearly visible.
+   - The nasogastric tube tip position is not clearly visible.
+   - The central venous catheter tip position is not clearly visible.
+   - The chest tube tip positions are not clearly visible.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Low lung volumes.
+   - Obscuration of the apices and costophrenic angles.
+   - Difficulty in assessing the heart size.
+   - The tip positions of the endotracheal tube, nasogastric tube, central venous catheter, and chest tubes are not clearly visible.
+   - The presence of numerous lines and tubes makes it difficult to identify and assess their positions.
+
+7) DOMAIN VECTOR

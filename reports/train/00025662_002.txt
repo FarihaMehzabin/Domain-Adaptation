@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is standing.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image is not rotated.
+   - inspiration (adequate) with confidence 100 + the lungs are well expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the right. Burned-in text is present in the upper left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low), edge enhancement (low), inversion suspected (no), noise texture (low)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right-sided chest tube (present) with confidence 100 + a chest tube is present on the right side. The course is visible, terminating in the right hemithorax.
+   - left-sided chest tube (present) with confidence 100 + a chest tube is present on the left side. The course is visible, terminating in the left hemithorax.
+   - central line (indeterminate) with confidence 50 + an indeterminate central line is present. The tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a small amount of subcutaneous emphysema in the right chest wall. The lung parenchyma appears clear.
+     - left lung: the left lung appears clear.
+     - pleural surfaces: the pleural surfaces are clear.
+   - mediastinum/heart
+     - the mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are intact. The clavicles are intact. The scapulae are intact.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right-sided chest tube in place.
+   - Left-sided chest tube in place.
+   - Small amount of subcutaneous emphysema in the right chest wall.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip position of the central line is not clearly visible.
+   - The content of the burned-in text in the upper left corner is not visible.
+
+7) DOMAIN VECTOR

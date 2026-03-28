@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "PORTABLE" label.
+   - portable-likelihood (high) with evidence (label).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (apices are visible, costophrenic angles are visible, lateral chest walls are visible, no padding or cropping is apparent).
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are visible, mediastinum is visible, bones are visible, diaphragms are visible, and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, burned-in label top-left).
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (R subclavian line) present, course: right subclavian vein, tip position: indeterminate, confidence 80.
+   - left subclavian line (L subclavian line) present, course: left subclavian vein, tip position: indeterminate, confidence 80.
+   - endotracheal tube (ETT) present, course: trachea, tip position: indeterminate, confidence 60.
+   - nasogastric tube (NGT) present, course: esophagus, tip position: indeterminate, confidence 60.
+   - central line (CL) present, course: superior vena cava, tip position: indeterminate, confidence 60.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral lung opacities are present, predominantly in the lower lung zones, with a more diffuse pattern.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the cardiac silhouette appears enlarged.
+     - the mediastinum is unremarkable.
+   - diaphragms/upper abdomen
+     - diaphragms are visible.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the bony thorax is unremarkable.
+     - soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral lung opacities, likely representing pulmonary edema or pneumonia.
+   - Enlarged cardiac silhouette, potentially cardiomegaly.
+   - Presence of multiple lines/tubes.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip position of the lines/tubes is indeterminate.
+   - The presence of the endotracheal tube and nasogastric tube is uncertain.
+   - The presence of the central line is uncertain.
+
+7) DOMAIN VECTOR

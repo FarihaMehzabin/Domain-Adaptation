@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: AP projection is evident.
+   - patient position: upright with confidence 90% + evidence: The patient is in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: Clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: The lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: Vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + evidence: No obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (describe cropping/padding/borders) The apices are visible. The costophrenic angles are visible. The costal margins are visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles) The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? (describe only location, not content) A laterality marker is present on the left side. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) The contrast is low. Edge enhancement is low. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - NG tube: absent with confidence 95% + evidence: No nasogastric tube is visible.
+   - central line: absent with confidence 95% + evidence: No central line is visible.
+   - pacemaker: absent with confidence 95% + evidence: No pacemaker is visible.
+   - other lines/tubes: indeterminate with confidence 90% + evidence: No other lines or tubes are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a hazy opacity in the right lower lung field.
+     - left lung: clear.
+     - pleural surfaces: clear.
+   - mediastinum/heart
+     - heart size: normal.
+     - mediastinal contours: normal.
+   - diaphragms/upper abdomen
+     - diaphragms: visible.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: visible.
+     - clavicles: visible.
+     - soft tissues: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right lower lung field opacity. Further evaluation with a lateral decubitus radiograph or CT scan is recommended to evaluate for possible pneumonia or pleural effusion.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited evaluation of the right lower lung field due to the opacity.
+   - No information regarding the patient's clinical history or symptoms.
+
+7) DOMAIN VECTOR

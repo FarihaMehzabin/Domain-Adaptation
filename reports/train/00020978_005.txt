@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: AP projection is evident.
+   - patient position: upright with confidence 90% + evidence: The patient is in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: Clavicles are symmetrical.
+   - inspiration: adequate with confidence 85% + evidence: The lungs are well-expanded.
+   - penetration: adequate with confidence 90% + evidence: Vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + evidence: No obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are generally clear, but there is some increased opacity in the right lung field. The mediastinum is unremarkable. The bones are well-defined. The diaphragms are visible. The costophrenic angles are obscured by the cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? Laterality marker is present on the left side. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - NG tube: indeterminate with confidence 50% + evidence: An NG tube is present, but its course and tip position are not clearly visible.
+   - Central line: absent with confidence 95% + evidence: No central line is visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: increased opacity in the right lung field, possibly representing atelectasis or consolidation.
+     - Left lung: clear. No pleural effusion or pneumothorax is identified.
+   - mediastinum/heart
+     - Mediastinum: unremarkable.
+     - Heart: The heart size appears to be normal.
+   - diaphragms/upper abdomen
+     - Diaphragms: Visible.
+     - Upper abdomen: The upper abdomen is not well visualized due to the cropping.
+   - bones/soft tissues
+     - Bones: The ribs and clavicles are well-defined.
+     - Soft tissues: No obvious soft tissue abnormalities are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Increased opacity in the right lung field, possibly representing atelectasis or consolidation.
+   - NG tube present, but course and tip position not clearly visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Cropping of the image limits visualization of the apices and costophrenic angles.
+   - The NG tube's course and tip position are not clearly visualized.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

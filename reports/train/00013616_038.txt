@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is taken in an anteroposterior (AP) view.
+   - patient position: upright with confidence 90% + evidence: the patient is in an upright position.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be rotationally correct.
+   - inspiration: adequate with confidence 85% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 90% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are relatively clear, but there is significant increased opacity throughout the lung fields. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are multiple lines present in the image, likely from external devices. There is no evidence of grid/moiré artifacts, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? The image has a laterality marker indicating the left side. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image has low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: not clearly visible, confidence 70%
+   - nasogastric tube: present, course: midline, tip position: not clearly visible, confidence 60%
+   - right subclavian central line: present, course: right subclavian vein, tip position: not clearly visible, confidence 75%
+   - right picc line: present, course: right upper extremity, tip position: not clearly visible, confidence 65%
+   - right atrial catheter: present, course: right atrium, tip position: not clearly visible, confidence 70%
+   - left subclavian central line: present, course: left subclavian vein, tip position: not clearly visible, confidence 70%
+   - right jugular catheter: present, course: right internal jugular vein, tip position: not clearly visible, confidence 60%
+   - left jugular catheter: present, course: left internal jugular vein, tip position: not clearly visible, confidence 60%
+   - esophageal probe: present, course: esophagus, tip position: not clearly visible, confidence 50%
+   - other lines/tubes: indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: there is diffuse bilateral pulmonary edema with increased interstitial markings. There is also evidence of pleural effusions, likely bilateral.
+   - mediastinum/heart: the mediastinum is unremarkable. The heart size is difficult to assess due to the pulmonary edema.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is largely unremarkable.
+   - bones/soft tissues: the bones are visible. There are no obvious fractures or dislocations.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Diffuse bilateral pulmonary edema with pleural effusions.
+   - Multiple lines/tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip positions of the central lines are not clearly visible.
+   - The heart size is difficult to assess due to the pulmonary edema.
+   - The presence of multiple lines/tubes may obscure underlying pathology.
+
+7) DOMAIN VECTOR

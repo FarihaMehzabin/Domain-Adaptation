@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is PA view.
+   - patient position (upright) with confidence 100 + patient is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the lung fields are well-expanded.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image appears to be a standard PA chest X-ray, with adequate coverage of the apices, costophrenic angles, and lateral chest walls.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear, the mediastinum is well-defined, the bones are visible, and the diaphragms and costophrenic angles are well-visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. with confidence 100 + no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? (The image has a laterality marker present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) with confidence 100 + the image appears to be a standard PA chest X-ray with low contrast and no obvious edge enhancement or inversion.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Cardiac Monitor Leads (present, multiple leads visible, course: anterior to posterior, tip position: not visualized) with confidence 100
+   - Indeterminate (absent) with confidence 100
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: There is a large opacity in the right lower hemithorax, obscuring the right hemidiaphragm. The right costophrenic angle is blunted.
+     - Left lung: The left lung appears clear.
+     - Pleural effusion: There is a large right pleural effusion.
+   - mediastinum/heart
+     - Heart size: The heart size is normal.
+     - Mediastinal width: The mediastinal width is normal.
+   - diaphragms/upper abdomen
+     - Diaphragms: The diaphragms are visualized.
+     - Upper abdomen: The upper abdomen is not well visualized due to the large opacity in the right hemithorax.
+   - bones/soft tissues
+     - Ribs: The ribs are visualized.
+     - Clavicles: The clavicles are visualized.
+     - Scapulae: The scapulae are visualized.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Large right pleural effusion.
+   - Possible underlying lung pathology (e.g., pneumonia, tumor) in the right lower lung, given the opacity.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited visualization of the upper abdomen due to the large opacity in the right hemithorax.
+   - The underlying cause of the right pleural effusion is not determined.
+
+7) DOMAIN VECTOR

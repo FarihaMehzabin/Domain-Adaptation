@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (portable marker present).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the patient is likely in a semi-upright position.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image appears to be cropped, with the lateral chest walls not fully visualized. The costophrenic angles are not fully visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are generally clear, but there is some increased opacity in the lower lung fields, particularly on the left. The mediastinum is unremarkable. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are not fully visualized.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. A burned-in label is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to have low contrast. edge enhancement (low) with confidence 100 + there is no obvious edge enhancement. inversion suspected (no) with confidence 100 + no obvious signs of inversion. noise texture (low) with confidence 100 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - PICC line (present) with confidence 95 + a single central line is present, coursing from the superior vena cava into the right atrium. The tip position is not clearly visualized.
+   - Indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - The lungs are generally clear, with no obvious consolidation, pleural effusion, or pneumothorax. There is some increased opacity in the lower lung fields, particularly on the left.
+   - mediastinum/heart
+     - The mediastinum is unremarkable. The heart size is within normal limits.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-visualized. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The bones are well-visualized. There are no obvious fractures or dislocations.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Increased opacity in the lower lung fields, particularly on the left. Further evaluation with a lateral chest radiograph is recommended to rule out pneumonia or other pathology.
+   - Presence of a central line.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The lateral chest walls are not fully visualized.
+   - The tip position of the central line is not clearly visualized.
+   - The burned-in label in the top-left corner is not legible.
+
+7) DOMAIN VECTOR

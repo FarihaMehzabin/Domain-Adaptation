@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: upright with confidence 90% + evidence: the patient is likely in an upright position.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest radiograph, but the quality is adequate.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + evidence: the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present. There is a burned-in label top-left.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - nasogastric tube: present, course: likely enters the stomach, tip position: not visualized, confidence 70%
+   - right internal jugular central venous catheter: present, course: terminates in the superior vena cava, tip position: not visualized, confidence 80%
+   - left internal jugular central venous catheter: present, course: terminates in the superior vena cava, tip position: not visualized, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - there is increased opacity in the left lower lung field, which could represent atelectasis, consolidation, or pleural effusion.
+     - the right lung appears clear.
+     - no obvious pleural effusion is seen on the right.
+   - mediastinum/heart
+     - the mediastinum is within normal limits.
+     - the heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - increased opacity in the left lower lung field.
+   - central venous catheters are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - the tip position of the nasogastric tube and central venous catheters is not visualized.
+   - the lower portion of the image is cropped.
+
+7) DOMAIN VECTOR

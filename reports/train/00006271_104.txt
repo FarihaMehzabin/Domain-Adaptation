@@ -1,0 +1,53 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 90 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 95 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are relatively clear, the mediastinum is well-defined, the bones are visible, and the diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left.)
+   - presentation/processing cues: contrast (low), edge enhancement (low), inversion suspected (no), noise texture (low)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, course: midline, tip position: approximately 4 cm above the carina, confidence 95
+   - nasogastric tube (NGT) present, course: midline, tip position: not visualized, confidence 60
+   - right subclavian central line (SC line) present, course: right subclavian vein, tip position: not visualized, confidence 70
+   - left subclavian central line (SC line) present, course: left subclavian vein, tip position: not visualized, confidence 70
+   - indwelling urinary catheter (IUC) present, course: likely in the bladder, tip position: not visualized, confidence 50
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - diffuse bilateral interstitial opacities are present, with a reticular pattern.
+     - there is no evidence of pleural effusion.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in width.
+     - the heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+     - the soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - diffuse bilateral interstitial opacities, likely representing pulmonary edema or other interstitial lung disease.
+   - endotracheal tube in appropriate position.
+   - nasogastric tube in place, but tip position not visualized.
+   - two central venous catheters in place, but tip positions not visualized.
+   - indwelling urinary catheter in place, but tip position not visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - tip positions of the central lines and urinary catheter are not visualized.
+   - the extent of the interstitial opacities is difficult to fully assess on a single AP chest radiograph.
+
+7) DOMAIN VECTOR

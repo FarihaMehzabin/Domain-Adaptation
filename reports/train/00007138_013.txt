@@ -1,0 +1,54 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: upright with confidence 90% + evidence: the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest radiograph.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian catheter: present, course: right subclavian vein, tip position: indeterminate, confidence 80%
+   - central line: present, course: indeterminate, tip position: indeterminate, confidence 70%
+   - pacemaker/defibrillator: present, course: indeterminate, tip position: indeterminate, confidence 60%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: clear.
+     - left lung: hazy opacity in the lower lung field, obscuring the costophrenic angle.
+     - pleural effusion: possible left pleural effusion, obscuring the left costophrenic angle.
+   - mediastinum/heart
+     - heart size: normal.
+     - mediastinal contours: normal.
+     - prominence of the main pulmonary artery: possible mild prominence of the main pulmonary artery.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: normal.
+     - clavicles: normal.
+     - soft tissues: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Possible left pleural effusion.
+   - Possible mild prominence of the main pulmonary artery.
+   - Right subclavian catheter present.
+   - Central line present.
+   - Pacemaker/defibrillator present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The presence and tip position of the central line and pacemaker/defibrillator are indeterminate due to the lack of clear visualization of the catheter/device.
+   - The extent of the left pleural effusion is difficult to assess due to the obscuration of the costophrenic angle.
+   - The presence of the right subclavian catheter is confirmed.
+
+7) DOMAIN VECTOR

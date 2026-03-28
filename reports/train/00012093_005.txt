@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + image is a portable chest X-ray.
+   - portable-likelihood (high) with evidence (portable marker present).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the costophrenic angles not fully visible. The apices are not fully visible due to the crop.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are visible, mediastinum is visible, bones are visible, and diaphragms are visible. The costophrenic angles are not fully visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate) with evidence (lines are present, but their origin is unclear).
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker present, top-left. Burned-in label top-left.)
+   - presentation/processing cues: contrast (low) with confidence 90 + image is underexposed. Edge enhancement (low) with confidence 90 + edge enhancement is present. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 90 + noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right internal jugular central venous catheter (indeterminate) with confidence 60 + catheter is present, but the tip position is not clearly visible.
+   - endotracheal tube (absent) with confidence 100 + no endotracheal tube is visible.
+   - nasogastric tube (absent) with confidence 100 + no nasogastric tube is visible.
+   - other lines/tubes (indeterminate) with confidence 40 + indeterminate lines/tubes are present.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a large opacity in the right lower lung field, obscuring the right hemidiaphragm. The opacity is likely a pleural effusion, but further evaluation is needed to rule out other etiologies.
+     - left lung: the left lung appears clear.
+     - pleural effusion: right pleural effusion is present.
+   - mediastinum/heart
+     - heart size: heart size is difficult to assess due to the opacity in the right lower lung field.
+     - mediastinal contours: mediastinal contours are unremarkable.
+   - diaphragms/upper abdomen
+     - diaphragms: diaphragms are visible.
+     - upper abdomen: the upper abdomen is not well visualized due to the crop.
+   - bones/soft tissues
+     - ribs: ribs are visible.
+     - clavicles: clavicles are visible.
+     - other bones: other bones are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - right pleural effusion.
+   - right lower lung opacity, likely a pleural effusion, but other etiologies should be considered.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is a portable chest X-ray, which limits the visualization of the apices and costophrenic angles.
+   - The image is underexposed, which makes it difficult to assess the lung fields and mediastinum.
+   - The tip position of the right internal jugular central venous catheter is not clearly visible.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

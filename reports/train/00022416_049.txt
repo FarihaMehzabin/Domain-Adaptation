@@ -1,0 +1,42 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is taken from anterior to posterior.
+   - patient position: supine with confidence 90% + evidence: patient is lying flat on the table.
+   - portable-likelihood: low with evidence: the image is likely obtained in a hospital setting, but the lack of a dedicated portable X-ray machine makes it difficult to definitively classify.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no obvious motion artifact.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are relatively clear, but there is significant opacity in the lower lung fields. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured by the patient's body habitus.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present on the left side of the image. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image is presented with low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - nasogastric tube: present, course: likely enters the stomach, tip position: not visible, confidence 80%
+   - central venous catheter: present, course: likely enters the superior vena cava, tip position: not visible, confidence 80%
+   - left subclavian line: present, course: enters the superior vena cava, tip position: not visible, confidence 80%
+   - right subclavian line: present, course: enters the superior vena cava, tip position: not visible, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: there is significant opacity in the lower lung fields bilaterally, likely representing pleural effusions. The upper lung fields are relatively clear. There is no evidence of pneumothorax.
+   - mediastinum/heart: the mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is largely obscured by the patient's body habitus.
+   - bones/soft tissues: the bones are intact. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral pleural effusions.
+   - Central venous catheters and lines are present.
+   - Nasogastric tube is present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is limited by the patient's body habitus, which obscures the apices and costophrenic angles.
+   - The tip positions of the central venous catheters and lines are not clearly visible.
+   - The nasogastric tube tip position is not visible.
+
+7) DOMAIN VECTOR

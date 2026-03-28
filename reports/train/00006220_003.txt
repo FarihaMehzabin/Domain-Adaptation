@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are relatively clear, the mediastinum is well-defined, the bones are visible, and the diaphragms and costophrenic angles are visible, although the apices and costophrenic angles are obscured by the image cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, indicating the image is of the right side. Burned-in text is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 90 + the image appears to have low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, tip position not visible, confidence 90 + an endotracheal tube is present, but the tip position is not clearly visible due to the image cropping.
+   - central line present, tip position not visible, confidence 90 + a central line is present, but the tip position is not clearly visible due to the image cropping.
+   - nasogastric tube present, tip position not visible, confidence 90 + a nasogastric tube is present, but the tip position is not clearly visible due to the image cropping.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral diffuse hazy opacities are present throughout both lung fields, with increased density in the perihilar regions. This may represent pulmonary edema, infection, or other inflammatory process.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum appears within normal limits in size and contour.
+     - the heart size is difficult to assess due to the image cropping, but it appears to be within normal limits.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-defined.
+     - the upper abdomen is relatively clear.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - bilateral diffuse hazy opacities in the lungs, concerning for pulmonary edema, infection, or other inflammatory process.
+   - endotracheal tube present, but tip position not visible.
+   - central line present, but tip position not visible.
+   - nasogastric tube present, but tip position not visible.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Image cropping obscures the apices and costophrenic angles, limiting assessment of these regions.
+   - The tip positions of the endotracheal tube, central line, and nasogastric tube are not clearly visible.
+   - The heart size is difficult to assess due to the image cropping.
+
+7) DOMAIN VECTOR

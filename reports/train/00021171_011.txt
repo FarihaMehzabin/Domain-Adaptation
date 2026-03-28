@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: portable with confidence 90% + evidence: the image is labeled "PORTABLE".
+   - portable-likelihood: high with evidence: the image is a portable chest radiograph, likely taken in a non-hospital setting.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + evidence: no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom, leaving a small amount of the lower lung fields visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Left subclavian line: present, course: from the superior vena cava to the proximal superior vena cava, tip position: indeterminate, confidence 90%
+   - Indeterminate: The tip of the left subclavian line is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - There are bilateral patchy opacities, more prominent in the lower lung fields. The pattern is suggestive of pulmonary edema or infection.
+     - No pleural effusion is identified.
+     - No pneumothorax is identified.
+   - mediastinum/heart:
+     - The mediastinum is within normal limits in width.
+     - The heart size is normal.
+     - The pulmonary vasculature is normal.
+   - diaphragms/upper abdomen:
+     - The diaphragms are well-defined.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues:
+     - The ribs are unremarkable.
+     - The clavicles are unremarkable.
+     - The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral patchy opacities, more prominent in the lower lung fields, suggestive of pulmonary edema or infection.
+   - Left subclavian line present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip of the left subclavian line is not clearly visible.
+   - The lower lung fields are partially obscured by the patient's body habitus.
+
+7) DOMAIN VECTOR

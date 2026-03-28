@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: upright with confidence 90% + evidence: the patient is positioned in an upright position.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest radiograph, but the quality is adequate.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be rotationally correct.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear, the mediastinum is well-defined, the bones are visible, and the costophrenic angles are sharp.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: there are multiple lines and tubes present.
+   - markers/overlays: laterality marker present? burned-in text present? Laterality marker is present on the left side. Burned-in text is present in the upper left corner.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube: present, course: midline, tip position: not visible, confidence 85%
+   - nasogastric tube: present, course: midline, tip position: not visible, confidence 80%
+   - central venous catheter: present, course: right subclavian, tip position: not visible, confidence 80%
+   - right-sided chest tube: present, course: right hemithorax, tip position: not visible, confidence 85%
+   - left-sided chest tube: present, course: left hemithorax, tip position: not visible, confidence 85%
+   - multiple lines: present, course: various, tip position: not visible, confidence 70%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: there is increased opacity in the right lung, with a possible pleural effusion. The left lung appears relatively clear, but there is some increased density.
+   - mediastinum/heart: the mediastinum is midline. The heart size is difficult to assess due to the increased lung opacities.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is not well visualized due to the overlying structures.
+   - bones/soft tissues: the ribs are visible. There are surgical clips in the upper abdomen.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right-sided pleural effusion.
+   - Possible left-sided pulmonary edema.
+   - Multiple lines and tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip positions of the central venous catheter, chest tubes, and lines are not clearly visible.
+   - The heart size is difficult to assess due to the increased lung opacities.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

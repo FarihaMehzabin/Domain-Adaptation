@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the patient's position. The costophrenic angles are not well visualized due to the patient's position. The lateral chest walls are not well visualized due to the patient's position.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + the lungs are relatively clear, but there is significant increased opacity throughout the lung fields. The mediastinum is not well visualized due to the patient's position. The bones are well visualized. The diaphragms are well visualized. The costophrenic angles are not well visualized due to the patient's position.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. with confidence 100 + there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. Burned-in text is present in the upper left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) with confidence 100 + the image appears to be a standard chest radiograph with low contrast and no obvious processing artifacts.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) with confidence 95 + an endotracheal tube is present, terminating approximately 4 cm above the carina.
+   - nasogastric tube (NGT) with confidence 90 + a nasogastric tube is present, coursing below the diaphragm and terminating in the stomach.
+   - central venous catheter (CVC) with confidence 90 + a central venous catheter is present, terminating in the superior vena cava.
+   - right subclavian line with confidence 90 + a right subclavian line is present, terminating in the superior vena cava.
+   - indeterminate (tube/line) with confidence 10 + no other tubes or lines are clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura with confidence 80 + there is diffuse bilateral pulmonary edema, with increased interstitial markings and perihilar haziness. No pleural effusion is identified.
+   - mediastinum/heart with confidence 70 + the mediastinum is not well visualized due to the patient's position. The heart size is difficult to assess due to the pulmonary edema.
+   - diaphragms/upper abdomen with confidence 80 + the diaphragms are well visualized. The upper abdomen is not well visualized due to the patient's position.
+   - bones/soft tissues with confidence 95 + the bones are well visualized. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Diffuse bilateral pulmonary edema.
+   - Endotracheal tube in place.
+   - Nasogastric tube in place.
+   - Central venous catheter in place.
+   - Right subclavian line in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited visualization of the apices, costophrenic angles, and lateral chest walls due to the patient's position.
+   - Limited visualization of the mediastinum and heart size due to the pulmonary edema.
+   - The tip position of the nasogastric tube is not clearly visualized.
+   - The tip position of the right subclavian line is not clearly visualized.
+
+7) DOMAIN VECTOR

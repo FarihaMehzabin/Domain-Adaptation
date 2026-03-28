@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is taken from anterior to posterior.
+   - patient position: supine with confidence 90% + evidence: patient is lying flat on the imaging surface.
+   - portable-likelihood: high with evidence: the image is likely taken on a portable chest X-ray machine.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + evidence: the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + evidence: the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: there are multiple lines and tubes visible in the image. The presence of these lines and tubes is likely due to the patient being connected to various medical devices.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side of the image. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture appears to be low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: not visible, confidence 80%
+   - nasogastric tube: present, course: midline, tip position: not visible, confidence 80%
+   - central venous catheter: present, course: right subclavian, tip position: not visible, confidence 80%
+   - arterial line: present, course: right radial, tip position: not visible, confidence 80%
+   - chest tube: present, course: right, tip position: not visible, confidence 80%
+   - multiple lines: present, course: various, tip position: not visible, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: lungs are clear. No pleural effusion is identified.
+   - mediastinum/heart: the mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is not well visualized due to the patient's position.
+   - bones/soft tissues: the ribs are visible. The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - The patient is supine and has multiple medical devices in place.
+   - The lungs are clear.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip position of the central venous catheter, arterial line, and chest tube is not clearly visible.
+   - The upper abdomen is not well visualized.
+   - The patient is supine, which may limit the assessment of the lung bases.
+
+7) DOMAIN VECTOR

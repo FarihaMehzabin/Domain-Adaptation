@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: upright with confidence 90% + evidence: the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest radiograph, but the quality is adequate.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be rotationally correct.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image covers the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear, the mediastinum is well-defined, the bones are intact, and the costophrenic angles are sharp.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? The image has a laterality marker indicating the left side is on the left. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image has low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube: present, course: midline, tip position: approximately 4 cm above the carina, confidence 95%
+   - nasogastric tube: present, course: midline, tip position: not visualized, confidence 60%
+   - central line: present, course: right subclavian, tip position: not visualized, confidence 60%
+   - pacemaker: present, course: right atrium, tip position: not visualized, confidence 60%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - left lung: there is significant opacification of the left lung, obscuring the normal lung markings. The extent of the opacity is difficult to precisely determine due to the obscuration.
+     - right lung: the right lung appears clear.
+     - pleural effusion: there is a possible small pleural effusion on the left side, but it is difficult to confirm due to the opacity in the left lung.
+   - mediastinum/heart:
+     - mediastinum: the mediastinum appears within normal limits in size and contour.
+     - heart: the heart size is difficult to assess due to the opacity in the left lung.
+   - diaphragms/upper abdomen:
+     - diaphragms: the diaphragms are visualized.
+     - upper abdomen: the upper abdomen is not well visualized due to the opacity in the left lung.
+   - bones/soft tissues:
+     - ribs: the ribs are intact.
+     - clavicles: the clavicles are visualized.
+     - soft tissues: the soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Significant opacification of the left lung, obscuring the normal lung markings.
+   - Possible small left pleural effusion.
+   - Endotracheal tube in place, terminating approximately 4 cm above the carina.
+   - Nasogastric tube in place, but the tip position is not visualized.
+   - Central line in place, but the tip position is not visualized.
+   - Pacemaker in place, but the tip position is not visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The significant opacification of the left lung makes it difficult to assess the underlying lung parenchyma and to definitively determine the presence and extent of a pleural effusion.
+   - The tip positions of the nasogastric tube, central line, and pacemaker are not visualized.
+
+7) DOMAIN VECTOR

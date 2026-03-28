@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (supine) with confidence 100 + patient is lying flat on their back.
+   - portable-likelihood (high) with evidence (portable X-ray machine).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the image appears to be a supine AP chest X-ray. The lung volumes are low, and the posterior rib count is not easily estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are not well visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat obscured by low inspiration. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not well visualized due to cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (No obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to be a standard chest X-ray.
+   - noise texture (low) with confidence 90 + the image has a low level of noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (absent) with confidence 100 + no line is visible in the right subclavian region.
+   - left subclavian line (absent) with confidence 100 + no line is visible in the left subclavian region.
+   - endotracheal tube (indeterminate) with confidence 50 + no endotracheal tube is visible. The upper trachea is visible, but the tube is not clearly seen.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral lung fields are present. The lung volumes are low, resulting in increased prominence of the pulmonary vasculature. There is some increased opacity in the lower lung fields, which could be due to atelectasis or other pathology. The pleural surfaces are clear.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in size and contour. The heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible. The upper abdomen is not well visualized due to cropping.
+   - bones/soft tissues
+     - the ribs are visible. The clavicles are visible. The bones are otherwise unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Low lung volumes.
+   - Possible atelectasis in the lower lung fields.
+   - No obvious acute pulmonary process.
+   - No visible central lines.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited visualization of the apices and costophrenic angles due to cropping.
+   - The endotracheal tube is not clearly visualized.
+   - The presence of a central line is indeterminate.
+
+7) DOMAIN VECTOR

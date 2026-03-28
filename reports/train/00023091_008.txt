@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95 + image is a PA chest X-ray.
+   - patient position: upright with confidence 90 + the patient is standing.
+   - portable-likelihood: low + the image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95 + the clavicles are symmetrical.
+   - inspiration: adequate with confidence 90 + the lung fields are well-expanded.
+   - penetration: adequate with confidence 95 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 100 + the image is sharp.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - chest tube: present, course: left chest, tip position: indeterminate, confidence 95 + a chest tube is present in the left hemithorax. The tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - left lung: there is a large opacity in the left lung field, obscuring the lung markings. There is also a pleural effusion in the left hemithorax.
+     - right lung: the right lung appears clear.
+   - mediastinum/heart
+     - mediastinum: the mediastinum is midline.
+     - heart: the heart size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: the diaphragms are well-defined.
+     - upper abdomen: the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - ribs: the ribs are intact.
+     - clavicles: the clavicles are intact.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large opacity in the left lung field with associated pleural effusion.
+   - Chest tube in place in the left hemithorax.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip position of the chest tube is not clearly visible.
+   - The extent of the left lung opacity is not fully defined.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: upright with confidence 90% + evidence: the patient is standing or sitting upright.
+   - portable-likelihood: medium with evidence: the image appears to be a portable chest radiograph, given the limited field of view and potential for suboptimal positioning.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 90% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the upper chest and heart. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are multiple lines present in the image, likely representing external devices or lines. The presence of these lines obscures the view of the costophrenic angles.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the right. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no obvious inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (IJCV Catheter): present, course: right internal jugular vein, tip position: indeterminate, confidence 80%
+   - Left Internal Jugular Central Venous Catheter (IJCV Catheter): present, course: left internal jugular vein, tip position: indeterminate, confidence 80%
+   - Multiple lines: present, course: indeterminate, tip position: indeterminate, confidence 70%
+   - Indeterminate: present, course: indeterminate, tip position: indeterminate, confidence 60%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: The lungs are clear bilaterally. There is no evidence of consolidation, pleural effusion, or pneumothorax.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are well-defined. The upper abdomen is not fully visualized.
+   - bones/soft tissues: The ribs are visible. The clavicles are visible. There is subcutaneous emphysema in the left chest wall.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Multiple central venous catheters are present.
+   - Subcutaneous emphysema in the left chest wall.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The costophrenic angles are not fully visualized.
+   - The tip positions of the central venous catheters are indeterminate.
+   - The upper abdomen is not fully visualized.
+
+7) DOMAIN VECTOR

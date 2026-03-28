@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + the patient is likely in an upright position.
+   - portable-likelihood: low with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also not fully visualized.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visualized due to cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the right. A burned-in label is present in the top-left corner, but the content is not visible.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - NG tube: absent
+   - central line: absent
+   - pacemaker: absent
+   - chest tube: absent
+   - ETT: absent
+   - IV line: absent
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: There is a large opacity in the left hemithorax, obscuring the lung markings. The right lung appears clear. There is no obvious pneumothorax.
+   - mediastinum/heart: The mediastinum is midline. The heart size is within normal limits.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is not well visualized due to cropping.
+   - bones/soft tissues: The ribs are visible. The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Large opacity in the left hemithorax, concerning for possible pleural effusion or consolidation. Further evaluation with lateral decubitus films or CT chest is recommended to determine the etiology.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Cropping of the image limits the assessment of the apices and costophrenic angles.
+   - The presence of a burned-in label obscures the content of the label.
+   - The large opacity in the left hemithorax is concerning and requires further evaluation.
+
+7) DOMAIN VECTOR

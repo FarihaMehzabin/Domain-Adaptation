@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: upright with confidence 90% + evidence: the patient is likely in an upright position.
+   - portable-likelihood: high with evidence: the image appears to be a portable chest radiograph.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: the lung fields are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving the upper and lower portions of the chest.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are relatively clear, but there is increased opacity in the lower lung fields. The mediastinum is well-defined. The bones are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: there are multiple lines and tubes present in the image.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: unknown, confidence 80%
+   - nasogastric tube: present, course: midline, tip position: unknown, confidence 80%
+   - central venous catheter: present, course: right subclavian, tip position: superior vena cava, confidence 90%
+   - chest tube: present, course: right apex, tip position: unknown, confidence 90%
+   - chest tube: present, course: left apex, tip position: unknown, confidence 90%
+   - Swan-Ganz catheter: present, course: right pulmonary artery, tip position: unknown, confidence 90%
+   - arterial line: present, course: radial artery, tip position: unknown, confidence 90%
+   - multiple lines/tubes: present, course: various, tip position: unknown, confidence 70%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: there is increased opacity in the lower lung fields bilaterally, suggestive of pulmonary edema or consolidation. There is also evidence of subcutaneous emphysema in the chest wall, particularly on the right side. There is a possible pleural effusion on the right side.
+   - mediastinum/heart: the mediastinum is within normal limits. The heart size is difficult to assess due to the overlying opacity.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is largely unremarkable.
+   - bones/soft tissues: the ribs are visible. There is evidence of subcutaneous emphysema.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral pulmonary edema/consolidation.
+   - Subcutaneous emphysema.
+   - Possible right pleural effusion.
+   - Multiple lines/tubes present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip positions of the central venous catheter, chest tubes, Swan-Ganz catheter, arterial line, and the nasogastric tube are not clearly visible.
+   - The heart size is difficult to assess due to the overlying opacity.
+   - The presence of multiple lines/tubes makes it difficult to identify the exact location of each device.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior chest radiograph.
+   - patient position: supine with confidence 90% + the patient is lying flat on their back.
+   - portable-likelihood: low with evidence (the image is likely from a portable machine, but the exact machine type is not discernible).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free from significant rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded. The posterior rib count is estimated to be 9-10 ribs.
+   - penetration: adequate with confidence 90% + the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are not well visualized due to the cropping.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are relatively clear, but the lower lung fields are poorly visualized due to the cropping. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not well visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: there are several lines present in the image, likely from external devices. The presence of grid or moiré patterns is not clear. There is no evidence of banding or detector dropout. There are no obvious compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no obvious inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: not visible, confidence 80%
+   - nasogastric tube: present, course: midline, tip position: not visible, confidence 80%
+   - central venous catheter: present, course: right subclavian, tip position: not visible, confidence 80%
+   - arterial line: present, course: right radial, tip position: not visible, confidence 80%
+   - chest tube: present, course: right, tip position: not visible, confidence 80%
+   - other lines/tubes: indeterminate, course: unknown, tip position: unknown, confidence 50%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: there is increased opacity in the right lung, particularly in the lower lung fields. The left lung appears relatively clear. There is no obvious pleural effusion or pneumothorax.
+   - mediastinum/heart: the mediastinum appears within normal limits. The heart size is difficult to assess due to the cropping and low contrast.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is not well visualized due to the cropping.
+   - bones/soft tissues: the ribs are visible. The clavicles are not well visualized due to the cropping.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right lower lung opacity, etiology unclear. Consider pneumonia, atelectasis, or other process.
+   - Multiple lines/tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is cropped, obscuring the apices and costophrenic angles.
+   - The lower lung fields are poorly visualized.
+   - The heart size is difficult to assess.
+   - The tip positions of the lines/tubes are not visible.
+   - The presence of grid/moiré patterns is not clear.
+
+7) DOMAIN VECTOR

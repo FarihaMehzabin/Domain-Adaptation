@@ -1,0 +1,42 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: AP projection is evident.
+   - patient position: upright with confidence 90% + evidence: The patient is in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: The image appears to be rotationally normal.
+   - inspiration: adequate with confidence 90% + evidence: Adequate inspiration is present.
+   - penetration: adequate with confidence 95% + evidence: Adequate penetration is present.
+   - motion blur: none with confidence 95% + evidence: No motion blur is evident.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also not fully visualized.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are well-aerated. The mediastinum is clearly visible. The bones are well-defined. The diaphragms are visible. The costophrenic angles are not fully visualized due to cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? Laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - NG tube: absent with confidence 95% + evidence: No nasogastric tube is visible.
+   - IV line: absent with confidence 95% + evidence: No intravenous line is visible.
+   - ETT: absent with confidence 95% + evidence: No endotracheal tube is visible.
+   - pacemaker: absent with confidence 95% + evidence: No pacemaker is visible.
+   - central line: absent with confidence 95% + evidence: No central line is visible.
+   - chest tube: absent with confidence 95% + evidence: No chest tube is visible.
+   - picc line: absent with confidence 95% + evidence: No picc line is visible.
+   - other: indeterminate with confidence 90% + evidence: The presence of a line in the upper mediastinum is indeterminate.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: The lungs are clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues: The ribs are intact. The clavicles are intact. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute cardiopulmonary abnormalities identified.
+   - The apices and costophrenic angles are not fully visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices and costophrenic angles are not fully visualized due to cropping.
+   - The presence of the line in the upper mediastinum is indeterminate.
+
+7) DOMAIN VECTOR

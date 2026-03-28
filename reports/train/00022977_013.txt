@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized due to the patient's position and the extent of the image.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are relatively clear, although there is some increased opacity in the left lung. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. with confidence 100 + there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (There is a laterality marker present. There is a burned-in label top-left.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) with confidence 100 + the image appears to be processed with low contrast and low edge enhancement.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian central line (present) with confidence 95 + a central line is present on the right side, coursing from the subclavian vein into the superior vena cava. The tip is not clearly visualized.
+   - left subclavian central line (present) with confidence 95 + a central line is present on the left side, coursing from the subclavian vein into the superior vena cava. The tip is not clearly visualized.
+   - endotracheal tube (present) with confidence 95 + an endotracheal tube is present, terminating approximately 4 cm above the carina.
+   - nasogastric tube (present) with confidence 95 + a nasogastric tube is present, coursing into the stomach. The tip is not clearly visualized.
+   - other lines/tubes (indeterminate) with confidence 100 + there are other lines/tubes present, but their exact course and tip positions are not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - left lung: increased opacity, possibly representing a pleural effusion. The extent of the effusion is difficult to determine due to the patient's position.
+     - right lung: increased opacity, possibly representing pulmonary edema or consolidation.
+   - mediastinum/heart
+     - mediastinum: normal in width.
+     - heart: normal in size and contour.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: normal.
+     - clavicles: normal.
+     - other soft tissues: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Left pleural effusion.
+   - Pulmonary edema or consolidation in the right lung.
+   - Central lines in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Limited visualization of the apices, costophrenic angles, and lateral chest walls.
+   - The tip positions of the central lines are not clearly visualized.
+   - The extent of the left pleural effusion is difficult to determine.
+
+7) DOMAIN VECTOR

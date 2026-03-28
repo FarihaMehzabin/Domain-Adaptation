@@ -1,0 +1,54 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: upright with confidence 90% + evidence: the patient is likely in an upright position.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest radiograph.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical.
+   - inspiration: adequate with confidence 85% + evidence: the lung fields are well-expanded.
+   - penetration: adequate with confidence 90% + evidence: vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + evidence: no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also not fully visualized.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are relatively clear, but there are some areas of increased opacity. The mediastinum is visible. The bones are well-defined. The diaphragms are visible. The costophrenic angles are not fully visualized due to cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right chest tube: present, course: right chest wall, tip position: indeterminate, confidence 80%
+   - left chest tube: present, course: left chest wall, tip position: indeterminate, confidence 80%
+   - central line: indeterminate, course: indeterminate, tip position: indeterminate, confidence 50%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a large pleural effusion with associated atelectasis. There is also a possible pneumothorax in the right apex.
+     - left lung: there is a moderate pleural effusion with associated atelectasis.
+     - no obvious consolidation or pulmonary edema.
+   - mediastinum/heart
+     - the mediastinum is midline.
+     - the heart size is normal.
+     - no obvious cardiomegaly.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is not well visualized due to cropping.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+     - no obvious fractures are present.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large right pleural effusion with associated atelectasis.
+   - Moderate left pleural effusion with associated atelectasis.
+   - Possible right apical pneumothorax.
+   - Two chest tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are not fully visualized due to cropping.
+   - The tip position of the chest tubes is indeterminate.
+   - The presence of a pneumothorax is uncertain due to the limited visualization of the apices.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

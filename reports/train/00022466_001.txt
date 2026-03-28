@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (medium) with evidence (portable marker).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the apices and costophrenic angles not fully visualized. The costal margins are not fully visualized due to the cropping.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + lungs are clear. Mediastinum is well-defined. Bones are well-defined. Diaphragms are well-defined. Costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, top-left. Burned-in label top-left.)
+   - presentation/processing cues: contrast (low) with confidence 90 + image is low contrast. Edge enhancement (low) with confidence 90 + edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 90 + low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Central Venous Catheter (CVC) (present) with confidence 95 + a catheter is seen in the superior vena cava. The tip position is not clearly visualized.
+   - Peripheral IV (present) with confidence 90 + a catheter is seen in the upper extremity. The tip position is not clearly visualized.
+   - Port-a-cath (present) with confidence 95 + a port-a-cath is seen in the right upper chest. The tip position is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Lungs are clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+   - mediastinum/heart
+     - The mediastinum is unremarkable. The heart size is within normal limits.
+   - diaphragms/upper abdomen
+     - Diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - Bones are intact. Soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Central venous catheter in place.
+   - Peripheral IV in place.
+   - Port-a-cath in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices and costophrenic angles are not fully visualized due to image cropping.
+   - The tip position of the central venous catheter is not clearly visualized.
+   - The tip position of the peripheral IV is not clearly visualized.
+   - The tip position of the port-a-cath is not clearly visualized.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: upright with confidence 90% + evidence: the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest radiograph, but the quality is adequate.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 90% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear, the mediastinum is well-defined, the bones are visible, and the diaphragms and costophrenic angles are clearly seen.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - chest tube: present, multiple, course: right chest, tip position: indeterminate, confidence 80%
+   - chest tube: present, multiple, course: left chest, tip position: indeterminate, confidence 80%
+   - catheter: present, multiple, course: indeterminate, tip position: indeterminate, confidence 70%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a large area of consolidation and pleural effusion. There are also multiple air-fluid levels.
+     - left lung: there is a large area of consolidation and pleural effusion. There are also multiple air-fluid levels.
+     - pleural effusions: bilateral, large, obscuring the costophrenic angles.
+     - pneumothorax: indeterminate, possible, due to air-fluid levels.
+   - mediastinum/heart
+     - mediastinum: the mediastinum is midline.
+     - heart: the heart size is difficult to assess due to the presence of pleural effusions.
+   - diaphragms/upper abdomen
+     - diaphragms: the diaphragms are elevated.
+     - upper abdomen: the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - ribs: multiple rib fractures are present.
+     - clavicles: the clavicles are intact.
+     - other: subcutaneous emphysema is present.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral pleural effusions and consolidations.
+   - Multiple rib fractures.
+   - Possible pneumothorax.
+   - Multiple chest tubes.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The presence of multiple chest tubes and air-fluid levels makes it difficult to precisely determine the location of the chest tube tips.
+   - The extent of the consolidations and pleural effusions is difficult to fully assess due to the presence of air-fluid levels.
+   - The heart size is difficult to assess due to the presence of pleural effusions.
+
+7) DOMAIN VECTOR

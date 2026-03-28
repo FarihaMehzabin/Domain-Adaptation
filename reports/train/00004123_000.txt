@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be adequately inflated.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized due to the image cropping.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are generally clear, the mediastinum is visible, the bones are visible, and the diaphragms and costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker present, pointing to the left. Burned-in text present in the upper left corner, but content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + there is no obvious sign of inversion. Noise texture (low) with confidence 90 + the noise texture appears to be low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (present) with confidence 95 + a right subclavian line is present, coursing from the superior vena cava to the distal arm. The tip position is not clearly visible.
+   - left subclavian line (present) with confidence 95 + a left subclavian line is present, coursing from the superior vena cava to the distal arm. The tip position is not clearly visible.
+   - heart rate monitor (present) with confidence 90 + a heart rate monitor is present, with leads placed on the chest. The tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - there is no obvious consolidation, pleural effusion, or pneumothorax.
+     - there is some increased opacity in the left lung base, which could be due to atelectasis or other pathology.
+   - mediastinum/heart
+     - the mediastinum is slightly widened, which could be due to increased vascularity or other pathology.
+     - the heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are not fully visualized.
+     - the upper abdomen is not fully visualized.
+   - bones/soft tissues
+     - the bones are intact.
+     - there are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - right subclavian line and left subclavian line present.
+   - possible left lower lobe atelectasis.
+   - slightly widened mediastinum.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices and costophrenic angles are not fully visualized.
+   - The tip position of the subclavian lines is not clearly visible.
+   - The upper abdomen is not fully visualized.
+
+7) DOMAIN VECTOR

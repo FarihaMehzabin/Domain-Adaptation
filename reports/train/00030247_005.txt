@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (portable marker present).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the patient is likely in a semi-upright position.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (apices are visible, costophrenic angles are visible, lateral chest walls are visible).
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are well-aerated, the mediastinum is clearly visible, the bones are well-defined, and the costophrenic angles are sharp.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, burned-in label top-left).
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (SVC) present, course: right subclavian vein to superior vena cava, tip position: indeterminate, confidence 80.
+   - left subclavian line (SVC) present, course: left subclavian vein to superior vena cava, tip position: indeterminate, confidence 80.
+   - catheter (likely central line) present, course: indeterminate, tip position: indeterminate, confidence 60.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral lung fields are clear. No focal consolidation, pleural effusion, or pneumothorax is identified.
+     - there is some increased opacity in the right upper lung field, but it is difficult to assess the exact nature of this finding.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in width.
+     - the heart size is normal.
+     - the pulmonary vasculature is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-defined.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are intact.
+     - the clavicles are intact.
+     - the scapulae are intact.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - bilateral central lines are present.
+   - possible increased opacity in the right upper lung field.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable chest radiograph, which may have limited anatomical coverage.
+   - The tip position of the central lines is indeterminate.
+   - The increased opacity in the right upper lung field is difficult to assess due to the limited image quality.
+
+7) DOMAIN VECTOR

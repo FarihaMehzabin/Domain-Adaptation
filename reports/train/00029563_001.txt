@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (supine) with confidence 100 + patient is supine.
+   - portable-likelihood (high) with evidence (portable X-ray machine visible).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the lung volumes are low.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are visible, but the image is cropped. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. Burned-in text is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 80 + the image appears to be a low-contrast radiograph. Edge enhancement (low) with confidence 80 + there is minimal edge enhancement. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 80 + the noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - IV catheter (right subclavian) present, course: right subclavian vein, tip position: indeterminate. Confidence: 80.
+   - NG tube (endotracheal) present, course: endotracheal tube, tip position: indeterminate. Confidence: 80.
+   - ETT (endotracheal tube) present, course: endotracheal tube, tip position: indeterminate. Confidence: 80.
+   - Central line (right internal jugular) present, course: right internal jugular vein, tip position: indeterminate. Confidence: 80.
+   - Chest tube (left) present, course: left chest, tip position: indeterminate. Confidence: 80.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - The lungs are relatively clear, but the image is cropped, obscuring the apices and costophrenic angles. There is no obvious consolidation, pleural effusion, or pneumothorax.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in size and contour. The heart size appears to be mildly enlarged.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible. The upper abdomen is not well visualized due to the image being cropped.
+   - bones/soft tissues
+     - The bones are intact. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - The image is a portable AP chest X-ray.
+   - The lungs are relatively clear, but the image is cropped, obscuring the apices and costophrenic angles.
+   - The heart size appears to be mildly enlarged.
+   - The patient is intubated and has multiple lines and tubes in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable AP chest X-ray, which limits the visualization of the apices and costophrenic angles.
+   - The image is cropped, obscuring the upper abdomen.
+   - The tip positions of the lines and tubes are indeterminate.
+   - The heart size is estimated based on the limited image.
+
+7) DOMAIN VECTOR

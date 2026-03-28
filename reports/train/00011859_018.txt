@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is AP.
+   - patient position: portable with confidence 90% + the patient is in a portable position.
+   - portable-likelihood: high with evidence (patient is in a portable setting).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to cover the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are somewhat obscured by overlying structures. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are several lines present in the image, likely from the patient's clothing or equipment.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture appears to be low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian central line: present, course: right subclavian vein, tip position: indeterminate, confidence 70%
+   - left subclavian central line: present, course: left subclavian vein, tip position: indeterminate, confidence 70%
+   - enteric tube: present, course: likely into the stomach, tip position: indeterminate, confidence 60%
+   - right atrial catheter: present, course: right atrium, tip position: indeterminate, confidence 60%
+   - right ventricular catheter: present, course: right ventricle, tip position: indeterminate, confidence 60%
+   - right jugular catheter: present, course: right jugular vein, tip position: indeterminate, confidence 60%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: The lungs appear somewhat hazy, possibly due to low inspiration or overlying structures. There is no obvious pleural effusion or pneumothorax.
+   - mediastinum/heart: The mediastinum appears widened, likely due to the presence of multiple lines and tubes. The heart size is difficult to assess due to the overlying structures.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is not well visualized due to the overlying structures.
+   - bones/soft tissues: The ribs are visible. The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Multiple central lines and catheters are present.
+   - The mediastinum appears widened.
+   - The lungs appear somewhat hazy.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is a portable AP radiograph, which limits the visualization of the chest.
+   - The lungs are somewhat obscured by overlying structures.
+   - The heart size is difficult to assess.
+   - The tip positions of the central lines and catheters are indeterminate.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

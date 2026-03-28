@@ -1,0 +1,36 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: The image is a PA chest X-ray.
+   - patient position: Upright with confidence 90% + evidence: The patient is standing in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a standard chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: The image appears to be free of significant rotation. Clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: The lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: There is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (describe cropping/padding/borders) The image shows the apices, costophrenic angles, and costal margins. The image is cropped, with the costophrenic angles being slightly obscured.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? The image has a laterality marker (L on the left side). There is a burned-in label top-left.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - central line: present, course: internal jugular, tip position: indeterminate, confidence 90% + evidence: A central line is present, coursing from the internal jugular vein. The tip position is not clearly visible.
+   - catheter: present, course: indeterminate, tip position: indeterminate, confidence 90% + evidence: A catheter is present, but its course and tip position are not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: The lungs are clear bilaterally. There is no evidence of consolidation, pleural effusion, or pneumothorax.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues: The ribs are intact. The clavicles are symmetrical. The soft tissues are unremarkable.
+
+5) IMPRESSION
+   - Central line present, tip position not clearly visualized.
+   - Catheter present, course and tip position not clearly visualized.
+   - No acute pulmonary findings.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip position of the central line and catheter are not clearly visualized.
+   - The costophrenic angles are slightly obscured.
+
+7) DOMAIN VECTOR

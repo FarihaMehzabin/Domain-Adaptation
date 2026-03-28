@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: semi-erect with confidence 90% + evidence: the patient is positioned in a semi-erect manner.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest radiograph.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 90% + evidence: the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices of the lungs, costophrenic angles, and lateral chest walls. The image is cropped, leaving the upper abdomen somewhat exposed.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are several lines present in the image, likely representing external lines or devices. There is no evidence of grid/moiré artifacts, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - left subclavian central line: present, course: left subclavian vein, tip position: indeterminate, confidence 90%
+   - right subclavian central line: present, course: right subclavian vein, tip position: indeterminate, confidence 90%
+   - chest tube: present, course: left chest, tip position: indeterminate, confidence 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - left lung: there is increased opacity in the left lung, likely representing a pleural effusion and/or consolidation. The left lung base appears more dense than the right.
+     - right lung: the right lung appears clear.
+     - pleural effusion: possible left pleural effusion.
+   - mediastinum/heart
+     - mediastinum: the mediastinum is midline.
+     - heart: the heart size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: the diaphragms are visible.
+     - upper abdomen: the upper abdomen is somewhat exposed due to the cropping of the image.
+   - bones/soft tissues
+     - ribs: the ribs are visible.
+     - clavicles: the clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Possible left pleural effusion and/or consolidation.
+   - Two central lines are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is cropped, limiting the assessment of the upper abdomen.
+   - The tip position of the central lines is indeterminate.
+   - The presence and extent of any consolidation is difficult to assess due to the limited visualization of the left lung base.
+
+7) DOMAIN VECTOR

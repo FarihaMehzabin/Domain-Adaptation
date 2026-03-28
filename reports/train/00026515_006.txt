@@ -1,0 +1,42 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (medium) with evidence (portable equipment visible).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 90 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 95 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to be low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no evidence of inversion. Noise texture (low) with confidence 90 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (Central Line): present, course: right internal jugular vein, tip position: indeterminate, confidence 80.
+   - Right subclavian line: present, course: right subclavian vein, tip position: indeterminate, confidence 80.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - The lungs are clear bilaterally. There is no evidence of consolidation, pleural effusion, or pneumothorax.
+   - mediastinum/heart
+     - The mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The bones are intact. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute cardiopulmonary abnormalities are identified.
+   - Right internal jugular central venous catheter is present.
+   - Right subclavian line is present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip position of the central line and subclavian line is indeterminate.
+   - The image quality is limited by the low contrast and the presence of a burned-in label.
+   - The patient's clinical history is not available.
+
+7) DOMAIN VECTOR

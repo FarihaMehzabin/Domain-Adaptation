@@ -1,0 +1,54 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (portable equipment visible).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the patient is likely in a semi-upright position.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are visible, but the apices and costophrenic angles are obscured. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. Burned-in label top-left.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to have low contrast. Edge enhancement (low) with confidence 100 + edge enhancement is minimal. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 100 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (Right IJ CVC): present, course: right internal jugular vein, tip position: indeterminate, confidence 80
+   - Left Internal Jugular Central Venous Catheter (Left IJ CVC): present, course: left internal jugular vein, tip position: indeterminate, confidence 80
+   - Right Chest Tube: present, course: right hemithorax, tip position: indeterminate, confidence 80
+   - Left Chest Tube: present, course: left hemithorax, tip position: indeterminate, confidence 80
+   - Indeterminate: present, course: indeterminate, tip position: indeterminate, confidence 10
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: There is significant opacification in the right hemithorax, likely representing a large pleural effusion and/or consolidation. The right lung apex is obscured.
+     - Left lung: There is some increased opacity in the left lung base, possibly representing atelectasis or a small pleural effusion. The left lung apex is visible.
+     - Pleural effusions: Large right pleural effusion is present. Small left pleural effusion is possible.
+   - mediastinum/heart
+     - Mediastinum: The mediastinum is midline. The heart size is difficult to assess due to the patient's position and the presence of the chest tubes.
+     - Heart: The heart size is difficult to assess due to the patient's position and the presence of the chest tubes.
+   - diaphragms/upper abdomen
+     - Diaphragms: The diaphragms are visible.
+     - Upper abdomen: The upper abdomen is partially visible.
+   - bones/soft tissues
+     - Bones: The ribs are visible.
+     - Soft tissues: The subcutaneous tissues are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large right pleural effusion and/or consolidation.
+   - Small left pleural effusion is possible.
+   - Right chest tube in place.
+   - Left chest tube in place.
+   - Central venous catheters in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are obscured, limiting the assessment of the lungs.
+   - The heart size is difficult to assess due to the patient's position and the presence of the chest tubes.
+   - The tip positions of the chest tubes are indeterminate.
+
+7) DOMAIN VECTOR

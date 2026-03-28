@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: upright with confidence 90% + evidence: the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest radiograph, but the quality is adequate.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving a small amount of padding on the sides.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - pacemaker: present, course: left pectoral, tip position: indeterminate, confidence 95% + evidence: a pacemaker is visible on the left chest wall. The leads are not clearly visible.
+   - central line: indeterminate, course: indeterminate, tip position: indeterminate, confidence 50% + evidence: there is no clear evidence of a central line.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - there is increased opacity in the lower lung fields bilaterally, which may represent pleural effusions or atelectasis.
+     - there is some increased interstitial markings, which could be due to pulmonary edema or other interstitial lung disease.
+   - mediastinum/heart:
+     - the heart size is enlarged.
+     - the mediastinum is widened.
+   - diaphragms/upper abdomen:
+     - the diaphragms are visible.
+     - the upper abdomen is not well visualized due to the patient's body habitus.
+   - bones/soft tissues:
+     - the ribs are visible.
+     - the clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - cardiomegaly.
+   - possible pleural effusions or atelectasis in the lower lung fields.
+   - possible pulmonary edema or interstitial lung disease.
+   - widened mediastinum.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - limited visualization of the upper abdomen.
+   - the pacemaker leads are not clearly visible.
+   - the central line is not clearly visible.
+
+7) DOMAIN VECTOR

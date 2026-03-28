@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + evidence: patient is standing or sitting upright.
+   - portable-likelihood: low with evidence: the image appears to be a standard chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + evidence: no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be a standard PA chest X-ray, with adequate coverage of the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are clear. Mediastinum is unremarkable. Bones are intact. Diaphragms are well-defined. Costophrenic angles are sharp.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to be a standard chest X-ray with low contrast and no edge enhancement.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right-sided chest tube: present, course: right main bronchus, tip position: within the right lung, confidence 95%
+   - left-sided chest tube: present, course: left main bronchus, tip position: within the left lung, confidence 95%
+   - right-sided subclavian line: present, course: right atrium, tip position: right atrium, confidence 95%
+   - left-sided picc line: present, course: superior vena cava, tip position: superior vena cava, confidence 95%
+   - indeterminate: no other devices are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - right lung: there is a small amount of pleural effusion. There is also some atelectasis in the right lung.
+     - left lung: there is a small amount of pleural effusion. There is also some atelectasis in the left lung.
+   - mediastinum/heart:
+     - the mediastinum is unremarkable. The heart size is normal.
+   - diaphragms/upper abdomen:
+     - the diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues:
+     - the bones are intact. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Small bilateral pleural effusions.
+   - Atelectasis in both lungs.
+   - Chest tubes in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image quality is adequate, but there is some limited visualization of the lung bases.
+   - The presence and extent of the pleural effusions are difficult to fully assess due to the atelectasis.
+   - The tip position of the chest tubes is difficult to determine with certainty.
+
+7) DOMAIN VECTOR

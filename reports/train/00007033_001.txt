@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior (AP) chest X-ray.
+   - patient position: upright with confidence 90% + the patient is likely in an upright position.
+   - portable-likelihood: low with evidence (no obvious signs of a portable exam)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image shows the apices, costophrenic angles, and costal margins.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are clear. Mediastinum is well-defined. Bones are intact. Diaphragms are visible. Costophrenic angles are clear. with confidence 95%
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: none with confidence 95%
+   - markers/overlays: laterality marker present? burned-in text present?: Laterality marker is present, pointing to the right. Burned-in text is present in the top-left corner, but the content is unreadable. with confidence 90%
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - left subclavian line: present, course: left subclavian vein, tip position: indeterminate, confidence 80%
+   - right subclavian line: present, course: right subclavian vein, tip position: indeterminate, confidence 80%
+   - right picc line: present, course: right subclavian vein, tip position: indeterminate, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - right lung: there is a hazy opacity in the right mid-lung field. The opacity is not well-defined and may represent consolidation, atelectasis, or other process. with confidence 70%
+     - left lung: clear with confidence 95%
+     - pleural surfaces: clear with confidence 95%
+   - mediastinum/heart:
+     - heart size: normal with confidence 90%
+     - mediastinal contours: normal with confidence 90%
+     - hilar structures: normal with confidence 90%
+   - diaphragms/upper abdomen:
+     - diaphragms: visible and well-defined with confidence 95%
+     - upper abdomen: unremarkable with confidence 90%
+   - bones/soft tissues:
+     - ribs: intact with confidence 95%
+     - clavicles: intact with confidence 95%
+     - scapulae: intact with confidence 95%
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right mid-lung opacity, etiology unclear. Further evaluation with CT is recommended.
+   - Right subclavian line, course: right subclavian vein, tip position: indeterminate, confidence 80%
+   - Right picc line, course: right subclavian vein, tip position: indeterminate, confidence 80%
+   - Left subclavian line, course: left subclavian vein, tip position: indeterminate, confidence 80%
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip position of the lines is indeterminate.
+   - The nature of the right mid-lung opacity is uncertain.
+   - The burned-in text in the top-left corner is unreadable.
+
+7) DOMAIN VECTOR

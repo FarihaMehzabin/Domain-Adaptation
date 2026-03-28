@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: The image is a PA chest X-ray.
+   - patient position: Upright with confidence 90% + evidence: The patient is in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a standard chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: The image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + evidence: The lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: There is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be adequately collimated, with good visualization of the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are clearly seen. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? The image has a laterality marker indicating the left side. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no indication of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Cardiac Monitor Leads: Indeterminate, multiple leads are visible, but their exact course and tip positions are not clearly defined.
+   - Indeterminate: No other devices are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There is a nodular opacity in the left upper lobe.
+     - There are multiple small nodular opacities scattered throughout both lungs.
+     - The lung fields are otherwise clear.
+     - No pleural effusion is identified.
+     - No pneumothorax is identified.
+   - mediastinum/heart
+     - The mediastinum is within normal limits.
+     - The heart size is normal.
+     - The aorta is normal in caliber.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are intact.
+     - The clavicles are intact.
+     - The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Multiple small nodular opacities in both lungs. Further evaluation with CT chest is recommended to characterize these findings.
+   - One nodular opacity in the left upper lobe. Further evaluation with CT chest is recommended to characterize this finding.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The small nodular opacities are difficult to fully characterize on a single PA chest X-ray.
+   - The exact course and tip positions of the cardiac monitor leads are not clearly defined.
+   - The burned-in label top-left is not helpful for interpretation.
+
+7) DOMAIN VECTOR

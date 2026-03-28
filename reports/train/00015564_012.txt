@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are visible, mediastinum is visible, bones are visible, and diaphragms and costophrenic angles are visible, although the apices and costophrenic angles are obscured.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 90 + the image has low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube (ETT) present, tip position not visible, confidence 90 + an endotracheal tube is present, but the tip position is not visible.
+   - nasogastric tube (NGT) present, course visible, tip position not visible, confidence 80 + a nasogastric tube is present, and its course is visible, but the tip position is not visible.
+   - central venous catheter (CVC) present, course visible, tip position not visible, confidence 80 + a central venous catheter is present, and its course is visible, but the tip position is not visible.
+   - chest tube (CT) present, course visible, tip position not visible, confidence 80 + a chest tube is present, and its course is visible, but the tip position is not visible.
+   - other lines/tubes: indeterminate, course not visible, tip position not visible, confidence 50 + other lines/tubes are present, but their course and tip positions are not visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - diffuse bilateral opacities, predominantly in the lung fields, with a more prominent appearance in the left lung. The opacities are not uniform in density.
+     - possible pleural effusions, but difficult to assess due to the image quality and obscuration of the costophrenic angles.
+   - mediastinum/heart
+     - the mediastinum appears within normal limits in size and contour. The heart size is not well assessed due to the lung opacities.
+   - diaphragms/upper abdomen
+     - diaphragms are visible. The upper abdomen is not well visualized due to the image quality.
+   - bones/soft tissues
+     - the ribs are visible. The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Diffuse bilateral pulmonary opacities, predominantly in the lung fields, with a more prominent appearance in the left lung.
+   - Possible pleural effusions.
+   - The endotracheal tube, nasogastric tube, central venous catheter, and chest tube are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image quality is suboptimal due to low contrast and obscuration of the apices and costophrenic angles.
+   - The tip positions of the endotracheal tube, nasogastric tube, central venous catheter, and chest tube are not visible.
+   - The heart size is not well assessed.
+
+7) DOMAIN VECTOR

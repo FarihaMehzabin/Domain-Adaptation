@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is standing.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom, obscuring the lower lung fields.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear, the mediastinum is well-defined, the bones are visible, and the diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to have low contrast. edge enhancement (low) with confidence 100 + there is no obvious edge enhancement. inversion suspected (no) with confidence 100 + no evidence of inversion. noise texture (low) with confidence 100 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (Indeterminate) with confidence 50 + a line is seen entering the right subclavian vein, but the tip position is not clearly visible.
+   - right picc line (Indeterminate) with confidence 50 + a line is seen entering the right subclavian vein, but the tip position is not clearly visible.
+   - right picc line (Indeterminate) with confidence 50 + a line is seen entering the right subclavian vein, but the tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral lung fields are present.
+     - there are diffuse hazy opacities throughout both lung fields, which could represent pulmonary edema, infection, or other inflammatory processes.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the heart size appears enlarged.
+     - the mediastinal contours are unremarkable.
+     - no obvious masses or lymphadenopathy are identified.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-defined.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the bony structures are intact.
+     - there are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - cardiomegaly.
+   - diffuse hazy opacities in both lung fields, etiology unclear.
+   - right subclavian line present.
+   - right picc line present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip position of the right subclavian line and right picc line is not clearly visible.
+   - The lower lung fields are obscured by the image cropping.
+   - The diffuse hazy opacities in both lung fields could be due to a variety of conditions, and further evaluation is needed to determine the underlying cause.
+
+7) DOMAIN VECTOR

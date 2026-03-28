@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: Image is an anteroposterior (AP) chest X-ray.
+   - patient position: Upright with confidence 90% + evidence: The patient is standing or sitting upright.
+   - portable-likelihood: Low with evidence: The image appears to be a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: None with confidence 95% + evidence: The image appears to be free of significant rotation.
+   - inspiration: Adequate with confidence 90% + evidence: The lungs are well-expanded.
+   - penetration: Adequate with confidence 95% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: None with confidence 95% + evidence: There is no evidence of motion blur.
+   - collimation/anatomic coverage: Apices? Costophrenic angles? Lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: Lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: Lines, grid/moiré, banding, detector dropout, compression artifacts: There are no obvious artifacts.
+   - markers/overlays: Laterality marker present? Burned-in text present? A laterality marker is present. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: Contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image has low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Chest Tube (Left): Present, course: Left subclavian vein to left pleural space, tip position: Not clearly visible, confidence 70%.
+   - Indeterminate: The location of the tip of the chest tube is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: There is a large opacity in the right hemithorax, likely representing a pleural effusion and/or consolidation. The lung markings are obscured.
+     - Left lung: The left lung appears clear.
+     - Pleural effusion: There is a significant pleural effusion on the right side.
+   - mediastinum/heart
+     - Mediastinum: The mediastinum is midline.
+     - Heart: The heart size is normal.
+   - diaphragms/upper abdomen
+     - Diaphragms: The diaphragms are visible.
+     - Upper abdomen: The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - Ribs: The ribs are visible.
+     - Clavicles: The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large right pleural effusion with possible underlying consolidation.
+   - Chest tube in place on the left.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip of the chest tube is not clearly visible.
+   - The extent of the right lung consolidation is difficult to assess due to the large pleural effusion.
+
+7) DOMAIN VECTOR

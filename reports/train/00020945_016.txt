@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (supine) with confidence 100 + patient is supine.
+   - portable-likelihood (high) with evidence (portable equipment visible).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the lung volumes are low.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat clear, but the low inspiration makes it difficult to assess. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 80 + the image appears to have low contrast. edge enhancement (low) with confidence 80 + the image has low edge enhancement. inversion suspected (no) with confidence 100 + no obvious signs of inversion. noise texture (low) with confidence 80 + the noise texture appears to be low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (present) with confidence 95 + a line is seen entering the right subclavian vein.
+   - left subclavian line (present) with confidence 95 + a line is seen entering the left subclavian vein.
+   - endotracheal tube (indeterminate) with confidence 50 + no endotracheal tube is visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lung fields are relatively clear, but the low inspiration makes it difficult to assess for subtle abnormalities.
+     - no obvious pleural effusion or pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum appears within normal limits.
+     - the heart size is difficult to assess due to the low inspiration.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is not well visualized due to the low inspiration and cropping.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Low inspiration.
+   - Right subclavian line present.
+   - Left subclavian line present.
+   - Endotracheal tube not visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Low inspiration limits the ability to fully assess the lung fields.
+   - The image is cropped, obscuring the apices and costophrenic angles.
+   - The endotracheal tube is not visualized.
+
+7) DOMAIN VECTOR

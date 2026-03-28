@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: upright with confidence 90% + evidence: the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest radiograph, but the quality is adequate.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image covers the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear, the mediastinum is well-defined, the bones are visible, and the costophrenic angles are sharp.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - chest tube (left): present, course: left chest, tip position: indeterminate, confidence 90%
+   - chest tube (right): present, course: right chest, tip position: indeterminate, confidence 90%
+   - catheter (right): present, course: right upper extremity, tip position: indeterminate, confidence 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - there is a large pneumothorax on the left side. The visceral pleural line is visible, and there is a significant amount of air in the pleural space.
+     - there is a small pneumothorax on the right side. The visceral pleural line is visible, and there is a small amount of air in the pleural space.
+     - no evidence of pleural effusion.
+   - mediastinum/heart
+     - the mediastinum is midline.
+     - the heart size is normal.
+     - no evidence of cardiomegaly.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-defined.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are intact.
+     - the clavicles are intact.
+     - there are surgical clips in the right upper chest.
+
+5) IMPRESSION
+   - Large left-sided pneumothorax.
+   - Small right-sided pneumothorax.
+   - Chest tubes are in place.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip position of the chest tubes is indeterminate.
+   - The presence of the chest tubes is confirmed by the image.
+   - The presence of the surgical clips is confirmed by the image.
+
+7) DOMAIN VECTOR

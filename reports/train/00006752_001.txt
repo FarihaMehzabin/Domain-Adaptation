@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is PA view.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image covers the apices, costophrenic angles, and costal margins).
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are well-visualized, mediastinum is clear, bones are well-visualized, and costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, pointing to the left. burned-in text is present, top-left, reading "LV").
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - IV line: present, course: indeterminate, tip position: indeterminate, confidence 50 + IV line is present, but the tip position is not clearly visible.
+   - NG tube: present, course: indeterminate, tip position: indeterminate, confidence 50 + NG tube is present, but the tip position is not clearly visible.
+   - ETT: absent, confidence 100 + no endotracheal tube is visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - diffuse bilateral interstitial opacities are present throughout both lung fields. The pattern is consistent with pulmonary edema or diffuse alveolar damage.
+   - mediastinum/heart
+     - the mediastinum is unremarkable. The heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-visualized. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the bones are unremarkable. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Diffuse bilateral interstitial opacities.
+   - Possible pulmonary edema or diffuse alveolar damage.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip position of the IV and NG tubes is not clearly visible.
+   - The presence of diffuse interstitial opacities is suggestive but not diagnostic. Further imaging may be needed to determine the underlying etiology.
+
+7) DOMAIN VECTOR

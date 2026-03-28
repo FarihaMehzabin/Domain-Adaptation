@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + evidence: the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence: the image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present. There is a burned-in label top-left.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line: present, course: right subclavian vein, tip position: indeterminate, confidence 80%
+   - left subclavian line: present, course: left subclavian vein, tip position: indeterminate, confidence 80%
+   - enteric tube: present, course: likely esophageal, tip position: indeterminate, confidence 70%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - there are multiple small, rounded opacities scattered throughout both lung fields. The distribution is not clearly localized to one lobe or region.
+   - mediastinum/heart:
+     - the mediastinum is within normal limits in width.
+     - the heart size is normal.
+   - diaphragms/upper abdomen:
+     - the diaphragms are well-defined.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues:
+     - the ribs are intact.
+     - the clavicles are intact.
+     - the soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - multiple small, rounded opacities in both lung fields. Further evaluation with CT is recommended to determine etiology.
+   - presence of two central venous catheters.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The small rounded opacities are difficult to characterize on a single PA chest X-ray.
+   - The tip positions of the central venous catheters are not clearly visible.
+   - The presence of a burned-in label limits the ability to assess the image quality.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "ICU Port" label.
+   - portable-likelihood (high) with evidence (portable label).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are visible, mediastinum is visible, bones are visible, and diaphragms and costophrenic angles are visible, but the image is cropped.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate) with confidence 100 + no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. "ICU Port" label is present.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to be underexposed. edge enhancement (low) with confidence 100 + no obvious edge enhancement is present. inversion suspected (no) with confidence 100 + no obvious signs of inversion are present. noise texture (low) with confidence 100 + the image appears to have low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) (present) with confidence 100 + ETT is visible, terminating approximately 4 cm above the carina.
+   - nasogastric tube (NGT) (present) with confidence 100 + NGT is visible, coursing into the stomach.
+   - central venous catheter (CVC) (present) with confidence 100 + CVC is visible, terminating in the superior vena cava.
+   - left subclavian line (present) with confidence 100 + Left subclavian line is visible, terminating in the superior vena cava.
+   - right internal jugular line (present) with confidence 100 + Right internal jugular line is visible, terminating in the superior vena cava.
+   - indeterminate line (present) with confidence 100 + An indeterminate line is visible, coursing from the right upper extremity to the superior vena cava.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral opacities are present, particularly in the lower lung fields. The opacities are hazy and indistinct, suggesting a possible process such as pulmonary edema, pneumonia, or atelectasis.
+     - no obvious pleural effusion is identified.
+   - mediastinum/heart
+     - the mediastinum appears within normal limits in size and contour.
+     - the heart size is difficult to assess due to the patient's position and the image quality.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible and appear unremarkable.
+     - the upper abdomen is not well visualized due to the patient's position and the image quality.
+   - bones/soft tissues
+     - the ribs are visible and appear unremarkable.
+     - the clavicles are visible and appear unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - bilateral pulmonary opacities, likely representing pulmonary edema, pneumonia, or atelectasis.
+   - lines and tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable AP radiograph, which limits the assessment of the lung apices and costophrenic angles.
+   - The image quality is suboptimal due to the patient's position and the underexposure.
+   - The heart size is difficult to assess due to the patient's position and the image quality.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

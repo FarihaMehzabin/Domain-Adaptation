@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is AP.
+   - patient position: portable with confidence 90% + the patient is in a portable position.
+   - portable-likelihood: high with evidence (patient is in a portable position).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + no obvious motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be cropped, obscuring the apices and costophrenic angles. The lateral chest walls are also partially obscured.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are relatively clear, but the right lung is obscured by the right chest tube. The mediastinum is visible. The bones are well-defined. The diaphragms are visible. The costophrenic angles are obscured.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are several lines present in the image, likely representing external lines or devices. The presence of these lines obscures the image.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to be processed with low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right chest tube: present, course: right chest, tip position: not clearly visible, confidence 80%
+   - lines: indeterminate, course: multiple, tip position: not clearly visible, confidence 50%
+   - catheter: indeterminate, course: multiple, tip position: not clearly visible, confidence 50%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: obscured by the right chest tube.
+     - left lung: clear.
+     - pleural effusion: indeterminate.
+   - mediastinum/heart
+     - mediastinum: visible.
+     - heart: visible.
+     - cardiomegaly: indeterminate.
+   - diaphragms/upper abdomen
+     - diaphragms: visible.
+     - upper abdomen: partially visible.
+   - bones/soft tissues
+     - ribs: visible.
+     - clavicles: visible.
+     - scapulae: visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right chest tube in place.
+   - Multiple lines present, but tip positions are not clearly visible.
+   - The right lung is obscured by the chest tube.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is a portable AP radiograph, which limits the visualization of the apices and costophrenic angles.
+   - The presence of lines obscures the image and makes it difficult to identify the tip positions of the lines.
+   - The right lung is obscured by the chest tube.
+
+7) DOMAIN VECTOR

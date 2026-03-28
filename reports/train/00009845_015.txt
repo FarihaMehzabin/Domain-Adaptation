@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the costophrenic angles and apices not fully visualized. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + lungs are clear. Mediastinum is well-defined. Bones are visible. Diaphragms are visible. Costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the left side is the patient's right side. Burned-in text is present, but the content is not readable.)
+   - presentation/processing cues: contrast (low) with confidence 90 + image is slightly underexposed. Edge enhancement (low) with confidence 90 + edge enhancement is minimal. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 90 + image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (R subclavian line) present, course: right subclavian vein to superior vena cava, tip position: indeterminate, confidence 80
+   - left subclavian line (L subclavian line) present, course: left subclavian vein to superior vena cava, tip position: indeterminate, confidence 80
+   - right internal jugular line (R IJ line) present, course: right internal jugular vein to superior vena cava, tip position: indeterminate, confidence 80
+   - chest tube (Chest Tube) present, course: right main bronchus to right pleural space, tip position: indeterminate, confidence 80
+   - surgical hardware (Surgical Hardware) present, course: thoracic spine, tip position: indeterminate, confidence 80
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: clear.
+     - left lung: clear.
+     - pleural effusion: no pleural effusion is identified.
+     - pneumothorax: no pneumothorax is identified.
+   - mediastinum/heart
+     - mediastinum: normal size and position.
+     - heart: normal size and position.
+   - diaphragms/upper abdomen
+     - diaphragms: normal position.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: no acute rib fractures are identified.
+     - clavicles: normal appearance.
+     - spine: surgical hardware is present.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right subclavian line, left subclavian line, right internal jugular line, chest tube, and surgical hardware are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Costophrenic angles are not fully visualized.
+   - The tip position of the lines and tubes is indeterminate.
+   - The burned-in text is not readable.
+
+7) DOMAIN VECTOR

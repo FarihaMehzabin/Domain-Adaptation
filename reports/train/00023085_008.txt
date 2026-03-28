@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95 + image is a PA chest radiograph.
+   - patient position: upright with confidence 90 + the patient is standing.
+   - portable-likelihood: low + the image is not a portable chest radiograph.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95 + the image is not rotated.
+   - inspiration: adequate with confidence 90 + the lungs are well-expanded.
+   - penetration: adequate with confidence 95 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95 + there is no motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Central line, subclavian: absent
+   - Chest tube: absent
+   - Swan-Ganz catheter: absent
+   - Other lines/tubes: indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There is significant hyperinflation of the right lung, with increased lucency.
+     - The left lung appears to be collapsed or significantly reduced in volume, with increased opacity.
+     - There is a possible pleural effusion in the left hemithorax, although it is difficult to assess due to the lung collapse.
+     - There is a possible pneumothorax in the left hemithorax, although it is difficult to assess due to the lung collapse.
+   - mediastinum/heart
+     - The mediastinum is midline.
+     - The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are intact.
+     - The clavicles are intact.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Significant hyperinflation of the right lung.
+   - Possible left lung collapse or significant volume loss.
+   - Possible left pleural effusion and/or pneumothorax.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The left lung collapse makes it difficult to assess for subtle abnormalities.
+   - The possible pleural effusion and pneumothorax are difficult to assess due to the lung collapse.
+   - The burned-in label in the top-left corner is not helpful.
+
+7) DOMAIN VECTOR

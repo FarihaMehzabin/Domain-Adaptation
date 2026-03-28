@@ -1,0 +1,54 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior chest radiograph.
+   - patient position: upright with confidence 90% + the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence (image quality is adequate, no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs are well-expanded.
+   - penetration: adequate with confidence 90% + the heart borders are visible behind the lung fields.
+   - motion blur: none with confidence 95% + the image is not blurry.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image covers the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are relatively clear, the mediastinum is well-defined, the bones are visible, and the costophrenic angles are sharp.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are multiple lines present, likely representing internal tubes or lines. The presence of these lines is not unusual in this setting.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: unknown, confidence 90%
+   - nasogastric tube: present, course: midline, tip position: unknown, confidence 90%
+   - central venous catheter: present, course: midline, tip position: unknown, confidence 90%
+   - chest tubes: present, course: bilateral, tip position: unknown, confidence 90%
+   - other lines/tubes: indeterminate, course: unknown, tip position: unknown, confidence 50%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - bilateral opacities: present, distribution: diffuse, pattern: reticular, confidence 80%
+     - pleural effusions: indeterminate, presence: possible, evidence: blunting of the costophrenic angles, confidence 60%
+   - mediastinum/heart:
+     - cardiomegaly: possible, assessment: the heart appears enlarged, confidence 70%
+     - mediastinal widening: indeterminate, assessment: the mediastinum appears somewhat widened, confidence 60%
+   - diaphragms/upper abdomen:
+     - diaphragmatic flattening: indeterminate, assessment: the diaphragms appear flattened, confidence 60%
+     - bowel loops: present, assessment: bowel loops are visible, but the details are not well-defined, confidence 50%
+   - bones/soft tissues:
+     - rib fractures: indeterminate, assessment: there are multiple rib fractures present, confidence 80%
+     - subcutaneous emphysema: indeterminate, assessment: there is some subcutaneous emphysema present, confidence 50%
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral pulmonary opacities, possibly representing edema, pneumonia, or other inflammatory process.
+   - Possible cardiomegaly.
+   - Multiple rib fractures.
+   - Possible pleural effusions.
+   - Presence of multiple lines/tubes.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Tip positions of central lines and tubes are not clearly visualized.
+   - The extent of pulmonary opacities is difficult to assess due to the presence of multiple lines and the overall image quality.
+   - The presence of subcutaneous emphysema is indeterminate.
+   - The presence of pleural effusions is indeterminate.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (supine) with confidence 100 + patient is supine.
+   - portable-likelihood (high) with evidence (portable marker present).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + posterior rib count is difficult to estimate.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the costophrenic angles not fully visible. The apices are not fully visible due to the cropping.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are generally clear, but the costophrenic angles are not fully visible. The mediastinum is visible. Bones are visible. Diaphragms are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (no obvious artifacts).
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, top-left. Burned-in label top-left).
+   - presentation/processing cues: contrast (low) with confidence 80 + image appears to be low contrast. Edge enhancement (low) with confidence 80 + edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 80 + noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian central line: present, course: right subclavian vein, tip position: indeterminate, confidence 80.
+   - left subclavian central line: present, course: left subclavian vein, tip position: indeterminate, confidence 80.
+   - catheter: present, course: right internal jugular vein, tip position: indeterminate, confidence 80.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: hazy opacity in the right lower lung field, obscuring the right hemidiaphragm.
+     - left lung: clear.
+     - pleural surfaces: clear.
+   - mediastinum/heart
+     - heart size: normal.
+     - mediastinal contours: normal.
+     - pulmonary vasculature: normal.
+   - diaphragms/upper abdomen
+     - diaphragms: visible.
+     - upper abdomen: bowel loops are visible, but not well-defined.
+   - bones/soft tissues
+     - ribs: visible.
+     - clavicles: visible.
+     - scapulae: visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right lower lung opacity. Further evaluation with a lateral decubitus radiograph or CT scan is recommended to assess for possible pneumonia or pleural effusion.
+   - Central lines are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Limited visualization of the costophrenic angles due to image cropping.
+   - Difficulty in estimating the posterior rib count.
+   - Central line tip positions are indeterminate.
+   - The right lower lung opacity is difficult to fully characterize on this single AP view.
+
+7) DOMAIN VECTOR

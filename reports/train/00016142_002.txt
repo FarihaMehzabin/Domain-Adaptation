@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior chest radiograph.
+   - patient position: upright with confidence 90% + the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence (no obvious signs of a portable exam)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the heart border is visible behind the lung markings.
+   - motion blur: none with confidence 95% + there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be cropped, obscuring the apices and costophrenic angles. The lateral chest walls are also partially obscured.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are somewhat hazy, likely due to the low inspiration. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no obvious inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - central line: present, course: internal jugular, tip position: indeterminate, confidence 70%
+   - catheter: present, course: indeterminate, tip position: indeterminate, confidence 60%
+   - other: indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: hazy opacity in the lower lung field, obscuring the costophrenic angle.
+     - left lung: hazy opacity in the lower lung field, obscuring the costophrenic angle.
+     - pleural effusion: possible, right side, difficult to assess due to obscuration of the costophrenic angle.
+   - mediastinum/heart
+     - heart size: appears mildly enlarged.
+     - mediastinal contours: unremarkable.
+   - diaphragms/upper abdomen
+     - diaphragms: visible.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: visible.
+     - clavicles: visible.
+     - other: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Possible right pleural effusion.
+   - Mild cardiomegaly.
+   - Indeterminate central line and catheter.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Obscuration of the apices and costophrenic angles limits assessment of the lung fields and pleural spaces.
+   - The central line and catheter courses are indeterminate.
+   - The patient's clinical history is not available, which limits the ability to correlate the findings with the patient's condition.
+
+7) DOMAIN VECTOR

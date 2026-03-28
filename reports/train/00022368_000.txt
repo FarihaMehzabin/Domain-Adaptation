@@ -1,0 +1,43 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: The image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + evidence: The patient is likely in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a standard chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: Clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: The lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: Vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + evidence: No obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be adequately cropped to include the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Cardiac Monitor Leads: present, course: bilateral, tip position: unknown, confidence: 90%
+   - Indeterminate: The presence of a tube/line is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There is a hazy opacity in the right lower lung field. The left lung appears clear.
+     - No pleural effusion is identified.
+   - mediastinum/heart
+     - The mediastinum is within normal limits.
+     - The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible.
+     - The upper abdomen is not well visualized.
+   - bones/soft tissues
+     - The ribs are visible.
+     - The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right lower lung field opacity. Further evaluation with a lateral decubitus radiograph or CT scan may be warranted to rule out pneumonia or other pathology.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The upper abdomen is not well visualized.
+   - The tip position of any tubes/lines is not clearly visible.
+
+7) DOMAIN VECTOR

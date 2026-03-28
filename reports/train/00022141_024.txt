@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "portable" label.
+   - portable-likelihood (high) with evidence (portable label).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also not fully visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are visible, but the right lung appears to have significant opacification. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visualized due to cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (No obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture appears to be low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right picc line: present, course: right subclavian vein, tip position: indeterminate, confidence 80
+   - left chest tube: present, course: left pleural space, tip position: indeterminate, confidence 80
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: significant opacification, likely representing pleural effusion and/or consolidation. The opacity obscures the underlying lung markings.
+     - left lung: clear.
+     - pleural effusion: likely present on the right, obscuring the right hemidiaphragm.
+   - mediastinum/heart
+     - mediastinum: unremarkable.
+     - heart: size and contour are not well visualized due to the right lung opacity.
+   - diaphragms/upper abdomen
+     - diaphragms: visible.
+     - upper abdomen: not well visualized due to the right lung opacity.
+   - bones/soft tissues
+     - ribs: visible.
+     - clavicles: visible and symmetrical.
+     - soft tissues: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right-sided pleural effusion with possible underlying consolidation.
+   - Right picc line in place.
+   - Left chest tube in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Limited visualization of the right lung due to significant opacification.
+   - Limited visualization of the right hemidiaphragm.
+   - Limited visualization of the upper abdomen.
+   - Tip position of the right picc line and left chest tube are indeterminate.
+
+7) DOMAIN VECTOR

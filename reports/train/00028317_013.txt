@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is labeled "AP"
+   - patient position (portable) with confidence 100 + image is labeled "PORTABLE"
+   - portable-likelihood (high) with evidence (image is a portable chest X-ray)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (low) with confidence 80 + posterior rib count is not clearly visible
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (lungs are visible, mediastinum is visible, bones are visible, diaphragms are visible, and costophrenic angles are not fully visible due to cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (no obvious artifacts are present)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, pointing to the left. A burned-in label is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 80 + edge enhancement (low) with confidence 80 + inversion suspected (no) with confidence 100 + noise texture (low) with confidence 80
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - left subclavian line (present) with confidence 90 + course: from the left subclavian vein, tip position: not clearly visible, but likely in the superior vena cava.
+   - indeterminate (absent) with confidence 100 + no other lines or tubes are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - left lung: opacity is present, obscuring the lung markings. The extent of the opacity is not fully defined.
+     - right lung: relatively clear, with some increased markings in the lower lung field.
+     - pleural effusion: likely present on the left side, given the obscuration of the left lung. The amount of fluid is not quantifiable.
+   - mediastinum/heart
+     - mediastinum: midline.
+     - heart: size is not well assessed due to the opacity in the left hemithorax.
+   - diaphragms/upper abdomen
+     - diaphragms: visible.
+     - upper abdomen: not well visualized due to the opacity in the left hemithorax.
+   - bones/soft tissues
+     - ribs: visible.
+     - clavicles: visible and symmetrical.
+     - soft tissues: subcutaneous emphysema is present in the left chest wall.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Left-sided opacity, likely representing a pleural effusion and/or consolidation.
+   - Left subclavian line in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Limited visualization of the left lung due to the opacity.
+   - Limited visualization of the upper abdomen.
+   - The tip position of the left subclavian line is not clearly visible.
+   - The amount of fluid in the left pleural space is not quantifiable.
+
+7) DOMAIN VECTOR

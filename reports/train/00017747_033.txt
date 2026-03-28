@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is labeled AP
+   - patient position (portable) with confidence 100 + image is labeled portable
+   - portable-likelihood (high) + image is a portable chest radiograph
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the costophrenic angles not fully visible)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are clear, mediastinum is well-defined, bones are visible, diaphragms are visible, and costophrenic angles are not fully visible
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the left side is on the left) with confidence 100
+   - presentation/processing cues: contrast (low) with confidence 100, edge enhancement (low) with confidence 100, inversion suspected (no) with confidence 100, noise texture (low) with confidence 100
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian central line: present, course: right subclavian vein, tip position: indeterminate, confidence 90
+   - left subclavian central line: present, course: left subclavian vein, tip position: indeterminate, confidence 90
+   - indeterminate: the tip position of both central lines is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear bilaterally, no focal consolidation, pleural effusion, or pneumothorax identified.
+     - pleura: unremarkable.
+   - mediastinum/heart
+     - mediastinum: normal width.
+     - heart: size is difficult to assess due to the AP projection and the presence of the central lines.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - bones: visualized ribs are unremarkable.
+     - soft tissues: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Two central venous catheters are present. The tip positions are not clearly visible.
+   - The image is a portable AP chest radiograph.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable AP chest radiograph, which limits the assessment of the heart size and the full extent of the lungs.
+   - The tip positions of the central venous catheters are not clearly visible.
+   - The costophrenic angles are not fully visualized.
+
+7) DOMAIN VECTOR

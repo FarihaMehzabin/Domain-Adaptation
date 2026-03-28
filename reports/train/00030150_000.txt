@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (medium) with evidence (portable marker).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the apices and costophrenic angles not fully visualized. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + lungs are clear. Mediastinum is unremarkable. Bones are unremarkable. Diaphragms are visible. Costophrenic angles are not fully visualized due to cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, top-left. Burned-in label top-left).
+   - presentation/processing cues: contrast (low) with confidence 90 + image is low contrast. Edge enhancement (low) with confidence 90 + edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 90 + low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - NG tube (present) with confidence 95 + NG tube is present, but the tip position is not visible.
+   - IV line (present) with confidence 90 + IV line is present, but the tip position is not visible.
+   - ETT (present) with confidence 95 + ETT is present, but the tip position is not visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs are clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum is unremarkable. The heart size is within normal limits.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the bones are unremarkable. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - NG tube, IV line, and ETT are present.
+   - No acute cardiopulmonary abnormalities are identified.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices and costophrenic angles are not fully visualized due to cropping.
+   - The tip positions of the NG tube, IV line, and ETT are not visible.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: supine with confidence 90% + evidence: the patient is lying flat on their back.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest radiograph, likely obtained in a non-hospital setting.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical, suggesting no significant rotation.
+   - inspiration: adequate with confidence 85% + evidence: the lungs are well-expanded and the heart size appears normal.
+   - penetration: adequate with confidence 90% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices of the lungs, costophrenic angles, and lateral chest walls. The image is cropped, leaving a small amount of padding on the sides.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are relatively clear, with some increased opacity in the lower lung fields. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube: present, tip position: approximately 4 cm above the carina with confidence 90% + evidence: an endotracheal tube is visible, terminating approximately 4 cm above the carina.
+   - nasogastric tube: present, course: passes into the stomach with confidence 95% + evidence: a nasogastric tube is visible, coursing into the stomach.
+   - right picc line: present, tip position: likely in the superior vena cava with confidence 80% + evidence: a right picc line is visible, terminating in the superior vena cava.
+   - left picc line: present, tip position: likely in the superior vena cava with confidence 80% + evidence: a left picc line is visible, terminating in the superior vena cava.
+   - cardiac monitor leads: present, location: on the chest with confidence 95% + evidence: cardiac monitor leads are visible on the chest.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: increased opacity in the lower lung fields bilaterally. There is some haziness in the lung bases.
+   - mediastinum/heart: the mediastinum is within normal limits. The heart size appears normal.
+   - diaphragms/upper abdomen: the diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues: the bones are intact. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Increased opacity in the lower lung fields bilaterally.
+   - Endotracheal tube in place.
+   - Nasogastric tube in place.
+   - Right and left picc lines in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable chest radiograph, which may be limited by patient positioning and technique.
+   - The lower lung fields are somewhat obscured, making it difficult to fully assess for subtle abnormalities.
+   - The tip position of the picc lines is only estimated.
+
+7) DOMAIN VECTOR

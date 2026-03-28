@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior chest X-ray.
+   - patient position: upright with confidence 90% + the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs are well-expanded.
+   - penetration: adequate with confidence 90% + the heart border is well-defined, and the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + the image is sharp and free of motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image covers the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are well-visualized. The mediastinum is clearly defined. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are multiple lines present, likely representing internal structures or external devices. The image does not show any obvious grid/moiré patterns, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left, but the content is not visible.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube: present, course: midline, tip position: not visible, confidence 80%
+   - nasogastric tube: present, course: midline, tip position: not visible, confidence 80%
+   - central venous catheter: present, course: right subclavian, tip position: not visible, confidence 80%
+   - chest tube: present, course: left chest, tip position: not visible, confidence 80%
+   - pacemaker leads: present, course: right atrium, right ventricle, tip position: not visible, confidence 80%
+   - other lines/tubes: indeterminate, course: not visible, tip position: not visible, confidence 50%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - left lung: there is significant opacification in the left lung, with a hazy appearance. There is also a possible pleural effusion.
+     - right lung: the right lung appears relatively clear.
+   - mediastinum/heart:
+     - the mediastinum is midline.
+     - the heart size is normal.
+   - diaphragms/upper abdomen:
+     - the diaphragms are well-visualized.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues:
+     - the ribs are well-visualized.
+     - the clavicles are well-visualized.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Significant left lung opacification, possibly due to pneumonia or other inflammatory process.
+   - Possible left pleural effusion.
+   - Multiple lines/tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip positions of the lines/tubes are not clearly visible.
+   - The exact cause of the left lung opacification is not determined.
+
+7) DOMAIN VECTOR

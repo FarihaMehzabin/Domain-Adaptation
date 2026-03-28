@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (portable marker present).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the patient is likely in a good inspiratory position.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also not fully visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are visible, but the apices and costophrenic angles are not fully visualized due to cropping. The mediastinum and heart are visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visualized.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (No obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right subclavian catheter (present) with confidence 100 + the catheter is seen coursing from the right subclavian vein into the superior vena cava. The tip position is not clearly visualized.
+   - Right picc line (present) with confidence 100 + the catheter is seen coursing from the right subclavian vein into the superior vena cava. The tip position is not clearly visualized.
+   - Indeterminate (indeterminate) with confidence 100 + The tip position of the right subclavian catheter is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There are bilateral hazy opacities in the lung fields, more prominent in the lower lung zones. The pattern is suggestive of pulmonary edema or possibly atelectasis.
+     - No pleural effusion is identified.
+     - No pneumothorax is identified.
+   - mediastinum/heart
+     - The heart size appears mildly enlarged.
+     - The mediastinal contours are unremarkable.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible.
+     - The upper abdomen is not well visualized due to cropping.
+   - bones/soft tissues
+     - The bony structures are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Mild cardiomegaly.
+   - Bilateral hazy opacities in the lung fields, potentially representing pulmonary edema or atelectasis.
+   - Right subclavian catheter and right picc line are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices and costophrenic angles are not fully visualized due to cropping.
+   - The tip position of the right subclavian catheter is not clearly visualized.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

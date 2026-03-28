@@ -1,0 +1,53 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + patient is standing.
+   - portable-likelihood (medium) with evidence (patient is in a non-hospital setting).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat obscured by the patient's position and the image cropping. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are several lines present, likely from medical devices. The presence of these lines is not unusual in this setting.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to be processed with low contrast and low edge enhancement. There is no obvious inversion. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Tracheostomy Tube (present) with confidence 100 + The tracheostomy tube is visible in the midline.
+   - Central Venous Catheter (present) with confidence 100 + A central venous catheter is visible, likely terminating in the superior vena cava. The tip position is not clearly visible.
+   - Peripheral IV (present) with confidence 100 + A peripheral IV is visible, likely terminating in the upper arm. The tip position is not clearly visible.
+   - Indeterminate (present) with confidence 100 + The presence of lines is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There is increased opacity in the right lung, with a hazy appearance.
+     - There is increased opacity in the left lung, with a hazy appearance.
+     - There is no obvious pleural effusion.
+   - mediastinum/heart
+     - The mediastinum is midline.
+     - The heart size is difficult to assess due to the patient's position and the image cropping.
+     - The pulmonary vasculature appears somewhat prominent.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible.
+     - The upper abdomen is not well visualized due to the patient's position and the image cropping.
+   - bones/soft tissues
+     - The ribs are visible.
+     - The clavicles are visible.
+     - The scapulae are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral pulmonary opacities, likely representing edema or consolidation.
+   - Tracheostomy tube in place.
+   - Central venous catheter in place.
+   - Peripheral IV in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited visualization of the apices and costophrenic angles due to image cropping.
+   - Limited visualization of the heart size.
+   - The tip position of the central venous catheter and peripheral IV is not clearly visible.
+   - The presence of lines is not clearly visible.
+
+7) DOMAIN VECTOR

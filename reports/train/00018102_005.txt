@@ -1,0 +1,57 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is PA view.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the costophrenic angles and apices not fully visualized. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + lungs are generally clear, mediastinum is visible, bones are visible, and diaphragms are visible. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the image is of the right side. There is a burned-in label top-left, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to be a standard chest radiograph.
+   - edge enhancement (low) with confidence 90 + edge enhancement is present, but not excessive.
+   - inversion suspected (no) with confidence 100 + no obvious signs of inversion.
+   - noise texture (low) with confidence 90 + the image has a low level of noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT): absent with confidence 100 + no ETT is visible.
+   - nasogastric tube (NGT): absent with confidence 100 + no NGT is visible.
+   - central venous catheter (CVC): absent with confidence 100 + no CVC is visible.
+   - pacemaker/defibrillator: absent with confidence 100 + no pacemaker/defibrillator is visible.
+   - chest tube: absent with confidence 100 + no chest tube is visible.
+   - lines/tubes: indeterminate with confidence 100 + no lines or tubes are visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral lung fields are diffusely hazy and ill-defined.
+     - there are multiple, small, rounded opacities scattered throughout both lung fields. The distribution is not uniform.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in size and contour.
+     - the heart size is normal.
+     - no obvious cardiomegaly is present.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is not well visualized due to the patient's body habitus and the image quality.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+     - the scapulae are visible.
+     - the soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Diffuse bilateral pulmonary opacities, likely representing metastatic disease.
+   - Further evaluation with CT chest is recommended to characterize the pulmonary nodules and assess for mediastinal lymphadenopathy.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The costophrenic angles are not fully visualized.
+   - The upper abdomen is not well visualized.
+   - The presence of multiple pulmonary nodules is concerning for malignancy, but further imaging is needed to confirm the diagnosis and determine the extent of disease.
+
+7) DOMAIN VECTOR

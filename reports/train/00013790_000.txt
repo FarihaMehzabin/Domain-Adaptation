@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: Image is an anteroposterior (AP) chest X-ray.
+   - patient position: upright with confidence 90% + evidence: The patient is likely in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: Clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: The lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: Vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + evidence: No obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also partially obscured.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visualized due to cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the right. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - left subclavian line: present, course: from the left subclavian vein, tip position: terminates in the superior vena cava, confidence 95%
+   - chest tube: present, course: from the left lung apex, tip position: indeterminate, confidence 60%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: clear with confidence 95%. No focal consolidation, pleural effusion, or pneumothorax is identified.
+     - left lung: clear with confidence 95%. No focal consolidation, pleural effusion, or pneumothorax is identified.
+   - mediastinum/heart
+     - heart size: normal with confidence 90%.
+     - mediastinal contours: normal with confidence 95%.
+   - diaphragms/upper abdomen
+     - diaphragms: visible with confidence 95%.
+     - upper abdomen: unremarkable with confidence 90%.
+   - bones/soft tissues
+     - ribs: visible with confidence 95%.
+     - clavicles: visible with confidence 95%.
+     - scapulae: visible with confidence 95%.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Left subclavian line in place.
+   - Chest tube in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are not fully visualized due to cropping.
+   - The tip position of the chest tube is indeterminate.
+
+7) DOMAIN VECTOR

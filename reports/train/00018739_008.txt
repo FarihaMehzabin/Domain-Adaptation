@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "PORTABLE" label.
+   - portable-likelihood (high) with evidence (label).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are visible, mediastinum is visible, bones are visible, and diaphragms and costophrenic angles are visible, but the image is cropped.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. with confidence 100 + lines are present, likely from medical devices.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present. "PORTABLE" label is present.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (Central Line): present, course: right internal jugular vein, tip position: indeterminate, confidence 80.
+   - Right-sided Chest Tube: present, course: right hemithorax, tip position: indeterminate, confidence 80.
+   - Multiple lines/tubes: present, course: various, tip position: indeterminate, confidence 70.
+   - Indeterminate: present, course: indeterminate, tip position: indeterminate, confidence 100.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: hazy opacity in the right lung base, likely representing atelectasis or consolidation.
+     - Left lung: clear.
+     - Pleura: no pleural effusion or pneumothorax is identified.
+   - mediastinum/heart
+     - Mediastinum: normal size and position.
+     - Heart: normal size and position.
+   - diaphragms/upper abdomen
+     - Diaphragms: normal position.
+     - Upper abdomen: unremarkable.
+   - bones/soft tissues
+     - Bones: normal.
+     - Soft tissues: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right lung base opacity, potentially representing atelectasis or consolidation.
+   - Right-sided chest tube present.
+   - Central line present.
+   - Multiple lines/tubes present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Image is cropped, obscuring the apices and costophrenic angles.
+   - Tip position of central line and chest tube is indeterminate.
+   - Course of multiple lines/tubes is indeterminate.
+
+7) DOMAIN VECTOR

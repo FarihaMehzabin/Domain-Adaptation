@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "PORTABLE" label.
+   - portable-likelihood (high) with evidence (label).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (low) with confidence 80 + posterior rib count is difficult to estimate.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the upper portion of the image showing the apices and costophrenic angles. The lower portion of the image shows the costal margins.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are visible, mediastinum is visible, bones are visible, and diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, pointing to the left. "PORTABLE" label is present.)
+   - presentation/processing cues: contrast (low) with confidence 80 + image appears to be low contrast. edge enhancement (low) with confidence 80 + edge enhancement is low. inversion suspected (no) with confidence 100 + no evidence of inversion. noise texture (low) with confidence 80 + noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - chest tube (left) with confidence 95 + a chest tube is present on the left side of the image. The tip position is not clearly visible.
+   - catheter (right) with confidence 90 + an indeterminate catheter is present on the right side of the image. The tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - left lung: there is a large amount of subcutaneous emphysema in the left chest wall. The lung markings are difficult to visualize due to the emphysema.
+     - right lung: the right lung appears clear.
+     - pleural effusion: no pleural effusion is identified.
+   - mediastinum/heart
+     - mediastinum: the mediastinum appears normal in width.
+     - heart: the heart size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: the diaphragms are visible.
+     - upper abdomen: the upper abdomen is incompletely visualized due to the patient's position.
+   - bones/soft tissues
+     - ribs: the ribs are visible.
+     - clavicles: the clavicles are visible.
+     - soft tissues: subcutaneous emphysema is present in the left chest wall.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - left-sided chest tube placement.
+   - subcutaneous emphysema in the left chest wall.
+   - indeterminate catheter on the right side.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Limited visualization of the upper abdomen.
+   - The tip position of the chest tube and catheter are not clearly visible.
+   - The extent of the subcutaneous emphysema is difficult to assess due to the image quality.
+
+7) DOMAIN VECTOR

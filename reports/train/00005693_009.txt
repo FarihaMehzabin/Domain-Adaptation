@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior chest X-ray.
+   - patient position: semi-erect with confidence 90% + the patient is likely sitting or leaning forward.
+   - portable-likelihood: low with evidence (image quality, lack of formal positioning markers)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs are well-expanded.
+   - penetration: adequate with confidence 90% + the heart border is well-visualized.
+   - motion blur: none with confidence 95% + the image is sharp.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are relatively clear, but there is some increased opacity in the lower lung fields. The mediastinum is well-visualized. The bones are intact. The diaphragms are visible. The costophrenic angles are obscured.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to be processed with low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - tracheostomy tube: present, tip position: midline, approximately 4 cm above the carina with confidence 95% + a tracheostomy tube is present, its tip is midline, and approximately 4 cm above the carina.
+   - central venous catheter: present, course: internal jugular vein, tip position: superior vena cava with confidence 90% + a central venous catheter is present, its course is internal jugular, and its tip is in the superior vena cava.
+   - nasogastric tube: present, course: stomach with confidence 90% + a nasogastric tube is present, its course is stomach.
+   - left subclavian line: present, course: superior vena cava with confidence 90% + a left subclavian line is present, its course is superior vena cava.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: There is increased opacity in the lower lung fields, possibly representing atelectasis or consolidation. The upper lung fields are relatively clear. No pleural effusion is identified.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is difficult to assess due to the patient's position and the presence of the tracheostomy tube.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is unremarkable.
+   - bones/soft tissues: The bones are intact. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Increased opacity in the lower lung fields, possibly representing atelectasis or consolidation.
+   - Tracheostomy tube in place.
+   - Central venous catheter in place.
+   - Nasogastric tube in place.
+   - Left subclavian line in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is cropped, obscuring the apices and costophrenic angles.
+   - The patient's position is semi-erect, which may affect the accuracy of the heart size assessment.
+   - The presence of the tracheostomy tube may obscure the superior mediastinum.
+   - The tip position of the central venous catheter is indeterminate.
+
+7) DOMAIN VECTOR

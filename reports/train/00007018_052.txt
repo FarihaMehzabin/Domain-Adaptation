@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + image is a portable chest X-ray.
+   - portable-likelihood (high) with evidence (portable marker present).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the costophrenic angles not fully visible. The apices are not fully visible due to the crop.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are somewhat clear, mediastinum is visible, bones are visible, diaphragms are visible, and costophrenic angles are not fully visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, burned-in text top-left) with evidence (laterality marker present, burned-in text top-left).
+   - presentation/processing cues: contrast (low) with confidence 90 + image appears to be low contrast. edge enhancement (low) with confidence 90 + image appears to have low edge enhancement. inversion suspected (no) with confidence 100. noise texture (low) with confidence 90 + image appears to have low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right internal jugular central venous catheter (indeterminate) with confidence 60 + a catheter is seen coursing from the right internal jugular vein into the superior vena cava. The tip position is not clearly visible.
+   - nasogastric tube (indeterminate) with confidence 60 + a tube is seen coursing from the nose into the stomach. The tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral lung fields are present.
+     - there is increased interstitial markings bilaterally, which could be due to a variety of etiologies including pulmonary edema, interstitial lung disease, or other inflammatory processes.
+     - no focal consolidation is identified.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in size and contour.
+     - the heart size is normal.
+     - the cardiac silhouette is unremarkable.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is not well visualized due to the crop.
+   - bones/soft tissues
+     - the bony structures are unremarkable.
+     - no acute soft tissue abnormalities are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - increased interstitial markings bilaterally.
+   - right internal jugular central venous catheter present.
+   - nasogastric tube present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - the costophrenic angles are not fully visualized due to the crop.
+   - the tip position of the right internal jugular central venous catheter is not clearly visible.
+   - the tip position of the nasogastric tube is not clearly visible.
+
+7) DOMAIN VECTOR

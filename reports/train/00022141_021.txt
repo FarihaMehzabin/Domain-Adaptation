@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "Portable" label present.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (low) with confidence 80 + posterior rib count is difficult to estimate.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also not fully visualized.
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) The lungs are visible, but the costophrenic angles are not fully visualized. The mediastinum and heart are visible. The bones are visible. The diaphragms are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low) with confidence 80 + image appears to be processed with low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 80.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian catheter (present) with confidence 90 + catheter is visible, coursing from the right subclavian vein into the superior vena cava. The tip position is not clearly visible.
+   - left-sided chest tube (present) with confidence 95 + chest tube is visible, coursing from the left pleural space into the axilla. The tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: There is a large opacity in the right hemithorax, obscuring the lung markings. The right lung appears to be collapsed.
+     - Left lung: The left lung appears relatively clear, with some increased markings in the upper lung field. There is a chest tube in place.
+     - Pleura: There is no obvious pleural effusion or pneumothorax.
+   - mediastinum/heart
+     - Mediastinum: The mediastinum appears within normal limits in size and contour.
+     - Heart: The heart size appears normal.
+   - diaphragms/upper abdomen
+     - Diaphragms: The diaphragms are visible.
+     - Upper abdomen: The upper abdomen is not well visualized due to the patient's position and the image cropping.
+   - bones/soft tissues
+     - Bones: The ribs and clavicles are visible.
+     - Soft tissues: The soft tissues are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Large opacity in the right hemithorax, likely representing a large pleural effusion or consolidation.
+   - Left-sided chest tube in place.
+   - Right subclavian catheter in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices and costophrenic angles are not fully visualized.
+   - The upper abdomen is not well visualized.
+   - The tip position of the chest tube and subclavian catheter is not clearly visible.
+
+7) DOMAIN VECTOR

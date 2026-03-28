@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (medium) with evidence (patient is in a non-hospital setting)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the patient's chin obscuring the superior mediastinum. The costophrenic angles are not well visualized due to the patient's chin obscuring the lower lung fields. The lateral chest walls are adequately visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + the lungs are relatively clear, but there is increased opacity in the lung fields. The mediastinum is not well visualized due to the patient's chin obscuring the superior mediastinum. The bones are well visualized. The diaphragms are well visualized. The costophrenic angles are not well visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are no obvious artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present on the left side of the image. A burned-in label is present in the top-left corner.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian central line (present, course: right subclavian vein, tip position: indeterminate) with confidence 95 + a right subclavian central line is present, but the tip position is not clearly visualized.
+   - endotracheal tube (present, course: trachea, tip position: indeterminate) with confidence 95 + an endotracheal tube is present, but the tip position is not clearly visualized.
+   - nasogastric tube (present, course: stomach, tip position: indeterminate) with confidence 95 + a nasogastric tube is present, but the tip position is not clearly visualized.
+   - other lines/tubes (indeterminate) with confidence 100 + there are other lines/tubes present, but their exact location and tip position are not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - increased bilateral lung opacities, predominantly in the lung bases.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum is not well visualized due to the patient's chin obscuring the superior mediastinum.
+     - the heart size is difficult to assess due to the increased lung opacities.
+   - diaphragms/upper abdomen
+     - the diaphragms are well visualized.
+     - the upper abdomen is not well visualized due to the patient's chin obscuring the lower lung fields.
+   - bones/soft tissues
+     - the bones are well visualized.
+     - the soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - bilateral lung opacities, predominantly in the lung bases, are present.
+   - the endotracheal tube and nasogastric tube are present.
+   - the right subclavian central line is present, but the tip position is not clearly visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - the superior mediastinum is obscured by the patient's chin, limiting the assessment of the heart and great vessels.
+   - the costophrenic angles are not well visualized due to the patient's chin obscuring the lower lung fields.
+   - the tip position of the right subclavian central line is not clearly visualized.
+   - the tip position of the endotracheal tube and nasogastric tube is not clearly visualized.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,54 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: The image is a PA (Posteroanterior) chest X-ray.
+   - patient position: Upright with confidence 90% + evidence: The patient is in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a standard chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: The image appears to be free of significant rotation. Clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: The lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: There is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be adequately collimated, covering the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the right. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: absent
+   - nasogastric tube: absent
+   - central line: absent
+   - pacemaker: absent
+   - chest tube: absent
+   - IV line: absent
+   - other: indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: There is a large opacity in the right hemithorax, obscuring the right hemidiaphragm and likely representing a pleural effusion. The right lung markings are not well visualized due to the opacity.
+     - left lung: The left lung appears clear.
+     - pleura: No evidence of pneumothorax is seen.
+   - mediastinum/heart
+     - mediastinum: The mediastinum is midline.
+     - heart: The heart size is within normal limits.
+   - diaphragms/upper abdomen
+     - diaphragms: The diaphragms are well-defined.
+     - upper abdomen: The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - ribs: The ribs are intact.
+     - clavicles: The clavicles are symmetrical.
+     - spine: The spine is visualized.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large right pleural effusion.
+   - No acute pulmonary process identified.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The extent of the right pleural effusion is difficult to precisely assess on a single PA chest X-ray.
+   - The presence of a large pleural effusion can obscure underlying lung pathology.
+   - The burned-in label in the top-left corner is not helpful for interpretation.
+
+7) DOMAIN VECTOR

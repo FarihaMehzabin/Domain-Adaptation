@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: The image is a PA chest X-ray.
+   - patient position: Upright with confidence 90% + evidence: The patient is in an upright position.
+   - portable-likelihood: Low with evidence: The image appears to be a standard chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: None with confidence 95% + evidence: The image appears to be free of significant rotation.
+   - inspiration: Adequate with confidence 90% + evidence: The lungs are well-expanded.
+   - penetration: Adequate with confidence 95% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: None with confidence 95% + evidence: There is no obvious motion blur.
+   - collimation/anatomic coverage: Apices? Costophrenic angles? Lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the top and bottom.
+   - anatomical clarity: Lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: Lines, grid/moiré, banding, detector dropout, compression artifacts: There are no obvious artifacts.
+   - markers/overlays: Laterality marker present? Burned-in text present? A laterality marker is present on the left side of the image. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: Contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right picc line: Present, course: Right subclavian, tip position: Indeterminate, confidence 80%
+   - Left picc line: Present, course: Left subclavian, tip position: Indeterminate, confidence 80%
+   - Tracheostomy tube: Present, course: Tracheostomy, tip position: Indeterminate, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: There is increased opacity in the right lung, particularly in the upper and mid zones. There is also some increased density in the right lower lobe.
+     - Left lung: The left lung appears relatively clear.
+     - Pleura: There is no evidence of pleural effusion or pneumothorax.
+   - mediastinum/heart
+     - Mediastinum: The mediastinum is within normal limits in size and contour.
+     - Heart: The heart size is normal.
+   - diaphragms/upper abdomen
+     - Diaphragms: The diaphragms are well-defined.
+     - Upper abdomen: The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - Bones: The ribs and clavicles are visible.
+     - Soft tissues: The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right lung consolidation/infiltrate: The increased opacity in the right lung is concerning for pneumonia or other consolidation.
+   - Left lung clear.
+   - Tracheostomy tube in place.
+   - Right and left picc lines in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Tip position of picc lines is indeterminate.
+   - The extent of the right lung consolidation is difficult to assess on a single PA chest X-ray.
+   - The presence of any underlying pulmonary vascular congestion is not clear.
+
+7) DOMAIN VECTOR

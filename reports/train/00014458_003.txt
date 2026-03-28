@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "PORTABLE" label.
+   - portable-likelihood (high) with evidence (label).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (low) with confidence 80 + posterior rib count is not clearly visible.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are not well visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (limited due to cropping)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the right. "PORTABLE" label is present in the upper left corner.)
+   - presentation/processing cues: contrast (low) with confidence 80 + edge enhancement (low) with confidence 80 + inversion suspected (no) with confidence 100 + noise texture (low) with confidence 80.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (present) with confidence 90 + course is visible, tip position is not clearly visible.
+   - right-sided chest tube (present) with confidence 90 + course is visible, tip position is not clearly visible.
+   - right-sided central line (present) with confidence 90 + course is visible, tip position is not clearly visible.
+   - indeterminate (absent) with confidence 100 + no other lines or tubes are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral lung fields are present, but the image is cropped, obscuring the lung apices and costophrenic angles.
+     - there is increased opacity in the lower lung fields bilaterally, which could be due to atelectasis, edema, or consolidation.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum is midline.
+     - the heart size is normal.
+     - the pulmonary vasculature is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-defined.
+     - the upper abdomen is not well visualized due to cropping.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+     - the soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - The image is limited due to cropping.
+   - Increased opacity in the lower lung fields bilaterally is present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is cropped, obscuring the lung apices and costophrenic angles.
+   - The posterior rib count is not clearly visible.
+   - The tip position of the central lines is not clearly visible.
+
+7) DOMAIN VECTOR

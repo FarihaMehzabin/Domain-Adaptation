@@ -1,0 +1,43 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior chest X-ray.
+   - patient position: upright with confidence 90% + the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the heart borders are visible behind the lung markings.
+   - motion blur: none with confidence 95% + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also partially obscured.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are somewhat hazy, with increased interstitial markings. The mediastinum is visible. The heart size appears normal. The diaphragms are visible. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the right. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian catheter: present, course: right subclavian vein to right atrium, tip position: indeterminate, confidence 80%
+   - left subclavian catheter: present, course: left subclavian vein to superior vena cava, tip position: indeterminate, confidence 80%
+   - enteric tube: present, course: likely traverses the esophagus and stomach, tip position: indeterminate, confidence 70%
+   - pacemaker/defibrillator leads: present, course: right atrium, right ventricle, tip position: indeterminate, confidence 70%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: There are bilateral interstitial opacities, which could represent pulmonary edema, infection, or other inflammatory processes. The lung fields are otherwise clear. No pleural effusion is identified.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size appears normal.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is not well visualized due to the cropping of the image.
+   - bones/soft tissues: The bony structures are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral interstitial opacities.
+   - Presence of multiple central venous catheters.
+   - Presence of an enteric tube.
+   - Presence of pacemaker/defibrillator leads.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are not fully visualized.
+   - The tip positions of the central venous catheters, enteric tube, and pacemaker/defibrillator leads are indeterminate.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

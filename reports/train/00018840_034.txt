@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (patient is in a bed, not a formal radiology room).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be relatively free of rotation.
+   - inspiration (adequate) with confidence 90 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 95 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + the image is not blurry.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the patient's position. The costophrenic angles are not well visualized due to the patient's position. The lateral chest walls are not well visualized due to the patient's position.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (lungs: diffuse bilateral opacities. Mediastinum: appears normal. Bones: appear normal. Diaphragms: appear normal. Costophrenic angles: not well visualized.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. Burned-in text is present in the upper left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to be processed with low contrast and low edge enhancement.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, tip position not visualized, confidence 80 + an endotracheal tube is present, but the tip position is not clearly visible.
+   - nasogastric tube (NGT) present, course not visualized, tip position not visualized, confidence 70 + a nasogastric tube is present, but the course and tip position are not clearly visible.
+   - central venous catheter (CVC) present, tip position not visualized, confidence 85 + a central venous catheter is present, but the tip position is not clearly visible.
+   - pacemaker/defibrillator (PM/DF) present, location not visualized, confidence 60 + a pacemaker/defibrillator is present, but the location is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - diffuse bilateral opacities are present throughout both lung fields. The pattern is consistent with pulmonary edema or diffuse alveolar process.
+   - mediastinum/heart
+     - the mediastinum is unremarkable. The heart size is difficult to assess due to the diffuse opacities.
+   - diaphragms/upper abdomen
+     - the diaphragms are unremarkable. The upper abdomen is not well visualized due to the patient's position.
+   - bones/soft tissues
+     - the bones are unremarkable. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - diffuse bilateral pulmonary opacities, concerning for pulmonary edema or diffuse alveolar process.
+   - endotracheal tube present, but tip position not visualized.
+   - nasogastric tube present, but course and tip position not visualized.
+   - central venous catheter present, but tip position not visualized.
+   - pacemaker/defibrillator present, but location not visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices of the lungs are not well visualized.
+   - The costophrenic angles are not well visualized.
+   - The lateral chest walls are not well visualized.
+   - The tip position of the endotracheal tube, nasogastric tube, and central venous catheter are not clearly visualized.
+   - The location of the pacemaker/defibrillator is not clearly visualized.
+
+7) DOMAIN VECTOR

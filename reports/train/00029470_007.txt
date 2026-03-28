@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is taken in an anteroposterior (AP) view.
+   - patient position: portable with confidence 90% + evidence: the image is a portable chest X-ray.
+   - portable-likelihood: high with evidence: the image is a portable chest X-ray, likely taken in a clinical setting.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + evidence: the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + evidence: the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving the upper portion of the image unvisualized.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are relatively clear, with some increased opacity in the lower lung fields. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture appears to be low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - enteric tube: present, course: likely extends from the mouth to the stomach, tip position: not visualized. Confidence: 80%
+   - central line: present, course: likely extends from the internal jugular vein to the superior vena cava, tip position: not visualized. Confidence: 85%
+   - right-sided picc line: present, course: likely extends from the subclavian vein to the superior vena cava, tip position: not visualized. Confidence: 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: there is increased opacity in the lower lung fields, which could be due to atelectasis or consolidation. The lung fields are otherwise clear. The costophrenic angles are sharp.
+   - mediastinum/heart: the mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is unremarkable.
+   - bones/soft tissues: the bones are intact. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Increased opacity in the lower lung fields, potentially representing atelectasis or consolidation.
+   - The presence of an enteric tube, central line, and right-sided picc line.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is a portable chest X-ray, which may be limited in its ability to visualize the entire chest.
+   - The tip position of the enteric tube, central line, and right-sided picc line is not visualized.
+   - The upper portion of the image is not visualized.
+
+7) DOMAIN VECTOR

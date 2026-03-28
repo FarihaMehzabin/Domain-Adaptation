@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is AP.
+   - patient position: portable with confidence 90% + the patient is in a portable position.
+   - portable-likelihood: high with evidence (patient is in a portable setting).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + the patient is in a good inspiratory position.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + no obvious motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also not fully visualized.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are visible, but the costophrenic angles are not fully visualized. The mediastinum is visible. The bones are visible. The diaphragms are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are multiple lines present in the image, likely representing external devices. The presence of these lines obscures the visualization of the costophrenic angles.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the image is likely the right side. There is a burned-in label top-left, but the content is not visible.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no obvious inversion. The noise texture appears to be low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: unknown, tip position: unknown, confidence 80%
+   - nasogastric tube: present, course: unknown, tip position: unknown, confidence 80%
+   - central line (likely subclavian): present, course: right subclavian, tip position: likely in the superior vena cava, confidence 90%
+   - chest tube: present, course: right hemithorax, tip position: not clearly visualized, confidence 60%
+   - other lines/tubes: indeterminate, course: unknown, tip position: unknown, confidence 50%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: There is a large opacity in the right lower lung field, obscuring the costophrenic angle. There is also a smaller opacity in the left lower lung field. There is some blunting of the costophrenic angles bilaterally, which could be due to small pleural effusions or atelectasis.
+   - mediastinum/heart: The mediastinum appears midline. The heart size is difficult to assess due to the lung opacities.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is not well visualized due to the patient's position and the presence of lines.
+   - bones/soft tissues: The ribs are visible. The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large opacity in the right lower lung field, concerning for pneumonia, atelectasis, or other process.
+   - Smaller opacity in the left lower lung field.
+   - Possible small pleural effusions or atelectasis at the costophrenic angles.
+   - The endotracheal tube and nasogastric tube are present.
+   - The central line is present.
+   - The chest tube is present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The costophrenic angles are not fully visualized.
+   - The tip position of the chest tube is not clearly visualized.
+   - The tip position of the endotracheal tube and nasogastric tube are not clearly visualized.
+   - The presence of multiple lines obscures the visualization of the costophrenic angles and other structures.
+
+7) DOMAIN VECTOR

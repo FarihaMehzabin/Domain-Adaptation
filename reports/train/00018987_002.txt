@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is labeled "AP"
+   - patient position (semi-erect) with confidence 90 + patient is sitting up
+   - portable-likelihood (medium) with evidence (portable equipment present)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 95 + posterior rib count is estimated to be 9-10
+   - penetration (adequate) with confidence 95 + vertebral visibility behind the heart is good
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the apices and costophrenic angles not fully visible. The costal margins are not well defined)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (lungs are generally clear, but there is some increased opacity in the right lung field. The mediastinum is well-defined. The bones are unremarkable. The diaphragms are visible. The costophrenic angles are not fully visible due to cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. Burned-in label top-left)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right internal jugular central venous catheter (indeterminate)
+   - left subclavian central venous catheter (present)
+   - left picc line (present)
+   - nasogastric tube (present)
+   - endotracheal tube (absent)
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: increased opacity in the right lung field, possibly representing atelectasis or consolidation.
+     - left lung: clear. No pleural effusion or pneumothorax is identified.
+   - mediastinum/heart
+     - heart size: cardiomegaly is present.
+     - mediastinal contours: unremarkable.
+   - diaphragms/upper abdomen
+     - diaphragms: visible.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - bones: unremarkable.
+     - soft tissues: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Cardiomegaly.
+   - Increased opacity in the right lung field, possibly representing atelectasis or consolidation.
+   - Presence of multiple central venous catheters and a nasogastric tube.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Cropping of the image limits visualization of the apices and costophrenic angles.
+   - The presence of multiple lines and tubes makes it difficult to definitively identify the tip positions.
+   - The increased opacity in the right lung field could be due to various causes, and further evaluation may be needed to determine the underlying etiology.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (medium) with evidence (portable equipment visible).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized due to the patient's position and the extent of the image.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. with confidence 90 + there are several lines visible, likely representing external monitoring leads. The presence of these lines obscures the visualization of the apices and costophrenic angles. There is no obvious grid or moiré pattern. There is no obvious banding. There is no obvious detector dropout. There is no obvious compression artifact.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker present, pointing to the left. Burned-in label top-left.)
+   - presentation/processing cues: contrast (low) with confidence 95 + the image appears to be processed with low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + there is no obvious sign of inversion. Noise texture (low) with confidence 95 + the noise texture appears to be low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (Central Line): Present, course: right internal jugular vein, tip position: indeterminate, confidence 80
+   - Left Internal Jugular Central Venous Catheter (Central Line): Present, course: left internal jugular vein, tip position: indeterminate, confidence 80
+   - Multiple Monitoring Leads: Present, course: various, tip position: indeterminate, confidence 90
+   - Indeterminate: Present, course: indeterminate, tip position: indeterminate, confidence 50
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: There is increased opacity in the right lung, particularly in the lower lung fields. This could represent consolidation, edema, or atelectasis.
+     - Left lung: The left lung appears relatively clear.
+     - Pleura: No pleural effusion is identified.
+   - mediastinum/heart
+     - Heart size: The heart appears enlarged.
+     - Mediastinum: The mediastinum is unremarkable.
+   - diaphragms/upper abdomen
+     - Diaphragms: The diaphragms are visible.
+     - Upper abdomen: The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - Bones: The ribs and clavicles are visible.
+     - Soft tissues: The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right lung opacity, potentially representing pneumonia, pulmonary edema, or atelectasis.
+   - Enlarged heart.
+   - Central venous catheters present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Limited visualization of the apices and costophrenic angles due to patient positioning and the presence of external monitoring leads.
+   - The tip position of the central venous catheters is indeterminate.
+   - The presence of external monitoring leads obscures the visualization of the apices and costophrenic angles.
+
+7) DOMAIN VECTOR

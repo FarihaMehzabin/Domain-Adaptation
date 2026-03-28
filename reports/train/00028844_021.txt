@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: semi-erect with confidence 90% + evidence: the patient is positioned in a semi-erect manner.
+   - portable-likelihood: medium with evidence: the image is likely a portable chest radiograph due to the presence of multiple lines and tubes.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + evidence: the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving the upper and lower portions of the chest wall slightly obscured.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are multiple lines and tubes present, which are likely related to medical devices. The image does not show any obvious grid/moiré patterns, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side of the image. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: not visualized, confidence 80%
+   - nasogastric tube: present, course: midline, tip position: not visualized, confidence 80%
+   - central venous catheter: present, course: right subclavian, tip position: not visualized, confidence 80%
+   - chest tube: present, course: right apex, tip position: not visualized, confidence 80%
+   - chest tube: present, course: left apex, tip position: not visualized, confidence 80%
+   - arterial line: present, course: right internal jugular, tip position: not visualized, confidence 80%
+   - Foley catheter: present, course: not visualized, tip position: not visualized, confidence 80%
+   - oxygen cannula: present, course: not visualized, tip position: not visualized, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: there is a large opacity in the left hemithorax, likely representing a pleural effusion. There is also a smaller opacity in the right hemithorax, which could represent a pleural effusion or consolidation. The lung fields are otherwise clear.
+   - mediastinum/heart: the mediastinum is unremarkable. The heart size is normal.
+   - diaphragms/upper abdomen: the diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues: the bones are intact. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large left pleural effusion.
+   - Possible small right pleural effusion.
+   - Multiple lines and tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip positions of the central venous catheter, chest tubes, and arterial line are not clearly visualized.
+   - The tip position of the nasogastric tube is not clearly visualized.
+   - The tip position of the Foley catheter is not clearly visualized.
+   - The image is a portable chest radiograph, which may be limited in terms of anatomical coverage.
+
+7) DOMAIN VECTOR

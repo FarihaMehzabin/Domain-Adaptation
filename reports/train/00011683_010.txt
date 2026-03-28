@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: AP projection is evident.
+   - patient position: upright with confidence 90% + evidence: Patient is in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: Clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: The lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: Vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + evidence: No obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also not fully visualized.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visualized due to cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? Laterality marker is present, indicating the right side is on the right. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right internal jugular central venous catheter: present, course: right internal jugular vein, tip position: indeterminate, confidence 80%
+   - left internal jugular central venous catheter: present, course: left internal jugular vein, tip position: indeterminate, confidence 80%
+   - endotracheal tube: present, course: trachea, tip position: indeterminate, confidence 80%
+   - nasogastric tube: present, course: stomach, tip position: indeterminate, confidence 80%
+   - chest tubes (2): present, course: right pleural space, tip position: indeterminate, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: There is a large opacity in the right hemithorax, obscuring the right lung. There is also a small opacity in the left lower lung field. There is a small amount of fluid in the right pleural space, as evidenced by the presence of chest tubes.
+   - mediastinum/heart: The mediastinum is midline. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is not well visualized due to cropping.
+   - bones/soft tissues: The ribs are visible. The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large opacity in the right hemithorax, obscuring the right lung.
+   - Small opacity in the left lower lung field.
+   - Small amount of fluid in the right pleural space.
+   - Presence of multiple central venous catheters and chest tubes.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Cropping of the image limits visualization of the apices and lateral chest walls.
+   - Tip positions of the central venous catheters and endotracheal tube are indeterminate.
+   - The small opacity in the left lower lung field is difficult to characterize without further imaging.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,54 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "Portable" label present.
+   - portable-likelihood (high) with evidence (label).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are visible, mediastinum is visible, bones are visible, and diaphragms and costophrenic angles are visible, although the apices and costophrenic angles are obscured.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. with confidence 95 + there are multiple lines present, but they do not appear to be grid or moiré patterns. There is no evidence of banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? with confidence 100 + a laterality marker is present, indicating the left side is on the left. A "Portable" label is present in the upper left corner.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) with confidence 95 + ETT is present, terminating approximately 4 cm above the carina.
+   - nasogastric tube (NGT) with confidence 90 + NGT is present, coursing below the diaphragm, but the tip position is not clearly visible.
+   - central venous catheter (CVC) with confidence 90 + CVC is present, terminating in the superior vena cava.
+   - Swan-Ganz catheter with confidence 90 + Swan-Ganz catheter is present, terminating in the right pulmonary artery.
+   - arterial line with confidence 90 + arterial line is present, terminating in the radial artery.
+   - pacemaker/ICD leads with confidence 90 + pacemaker/ICD leads are present, coursing from the left pectoral pacemaker/ICD device to the right atrium and right ventricle.
+   - chest tubes with confidence 90 + two chest tubes are present, terminating in the pleural space.
+   - Foley catheter with confidence 90 + Foley catheter is present, coursing below the diaphragm, but the tip position is not clearly visible.
+   - other lines/tubes: indeterminate with confidence 100 + there are several other lines/tubes present, but their exact course and tip positions are not clearly visible due to the image quality and the presence of other devices.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral opacities are present, suggestive of pulmonary edema.
+     - there is a possible pleural effusion on the right side.
+     - there is no evidence of pneumothorax.
+   - mediastinum/heart
+     - the mediastinum is widened.
+     - the heart size is normal.
+     - there is no evidence of cardiomegaly.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is not well visualized due to the image quality.
+   - bones/soft tissues
+     - the bones are intact.
+     - there are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - pulmonary edema.
+   - possible right pleural effusion.
+   - widened mediastinum.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable AP chest X-ray, which limits the visualization of the apices and costophrenic angles.
+   - The image quality is adequate, but there are some artifacts that may obscure the visualization of certain structures.
+   - The tip positions of some lines/tubes are not clearly visible.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95 + image is a PA chest radiograph.
+   - patient position: upright with confidence 90 + the patient is standing.
+   - portable-likelihood: low + the image is not a portable chest radiograph.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95 + the clavicles are symmetrical.
+   - inspiration: adequate with confidence 90 + the lung fields are well-expanded.
+   - penetration: adequate with confidence 95 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image has low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Central line: absent
+   - Chest tube: absent
+   - Swan-Ganz catheter: absent
+   - Other: indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: there is a hazy opacity in the right lower lung field.
+     - Left lung: the left lung appears clear.
+     - Pleura: there is no evidence of pleural effusion or pneumothorax.
+   - mediastinum/heart
+     - Mediastinum: the mediastinum is within normal limits.
+     - Heart: the heart size is normal.
+   - diaphragms/upper abdomen
+     - Diaphragms: the diaphragms are well-defined.
+     - Upper abdomen: the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - Bones: the ribs and clavicles are unremarkable.
+     - Soft tissues: there are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right lower lobe opacity. Further evaluation with a lateral decubitus radiograph or CT scan is recommended to rule out pneumonia or other pathology.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a single view, which limits the assessment of the lung fields.
+   - The right lower lobe opacity is difficult to fully characterize on a single view.
+   - The presence of a right lower lobe opacity is indeterminate.
+
+7) DOMAIN VECTOR

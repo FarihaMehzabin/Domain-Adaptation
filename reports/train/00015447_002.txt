@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (portable equipment visible).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the patient is likely in a good inspiratory position.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, but the lung fields are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are well-visualized. The mediastinum is clearly defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate) with evidence (no obvious artifacts are present).
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present. A burned-in label is present in the top-left corner.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right internal jugular central venous catheter (indeterminate) with confidence 100 + a catheter is present in the right internal jugular vein, but the tip position is not clearly visualized.
+   - endotracheal tube (absent) with confidence 100 + no endotracheal tube is visible.
+   - nasogastric tube (absent) with confidence 100 + no nasogastric tube is visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+     - pleura: the pleura appears normal.
+   - mediastinum/heart
+     - mediastinum: the mediastinum is within normal limits in width.
+     - heart: the heart size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: the diaphragms are well-visualized.
+     - upper abdomen: the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - bones: the ribs and clavicles are unremarkable.
+     - soft tissues: the soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute cardiopulmonary abnormalities are identified.
+   - Right internal jugular central venous catheter is present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable chest radiograph, which may be limited by patient positioning and technique.
+   - The tip position of the central line is not clearly visualized.
+   - The image is cropped, which may limit the assessment of the lung bases.
+
+7) DOMAIN VECTOR

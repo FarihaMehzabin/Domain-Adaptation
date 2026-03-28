@@ -1,0 +1,53 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + patient is in an upright position.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image appears to be cropped, with the apices and costophrenic angles not fully visible. The lateral chest walls are also not fully visible due to cropping.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are visible, the mediastinum is visible, the bones are visible, and the diaphragms and costophrenic angles are not fully visible due to cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are several lines present in the image, likely representing medical devices. The presence of these lines is not unusual in this setting. There is no obvious grid/moiré pattern, banding, detector dropout, or compression artifact.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.) Burned-in text is present in the top-left corner.
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 100 + the image has low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (Right IJ CVC): Present, course: right internal jugular vein, tip position: indeterminate, confidence 80.
+   - Left Internal Jugular Central Venous Catheter (Left IJ CVC): Present, course: left internal jugular vein, tip position: indeterminate, confidence 80.
+   - Right Chest Tube: Present, course: right hemithorax, tip position: indeterminate, confidence 80.
+   - Left Chest Tube: Present, course: left hemithorax, tip position: indeterminate, confidence 80.
+   - Nasogastric Tube: Present, course: indeterminate, tip position: indeterminate, confidence 60.
+   - Multiple lines/tubes: Present, course: indeterminate, tip position: indeterminate, confidence 60.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: There is increased opacity in the right lung, particularly in the lower lung fields. This could represent atelectasis, consolidation, or fluid. There is also a possible pleural effusion on the right side.
+     - Left lung: The left lung appears relatively clear.
+   - mediastinum/heart
+     - Mediastinum: The mediastinum appears within normal limits in size and contour.
+     - Heart: The heart size appears normal.
+   - diaphragms/upper abdomen
+     - Diaphragms: The diaphragms are visible.
+     - Upper abdomen: The upper abdomen is not well visualized due to cropping.
+   - bones/soft tissues
+     - Bones: The ribs and clavicles are visible.
+     - Soft tissues: The soft tissues are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right lung opacity, possibly atelectasis, consolidation, or pleural effusion.
+   - Left lung clear.
+   - Multiple lines/tubes present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Cropping limits visualization of the apices and costophrenic angles.
+   - Tip positions of central lines are indeterminate.
+   - Nasogastric tube tip position is indeterminate.
+   - The presence of multiple lines/tubes is indeterminate.
+
+7) DOMAIN VECTOR

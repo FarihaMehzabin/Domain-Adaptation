@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (medium) with evidence (portable marker).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with some loss of the costophrenic angles. The apices are not well visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are generally clear, but there is some increased opacity in the lower lung fields. The mediastinum is unremarkable. The bones are well visualized. The diaphragms are well visualized. The costophrenic angles are not well visualized due to cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (no obvious artifacts).
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, pointing to the left. A burned-in label is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to be processed with low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 90 + the image has low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right internal jugular central venous catheter (right internal jugular) with confidence 95 + catheter is present, coursing from the right internal jugular vein into the superior vena cava. The tip is not clearly visualized.
+   - left subclavian central venous catheter (left subclavian) with confidence 95 + catheter is present, coursing from the left subclavian vein into the superior vena cava. The tip is not clearly visualized.
+   - indeterminate line (indeterminate) with confidence 100 + an indeterminate line is present, likely a peripheral line, but the tip is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral diffuse hazy opacities, more prominent in the lower lung fields.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum is unremarkable.
+     - the heart size is mildly enlarged.
+     - the pulmonary vasculature is prominent.
+   - diaphragms/upper abdomen
+     - the diaphragms are well visualized.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the bones are well visualized.
+     - the soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - bilateral diffuse hazy opacities, more prominent in the lower lung fields.
+   - mildly enlarged heart.
+   - prominent pulmonary vasculature.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The costophrenic angles are not well visualized due to cropping.
+   - The tip of the central venous catheters is not clearly visualized.
+   - The presence of the indeterminate line is not clearly visualized.
+
+7) DOMAIN VECTOR

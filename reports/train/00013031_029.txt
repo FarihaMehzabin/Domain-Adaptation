@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is standing.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be relatively free of rotation.
+   - inspiration (adequate) with confidence 100 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 100 + the heart border is well-defined.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible and the costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to have low contrast. edge enhancement (low) with confidence 100 + the image does not appear to have significant edge enhancement. inversion suspected (no) with confidence 100 + no evidence of inversion. noise texture (low) with confidence 100 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Indeterminate (likely a central line) with confidence 80 + a line is seen entering the right subclavian vein. The tip is not clearly visible.
+   - Indeterminate (likely a central line) with confidence 80 + a line is seen entering the left subclavian vein. The tip is not clearly visible.
+   - Indeterminate (likely a central line) with confidence 80 + a line is seen entering the right internal jugular vein. The tip is not clearly visible.
+   - Indeterminate (likely a central line) with confidence 80 + a line is seen entering the left internal jugular vein. The tip is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There is increased opacity in the right lower lung field.
+     - There is increased opacity in the left lower lung field.
+     - The lung fields are otherwise clear.
+     - No pleural effusion is identified.
+     - No pneumothorax is identified.
+   - mediastinum/heart
+     - The mediastinum is within normal limits.
+     - The heart size is normal.
+     - The cardiac silhouette is unremarkable.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible and are unremarkable.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are unremarkable.
+     - The clavicles are unremarkable.
+     - The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Increased opacity in the right lower lung field and left lower lung field.
+   - Possible central lines.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip of the central lines is not clearly visualized.
+   - The increased opacity in the lung fields could be due to a variety of causes, including pneumonia, pulmonary edema, or atelectasis.
+   - The increased opacity in the lung fields could be due to a variety of causes, including pneumonia, pulmonary edema, or atelectasis.
+
+7) DOMAIN VECTOR

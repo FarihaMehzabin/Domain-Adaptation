@@ -1,0 +1,57 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: upright with confidence 90% + evidence: the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest radiograph, but the quality is adequate.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be rotationally correct.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right internal jugular central venous catheter (IJCV): present, course: right internal jugular vein, tip position: indeterminate, confidence 80%
+   - left subclavian central venous catheter (SCVC): present, course: left subclavian vein, tip position: indeterminate, confidence 80%
+   - left chest tube: present, course: left chest, tip position: indeterminate, confidence 80%
+   - right chest tube: present, course: right chest, tip position: indeterminate, confidence 80%
+   - esophageal probe: present, course: esophagus, tip position: indeterminate, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is some increased opacity in the right lung base, possibly representing atelectasis or consolidation.
+     - left lung: there is a large pleural effusion with associated atelectasis. There is also a possible pneumothorax in the left apex.
+     - pleural lines: there are multiple pleural lines in the left hemithorax, consistent with a pleural effusion.
+   - mediastinum/heart
+     - mediastinum: the mediastinum is midline.
+     - heart: the heart size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: the diaphragms are well-defined.
+     - upper abdomen: the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - ribs: the ribs are intact.
+     - clavicles: the clavicles are intact.
+     - subcutaneous emphysema: there is some subcutaneous emphysema in the left chest wall.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large left pleural effusion with associated atelectasis.
+   - Possible left apical pneumothorax.
+   - Right lung base opacity, possibly atelectasis or consolidation.
+   - Presence of multiple chest tubes.
+   - Right internal jugular central venous catheter.
+   - Left subclavian central venous catheter.
+   - Esophageal probe.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Tip positions of central lines are indeterminate.
+   - The presence and extent of the left apical pneumothorax is uncertain.
+   - The nature of the right lung base opacity is uncertain.
+
+7) DOMAIN VECTOR

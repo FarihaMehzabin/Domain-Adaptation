@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (supine) with confidence 100 + patient is lying flat on their back.
+   - portable-likelihood (high) with evidence (image is on a portable device).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the lung volumes appear low.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat obscured by the low inspiration and cropping. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 80 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion are present. Noise texture (low) with confidence 80 + the noise texture appears to be low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, course: midline, tip position: unknown, confidence 90 + an endotracheal tube is present, but the tip position is not clearly visible.
+   - nasogastric tube (NGT) present, course: midline, tip position: unknown, confidence 90 + a nasogastric tube is present, but the tip position is not clearly visible.
+   - central venous catheter (CVC) present, course: right subclavian, tip position: unknown, confidence 80 + a central venous catheter is present, but the tip position is not clearly visible.
+   - arterial line present, course: radial, tip position: unknown, confidence 80 + an arterial line is present, but the tip position is not clearly visible.
+   - pacemaker/defibrillator present, course: unknown, tip position: unknown, confidence 70 + multiple pacing wires are present, but their exact course and tip positions are not clearly visible.
+   - other lines/tubes: indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral diffuse hazy opacities are present throughout both lung fields, suggestive of pulmonary edema or diffuse alveolar process. The opacities are more prominent in the perihilar regions.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the cardiac silhouette appears enlarged.
+     - the mediastinum is unremarkable.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the bones are unremarkable.
+     - the soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral diffuse hazy opacities throughout both lung fields, suggestive of pulmonary edema or diffuse alveolar process.
+   - Enlarged cardiac silhouette.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Low inspiration limits visualization of the lung bases.
+   - Cropping obscures the apices and costophrenic angles.
+   - Tip positions of the endotracheal tube, nasogastric tube, central venous catheter, arterial line, and pacing wires are not clearly visible.
+   - The presence of multiple pacing wires makes it difficult to determine their exact course and tip positions.
+
+7) DOMAIN VECTOR

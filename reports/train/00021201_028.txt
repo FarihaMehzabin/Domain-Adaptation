@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (high) with evidence (portable marker present).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, but apices and costophrenic angles are visible. Costal margins are not fully visible due to cropping).
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + lungs are visible. Mediastinum is visible. Bones are visible. Diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, top-left. Burned-in text present, top-left).
+   - presentation/processing cues: contrast (low) with confidence 90 + image is low contrast. Edge enhancement (low) with confidence 90 + edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 90 + noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, course: midline, tip position: approximately 4 cm above the carina, confidence 95.
+   - nasogastric tube (NGT) present, course: midline, tip position: not clearly visible, confidence 60.
+   - left-sided chest tube present, course: left hemithorax, tip position: not clearly visible, confidence 60.
+   - right-sided chest tube present, course: right hemithorax, tip position: not clearly visible, confidence 60.
+   - central venous catheter (CVC) present, course: subclavian, tip position: not clearly visible, confidence 60.
+   - picc line present, course: right upper extremity, tip position: not clearly visible, confidence 60.
+   - arterial line present, course: right upper extremity, tip position: not clearly visible, confidence 60.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - left lung: there is a large opacity in the left upper lobe, obscuring the normal lung markings. There is also a small pleural effusion.
+     - right lung: the right lung appears relatively clear.
+   - mediastinum/heart
+     - the mediastinum is midline. The heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible. The upper abdomen is not well visualized due to the patient's position and the presence of multiple lines.
+   - bones/soft tissues
+     - the ribs are visible. The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large opacity in the left upper lobe, concerning for pneumonia or other process.
+   - Small left pleural effusion.
+   - Multiple lines are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is a portable AP radiograph, which limits the visualization of the lower lung fields and the upper abdomen.
+   - The presence of multiple lines makes it difficult to fully assess the chest tube positions.
+   - The image is low contrast, which can make it difficult to visualize subtle findings.
+   - The tip position of the nasogastric tube and chest tubes are not clearly visible.
+
+7) DOMAIN VECTOR

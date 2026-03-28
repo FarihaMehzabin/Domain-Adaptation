@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is AP.
+   - patient position: portable with confidence 90% + the patient is in a portable position.
+   - portable-likelihood: high with evidence (patient is in a portable setting).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + the patient is in adequate inspiration.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + no obvious motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also not fully visualized.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are somewhat obscured by the patient's body habitus and the image quality. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are several lines present in the image, likely from the patient's clothing or medical devices. The presence of these lines may obscure the underlying anatomy.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left, but the content is not visible.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no obvious inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: not visualized, confidence 80%
+   - nasogastric tube: present, course: midline, tip position: not visualized, confidence 80%
+   - central venous catheter: present, course: right subclavian, tip position: not visualized, confidence 70%
+   - multiple other lines: present, course: indeterminate, tip position: indeterminate, confidence 60%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: There are diffuse bilateral opacities, predominantly in the lower lung zones. The pattern is suggestive of pulmonary edema or consolidation. The costophrenic angles are not fully visualized.
+   - mediastinum/heart: The mediastinum is within normal limits in size and contour. The heart size is difficult to assess due to the patient's body habitus and the image quality.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is not well visualized.
+   - bones/soft tissues: The ribs are visible. The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral pulmonary opacities, concerning for pulmonary edema or consolidation.
+   - Endotracheal tube and nasogastric tube are present.
+   - Central venous catheter is present.
+   - Other lines are present, but their course and tip positions are not clearly visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image quality is suboptimal due to the patient's body habitus and the portable nature of the study.
+   - The apices and costophrenic angles are not fully visualized.
+   - The tip positions of the central venous catheter and the other lines are not clearly visualized.
+   - The heart size is difficult to assess.
+
+7) DOMAIN VECTOR

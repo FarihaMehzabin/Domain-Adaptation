@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (high) with evidence (image is likely obtained in a portable setting due to the presence of multiple lines and tubes).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (low) with confidence 80 + the inspiration is low, with a posterior rib count of approximately 10 ribs visible.
+   - penetration (adequate) with confidence 90 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the patient's position and the presence of overlying structures. The costophrenic angles are not well visualized due to the patient's position and the presence of overlying structures. The lateral chest walls are partially obscured by the patient's arms and the presence of lines and tubes.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are diffusely hazy and have a ground-glass appearance. The mediastinum is unremarkable. The bones are unremarkable. The diaphragms are unremarkable. The costophrenic angles are not well visualized.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Multiple lines and tubes are present, likely representing intravenous and/or arterial lines, as well as a possible central venous catheter. There is no evidence of grid/moiré artifacts, banding, or detector dropout. There are no obvious compression artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left, but the content is not visible.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (Right IJ CVC): Present, course: right internal jugular vein, tip position: indeterminate, confidence 95
+   - Left Internal Jugular Central Venous Catheter (Left IJ CVC): Present, course: left internal jugular vein, tip position: indeterminate, confidence 95
+   - Arterial Line (Arterial Line): Present, course: indeterminate, tip position: indeterminate, confidence 90
+   - Multiple IV Lines (Multiple IV Lines): Present, course: indeterminate, tip position: indeterminate, confidence 90
+   - Chest Tube (Chest Tube): Present, course: right pleural space, tip position: indeterminate, confidence 90
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Diffuse bilateral infiltrates are present, with a ground-glass appearance. The infiltrates are most prominent in the lung fields.
+     - There is no evidence of pleural effusion.
+   - mediastinum/heart
+     - The mediastinum is unremarkable. The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are unremarkable. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The bones are unremarkable. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Diffuse bilateral infiltrates, likely representing pulmonary edema or other inflammatory process.
+   - Multiple central venous catheters are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are not well visualized due to the patient's position and the presence of overlying structures.
+   - The tip positions of the central venous catheters are indeterminate.
+   - The presence of multiple lines and tubes obscures the underlying lung parenchyma.
+
+7) DOMAIN VECTOR

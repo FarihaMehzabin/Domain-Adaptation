@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (supine) with confidence 100 + patient is supine.
+   - portable-likelihood (high) with evidence (image is on a portable machine).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the lung volumes are low.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat obscured by low inspiration. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. Burned-in text is present in the upper left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 80 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no evidence of inversion. Noise texture (low) with confidence 80 + the noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube (ETT) present, course: midline, tip position: approximately 4 cm above the carina, confidence 100
+   - nasogastric tube (NGT) present, course: midline, tip position: not visualized, confidence 60
+   - right internal jugular central venous catheter (CVC) present, course: right internal jugular vein, tip position: not visualized, confidence 60
+   - left internal jugular central venous catheter (CVC) present, course: left internal jugular vein, tip position: not visualized, confidence 60
+   - arterial line present, course: radial artery, tip position: not visualized, confidence 60
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral lung fields are somewhat obscured by low inspiration. There is increased interstitial markings bilaterally, which could be due to pulmonary edema, atelectasis, or other causes. No focal consolidation is identified. No pleural effusion is identified.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in size and contour. The heart size is difficult to assess due to low inspiration.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible. The upper abdomen is not well visualized due to the low inspiration and the patient's position.
+   - bones/soft tissues
+     - the ribs are visible. The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Low lung volumes.
+   - Possible pulmonary edema or atelectasis.
+   - Central venous catheters are present.
+   - Nasogastric tube is present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Low inspiration limits visualization of the lung fields.
+   - The upper abdomen is not well visualized.
+   - The tip positions of the central venous catheters are not clearly visualized.
+   - The tip position of the nasogastric tube is not clearly visualized.
+
+7) DOMAIN VECTOR

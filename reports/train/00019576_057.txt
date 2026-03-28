@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is standing.
+   - portable-likelihood (high) with evidence (the image is likely obtained in a portable setting).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image is not rotated.
+   - inspiration (adequate) with confidence 90 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 95 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the patient's position. The costophrenic angles are not well visualized due to the patient's position. The lateral chest walls are not well visualized due to the patient's position.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are clear. The mediastinum is well-defined. The bones are well-defined. The diaphragms are well-defined. The costophrenic angles are not well visualized.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are no obvious artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to be processed with low contrast and low edge enhancement.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, course: midline, tip position: not visualized, confidence 80
+   - nasogastric tube (NGT) present, course: midline, tip position: not visualized, confidence 80
+   - central venous catheter (CVC) present, course: midline, tip position: not visualized, confidence 80
+   - chest tube (CT) present, course: midline, tip position: not visualized, confidence 80
+   - other lines/tubes: indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - there is significant opacification of the right hemithorax, with a clear delineation of the right lung from the opacity.
+     - there is also significant opacification of the left hemithorax, with a clear delineation of the left lung from the opacity.
+     - there is no evidence of pneumothorax.
+   - mediastinum/heart
+     - the mediastinum is midline.
+     - the heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-defined.
+     - the upper abdomen is not well visualized.
+   - bones/soft tissues
+     - the ribs are well-defined.
+     - the clavicles are well-defined.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - significant opacification of both lungs, likely representing pulmonary edema, pneumonia, or other infiltrative process.
+   - endotracheal tube, nasogastric tube, central venous catheter, and chest tube are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - the costophrenic angles are not well visualized.
+   - the apices are not well visualized.
+   - the tip positions of the tubes are not visualized.
+
+7) DOMAIN VECTOR

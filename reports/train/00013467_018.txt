@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is standing.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be relatively free of rotation.
+   - inspiration (adequate) with confidence 100 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur (none) with confidence 100 + the image is not blurry.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom, obscuring the lower lung fields.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear, the mediastinum is well-defined, the bones are visible, and the costophrenic angles are sharp.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are several lines present, likely representing IV lines or other medical devices. The presence of these lines is not unusual in this setting. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to have low contrast. edge enhancement (low) with confidence 100 + the image does not appear to have significant edge enhancement. inversion suspected (no) with confidence 100 + there is no evidence of image inversion. noise texture (low) with confidence 100 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - IV line (right subclavian) present, course: right subclavian vein, tip position: indeterminate, confidence 90
+   - IV line (left subclavian) present, course: left subclavian vein, tip position: indeterminate, confidence 90
+   - ETT (endotracheal tube) present, course: trachea, tip position: indeterminate, confidence 90
+   - NG tube (nasogastric tube) present, course: stomach, tip position: indeterminate, confidence 90
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - lungs: clear, no focal consolidation, pleural effusion, or pneumothorax is identified.
+     - pleura: the pleura appears normal.
+   - mediastinum/heart:
+     - mediastinum: the mediastinum is within normal limits in width.
+     - heart: the heart size appears normal.
+   - diaphragms/upper abdomen:
+     - diaphragms: the diaphragms are well-defined.
+     - upper abdomen: the upper abdomen is unremarkable.
+   - bones/soft tissues:
+     - bones: the ribs and clavicles are visible.
+     - soft tissues: the soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Multiple IV lines are present.
+   - ETT and NG tube are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The lower lung fields are not fully visualized due to the image being cropped at the bottom.
+   - The tip positions of the IV lines, ETT, and NG tube are indeterminate.
+
+7) DOMAIN VECTOR

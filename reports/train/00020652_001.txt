@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (portable marker present).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the patient is likely not fully inspiratory.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat obscured by the patient's body habitus. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visible due to cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. Burned-in text is present in the top-left corner, but the content is unreadable.)
+   - presentation/processing cues: contrast (low) with confidence 80 + the image appears to have low contrast. Edge enhancement (low) with confidence 80 + edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 80 + the noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (present) with confidence 90 + a right subclavian line is seen, coursing from the superior vena cava to the distal arm. The tip position is not clearly visible.
+   - left subclavian line (present) with confidence 90 + a left subclavian line is seen, coursing from the superior vena cava to the distal arm. The tip position is not clearly visible.
+   - indeterminate line (present) with confidence 70 + an indeterminate line is seen, coursing from the superior vena cava to the distal arm. The tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - left lung: opacity is present, obscuring the lung markings. The extent of the opacity is difficult to assess due to the patient's body habitus.
+     - right lung: relatively clear, with some increased markings at the base.
+     - pleural effusion: possible, but difficult to assess due to the patient's body habitus and the limited visualization of the costophrenic angles.
+   - mediastinum/heart
+     - mediastinum: appears normal in size and contour.
+     - heart: size is difficult to assess due to the patient's body habitus.
+   - diaphragms/upper abdomen
+     - diaphragms: visible.
+     - upper abdomen: largely obscured by the patient's body habitus.
+   - bones/soft tissues
+     - ribs: visible.
+     - clavicles: visible and symmetrical.
+     - scapulae: visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Left lung opacity.
+   - Possible left pleural effusion.
+   - Right subclavian line present.
+   - Left subclavian line present.
+   - Indeterminate line present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited visualization of the apices and costophrenic angles due to cropping.
+   - Limited assessment of the heart size due to the patient's body habitus.
+   - The tip position of the lines is not clearly visible.
+   - The extent of the left lung opacity is difficult to assess.
+
+7) DOMAIN VECTOR

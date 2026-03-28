@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior (AP) chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The apices are visible. The costophrenic angles are visible. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the right. Burned-in text is present in the upper left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to be processed with low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - catheter, central line (Indeterminate) with confidence 50 + There is a possible catheter, central line, in the upper right chest, but the tip position is not clearly visible.
+   - catheter, IV (Indeterminate) with confidence 50 + There is a possible catheter, IV, in the upper right chest, but the tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a possible opacity in the right lower lung field.
+     - left lung: clear.
+     - pleural surfaces: clear.
+   - mediastinum/heart
+     - heart size: normal.
+     - mediastinal contours: normal.
+     - hilar structures: normal.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: normal.
+     - clavicles: normal.
+     - scapulae: normal.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Possible opacity in the right lower lung field. Further evaluation with a lateral radiograph is recommended to assess the extent and nature of this finding.
+   - Possible central line in the upper right chest.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip position of the possible central line is not clearly visible.
+   - The burned-in text in the upper left corner is not legible.
+
+7) DOMAIN VECTOR

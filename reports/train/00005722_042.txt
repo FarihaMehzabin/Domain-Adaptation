@@ -1,0 +1,43 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the patient's position. The costophrenic angles are not well visualized due to the patient's position. The lateral chest walls are not well visualized due to the patient's position.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are relatively clear, but there are numerous small nodular opacities throughout both lung fields. The mediastinum is unremarkable. The bones are unremarkable. The diaphragms are unremarkable. The costophrenic angles are not well visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. with confidence 90 + there are multiple lines and potential artifacts present, likely from medical devices. The presence of these artifacts makes it difficult to assess the lung parenchyma in detail.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker present, pointing to the left. Burned-in text present, top-left, "100").
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) with confidence 90 + the image appears to be a standard chest radiograph with low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, course: midline, tip position: approximately 4 cm above the carina, confidence 95
+   - nasogastric tube (NGT) present, course: midline, tip position: not visualized, confidence 70
+   - central venous catheter (CVC) present, course: left subclavian, tip position: at the junction of the superior vena cava and right atrium, confidence 90
+   - multiple lines present, course: various, tip position: indeterminate, confidence 60
+   - multiple lines present, course: various, tip position: indeterminate, confidence 60
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: diffuse bilateral nodular opacities are present throughout both lung fields. The pattern is suggestive of widespread pulmonary involvement. There is no evidence of pleural effusion or pneumothorax.
+   - mediastinum/heart: the mediastinum is unremarkable. The heart size is normal.
+   - diaphragms/upper abdomen: the diaphragms are unremarkable. The upper abdomen is unremarkable.
+   - bones/soft tissues: the bones are unremarkable. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Diffuse bilateral nodular opacities throughout both lung fields.
+   - Multiple lines and potential artifacts present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The costophrenic angles are not well visualized.
+   - The tip position of the nasogastric tube is not visualized.
+   - The tip position of the multiple lines is indeterminate.
+   - The presence of artifacts limits the ability to fully evaluate the lung parenchyma.
+
+7) DOMAIN VECTOR

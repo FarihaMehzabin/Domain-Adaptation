@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (high) with evidence (portable X-ray machine).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with some loss of the costophrenic angles. The apices are not well visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are generally clear, but there is some increased opacity in the lung fields. The mediastinum is unremarkable. The bones are unremarkable. The diaphragms are unremarkable. The costophrenic angles are not well visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, pointing to the right. A burned-in label is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 100 + image is low contrast. Edge enhancement (low) with confidence 100 + no obvious edge enhancement. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 100 + low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, tip position not visualized, confidence 60 + ETT is present, but the tip is not clearly visualized.
+   - nasogastric tube (NGT) present, course not visualized, tip position not visualized, confidence 40 + NGT is present, but the course and tip position are not clearly visualized.
+   - right subclavian central line (SC line) present, course not visualized, tip position not visualized, confidence 50 + SC line is present, but the course and tip position are not clearly visualized.
+   - right atrial catheter (RAC) present, course not visualized, tip position not visualized, confidence 50 + RAC is present, but the course and tip position are not clearly visualized.
+   - left subclavian central line (SC line) present, course not visualized, tip position not visualized, confidence 50 + SC line is present, but the course and tip position are not clearly visualized.
+   - arterial line present, course not visualized, tip position not visualized, confidence 50 + arterial line is present, but the course and tip position are not clearly visualized.
+   - other lines/tubes: indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - increased interstitial markings throughout both lung fields, with a more prominent pattern in the lower lung zones.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum is unremarkable in appearance.
+     - the heart size is within normal limits.
+   - diaphragms/upper abdomen
+     - the diaphragms are unremarkable.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the bony structures are unremarkable.
+     - no obvious soft tissue abnormalities are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - diffuse bilateral interstitial opacities.
+   - presence of multiple lines/tubes.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - limited visualization of the costophrenic angles.
+   - limited visualization of the tip positions of the central lines.
+   - limited visualization of the tip position of the endotracheal tube.
+   - limited visualization of the tip position of the nasogastric tube.
+
+7) DOMAIN VECTOR

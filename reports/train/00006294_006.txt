@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is standing.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, but the lung fields are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear, the mediastinum is well-defined, the bones are visible, and the diaphragms and costophrenic angles are well-visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to have low contrast. edge enhancement (low) with confidence 100 + there is no obvious edge enhancement. inversion suspected (no) with confidence 100 + no evidence of inversion. noise texture (low) with confidence 100 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - NG tube (present) with confidence 100 + an NG tube is visible, coursing from the nose/mouth into the stomach. The tip is not clearly visualized.
+   - IV line (present) with confidence 100 + an IV line is visible, coursing from the upper arm into the superior vena cava. The tip is not clearly visualized.
+   - ETT (present) with confidence 100 + an ETT is visible, coursing from the mouth into the trachea. The tip is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - The lungs are clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+   - mediastinum/heart
+     - The mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-visualized. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The bones are intact. No obvious soft tissue abnormalities are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - NG tube, IV line, and ETT are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip of the NG tube, IV line, and ETT are not clearly visualized.
+   - The image is cropped, limiting the assessment of the lung bases.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest X-ray.
+   - patient position: upright with confidence 90% + evidence: the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices of the lungs, costophrenic angles, and lateral chest walls. There is some padding at the costophrenic angles.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - left subclavian line: present, course: left subclavian vein, tip position: indeterminate, confidence 80%
+   - right subclavian line: present, course: right subclavian vein, tip position: indeterminate, confidence 80%
+   - indwelling catheter: present, course: indeterminate, tip position: indeterminate, confidence 70%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - left lung: there is increased opacity in the left lung, particularly in the perihilar region. There is also some blunting of the left costophrenic angle, which could be due to a small pleural effusion or pleural thickening.
+     - right lung: the right lung appears clear.
+   - mediastinum/heart
+     - mediastinum: the mediastinum is within normal limits in size and contour.
+     - heart: the heart size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: the diaphragms are visible.
+     - upper abdomen: the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - ribs: the ribs are visible.
+     - clavicles: the clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Increased opacity in the left lung, particularly in the perihilar region, concerning for possible pneumonia or other inflammatory process.
+   - Small left pleural effusion or pleural thickening.
+   - Indeterminate position of central lines.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Indeterminate position of central lines.
+   - Small pleural effusion or pleural thickening may be difficult to differentiate from other lung abnormalities on a single AP chest X-ray.
+   - The image quality is adequate, but further evaluation with a lateral chest X-ray would be helpful to better assess the lung fields and costophrenic angles.
+
+7) DOMAIN VECTOR

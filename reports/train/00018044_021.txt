@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + image is a portable chest X-ray.
+   - portable-likelihood (high) with evidence (portable marker present).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the costophrenic angles not fully visible. The apices are not fully visible due to the cropping.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are generally clear, mediastinum is visible, bones are visible, diaphragms are visible, and costophrenic angles are not fully visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, burned-in label top-left) with confidence 100.
+   - presentation/processing cues: contrast (low) with confidence 100, edge enhancement (low) with confidence 100, inversion suspected (no) with confidence 100, noise texture (low) with confidence 100.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Left subclavian line (Indeterminate) with confidence 50 + a line is seen entering the left subclavian vein, but the tip position is not clearly visible.
+   - Indeterminate (Indeterminate) with confidence 100 + no other tubes or lines are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Left lung: there is a large opacity in the left lower lung field, obscuring the costophrenic angle. The opacity is likely a pleural effusion.
+     - Right lung: clear.
+   - mediastinum/heart
+     - Mediastinum: normal in appearance.
+     - Heart: normal in size and contour.
+   - diaphragms/upper abdomen
+     - Diaphragms: diaphragms are visible.
+     - Upper abdomen: not well visualized due to the patient's position and the image cropping.
+   - bones/soft tissues
+     - Bones: ribs are visible.
+     - Soft tissues: no obvious abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large left pleural effusion.
+   - Left subclavian line is present, but the tip position is not clearly visible.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Image is a portable chest X-ray, with limited anatomical coverage.
+   - The tip position of the left subclavian line is not clearly visible.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

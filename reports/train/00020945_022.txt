@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (medium) with evidence (image quality, lack of full view of the posterior chest)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be relatively free of rotation.
+   - inspiration (adequate) with confidence 90 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 90 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized due to the patient's position and the image cropping.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are relatively clear, the mediastinum is visible, the bones are visible, and the diaphragms and costophrenic angles are visible, although not fully.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are readily apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the right side is on the right.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (present) with confidence 95 + an indeterminate line is seen in the right subclavian vein, extending to the superior vena cava. The tip position is not clearly visualized.
+   - endotracheal tube (present) with confidence 90 + an endotracheal tube is seen, terminating approximately 4 cm above the carina.
+   - nasogastric tube (present) with confidence 90 + an indeterminate nasogastric tube is seen, coursing into the stomach. The tip position is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral lung fields show increased interstitial markings, which could be due to edema, infection, or other inflammatory processes. The pattern is somewhat diffuse.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in size and contour.
+     - the heart size is normal.
+     - the pulmonary vasculature appears normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-defined.
+     - the upper abdomen is not well visualized.
+   - bones/soft tissues
+     - the bony structures are unremarkable.
+     - no obvious soft tissue abnormalities are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - increased interstitial markings bilaterally.
+   - endotracheal tube in place.
+   - right subclavian line in place.
+   - nasogastric tube in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices and costophrenic angles are not fully visualized.
+   - The tip position of the right subclavian line and nasogastric tube are not clearly visualized.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

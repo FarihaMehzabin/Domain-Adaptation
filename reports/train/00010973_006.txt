@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is standing or sitting upright.
+   - portable-likelihood (high) with evidence (image quality, lack of detail in the posterior lung fields)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image is not rotated.
+   - inspiration (low) with confidence 80 + the lung volumes are low, and the posterior lung fields are not fully expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The apices are not fully visualized. The costophrenic angles are not fully visualized. The costal margins are not fully visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (lungs: adequate. Mediastinum: adequate. Bones: adequate. Diaphragms & costophrenic angles: limited visualization.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None identified.)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker present, pointing to the right. Burned-in text present, top-left, "12:00").
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right-sided chest tube (present) with confidence 95 + a chest tube is present on the right side. The course is not fully visualized, but it appears to be in the right hemithorax. The tip position is not visualized.
+   - right-sided catheter (present) with confidence 90 + a catheter is present on the right side. The course is not fully visualized, but it appears to be in the right hemithorax. The tip position is not visualized.
+   - right-sided port-a-cath (present) with confidence 95 + a port-a-cath is present on the right side. The course is not fully visualized, but it appears to be in the right hemithorax. The tip position is not visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is significant opacification of the right hemithorax, likely representing a large pleural effusion and/or consolidation. The lung markings are obscured.
+     - left lung: the left lung appears relatively clear.
+   - mediastinum/heart
+     - the mediastinum is midline. The heart size is not well assessed due to the right hemithorax opacification.
+   - diaphragms/upper abdomen
+     - the diaphragms are visualized. The upper abdomen is not well visualized due to the right hemithorax opacification.
+   - bones/soft tissues
+     - the ribs are visualized. The clavicles are visualized.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right-sided chest tube and catheter in place.
+   - Large right pleural effusion and/or consolidation.
+   - Right-sided port-a-cath in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Limited visualization of the right hemithorax due to the large pleural effusion and/or consolidation.
+   - Limited visualization of the upper abdomen.
+   - The tip position of the chest tube, catheter, and port-a-cath are not visualized.
+   - The heart size is not well assessed.
+
+7) DOMAIN VECTOR

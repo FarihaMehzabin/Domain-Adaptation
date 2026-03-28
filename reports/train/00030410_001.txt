@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (portable equipment visible).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the patient is likely in a good inspiratory position.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also not fully visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are visible, but the apices and costophrenic angles are not fully visualized due to cropping. The mediastinum and heart are visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visualized.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right internal jugular central venous catheter (right IJ CVC) (present, course: right internal jugular vein, tip position: indeterminate, confidence 100)
+   - left internal jugular central venous catheter (left IJ CVC) (present, course: left internal jugular vein, tip position: indeterminate, confidence 100)
+   - endotracheal tube (ET tube) (present, course: trachea, tip position: indeterminate, confidence 100)
+   - nasogastric tube (NG tube) (present, course: stomach, tip position: indeterminate, confidence 100)
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a large opacity in the right upper lobe, obscuring the normal lung markings. The right costophrenic angle is not fully visualized.
+     - left lung: there is a large opacity in the left hemithorax, obscuring the normal lung markings. The left costophrenic angle is not fully visualized.
+     - pleural effusion: there is a large pleural effusion in the left hemithorax, obscuring the lung markings and mediastinal structures. The right hemithorax is relatively clear.
+   - mediastinum/heart
+     - the mediastinum is shifted to the right.
+     - the heart size is difficult to assess due to the opacity in the left hemithorax.
+   - diaphragms/upper abdomen
+     - the diaphragms are not fully visualized due to the opacity in the left hemithorax.
+     - the upper abdomen is not fully visualized.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - large opacity in the right upper lobe.
+   - large opacity in the left hemithorax, likely a large pleural effusion.
+   - mediastinal shift to the right.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are not fully visualized due to cropping.
+   - The left hemithorax is largely obscured by a large opacity, making it difficult to assess the underlying lung parenchyma and mediastinal structures.
+   - The tip position of the central venous catheters is indeterminate.
+   - The tip position of the endotracheal and nasogastric tubes is indeterminate.
+
+7) DOMAIN VECTOR

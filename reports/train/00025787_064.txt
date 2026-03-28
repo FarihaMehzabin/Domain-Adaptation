@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior chest radiograph.
+   - patient position: upright with confidence 90% + the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence (no obvious signs of a portable exam)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also not fully visualized.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are diffusely hazy and opacified. The mediastinum is not well-defined. The bones are unremarkable. The diaphragms are not well-visualized due to the cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines present in the image, likely representing external lines or tubes. The presence of these lines is not fully assessed due to the cropping.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner, but the content is not visible.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no obvious sign of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right subclavian central line: present, course: right subclavian vein, tip position: indeterminate, confidence 80%
+   - Left subclavian central line: present, course: left subclavian vein, tip position: indeterminate, confidence 80%
+   - Right internal jugular central line: present, course: right internal jugular vein, tip position: indeterminate, confidence 80%
+   - Nasogastric tube: present, course: likely into the stomach, tip position: indeterminate, confidence 70%
+   - Endotracheal tube: present, course: trachea, tip position: indeterminate, confidence 85%
+   - Foley catheter: present, course: likely into the bladder, tip position: indeterminate, confidence 70%
+   - Multiple other lines/tubes: present, course: various, tip position: indeterminate, confidence 60%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: Diffuse bilateral opacities are present throughout both lung fields. The pattern is consistent with pulmonary edema or diffuse alveolar process. There is no obvious pleural effusion.
+   - mediastinum/heart: The mediastinum is not well-visualized due to the cropping and opacities. The heart size is difficult to assess.
+   - diaphragms/upper abdomen: The diaphragms are not well-visualized. The upper abdomen is not well-visualized.
+   - bones/soft tissues: The bones are unremarkable. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Diffuse bilateral pulmonary opacities, concerning for pulmonary edema or diffuse alveolar process.
+   - Multiple central lines are present.
+   - The tip positions of the central lines are not clearly visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is cropped, limiting the visualization of the apices and lateral chest walls.
+   - The mediastinum and upper abdomen are not well-visualized.
+   - The tip positions of the central lines are not clearly visualized.
+   - The presence of multiple lines/tubes makes it difficult to assess their exact course and tip positions.
+
+7) DOMAIN VECTOR

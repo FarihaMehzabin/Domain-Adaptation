@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (medium) with evidence (the image is likely obtained in a portable setting, given the limited field of view and potential for suboptimal positioning).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 90 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 95 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized due to the limited field of view).
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat obscured by overlying structures. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visualized).
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are some lines visible, likely from external devices. The presence of grid or moiré patterns is not apparent. There is no evidence of banding, detector dropout, or compression artifacts).
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner, but the content is not visible).
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The contrast is low. Edge enhancement is low. Inversion is not suspected. The noise texture is low).
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) (present, course: midline, tip position: not visualized, confidence 80)
+   - nasogastric tube (NGT) (present, course: midline, tip position: not visualized, confidence 80)
+   - right subclavian central line (present, course: right subclavian vein, tip position: not visualized, confidence 70)
+   - left subclavian central line (present, course: left subclavian vein, tip position: not visualized, confidence 70)
+   - indwelling catheter (present, course: not visualized, tip position: not visualized, confidence 60)
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral opacities are present, particularly in the right lung. The opacities are diffuse and may represent pulmonary edema, pneumonia, or other inflammatory processes. The left lung appears relatively clear, but there is some increased density in the upper lobe.
+     - there is no evidence of pleural effusion.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in size and contour.
+     - the heart size is difficult to assess due to the limited field of view, but it appears to be mildly enlarged.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-defined.
+     - the upper abdomen is not well visualized.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - bilateral pulmonary opacities, concerning for pneumonia, pulmonary edema, or other inflammatory process.
+   - possible mild cardiomegaly.
+   - lines and tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - limited field of view, making it difficult to fully assess the lungs and upper abdomen.
+   - the tip positions of the central lines are not visualized.
+   - the presence and extent of any pleural effusion is not clear.
+
+7) DOMAIN VECTOR

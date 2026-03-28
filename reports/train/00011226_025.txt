@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is labeled AP
+   - patient position (upright) with confidence 100 + image is labeled portable
+   - portable-likelihood (high) with evidence (label "portable")
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is good
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image covers the apices, costophrenic angles, and costal margins)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are clear, mediastinum is well-defined, bones are visible, and costophrenic angles are clear
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, burned-in label top-left)
+   - presentation/processing cues: contrast (low) with confidence 100, edge enhancement (low) with confidence 100, inversion suspected (no) with confidence 100, noise texture (low) with confidence 100
+
+3) DEVICES / LINES / TUBES
+   - right subclavian line (indeterminate) with confidence 100 + line is present, but the tip position is not clearly visible
+   - left subclavian line (indeterminate) with confidence 100 + line is present, but the tip position is not clearly visible
+   - right internal jugular central line (indeterminate) with confidence 100 + line is present, but the tip position is not clearly visible
+   - right chest tube (indeterminate) with confidence 100 + line is present, but the tip position is not clearly visible
+   - right picc line (indeterminate) with confidence 100 + line is present, but the tip position is not clearly visible
+
+4) FINDINGS
+   - lungs/pleura
+     - right lung: clear. No focal consolidation, pleural effusion, or pneumothorax is identified.
+     - left lung: clear. No focal consolidation, pleural effusion, or pneumothorax is identified.
+   - mediastinum/heart
+     - mediastinum: unremarkable.
+     - heart: size is within normal limits.
+   - diaphragms/upper abdomen
+     - diaphragms: are visible.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: are visible.
+     - clavicles: are visible.
+     - scapulae: are visible.
+
+5) IMPRESSION
+   - Right subclavian line, left subclavian line, right internal jugular central line, right chest tube, and right picc line are present. The tip positions are not clearly visible.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip positions of the central lines and chest tube are not clearly visible.
+   - The tip position of the picc line is not clearly visible.
+
+7) DOMAIN VECTOR

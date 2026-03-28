@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (supine) with confidence 100 + patient is supine.
+   - portable-likelihood (high) with evidence (image is on a portable device).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the lung volumes are low.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are not well visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (lungs: limited due to low inspiration and cropping. Mediastinum: adequate. Bones: adequate. Diaphragms: adequate. Costophrenic angles: obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. Burned-in text is present in the top-left corner, but the content is unreadable.)
+   - presentation/processing cues: contrast (low) with confidence 80 + the image appears to have low contrast. Edge enhancement (low) with confidence 80 + edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 80 + the noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, course: midline, tip position: approximately 4 cm above the carina, confidence 95
+   - nasogastric tube (NGT) present, course: midline, tip position: not visualized, confidence 60
+   - central venous catheter (CVC) present, course: right subclavian, tip position: not visualized, confidence 70
+   - left subclavian line present, course: left subclavian, tip position: not visualized, confidence 70
+   - chest tubes (2) present, course: bilateral, tip position: not visualized, confidence 60
+   - arterial line present, course: right internal jugular, tip position: not visualized, confidence 70
+   - Foley catheter present, course: midline, tip position: not visualized, confidence 60
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral diffuse opacities, predominantly in the lower lung zones, with air bronchograms. The opacities are extensive and may represent pulmonary edema, pneumonia, or ARDS. There is also evidence of pleural effusions, likely bilateral, with blunting of the costophrenic angles.
+   - mediastinum/heart
+     - the mediastinum is unremarkable. The heart size is difficult to assess due to the low lung volumes and diffuse opacities.
+   - diaphragms/upper abdomen
+     - the diaphragms are elevated. The upper abdomen is not well visualized due to the low lung volumes and the presence of lines and tubes.
+   - bones/soft tissues
+     - the bones are unremarkable. There is subcutaneous emphysema, particularly in the chest wall.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral diffuse lung opacities with air bronchograms, suggestive of pulmonary edema, pneumonia, or ARDS.
+   - Bilateral pleural effusions.
+   - Subcutaneous emphysema.
+   - The presence of multiple lines and tubes suggests the patient is critically ill and requires ongoing monitoring and support.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable AP radiograph, which limits the visualization of the apices and costophrenic angles.
+   - The low lung volumes make it difficult to assess the heart size and the presence of pulmonary edema.
+   - The presence of multiple lines and tubes obscures the visualization of the tip positions.
+   - The quality of the image is suboptimal due to low contrast and the presence of artifacts.
+
+7) DOMAIN VECTOR

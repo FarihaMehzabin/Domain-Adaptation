@@ -1,0 +1,42 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is AP.
+   - patient position: portable with confidence 90% + the patient is in a portable position.
+   - portable-likelihood: high with evidence (portable equipment present).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 90% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to cover the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are somewhat hazy, the mediastinum is visible, the bones are well-defined, and the diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are several lines present, likely from medical equipment.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian catheter: present, course: right subclavian vein to right atrium, tip position: indeterminate, confidence 80%
+   - left subclavian catheter: present, course: left subclavian vein to superior vena cava, tip position: indeterminate, confidence 80%
+   - nasogastric tube: present, course: likely terminates in the stomach, tip position: indeterminate, confidence 70%
+   - other lines/tubes: indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: bilateral hazy opacities are present, suggestive of pulmonary edema or consolidation. No pleural effusion is identified.
+   - mediastinum/heart: the heart size appears enlarged. The mediastinum is unremarkable.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is not well visualized due to the patient's position.
+   - bones/soft tissues: the bones are well-defined. No obvious soft tissue abnormalities are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Pulmonary edema or consolidation.
+   - Enlarged heart.
+   - Presence of multiple lines/tubes.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Limited visualization of the upper abdomen.
+   - Indeterminate tip positions of the central lines.
+   - The presence of multiple lines/tubes makes it difficult to identify all of them.
+
+7) DOMAIN VECTOR

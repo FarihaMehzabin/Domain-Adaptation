@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low), edge enhancement (low), inversion suspected (no), noise texture (low)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right internal jugular central venous catheter (indeterminate) with confidence 50 + an internal jugular central venous catheter is present, but the tip position is not clearly visible.
+   - left internal jugular central venous catheter (indeterminate) with confidence 50 + a left internal jugular central venous catheter is present, but the tip position is not clearly visible.
+   - endotracheal tube (absent) with confidence 100 + no endotracheal tube is visible.
+   - nasogastric tube (absent) with confidence 100 + no nasogastric tube is visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lower lobe: there is a hazy opacity in the right lower lobe, which could represent consolidation, atelectasis, or other pathology.
+     - left lower lobe: there is a linear opacity in the left lower lobe, which could represent atelectasis or a small pleural effusion.
+     - otherwise: the lungs are otherwise clear. The costophrenic angles are sharp.
+   - mediastinum/heart
+     - the mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the bones are unremarkable. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - hazy opacity in the right lower lobe.
+   - linear opacity in the left lower lobe.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip position of the internal jugular central venous catheters is not clearly visible.
+   - The hazy opacity in the right lower lobe could represent several different conditions.
+   - The linear opacity in the left lower lobe could represent several different conditions.
+
+7) DOMAIN VECTOR

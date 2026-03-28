@@ -1,0 +1,54 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is labeled AP
+   - patient position (upright) with confidence 100 + image is labeled portable
+   - portable-likelihood (high) with evidence (portable label)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with some loss of the costophrenic angles)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (lines are present, but not clearly defined)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, burned-in text top-left)
+   - presentation/processing cues: contrast (low) with confidence 100, edge enhancement (low) with confidence 100, inversion suspected (no) with confidence 100, noise texture (low) with confidence 100
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, course: unknown, tip position: unknown, confidence 100
+   - nasogastric tube (NGT) present, course: unknown, tip position: unknown, confidence 100
+   - central venous catheter (CVC) present, course: right internal jugular, tip position: mid-to-upper superior vena cava, confidence 100
+   - lines (multiple) present, course: unknown, tip position: unknown, confidence 100
+   - indwelling catheter present, course: unknown, tip position: unknown, confidence 100
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - diffuse bilateral interstitial opacities are present, with a reticular pattern. The opacities are more prominent in the lung bases.
+     - there is no evidence of pleural effusion.
+     - there is no evidence of pneumothorax.
+   - mediastinum/heart
+     - the mediastinum is unremarkable in appearance.
+     - the heart size is normal.
+     - there is no evidence of cardiomegaly.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are unremarkable.
+     - the clavicles are unremarkable.
+     - the soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - diffuse bilateral interstitial opacities, likely representing pulmonary edema or other interstitial lung disease.
+   - presence of multiple lines and tubes.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - the image is a portable AP radiograph, which may be suboptimal for full evaluation.
+   - the extent of the interstitial opacities is difficult to assess due to the image quality.
+   - the exact course and tip position of the lines and tubes are indeterminate.
+   - the presence of lines and tubes may obscure underlying pathology.
+
+7) DOMAIN VECTOR

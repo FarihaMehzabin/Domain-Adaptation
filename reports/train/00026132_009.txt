@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior chest radiograph.
+   - patient position: upright with confidence 90% + the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence (the image is likely obtained in a portable setting, but the quality is adequate).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image is not rotated.
+   - inspiration: adequate with confidence 90% + the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + the heart borders are well-defined.
+   - motion blur: none with confidence 95% + the image is not blurred.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image has low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right chest tube: present, course: right hemithorax, tip position: indeterminate, confidence 80%
+   - left chest tube: present, course: left hemithorax, tip position: indeterminate, confidence 80%
+   - endotracheal tube: present, course: trachea, tip position: indeterminate, confidence 80%
+   - nasogastric tube: present, course: stomach, tip position: indeterminate, confidence 80%
+   - central line: present, course: superior vena cava, tip position: indeterminate, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: There is significant opacification in the right lung, likely representing a large pleural effusion and/or consolidation. The left lung shows some increased interstitial markings, possibly representing pulmonary edema or atelectasis. There is a small pleural effusion on the left.
+   - mediastinum/heart: The mediastinum is midline. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues: The ribs are visible. There is subcutaneous emphysema in the right chest wall.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large right pleural effusion and/or consolidation.
+   - Small left pleural effusion.
+   - Pulmonary edema or atelectasis in the left lung.
+   - Subcutaneous emphysema in the right chest wall.
+   - Endotracheal tube, nasogastric tube, central line, and chest tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip positions of the chest tubes, endotracheal tube, nasogastric tube, and central line are indeterminate.
+   - The extent of the right lung consolidation is difficult to assess due to the large pleural effusion.
+   - The presence of subcutaneous emphysema is noted, but the extent is not fully defined.
+
+7) DOMAIN VECTOR

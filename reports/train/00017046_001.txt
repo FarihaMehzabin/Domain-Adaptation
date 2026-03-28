@@ -1,0 +1,57 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + the image is labeled "portable".
+   - portable-likelihood (high) with evidence (label "portable").
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the image is a portable AP, and the lung volumes are low.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are not well visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (limited due to cropping)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None apparent)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. Burned-in text is present in the upper left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to be a standard AP chest X-ray.
+   - edge enhancement (low) with confidence 90 + edge enhancement is not apparent.
+   - inversion suspected (no) with confidence 100 + no obvious signs of inversion.
+   - noise texture (low) with confidence 90 + the image has a low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) (present) with confidence 95 + an endotracheal tube is seen, terminating approximately 4 cm above the carina.
+   - nasogastric tube (NGT) (present) with confidence 90 + a nasogastric tube is seen, coursing into the stomach.
+   - left subclavian central line (present) with confidence 90 + a left subclavian central line is seen, terminating in the superior vena cava.
+   - chest tube (present) with confidence 95 + a chest tube is seen, terminating in the right pleural space.
+   - other lines/tubes (indeterminate) with confidence 50 + there are multiple other lines/tubes present, but their exact course and tip positions are not clearly visible due to the image quality and cropping.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - there is significant opacification in the left hemithorax, likely representing a large pleural effusion and/or atelectasis. The lung markings are obscured.
+     - the right lung appears relatively clear.
+     - there is a chest tube in the right hemithorax.
+   - mediastinum/heart
+     - the mediastinum is midline.
+     - the heart size is difficult to assess due to the low lung volumes and the presence of the left pleural effusion.
+   - diaphragms/upper abdomen
+     - the diaphragms are not well visualized due to the low lung volumes and the presence of the left pleural effusion.
+     - the upper abdomen is not well visualized.
+   - bones/soft tissues
+     - the ribs are visible.
+     - there is subcutaneous emphysema in the left chest wall.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - large left pleural effusion with possible atelectasis.
+   - chest tube in place in the right hemithorax.
+   - endotracheal tube in place.
+   - nasogastric tube in place.
+   - left subclavian central line in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Limited visualization of the apices and costophrenic angles due to image cropping.
+   - Limited visualization of the diaphragms and upper abdomen due to low lung volumes.
+   - The exact course and tip position of some lines/tubes are indeterminate.
+
+7) DOMAIN VECTOR

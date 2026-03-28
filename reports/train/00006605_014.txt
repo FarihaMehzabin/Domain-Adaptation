@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the patient's position. The costophrenic angles are not well visualized due to the patient's position. The lateral chest walls are not well visualized due to the patient's position.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + the lungs are relatively clear, but there are numerous small nodular opacities throughout both lung fields. The mediastinum is unremarkable. The bones are unremarkable. The diaphragms are unremarkable. The costophrenic angles are not well visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. with confidence 100 + there are numerous lines and tubes present, likely representing medical devices. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker present, pointing to the left. Burned-in text present, top-left, "1234567890")
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (Central Line): Present, course: right internal jugular vein, tip position: indeterminate, confidence 95
+   - Left Internal Jugular Central Venous Catheter (Central Line): Present, course: left internal jugular vein, tip position: indeterminate, confidence 95
+   - Right Chest Tube: Present, course: right pleural space, tip position: indeterminate, confidence 95
+   - Left Chest Tube: Present, course: left pleural space, tip position: indeterminate, confidence 95
+   - Multiple other lines/tubes: Present, course: indeterminate, tip position: indeterminate, confidence 90 (These are difficult to identify due to the density of the image and the presence of other devices.)
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Numerous small nodular opacities are present throughout both lung fields, with a more prominent appearance in the lower lung zones. The pattern is suggestive of widespread pulmonary edema or diffuse alveolar hemorrhage. There is no evidence of large pleural effusion.
+   - mediastinum/heart
+     - The mediastinum is unremarkable. The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are unremarkable. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The bones are unremarkable. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Numerous small nodular opacities throughout both lung fields, suggestive of widespread pulmonary edema or diffuse alveolar hemorrhage.
+   - Presence of multiple central venous catheters and chest tubes.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The costophrenic angles are not well visualized due to the patient's position.
+   - The tip positions of the central venous catheters and chest tubes are indeterminate.
+   - The small nodular opacities are difficult to characterize definitively on a single radiograph.
+
+7) DOMAIN VECTOR

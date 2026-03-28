@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (medium) with evidence (portable marker).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with some loss of the costophrenic angles. The apices are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + lungs are clear. Mediastinum is well-defined. Bones are visible. Diaphragms are visible. Costophrenic angles are partially obscured.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, top-left. Burned-in label top-left).
+   - presentation/processing cues: contrast (low) with confidence 90 + image is low contrast. Edge enhancement (low) with confidence 90 + edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 90 + low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right-sided chest tube (present) with confidence 95 + a chest tube is present on the right side. The course is not clearly defined, but it appears to be directed towards the right lung apex. The tip position is not clearly visible.
+   - right-sided pigtail catheter (present) with confidence 95 + a pigtail catheter is present on the right side. The course is not clearly defined, but it appears to be directed towards the right lung apex. The tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a large pleural effusion, obscuring the right lung base. There is also a possible pneumothorax at the right lung apex, although this is difficult to assess due to the presence of the chest tube.
+     - left lung: clear.
+   - mediastinum/heart
+     - mediastinum: normal in size and contour.
+     - heart: normal in size and position.
+   - diaphragms/upper abdomen
+     - diaphragms: visible.
+     - upper abdomen: bowel loops are visible.
+   - bones/soft tissues
+     - ribs: visible.
+     - clavicles: visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right-sided chest tube and pigtail catheter are present.
+   - Large right pleural effusion.
+   - Possible pneumothorax at the right lung apex.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip position of the chest tube and pigtail catheter is not clearly visible.
+   - The extent of the right pleural effusion is difficult to assess due to the presence of the chest tube.
+   - The presence and size of the pneumothorax at the right lung apex is uncertain.
+
+7) DOMAIN VECTOR

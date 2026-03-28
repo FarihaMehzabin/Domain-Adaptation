@@ -1,0 +1,39 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: upright with confidence 90% + evidence: the patient is likely in an upright position, as the heart size appears normal and the lung fields are relatively clear.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest radiograph, given the limited field of view and the presence of external devices.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles appear symmetrical, suggesting no significant rotation.
+   - inspiration: adequate with confidence 85% + evidence: the lung fields are reasonably well-expanded, and there is no obvious evidence of significant atelectasis or hyperinflation.
+   - penetration: adequate with confidence 90% + evidence: the vertebral bodies are clearly visible behind the heart, indicating adequate penetration.
+   - motion blur: none with confidence 95% + evidence: there is no obvious motion blur in the image.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the upper chest and mediastinum. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are relatively clear, with some increased opacity in the right lung field. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: there are several lines and tubes visible in the image, which may represent medical devices. There is no obvious grid or moiré pattern. There is no obvious banding. There is no obvious detector dropout. There is no obvious compression artifact.
+   - markers/overlays: laterality marker present? burned-in text present? Laterality marker is present, indicating the left side is on the left. Burned-in text is present in the upper left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement. There is no obvious inversion. The noise texture appears to be low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube: present, course: midline, tip position: unknown, confidence 80%
+   - nasogastric tube: present, course: midline, tip position: unknown, confidence 80%
+   - central venous catheter: present, course: right subclavian, tip position: superior vena cava, confidence 90%
+   - multiple lines: present, course: various, tip position: unknown, confidence 70%
+   - cardiac monitor leads: present, course: various, tip position: unknown, confidence 70%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: increased opacity in the right lung field. No obvious pleural effusion.
+   - mediastinum/heart: the heart size appears normal. The mediastinum is well-defined.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is not fully visualized.
+   - bones/soft tissues: the bones are visible. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Increased opacity in the right lung field.
+   - Presence of multiple lines and tubes.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited visualization of the costophrenic angles.
+   - Unknown tip positions of the endotracheal tube, nasogastric tube, and multiple lines.
+   - Limited visualization of the upper abdomen.
+
+7) DOMAIN VECTOR

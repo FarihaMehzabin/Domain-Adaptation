@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: AP designation is present on the image.
+   - patient position: portable with confidence 90% + evidence: "PORTABLE" is burned-in on the image.
+   - portable-likelihood: high with evidence: The image is a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: Clavicles are approximately symmetrical.
+   - inspiration: adequate with confidence 85% + evidence: The lungs are well-expanded.
+   - penetration: adequate with confidence 90% + evidence: Vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: No obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also not fully visualized.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visualized due to cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? Laterality marker is not present. "PORTABLE" is burned-in on the image.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. Noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - left subclavian line: present, course: left subclavian vein, tip position: indeterminate, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There is a hazy opacity in the right upper lobe. The opacity is not well-defined and may represent atelectasis, consolidation, or other process.
+     - The left lung appears clear.
+     - No pleural effusion is identified.
+   - mediastinum/heart
+     - The mediastinum is within normal limits.
+     - The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible.
+     - The upper abdomen is not well visualized due to cropping.
+   - bones/soft tissues
+     - The ribs are visible.
+     - The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Hazy opacity in the right upper lobe. Further evaluation is recommended.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable chest X-ray, which may be limited in its ability to fully visualize the chest.
+   - The apices and costophrenic angles are not fully visualized due to cropping.
+   - The tip position of the left subclavian line is indeterminate.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,37 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is taken in an anteroposterior (AP) view.
+   - patient position: portable with confidence 90% + evidence: the image is labeled "portable".
+   - portable-likelihood: high with evidence: the image is a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical.
+   - inspiration: adequate with confidence 85% + evidence: the lung fields are reasonably well-expanded.
+   - penetration: adequate with confidence 90% + evidence: the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: the image is sharp.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving a small amount of padding on the sides.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are somewhat hazy, the mediastinum is visible, the bones are visible, and the diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to be processed with low contrast and low edge enhancement.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right internal jugular central venous catheter: present, course: right internal jugular vein, tip position: indeterminate, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: there is increased opacity in the lower lung fields bilaterally, which could represent atelectasis, pleural effusion, or consolidation. The costophrenic angles are blunted, which could be due to small pleural effusions.
+   - mediastinum/heart: the mediastinum is unremarkable. The heart size is difficult to assess due to the overlying opacity.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is not well visualized due to the overlying opacity.
+   - bones/soft tissues: the ribs are visible. The clavicles are symmetrical.
+
+5) IMPRESSION
+   - Increased opacity in the lower lung fields bilaterally.
+   - Possible small pleural effusions.
+
+6) LIMITATIONS / UNCERTAINTY
+   - Limited visualization of the heart size.
+   - Limited visualization of the upper abdomen.
+   - The presence of a portable image limits the assessment of the patient's position.
+   - The presence of a burned-in label limits the assessment of the patient's identity.
+
+7) DOMAIN VECTOR

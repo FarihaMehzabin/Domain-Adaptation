@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 90 + the lungs appear to be adequately inflated.
+   - penetration (adequate) with confidence 95 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized due to the patient's position.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are relatively clear. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker present, pointing to the left. Burned-in text present, top-left, "12:34")
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - left subclavian catheter (present) with confidence 90 + a catheter is seen in the left subclavian vein, coursing into the superior vena cava. The tip is not clearly visualized.
+   - right internal jugular central venous catheter (present) with confidence 90 + a catheter is seen in the right internal jugular vein, coursing into the superior vena cava. The tip is not clearly visualized.
+   - endotracheal tube (indeterminate) with confidence 50 + an endotracheal tube is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - left lung: opacity in the left lung field, obscuring the costophrenic angle and portions of the lung parenchyma. The opacity appears to be a combination of consolidation and pleural effusion.
+     - right lung: relatively clear, with no obvious focal consolidation or pleural effusion.
+   - mediastinum/heart
+     - mediastinum: the mediastinum appears within normal limits in size and contour.
+     - heart: the heart size is difficult to assess due to the opacity in the left lung field.
+   - diaphragms/upper abdomen
+     - diaphragms: the diaphragms are visible.
+     - upper abdomen: the upper abdomen is not well visualized due to the patient's position and the opacity in the left lung field.
+   - bones/soft tissues
+     - ribs: the ribs are visible.
+     - clavicles: the clavicles are visible.
+     - other: no other significant abnormalities are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Left lung opacity, likely a combination of consolidation and pleural effusion.
+   - Right lung is clear.
+   - Left subclavian catheter in place.
+   - Right internal jugular central venous catheter in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The costophrenic angles are not fully visualized.
+   - The tip of the left subclavian catheter and right internal jugular central venous catheter are not clearly visualized.
+   - The heart size is difficult to assess due to the opacity in the left lung field.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,43 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: upright with confidence 90% + evidence: the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest radiograph, but the quality is adequate.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be rotationally correct.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear, the mediastinum is well-defined, the bones are visible, and the costophrenic angles are sharp.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? Laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - tracheostomy tube: present, tip position: midline, approximately 4 cm above the carina with confidence 95% + evidence: a tracheostomy tube is present, with the tip approximately 4 cm above the carina.
+   - right-sided picc line: present, course: right subclavian, tip position: proximal to the confluence of the brachiocephalic veins with confidence 90% + evidence: a right-sided picc line is present, with the tip approximately at the confluence of the brachiocephalic veins.
+   - sternal wires: present, course: midline, with confidence 95% + evidence: sternal wires are present, running midline.
+   - surgical clips: present, location: superior mediastinum with confidence 90% + evidence: surgical clips are present in the superior mediastinum.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: there is increased opacity in the right lung, particularly in the lower lung fields. There is also increased opacity in the left lung, particularly in the lower lung fields. There is a possible pleural effusion on the right side.
+   - mediastinum/heart: the mediastinum is widened. The heart size is normal.
+   - diaphragms/upper abdomen: the diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues: the bones are intact. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right lower lobe opacity, possibly pneumonia or atelectasis.
+   - Left lower lobe opacity, possibly pneumonia or atelectasis.
+   - Possible right pleural effusion.
+   - Widened mediastinum.
+   - Tracheostomy tube in place.
+   - Right-sided picc line in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited assessment of the right lower lobe opacity due to overlying structures.
+   - Limited assessment of the left lower lobe opacity due to overlying structures.
+   - The presence and extent of the right pleural effusion cannot be definitively determined.
+   - The cause of the widened mediastinum is unclear.
+
+7) DOMAIN VECTOR

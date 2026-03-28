@@ -1,0 +1,38 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "PORTABLE" label.
+   - portable-likelihood (high) with evidence (label).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (low) with confidence 80 + limited lung volumes.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (limited due to cropping)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker present, pointing to the right. "PORTABLE" label present, top-left.)
+   - presentation/processing cues: contrast (low) with confidence 80 + image appears to be underexposed. edge enhancement (low) with confidence 80 + minimal edge enhancement. inversion suspected (no) with confidence 100 + no obvious signs of inversion. noise texture (low) with confidence 80 + low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - lines/tubes: Indeterminate (no lines/tubes are clearly visible)
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: Lung volumes are low. No obvious consolidation, pleural effusion, or pneumothorax is identified. The lung fields appear relatively clear, although the image is underexposed.
+   - mediastinum/heart: The mediastinum appears within normal limits in size and contour. The heart size is difficult to assess due to low lung volumes.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is poorly visualized due to the low inspiratory effort and cropping.
+   - bones/soft tissues: The bony structures are visible. The right humerus shows evidence of prior surgical fixation.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Low lung volumes.
+   - No acute pulmonary process identified.
+   - Prior surgical fixation of the right humerus.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited visualization of the lung apices and costophrenic angles due to cropping.
+   - Limited visualization of the upper abdomen.
+   - Low lung volumes make assessment of heart size difficult.
+   - Underexposure of the image.
+
+7) DOMAIN VECTOR

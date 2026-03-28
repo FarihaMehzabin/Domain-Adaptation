@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: The image is a PA chest X-ray.
+   - patient position: Upright with confidence 90% + evidence: The patient is in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a standard chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: The image appears to be free of significant rotation. Clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: The lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: There is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image covers the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are well-visualized. The mediastinum is clearly defined. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? Laterality marker is present on the left side. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Cardiac Monitor Leads: Indeterminate, course: unknown, tip position: unknown, confidence: 50%
+   - Central Venous Catheter: Absent, confidence: 95%
+   - Pulmonary Artery Catheter: Absent, confidence: 95%
+   - Chest Tube: Absent, confidence: 95%
+   - NG Tube: Absent, confidence: 95%
+   - IV Catheter: Absent, confidence: 95%
+   - Other: Indeterminate, confidence: 50%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lower lobe: There is a significant opacity in the right lower lobe, which could represent consolidation, atelectasis, or other pathology. The borders are not well-defined.
+     - Left lung: The left lung appears clear.
+     - Pleura: There is no evidence of pleural effusion or pneumothorax.
+   - mediastinum/heart
+     - Mediastinum: The mediastinum is within normal limits.
+     - Heart: The heart size is normal.
+   - diaphragms/upper abdomen
+     - Diaphragms: The diaphragms are well-visualized.
+     - Upper abdomen: The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - Bones: The ribs and clavicles are well-visualized.
+     - Soft tissues: The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right lower lobe opacity, concerning for pneumonia or other process. Further evaluation is warranted.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image quality is adequate, but there are some limitations due to the low contrast and the presence of a burned-in label.
+   - The presence of the cardiac monitor leads is indeterminate.
+   - The location of the catheter is indeterminate.
+
+7) DOMAIN VECTOR

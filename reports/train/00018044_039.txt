@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (semi-erect) with confidence 100 + patient is semi-erect.
+   - portable-likelihood (low) with evidence (image is a single view, no other views are present).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible, but the extent is limited by the cropping.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are visible, but the extent is limited by the cropping. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (No obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the right side is on the right. A burned-in label is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to have low contrast. edge enhancement (low) with confidence 100 + the image does not appear to have edge enhancement. inversion suspected (no) with confidence 100 + no obvious signs of inversion. noise texture (low) with confidence 100 + the image appears to have low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right subclavian line (present) with confidence 100 + The line is seen entering the right subclavian vein.
+   - Left subclavian line (present) with confidence 100 + The line is seen entering the left subclavian vein.
+   - Indeterminate (indeterminate) with confidence 100 + The tip of the right-sided line is not clearly visible.
+   - Indeterminate (indeterminate) with confidence 100 + The tip of the left-sided line is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - The lungs are clear, with no obvious consolidation, effusion, or pneumothorax. The costophrenic angles are obscured.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in size and contour. The heart size is difficult to assess due to the cropping.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible. The upper abdomen is poorly visualized due to the cropping.
+   - bones/soft tissues
+     - The ribs are visible. The spine is visible, with the presence of spinal hardware.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right subclavian line in place.
+   - Left subclavian line in place.
+   - Limited visualization of the chest due to cropping.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited visualization of the apices and costophrenic angles.
+   - Limited visualization of the upper abdomen.
+   - The tip of the right subclavian line is not clearly visible.
+   - The tip of the left subclavian line is not clearly visible.
+
+7) DOMAIN VECTOR

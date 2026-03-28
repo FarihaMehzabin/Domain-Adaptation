@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + the image is labeled "portable".
+   - portable-likelihood (high) with evidence (label "portable").
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the lung fields are not severely underinflated.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat obscured by the patient's body habitus. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present. A burned-in label is present at the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to be a standard chest radiograph. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 100 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian central line: present, course: right subclavian vein, tip position: indeterminate, confidence 80
+   - left subclavian central line: present, course: left subclavian vein, tip position: indeterminate, confidence 80
+   - endotracheal tube: indeterminate, course: trachea, tip position: indeterminate, confidence 50
+   - nasogastric tube: indeterminate, course: esophagus, tip position: indeterminate, confidence 50
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: opacity is present, obscuring the entire right lung field. The opacity is likely a pleural effusion.
+     - left lung: opacity is present, obscuring the entire left lung field. The opacity is likely a pleural effusion.
+     - pleural effusions: present, bilateral, large, obscuring the lung fields.
+   - mediastinum/heart
+     - mediastinum: visible, midline.
+     - heart: visible, size is difficult to assess due to the opacity in the lungs.
+   - diaphragms/upper abdomen
+     - diaphragms: visible, elevated.
+     - upper abdomen: bowel loops are visible, but the visualization is limited by the opacity in the lungs.
+   - bones/soft tissues
+     - ribs: visible.
+     - clavicles: visible, symmetrical.
+     - scapulae: visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral large pleural effusions.
+   - Possible endotracheal tube and nasogastric tube placement, but the tip positions are not clearly visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is a portable AP radiograph, which limits the visualization of the lung apices and costophrenic angles.
+   - The patient's body habitus obscures the visualization of the lung fields.
+   - The tip positions of the central lines are not clearly visualized.
+   - The endotracheal tube and nasogastric tube are not clearly visualized.
+
+7) DOMAIN VECTOR

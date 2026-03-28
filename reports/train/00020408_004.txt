@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection (AP portable) with confidence 100 + image is labeled "AP Portable"
+   - patient position (upright) with confidence 100 + image is upright
+   - portable-likelihood (high) with evidence (label "AP Portable")
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image shows the upper lungs, costophrenic angles are not fully visualized, costal margins are not fully visualized)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are relatively clear, mediastinum is visible, bones are visible, diaphragms are visible, costophrenic angles are not fully visualized
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, burned-in text "AP Portable" is present)
+   - presentation/processing cues: contrast (low) with confidence 100 + edge enhancement is low
+   - inversion suspected (no) with confidence 100
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (present) with confidence 100 + course is visible, tip position is not visible
+   - left subclavian line (present) with confidence 100 + course is visible, tip position is not visible
+   - indeterminate (present) with confidence 100 + no identifiable device
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral diffuse hazy opacities, predominantly in the lung fields, with some increased density in the lower lung zones.
+     - No pleural effusion is identified.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in width.
+     - The heart size is likely normal, although the cardiac silhouette is somewhat obscured by the lung opacities.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible.
+     - The upper abdomen is not well visualized due to the patient's body habitus and the presence of lung opacities.
+   - bones/soft tissues
+     - The bony structures are unremarkable.
+     - No obvious soft tissue abnormalities are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral diffuse hazy opacities, predominantly in the lung fields, with some increased density in the lower lung zones.
+   - The etiology of the lung opacities is uncertain and further evaluation is warranted.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The costophrenic angles are not fully visualized.
+   - The upper abdomen is not well visualized.
+   - The tip position of the subclavian lines is not visible.
+   - The heart size is likely normal, although the cardiac silhouette is somewhat obscured by the lung opacities.
+
+7) DOMAIN VECTOR

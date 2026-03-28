@@ -1,0 +1,53 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 90 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 95 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized due to the image cropping.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are relatively clear, although there are numerous small nodular opacities. The mediastinum is unremarkable. The bones are unremarkable. The diaphragms are unremarkable. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker present, pointing to the left. Burned-in text present, top-left, "RADIOLOGY")
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, tip position not visualized, confidence 80 + an endotracheal tube is present, but the tip position is not clearly visualized.
+   - nasogastric tube (NGT) present, course not visualized, tip position not visualized, confidence 70 + a nasogastric tube is present, but the course and tip position are not clearly visualized.
+   - left subclavian central line present, tip position not visualized, confidence 60 + a left subclavian central line is present, but the tip position is not clearly visualized.
+   - right subclavian central line present, tip position not visualized, confidence 60 + a right subclavian central line is present, but the tip position is not clearly visualized.
+   - arterial line present, tip position not visualized, confidence 50 + an arterial line is present, but the tip position is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - diffuse bilateral nodular opacities are present throughout both lung fields. The opacities are most prominent in the lower lung zones.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum is unremarkable in appearance.
+     - the heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are unremarkable.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are unremarkable.
+     - the clavicles are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - diffuse bilateral nodular opacities throughout both lung fields.
+   - endotracheal tube present, tip position not visualized.
+   - nasogastric tube present, course not visualized, tip position not visualized.
+   - left subclavian central line present, tip position not visualized.
+   - right subclavian central line present, tip position not visualized.
+   - arterial line present, tip position not visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices of the lungs are not fully visualized.
+   - The costophrenic angles are not fully visualized.
+   - The lateral chest walls are not fully visualized.
+   - The tip positions of the endotracheal tube, nasogastric tube, left subclavian central line, right subclavian central line, and arterial line are not clearly visualized.
+
+7) DOMAIN VECTOR

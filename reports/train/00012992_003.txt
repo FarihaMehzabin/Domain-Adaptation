@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is AP.
+   - patient position: portable with confidence 90% + the patient is in a portable position.
+   - portable-likelihood: high with evidence (patient is in a portable setting).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + the patient is in a good inspiratory position.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + no obvious motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are visible. The mediastinum is visible. The bones are visible. The diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are lines present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Port-a-Cath: present, course: right internal jugular vein, tip position: indeterminate, confidence 80% + a port-a-cath is present, but the tip position is not clearly visible.
+   - Indeterminate: present, course: indeterminate, tip position: indeterminate, confidence 10% + an indeterminate device is present.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - There are patchy opacities in the lower lung fields, particularly on the right.
+     - The lung fields appear relatively clear elsewhere.
+     - No pleural effusion is identified.
+   - mediastinum/heart:
+     - The mediastinum appears within normal limits.
+     - The heart size is difficult to assess due to the low inspiratory effort and the presence of overlying structures.
+   - diaphragms/upper abdomen:
+     - The diaphragms are visible.
+     - The upper abdomen is not well visualized due to the low inspiratory effort and the presence of overlying structures.
+   - bones/soft tissues:
+     - The ribs are visible.
+     - The clavicles are visible.
+     - The bones appear intact.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Patchy opacities in the lower lung fields, particularly on the right. Further evaluation with a lateral chest radiograph is recommended to assess for possible pneumonia or other underlying pathology.
+   - Port-a-cath present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is a portable AP radiograph, which limits the assessment of the lung fields and the heart size.
+   - The low inspiratory effort makes it difficult to assess the lung fields and the heart size.
+   - The presence of overlying structures obscures the upper abdomen.
+   - The tip position of the port-a-cath is not clearly visible.
+
+7) DOMAIN VECTOR

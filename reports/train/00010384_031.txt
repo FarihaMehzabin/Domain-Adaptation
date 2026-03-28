@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 95 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 90 + the patient is in an upright position.
+   - portable-likelihood (medium) with evidence (the image is likely a portable chest radiograph, given the lack of a formal radiology department logo and the presence of a tracheostomy tube.)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 95 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 85 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 90 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur (none) with confidence 95 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are no obvious artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Tracheostomy Tube (present) with confidence 95 + A tracheostomy tube is present, terminating in the upper trachea.
+   - Central Venous Catheter (present) with confidence 90 + A central venous catheter is present, terminating in the superior vena cava. The catheter tip is not clearly visualized.
+   - Peripheral IV (present) with confidence 90 + A peripheral IV is present, terminating in the superior vena cava. The catheter tip is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: There is a large opacity in the right lower lung field, obscuring the right hemidiaphragm. The opacity appears to be consolidated.
+     - Left lung: The left lung appears clear.
+     - Pleura: There is no evidence of pleural effusion or pneumothorax.
+   - mediastinum/heart
+     - Mediastinum: The mediastinum is within normal limits in size and contour.
+     - Heart: The heart size is normal.
+   - diaphragms/upper abdomen
+     - Diaphragms: The diaphragms are well-defined.
+     - Upper abdomen: The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - Bones: The ribs and clavicles are intact.
+     - Soft tissues: There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right lower lobe consolidation, concerning for pneumonia.
+   - Central venous catheter in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip of the central venous catheter is not clearly visualized.
+   - The extent of the right lower lobe consolidation is difficult to assess due to the overlying tracheostomy tube.
+   - The patient's clinical history is not available, which limits the ability to fully interpret the findings.
+
+7) DOMAIN VECTOR

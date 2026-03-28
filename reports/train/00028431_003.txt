@@ -1,0 +1,42 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (patient is not in a fixed position).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be relatively free of rotation.
+   - inspiration (adequate) with confidence 90 + the lungs appear to be reasonably inflated.
+   - penetration (adequate) with confidence 95 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the patient's position. The costophrenic angles are not well visualized due to the patient's position. The lateral chest walls are not well visualized due to the patient's position. The image is cropped at the bottom.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat hazy. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not well visualized.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are lines present, likely from the patient's positioning and the equipment. The image is not processed with grid or moiré patterns. There is no obvious banding. There is no obvious detector dropout. There are no obvious compression artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Central Venous Catheter (CVC), right subclavian (present) with confidence 95 + A central venous catheter is present, likely in the right subclavian vein. The catheter tip is not clearly visualized.
+   - Central Venous Catheter (CVC), left subclavian (present) with confidence 95 + A central venous catheter is present, likely in the left subclavian vein. The catheter tip is not clearly visualized.
+   - Indeterminate (indeterminate) with confidence 100 + The tip of the right-sided catheter is not clearly visualized.
+   - Indeterminate (indeterminate) with confidence 100 + The tip of the left-sided catheter is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There are bilateral hazy opacities, particularly in the lower lung fields. The pattern is suggestive of pulmonary edema or possibly atelectasis. The costophrenic angles are not well visualized.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in size and contour. The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible. The upper abdomen is not well visualized due to the patient's position.
+   - bones/soft tissues
+     - The bones are unremarkable. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral hazy opacities, particularly in the lower lung fields, suggestive of pulmonary edema or atelectasis.
+   - Central venous catheters present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The costophrenic angles are not well visualized.
+   - The tip of the central venous catheters is not clearly visualized.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

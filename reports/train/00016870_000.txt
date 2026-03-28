@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is a PA chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 90 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 95 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image shows the upper chest and lower lung fields. The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are clear. The mediastinum is well-defined. The bones are well-defined. The diaphragms are well-defined. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low), edge enhancement (low), inversion suspected (no), noise texture (low)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Cardiac Monitor Leads (present, multiple, course: chest, tip position: unknown) with confidence 90
+   - IV Catheter (present, indeterminate, course: unknown, tip position: unknown) with confidence 70
+   - Other lines/tubes (absent) with confidence 100
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - No focal consolidations are identified.
+     - No pleural effusions are identified.
+     - No pneumothorax is identified.
+   - mediastinum/heart
+     - The heart size is within normal limits.
+     - The mediastinal contours are unremarkable.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined.
+     - The upper abdomen is not well visualized.
+   - bones/soft tissues
+     - The ribs are unremarkable.
+     - The clavicles are unremarkable.
+     - The scapulae are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute cardiopulmonary abnormalities are identified.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices of the lungs are not fully visualized.
+   - The costophrenic angles are not fully visualized.
+   - The lateral chest walls are not fully visualized.
+   - The IV catheter and cardiac monitor leads are not fully visualized.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior (AP) chest X-ray.
+   - patient position: upright with confidence 90% + the patient is likely in an upright position.
+   - portable-likelihood: low with evidence (no obvious signs of a portable exam)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are clear. Mediastinum is visible. Bones are visible. Diaphragms are visible. Costophrenic angles are obscured. with confidence 90%
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: none with confidence 95%
+   - markers/overlays: laterality marker present? burned-in text present?: Laterality marker is present, indicating the left side is on the right. Burned-in text is present in the upper left corner, but the content is unreadable. with confidence 90%
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. Noise texture is low. with confidence 90%
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Central Venous Catheter (CVC): present, right subclavian with confidence 95% + a central venous catheter is present, likely in the right subclavian vein. The catheter tip is not clearly visible.
+   - Indeterminate: indeterminate with confidence 80% + The catheter tip is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - Right lung: opacity present, obscuring the right hemidiaphragm. with confidence 90%
+     - Left lung: clear with confidence 95% + the left lung appears clear.
+     - Pleural effusion: likely present on the right with confidence 90% + there is a large opacity in the right hemithorax, suggestive of a pleural effusion.
+   - mediastinum/heart:
+     - Mediastinum: visible with confidence 90% + the mediastinum is visible and appears unremarkable.
+     - Heart: size appears normal with confidence 85% + the heart size is within normal limits.
+   - diaphragms/upper abdomen:
+     - Diaphragms: visible with confidence 90% + the diaphragms are visible.
+     - Upper abdomen: bowel loops are visible with confidence 80% + bowel loops are visible in the upper abdomen.
+   - bones/soft tissues:
+     - Bones: ribs are visible with confidence 90% + ribs are visible.
+     - Soft tissues: no obvious abnormalities with confidence 90% + no obvious soft tissue abnormalities are present.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large opacity in the right hemithorax, suggestive of a pleural effusion.
+   - Central venous catheter present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is cropped, obscuring the apices and costophrenic angles.
+   - The tip of the central venous catheter is not clearly visible.
+   - The burned-in text is unreadable.
+
+7) DOMAIN VECTOR

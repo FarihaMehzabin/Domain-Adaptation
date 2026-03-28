@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is PA view.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image covers the apices, costophrenic angles, and costal margins).
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are clear, mediastinum is well-defined, bones are visible, and costophrenic angles are sharp.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the image is likely the right side. No burned-in text is visible).
+   - presentation/processing cues: contrast (low) with confidence 100 + image contrast is low. edge enhancement (low) with confidence 100 + edge enhancement is low. inversion suspected (no) with confidence 100 + no evidence of inversion. noise texture (low) with confidence 100 + low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Cardiac Monitor Leads: present, course: bilateral, tip position: unknown, confidence 100.
+   - Indeterminate: absent, course: unknown, tip position: unknown, confidence 100.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Lungs are clear bilaterally without evidence of consolidation, effusion, or pneumothorax.
+     - Pleural surfaces are unremarkable.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in width.
+     - The heart size is normal.
+     - The cardiac silhouette is unremarkable.
+   - diaphragms/upper abdomen
+     - Diaphragms are well-defined.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The bony thorax is intact.
+     - Soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - No acute cardiopulmonary abnormalities identified.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - No acute cardiopulmonary abnormalities identified.
+   - No specific findings to report.
+
+7) DOMAIN VECTOR

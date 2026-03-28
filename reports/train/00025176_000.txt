@@ -1,0 +1,54 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is standing.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image shows the apices, costophrenic angles, and costal margins. The image is cropped, but the lung fields are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear, the mediastinum is well-defined, the bones are visible, and the diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image has low contrast. edge enhancement (low) with confidence 100 + there is no obvious edge enhancement. inversion suspected (no) with confidence 100 + no evidence of inversion. noise texture (low) with confidence 100 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - NG tube (absent) with confidence 100 + no nasogastric tube is visible.
+   - IV line (absent) with confidence 100 + no intravenous line is visible.
+   - ETT (absent) with confidence 100 + no endotracheal tube is visible.
+   - pacemaker (absent) with confidence 100 + no pacemaker is visible.
+   - central line (absent) with confidence 100 + no central line is visible.
+   - chest tube (absent) with confidence 100 + no chest tube is visible.
+   - epidural (absent) with confidence 100 + no epidural catheter is visible.
+   - epidural catheter (absent) with confidence 100 + no epidural catheter is visible.
+   - Foley catheter (absent) with confidence 100 + no Foley catheter is visible.
+   - picc line (absent) with confidence 100 + no picc line is visible.
+   - port-a-cath (absent) with confidence 100 + no port-a-cath is visible.
+   - other (absent) with confidence 100 + no other devices are visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear bilaterally. no focal consolidation, pleural effusion, or pneumothorax is identified.
+     - pleura: unremarkable.
+   - mediastinum/heart
+     - mediastinum: normal size and contour.
+     - heart: normal size and cardiomediastinal silhouette.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - bones: normal bony structures are visualized.
+     - soft tissues: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute cardiopulmonary abnormalities identified.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a single view, which limits the assessment of the lung fields.
+   - The image is cropped, which limits the assessment of the lung fields.
+   - The image is low contrast, which limits the assessment of the lung fields.
+
+7) DOMAIN VECTOR

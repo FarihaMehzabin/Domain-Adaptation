@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection (AP portable) with confidence 100 + image is labeled "AP PORTABLE"
+   - patient position (upright) with confidence 100 + image is upright
+   - portable-likelihood (high) with evidence (label)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image covers the apices, costophrenic angles, and costal margins)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are clear, mediastinum is well-defined, bones are visible, and costophrenic angles are clear
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, burned-in text is present at the top-left)
+   - presentation/processing cues: contrast (low) with confidence 100 + edge enhancement is low, inversion suspected (no) with confidence 100 + noise texture is low
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - left subclavian line (Indeterminate) with confidence 100 + the line is present, but the tip position is not clearly visible.
+   - right subclavian line (Indeterminate) with confidence 100 + the line is present, but the tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs are clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+   - mediastinum/heart
+     - the heart size is normal. The mediastinal contours are unremarkable.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the bony structures are intact. No acute fractures are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute cardiopulmonary abnormalities identified.
+   - Left subclavian line and right subclavian line are present, but the tip positions are not clearly visible.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip position of the left subclavian line and right subclavian line are not clearly visible.
+   - The image is a portable AP view, which may limit the assessment of the lung bases.
+
+7) DOMAIN VECTOR

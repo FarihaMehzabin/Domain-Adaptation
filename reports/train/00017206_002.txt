@@ -1,0 +1,39 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is labeled AP
+   - patient position (portable) with confidence 100 + image is labeled portable
+   - portable-likelihood (high) with evidence (image is a portable chest X-ray)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image shows the upper chest, but the costophrenic angles are not fully visualized due to the portable nature of the image)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are clear, mediastinum is visible, bones are visible, diaphragms are visible, and costophrenic angles are not fully visualized
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the left side is the left)
+   - presentation/processing cues: contrast (low) with confidence 100, edge enhancement (low) with confidence 100, inversion suspected (no) with confidence 100, noise texture (low) with confidence 100
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - central line (likely) with confidence 90 + a central line is present, coursing from the left subclavian vein into the superior vena cava. The tip is not clearly visualized.
+   - indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs are clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+   - mediastinum/heart
+     - the heart size appears mildly enlarged. The mediastinal contours are unremarkable.
+   - diaphragms/upper abdomen
+     - diaphragms are well-defined. The upper abdomen is not well visualized due to the portable nature of the image.
+   - bones/soft tissues
+     - the bony structures are intact.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Central line present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable chest X-ray, which limits the visualization of the costophrenic angles.
+   - The central line tip is not clearly visualized.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: upright with confidence 90% + evidence: the patient is likely in an upright position, as the heart size appears normal and the lung fields are relatively clear.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest radiograph, given the limited field of view and the presence of external lines and devices.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical, suggesting no significant rotation.
+   - inspiration: adequate with confidence 85% + evidence: the lung fields are reasonably well-expanded, and there is no obvious evidence of significant atelectasis or hyperinflation.
+   - penetration: adequate with confidence 90% + evidence: the vertebral bodies are clearly visible behind the heart, indicating adequate penetration.
+   - motion blur: none with confidence 95% + evidence: there is no obvious motion blur in the image.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices of the lungs, the costophrenic angles, and the lateral chest walls. The image is cropped, leaving a small amount of padding on the sides.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are relatively clear, with some increased interstitial markings. The mediastinum is unremarkable. The bones are well-defined. The diaphragms are visible. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: there are several external lines and devices present, including an endotracheal tube, a central venous catheter, and a nasogastric tube. The presence of these lines and devices may introduce artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement. There is no obvious evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube: present, course: midline, tip position: approximately 4 cm above the carina, confidence 95%
+   - central venous catheter: present, course: internal jugular vein, tip position: likely in the superior vena cava, confidence 90%
+   - nasogastric tube: present, course: stomach, tip position: not clearly visible, confidence 70%
+   - lines: indeterminate, course: multiple, tip position: indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: there are diffuse bilateral interstitial opacities, which could represent pulmonary edema, infection, or other inflammatory processes. There is no obvious pleural effusion.
+   - mediastinum/heart: the mediastinum is unremarkable. The heart size appears normal.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is relatively clear.
+   - bones/soft tissues: the bones are well-defined. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - diffuse bilateral interstitial opacities, etiology uncertain.
+   - endotracheal tube in place.
+   - central venous catheter in place.
+   - nasogastric tube in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - limited field of view due to portable nature of the image.
+   - the presence of external lines and devices may introduce artifacts.
+   - the tip position of the nasogastric tube is not clearly visible.
+
+7) DOMAIN VECTOR

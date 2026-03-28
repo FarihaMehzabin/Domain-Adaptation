@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: Image is an anteroposterior (AP) chest X-ray.
+   - patient position: upright with confidence 90% + evidence: The patient is likely in an upright position.
+   - portable-likelihood: medium with evidence: The image is labeled "portable," suggesting it was obtained in a non-hospital setting.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: The clavicles appear symmetrical, suggesting no significant rotation.
+   - inspiration: adequate with confidence 85% + evidence: The lungs appear well-expanded.
+   - penetration: adequate with confidence 90% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: No obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (describe cropping/padding/borders) The image shows the apices of the lungs, costophrenic angles, and costal margins. There is some padding at the costophrenic angles.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? The image has a laterality marker indicating the left side. There is a burned-in label top-left.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line: present, course: right subclavian vein, tip position: indeterminate, confidence 80%
+   - left subclavian line: present, course: left subclavian vein, tip position: indeterminate, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: clear.
+     - left lung: there is a large opacity in the left upper lobe, obscuring the normal lung markings. The costophrenic angle is clear.
+   - mediastinum/heart
+     - heart size: appears normal.
+     - mediastinal contours: normal.
+   - diaphragms/upper abdomen
+     - diaphragms: visible.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: visible.
+     - clavicles: visible.
+     - scapulae: visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Large opacity in the left upper lobe, concerning for possible mass or consolidation. Further evaluation with CT is recommended.
+   - Right subclavian line and left subclavian line are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable chest X-ray, which may have limited anatomical coverage.
+   - The large opacity in the left upper lobe is difficult to characterize on a single AP view.
+   - The tip position of the subclavian lines is indeterminate.
+
+7) DOMAIN VECTOR

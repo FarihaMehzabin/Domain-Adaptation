@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (medium) with evidence (the image is likely a portable chest radiograph due to the limited field of view and potential for patient movement).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be adequately inflated.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized due to the limited field of view.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + the lungs are generally clear, although there is some increased opacity in the right lung field. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. with confidence 95 + there are several lines present in the image, likely representing external lines or leads. There is no evidence of grid/moiré artifacts, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + there is no evidence of image inversion. Noise texture (low) with confidence 90 + the image has low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (Central Line): present, course: right internal jugular vein, tip position: indeterminate, confidence 80
+   - Left Internal Jugular Central Venous Catheter (Central Line): present, course: left internal jugular vein, tip position: indeterminate, confidence 80
+   - Indeterminate: present, course: indeterminate, tip position: indeterminate, confidence 100
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - Right lung: increased opacity in the right lung field, particularly in the perihilar region. The exact etiology is indeterminate.
+     - Left lung: clear. No pleural effusion is identified.
+   - mediastinum/heart:
+     - Mediastinum: well-defined.
+     - Heart: size is difficult to assess due to the limited field of view and the presence of overlying structures.
+   - diaphragms/upper abdomen:
+     - Diaphragms: well-defined.
+     - Upper abdomen: unremarkable.
+   - bones/soft tissues:
+     - Bones: clearly visualized.
+     - Soft tissues: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right lung opacity: indeterminate etiology. Further evaluation with a lateral chest radiograph or CT scan may be warranted to rule out pneumonia, pulmonary edema, or other pathology.
+   - Central lines: present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Limited field of view: the image is a portable chest radiograph, which limits the visualization of the apices, costophrenic angles, and lateral chest walls.
+   - Indeterminate findings: the right lung opacity is indeterminate in etiology.
+   - Central line tip position: the tip position of the central lines is not clearly visualized.
+
+7) DOMAIN VECTOR

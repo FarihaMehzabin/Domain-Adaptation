@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is standing.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 90 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 95 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to be a standard chest radiograph.
+   - edge enhancement (low) with confidence 90 + edge enhancement is present, but not excessive.
+   - inversion suspected (no) with confidence 100 + no evidence of inversion.
+   - noise texture (low) with confidence 95 + the image has a low level of noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Cardiac Monitor Leads (absent) with confidence 100 + no leads are visible.
+   - Central Venous Catheter (indeterminate) with confidence 50 + no catheter is visible.
+   - Pulmonary Artery Catheter (indeterminate) with confidence 50 + no catheter is visible.
+   - Chest Tube (indeterminate) with confidence 50 + no catheter is visible.
+   - NG Tube (indeterminate) with confidence 50 + no catheter is visible.
+   - IV Catheter (indeterminate) with confidence 50 + no catheter is visible.
+   - ETT (indeterminate) with confidence 50 + no catheter is visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - The lungs are clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+   - mediastinum/heart
+     - The mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are intact. The clavicles are intact. The scapulae are intact. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute cardiopulmonary abnormalities identified.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a single view.
+   - No clinical history is available.
+   - The presence of a central line, pulmonary artery catheter, chest tube, NG tube, IV catheter, or ETT cannot be confirmed.
+
+7) DOMAIN VECTOR

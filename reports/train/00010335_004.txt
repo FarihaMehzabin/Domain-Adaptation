@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + evidence: the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence: the image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are fully expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to be a standard chest X-ray with low contrast and no obvious edge enhancement.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - left chest tube: present, course: from the pleural space to the outside of the chest, tip position: not visible. Confidence: 95%
+   - left subclavian line: present, course: from the superior vena cava to the distal tip, tip position: not visible. Confidence: 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There is a large opacity in the left hemithorax, likely representing a pleural effusion. The lung markings are not well-defined in this area.
+     - The right lung appears clear.
+     - There is a left-sided chest tube in place.
+   - mediastinum/heart
+     - The mediastinum is midline.
+     - The heart size is within normal limits.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are intact.
+     - The clavicles are symmetrical.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large left pleural effusion.
+   - Left chest tube in place.
+   - Left subclavian line in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip position of the chest tube and subclavian line is not clearly visible.
+   - The extent of the left pleural effusion is not fully assessed.
+
+7) DOMAIN VECTOR

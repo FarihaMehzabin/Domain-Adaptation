@@ -1,0 +1,55 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + patient is in an upright position.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image shows the apices, costophrenic angles, and lateral chest walls. There is some padding at the costophrenic angles, but the image is not cropped.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear, the mediastinum is well-defined, the bones are visible, and the diaphragms and costophrenic angles are well-visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) (present) with confidence 100 + an endotracheal tube is seen in the trachea.
+   - nasogastric tube (NGT) (present) with confidence 100 + a nasogastric tube is seen coursing into the stomach.
+   - central venous catheter (CVC) (present) with confidence 100 + a central venous catheter is seen in the superior vena cava.
+   - chest tubes (present) with confidence 100 + multiple chest tubes are seen in the pleural space.
+   - pacemaker leads (present) with confidence 100 + pacemaker leads are seen coursing into the right atrium and right ventricle.
+   - lines (present) with confidence 100 + multiple lines are seen in the upper abdomen.
+   - wires (present) with confidence 100 + multiple wires are seen in the upper abdomen.
+   - other (present) with confidence 100 + other devices are seen in the upper abdomen.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - there is a large opacity in the left hemithorax, obscuring the lung markings. This could represent a large pleural effusion, atelectasis, or consolidation.
+     - the right lung appears clear.
+     - there are multiple chest tubes in the left hemithorax.
+   - mediastinum/heart
+     - the mediastinum is midline.
+     - the heart size is difficult to assess due to the large opacity in the left hemithorax.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-visualized.
+     - there are multiple lines and wires in the upper abdomen.
+   - bones/soft tissues
+     - the ribs are visible.
+     - there is some subcutaneous emphysema in the left chest wall.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - large opacity in the left hemithorax, etiology unclear.
+   - multiple chest tubes in the left hemithorax.
+   - subcutaneous emphysema in the left chest wall.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - the large opacity in the left hemithorax makes it difficult to assess the underlying lung parenchyma.
+   - the heart size is difficult to assess due to the large opacity in the left hemithorax.
+   - the presence of multiple lines and wires in the upper abdomen makes it difficult to assess the abdominal organs.
+
+7) DOMAIN VECTOR

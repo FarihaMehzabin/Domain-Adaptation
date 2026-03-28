@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (patient is not in a fixed position).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be relatively free of rotation.
+   - inspiration (adequate) with confidence 90 + the lungs appear to be reasonably inflated.
+   - penetration (adequate) with confidence 95 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the patient's position. The costophrenic angles are not well visualized due to the patient's position. The lateral chest walls are not well visualized due to the patient's position.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat obscured by overlying structures. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not well visualized.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are some lines visible, likely from the patient's positioning or equipment. The presence of these lines is not definitive.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 80 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + there is no obvious sign of inversion. Noise texture (low) with confidence 80 + the noise texture appears to be low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right subclavian catheter (present) with confidence 95 + a catheter is seen in the right subclavian vein, coursing into the superior vena cava. The tip position is not clearly visible.
+   - Left subclavian catheter (present) with confidence 95 + a catheter is seen in the left subclavian vein, coursing into the superior vena cava. The tip position is not clearly visible.
+   - Indeterminate (indeterminate) with confidence 100 + The location of the tip of the right subclavian catheter is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There are bilateral patchy opacities, more prominent in the lower lung fields. The pattern is suggestive of pulmonary edema or infection.
+     - The costophrenic angles are not well visualized.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in size and contour.
+     - The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible.
+     - The upper abdomen is not well visualized.
+   - bones/soft tissues
+     - The ribs are visible.
+     - The clavicles are visible.
+     - The patient has surgical clips in the left upper chest.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral patchy opacities, more prominent in the lower lung fields, suggestive of pulmonary edema or infection.
+   - The tip position of the right subclavian catheter is not clearly visible.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The costophrenic angles are not well visualized.
+   - The tip position of the right subclavian catheter is not clearly visible.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

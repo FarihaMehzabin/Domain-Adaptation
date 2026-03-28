@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: clear visualization of the heart silhouette and lung fields.
+   - patient position: upright with confidence 90% + evidence: the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence: the image appears to be a standard chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the heart silhouette is not rotated.
+   - inspiration: adequate with confidence 90% + evidence: the lung fields are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be cropped, obscuring the apices and costophrenic angles. The lateral chest walls are also partially obscured.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear, the mediastinum is well-defined, the bones are visible, and the diaphragms are visible. The costophrenic angles are not fully visualized due to cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the right. A burned-in label is present in the top-left corner, but the content is not visible.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - pacemaker: present, course: bilateral, tip position: indeterminate, confidence 95% + evidence: two pacemaker leads are visible, coursing from the chest to the neck. The tip positions are not clearly visible.
+   - indwelling lines/tubes: indeterminate, course: indeterminate, tip position: indeterminate, confidence 90% + evidence: no other lines or tubes are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - there are bilateral patchy opacities, predominantly in the lower lung zones. The pattern is not specific, but could represent atelectasis, edema, or early pneumonia.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart:
+     - the heart size is enlarged, with a prominent left ventricle.
+     - the mediastinal contours are unremarkable.
+     - no obvious masses or lymphadenopathy are identified.
+   - diaphragms/upper abdomen:
+     - the diaphragms are well-defined.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues:
+     - the bony structures are intact.
+     - no subcutaneous emphysema is identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - cardiomegaly with left ventricular prominence.
+   - bilateral patchy opacities in the lower lung zones, etiology uncertain.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is cropped, obscuring the apices and costophrenic angles.
+   - The tip positions of the pacemaker leads are not clearly visible.
+   - The patchy opacities in the lower lung zones are not specific and require further evaluation.
+
+7) DOMAIN VECTOR

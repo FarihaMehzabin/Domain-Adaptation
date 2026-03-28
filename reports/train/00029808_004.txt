@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + patient is standing.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image appears to be cropped, with the apices and costophrenic angles not fully visible. The lateral chest walls are also partially obscured.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are visible, but the apices and costophrenic angles are not fully visualized due to cropping. The mediastinum and heart are visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visualized.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (No obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - chest tube (left) present, course: from the left hemithorax to the midline, tip position: indeterminate (due to cropping). Confidence: 90
+   - chest tube (right) present, course: from the right hemithorax to the midline, tip position: indeterminate (due to cropping). Confidence: 90
+   - endotracheal tube present, course: from the trachea to the carina, tip position: indeterminate (due to cropping). Confidence: 90
+   - nasogastric tube present, course: from the nose to the stomach, tip position: indeterminate (due to cropping). Confidence: 90
+   - central line (right subclavian) present, course: from the right subclavian vein to the superior vena cava, tip position: indeterminate (due to cropping). Confidence: 90
+   - pacemaker/defibrillator present, course: from the right atrium to the right ventricle, tip position: indeterminate (due to cropping). Confidence: 90
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There is a large opacity in the left hemithorax, obscuring the lung markings. The right lung appears relatively clear. There is a possible pleural effusion in the left hemithorax.
+   - mediastinum/heart
+     - The mediastinum is midline. The heart size is difficult to assess due to the opacity in the left hemithorax.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible. The upper abdomen is partially visualized.
+   - bones/soft tissues
+     - The ribs are visible. The clavicles are visible. The sternum is visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large opacity in the left hemithorax, concerning for possible pneumonia, atelectasis, or pleural effusion.
+   - Presence of multiple chest tubes.
+   - Presence of other lines/tubes.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are not fully visualized due to cropping.
+   - The tip positions of the chest tubes and other lines/tubes are indeterminate due to cropping.
+   - The heart size is difficult to assess due to the opacity in the left hemithorax.
+
+7) DOMAIN VECTOR

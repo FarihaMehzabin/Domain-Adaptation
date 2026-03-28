@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: upright with confidence 90% + evidence: the patient is likely in an upright position.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest radiograph, but the quality is adequate.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + evidence: the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are several lines present in the image, likely from external devices. The presence of these lines is not unusual in portable radiographs.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube: present, course: midline, tip position: not visible, confidence 80%
+   - nasogastric tube: present, course: midline, tip position: not visible, confidence 80%
+   - central venous catheter: present, course: right subclavian, tip position: not visible, confidence 80%
+   - left subclavian line: present, course: left subclavian, tip position: not visible, confidence 80%
+   - right atrial catheter: present, course: right atrium, tip position: not visible, confidence 80%
+   - pacemaker/ICD: present, course: right atrium, tip position: not visible, confidence 80%
+   - chest tube: absent
+   - arterial line: absent
+   - Foley catheter: absent
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: there are bilateral opacities in the lower lung fields, which could be due to pleural effusions or atelectasis. The lung fields are otherwise clear.
+   - mediastinum/heart: the mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is unremarkable.
+   - bones/soft tissues: the ribs are visible. The clavicles are visible.
+
+5) IMPRESSION
+   - Bilateral lower lung field opacities, likely representing pleural effusions or atelectasis.
+   - Multiple lines are present, likely from external devices.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip positions of the central venous catheter, nasogastric tube, left subclavian line, right atrial catheter, and pacemaker/ICD are not clearly visible.
+   - The presence of lines in the image is not unusual in portable radiographs, but their exact course and tip positions are not known.
+
+7) DOMAIN VECTOR

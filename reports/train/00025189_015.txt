@@ -1,0 +1,42 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is taken from the front, with the patient's chest facing the detector.
+   - patient position: portable with confidence 90% + evidence: the image is taken in a portable setting, likely in a hospital bed.
+   - portable-likelihood: high with evidence: the image is taken in a portable setting, likely in a hospital bed.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: the lung fields are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: the image is sharp and clear.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are well-visualized, the mediastinum is clearly defined, the bones are sharp, and the diaphragms and costophrenic angles are well-defined.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to be processed with low contrast and low edge enhancement.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube: present, course: midline, tip position: not visualized, confidence 90%
+   - nasogastric tube: present, course: midline, tip position: not visualized, confidence 90%
+   - central venous catheter: present, course: right subclavian, tip position: not visualized, confidence 90%
+   - left subclavian line: present, course: left subclavian, tip position: not visualized, confidence 90%
+   - right atrial catheter: present, course: right atrium, tip position: not visualized, confidence 90%
+   - arterial line: present, course: radial artery, tip position: not visualized, confidence 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: there is a large opacity in the left lower lung field, obscuring the costophrenic angle. There is also a smaller opacity in the right lower lung field. The lung fields appear otherwise clear. There is no evidence of pneumothorax.
+   - mediastinum/heart: the mediastinum is within normal limits. The heart size is difficult to assess due to the overlying opacity.
+   - diaphragms/upper abdomen: the diaphragms are well-visualized. The upper abdomen is unremarkable.
+   - bones/soft tissues: the bones are intact. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Large opacity in the left lower lung field, concerning for pneumonia or other process.
+   - Smaller opacity in the right lower lung field, concerning for pneumonia or other process.
+   - Endotracheal tube and nasogastric tube are present.
+   - Central venous catheter, left subclavian line, right atrial catheter, and arterial line are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip position of the central venous catheter, left subclavian line, right atrial catheter, and arterial line are not visualized.
+   - The heart size is difficult to assess due to the overlying opacity.
+   - The exact cause of the lung opacities is not known.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is PA view.
+   - patient position (upright) with confidence 100 + patient is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image shows the entire chest, including the apices, costophrenic angles, and lateral chest walls. There is no evidence of cropping or padding.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are well-aerated. The mediastinum is clearly visible. The bones are well-defined. The diaphragms are visible. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - NG tube (present) with confidence 100 + an NG tube is seen coursing into the stomach.
+   - Central line (present) with confidence 100 + a central line is seen coursing into the superior vena cava.
+   - ETT (present) with confidence 100 + an ETT is seen coursing into the trachea.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There are bilateral patchy opacities, predominantly in the lower lung zones. The opacities are more prominent in the right lower lobe.
+     - No pleural effusion is identified.
+     - No pneumothorax is identified.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in width.
+     - The heart size is normal.
+     - No obvious cardiomegaly is present.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are intact.
+     - The clavicles are intact.
+     - The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral patchy opacities, predominantly in the lower lung zones, concerning for pneumonia or other inflammatory process.
+   - NG tube, central line, and ETT are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The patchy opacities are difficult to fully characterize without additional imaging.
+   - The extent of the opacities is not fully defined.
+   - The underlying etiology of the opacities is unknown.
+
+7) DOMAIN VECTOR

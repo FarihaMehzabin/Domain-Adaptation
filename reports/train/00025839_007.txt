@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (patient is not in a fixed position).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be relatively rotation-free.
+   - inspiration (adequate) with confidence 90 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 95 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the patient's position. The costophrenic angles are not well visualized due to the patient's position. The lateral chest walls are not well visualized due to the patient's position. The image is cropped at the top and bottom.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are clear. The mediastinum is well-defined. The bones are well-defined. The diaphragms are well-defined. The costophrenic angles are not well visualized.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are lines present, likely from the patient's positioning and the equipment. The image does not show any signs of grid/moiré, banding, detector dropout, or compression artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian central line (present) with confidence 95 + a central line is present in the right subclavian vein. The tip is not clearly visualized.
+   - left subclavian central line (present) with confidence 95 + a central line is present in the left subclavian vein. The tip is not clearly visualized.
+   - endotracheal tube (present) with confidence 90 + an endotracheal tube is present, terminating approximately 4 cm above the carina.
+   - nasogastric tube (present) with confidence 80 + a nasogastric tube is present, coursing below the diaphragm, but the tip is not visualized.
+   - right picc line (present) with confidence 90 + a picc line is present in the right upper extremity. The tip is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There is increased opacity in the right lower lung field, which could represent consolidation, atelectasis, or other pathology. The left lung appears clear. There is no evidence of pleural effusion or pneumothorax.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in size and contour. The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The bones are intact. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Increased opacity in the right lower lung field.
+   - Endotracheal tube in place.
+   - Nasogastric tube in place.
+   - Central lines in place.
+   - Right picc line in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The costophrenic angles are not well visualized.
+   - The apices are not well visualized.
+   - The tip of the nasogastric tube is not visualized.
+   - The tip of the central lines is not visualized.
+   - The tip of the right picc line is not visualized.
+
+7) DOMAIN VECTOR

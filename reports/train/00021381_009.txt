@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (high) with evidence (portable equipment visible in the background).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not fully visualized due to the patient's position. The costophrenic angles are visible. The lateral chest walls are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate) with evidence (lines are present, but their origin is unclear).
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. Burned-in text is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian central line (present) with confidence 100 + a central line is present in the right subclavian vein. The tip is not visualized.
+   - right internal jugular central line (present) with confidence 100 + a central line is present in the right internal jugular vein. The tip is not visualized.
+   - right chest tube (present) with confidence 100 + a chest tube is present in the right hemithorax. The tip is not visualized.
+   - left subclavian central line (present) with confidence 100 + a central line is present in the left subclavian vein. The tip is not visualized.
+   - right picc line (present) with confidence 100 + a picc line is present in the right upper extremity. The tip is not visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a large opacity in the right lower lung field, which could represent a pleural effusion, atelectasis, or consolidation. The right costophrenic angle is blunted, suggesting a possible pleural effusion. There is also some increased opacity in the right mid lung field.
+     - left lung: the left lung appears clear.
+   - mediastinum/heart
+     - the mediastinum is midline. The heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are intact. The clavicles are intact.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right lower lung opacity, possibly representing a pleural effusion, atelectasis, or consolidation.
+   - Right chest tube in place.
+   - Central lines in place.
+   - Right picc line in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip of the chest tube is not visualized.
+   - The tip of the central lines is not visualized.
+   - The tip of the picc line is not visualized.
+   - The apices of the lungs are not fully visualized.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is labeled AP
+   - patient position (supine) with confidence 100 + image is labeled "SUPINE"
+   - portable-likelihood (high) with evidence (image is portable)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image shows the upper chest, but the apices and costophrenic angles are not fully visualized due to the supine position and the extent of the image)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are clear, mediastinum is well-defined, bones are visible, and diaphragms are visible. Costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, pointing to the left. Burned-in label top-left)
+   - presentation/processing cues: contrast (low) with confidence 100, edge enhancement (low) with confidence 100, inversion suspected (no) with confidence 100, noise texture (low) with confidence 100
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Lumbar Drain (present) with confidence 100 + the lumbar drain is visible in the lower abdomen.
+   - Post-op Spigots (present) with confidence 100 + the post-op spigots are visible in the lower abdomen.
+   - IV Catheter (indeterminate) with confidence 100 + no IV catheter is visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Lungs are clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in size and contour. The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The bony structures are intact. No acute fractures are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute cardiopulmonary abnormalities identified.
+   - Lumbar drain and post-op spigots are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices and costophrenic angles are not fully visualized due to the supine position and the extent of the image.
+   - The presence of the lumbar drain and post-op spigots are noted.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + image is a portable chest radiograph.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the patient is likely in a supine or semi-erect position.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and the lateral chest walls. The costophrenic angles are not fully visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are diffusely hazy and ill-defined. The mediastinum is not well-visualized due to the patient's body habitus and the low inspiration. The bones are unremarkable. The diaphragms are not well-visualized due to the low inspiration.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (No obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to have low contrast. edge enhancement (low) with confidence 90 + edge enhancement is minimal. inversion suspected (no) with confidence 100 + no evidence of image inversion. noise texture (low) with confidence 90 + the noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian central line: present, course: right subclavian vein to superior vena cava, tip position: not visualized, confidence 80
+   - indeterminate: indeterminate, course: not visualized, tip position: not visualized, confidence 10
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - diffuse bilateral infiltrates are present throughout both lung fields. The infiltrates appear to be relatively uniform in density. The pleural surfaces are not well-visualized.
+   - mediastinum/heart
+     - the mediastinum is not well-visualized due to the patient's body habitus and the low inspiration. The heart size is not accurately assessed.
+   - diaphragms/upper abdomen
+     - the diaphragms are not well-visualized due to the low inspiration. The upper abdomen is not well-visualized.
+   - bones/soft tissues
+     - the bones are unremarkable. Soft tissue structures are not well-visualized.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - diffuse bilateral pulmonary infiltrates.
+   - right subclavian central line is present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable chest radiograph, which is limited in its ability to provide a comprehensive assessment.
+   - The patient is in a low-inspiration, which limits the visualization of the lung bases and diaphragms.
+   - The mediastinum and heart size are not accurately assessed.
+   - The tip position of the central line is not visualized.
+
+7) DOMAIN VECTOR

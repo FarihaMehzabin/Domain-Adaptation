@@ -1,0 +1,42 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: upright with confidence 90% + evidence: the patient is likely in an upright position.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest radiograph, but the quality is adequate.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + evidence: the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving the upper abdomen and lower chest somewhat obscured.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are multiple lines and tubes present in the image. The presence of multiple lines and tubes is likely due to the patient's underlying medical condition.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present. There is a burned-in label top-left.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (Central Line): Present, course: right internal jugular vein, tip position: indeterminate, confidence 80%.
+   - Left Internal Jugular Central Venous Catheter (Central Line): Present, course: left internal jugular vein, tip position: indeterminate, confidence 80%.
+   - Multiple other lines/tubes: Present, course: various locations, tip position: indeterminate, confidence 70%.
+   - Chest Tube: Present, course: right hemithorax, tip position: indeterminate, confidence 70%.
+   - Nasogastric Tube: Present, course: stomach, tip position: indeterminate, confidence 70%.
+   - Other lines/tubes: Present, course: various locations, tip position: indeterminate, confidence 70%.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: The lungs are clear bilaterally. There is no evidence of focal consolidation, pleural effusion, or pneumothorax.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is somewhat obscured by the image cropping.
+   - bones/soft tissues: The ribs are visible. The clavicles are visible. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Multiple central venous catheters and other lines/tubes are present.
+   - The lungs are clear.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is cropped, obscuring the upper abdomen and lower chest.
+   - The tip positions of the central venous catheters are indeterminate.
+   - The presence of multiple lines/tubes is likely due to the patient's underlying medical condition.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + the image is labeled "portable".
+   - portable-likelihood (high) with evidence (label "portable").
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the image is a supine AP.
+   - penetration (adequate) with confidence 90 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are not well visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (lungs: limited due to cropping. Mediastinum: adequate. Bones: adequate. Diaphragms: adequate. Costophrenic angles: obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker present, pointing to the right. Burned-in text "L" is present in the lower left corner.)
+   - presentation/processing cues: contrast (low) with confidence 70 + the image appears to have low contrast. Edge enhancement (low) with confidence 60 + edge enhancement is minimal. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 70 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, tip position not visualized, confidence 60 + the tip of the ETT is not clearly visualized.
+   - nasogastric tube (NGT) present, course not visualized, tip position not visualized, confidence 50 + the tip of the NGT is not clearly visualized.
+   - central venous catheter (CVC) present, course not visualized, tip position not visualized, confidence 50 + the tip of the CVC is not clearly visualized.
+   - left subclavian line present, course not visualized, tip position not visualized, confidence 50 + the tip of the left subclavian line is not clearly visualized.
+   - right subclavian line present, course not visualized, tip position not visualized, confidence 50 + the tip of the right subclavian line is not clearly visualized.
+   - indwelling urinary catheter (IUC) present, course not visualized, tip position not visualized, confidence 50 + the tip of the IUC is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral diffuse opacities, predominantly in the lower lung zones, with some involvement of the upper lung zones. The opacities are not well-defined and may represent pulmonary edema, consolidation, or other infiltrates.
+     - no obvious pleural effusion.
+   - mediastinum/heart
+     - the mediastinum is unremarkable.
+     - the heart size is difficult to assess due to the low inspiration and the presence of opacities.
+   - diaphragms/upper abdomen
+     - the diaphragms are not well visualized due to the low inspiration and the presence of opacities.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the bones are unremarkable.
+     - no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - bilateral diffuse pulmonary opacities, etiology uncertain.
+   - endotracheal tube, nasogastric tube, central venous catheter, left subclavian line, right subclavian line, and indwelling urinary catheter are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - low inspiration.
+   - limited visualization of the apices and costophrenic angles due to cropping.
+   - limited visualization of the tip of the endotracheal tube, nasogastric tube, central venous catheter, left subclavian line, right subclavian line, and indwelling urinary catheter.
+   - the etiology of the pulmonary opacities is uncertain.
+
+7) DOMAIN VECTOR

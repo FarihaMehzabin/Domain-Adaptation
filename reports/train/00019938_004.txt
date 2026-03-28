@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be relatively free of rotation.
+   - inspiration (adequate) with confidence 100 + the image appears to be adequately inspiratory.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + the image appears to be free of significant motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the patient's position. The costophrenic angles are not well visualized due to the patient's position. The lateral chest walls are not well visualized due to the patient's position. The image is cropped at the bottom.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + the lungs are somewhat obscured by overlying structures. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not well visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. with confidence 90 + there are multiple lines present in the image, likely representing medical devices. There is no evidence of grid or moiré artifacts. There is no evidence of banding. There is no evidence of detector dropout. There is no evidence of compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (The laterality marker is present and indicates the left side is on the left. There is a burned-in label top-left.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) with confidence 90 + the image appears to have low contrast. Edge enhancement is present. There is no evidence of inversion. The noise texture appears to be low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (Central Line): Present, course: right internal jugular vein, tip position: indeterminate, confidence 95
+   - Left Internal Jugular Central Venous Catheter (Central Line): Present, course: left internal jugular vein, tip position: indeterminate, confidence 95
+   - Multiple Peripheral IV Lines: Present, course: indeterminate, tip position: indeterminate, confidence 90
+   - EKG Leads: Present, course: indeterminate, tip position: indeterminate, confidence 90
+   - Indeterminate: Present, course: indeterminate, tip position: indeterminate, confidence 90
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Bilateral diffuse hazy opacities are present throughout both lung fields, suggestive of pulmonary edema. The opacities are more prominent in the perihilar regions.
+     - No pleural effusion is identified.
+   - mediastinum/heart
+     - The mediastinum appears relatively normal in width.
+     - The heart size is difficult to assess due to the diffuse opacities.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible.
+     - The upper abdomen is not well visualized due to the patient's position and the presence of overlying structures.
+   - bones/soft tissues
+     - The ribs are visible.
+     - The clavicles are visible.
+     - The patient's position limits the visualization of the lateral chest walls.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral pulmonary edema.
+   - Central venous catheters are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Limited visualization of the apices, costophrenic angles, and lateral chest walls due to the patient's position and the presence of overlying structures.
+   - The heart size is difficult to assess due to the diffuse opacities.
+   - The tip positions of the central venous catheters are indeterminate.
+
+7) DOMAIN VECTOR

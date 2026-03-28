@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is standing.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image shows the apices, costophrenic angles, and lateral chest walls. There is some padding at the costophrenic angles, but the image is not cropped.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear, the mediastinum is well-defined, the bones are visible, and the diaphragms and costophrenic angles are well-visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image has low contrast. edge enhancement (low) with confidence 100 + there is no obvious edge enhancement. inversion suspected (no) with confidence 100 + no evidence of inversion. noise texture (low) with confidence 100 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Cardiac Monitor Leads (absent) with confidence 100 + no leads are visible.
+   - Central Venous Catheter (indeterminate) with confidence 50 + no catheter is visible.
+   - Pulmonary Artery Catheter (indeterminate) with confidence 50 + no catheter is visible.
+   - Chest Tube (indeterminate) with confidence 50 + no catheter is visible.
+   - NG Tube (indeterminate) with confidence 50 + no catheter is visible.
+   - IV Catheter (indeterminate) with confidence 50 + no catheter is visible.
+   - Swan-Ganz Catheter (indeterminate) with confidence 50 + no catheter is visible.
+   - Pacemaker (indeterminate) with confidence 50 + no device is visible.
+   - ICD (indeterminate) with confidence 50 + no device is visible.
+   - Arterial Line (indeterminate) with confidence 50 + no device is visible.
+   - Other (indeterminate) with confidence 50 + no other device is visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - The lungs are clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+   - mediastinum/heart
+     - The mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-visualized. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The bones are intact. No acute fractures are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute cardiopulmonary abnormalities identified.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image quality is adequate, but the low contrast may limit the ability to detect subtle findings.
+   - The absence of any devices makes it difficult to assess for the presence of any lines or tubes.
+   - The image is a single view, which limits the assessment of the lung fields.
+
+7) DOMAIN VECTOR

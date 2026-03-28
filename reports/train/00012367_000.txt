@@ -1,0 +1,43 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + the image is labeled "portable".
+   - portable-likelihood (high) with evidence (label "portable").
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the image is likely obtained in a patient who is not fully inspiratory.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are visible, but the image is cropped. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (No obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 80 + the image appears to have low contrast. edge enhancement (low) with confidence 80 + the image appears to have low edge enhancement. inversion suspected (no) with confidence 100 + no obvious signs of inversion are present. noise texture (low) with confidence 80 + the image appears to have low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - NG tube (present) with confidence 90 + an NG tube is seen coursing from the nose to the stomach. The tip is not clearly visualized.
+   - Central line (present) with confidence 90 + a central line is seen coursing from the subclavian vein to the superior vena cava. The tip is not clearly visualized.
+   - Indeterminate (indeterminate) with confidence 100 + no other devices are clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There are multiple bilateral pulmonary opacities, predominantly in the lower lung zones. The opacities are not well-defined and may represent consolidation, edema, or other processes.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in size and contour. The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible. The upper abdomen is not well visualized due to the image being cropped.
+   - bones/soft tissues
+     - The ribs are visible. The clavicles are visible. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral pulmonary opacities, likely representing pneumonia or other inflammatory process.
+   - NG tube and central line are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable chest X-ray, which may be limited in its ability to fully evaluate the chest.
+   - The image is cropped, obscuring the apices and costophrenic angles.
+   - The inspiration is low, which may affect the visualization of the lung fields.
+   - The tip of the NG tube and central line are not clearly visualized.
+
+7) DOMAIN VECTOR

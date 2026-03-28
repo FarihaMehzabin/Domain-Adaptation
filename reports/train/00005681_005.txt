@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (supine) with confidence 100 + patient is lying flat on their back.
+   - portable-likelihood (high) with evidence (image is on a portable machine).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the lung volumes appear low.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also not fully visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs appear diffusely hazy. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visualized due to cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (No obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 80 + the image appears to have low contrast. edge enhancement (low) with confidence 80 + edge enhancement is present, but subtle. inversion suspected (no) with confidence 100 + no evidence of inversion. noise texture (low) with confidence 80 + the noise texture appears low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, tip position not visible, confidence 90 + an endotracheal tube is present, but the tip position is not clearly visualized.
+   - nasogastric tube (NGT) present, course not visible, tip position not visible, confidence 80 + a nasogastric tube is present, but the course and tip position are not clearly visualized.
+   - right internal jugular central venous catheter (IJCV) present, tip position not visible, confidence 90 + a right internal jugular central venous catheter is present, but the tip position is not clearly visualized.
+   - arterial line present, tip position not visible, confidence 80 + an arterial line is present, but the tip position is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - diffuse bilateral opacities, predominantly in the lung fields, with a ground-glass appearance.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum appears within normal limits in size and contour.
+     - the heart size is difficult to assess due to the low lung volumes and diffuse opacities.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is not well visualized due to the low lung volumes and cropping.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - diffuse bilateral pulmonary opacities, likely representing pulmonary edema or other diffuse lung process.
+   - endotracheal tube, nasogastric tube, right internal jugular central venous catheter, and arterial line are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable chest X-ray, which may be limited in terms of image quality and anatomical coverage.
+   - The lung volumes are low, which can make it difficult to assess the heart size and visualize the lung bases.
+   - The image is cropped, which limits the visualization of the apices and lateral chest walls.
+   - The tip positions of the central lines and arterial line are not clearly visualized.
+
+7) DOMAIN VECTOR

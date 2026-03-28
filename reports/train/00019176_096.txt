@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior (AP) chest radiograph.
+   - patient position: portable with confidence 90% + the patient is in a portable position.
+   - portable-likelihood: high with evidence (patient is not in a fixed position).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are relatively clear, but there are diffuse bilateral opacities. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are several lines present, likely representing external devices. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: unknown, confidence 90% + an endotracheal tube is present, but the tip position is not clearly visible.
+   - nasogastric tube: present, course: unknown, tip position: unknown, confidence 70% + a nasogastric tube is present, but the tip position is not clearly visible.
+   - central venous catheter: present, course: right subclavian, tip position: proximal to the junction of the superior vena cava and right atrium, confidence 95% + a central venous catheter is present, coursing from the right subclavian vein. The tip is located proximal to the junction of the superior vena cava and right atrium.
+   - arterial line: present, course: unknown, tip position: unknown, confidence 60% + an arterial line is present, but the tip position is not clearly visible.
+   - chest tube: indeterminate, course: unknown, tip position: unknown, confidence 50% + there is no clear evidence of a chest tube.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: bilateral diffuse opacities are present, predominantly in the lung bases. There is no evidence of pleural effusion.
+   - mediastinum/heart: The mediastinum is unremarkable. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is unremarkable.
+   - bones/soft tissues: The bones are unremarkable. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral diffuse opacities, predominantly in the lung bases.
+   - Endotracheal tube present, but tip position not clearly visualized.
+   - Nasogastric tube present, but tip position not clearly visualized.
+   - Central venous catheter present, tip position proximal to the junction of the superior vena cava and right atrium.
+   - Arterial line present, but tip position not clearly visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Tip positions of the endotracheal tube, nasogastric tube, arterial line, and chest tube are not clearly visualized.
+   - The image is a portable AP radiograph, which may be limited in its ability to fully evaluate the chest.
+
+7) DOMAIN VECTOR

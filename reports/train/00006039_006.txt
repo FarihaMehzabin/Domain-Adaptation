@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is taken from the front, with the patient's chest facing the detector.
+   - patient position: semi-erect with confidence 90% + evidence: the patient is not fully upright, and the image is not fully lateral.
+   - portable-likelihood: medium with evidence: the image appears to be taken in a portable setting, given the lack of a dedicated radiology room.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no obvious motion artifact.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (describe cropping/padding/borders) The image is cropped, with the apices and costophrenic angles being cut off. The costal margins are not fully visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are relatively clear, but there is some increased opacity in the lower lung fields. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are not fully visible due to cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (describe only location, not content) A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) The image appears to be processed with low contrast and low edge enhancement.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube: present, tip position: approximately 4 cm above the carina with confidence 95% + evidence: the endotracheal tube is visible in the upper trachea.
+   - nasogastric tube: present, course: traverses the esophagus and stomach, tip position: not clearly visible with confidence 60% + evidence: the nasogastric tube is seen coursing through the esophagus and stomach, but the tip is not clearly visualized.
+   - left subclavian line: present, course: terminates in the superior vena cava with confidence 95% + evidence: the left subclavian line is visible, terminating in the superior vena cava.
+   - right subclavian line: present, course: terminates in the superior vena cava with confidence 95% + evidence: the right subclavian line is visible, terminating in the superior vena cava.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: increased opacity in the lower lung fields bilaterally, likely representing a combination of atelectasis and pleural effusion. The right lung appears relatively clear.
+   - mediastinum/heart: the mediastinum is within normal limits. The heart size is difficult to assess due to the increased opacity in the lower lung fields.
+   - diaphragms/upper abdomen: the diaphragms are well-defined. The upper abdomen is not well visualized due to the patient's body habitus and the image cropping.
+   - bones/soft tissues: the bones are intact. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral lower lung field opacities, likely representing a combination of atelectasis and pleural effusion.
+   - Endotracheal tube in appropriate position.
+   - Nasogastric tube present, but tip not clearly visualized.
+   - Central venous access lines present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited visualization of the upper abdomen.
+   - The tip of the nasogastric tube is not clearly visualized.
+   - The lower lung fields are difficult to assess due to the increased opacity.
+
+7) DOMAIN VECTOR

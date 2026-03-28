@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: The image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + evidence: The patient is likely in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a standard chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: Clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: The lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: Vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + evidence: No obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be adequately cropped to include the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - chest tube (left): present, course: left chest, tip position: indeterminate, confidence 90%
+   - chest tube (right): present, course: right chest, tip position: indeterminate, confidence 90%
+   - endotracheal tube: absent, confidence 95%
+   - nasogastric tube: absent, confidence 95%
+   - central line: absent, confidence 95%
+   - pacemaker/ICD: absent, confidence 95%
+   - other lines/tubes: indeterminate, confidence 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - left lung: there is a large opacity in the left hemithorax, obscuring the lung markings. There is also a pleural effusion.
+     - right lung: clear.
+   - mediastinum/heart
+     - mediastinum: midline.
+     - heart: size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: visible.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: visible.
+     - clavicles: visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large opacity in the left hemithorax with associated pleural effusion.
+   - Two chest tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Tip position of the chest tubes is indeterminate.
+   - The extent of the left lung opacity is not fully defined.
+   - The presence of any other lines or tubes is indeterminate.
+
+7) DOMAIN VECTOR

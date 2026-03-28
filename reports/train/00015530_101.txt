@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (supine) with confidence 100 + patient is supine.
+   - portable-likelihood (high) with evidence (portable equipment present).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + posterior rib count is difficult to estimate.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are not well visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (limited due to cropping).
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate).
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. Burned-in text is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 80 + the image appears to be underexposed. Edge enhancement (low) with confidence 80 + edge enhancement is not apparent. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 80 + the noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, course: midline, tip position: not visualized, confidence 60
+   - nasogastric tube (NGT) present, course: midline, tip position: not visualized, confidence 60
+   - central venous catheter (CVC) present, course: right subclavian, tip position: not visualized, confidence 70
+   - chest tubes (2) present, course: bilateral, tip position: not visualized, confidence 70
+   - lines (multiple) present, course: indeterminate, tip position: indeterminate, confidence 50
+   - picc line present, course: right upper extremity, tip position: not visualized, confidence 50
+   - other lines present, course: indeterminate, tip position: indeterminate, confidence 50
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral diffuse opacities, predominantly in the lower lung zones, with a perihilar distribution. The opacities are hazy and indistinct.
+     - possible pleural effusions, difficult to assess due to the low inspiration and cropping.
+   - mediastinum/heart
+     - the mediastinum is relatively clear, although the borders are not well defined due to the low inspiration and the presence of multiple lines.
+     - the heart size is difficult to assess due to the low inspiration and the presence of multiple lines.
+   - diaphragms/upper abdomen
+     - the diaphragms are elevated.
+     - the upper abdomen is not well visualized due to the cropping.
+   - bones/soft tissues
+     - the ribs are not well visualized due to the low inspiration.
+     - the clavicles are symmetrical.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - bilateral diffuse lung opacities, likely representing pulmonary edema or pneumonia.
+   - possible pleural effusions.
+   - multiple lines and tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is cropped, obscuring the apices and costophrenic angles.
+   - The inspiration is low, making it difficult to assess the lung volumes and the presence of pleural effusions.
+   - The presence of multiple lines and tubes makes it difficult to visualize the internal structures.
+   - The image quality is suboptimal due to the low contrast and the presence of noise.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the patient's position. The costophrenic angles are not well visualized due to the patient's position. The lateral chest walls are not well visualized due to the patient's position.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are relatively clear, although there is some increased opacity in the lung fields. The mediastinum is well-defined. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are not well visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. with confidence 100 + there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (There is a laterality marker present. There is a burned-in label top-left.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) with confidence 100 + the image appears to be a standard chest radiograph with low contrast and no obvious processing artifacts.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right internal jugular central venous catheter (IJCV) with confidence 95 + a right internal jugular central venous catheter is present. The catheter tip is likely in the superior vena cava, but the exact tip position is not clearly visualized.
+   - left subclavian central venous catheter (SCCV) with confidence 95 + a left subclavian central venous catheter is present. The catheter tip is likely in the superior vena cava, but the exact tip position is not clearly visualized.
+   - enteric tube with confidence 90 + an enteric tube is present. The tip is likely in the stomach, but the exact tip position is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura with confidence 90 + there is increased opacity in the lung fields, which could be due to pulmonary edema, atelectasis, or other processes. The costophrenic angles are not well visualized.
+   - mediastinum/heart with confidence 95 + the mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen with confidence 90 + the diaphragms are well-visualized. The upper abdomen is relatively clear.
+   - bones/soft tissues with confidence 95 + the bones are well-visualized. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Increased opacity in the lung fields, etiology unclear.
+   - Central venous catheters present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Costophrenic angles not well visualized.
+   - Exact tip position of central venous catheters not clearly visualized.
+   - Etiology of increased lung opacity not determined.
+
+7) DOMAIN VECTOR

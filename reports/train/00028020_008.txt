@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (patient is not in a fixed position).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be relatively rotation-free.
+   - inspiration (adequate) with confidence 90 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 95 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the patient's position. The costophrenic angles are not well visualized due to the patient's position. The lateral chest walls are not well visualized due to the patient's position.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat obscured by overlying structures. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not well visualized.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are several lines present, likely from medical devices. The presence of these lines obscures the image.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 80 + the image appears to be under-processed. edge enhancement (low) with confidence 70 + there is minimal edge enhancement. inversion suspected (no) with confidence 100 + there is no obvious sign of inversion. noise texture (low) with confidence 85 + the noise texture appears to be low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (Right IJ CVC): present, course: right internal jugular vein, tip position: indeterminate, confidence 80
+   - Left Internal Jugular Central Venous Catheter (Left IJ CVC): present, course: left internal jugular vein, tip position: indeterminate, confidence 80
+   - Nasogastric Tube: present, course: likely into the stomach, tip position: indeterminate, confidence 60
+   - Foley Catheter: present, course: likely into the bladder, tip position: indeterminate, confidence 60
+   - Multiple lines: present, course: various, tip position: indeterminate, confidence 70
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There is increased opacity in the right lung base, which could represent atelectasis, consolidation, or edema.
+     - There is also increased opacity in the left lung base, which could represent atelectasis, consolidation, or edema.
+     - The lung fields are otherwise clear.
+     - There is no evidence of pleural effusion.
+   - mediastinum/heart
+     - The heart size is likely normal.
+     - The mediastinum is unremarkable.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible.
+     - The upper abdomen is not well visualized.
+   - bones/soft tissues
+     - The ribs are visible.
+     - The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Increased opacity in the right and left lung bases. Further evaluation with a lateral chest radiograph is recommended to better assess the lung fields.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable chest radiograph, which limits the visualization of the lung apices and costophrenic angles.
+   - The image is under-processed, which may obscure subtle findings.
+   - The tip positions of the central venous catheters and other lines are indeterminate.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

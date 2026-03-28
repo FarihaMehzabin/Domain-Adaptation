@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is PA view.
+   - patient position (upright) with confidence 100 + patient is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image appears to be a standard PA chest X-ray, with adequate coverage of the apices, costophrenic angles, and lateral chest walls. There is no evidence of significant cropping or padding.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are well-aerated. The mediastinum is clearly visible. The bones are well-defined. The diaphragms are visible. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are no obvious acquisition artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (There is a laterality marker present, indicating the left side is the left.) There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to be a standard PA chest X-ray with low contrast and low edge enhancement. There is no evidence of inversion or significant noise.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Left subclavian line (Indeterminate) with confidence 50 + a line is seen entering the left subclavian vein, but the tip position is not clearly visible.
+   - Right picc line (Indeterminate) with confidence 50 + a line is seen entering the right subclavian vein, but the tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lower lobe opacity (high density) with confidence 95 + there is a large opacity in the right lower lobe, obscuring the right hemidiaphragm. The opacity is likely a pleural effusion, possibly with associated atelectasis.
+     - Left lung is clear with confidence 100 + the left lung is clear.
+     - No pneumothorax is identified.
+   - mediastinum/heart
+     - The mediastinum is midline.
+     - The heart size is normal.
+     - No obvious cardiomegaly.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are intact.
+     - The clavicles are intact.
+     - The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large right pleural effusion.
+   - Right lower lobe opacity, likely atelectasis or consolidation.
+   - Right picc line in place.
+   - Left subclavian line in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip position of the right and left subclavian lines is not clearly visible.
+   - The extent of the right lower lobe opacity is not fully defined.
+
+7) DOMAIN VECTOR

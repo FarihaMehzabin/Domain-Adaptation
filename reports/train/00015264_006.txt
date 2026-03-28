@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is AP.
+   - patient position: portable with confidence 90% + the patient is in a portable position.
+   - portable-likelihood: high with evidence (patient is not in a standard radiology position).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to cover the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are relatively clear, the mediastinum is well-defined, the bones are visible, and the costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? The image has a laterality marker present. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture appears to be low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter: present, course: right internal jugular vein, tip position: indeterminate, confidence 80% + the catheter is present and courses into the right internal jugular vein. The tip position is not clearly visible.
+   - Indeterminate: indeterminate, course: indeterminate, tip position: indeterminate, confidence 50% + the catheter is present and courses into the right internal jugular vein. The tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - diffuse bilateral interstitial opacities are present, with a predominantly perihilar distribution.
+     - No pleural effusion is identified.
+     - No pneumothorax is identified.
+   - mediastinum/heart:
+     - The mediastinum is within normal limits in width.
+     - The heart size is normal.
+   - diaphragms/upper abdomen:
+     - The diaphragms are visible.
+     - The upper abdomen is not well visualized.
+   - bones/soft tissues:
+     - The ribs are visible.
+     - The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Diffuse bilateral interstitial opacities, likely representing pulmonary edema or other interstitial lung disease.
+   - Right internal jugular central venous catheter is present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip position of the central venous catheter is not clearly visible.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

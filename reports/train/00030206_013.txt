@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior chest radiograph.
+   - patient position: upright with confidence 90% + the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence (the image is likely a portable chest radiograph, but the quality is adequate for assessment).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs are well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + the image is sharp.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are several lines present in the image, likely from medical devices. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: not clearly visible, confidence 80%
+   - nasogastric tube: present, course: midline, tip position: not clearly visible, confidence 80%
+   - central venous catheter: present, course: right subclavian, tip position: not clearly visible, confidence 70%
+   - left subclavian line: present, course: left subclavian, tip position: not clearly visible, confidence 70%
+   - pacemaker/defibrillator: present, course: right atrium, tip position: not clearly visible, confidence 70%
+   - chest tube: indeterminate, course: not visible, tip position: not visible, confidence 50%
+   - other lines/tubes: indeterminate, course: not visible, tip position: not visible, confidence 50%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: bilateral opacities are present, particularly in the lower lung fields. There is some increased density in the left lower lobe. The costophrenic angles are clear. No pleural effusion is identified.
+   - mediastinum/heart: the heart size is enlarged. The mediastinum is unremarkable.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is unremarkable.
+   - bones/soft tissues: the ribs are visible. The clavicles are visible. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral pulmonary edema.
+   - Possible left lower lobe pneumonia.
+   - Enlarged heart.
+   - Multiple medical devices are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip position of the central venous catheter, left subclavian line, and pacemaker/defibrillator are not clearly visible.
+   - The tip position of the chest tube is not clearly visible.
+   - The presence of multiple lines/tubes makes it difficult to assess for pneumothorax.
+   - The image is a portable chest radiograph, which may be limited in quality.
+
+7) DOMAIN VECTOR

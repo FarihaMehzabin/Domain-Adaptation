@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (portable label on image).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimated to be 9.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also not fully visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat hazy, with increased interstitial markings. The mediastinum is unremarkable. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are not fully visualized due to cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to be a standard chest radiograph.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) (present) with confidence 100 + the endotracheal tube is seen terminating approximately 4 cm above the carina.
+   - nasogastric tube (NGT) (present) with confidence 100 + the nasogastric tube is seen coursing below the diaphragm, but the tip position is not clearly visualized.
+   - right internal jugular central venous catheter (IJCV) (present) with confidence 100 + the right internal jugular central venous catheter is seen terminating in the proximal superior vena cava.
+   - left subclavian central venous catheter (SCCV) (present) with confidence 100 + the left subclavian central venous catheter is seen terminating in the proximal superior vena cava.
+   - indeterminate (indeterminate) with confidence 100 + the tip of the left subclavian central venous catheter is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral diffuse hazy opacities are present, suggestive of pulmonary edema or consolidation.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum is unremarkable.
+     - the heart size appears enlarged.
+     - the cardiac silhouette is somewhat obscured by the lung opacities.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-visualized.
+     - the upper abdomen is not well visualized due to cropping.
+   - bones/soft tissues
+     - the bones are well-visualized.
+     - no acute fractures are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - bilateral pulmonary edema or consolidation.
+   - possible cardiomegaly.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable chest radiograph, which may be limited in its ability to fully visualize the lung apices and costophrenic angles.
+   - The tip position of the left subclavian central venous catheter is not clearly visualized.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the patient's position. The costophrenic angles are not well visualized due to the patient's position. The lateral chest walls are not well visualized due to the patient's position.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + the lungs are relatively clear, although the apices are not well visualized. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not well visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker present, pointing to the right. Burned-in text present, top-left, "TS").
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to be processed with low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + there is no evidence of inversion. Noise texture (low) with confidence 90 + the noise texture appears to be low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Tracheostomy Tube (present) with confidence 100 + a tracheostomy tube is present, terminating in the trachea.
+   - Nasogastric Tube (present) with confidence 100 + a nasogastric tube is present, coursing into the stomach.
+   - Right-sided Central Line (present) with confidence 100 + a right-sided central line is present, terminating in the superior vena cava.
+   - Indeterminate (indeterminate) with confidence 100 + no other devices are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: opacity is present, obscuring the entire right lung field. The opacity is likely a large pleural effusion.
+     - Left lung: relatively clear, with some increased markings.
+   - mediastinum/heart
+     - Mediastinum: midline.
+     - Heart: size is difficult to assess due to the opacity in the right hemithorax.
+   - diaphragms/upper abdomen
+     - Diaphragms: visible.
+     - Upper abdomen: bowel loops are visible.
+   - bones/soft tissues
+     - Bones: ribs are visible.
+     - Soft tissues: no obvious abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large right pleural effusion.
+   - Nasogastric tube in place.
+   - Right-sided central line in place.
+   - Tracheostomy tube in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Limited visualization of the apices due to patient positioning.
+   - Limited visualization of the costophrenic angles due to patient positioning.
+   - Limited visualization of the lateral chest walls due to patient positioning.
+   - Assessment of heart size is limited by the right hemithorax opacity.
+
+7) DOMAIN VECTOR

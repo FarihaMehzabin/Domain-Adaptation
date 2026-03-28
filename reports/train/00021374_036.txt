@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is PA view.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image covers the apices, costophrenic angles, and costal margins).
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are well-aerated, mediastinum is clearly visible, bones are well-defined, and costophrenic angles are sharp.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, pointing to the right side. burned-in label top-left).
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Cardiac Monitor Leads: present, multiple leads, tip positions not visualized. Confidence 80.
+   - IV Catheter: indeterminate, no catheter visible. Confidence 50.
+   - Central Line: absent. Confidence 100.
+   - Pulmonary Artery Catheter: absent. Confidence 100.
+   - Chest Tube: absent. Confidence 100.
+   - Swan-Ganz Catheter: absent. Confidence 100.
+   - Pacemaker/ICD: absent. Confidence 100.
+   - Other: indeterminate. Confidence 50.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Left lung: opacities are present in the left lung, particularly in the lower lung fields. The opacities are not clearly defined and may represent consolidation, atelectasis, or other processes. There is also a possible pleural effusion in the left hemithorax, obscuring the costophrenic angle.
+     - Right lung: clear.
+   - mediastinum/heart
+     - Mediastinum: normal in width.
+     - Heart: normal size and shape.
+   - diaphragms/upper abdomen
+     - Diaphragms: well-defined.
+     - Upper abdomen: unremarkable.
+   - bones/soft tissues
+     - Ribs: normal.
+     - Clavicles: normal.
+     - Scapulae: normal.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Left lower lobe opacity, possibly representing pneumonia, atelectasis, or other process.
+   - Possible left pleural effusion.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited visualization of the left lung base due to the opacity.
+   - No clear visualization of the tip of the IV catheter.
+   - No clear visualization of the tip of the central line.
+
+7) DOMAIN VECTOR

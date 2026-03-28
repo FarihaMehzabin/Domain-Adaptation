@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 90 + the lungs appear to be adequately inflated.
+   - penetration (adequate) with confidence 95 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized due to the image cropping.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are relatively clear, the mediastinum is visible, the bones are visible, and the diaphragms and costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker present, pointing to the left. Burned-in text present, top-left, "1234567890")
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + there is no evidence of image inversion. Noise texture (low) with confidence 90 + the noise texture appears to be low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - left subclavian line (L subclavian line) present, course: left subclavian vein, tip position: indeterminate, confidence 90 + A left subclavian line is present, but the tip position is not clearly visible.
+   - nasogastric tube (NG tube) present, course: indeterminate, tip position: indeterminate, confidence 80 + An NG tube is present, but the course and tip position are not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral diffuse, small, nodular opacities are present throughout both lung fields. The opacities are more prominent in the lower lung zones.
+     - No pleural effusion is identified.
+     - No pneumothorax is identified.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in size and contour.
+     - The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are visualized.
+     - The upper abdomen is not fully visualized.
+   - bones/soft tissues
+     - The ribs are visualized.
+     - The clavicles are visualized.
+     - The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral diffuse nodular opacities throughout both lung fields.
+   - Presence of a left subclavian line and NG tube.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are not fully visualized.
+   - The course and tip position of the NG tube are not clearly visible.
+   - The tip position of the left subclavian line is not clearly visible.
+
+7) DOMAIN VECTOR

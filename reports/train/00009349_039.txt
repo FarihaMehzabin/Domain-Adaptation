@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is PA view.
+   - patient position (upright) with confidence 100 + patient is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be a standard PA chest X-ray, with adequate coverage of the apices, costophrenic angles, and costal margins.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are well-aerated, the mediastinum is clearly defined, the bones are visible, and the diaphragms and costophrenic angles are well-visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Cardiac Monitor Leads (present, multiple leads visible, course: chest, tip position: unknown) with confidence 100
+   - Central Venous Catheter (indeterminate, no clear catheter visible, but a catheter-like structure is present in the superior vena cava) with confidence 50
+   - Chest Tube (absent) with confidence 100
+   - Swan-Ganz Catheter (absent) with confidence 100
+   - Pacemaker (absent) with confidence 100
+   - Other Lines/Tubing (indeterminate, multiple lines are present, but their exact nature is not clear) with confidence 30
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Bilateral lung fields are clear. No focal consolidation, pleural effusion, or pneumothorax is identified.
+     - There is some increased opacity in the lower lung fields, possibly due to atelectasis or overlying soft tissue.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in width. The heart size is normal.
+     - The pulmonary arteries are normal in size.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-visualized. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are intact. The clavicles are symmetrical.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute cardiopulmonary abnormalities are identified.
+   - The presence of a central venous catheter is noted, but its exact location and tip position are indeterminate.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The exact tip position of the central venous catheter is not clearly visible.
+   - The presence of multiple lines in the upper abdomen is indeterminate.
+
+7) DOMAIN VECTOR

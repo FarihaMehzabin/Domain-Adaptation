@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "PORTABLE" label.
+   - portable-likelihood (high) with evidence (label).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are visible, mediastinum is visible, bones are visible, and diaphragms and costophrenic angles are visible, although the latter are obscured by cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, indicating the image is likely a left lateral view. "L" is burned-in top-left.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to be underexposed. edge enhancement (low) with confidence 90 + no obvious edge enhancement. inversion suspected (no) with confidence 100 + no obvious signs of inversion. noise texture (low) with confidence 90 + the image appears to have low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - PICC line (right upper extremity) present, course: right upper extremity, tip position: indeterminate, confidence 80 + a PICC line is visible in the right upper extremity, but the tip position is not clearly defined.
+   - Indeterminate (left upper extremity) present, course: left upper extremity, tip position: indeterminate, confidence 80 + an indeterminate line is visible in the left upper extremity.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: clear.
+     - Left lung: hazy opacity in the lower lung field, obscuring the costophrenic angle.
+     - Pleural effusion: possible small pleural effusion on the left side, obscuring the costophrenic angle.
+   - mediastinum/heart
+     - Mediastinum: normal.
+     - Heart: normal size and contour.
+   - diaphragms/upper abdomen
+     - Diaphragms: normal.
+     - Upper abdomen: unremarkable.
+   - bones/soft tissues
+     - Ribs: normal.
+     - Clavicles: normal.
+     - Scapulae: normal.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Possible small left pleural effusion.
+   - Indeterminate line in the left upper extremity.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Cropping of the image limits visualization of the apices and costophrenic angles.
+   - The tip position of the PICC line is not clearly defined.
+   - The presence and nature of the indeterminate line in the left upper extremity is uncertain.
+
+7) DOMAIN VECTOR

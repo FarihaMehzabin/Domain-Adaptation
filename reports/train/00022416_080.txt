@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection (AP/PA) with confidence 100 + image is AP.
+   - patient position (supine) with confidence 100 + patient is supine.
+   - portable-likelihood (high) with evidence (portable X-ray machine).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the lung volumes are low.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat clear, but the low inspiration makes it difficult to assess for subtle abnormalities. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are lines present, likely from the X-ray machine. The image is not processed with grid or moiré patterns. There is no evidence of banding, detector dropout, or compression artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image is presented with low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, course: midline, tip position: unknown, confidence 95
+   - nasogastric tube (NGT) present, course: midline, tip position: unknown, confidence 95
+   - central venous catheter (CVC) present, course: right subclavian, tip position: superior vena cava, confidence 95
+   - left subclavian line present, course: left subclavian, tip position: unknown, confidence 95
+   - chest tubes (2) present, course: bilateral, tip position: unknown, confidence 95
+   - arterial line present, course: right internal jugular, tip position: unknown, confidence 95
+   - pacemaker present, course: right atrium, right ventricle, tip position: unknown, confidence 95
+   - Foley catheter present, course: bladder, tip position: unknown, confidence 95
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral lung fields are present, but the low inspiration makes it difficult to assess for subtle abnormalities. There is no evidence of pneumothorax or pleural effusion.
+   - mediastinum/heart
+     - the mediastinum is visible. The heart size is difficult to assess due to the low inspiration.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible. The upper abdomen is partially visible.
+   - bones/soft tissues
+     - the bones are visible. The soft tissues are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - The patient is intubated and has multiple lines and tubes in place.
+   - The low inspiration limits the ability to fully assess the lung fields.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable X-ray, which may be limited in its ability to provide a comprehensive assessment.
+   - The low inspiration limits the ability to fully assess the lung fields.
+   - The image is cropped, obscuring the apices and costophrenic angles.
+   - The tip positions of the tubes and lines are not clearly visible.
+
+7) DOMAIN VECTOR

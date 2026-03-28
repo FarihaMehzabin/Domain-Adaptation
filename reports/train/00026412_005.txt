@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (portable equipment visible).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the patient is likely in a supine or semi-erect position. The posterior rib count is not clearly visible.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The apices are not fully visualized due to the patient's position. The costophrenic angles are not fully visualized due to the patient's position. The costal margins are adequately visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + the lungs are visible, the mediastinum is visible, the bones are visible, and the diaphragms and costophrenic angles are partially visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate) with evidence (lines are present, but their origin is unclear).
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. Burned-in text is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 80 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion are present. Noise texture (low) with confidence 80 + the noise texture appears to be low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (Central Line): present, course: right internal jugular vein, tip position: not clearly visible. Confidence: 60.
+   - Left Internal Jugular Central Venous Catheter (Central Line): present, course: left internal jugular vein, tip position: not clearly visible. Confidence: 60.
+   - Right subclavian line: present, course: right subclavian vein, tip position: not clearly visible. Confidence: 60.
+   - Indeterminate: present, course: indeterminate, tip position: indeterminate. Confidence: 20.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - The lungs are clear, with no obvious consolidation, pleural effusion, or pneumothorax. There is some increased opacity in the right lung base, but this could be due to patient positioning.
+   - mediastinum/heart
+     - The mediastinum is unremarkable. The heart size is difficult to assess due to the patient's position and low inspiration.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible. The upper abdomen is not well visualized due to the patient's position and the presence of overlying structures.
+   - bones/soft tissues
+     - The bones are unremarkable. There is some subcutaneous emphysema in the upper chest, but this is not well visualized.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - The lungs are clear.
+   - The mediastinum is unremarkable.
+   - The heart size is difficult to assess.
+   - The patient is in a portable position.
+   - The central lines are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The patient is in a portable position, which limits the visualization of the lung apices and costophrenic angles.
+   - The inspiration is low, which limits the visualization of the heart and mediastinum.
+   - The upper abdomen is not well visualized.
+   - The tip position of the central lines is not clearly visible.
+   - The presence of lines and other artifacts may obscure the underlying anatomy.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present. Burned-in text is present at the top-left corner.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian central line: present, course: right subclavian vein, tip position: indeterminate, confidence 80 + a right subclavian central line is present. The tip position is not clearly visible.
+   - right internal jugular central line: present, course: right internal jugular vein, tip position: indeterminate, confidence 80 + a right internal jugular central line is present. The tip position is not clearly visible.
+   - indeterminate device: present, course: indeterminate, tip position: indeterminate, confidence 10 + an indeterminate device is present. The course and tip position are not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: clear.
+     - left lung: clear.
+     - pleural effusion: small, likely on the left side, obscuring the left hemidiaphragm.
+   - mediastinum/heart
+     - heart size: normal.
+     - mediastinal contours: normal.
+     - pulmonary vasculature: normal.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: normal.
+     - clavicles: normal.
+     - soft tissues: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Small left pleural effusion.
+   - Right subclavian central line and right internal jugular central line are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Tip position of central lines is not clearly visible.
+   - The presence and type of the indeterminate device is not clearly visible.
+
+7) DOMAIN VECTOR

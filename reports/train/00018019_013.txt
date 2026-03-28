@@ -1,0 +1,55 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: Image is an anteroposterior (AP) chest radiograph.
+   - patient position: Supine with confidence 90% + evidence: The patient is lying on their back.
+   - portable-likelihood: Medium with evidence: The image is likely a portable chest radiograph due to the presence of multiple lines and tubes.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: None with confidence 95% + evidence: Clavicles are symmetrical.
+   - inspiration: Adequate with confidence 90% + evidence: The lungs are well-expanded.
+   - penetration: Adequate with confidence 95% + evidence: Vertebral bodies are clearly visible behind the heart.
+   - motion blur: None with confidence 95% + evidence: No obvious motion artifacts are present.
+   - collimation/anatomic coverage: Apices are visible. Costophrenic angles are visible. Lateral chest walls are visible. The image is cropped at the upper and lower borders.
+   - anatomical clarity: Lungs are clear. Mediastinum is well-defined. Bones are visible. Diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: Lines and tubes are present.
+   - markers/overlays: Laterality marker present. Burned-in text present (top-left).
+   - presentation/processing cues: Contrast is low. Edge enhancement is low. Inversion suspected (no). Noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT): Present, course: midline, tip position: approximately 4 cm above the carina, confidence 95%
+   - nasogastric tube (NGT): Present, course: midline, tip position: not clearly visualized, confidence 60%
+   - right internal jugular central venous catheter (IJCV): Present, course: right internal jugular vein, tip position: at the junction of the superior vena cava and right atrium, confidence 90%
+   - left subclavian central venous catheter: Present, course: left subclavian vein, tip position: at the junction of the superior vena cava and right atrium, confidence 90%
+   - multiple lines: Present, course: various, tip position: indeterminate, confidence 50%
+   - cardiac monitor leads: Present, course: various, tip position: indeterminate, confidence 50%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral lung fields are diffusely hazy with increased interstitial markings, suggestive of pulmonary edema.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the heart size is normal.
+     - the mediastinal contours are normal.
+     - the pulmonary vasculature is prominent, consistent with pulmonary edema.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-defined.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the bony structures are intact.
+     - no obvious soft tissue abnormalities are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Pulmonary edema.
+   - Central venous catheter placement.
+   - Nasogastric tube placement.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip position of the nasogastric tube is not clearly visualized.
+   - The tip position of the multiple lines is not clearly visualized.
+   - The presence of multiple lines and tubes may obscure underlying pathology.
+   - The image is a portable radiograph, which may be limited in its ability to fully evaluate the chest.
+
+7) DOMAIN VECTOR

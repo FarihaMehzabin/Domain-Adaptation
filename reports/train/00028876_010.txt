@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is an anteroposterior (AP) chest radiograph.
+   - patient position: upright with confidence 90% + evidence: the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest radiograph, but the quality is adequate.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be rotationally correct.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image covers the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are clear, the mediastinum is well-defined, the bones are visible, and the costophrenic angles are sharp.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - right-sided chest tube: present, course: right hemithorax, tip position: indeterminate, confidence 80%
+   - left-sided chest tube: present, course: left hemithorax, tip position: indeterminate, confidence 80%
+   - right-sided subclavian line: present, course: right subclavian vein to superior vena cava, tip position: indeterminate, confidence 80%
+   - left-sided subclavian line: present, course: left subclavian vein to superior vena cava, tip position: indeterminate, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - right lung: there is a small amount of pleural fluid in the right hemithorax. There is also some atelectasis in the right lung.
+     - left lung: there is a small amount of pleural fluid in the left hemithorax. There is also some atelectasis in the left lung.
+   - mediastinum/heart: the mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: the diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues: the ribs are intact. There are surgical clips in the left upper chest.
+
+5) IMPRESSION
+   - Small amount of pleural fluid in both lungs.
+   - Atelectasis in both lungs.
+   - Right-sided chest tube and left-sided chest tube are present.
+   - Right-sided subclavian line and left-sided subclavian line are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip positions of the chest tubes and subclavian lines are indeterminate.
+   - The extent of the pleural effusions is difficult to assess due to the presence of the chest tubes.
+
+7) DOMAIN VECTOR

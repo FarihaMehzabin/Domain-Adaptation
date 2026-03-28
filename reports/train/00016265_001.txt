@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: The image is a PA (Posteroanterior) chest X-ray.
+   - patient position: Upright with confidence 90% + evidence: The patient is in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a standard PA chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: The image appears to be free of significant rotation. Clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: The lungs appear to be well-expanded.
+   - penetration: adequate with confidence 95% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: No obvious motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (describe cropping/padding/borders) The image shows good coverage of the apices, costophrenic angles, and costal margins.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are clearly seen. The costophrenic angles are sharp.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? The image has a laterality marker indicating the left side. There is a burned-in label top-left.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - NG tube: absent with confidence 95%
+   - central line: absent with confidence 95%
+   - pacemaker: absent with confidence 95%
+   - other: indeterminate with confidence 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+     - pleura: unremarkable.
+   - mediastinum/heart
+     - mediastinum: normal in width.
+     - heart: normal size and shape.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: normal.
+     - clavicles: normal.
+     - scapulae: normal.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - No acute cardiopulmonary abnormalities identified.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - No prior clinical history is available.
+   - The image quality is adequate.
+   - The absence of a central line and NG tube makes it impossible to definitively rule out their presence.
+
+7) DOMAIN VECTOR

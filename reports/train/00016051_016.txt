@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the apices and costophrenic angles not fully visualized. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + lungs are generally clear, mediastinum is visible, bones are well-defined, and diaphragms are visible. The costophrenic angles are not fully visualized due to cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the left side is the patient's right side. A burned-in label is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to have low contrast. edge enhancement (low) with confidence 100 + edge enhancement is low. inversion suspected (no) with confidence 100 + no obvious signs of inversion. noise texture (low) with confidence 100 + the noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right-sided chest tube (present) with confidence 95 + a chest tube is present on the right side. The course is not clearly visible, but the tip is likely in the right hemithorax.
+   - left-sided chest tube (present) with confidence 95 + a chest tube is present on the left side. The course is not clearly visible, but the tip is likely in the left hemithorax.
+   - catheter (present) with confidence 90 + a catheter is present, but the type and location are not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a large area of opacity in the right lung, likely representing a large pleural effusion or consolidation. The lung markings are obscured.
+     - left lung: there is a large area of opacity in the left lung, likely representing a large pleural effusion or consolidation. The lung markings are obscured.
+     - pleural effusion: there is a large pleural effusion on the right side. The fluid obscures the lung markings.
+     - pleural effusion: there is a large pleural effusion on the left side. The fluid obscures the lung markings.
+   - mediastinum/heart
+     - mediastinum: the mediastinum is midline.
+     - heart: the heart size is difficult to assess due to the presence of the pleural effusions.
+   - diaphragms/upper abdomen
+     - diaphragms: the diaphragms are visible.
+     - upper abdomen: the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - ribs: the ribs are visible.
+     - clavicles: the clavicles are visible.
+     - scapulae: the scapulae are visible.
+     - soft tissues: the soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - large bilateral pleural effusions.
+   - possible underlying consolidation in the lungs.
+   - presence of chest tubes.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - limited visualization of the apices and costophrenic angles due to cropping.
+   - the exact location and course of the chest tubes are not clearly visible.
+   - the extent of any underlying consolidation is difficult to assess.
+
+7) DOMAIN VECTOR

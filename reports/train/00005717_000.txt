@@ -1,0 +1,53 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is standing.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are clear. The mediastinum is unremarkable. The bones are unremarkable. The diaphragms are well-defined. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, indicating the image is of the right side. Burned-in text is present in the upper left corner, but the content is not legible.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to be a standard chest X-ray.
+   - edge enhancement (low) with confidence 90 + edge enhancement is present, but not excessive.
+   - inversion suspected (no) with confidence 100 + no obvious signs of inversion.
+   - noise texture (low) with confidence 90 + the image has a low level of noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) (absent) with confidence 100 + no endotracheal tube is visible.
+   - nasogastric tube (NGT) (absent) with confidence 100 + no nasogastric tube is visible.
+   - central line (CL) (absent) with confidence 100 + no central line is visible.
+   - pacemaker (PM) (absent) with confidence 100 + no pacemaker is visible.
+   - chest tube (CT) (absent) with confidence 100 + no chest tube is visible.
+   - Swan-Ganz catheter (SGC) (absent) with confidence 100 + no Swan-Ganz catheter is visible.
+   - arterial line (AL) (absent) with confidence 100 + no arterial line is visible.
+   - IV line (IVL) (absent) with confidence 100 + no IV line is visible.
+   - other lines/tubes (indeterminate) with confidence 100 + no other lines/tubes are visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+     - pleura: unremarkable.
+   - mediastinum/heart
+     - mediastinum: unremarkable. The heart size is within normal limits.
+     - heart: normal cardiomediastinal silhouette.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - bones: unremarkable.
+     - soft tissues: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute cardiopulmonary abnormalities identified.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices and costophrenic angles are not fully visualized due to image cropping.
+   - The burned-in text in the upper left corner is not legible.
+
+7) DOMAIN VECTOR

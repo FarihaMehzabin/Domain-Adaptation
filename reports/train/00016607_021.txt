@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (high) with evidence (portable X-ray machine).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image shows the upper lung fields, costophrenic angles are not fully visualized, and the costal margins are not fully visualized).
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + lungs are generally clear, mediastinum is visible, bones are visible, and diaphragms are visible. Costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the left side is on the left. Burned-in label top-left).
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, course: midline, tip position: not visualized, confidence 80 + ETT is present, but the tip position is not clearly visualized.
+   - nasogastric tube (NGT) present, course: midline, tip position: not visualized, confidence 80 + NGT is present, but the tip position is not clearly visualized.
+   - central venous catheter (CVC) present, course: right subclavian, tip position: not visualized, confidence 80 + CVC is present, but the tip position is not clearly visualized.
+   - arterial line present, course: right internal jugular, tip position: not visualized, confidence 80 + arterial line is present, but the tip position is not clearly visualized.
+   - chest tube present, course: right, tip position: not visualized, confidence 80 + chest tube is present, but the tip position is not clearly visualized.
+   - other lines/tubes: indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: clear.
+     - left lung: hazy opacity in the lower lung field, possibly representing atelectasis or consolidation.
+     - pleural surfaces: clear.
+   - mediastinum/heart
+     - mediastinum: normal in width.
+     - heart size: normal.
+     - cardiomediastinal silhouette: unremarkable.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: unremarkable.
+     - clavicles: unremarkable.
+     - soft tissues: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Possible left lower lobe atelectasis or consolidation.
+   - Endotracheal tube, nasogastric tube, central venous catheter, arterial line, and chest tube are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Costophrenic angles are not fully visualized.
+   - Tip positions of the endotracheal tube, nasogastric tube, central venous catheter, arterial line, and chest tube are not clearly visualized.
+   - The left lower lung field opacity is difficult to fully characterize without additional imaging.
+
+7) DOMAIN VECTOR

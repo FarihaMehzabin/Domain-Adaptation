@@ -1,0 +1,59 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is labeled "AP"
+   - patient position (portable) with confidence 100 + image is labeled "PORTABLE"
+   - portable-likelihood (high) with evidence (labeling)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is good
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, but apices and costophrenic angles are visible)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, burned-in text "PORTABLE" top-left)
+   - presentation/processing cues: contrast (low) with confidence 100, edge enhancement (low) with confidence 100, inversion suspected (no) with confidence 100, noise texture (low) with confidence 100
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - central line (none) with confidence 100
+   - catheter (none) with confidence 100
+   - chest tube (none) with confidence 100
+   - pacemaker (none) with confidence 100
+   - ETT (none) with confidence 100
+   - NG tube (none) with confidence 100
+   - IV line (none) with confidence 100
+   - Port-a-cath (none) with confidence 100
+   - Swan-Ganz catheter (none) with confidence 100
+   - arterial line (none) with confidence 100
+   - venous access (none) with confidence 100
+   - other (none) with confidence 100
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - there is a hazy opacity in the left hemithorax, obscuring the costophrenic angle. The opacity appears to be in the lower lung field.
+     - the right lung appears clear.
+     - there is no evidence of pneumothorax.
+     - there is no evidence of pleural effusion.
+   - mediastinum/heart
+     - the mediastinum is unremarkable.
+     - the heart size is within normal limits.
+     - the aorta is unremarkable.
+     - the pulmonary arteries are unremarkable.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are unremarkable.
+     - the clavicles are unremarkable.
+     - the scapulae are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - hazy opacity in the left lower lung field. Further evaluation with a lateral chest radiograph is recommended to assess the extent and etiology of this finding.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable AP chest radiograph, which may be limited by patient positioning and image quality.
+   - The hazy opacity in the left lower lung field is difficult to fully characterize on this single image.
+   - The extent of the opacity is not fully visualized.
+
+7) DOMAIN VECTOR

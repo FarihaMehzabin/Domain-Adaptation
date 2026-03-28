@@ -1,0 +1,38 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + evidence: patient is standing or sitting upright.
+   - portable-likelihood: low with evidence: the image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: the lung fields are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + evidence: no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be cropped, with the apices and costophrenic angles not fully visualized. The lateral chest walls are also partially obscured.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are relatively clear, but there are diffuse opacities, particularly in the lower lung fields. The mediastinum is unremarkable. The bones are well-visualized. The diaphragms are visible. The costophrenic angles are not fully visualized due to cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the right. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Left subclavian line: present, course: left subclavian vein, tip position: indeterminate, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: diffuse bilateral opacities, predominantly in the lower lung fields. The pattern is suggestive of pulmonary edema or diffuse alveolar process. No pleural effusion is identified.
+   - mediastinum/heart: the mediastinum is unremarkable. The heart size is within normal limits.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is unremarkable.
+   - bones/soft tissues: the bones are well-visualized. No obvious soft tissue abnormalities are present.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Diffuse bilateral pulmonary opacities, predominantly in the lower lung fields.
+   - Left subclavian line present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are not fully visualized due to cropping.
+   - The tip position of the left subclavian line is indeterminate.
+   - The underlying etiology of the pulmonary opacities is unclear.
+
+7) DOMAIN VECTOR

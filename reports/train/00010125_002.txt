@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized due to the image cropping.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are relatively clear, with some increased interstitial markings. The mediastinum is well-defined. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker present, pointing to the left. Burned-in text present, top-left, "X-RAY")
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right-sided chest tube (present) with confidence 95 + a right-sided chest tube is present, with the tip projecting over the right mid-lung field.
+   - left-sided chest tube (present) with confidence 95 + a left-sided chest tube is present, with the tip projecting over the left mid-lung field.
+   - catheter (present) with confidence 90 + an indeterminate catheter is present, likely a central line, with the tip projecting over the superior mediastinum.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: increased interstitial markings are present, particularly in the right mid-lung field. There is a small amount of pleural effusion, possibly loculated, in the right pleural space.
+     - left lung: increased interstitial markings are present, particularly in the left mid-lung field. There is a small amount of pleural effusion, possibly loculated, in the left pleural space.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in size and contour. The heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-visualized. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are well-visualized. The clavicles are well-visualized.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Two chest tubes are present in the right and left pleural spaces.
+   - Small amount of pleural effusion is present in both pleural spaces.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are not fully visualized.
+   - The catheter tip position is indeterminate.
+   - The extent of the pleural effusions is difficult to assess due to the limited visualization of the lung apices.
+
+7) DOMAIN VECTOR

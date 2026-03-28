@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (supine) with confidence 100 + the patient is lying on their back.
+   - portable-likelihood (high) with evidence (portable X-ray machine is visible in the background).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (low) with confidence 80 + the lung volumes appear low, and the posterior rib count is not easily estimable.
+   - penetration (adequate) with confidence 90 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image shows the upper chest and abdomen. The apices are not fully visualized. The costophrenic angles are not fully visualized. The costal margins are not fully visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs appear relatively clear. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate) with confidence 50 + there are some faint lines visible, but it is difficult to determine if they are artifacts or normal structures.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. Burned-in text is present in the upper left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 70 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 95 + there is no obvious sign of image inversion. Noise texture (low) with confidence 80 + the image appears to have low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - NG tube (nasogastric tube) present, course: likely extends from the nose/mouth to the stomach, tip position: not visible. Confidence: 70.
+   - Central line present, course: likely extends from the subclavian vein to the superior vena cava, tip position: not visible. Confidence: 60.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - The lungs appear relatively clear, with no obvious consolidation, effusion, or pneumothorax.
+     - There is some mild prominence of the pulmonary vasculature, which could be related to low lung volumes.
+   - mediastinum/heart:
+     - The mediastinum appears within normal limits in size and contour.
+     - The heart size is difficult to assess due to low lung volumes.
+   - diaphragms/upper abdomen:
+     - The diaphragms are visible.
+     - The upper abdomen is visible, but the bowel loops are not well-defined due to low lung volumes.
+   - bones/soft tissues:
+     - The bones are visible.
+     - The soft tissues are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Low lung volumes.
+   - NG tube and central line are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices of the lungs are not fully visualized.
+   - The costophrenic angles are not fully visualized.
+   - The bowel loops in the upper abdomen are not well-defined due to low lung volumes.
+   - The tip positions of the NG tube and central line are not visible.
+
+7) DOMAIN VECTOR

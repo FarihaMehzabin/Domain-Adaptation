@@ -1,0 +1,42 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is PA view.
+   - patient position (upright) with confidence 100 + patient is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image appears to be a standard PA chest X-ray, with adequate coverage of the apices, costophrenic angles, and lateral chest walls. There is no evidence of significant cropping or padding.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are well-aerated. The mediastinum is clearly visible. The bones are well-defined. The diaphragms are visible. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are no obvious acquisition artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (There is a laterality marker present, indicating the left side is on the left.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - NG tube (Indeterminate) with confidence 50 + No NG tube is visible.
+   - Central line (Indeterminate) with confidence 50 + No central line is visible.
+   - ETT (Indeterminate) with confidence 50 + No ETT is visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There is increased opacity in the left lung, particularly in the perihilar region. The right lung appears clear. No pleural effusion is identified.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in size and contour. The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The bony structures are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Increased opacity in the left lung, concerning for pneumonia or other inflammatory process.
+   - No obvious acute findings.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - No clinical history is available.
+   - The increased opacity in the left lung is difficult to fully characterize without additional imaging or clinical information.
+   - The presence of the NG tube is indeterminate.
+
+7) DOMAIN VECTOR

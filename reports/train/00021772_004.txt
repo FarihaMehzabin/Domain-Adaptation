@@ -1,0 +1,56 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (portable marker present).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimated to be 9.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the costophrenic angles not fully visualized. The apices are not fully visualized due to the cropping.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + lungs are generally clear, mediastinum is visible, bones are visible, and diaphragms are visible. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, top-right. Burned-in label top-left.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to be a low-contrast radiograph. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 90 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - central line (none) with confidence 100 + no central line is visible.
+   - picc line (none) with confidence 100 + no picc line is visible.
+   - endotracheal tube (none) with confidence 100 + no endotracheal tube is visible.
+   - nasogastric tube (none) with confidence 100 + no nasogastric tube is visible.
+   - chest tube (none) with confidence 100 + no chest tube is visible.
+   - pacemaker (none) with confidence 100 + no pacemaker is visible.
+   - defibrillator (none) with confidence 100 + no defibrillator is visible.
+   - EKG leads (none) with confidence 100 + no EKG leads are visible.
+   - IV catheter (none) with confidence 100 + no IV catheter is visible.
+   - other (none) with confidence 100 + no other devices are visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is increased opacity in the right lower lung field, which could represent consolidation, atelectasis, or pleural effusion.
+     - left lung: the left lung appears clear.
+     - pleural effusion: indeterminate, possible small right pleural effusion.
+   - mediastinum/heart
+     - mediastinum: the mediastinum is within normal limits.
+     - heart: the heart size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: the diaphragms are visible.
+     - upper abdomen: the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - ribs: the ribs are visible.
+     - clavicles: the clavicles are visible.
+     - scapulae: the scapulae are visible.
+     - soft tissues: the soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Increased opacity in the right lower lung field, which could represent consolidation, atelectasis, or pleural effusion. Further evaluation with a lateral decubitus radiograph or CT scan is recommended to differentiate between these possibilities.
+   - Possible small right pleural effusion.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The costophrenic angles are not fully visualized.
+   - The increased opacity in the right lower lung field is indeterminate.
+   - The presence of a pleural effusion is indeterminate.
+
+7) DOMAIN VECTOR

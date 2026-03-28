@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is AP.
+   - patient position: portable with confidence 90% + the patient is in a portable position.
+   - portable-likelihood: high with evidence (patient is in a portable setting).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + the patient is in a good inspiratory position.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + no obvious motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, with the upper portion of the image missing.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are visible, the mediastinum is visible, the bones are visible, and the diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are lines present in the image.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian central line: present, course: right subclavian vein, tip position: indeterminate, confidence 80%
+   - left subclavian central line: present, course: left subclavian vein, tip position: indeterminate, confidence 80%
+   - enteric tube: present, course: likely into the stomach, tip position: indeterminate, confidence 70%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - there is a large opacity in the left hemithorax, obscuring the lung markings. The right lung appears relatively clear.
+     - there is a small amount of blunting of the right costophrenic angle, possibly representing a small pleural effusion.
+   - mediastinum/heart:
+     - the mediastinum is midline. The heart size is difficult to assess due to the opacity in the left hemithorax.
+   - diaphragms/upper abdomen:
+     - the diaphragms are visible. The upper abdomen is not well visualized due to the opacity in the left hemithorax.
+   - bones/soft tissues:
+     - the ribs are visible. The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - large opacity in the left hemithorax, obscuring lung markings.
+   - possible small right pleural effusion.
+   - central lines present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - limited visualization of the left hemithorax due to the large opacity.
+   - indeterminate tip positions of the central lines.
+   - limited visualization of the upper abdomen.
+
+7) DOMAIN VECTOR

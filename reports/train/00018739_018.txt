@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + the patient is standing.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visible due to cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to be low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 90 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Cardiac Monitor Leads (present) with confidence 100 + multiple leads are visible.
+   - Central Line (indeterminate) with confidence 50 + an indeterminate line is present in the upper chest, but the tip position is not clearly visible.
+   - Chest Tube (indeterminate) with confidence 50 + an indeterminate line is present in the left hemithorax, but the tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Left lung: There is a large opacity occupying the majority of the left hemithorax. The opacity obscures the lung markings. There is no obvious pleural effusion.
+     - Right lung: The right lung appears clear.
+   - mediastinum/heart
+     - The mediastinum is midline. The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible. The upper abdomen is not well visualized due to cropping.
+   - bones/soft tissues
+     - The ribs are visible. The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Large opacity in the left hemithorax, obscuring lung markings.
+   - Indeterminate central line in the upper chest.
+   - Indeterminate chest tube in the left hemithorax.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Cropping of the image limits visualization of the apices and costophrenic angles.
+   - The tip position of the central line and chest tube is not clearly visible.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

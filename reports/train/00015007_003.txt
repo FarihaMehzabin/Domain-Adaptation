@@ -1,0 +1,37 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: Image is an anteroposterior (AP) chest radiograph.
+   - patient position: Upright with confidence 90% + evidence: The patient is standing or sitting upright.
+   - portable-likelihood: Medium with evidence: The image is likely a portable chest radiograph, given the size and quality.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: None with confidence 95% + evidence: The image appears to be free of significant rotation.
+   - inspiration: Adequate with confidence 85% + evidence: The lungs appear to be well-expanded.
+   - penetration: Adequate with confidence 90% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: None with confidence 95% + evidence: There is no obvious motion blur.
+   - collimation/anatomic coverage: Apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving a small amount of padding on the sides.
+   - anatomical clarity: Lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: Lines, grid/moiré, banding, detector dropout, compression artifacts: There are no obvious artifacts.
+   - markers/overlays: Laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: Contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right subclavian line: Indeterminate with confidence 70%: The right subclavian line is not clearly visible. The course is indeterminate, and the tip position is unknown.
+   - Left subclavian line: Indeterminate with confidence 70%: The left subclavian line is not clearly visible. The course is indeterminate, and the tip position is unknown.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: The lungs are clear bilaterally. There is no evidence of consolidation, pleural effusion, or pneumothorax.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues: The bones are intact. The soft tissues are unremarkable.
+
+5) IMPRESSION
+   - No acute cardiopulmonary abnormalities identified.
+   - Right and left subclavian lines are not clearly visualized.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image is a portable chest radiograph, which may be limited by patient positioning and image quality.
+   - The right and left subclavian lines are not clearly visualized, making it difficult to assess their position and patency.
+   - The image is cropped, which may limit the assessment of the lateral chest walls.
+
+7) DOMAIN VECTOR

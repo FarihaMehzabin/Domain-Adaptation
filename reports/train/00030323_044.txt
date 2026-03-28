@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (portable marker present).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be relatively free of rotation.
+   - inspiration (adequate) with confidence 90 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 95 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the patient's position. The costophrenic angles are not well visualized due to the patient's position. The lateral chest walls are not well visualized due to the patient's position.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (lungs: diffuse bilateral opacities. Mediastinum: appears normal. Bones: appear normal. Diaphragms: appear normal. Costophrenic angles: not well visualized.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker present, pointing to the left. Burned-in label top-left.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, tip position not visualized, confidence 60 + the tip of the endotracheal tube is not clearly visualized.
+   - nasogastric tube (NGT) present, course not visualized, tip position not visualized, confidence 40 + the tip of the nasogastric tube is not clearly visualized.
+   - right subclavian central line (SC line) present, tip position not visualized, confidence 50 + the tip of the right subclavian central line is not clearly visualized.
+   - left subclavian central line (SC line) present, tip position not visualized, confidence 50 + the tip of the left subclavian central line is not clearly visualized.
+   - arterial line present, tip position not visualized, confidence 30 + the tip of the arterial line is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - diffuse bilateral opacities are present throughout both lung fields. The opacities are not uniform in density and may represent pulmonary edema, consolidation, or other infiltrative processes. There is no evidence of pleural effusion.
+   - mediastinum/heart
+     - the mediastinum is unremarkable. The heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are unremarkable. The upper abdomen is not well visualized.
+   - bones/soft tissues
+     - the bones are unremarkable. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - diffuse bilateral pulmonary opacities.
+   - endotracheal tube, nasogastric tube, right subclavian central line, left subclavian central line, and arterial line are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices of the lungs are not well visualized.
+   - The costophrenic angles are not well visualized.
+   - The lateral chest walls are not well visualized.
+   - The tip positions of the endotracheal tube, nasogastric tube, right subclavian central line, left subclavian central line, and arterial line are not clearly visualized.
+
+7) DOMAIN VECTOR

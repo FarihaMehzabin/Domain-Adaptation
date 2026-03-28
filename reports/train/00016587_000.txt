@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + the image is labeled "portable".
+   - portable-likelihood (high) with evidence (label "portable").
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the heart size appears normal.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image shows the upper chest and upper abdomen. The apices are not fully visualized. The costophrenic angles are not fully visualized. The costal margins are not fully visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs appear clear. The mediastinum is well-defined. The bones are well-defined. The diaphragms are well-defined. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. with confidence 100 + there are multiple lines present in the image, likely representing IV lines or other medical devices. There are no obvious signs of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? with confidence 100 + a laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to be displayed with low contrast. edge enhancement (low) with confidence 100 + the image appears to have low edge enhancement. inversion suspected (no) with confidence 100 + no obvious signs of inversion. noise texture (low) with confidence 100 + the image appears to have low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (Central Line): present, course: right internal jugular vein, tip position: indeterminate, confidence 95
+   - Left Internal Jugular Central Venous Catheter (Central Line): present, course: left internal jugular vein, tip position: indeterminate, confidence 95
+   - Right Chest Tube: present, course: right hemithorax, tip position: indeterminate, confidence 95
+   - Left Chest Tube: present, course: left hemithorax, tip position: indeterminate, confidence 95
+   - IV Line: present, course: right subclavian vein, tip position: indeterminate, confidence 95
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There are multiple lines present in the image, likely representing IV lines or other medical devices.
+     - No obvious signs of pneumothorax or pleural effusion.
+   - mediastinum/heart
+     - The mediastinum is well-defined.
+     - The heart size appears normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined.
+     - The upper abdomen is visible.
+   - bones/soft tissues
+     - The bones are well-defined.
+     - The soft tissues are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Multiple central venous catheters and chest tubes are present.
+   - No obvious acute pulmonary process.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices of the lungs are not fully visualized.
+   - The costophrenic angles are not fully visualized.
+   - The tip positions of the central venous catheters and chest tubes are indeterminate.
+
+7) DOMAIN VECTOR

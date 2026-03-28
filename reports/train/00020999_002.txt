@@ -1,0 +1,54 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the patient's position. The costophrenic angles are not well visualized due to the patient's position. The lateral chest walls are not well visualized due to the patient's position.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + the lungs are somewhat obscured by overlying structures. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not well visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. with confidence 80 + there are several lines present in the image, likely from external devices. The presence of these lines obscures the visualization of the lung fields.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker present. Burned-in text present in the upper left corner.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to be processed with low contrast. Edge enhancement is present. Inversion suspected (no) with confidence 95 + there is no obvious sign of image inversion. Noise texture (low) with confidence 90 + the image has low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) with confidence 95 + the endotracheal tube is present, terminating approximately 4 cm above the carina.
+   - nasogastric tube (NGT) with confidence 90 + the nasogastric tube is present, coursing below the diaphragm and terminating in the stomach.
+   - central venous catheter (CVC) with confidence 90 + the central venous catheter is present, terminating in the superior vena cava.
+   - left subclavian line with confidence 90 + the left subclavian line is present, terminating in the superior vena cava.
+   - pacemaker with confidence 90 + the pacemaker is present, with leads terminating in the right atrium and right ventricle.
+   - multiple lines/tubes are present, likely representing various monitoring and support devices.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral diffuse opacities are present, with a predominantly perihilar distribution. The opacities are not uniform in density.
+     - there is no evidence of pleural effusion.
+   - mediastinum/heart
+     - the mediastinum is widened.
+     - the heart size is difficult to assess due to the overlying opacities.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is not well visualized due to the overlying opacities.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+     - there are multiple metallic densities present in the right upper chest, likely representing surgical clips or foreign bodies.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - bilateral diffuse pulmonary opacities, likely representing pulmonary edema, ARDS, or other inflammatory/infectious processes.
+   - widened mediastinum.
+   - multiple lines/tubes present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - limited visualization of the lung apices and costophrenic angles due to patient positioning.
+   - the heart size is difficult to assess due to the overlying opacities.
+   - the upper abdomen is not well visualized.
+   - the metallic densities in the right upper chest are difficult to fully characterize without additional information.
+
+7) DOMAIN VECTOR

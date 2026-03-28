@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: The image is a PA (Posteroanterior) chest X-ray.
+   - patient position: Upright with confidence 90% + evidence: The patient is in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a standard PA chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: The image appears to be free of significant rotation. Clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: The lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: No obvious motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image covers the apices, costophrenic angles, and lateral chest walls adequately.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the right. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: absent
+   - nasogastric tube: absent
+   - central line: absent
+   - pacemaker: absent
+   - chest tube: absent
+   - IV line: absent
+   - other: indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - There are multiple small, ill-defined opacities scattered throughout both lung fields, most prominent in the lower lung zones. The pattern is suggestive of small nodules or ground-glass opacities.
+     - No pleural effusion is identified.
+     - No pneumothorax is identified.
+   - mediastinum/heart:
+     - The mediastinum is within normal limits in width.
+     - The heart size is normal.
+     - The pulmonary vasculature is unremarkable.
+   - diaphragms/upper abdomen:
+     - The diaphragms are well-defined.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues:
+     - The ribs are intact.
+     - The clavicles are symmetrical.
+     - The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Multiple small, ill-defined opacities in both lung fields, concerning for possible infection, inflammation, or malignancy. Further evaluation with a CT scan of the chest is recommended.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image quality is adequate, but the small opacities are difficult to fully characterize on a single PA chest X-ray.
+   - The absence of a CT scan limits the ability to fully evaluate the nature of the lung opacities.
+   - The presence of a burned-in label in the top-left corner is a limitation.
+
+7) DOMAIN VECTOR

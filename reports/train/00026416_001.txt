@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (high) with evidence (portable marker).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (apices are visible, costophrenic angles are visible, lateral chest walls are visible).
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are clear, mediastinum is well-defined, bones are visible, and costophrenic angles are sharp.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, burned-in label top-left).
+   - presentation/processing cues: contrast (low), edge enhancement (low), inversion suspected (no), noise texture (low).
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Cardiac pacemaker (present) with confidence 100 + device is present in the anterior chest.
+   - Indeterminate (absent) with confidence 100 + no other lines or tubes are visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Lungs are clear bilaterally without evidence of consolidation, effusion, or pneumothorax.
+     - Pleural surfaces are unremarkable.
+   - mediastinum/heart
+     - The heart size is normal.
+     - The mediastinal contours are unremarkable.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The bony thorax is intact.
+     - Soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Cardiac pacemaker present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - No other lines or tubes are visible.
+   - The image is a single view, limiting assessment of the lung fields.
+
+7) DOMAIN VECTOR

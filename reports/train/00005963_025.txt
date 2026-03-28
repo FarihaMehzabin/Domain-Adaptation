@@ -1,0 +1,42 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (medium) with evidence (no obvious signs of a portable exam, but the image quality is not ideal for a standard PA view).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be relatively free of rotation. Clavicles are approximately symmetrical.
+   - inspiration (low) with confidence 80 + the lung volumes appear low, and the posterior rib count is not easily estimable.
+   - penetration (adequate) with confidence 90 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are also partially obscured.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lung parenchyma is somewhat hazy, and the mediastinum is not well-defined. The diaphragms are visible, but the costophrenic angles are not well-visualized due to the image cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are some faint lines visible in the image, but they are not clearly defined. The presence of grid or moiré patterns is not readily apparent. There is no obvious banding or detector dropout. Compression artifacts are not evident.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 80 + the image appears to have low contrast. Edge enhancement is not evident. Inversion suspected (no) with confidence 100 + there is no obvious sign of image inversion. Noise texture (low) with confidence 90 + the image has a low level of noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Indeterminate (likely a central line) with confidence 70 + An indeterminate line is present in the superior vena cava. The tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There are diffuse, bilateral interstitial opacities throughout both lung fields. The pattern is somewhat reticular and hazy. There is no obvious pleural effusion.
+   - mediastinum/heart
+     - The mediastinum appears relatively normal in width. The heart size is difficult to assess due to the low lung volumes and the presence of interstitial opacities.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible, but the upper abdomen is not well-visualized due to the image cropping.
+   - bones/soft tissues
+     - The bony structures are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Diffuse bilateral interstitial opacities. The etiology is uncertain, but could be due to pulmonary edema, infection, or other inflammatory processes.
+   - Indeterminate central line.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a single view, which limits the assessment of the lung fields.
+   - The image is cropped, obscuring the apices and costophrenic angles.
+   - The lung volumes are low, which can make it difficult to assess the lung parenchyma.
+   - The presence of interstitial opacities makes it difficult to assess the underlying lung structures.
+   - The presence of a burned-in label in the top-left corner obscures the image.
+
+7) DOMAIN VECTOR

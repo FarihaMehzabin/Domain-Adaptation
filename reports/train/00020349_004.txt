@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is AP.
+   - patient position: portable with confidence 90% + the patient is in a portable position.
+   - portable-likelihood: high with evidence (patient is in a portable setting).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + the patient is in a good inspiratory position.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + no obvious motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving the upper portion of the chest and the lower portion of the abdomen.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are visible, the mediastinum is visible, the bones are visible, and the diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to be processed with low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right subclavian central line: present, course: right subclavian vein, tip position: indeterminate, confidence 80% + the line is present, but the tip position is not clearly visible.
+   - Indeterminate: indeterminate, course: indeterminate, tip position: indeterminate, confidence 50% + the line is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - Right lung: hazy opacity in the right lower lung field, obscuring the costophrenic angle.
+     - Left lung: hazy opacity in the left lower lung field, obscuring the costophrenic angle.
+     - Pleural effusions: likely present, given the obscuration of the costophrenic angles.
+   - mediastinum/heart:
+     - Mediastinum: unremarkable.
+     - Heart: size is difficult to assess due to the overlying opacity.
+   - diaphragms/upper abdomen:
+     - Diaphragms: diaphragmatic contours are not well visualized due to the overlying opacity.
+     - Upper abdomen: not well visualized.
+   - bones/soft tissues:
+     - Bones: ribs are visible.
+     - Soft tissues: no obvious abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral pleural effusions, likely causing obscuration of the costophrenic angles.
+   - Right lower lung opacity, concerning for possible pneumonia or atelectasis.
+   - Left lower lung opacity, concerning for possible pneumonia or atelectasis.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is a portable chest radiograph, which may be limited in its ability to fully evaluate the chest.
+   - The costophrenic angles are obscured by the pleural effusions, making it difficult to assess for small effusions or other abnormalities.
+   - The heart size is difficult to assess due to the overlying opacity.
+   - The tip position of the central line is not clearly visible.
+
+7) DOMAIN VECTOR

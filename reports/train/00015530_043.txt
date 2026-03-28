@@ -1,0 +1,54 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (supine) with confidence 100 + patient is supine.
+   - portable-likelihood (high) with evidence (portable equipment present).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the lung volumes are low.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are not well visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lung parenchyma is somewhat hazy, likely due to low inspiration. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are lines present, likely from the equipment. The presence of these lines is not unusual in a portable chest radiograph.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to be underexposed. edge enhancement (low) with confidence 90 + edge enhancement is not present. inversion suspected (no) with confidence 100 + no evidence of inversion. noise texture (low) with confidence 90 + the noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, course: midline, tip position: approximately 4 cm above the carina, confidence 95
+   - nasogastric tube (NGT) present, course: midline, tip position: stomach, confidence 90
+   - right-sided central venous catheter (CVC) present, course: right subclavian, tip position: proximal to the junction of the superior vena cava and right atrium, confidence 90
+   - left-sided central venous catheter (CVC) present, course: left subclavian, tip position: proximal to the junction of the superior vena cava and left atrium, confidence 90
+   - arterial line present, course: radial artery, tip position: distal to the origin of the brachiocephalic vein, confidence 90
+   - Foley catheter present, course: bladder, tip position: bladder, confidence 90
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral diffuse hazy opacities are present, suggestive of pulmonary edema or consolidation. The haziness is more prominent in the perihilar regions.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in size and contour.
+     - the heart size is difficult to assess due to low lung volumes.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is incompletely visualized due to the supine position and the patient's body habitus.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+     - the soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - bilateral diffuse hazy opacities, likely representing pulmonary edema or consolidation.
+   - lines and tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is a portable chest radiograph, which is limited by low inspiration and potential for patient movement.
+   - The apices and costophrenic angles are obscured.
+   - The heart size is difficult to assess due to low lung volumes.
+   - The upper abdomen is incompletely visualized.
+
+7) DOMAIN VECTOR

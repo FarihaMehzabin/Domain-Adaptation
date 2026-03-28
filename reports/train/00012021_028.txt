@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is taken from the front, with the patient's chest facing the detector.
+   - patient position: semi-erect with confidence 90% + evidence: the patient is not fully upright, and the image is not fully lateral.
+   - portable-likelihood: medium with evidence: the image appears to be taken in a portable setting, given the limited field of view and the presence of multiple lines and tubes.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical, suggesting no significant rotation.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded, and there is no obvious evidence of poor inspiration.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart, indicating adequate penetration.
+   - motion blur: none with confidence 95% + evidence: there is no obvious motion blur in the image.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are also partially obscured.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are somewhat obscured by the patient's body habitus and the presence of multiple lines and tubes. The mediastinum is visible, and the bones are well-defined. The diaphragms are visible, and the costophrenic angles are obscured.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: multiple lines and tubes are present, likely representing various medical devices. The presence of these artifacts may affect the interpretation of the image.
+   - markers/overlays: laterality marker present? burned-in text present? Laterality marker is present, indicating the left side is on the left. Burned-in text is present in the top-left corner, but the content is not visible.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement. There is no obvious evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: unknown, confidence 80%
+   - nasogastric tube: present, course: unknown, tip position: unknown, confidence 70%
+   - central venous catheter: present, course: internal jugular vein, tip position: superior vena cava, confidence 90%
+   - chest tube: present, course: right hemithorax, tip position: unknown, confidence 85%
+   - arterial line: present, course: radial artery, tip position: unknown, confidence 80%
+   - pacemaker/ICD: present, course: unknown, tip position: unknown, confidence 60%
+   - Foley catheter: present, course: unknown, tip position: unknown, confidence 50%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: bilateral opacities are present, likely representing pulmonary edema or consolidation. The right lung appears more affected than the left. There is no obvious pleural effusion.
+   - mediastinum/heart: the mediastinum is unremarkable. The heart size is difficult to assess due to the patient's body habitus and the presence of multiple lines and tubes.
+   - diaphragms/upper abdomen: the diaphragms are visible, and the upper abdomen is unremarkable.
+   - bones/soft tissues: the bones are well-defined. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral pulmonary edema/consolidation.
+   - Multiple lines and tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Limited field of view due to patient's body habitus and the presence of multiple lines and tubes.
+   - Difficulty in assessing the heart size.
+   - Unclear tip positions of some lines and tubes.
+   - Burned-in text obscures the top-left corner of the image.
+
+7) DOMAIN VECTOR

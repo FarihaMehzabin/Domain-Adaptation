@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (high) with evidence (portable X-ray machine).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimated to be 9.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with some loss of the costophrenic angles. The apices are not well visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are relatively clear, but there is some increased opacity in the lung fields. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are not well visualized due to cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. with confidence 80 + there are some lines visible, but they are not clearly defined. There is no obvious grid or moiré pattern. There is no obvious banding. There is no obvious detector dropout. There are no obvious compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? with confidence 95 + a laterality marker is present, indicating the left side is on the right. There is a burned-in label top-left, but the content is not visible.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, tip position not visible, confidence 80 + an endotracheal tube is present, but the tip position is not clearly visible.
+   - nasogastric tube (NGT) present, course not visible, tip position not visible, confidence 70 + a nasogastric tube is present, but the course and tip position are not visible.
+   - central venous catheter (CVC) present, tip position not visible, confidence 80 + a central venous catheter is present, but the tip position is not clearly visible.
+   - right subclavian line present, tip position not visible, confidence 70 + a right subclavian line is present, but the tip position is not clearly visible.
+   - arterial line present, tip position not visible, confidence 70 + an arterial line is present, but the tip position is not clearly visible.
+   - other lines/tubes: indeterminate, confidence 50 + there are other lines/tubes present, but their exact nature and tip positions are not visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - increased opacity in the lung fields bilaterally, with a more prominent appearance in the perihilar regions.
+     - no obvious pleural effusion.
+     - no pneumothorax.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in size and contour.
+     - the heart size is likely normal, but the cardiac silhouette is somewhat obscured by the increased lung opacities.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the bones are intact.
+     - no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - bilateral pulmonary edema.
+   - possible underlying cause is not evident on this single image.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - limited visualization of the costophrenic angles due to cropping.
+   - limited visualization of the tip positions of the endotracheal tube, nasogastric tube, central venous catheter, right subclavian line, and arterial line.
+   - the heart size is likely normal, but the cardiac silhouette is somewhat obscured by the increased lung opacities.
+
+7) DOMAIN VECTOR

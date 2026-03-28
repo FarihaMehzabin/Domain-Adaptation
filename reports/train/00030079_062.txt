@@ -1,0 +1,43 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior view.
+   - patient position: portable with confidence 90% + the patient is in a portable position.
+   - portable-likelihood: high with evidence (patient is not in a fixed position).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are relatively clear, with some increased interstitial markings. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are some lines visible in the image, likely from the equipment.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present on the left side of the image. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to be processed with low contrast and low edge enhancement.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: approximately 4 cm above the carina, confidence 90%
+   - nasogastric tube: present, course: midline, tip position: not clearly visualized, confidence 60%
+   - right subclavian central line: present, course: right subclavian vein, tip position: not clearly visualized, confidence 60%
+   - left subclavian central line: present, course: left subclavian vein, tip position: not clearly visualized, confidence 60%
+   - arterial line: indeterminate, course: not visualized, tip position: indeterminate, confidence 20%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: increased interstitial markings are present throughout both lung fields. There is no obvious pleural effusion or pneumothorax.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is not well visualized due to the patient's position.
+   - bones/soft tissues: The bones are visible. There are no obvious fractures or dislocations.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - The patient is intubated.
+   - The patient has multiple central lines.
+   - The nasogastric tube tip is not clearly visualized.
+   - The arterial line is not clearly visualized.
+   - Increased interstitial markings are present throughout both lung fields.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip position of the nasogastric tube and arterial line are not clearly visualized.
+   - The upper abdomen is not well visualized.
+   - The patient is in a portable position, which may limit the assessment of the lung fields.
+
+7) DOMAIN VECTOR

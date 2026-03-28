@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be adequately inflated.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized due to the image cropping.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.) with confidence 100 + a laterality marker is present. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to have low contrast. edge enhancement (low) with confidence 100 + there is no evidence of edge enhancement. inversion suspected (no) with confidence 100 + there is no evidence of image inversion. noise texture (low) with confidence 100 + the image has low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - nasogastric tube (NGT) present, course: from the nose to the stomach, tip position: not visualized. confidence 80
+   - central venous catheter (CVC) present, course: from the subclavian vein to the superior vena cava, tip position: not visualized. confidence 80
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear bilaterally. no focal consolidation, pleural effusion, or pneumothorax is identified.
+     - pleura: unremarkable.
+   - mediastinum/heart
+     - mediastinum: normal in width.
+     - heart: normal size and shape.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: bowel loops are present, but the details are not well visualized due to the image cropping.
+   - bones/soft tissues
+     - ribs: appear normal.
+     - clavicles: appear normal.
+     - scapulae: appear normal.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Nasogastric tube is present.
+   - Central venous catheter is present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices and costophrenic angles are not fully visualized.
+   - The upper abdomen is not fully visualized due to image cropping.
+   - The tip position of the nasogastric tube and central venous catheter are not visualized.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the costophrenic angles not fully visualized. The apices are not fully visualized due to the crop.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + lungs are clear. Mediastinum is well-defined. Bones are intact. Diaphragms are visible. Costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the left side is the patient's right side. Burned-in text is present in the upper left corner, but the content is not legible.)
+   - presentation/processing cues: contrast (low) with confidence 90 + image is slightly underexposed. Edge enhancement (low) with confidence 90 + edge enhancement is minimal. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 90 + image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian catheter: present, course: right subclavian vein, tip position: not visualized. confidence 80
+   - left subclavian catheter: present, course: left subclavian vein, tip position: not visualized. confidence 80
+   - central line: indeterminate, course: not visualized, tip position: not visualized. confidence 50
+   - pacemaker/defibrillator: absent. confidence 100
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear bilaterally. no focal consolidation, pleural effusion, or pneumothorax is identified.
+     - pleura: unremarkable.
+   - mediastinum/heart
+     - mediastinum: normal in width. no obvious masses or enlarged lymph nodes.
+     - heart: normal size and shape.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: bowel loops are present, but the visualization is limited due to the crop.
+   - bones/soft tissues
+     - bones: no acute fractures are identified.
+     - soft tissues: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute cardiopulmonary abnormalities are identified on this limited chest radiograph.
+   - Right subclavian and left subclavian central lines are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is cropped, limiting visualization of the costophrenic angles and apices.
+   - The image is slightly underexposed.
+   - The presence of a central line is indeterminate due to the lack of visualization of the tip.
+   - The presence of a pacemaker/defibrillator is indeterminate due to the lack of visualization of the device.
+
+7) DOMAIN VECTOR

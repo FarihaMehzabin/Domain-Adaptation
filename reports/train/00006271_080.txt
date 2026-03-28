@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior chest radiograph.
+   - patient position: upright with confidence 90% + the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence (the image is likely a portable chest radiograph, but the quality is poor).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image is not rotated.
+   - inspiration: adequate with confidence 85% + the lungs are well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + there is no motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially obscured.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are diffusely hazy. The mediastinum is not well-defined. The bones are not well-defined. The diaphragms are not well-defined. The costophrenic angles are obscured.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image has low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: not visible, confidence 80%
+   - nasogastric tube: present, course: midline, tip position: not visible, confidence 80%
+   - right subclavian catheter: present, course: right subclavian vein to superior vena cava, tip position: not visible, confidence 80%
+   - right picc line: present, course: right subclavian vein to superior vena cava, tip position: not visible, confidence 80%
+   - central line: present, course: right internal jugular vein to superior vena cava, tip position: not visible, confidence 80%
+   - indwelling urinary catheter: present, course: bladder, tip position: not visible, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: diffuse bilateral hazy opacities are present throughout both lung fields. There is no obvious pleural effusion.
+   - mediastinum/heart: the mediastinum is not well-defined. The heart size is not well-visualized due to the overlying opacities.
+   - diaphragms/upper abdomen: the diaphragms are not well-defined. The upper abdomen is not well-visualized.
+   - bones/soft tissues: the bones are not well-defined. The soft tissues are not well-visualized.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - diffuse bilateral hazy opacities throughout both lung fields.
+   - the mediastinum is not well-defined.
+   - the heart size is not well-visualized.
+   - the diaphragms are not well-defined.
+   - the upper abdomen is not well-visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - the image is a portable chest radiograph with poor image quality.
+   - the mediastinum and heart size are not well-visualized.
+   - the diaphragms and upper abdomen are not well-visualized.
+   - the tip positions of the tubes are not visible.
+
+7) DOMAIN VECTOR

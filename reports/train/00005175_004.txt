@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (high) with evidence (image is likely obtained in a portable setting).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the lung volumes are low.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are also partially obscured.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are poorly visualized due to low inspiration and significant overlying opacity. The mediastinum is somewhat visible, but the heart size is difficult to assess. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are numerous lines and artifacts present, likely due to the portable nature of the image and potential compression artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to have low contrast. edge enhancement (low) with confidence 90 + edge enhancement is minimal. inversion suspected (no) with confidence 100 + no obvious signs of inversion are present. noise texture (low) with confidence 90 + the noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, tip position indeterminate, confidence 60 + the tip of the endotracheal tube is not clearly visible.
+   - nasogastric tube (NGT) present, course visible, tip position indeterminate, confidence 50 + the tip of the nasogastric tube is not clearly visible.
+   - central venous catheter (CVC) present, course visible, tip position indeterminate, confidence 40 + the tip of the central venous catheter is not clearly visible.
+   - chest tubes (2) present, course visible, tip position indeterminate, confidence 30 + the tips of the chest tubes are not clearly visible.
+   - arterial line present, course visible, tip position indeterminate, confidence 20 + the tip of the arterial line is not clearly visible.
+   - Foley catheter present, course visible, tip position indeterminate, confidence 10 + the tip of the Foley catheter is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - diffuse bilateral opacities are present, consistent with pulmonary edema and/or consolidation. The opacities are widespread and appear to involve both lungs.
+     - there is no obvious pleural effusion.
+   - mediastinum/heart
+     - the mediastinum is somewhat visible, but the heart size is difficult to assess due to the low lung volumes and overlying opacities.
+     - there is no obvious mediastinal widening.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is poorly visualized due to the low lung volumes and overlying opacities.
+   - bones/soft tissues
+     - the bones are visible.
+     - there are no obvious fractures or dislocations.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - diffuse bilateral pulmonary opacities, likely representing pulmonary edema and/or consolidation.
+   - indeterminate position of several lines and tubes.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - low lung volumes, limiting visualization of the lung parenchyma and mediastinum.
+   - the image is likely obtained in a portable setting, which may introduce artifacts.
+   - the tip positions of several lines and tubes are indeterminate.
+   - the upper abdomen is poorly visualized.
+
+7) DOMAIN VECTOR

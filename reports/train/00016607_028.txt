@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection (AP portable) with confidence 100 + image is labeled "AP portable"
+   - patient position (upright) with confidence 100 + image is labeled "AP portable"
+   - portable-likelihood (high) with evidence (image is labeled "AP portable")
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image shows the apices, costophrenic angles, and costal margins)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are clear, mediastinum is well-defined, bones are visible, and costophrenic angles are clear
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, burned-in text is present at the top-left)
+   - presentation/processing cues: contrast (low) with confidence 100 + edge enhancement is low, inversion suspected (no) with confidence 100 + noise texture is low
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Tracheostomy tube (present) with confidence 100 + tube is present in the trachea
+   - Nasogastric tube (present) with confidence 100 + tube is present in the stomach
+   - Central venous catheter (present) with confidence 100 + catheter is present in the superior vena cava
+   - Indeterminate (absent) with confidence 100 + no other lines or tubes are clearly visible
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear bilaterally, no focal consolidation, pleural effusions, or pneumothorax are identified.
+     - pleura: unremarkable.
+   - mediastinum/heart
+     - mediastinum: normal width.
+     - heart: heart size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: diaphragms are well-defined.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - bones: ribs are intact.
+     - soft tissues: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Tracheostomy tube in place.
+   - Nasogastric tube in place.
+   - Central venous catheter in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited view of the upper abdomen.
+   - No other lines or tubes are clearly visible.
+
+7) DOMAIN VECTOR

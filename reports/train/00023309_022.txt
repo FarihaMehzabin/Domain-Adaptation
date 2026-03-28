@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + the image is labeled as portable.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be a standard AP view.
+   - inspiration (adequate) with confidence 100 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image shows the upper chest, including the apices, costophrenic angles, and costal margins. The image is cropped, but the lung fields are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are well-aerated. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate) with confidence 100 + no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present. A burned-in label is present in the top-left corner.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, tip position not visible, confidence 100 + an endotracheal tube is present, but the tip position is not visible.
+   - nasogastric tube (NGT) present, course not visible, tip position not visible, confidence 100 + a nasogastric tube is present, but the course and tip position are not visible.
+   - right internal jugular central venous catheter (IJCV) present, course visible, tip position not visible, confidence 100 + a right internal jugular central venous catheter is present, the course is visible, but the tip position is not visible.
+   - left subclavian central venous catheter (SCCV) present, course visible, tip position not visible, confidence 100 + a left subclavian central venous catheter is present, the course is visible, but the tip position is not visible.
+   - left-sided picc line present, course visible, tip position not visible, confidence 100 + a left-sided picc line is present, the course is visible, but the tip position is not visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral diffuse opacities, predominantly in the lower lung zones, with a more prominent appearance in the left lung. The opacities are not uniform in density.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in width.
+     - the heart size is normal.
+     - the pulmonary vasculature is prominent.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is not well visualized due to the patient's position and the image quality.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+     - the soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral diffuse pulmonary opacities, predominantly in the lower lung zones, with a more prominent appearance in the left lung. The etiology is uncertain and further evaluation is warranted.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable AP view, which may limit the assessment of the lung fields.
+   - The tip position of the central venous catheters is not visible.
+   - The course of the nasogastric tube is not visible.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

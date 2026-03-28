@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: Image is an anteroposterior (AP) chest radiograph.
+   - patient position: Supine with confidence 90% + evidence: The patient is lying on their back (supine).
+   - portable-likelihood: Medium with evidence: The image appears to be a portable chest radiograph, given the presence of multiple lines and the overall image quality.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: None with confidence 95% + evidence: The image appears to be relatively free of rotation. Clavicles are approximately symmetrical.
+   - inspiration: Adequate with confidence 85% + evidence: The lungs appear to be well-expanded.
+   - penetration: Adequate with confidence 90% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: None with confidence 95% + evidence: There is no obvious motion blur.
+   - collimation/anatomic coverage: Apices? costophrenic angles? lateral chest walls? The image appears to be cropped, obscuring the apices and costophrenic angles. The lateral chest walls are also partially obscured.
+   - anatomical clarity: Lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are generally clear, but the apices and costophrenic angles are not fully visualized. The mediastinum is visible. The bones are visible. The diaphragms are visible.
+   - acquisition artifacts: Lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines present in the image, likely representing medical devices. The presence of these lines suggests a portable setting. There is no obvious grid or moiré pattern. There is no obvious banding. There is no obvious detector dropout. There is no obvious compression artifact.
+   - markers/overlays: Laterality marker present? burned-in text present? Laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left, but the content is not visible.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (Central Line): Present, course: Right internal jugular vein, tip position: Indeterminate, confidence 80%.
+   - Left Internal Jugular Central Venous Catheter (Central Line): Present, course: Left internal jugular vein, tip position: Indeterminate, confidence 80%.
+   - Nasogastric Tube: Present, course: Indeterminate, tip position: Indeterminate, confidence 60%.
+   - Peripheral IV Catheter: Present, course: Right upper extremity, tip position: Indeterminate, confidence 70%.
+   - ETT (Endotracheal Tube): Absent.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: The lungs are clear bilaterally, with no obvious consolidation, pleural effusion, or pneumothorax.
+   - mediastinum/heart: The mediastinum is within normal limits in size and contour. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues: The bony structures are unremarkable.
+
+5) IMPRESSION
+   - Multiple central venous catheters are present.
+   - Nasogastric tube is present.
+   - Peripheral IV catheter is present.
+   - No acute pulmonary process identified.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The apices and costophrenic angles are not fully visualized due to image cropping.
+   - The tip positions of the central venous catheters are not clearly defined.
+   - The course of the nasogastric tube is not fully visualized.
+
+7) DOMAIN VECTOR

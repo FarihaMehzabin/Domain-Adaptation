@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "PORTABLE" label.
+   - portable-likelihood (high) with evidence (label).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, likely from the lower chest/upper abdomen. Costophrenic angles are not fully visualized. Costal margins are not fully visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (lungs are generally clear, but the lower lung fields are not fully visualized due to the image cropping. Mediastinum is visible. Bones are visible. Diaphragms are visible. Costophrenic angles are not fully visualized.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (no obvious artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, pointing to the right. "PORTABLE" label present, top-left.)
+   - presentation/processing cues: contrast (low) with confidence 100 + image appears to be low contrast. edge enhancement (low) with confidence 100 + no obvious edge enhancement. inversion suspected (no) with confidence 100 + no obvious signs of inversion. noise texture (low) with confidence 100 + low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - lines/tubes: Indeterminate (no lines/tubes are clearly visible in the image.)
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: generally clear, but lower lung fields are not fully visualized due to image cropping.
+     - pleura: no obvious pleural effusion or pneumothorax.
+   - mediastinum/heart
+     - mediastinum: appears normal in size and contour.
+     - heart: size is difficult to assess due to the image cropping.
+   - diaphragms/upper abdomen
+     - diaphragms: visible.
+     - upper abdomen: bowel loops are present, but the entire abdomen is not visualized.
+   - bones/soft tissues
+     - bones: ribs are visible.
+     - soft tissues: no obvious masses or abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Image quality is limited due to the portable nature of the study and the extent of the image cropping.
+   - The lower lung fields are not fully visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited visualization of the lower lung fields due to image cropping.
+   - Inability to fully assess the heart size due to image cropping.
+   - Inability to fully assess the upper abdomen due to image cropping.
+   - No lines/tubes are clearly visible in the image.
+
+7) DOMAIN VECTOR

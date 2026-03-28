@@ -1,0 +1,43 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: The image is a PA chest X-ray.
+   - patient position: Upright with confidence 90% + evidence: The patient is in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a standard chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: The image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + evidence: The lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: There is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be adequately collimated, with good visualization of the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear, the mediastinum is well-defined, the bones are visible, and the diaphragms and costophrenic angles are clearly seen.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? The image has a laterality marker indicating the left side is on the left. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture appears to be low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right Internal Jugular Central Venous Catheter (Central Line): present, course: Right internal jugular vein, tip position: Indeterminate, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - There are bilateral diffuse hazy opacities, predominantly in the lower lung zones. The pattern is not clearly consistent with consolidation, but it is concerning for possible pulmonary edema or infection.
+     - No pleural effusion is identified.
+   - mediastinum/heart:
+     - The mediastinum is within normal limits in width.
+     - The heart size is normal.
+   - diaphragms/upper abdomen:
+     - The diaphragms are well-defined.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues:
+     - The bony structures are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral diffuse hazy opacities, predominantly in the lower lung zones. The etiology is uncertain but could be pulmonary edema, infection, or other inflammatory process.
+   - Right internal jugular central venous catheter is present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The diffuse hazy opacities are difficult to characterize definitively on a single image.
+   - The tip position of the central line is indeterminate.
+   - The patient's clinical history is not available, which limits the ability to fully interpret the findings.
+
+7) DOMAIN VECTOR

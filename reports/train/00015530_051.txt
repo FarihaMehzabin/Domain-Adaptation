@@ -1,0 +1,56 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (high) with evidence (image quality, lack of detail in the posterior lung fields)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image is not rotated.
+   - inspiration (low) with confidence 80 + the inspiration is low, with a posterior rib count of approximately 8 ribs visible.
+   - penetration (adequate) with confidence 100 + the penetration is adequate, with good visualization of the vertebral bodies behind the heart.
+   - motion blur (none) with confidence 100 + there is no motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not well visualized due to the low inspiration and the patient's position. The costophrenic angles are not well visualized due to the low inspiration and the patient's position. The lateral chest walls are partially obscured by the patient's arms.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat obscured by the low inspiration. The mediastinum is well visualized. The bones are well visualized. The diaphragms are well visualized. The costophrenic angles are not well visualized.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are no obvious artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low), edge enhancement (low), inversion suspected (no), noise texture (low)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, course: midline, tip position: approximately 4 cm above the carina, confidence 95
+   - nasogastric tube (NGT) present, course: midline, tip position: not visualized, confidence 60
+   - right-sided central venous catheter (CVC) present, course: right subclavian, tip position: not visualized, confidence 70
+   - left-sided central venous catheter (CVC) present, course: left subclavian, tip position: not visualized, confidence 70
+   - chest tubes (2) present, course: right and left sides, tip position: not visualized, confidence 60
+   - arterial line present, course: radial artery, tip position: not visualized, confidence 60
+   - Foley catheter present, course: bladder, tip position: not visualized, confidence 60
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - there is increased opacity in the right lung field, particularly in the lower lobe. This could be due to atelectasis, consolidation, or fluid.
+     - there is also increased opacity in the left lung field, but less prominent than in the right.
+     - there is no obvious pleural effusion or pneumothorax.
+   - mediastinum/heart
+     - the mediastinum is unremarkable.
+     - the heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are well visualized.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are well visualized.
+     - the clavicles are well visualized.
+     - there is subcutaneous emphysema in the chest wall, particularly on the right side.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - increased opacity in the right lung field, concerning for possible pneumonia or atelectasis.
+   - increased opacity in the left lung field, also concerning for possible pneumonia or atelectasis.
+   - subcutaneous emphysema in the chest wall.
+   - central venous catheters are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - low inspiration limits visualization of the lung bases.
+   - the tip position of the nasogastric tube and central venous catheters are not clearly visualized.
+   - the presence of subcutaneous emphysema makes it difficult to assess for pneumothorax.
+
+7) DOMAIN VECTOR

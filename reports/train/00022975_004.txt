@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (supine) with confidence 100 + patient is lying on their back.
+   - portable-likelihood (high) with evidence (image is on a portable device).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the lung volumes are low.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat obscured by the low inspiration. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are no obvious artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 80 + the image appears to have low contrast. edge enhancement (low) with confidence 80 + edge enhancement is low. inversion suspected (no) with confidence 100 + no obvious signs of inversion. noise texture (low) with confidence 80 + the noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - nasogastric tube (NGT) present, course: from the nose to the stomach, tip position: not clearly visible, confidence 60.
+   - catheter present, course: from the left upper quadrant to the right upper quadrant, tip position: not clearly visible, confidence 60.
+   - central line present, course: from the subclavian vein to the superior vena cava, tip position: not clearly visible, confidence 60.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There is some increased opacity in the lower lung fields, likely due to low lung volumes.
+     - No obvious pleural effusion or pneumothorax is identified.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in size and contour.
+     - The heart size is difficult to assess due to low lung volumes.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible.
+     - The upper abdomen is partially visualized, showing bowel loops.
+   - bones/soft tissues
+     - The ribs are visible.
+     - The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Low lung volumes.
+   - Nasogastric tube is present.
+   - Catheter is present.
+   - Central line is present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Low lung volumes limit the assessment of the lung fields.
+   - The image is cropped, obscuring the apices and costophrenic angles.
+   - The tip positions of the NG tube, catheter, and central line are not clearly visible.
+
+7) DOMAIN VECTOR

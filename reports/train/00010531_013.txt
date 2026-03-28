@@ -1,0 +1,37 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: The image is an anteroposterior (AP) chest radiograph.
+   - patient position: Portable with confidence 90% + evidence: The patient is in a portable position, likely due to the presence of multiple lines and tubes.
+   - portable-likelihood: High with evidence: The presence of multiple lines and tubes, along with the patient's position, suggests a portable study.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: None with confidence 95% + evidence: The image appears to be relatively free of rotation. Clavicles are approximately symmetrical.
+   - inspiration: Adequate with confidence 90% + evidence: The lungs appear to be well-expanded.
+   - penetration: Adequate with confidence 95% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: None with confidence 95% + evidence: There is no obvious motion blur.
+   - collimation/anatomic coverage: Apices? costophrenic angles? lateral chest walls? The image appears to be cropped, obscuring the apices and the lateral chest walls. The costophrenic angles are not fully visualized.
+   - anatomical clarity: Lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are generally clear, but there is some increased opacity in the lower lung fields. The mediastinum is unremarkable. The bones are well-visualized. The costophrenic angles are not fully visualized due to the image cropping.
+   - acquisition artifacts: Lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines and tubes present, which could be artifacts of the positioning or the equipment. The presence of these lines and tubes is a significant artifact.
+   - markers/overlays: Laterality marker present? burned-in text present? Laterality marker is present on the left side. Burned-in text is present in the top-left corner.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Central Venous Catheter (CVC): Present, likely in the superior vena cava (SVC) with confidence 95%. The catheter is not clearly visible, but the position is likely in the SVC.
+   - Peripheral IV line: Present, likely in the subclavian vein with confidence 95%. The line is not clearly visible, but the position is likely in the subclavian vein.
+   - Indeterminate: The exact location and tip position of the other lines and tubes are not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: There is increased opacity in the lower lung fields, which could be due to atelectasis or consolidation. The upper lung fields are relatively clear. No pleural effusion is identified.
+   - mediastinum/heart: The mediastinum is unremarkable. The heart size is within normal limits.
+   - diaphragms/upper abdomen: The diaphragms are well-visualized. The upper abdomen is not well visualized due to the image cropping.
+   - bones/soft tissues: The bones are well-visualized. There are no obvious fractures or dislocations.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Increased opacity in the lower lung fields, potentially representing atelectasis or consolidation.
+   - Presence of multiple lines and tubes, which could be artifacts.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Image cropping limits visualization of the apices and lateral chest walls.
+   - The exact location and tip position of the other lines and tubes are not clearly visible.
+   - The presence of artifacts from the lines and tubes could obscure underlying pathology.
+
+7) DOMAIN VECTOR

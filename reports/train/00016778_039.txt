@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (supine) with confidence 100 + patient is supine.
+   - portable-likelihood (high) with evidence (portable equipment present).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + posterior rib count is difficult to estimate.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (apices are partially obscured by the patient's head. Costophrenic angles are partially obscured by the patient's body. Costal margins are adequately visualized. There is some padding/cropping at the edges of the image.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are generally well-visualized. Mediastinum is visible. Bones are visible. Diaphragms are visible. Costophrenic angles are partially obscured.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate) with confidence 50 + no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. Burned-in text is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 70 + contrast is low. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 80 + low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Tracheostomy Tube (present) with confidence 100 + Tracheostomy tube is present, terminating in the upper trachea.
+   - Central Venous Catheter (present) with confidence 90 + Central venous catheter is present, terminating in the superior vena cava.
+   - Indeterminate (present) with confidence 50 + There is an indeterminate device present, likely a line or catheter, terminating in the region of the superior vena cava.
+   - Indeterminate (present) with confidence 50 + There is an indeterminate device present, likely a line or catheter, terminating in the region of the superior vena cava.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: There is increased opacity in the right lung, particularly in the lower lung fields. This could represent consolidation, edema, or atelectasis.
+     - Left lung: There is increased opacity in the left lung, particularly in the upper lung fields. This could represent consolidation, edema, or atelectasis.
+     - Pleura: No pleural effusion is identified.
+   - mediastinum/heart
+     - Mediastinum: The mediastinum is midline.
+     - Heart: The heart size is difficult to assess due to the patient's position and the presence of overlying structures.
+   - diaphragms/upper abdomen
+     - Diaphragms: The diaphragms are visualized.
+     - Upper abdomen: The upper abdomen is largely obscured by the patient's body habitus.
+   - bones/soft tissues
+     - Bones: The ribs and clavicles are visualized.
+     - Soft tissues: The soft tissues are generally well-visualized.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral pulmonary opacities, concerning for pneumonia, edema, or atelectasis.
+   - Tracheostomy tube in place.
+   - Central venous catheter in place.
+   - Indeterminate devices present in the superior vena cava region.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited visualization of the heart size.
+   - Limited visualization of the upper abdomen.
+   - Difficulty in assessing the extent of the pulmonary opacities due to the patient's position and the presence of overlying structures.
+   - The presence of indeterminate devices in the superior vena cava region.
+
+7) DOMAIN VECTOR

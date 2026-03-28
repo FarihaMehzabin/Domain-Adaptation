@@ -1,0 +1,53 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "Portable" label.
+   - portable-likelihood (high) with evidence (label).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are visible, mediastinum is visible, bones are visible, and diaphragms and costophrenic angles are visible, although the apices and costophrenic angles are obscured.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to be low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 90 + the image appears to have low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - right subclavian central line (present) with confidence 95 + a central line is seen in the right subclavian vein, extending to the superior vena cava.
+   - left subclavian central line (present) with confidence 95 + a central line is seen in the left subclavian vein, extending to the superior vena cava.
+   - endotracheal tube (present) with confidence 95 + an endotracheal tube is seen in the trachea.
+   - nasogastric tube (present) with confidence 95 + a nasogastric tube is seen coursing into the stomach.
+   - chest tube (present) with confidence 95 + a chest tube is seen in the right hemithorax.
+   - catheter (present) with confidence 95 + a catheter is seen in the right upper quadrant.
+   - IV catheter (present) with confidence 95 + an IV catheter is seen in the right upper quadrant.
+   - Indeterminate (indeterminate) with confidence 100 + no clear visualization of the tip of the right subclavian central line.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: opacification is present in the right lung, obscuring the lung markings.
+     - left lung: clear.
+     - pleural effusion: likely present on the left, obscuring the lung markings.
+   - mediastinum/heart
+     - mediastinum: midline.
+     - heart: size is difficult to assess due to the opacification of the left lung.
+   - diaphragms/upper abdomen
+     - diaphragms: diaphragms are visible.
+     - upper abdomen: bowel loops are visible in the upper abdomen.
+   - bones/soft tissues
+     - ribs: ribs are visible.
+     - clavicles: clavicles are visible.
+     - spine: spine is visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right lung opacification.
+   - Possible left pleural effusion.
+   - Central lines and other devices are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited visualization of the apices and costophrenic angles due to image cropping.
+   - Difficulty assessing heart size due to lung opacification.
+   - Indeterminate tip position of the right subclavian central line.
+
+7) DOMAIN VECTOR

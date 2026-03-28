@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior chest radiograph.
+   - patient position: upright with confidence 90% + the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence (the image is not a standard PA or lateral chest radiograph).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the heart border is visible behind the lung markings.
+   - motion blur: none with confidence 95% + the image is not blurry.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the top and bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are relatively clear, but there is increased opacity in the right lung. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are multiple lines and tubes visible in the image. There are no obvious signs of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to be processed with low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: unknown, confidence 80%
+   - nasogastric tube: present, course: midline, tip position: unknown, confidence 80%
+   - central venous catheter: present, course: right subclavian, tip position: superior vena cava, confidence 90%
+   - arterial line: present, course: right radial artery, tip position: unknown, confidence 85%
+   - chest tubes: present, course: right apex, tip position: unknown, confidence 95%
+   - pacemaker leads: present, course: right atrium, right ventricle, tip position: unknown, confidence 90%
+   - Foley catheter: present, course: bladder, tip position: unknown, confidence 80%
+   - multiple other lines/tubes: present, course: various, tip position: unknown, confidence 70%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: increased opacity in the right lung, particularly in the lower lung zones. There is also some increased opacity in the left lung, but less prominent. There is no obvious pleural effusion.
+   - mediastinum/heart: the mediastinum is midline. The heart size is difficult to assess due to the increased lung opacity.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is largely unremarkable.
+   - bones/soft tissues: the ribs are visible. The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right lung opacities, etiology unclear. Consider pneumonia, pulmonary edema, or other inflammatory processes.
+   - Multiple lines and tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The increased lung opacity makes it difficult to assess the underlying lung parenchyma.
+   - The tip positions of the lines and tubes are not clearly visible.
+   - The heart size is difficult to assess.
+
+7) DOMAIN VECTOR

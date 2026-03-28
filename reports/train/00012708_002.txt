@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is PA view.
+   - patient position (upright) with confidence 100 + patient is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be cropped, with the apices and costophrenic angles not fully visible. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + lungs are relatively clear, mediastinum is visible, bones are visible, and costophrenic angles are visible, although the apices are not.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 90 + the noise texture appears to be low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (R subclavian line) present, course: right subclavian vein, tip position: indeterminate, confidence 95 + a right subclavian line is present, but the tip position is not clearly visible.
+   - left subclavian line (L subclavian line) present, course: left subclavian vein, tip position: indeterminate, confidence 95 + a left subclavian line is present, but the tip position is not clearly visible.
+   - right picc line (R picc line) present, course: right subclavian vein, tip position: indeterminate, confidence 95 + a right picc line is present, but the tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - left lower lobe opacity (LL lobe opacity) present, size: large, density: high, location: left lower lobe, with confidence 95 + a large opacity is present in the left lower lobe, with high density.
+     - right lung (R lung) clear with confidence 95 + the right lung appears clear.
+     - left pleural effusion (LL effusion) present, size: large, with confidence 95 + a large left pleural effusion is present.
+     - right pleural effusion (RL effusion) present, size: small, with confidence 90 + a small right pleural effusion is present.
+   - mediastinum/heart
+     - heart size (cardiac silhouette) normal with confidence 95 + the heart size appears normal.
+     - mediastinal contours normal with confidence 95 + the mediastinal contours appear normal.
+   - diaphragms/upper abdomen
+     - diaphragms (diaphragms) visible with confidence 100 + diaphragms are visible.
+     - upper abdomen (upper abdomen) visible with confidence 95 + the upper abdomen is visible.
+   - bones/soft tissues
+     - ribs (ribs) visible with confidence 100 + ribs are visible.
+     - clavicles (clavicles) visible with confidence 100 + clavicles are visible.
+     - spine (spine) visible with confidence 100 + the spine is visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large left lower lobe opacity with associated pleural effusion.
+   - Small right pleural effusion.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are not fully visualized due to image cropping.
+   - The tip positions of the central lines are not clearly visible.
+
+7) DOMAIN VECTOR

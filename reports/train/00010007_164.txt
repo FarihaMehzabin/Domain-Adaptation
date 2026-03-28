@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior (AP) view.
+   - patient position: portable with confidence 90% + the patient is in a portable position.
+   - portable-likelihood: high with evidence (patient is not in a fixed position).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the patient is in a good inspiratory position.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving some of the lateral chest walls and the upper abdomen not fully visualized.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are visible, the mediastinum is visible, the bones are visible, and the diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines present, likely representing various medical devices. The presence of these lines is a technical artifact.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the right side of the image. There is a burned-in label top-left, but the content is not visible.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: not visible
+   - nasogastric tube: present, course: midline, tip position: not visible
+   - central venous catheter: present, course: superior vena cava, tip position: not visible
+   - multiple lines: present, course: various, tip position: not visible
+   - pacemaker/ICD leads: present, course: right atrium, right ventricle, tip position: not visible
+   - chest tubes: present, course: right pleural space, tip position: not visible
+   - arterial line: present, course: radial artery, tip position: not visible
+   - Foley catheter: present, course: bladder, tip position: not visible
+   - other lines: present, course: various, tip position: not visible
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: There is a right pleural effusion, obscuring the right hemidiaphragm. There is also some increased opacity in the right lung, possibly representing edema or consolidation. The left lung appears relatively clear.
+   - mediastinum/heart: The mediastinum is widened, likely due to the presence of multiple lines and tubes. The heart size is difficult to assess due to the overlying structures.
+   - diaphragms/upper abdomen: The diaphragms are not fully visualized due to the image cropping. The upper abdomen is also not fully visualized.
+   - bones/soft tissues: The bones are visible. There are no obvious fractures or dislocations.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right pleural effusion.
+   - Possible right lung edema or consolidation.
+   - Widened mediastinum.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Limited visualization of the upper abdomen.
+   - Limited visualization of the diaphragms.
+   - The tip positions of the central venous catheter, arterial line, and other lines are not clearly visible.
+   - The heart size is difficult to assess due to the overlying structures.
+
+7) DOMAIN VECTOR

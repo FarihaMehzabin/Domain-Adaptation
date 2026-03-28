@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (supine) with confidence 100 + patient is supine.
+   - portable-likelihood (high) with evidence (portable X-ray machine).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the lung volumes are low.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are not well visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat clear, but the lower lung fields are poorly visualized due to the low inspiration. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not well visualized due to the cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (No obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 80 + the image appears to have low contrast. edge enhancement (low) with confidence 80 + edge enhancement is low. inversion suspected (no) with confidence 100 + no evidence of inversion. noise texture (low) with confidence 80 + the noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian catheter (absent) with confidence 100 + no catheter is visible.
+   - left subclavian catheter (absent) with confidence 100 + no catheter is visible.
+   - enteric tube (absent) with confidence 100 + no tube is visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - The lung volumes are low, resulting in increased prominence of the pulmonary vasculature.
+     - There is no obvious consolidation, pleural effusion, or pneumothorax.
+     - The costophrenic angles are not well visualized.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in size and contour.
+     - The heart size appears to be normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible.
+     - The upper abdomen is not well visualized due to the low inspiration and cropping.
+   - bones/soft tissues
+     - The bones are visible.
+     - The soft tissues are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Low lung volumes.
+   - The costophrenic angles are not well visualized.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable AP chest X-ray, which is limited by low inspiration and cropping.
+   - The lower lung fields are not well visualized.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

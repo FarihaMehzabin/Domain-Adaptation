@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior view.
+   - patient position: supine with confidence 90% + the patient is lying flat.
+   - portable-likelihood: high with evidence (portable X-ray machine).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs are well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + the image is not blurry.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving a small amount of padding on the sides.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are somewhat obscured by the patient's body habitus and the presence of lines and tubes. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines and tubes present in the image. The presence of these lines and tubes may be due to the patient being on a ventilator or receiving other medical interventions. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side of the image. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: unknown, confidence 80%
+   - nasogastric tube: present, course: unknown, tip position: unknown, confidence 60%
+   - central venous catheter: present, course: right subclavian, tip position: superior vena cava, confidence 90%
+   - multiple lines: present, course: unknown, tip position: unknown, confidence 50%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: The left lung appears to be opacified, with increased density. The right lung shows some patchy opacities. There is no obvious pleural effusion.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is difficult to assess due to the patient's body habitus and the presence of lines and tubes.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is not well visualized due to the patient's body habitus.
+   - bones/soft tissues: The ribs and clavicles are visible. There is no obvious fracture.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Left lung opacification with patchy right lung opacities.
+   - Possible aspiration or pneumonia.
+   - The endotracheal tube is present, but the tip position is not clearly visible.
+   - The nasogastric tube is present, but the tip position is not clearly visible.
+   - The central venous catheter is present, and the tip position is in the superior vena cava.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is a portable X-ray, which may be limited by patient positioning and body habitus.
+   - The tip positions of the endotracheal tube, nasogastric tube, and central venous catheter are not clearly visible.
+   - The left lung opacification may be due to various causes, including aspiration, pneumonia, or other pulmonary pathology.
+   - The patchy right lung opacities may be due to various causes, including aspiration, pneumonia, or other pulmonary pathology.
+
+7) DOMAIN VECTOR

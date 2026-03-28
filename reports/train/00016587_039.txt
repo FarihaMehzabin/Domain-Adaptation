@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is labeled AP
+   - patient position (portable) with confidence 100 + image is labeled portable
+   - portable-likelihood (high) with evidence (image is portable)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with some loss of the apices and costophrenic angles)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are clear, mediastinum is visible, bones are visible, diaphragms are visible, and costophrenic angles are visible
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. with confidence 100 + lines are present, but not clearly defined.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, burned-in text is present)
+   - presentation/processing cues: contrast (low) with confidence 100 + image is underexposed
+   - noise texture (low) with confidence 100
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right internal jugular central venous catheter (right internal jugular) with confidence 90 + catheter is present, but the tip position is not clearly visible
+   - left internal jugular central venous catheter (left internal jugular) with confidence 90 + catheter is present, but the tip position is not clearly visible
+   - endotracheal tube (trachea) with confidence 90 + endotracheal tube is present, but the tip position is not clearly visible
+   - nasogastric tube (esophagus) with confidence 90 + nasogastric tube is present, but the tip position is not clearly visible
+   - multiple lines/tubes are present, but the exact course and tip positions are not clearly visible.
+   - indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a large opacity in the right lung, obscuring the lung markings. The extent of the opacity is not fully defined.
+     - left lung: the left lung appears relatively clear, with some increased markings.
+     - pleural effusion: there is a possible small pleural effusion in the right hemithorax.
+   - mediastinum/heart
+     - the mediastinum is midline. The heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible. The upper abdomen is not well visualized due to the patient's position and the image quality.
+   - bones/soft tissues
+     - the ribs are visible. There is some subcutaneous emphysema in the right chest wall.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - large opacity in the right lung, etiology unclear.
+   - possible small right pleural effusion.
+   - multiple lines/tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image quality is suboptimal due to the patient's position and the use of a portable X-ray machine.
+   - The tip positions of the central venous catheters and the endotracheal tube are not clearly visible.
+   - The upper abdomen is not well visualized.
+   - The extent of the opacity in the right lung is not fully defined.
+
+7) DOMAIN VECTOR
