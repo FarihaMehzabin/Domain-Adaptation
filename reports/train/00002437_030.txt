@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + image is a portable chest radiograph.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the patient is likely in a supine position, and the lung volumes are low.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are diffusely hazy, with increased interstitial markings. The mediastinum is unremarkable. The bones are unremarkable. The diaphragms are unremarkable. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are no obvious artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion are present. Noise texture (low) with confidence 90 + the noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Central line (Indeterminate) with confidence 60 + An indeterminate central line is present. The course is not clearly visible. The tip position is not visible.
+   - Indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Diffuse bilateral interstitial opacities are present, with a reticular pattern. The pattern is not specific.
+   - mediastinum/heart
+     - The mediastinum is unremarkable. The heart size is difficult to assess due to the low lung volumes and diffuse opacities.
+   - diaphragms/upper abdomen
+     - The diaphragms are unremarkable. The upper abdomen is not well visualized due to the low lung volumes.
+   - bones/soft tissues
+     - The bones are unremarkable. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Diffuse bilateral interstitial opacities, etiology unclear. Consider pulmonary edema, atypical pneumonia, or other interstitial lung disease.
+   - Indeterminate central line.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Low lung volumes limit the assessment of the heart size and the presence of pleural effusions.
+   - The image is a portable chest radiograph, which may be suboptimal.
+   - The presence of a central line is indeterminate.
+   - The interstitial opacities are not specific and require further evaluation.
+
+7) DOMAIN VECTOR

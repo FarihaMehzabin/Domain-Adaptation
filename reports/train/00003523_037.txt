@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "portable" label present.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (low) with confidence 80 + limited visualization of the lung bases.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are diffusely hazy. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker present, pointing to the right. Burned-in text "LOG" present in the lower left corner.)
+   - presentation/processing cues: contrast (low) with confidence 80 + the image appears to be underexposed. Edge enhancement (low) with confidence 80 + minimal edge enhancement is present. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 80 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, course: midline, tip position: unknown, confidence 90 + ETT is present, but the tip position is not clearly visible.
+   - nasogastric tube (NGT) present, course: midline, tip position: unknown, confidence 90 + NGT is present, but the tip position is not clearly visible.
+   - right-sided chest tube present, course: right hemithorax, tip position: unknown, confidence 90 + Chest tube is present, but the tip position is not clearly visible.
+   - left-sided chest tube present, course: left hemithorax, tip position: unknown, confidence 90 + Chest tube is present, but the tip position is not clearly visible.
+   - central venous catheter (CVC) present, course: midline, tip position: unknown, confidence 90 + CVC is present, but the tip position is not clearly visible.
+   - arterial line present, course: midline, tip position: unknown, confidence 90 + Arterial line is present, but the tip position is not clearly visible.
+   - other lines/tubes: indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - diffuse hazy opacities throughout both lung fields, suggestive of pulmonary edema or diffuse alveolar process.
+     - no obvious pleural effusion.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - mediastinal contours are within normal limits.
+     - heart size is difficult to assess due to the low inspiration and hazy lung fields.
+   - diaphragms/upper abdomen
+     - diaphragms are visible.
+     - upper abdomen is not well visualized due to the patient's position and the image quality.
+   - bones/soft tissues
+     - ribs are visible.
+     - subcutaneous emphysema is present throughout the chest wall.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - diffuse hazy opacities in both lungs, concerning for pulmonary edema or diffuse alveolar process.
+   - presence of multiple lines/tubes.
+   - subcutaneous emphysema.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - low inspiration limits visualization of the lung bases.
+   - image quality is suboptimal due to underexposure.
+   - tip positions of lines/tubes are not clearly visible.
+   - limited visualization of the upper abdomen.
+
+7) DOMAIN VECTOR

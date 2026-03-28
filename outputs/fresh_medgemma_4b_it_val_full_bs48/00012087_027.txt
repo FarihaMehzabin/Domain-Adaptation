@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest radiograph.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest radiograph.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 90% + adequate inspiration is present.
+   - penetration: adequate with confidence 95% + adequate penetration is present.
+   - motion blur: none with confidence 95% + no significant motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the upper chest and lower lung fields. The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are relatively clear. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present. Burned-in text is present at the top-left corner
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image has low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - heart: present, normal size with confidence 95% + the heart appears to be of normal size.
+   - lungs: present, normal lung markings with confidence 95% + normal lung markings are present.
+   - mediastinum: present, normal mediastinal width with confidence 95% + normal mediastinal width is present.
+   - diaphragm: present, normal diaphragmatic contour with confidence 95% + normal diaphragmatic contour is present.
+   - tubes/lines: Indeterminate, no tubes or lines are clearly visible with confidence 50% + no tubes or lines are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - right lung: There is increased opacity in the right lung, particularly in the mid-lung field. This could represent consolidation, atelectasis, or other pathology.
+     - left lung: The left lung appears relatively clear.
+   - mediastinum/heart:
+     - The mediastinum is within normal limits in width.
+     - The heart size is normal.
+   - diaphragms/upper abdomen:
+     - The diaphragms are well-defined.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues:
+     - The ribs are visible.
+     - The clavicles are visible.
+
+5) IMPRESSION
+   - Increased opacity in the right lung, concerning for possible pneumonia, atelectasis, or other pathology.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The apices of the lungs are not fully visualized.
+   - The costophrenic angles are not fully visualized.
+   - The lateral chest walls are not fully visualized.
+   - The presence of the burned-in text obscures the upper left corner of the image.
+   - The lack of a lateral view limits the assessment of the lung fields.
+
+7) DOMAIN VECTOR

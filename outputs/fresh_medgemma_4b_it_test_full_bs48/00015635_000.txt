@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is standing.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the upper chest and lower lung fields. The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are clear. The mediastinum is well-defined. The bones are well-defined. The diaphragms are well-defined. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - spinal hardware: present, course: posterior, tip position: not visualized + The image shows a significant amount of spinal hardware, likely a brace or cast, spanning the thoracic spine. The tip position is not visualized.
+   - catheter: indeterminate, course: not visualized, tip position: not visualized + There is a catheter present, but the tip position is not visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+     - pleura: unremarkable.
+   - mediastinum/heart
+     - mediastinum: normal in size and contour.
+     - heart: normal in size and contour.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: unremarkable.
+     - clavicles: unremarkable.
+     - spine: significant spinal hardware is present.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Spinal hardware present.
+   - No acute pulmonary process identified.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are not fully visualized.
+   - The tip position of the catheter is not visualized.
+   - The tip position of the spinal hardware is not visualized.
+
+7) DOMAIN VECTOR

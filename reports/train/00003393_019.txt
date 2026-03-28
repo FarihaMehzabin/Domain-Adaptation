@@ -1,0 +1,58 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior chest radiograph.
+   - patient position: upright with confidence 90% + the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence (the image is likely a portable chest radiograph, but the quality is adequate for assessment).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs are well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + the image is sharp.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the top and bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image has low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: unknown, confidence 80%
+   - nasogastric tube: present, course: midline, tip position: unknown, confidence 80%
+   - right-sided central venous catheter: present, course: right subclavian, tip position: mid-to-upper superior vena cava, confidence 90%
+   - left-sided central venous catheter: present, course: left subclavian, tip position: mid-to-upper superior vena cava, confidence 90%
+   - chest tube: present, course: right apex, tip position: unknown, confidence 70%
+   - pacemaker/defibrillator: present, course: unknown, tip position: unknown, confidence 60%
+   - other lines/tubes: indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - bilateral opacities: there are bilateral opacities, particularly in the lower lung fields. The opacities are not uniform in distribution.
+     - pleural effusions: possible small pleural effusions are present, particularly on the right side.
+     - pulmonary edema: possible pulmonary edema is present.
+   - mediastinum/heart:
+     - cardiomegaly: the heart size appears enlarged.
+     - mediastinal widening: the mediastinum appears widened.
+   - diaphragms/upper abdomen:
+     - diaphragmatic flattening: the diaphragms are flattened.
+     - bowel loops: bowel loops are visible in the upper abdomen.
+   - bones/soft tissues:
+     - no acute fractures are identified.
+     - subcutaneous emphysema: possible subcutaneous emphysema is present.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - bilateral pulmonary opacities, possibly representing pneumonia, pulmonary edema, or other inflammatory processes.
+   - possible small pleural effusions.
+   - cardiomegaly.
+   - widened mediastinum.
+   - possible subcutaneous emphysema.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The endotracheal tube and nasogastric tube tip positions are not clearly visible.
+   - The chest tube tip position is not clearly visible.
+   - The pacemaker/defibrillator course and tip position are not clearly visible.
+   - The image is a portable chest radiograph, and the quality may be limited.
+   - The presence and extent of the pulmonary opacities are difficult to fully assess due to the low contrast and the presence of other findings.
+
+7) DOMAIN VECTOR

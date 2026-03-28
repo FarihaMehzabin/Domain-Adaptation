@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest radiograph.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest radiograph.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + no significant rotation is apparent.
+   - inspiration: adequate with confidence 90% + adequate inspiration is present.
+   - penetration: adequate with confidence 95% + adequate penetration is present.
+   - motion blur: none with confidence 95% + no motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, obscuring the apices and costophrenic angles. Costal margins are visible.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles (lungs are visible, mediastinum is visible, bones are visible, diaphragms are visible, and costophrenic angles are not fully visible due to cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (no obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the left side is the left. Burned-in text is present at the top-left corner.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Indeterminate: No devices or lines are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - bilateral lung fields are present.
+     - there are some hazy opacities in the lung fields, particularly in the lower lung zones. The exact nature of these opacities is indeterminate due to the image quality.
+   - mediastinum/heart:
+     - the mediastinum is within normal limits in size and contour.
+     - the heart size is normal.
+   - diaphragms/upper abdomen:
+     - the diaphragms are visible.
+     - the upper abdomen is incompletely visualized due to the image cropping.
+   - bones/soft tissues:
+     - the ribs are visible.
+     - the clavicles are visible.
+     - the vertebral bodies are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute findings are identified.
+   - The hazy opacities in the lung fields are indeterminate.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is cropped, obscuring the apices and costophrenic angles.
+   - The hazy opacities in the lung fields are indeterminate.
+   - The upper abdomen is incompletely visualized.
+
+7) DOMAIN VECTOR

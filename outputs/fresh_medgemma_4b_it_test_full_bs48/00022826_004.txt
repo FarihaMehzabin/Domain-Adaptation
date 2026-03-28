@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image shows the chest from the back.
+   - patient position: upright with confidence 90% + patient is standing or sitting upright.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the entire chest, including the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are well-aerated. The mediastinum is clearly visible. The bones are well-defined. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are multiple lines present, likely representing tubes or catheters. The presence of these lines is not further characterized.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present, indicating the left side of the image. There is burned-in text present at the top-left corner, but the content is not discernible
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - left-sided chest tube: present, course: likely from the apex to the base, tip position: indeterminate + The presence of a chest tube is confirmed. The course is likely from the apex to the base, but the tip position is not clearly visible.
+   - right-sided chest tube: present, course: likely from the apex to the base, tip position: indeterminate + The presence of a chest tube is confirmed. The course is likely from the apex to the base, but the tip position is not clearly visible.
+   - endotracheal tube: indeterminate + The presence of an endotracheal tube is not clearly visible.
+   - nasogastric tube: indeterminate + The presence of a nasogastric tube is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - left lung: opacification, likely representing a pleural effusion and/or consolidation. The extent of the opacification is not fully defined.
+     - right lung: clear with confidence 95% + The right lung appears clear.
+     - pleural effusion: likely present on the left, obscuring the costophrenic angle.
+   - mediastinum/heart
+     - mediastinum: midline with confidence 95% + The mediastinum is midline.
+     - heart: size and contour are not well-defined due to the presence of the chest tubes and the opacification in the left lung.
+   - diaphragms/upper abdomen
+     - diaphragms: visible with confidence 95% + The diaphragms are visible.
+     - upper abdomen: partially visible, but the bowel loops are not well-defined.
+   - bones/soft tissues
+     - ribs: visible with confidence 95% + The ribs are visible.
+     - clavicles: visible with confidence 95% + The clavicles are visible.
+     - subcutaneous emphysema: indeterminate + There is some increased density in the soft tissues of the left hemithorax, which could represent subcutaneous emphysema.
+
+5) IMPRESSION
+   - Left-sided chest tubes are present.
+   - Left-sided pleural effusion and/or consolidation is present.
+   - Right lung is clear.
+   - The presence of an endotracheal tube and nasogastric tube is indeterminate.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip position of the chest tubes is not clearly visible.
+   - The extent of the left-sided opacification is not fully defined.
+   - The presence of an endotracheal tube and nasogastric tube is indeterminate.
+   - The bowel loops in the upper abdomen are not well-defined.
+
+7) DOMAIN VECTOR

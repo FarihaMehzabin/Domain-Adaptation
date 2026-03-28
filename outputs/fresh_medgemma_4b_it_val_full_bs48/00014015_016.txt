@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely upright.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the upper chest and abdomen. The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are visible. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are lines present. There is no grid/moiré. There is no banding. There is no detector dropout. There are no compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present. There is burned-in text present at the top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Indeterminate + No tubes or lines are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: increased opacity in the lower lung field, possibly representing consolidation or pleural effusion.
+     - Left lung: increased opacity in the lower lung field, possibly representing consolidation or pleural effusion.
+     - Pleural effusion: possible small right pleural effusion.
+   - mediastinum/heart
+     - Mediastinum: normal mediastinal width.
+     - Heart: normal heart size.
+   - diaphragms/upper abdomen
+     - Diaphragms: diaphragms are visible.
+     - Upper abdomen: bowel loops are visible.
+   - bones/soft tissues
+     - Bones: ribs are visible.
+     - Soft tissues: soft tissues are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Increased opacity in the lower lung fields bilaterally, possibly representing consolidation or pleural effusion.
+   - Possible small right pleural effusion.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - No tubes or lines are clearly visible.
+   - The increased opacity in the lower lung fields could be due to various causes, including pneumonia, pulmonary edema, or pleural effusion. Further imaging may be needed to determine the exact cause.
+   - The presence of a pleural effusion is uncertain due to the limited image quality.
+
+7) DOMAIN VECTOR

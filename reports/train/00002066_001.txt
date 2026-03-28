@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped at the costophrenic angles, but the lung apices are visible. The costal margins are well-defined.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are clear, mediastinum is well-defined, bones are visible, and diaphragms and costophrenic angles are well-defined.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to have low contrast. Edge enhancement is low with confidence 100. Inversion suspected (no) with confidence 100. Noise texture (low) with confidence 100.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - central line (none) with confidence 100 + no central line is visible.
+   - pacemaker (none) with confidence 100 + no pacemaker is visible.
+   - chest tube (none) with confidence 100 + no chest tube is visible.
+   - ETT (none) with confidence 100 + no endotracheal tube is visible.
+   - IV line (none) with confidence 100 + no IV line is visible.
+   - catheter (none) with confidence 100 + no catheter is visible.
+   - drain (none) with confidence 100 + no drain is visible.
+   - surgical clips (present) with confidence 100 + surgical clips are present in the upper abdomen.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs are clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in width. The heart size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms are well-defined. The upper abdomen shows surgical clips.
+   - bones/soft tissues
+     - the ribs are intact. The clavicles are symmetrical.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute cardiopulmonary abnormalities are identified.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is cropped at the costophrenic angles, limiting assessment of the lung bases.
+   - The burned-in label in the top-left corner obscures the image.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is AP.
+   - patient position: portable with confidence 90% + the patient is in a portable position.
+   - portable-likelihood: high with evidence (patient is in a portable setting).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + the patient is in adequate inspiration.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + no obvious motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are relatively clear, with some increased interstitial markings. The mediastinum is unremarkable. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are several lines present, likely representing external devices. No grid or moiré artifacts are apparent. There is no evidence of banding or detector dropout. There are no obvious compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to be presented with low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - nasogastric tube: present, course: likely extends from the stomach to the upper abdomen, tip position: indeterminate, confidence 80%
+   - endotracheal tube: present, course: terminates in the upper trachea, tip position: indeterminate, confidence 80%
+   - right-sided central venous catheter: present, course: terminates in the superior vena cava, tip position: indeterminate, confidence 80%
+   - left-sided central venous catheter: present, course: terminates in the superior vena cava, tip position: indeterminate, confidence 80%
+   - multiple lines: present, course: various, tip position: indeterminate, confidence 70%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: There are bilateral diffuse interstitial opacities, which could represent pulmonary edema, infection, or other inflammatory processes. The lung fields are otherwise clear. No pleural effusion is identified.
+   - mediastinum/heart: The mediastinum is unremarkable. The heart size is likely normal, but difficult to assess due to the overlying opacities.
+   - diaphragms/upper abdomen: The diaphragms are well-visualized. The upper abdomen is largely unremarkable, although the nasogastric tube is present.
+   - bones/soft tissues: The bones are well-visualized. There are no obvious acute fractures or soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral diffuse interstitial opacities, etiology uncertain.
+   - Nasogastric tube in place.
+   - Endotracheal tube in place.
+   - Central venous catheters in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The presence and exact course of the nasogastric tube, endotracheal tube, and central venous catheters are indeterminate.
+   - The heart size is difficult to assess due to the overlying opacities.
+   - The interstitial opacities could be due to a variety of etiologies, and further evaluation may be needed to determine the underlying cause.
+
+7) DOMAIN VECTOR

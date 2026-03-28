@@ -1,0 +1,54 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the apices, costophrenic angles, and lateral chest walls. There is some padding at the costophrenic angles.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are well-aerated. The mediastinum is clearly visible. The bones are well-defined. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present, indicating the left side is on the right. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Indeterminate + No central line is visible.
+   - Indeterminate + No peripheral line is visible.
+   - Indeterminate + No other devices are visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There is a nodular opacity in the right upper lobe.
+     - There is a linear opacity in the left mid-lung field.
+     - The lung fields are otherwise clear.
+     - No pleural effusion is identified.
+     - No pneumothorax is identified.
+   - mediastinum/heart
+     - The heart size is normal.
+     - The mediastinal contours are normal.
+     - The great vessels are normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are intact.
+     - The clavicles are intact.
+     - The scapulae are intact.
+     - The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Nodular opacity in the right upper lobe. Further evaluation with a CT scan of the chest is recommended.
+   - Linear opacity in the left mid-lung field. Further evaluation with a CT scan of the chest is recommended.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The nodular opacity in the right upper lobe could be a benign lesion or a malignancy.
+   - The linear opacity in the left mid-lung field could be a scar or a mass.
+   - The nodular opacity and linear opacity are not well-defined and require further evaluation with a CT scan of the chest.
+   - The image quality is adequate, but further evaluation with a CT scan of the chest is recommended.
+
+7) DOMAIN VECTOR

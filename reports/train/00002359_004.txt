@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: The image is a PA chest X-ray.
+   - patient position: Upright with confidence 90% + evidence: The patient is in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a standard chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: The image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 85% + evidence: The lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: There is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be adequately collimated, with good visualization of the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are clearly seen. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the right. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line: indeterminate with confidence 70% + evidence: The right subclavian line is not clearly visible.
+   - right chest tube: indeterminate with confidence 70% + evidence: The right chest tube is not clearly visible.
+   - right picc line: indeterminate with confidence 70% + evidence: The right picc line is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a hazy opacity in the right lower lung field.
+     - left lung: clear.
+     - pleural surfaces: clear.
+   - mediastinum/heart
+     - heart size: normal.
+     - mediastinal contours: normal.
+     - hilar structures: normal.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: no acute fractures are identified.
+     - clavicles: appear intact.
+     - scapulae: appear intact.
+     - right humerus: there is a right humerus prosthesis with hardware visible.
+     - left humerus: there is a left humerus prosthesis with hardware visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right lower lung opacity: Further evaluation with a lateral decubitus radiograph is recommended to assess for possible pleural effusion.
+   - Right subclavian line, right chest tube, and right picc line: These lines are not clearly visualized on this study.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The right subclavian line, right chest tube, and right picc line are not clearly visualized on this study.
+   - The right lower lung opacity is only visible on the PA view.
+
+7) DOMAIN VECTOR

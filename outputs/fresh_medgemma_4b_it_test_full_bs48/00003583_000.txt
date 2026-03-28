@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + no significant rotation is apparent.
+   - inspiration: adequate with confidence 90% + adequate inspiration. Posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + adequate penetration. Vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + no motion blur is evident.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are not fully visualized.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles (The lungs are generally clear, but there is a hazy opacity in the right lower lung field. The mediastinum is well-defined. The heart size appears enlarged. The bones are unremarkable. The diaphragms are visible. The costophrenic angles are not fully visualized due to cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are several lines present, likely representing vascular structures or external devices. The image does not show any obvious grid/moiré artifacts, banding, or detector dropout. There are no compression artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the right side is the right. There is burned-in text present at the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The contrast is low. Edge enhancement is low. Inversion is not suspected. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - central line: present, right subclavian, tip position not visible, confidence 90% + a central line is present, likely a right subclavian catheter. The tip position is not clearly visible.
+   - pacemaker/defibrillator: present, multiple leads, tip position not visible, confidence 90% + multiple pacemaker/defibrillator leads are present. The tip positions are not clearly visible.
+   - sternal wires: present, multiple, intact, confidence 95% + multiple sternal wires are present, appearing intact.
+
+4) FINDINGS
+   - lungs/pleura:
+     - right lower lung field: hazy opacity, indeterminate etiology, confidence 70% + a hazy opacity is present in the right lower lung field. The etiology is indeterminate.
+   - mediastinum/heart:
+     - heart size: enlarged, confidence 95% + the heart size appears enlarged.
+     - mediastinal contours: unremarkable, confidence 95% + the mediastinal contours are unremarkable.
+   - diaphragms/upper abdomen:
+     - diaphragms: visible, confidence 95% + the diaphragms are visible.
+     - upper abdomen: partially visualized, confidence 70% + the upper abdomen is partially visualized.
+   - bones/soft tissues:
+     - ribs: unremarkable, confidence 95% + the ribs are unremarkable.
+     - clavicles: unremarkable, confidence 95% + the clavicles are unremarkable.
+
+5) IMPRESSION
+   - Right lower lung field opacity, etiology indeterminate.
+   - Enlarged heart.
+   - Multiple pacemaker/defibrillator leads present.
+   - Right subclavian central line present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The apices and costophrenic angles are not fully visualized due to cropping.
+   - The tip position of the central line is not clearly visible.
+   - The tip positions of the pacemaker/defibrillator leads are not clearly visible.
+   - The etiology of the right lower lung field opacity is indeterminate.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the upper chest and mediastinum. The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are visible. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are multiple lines present, likely representing medical devices. There is no obvious grid or moiré pattern. There is no obvious banding. There is no obvious detector dropout. There is no obvious compression artifact.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present, indicating the left side is on the left. There is burned-in text present at the top-left corner
+
+3) DEVICES / LINES / TUBES
+   - right-sided chest tube: present, course: right hemithorax, tip position: indeterminate, confidence 90%
+   - left-sided chest tube: present, course: left hemithorax, tip position: indeterminate, confidence 90%
+   - right-sided central venous catheter: present, course: superior vena cava, tip position: indeterminate, confidence 90%
+   - left-sided central venous catheter: present, course: superior vena cava, tip position: indeterminate, confidence 90%
+   - esophageal probe: present, course: esophagus, tip position: indeterminate, confidence 90%
+   - multiple other lines/tubes: present, course: indeterminate, tip position: indeterminate, confidence 90%
+
+4) FINDINGS
+   - lungs/pleura:
+     - right lung: there is a large area of opacity in the right lung, likely representing a large pleural effusion or consolidation. There is also some evidence of pneumothorax in the right lung.
+     - left lung: there is a small area of opacity in the left lung, likely representing a small pleural effusion or consolidation.
+   - mediastinum/heart:
+     - the mediastinum is midline.
+     - the heart size is difficult to assess due to the overlying opacity.
+   - diaphragms/upper abdomen:
+     - the diaphragms are visible.
+     - the upper abdomen is not well visualized due to the overlying opacity.
+   - bones/soft tissues:
+     - the ribs are visible.
+     - the clavicles are visible.
+
+5) IMPRESSION
+   - Large right pleural effusion or consolidation.
+   - Small left pleural effusion or consolidation.
+   - Multiple medical devices are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The extent of the right pleural effusion or consolidation is difficult to assess due to the overlying opacity.
+   - The tip position of the chest tubes is indeterminate.
+   - The tip position of the central venous catheters is indeterminate.
+   - The tip position of the esophageal probe is indeterminate.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

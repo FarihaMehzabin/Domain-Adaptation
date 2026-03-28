@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the upper lung fields, costophrenic angles, and lateral chest walls. The image is cropped at the lower border.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are clear. Mediastinum is well-defined. Bones are visible. Diaphragms are visible. Costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present. Burned-in text is present at the top-left corner
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - lines: Indeterminate + No lines are clearly visible.
+   - tubes: Indeterminate + No tubes are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - Right lung: There is increased opacity in the right lower lung field.
+     - Left lung: There is increased opacity in the left lower lung field.
+   - mediastinum/heart:
+     - Mediastinum: The mediastinum is within normal limits.
+     - Heart: The heart size is normal.
+   - diaphragms/upper abdomen:
+     - Diaphragms: The diaphragms are visible.
+     - Upper abdomen: The upper abdomen is unremarkable.
+   - bones/soft tissues:
+     - Bones: The ribs and clavicles are visible.
+     - Soft tissues: The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Increased opacity in the right lower lung field.
+   - Increased opacity in the left lower lung field.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a single PA chest X-ray.
+   - The increased opacity in the lung fields could be due to various causes, including pneumonia, atelectasis, or other pathology.
+   - The exact cause of the increased opacity cannot be determined from this single image.
+   - The presence of the burned-in text is a technical limitation.
+
+7) DOMAIN VECTOR

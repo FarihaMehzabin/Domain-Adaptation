@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is PA view.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image covers the apices, costophrenic angles, and costal margins).
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are well-aerated, mediastinum is clearly visible, bones are well-defined, and costophrenic angles are sharp.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, pointing to the right side. burned-in text is present, top-left, reading "1").
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - IVC (indeterminate) with confidence 50 + no IVC is visible.
+   - NG tube (indeterminate) with confidence 50 + no NG tube is visible.
+   - central line (indeterminate) with confidence 50 + no central line is visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There are bilateral patchy opacities, predominantly in the upper lobes. The opacities are not uniform in density and may represent consolidation, edema, or other inflammatory processes.
+     - There is no evidence of pleural effusion.
+     - The lung fields are relatively clear, with no obvious pneumothorax.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in width.
+     - The heart size is normal.
+     - The pulmonary vasculature is unremarkable.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are intact.
+     - The clavicles are intact.
+     - The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral patchy opacities in the upper lobes. Further evaluation with CT is recommended to determine the etiology.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - No clinical history is available.
+   - The patchy opacities in the upper lobes are difficult to characterize definitively on a single PA chest radiograph.
+   - The IVC, NG tube, and central line are not clearly visualized.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,37 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + the image appears to be a standard chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 90% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 95% + the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + the image is not blurry.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the upper and lower borders.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are relatively clear, with some increased interstitial markings. The mediastinum is unremarkable. The bones are well-defined. The diaphragms are visible. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are several lines present, likely representing medical devices. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is the left. There is a burned-in label top-left, but the content is not visible
+
+3) DEVICES / LINES / TUBES
+   - endotracheal tube: present, tip position not visible, confidence 90%
+   - nasogastric tube: present, tip position not visible, confidence 90%
+   - central venous catheter: present, tip position not visible, confidence 90%
+   - Swan-Ganz catheter: present, tip position not visible, confidence 90%
+   - arterial line: present, tip position not visible, confidence 90%
+
+4) FINDINGS
+   - lungs/pleura: There are increased interstitial markings bilaterally, which could be due to pulmonary edema, infection, or other inflammatory processes. No pleural effusion is identified.
+   - mediastinum/heart: The mediastinum is unremarkable. The heart size is within normal limits.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is unremarkable.
+   - bones/soft tissues: The bones are well-defined. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION
+   - Increased interstitial markings bilaterally.
+   - Medical devices are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip positions of the central venous catheter, Swan-Ganz catheter, arterial line, and nasogastric tube are not visible.
+   - The presence and cause of the increased interstitial markings are not definitively determined.
+
+7) DOMAIN VECTOR

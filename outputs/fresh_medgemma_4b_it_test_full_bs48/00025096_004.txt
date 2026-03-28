@@ -1,0 +1,37 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with some padding at the costophrenic angles. The apices are not fully visualized. The costal margins are not fully visualized.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are relatively clear, mediastinum is visible, bones are visible, diaphragms are visible, and costophrenic angles are partially obscured.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present?: a laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner
+   - presentation/processing cues: contrast (low/med/high): contrast is low. Edge enhancement (low/med/high): edge enhancement is low. Inversion suspected (yes/no): no inversion is suspected. Noise texture (low/med/high): noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Indeterminate: No devices or lines are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: lungs are relatively clear, with no obvious consolidation, pleural effusion, or pneumothorax. There is some increased interstitial markings, but it is difficult to assess the extent.
+   - mediastinum/heart: the mediastinum is within normal limits. The heart size is difficult to assess due to the low contrast.
+   - diaphragms/upper abdomen: diaphragms are visible. The upper abdomen is not well visualized due to the image quality.
+   - bones/soft tissues: bones are visible. Soft tissues are not well visualized.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute findings are identified.
+   - The image quality is suboptimal, limiting the ability to fully evaluate the lungs.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is cropped, obscuring the apices and costophrenic angles.
+   - The low contrast makes it difficult to assess the lungs and heart.
+   - The image quality is suboptimal, limiting the ability to fully evaluate the lungs.
+   - No devices or lines are clearly visible.
+
+7) DOMAIN VECTOR

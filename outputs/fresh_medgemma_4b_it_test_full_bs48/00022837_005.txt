@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the apices, costophrenic angles, and lateral chest walls. There is some padding at the costophrenic angles.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are well-visualized. The mediastinum is well-visualized. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are well-visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present, indicating the left side. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - chest tube: present, right side, tip position not visible with confidence 80% + A chest tube is present on the right side. The tip position is not clearly visible.
+   - catheter: present, indeterminate course, tip position not visible with confidence 60% + An indeterminate catheter is present. The course is not visible, and the tip position is not visible.
+
+4) FINDINGS
+   - lungs/pleura
+     - there is a large opacity in the left hemithorax, obscuring the lung markings. The opacity appears to be in the upper lobe.
+     - there is a small amount of fluid in the right hemithorax, obscuring the right costophrenic angle.
+     - there is a small amount of fluid in the left hemithorax, obscuring the left costophrenic angle.
+   - mediastinum/heart
+     - the mediastinum is unremarkable.
+     - the heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-visualized.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are unremarkable.
+     - the clavicles are unremarkable.
+
+5) IMPRESSION
+   - Large opacity in the left hemithorax, obscuring lung markings.
+   - Small amount of fluid in the right hemithorax.
+   - Small amount of fluid in the left hemithorax.
+   - Chest tube present on the right side.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip position of the chest tube is not clearly visible.
+   - The exact location and nature of the opacity in the left hemithorax are not fully defined.
+   - The extent of the fluid in the right and left hemithorax is not fully defined.
+
+7) DOMAIN VECTOR

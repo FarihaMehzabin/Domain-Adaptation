@@ -1,0 +1,37 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + the image appears to be a standard PA chest X-ray, not a portable.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + the image is not blurry.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the top and bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are diffusely hazy. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines present in the image. The presence of these lines is likely due to the patient's medical devices.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side. There is burned-in text present at the top-left corner
+
+3) DEVICES / LINES / TUBES
+   - right internal jugular central venous catheter: present, course: right internal jugular vein, tip position: indeterminate, confidence 90% + a central line is present, but the tip position is not clearly visible.
+   - left internal jugular central venous catheter: present, course: left internal jugular vein, tip position: indeterminate, confidence 90% + a central line is present, but the tip position is not clearly visible.
+   - multiple lines: present, course: various, tip position: indeterminate, confidence 90% + multiple lines are present, likely representing various medical devices. The tip positions are not clearly visible.
+
+4) FINDINGS
+   - lungs/pleura: diffuse bilateral pulmonary opacities are present. The opacities are most prominent in the lung fields. There is a possible pleural effusion on the right side.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is difficult to assess due to the pulmonary opacities.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is not well visualized due to the pulmonary opacities.
+   - bones/soft tissues: The bones are intact. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION
+   - Diffuse bilateral pulmonary opacities.
+   - Possible right pleural effusion.
+   - Central lines present, but tip positions are not clearly visible.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The pulmonary opacities obscure the underlying lung architecture, making it difficult to assess for specific etiologies.
+   - The tip positions of the central lines are not clearly visible.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

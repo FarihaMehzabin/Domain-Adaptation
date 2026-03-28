@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is a PA chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low), edge enhancement (low), inversion suspected (no), noise texture (low)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Cardiac Monitor Leads: present, multiple leads, tip positions not visualized. Confidence 80.
+   - IV Catheter: indeterminate, no catheter visualized. Confidence 50.
+   - Central Line: absent. Confidence 100.
+   - Pulmonary Artery Catheter: absent. Confidence 100.
+   - Chest Tube: absent. Confidence 100.
+   - Pacemaker/ICD: absent. Confidence 100.
+   - Other: indeterminate. Confidence 50.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: there is a hazy opacity in the right lower lung field. The opacity is not well-defined and may represent consolidation, atelectasis, or other pathology.
+     - Left lung: the left lung appears clear.
+     - Pleura: no pleural effusion or pneumothorax is identified.
+   - mediastinum/heart
+     - Mediastinum: the mediastinum is within normal limits in size and contour.
+     - Heart: the heart size is normal.
+   - diaphragms/upper abdomen
+     - Diaphragms: the diaphragms are well-defined.
+     - Upper abdomen: the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - Bones: the ribs and clavicles are intact.
+     - Soft tissues: no subcutaneous emphysema is identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right lower lung field opacity, etiology unclear. Further evaluation with CT is recommended.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The opacity in the right lower lung field is not well-defined, and the etiology is uncertain.
+   - The tip positions of the cardiac monitor leads are not visualized.
+   - The presence of an IV catheter or central line is indeterminate.
+
+7) DOMAIN VECTOR

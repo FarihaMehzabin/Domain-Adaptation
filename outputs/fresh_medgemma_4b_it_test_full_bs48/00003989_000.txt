@@ -1,0 +1,59 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest radiograph.
+   - patient position: upright with confidence 90% + patient is likely upright.
+   - portable-likelihood: low + image is not a portable chest radiograph.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? - apices are visible. costophrenic angles are visible. lateral chest walls are visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles - lungs are reasonably clear. mediastinum is visible. bones are visible. diaphragms are visible. costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. - no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? - a laterality marker is present. burned-in text is present (location: top-left)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) - contrast is low. edge enhancement is low. inversion is not suspected. noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - heart: present, course: within the chest, tip position: indeterminate, confidence 90%
+   - lungs: present, course: within the chest, tip position: indeterminate, confidence 90%
+   - trachea: present, course: within the chest, tip position: indeterminate, confidence 90%
+   - esophagus: present, course: within the chest, tip position: indeterminate, confidence 90%
+   - ribs: present, course: within the chest, tip position: indeterminate, confidence 90%
+   - clavicles: present, course: within the chest, tip position: indeterminate, confidence 90%
+   - spine: present, course: within the chest, tip position: indeterminate, confidence 90%
+   - vessels: present, course: within the chest, tip position: indeterminate, confidence 90%
+   - lines/tubes: indeterminate, course: within the chest, tip position: indeterminate, confidence 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral lung fields are present.
+     - there are areas of increased opacity in the lung fields bilaterally. The exact location and extent are difficult to assess due to the low contrast.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the heart size appears enlarged.
+     - the mediastinal contours are unremarkable.
+     - the great vessels are visible.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is incompletely visualized.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+     - the spine is visible.
+     - the soft tissues of the chest wall are visible.
+
+5) IMPRESSION
+   - Cardiomegaly.
+   - Bilateral pulmonary opacities.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image quality is limited by low contrast.
+   - The extent and etiology of the pulmonary opacities are indeterminate.
+   - The upper abdomen is incompletely visualized.
+   - The tip position of the heart and other structures is indeterminate.
+   - The presence of a line or tube is indeterminate.
+
+7) DOMAIN VECTOR

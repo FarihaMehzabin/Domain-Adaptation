@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is anteroposterior.
+   - patient position: portable with confidence 90% + patient is lying supine.
+   - portable-likelihood: high + image is likely obtained in a portable setting.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + image shows the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + lungs are well-visualized. Mediastinum is clear. Bones are well-visualized. Diaphragms and costophrenic angles are well-visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + there are multiple lines present, likely representing medical devices. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + a laterality marker is present, indicating the left side is the left. There is a burned-in label top-left, but the content is not visible
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - central line: present, likely internal jugular, course: internal jugular vein, tip position: indeterminate, confidence 85%
+   - endotracheal tube: present, course: trachea, tip position: indeterminate, confidence 80%
+   - nasogastric tube: present, course: stomach, tip position: indeterminate, confidence 75%
+   - other lines: present, course: indeterminate, tip position: indeterminate, confidence 70%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - bilateral diffuse interstitial opacities, predominantly in the upper lobes.
+     - possible small pleural effusions, but difficult to assess due to overlying devices.
+   - mediastinum/heart:
+     - mediastinal contours are unremarkable.
+     - heart size is normal.
+   - diaphragms/upper abdomen:
+     - diaphragms are well-visualized.
+     - upper abdomen is unremarkable.
+   - bones/soft tissues:
+     - bony structures are unremarkable.
+     - soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral diffuse interstitial opacities, predominantly in the upper lobes.
+   - Possible small pleural effusions.
+   - Presence of multiple medical devices.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited assessment of pleural effusions due to overlying devices.
+   - Tip positions of central lines and endotracheal tube are indeterminate.
+   - The presence of multiple lines makes it difficult to assess the course of each line.
+   - The image is a portable chest X-ray, which may have limited anatomical coverage.
+
+7) DOMAIN VECTOR

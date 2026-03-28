@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "PORTABLE" label.
+   - portable-likelihood (high) with evidence (label).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (low) with confidence 80 + the heart size appears somewhat enlarged, and the lung volumes are low.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are not well visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (limited due to cropping)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 80 + the image appears to be processed with low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 80 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) (present) with confidence 90 + an endotracheal tube is seen, terminating approximately 4 cm above the carina.
+   - nasogastric tube (NGT) (present) with confidence 90 + a nasogastric tube is seen, coursing into the stomach. The tip is not clearly visualized.
+   - central line (CL) (present) with confidence 80 + a central line is seen, terminating in the superior vena cava. The tip is not clearly visualized.
+   - chest tube (CT) (present) with confidence 90 + a chest tube is seen, terminating in the right pleural space. The tip is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a right lower lobe opacity, which could represent atelectasis, consolidation, or other pathology.
+     - left lung: the left lung appears relatively clear, with no obvious consolidation or pleural effusion.
+     - pleural effusion: no pleural effusion is identified.
+   - mediastinum/heart
+     - heart size: the heart size appears somewhat enlarged.
+     - mediastinal contours: the mediastinal contours are unremarkable.
+   - diaphragms/upper abdomen
+     - diaphragms: the diaphragms are visualized.
+     - upper abdomen: the upper abdomen is not well visualized due to the patient's position and the image cropping.
+   - bones/soft tissues
+     - ribs: the ribs are visualized.
+     - clavicles: the clavicles are visualized.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right lower lobe opacity, etiology unclear.
+   - Enlarged heart size.
+   - Endotracheal tube in place.
+   - Nasogastric tube in place.
+   - Central line in place.
+   - Chest tube in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Limited visualization of the apices and costophrenic angles due to image cropping.
+   - The tip of the nasogastric tube and central line are not clearly visualized.
+   - The right lower lobe opacity could represent various etiologies.
+
+7) DOMAIN VECTOR

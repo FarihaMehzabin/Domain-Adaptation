@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest radiograph.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest radiograph.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + no significant rotation is apparent.
+   - inspiration: adequate with confidence 90% + adequate inspiration is present.
+   - penetration: adequate with confidence 95% + adequate penetration is present.
+   - motion blur: none with confidence 95% + no motion blur is present.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles (lungs are clear. Mediastinum is visible. Bones are visible. Diaphragms are visible. Costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (no obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low), edge enhancement (low), inversion suspected (no), noise texture (low)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - heart: present, normal size with confidence 95%
+   - lungs: present, clear with confidence 95%
+   - mediastinum: present, normal with confidence 95%
+   - diaphragm: present, normal with confidence 95%
+   - ribs: present, normal with confidence 95%
+   - clavicles: present, normal with confidence 95%
+   - trachea: present, normal with confidence 95%
+   - esophagus: present, normal with confidence 95%
+   - vessels: present, normal with confidence 95%
+   - tubes/lines: indeterminate, no tubes or lines are visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: lungs are clear bilaterally. No pleural effusion or pneumothorax is identified.
+   - mediastinum/heart: The heart size is within normal limits. The mediastinum is unremarkable.
+   - diaphragms/upper abdomen: The diaphragms are normal in position. The upper abdomen is unremarkable.
+   - bones/soft tissues: The ribs, clavicles, and other bony structures are normal. No obvious soft tissue abnormalities are identified.
+
+5) IMPRESSION
+   - No acute cardiopulmonary abnormalities are identified.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The apices and costophrenic angles are obscured by the image cropping.
+   - The lateral chest wall is not fully visualized.
+   - No tubes or lines are visible.
+
+7) DOMAIN VECTOR

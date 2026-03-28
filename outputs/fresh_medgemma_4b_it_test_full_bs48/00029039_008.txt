@@ -1,0 +1,38 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is labeled AP.
+   - patient position: portable with confidence 90% + the image is labeled "portable".
+   - portable-likelihood: high + the image is a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are relatively clear, the mediastinum is visible, the bones are visible, and the diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are lines present.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present. A burned-in label is present at the top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - central line: present, right subclavian, tip position not visible with confidence 80%
+   - catheter: present, multiple, location not visible with confidence 80%
+
+4) FINDINGS
+   - lungs/pleura: diffuse bilateral interstitial opacities are present. There is some increased opacity in the right upper lobe.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is difficult to assess due to the lung opacities.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is not well visualized due to the patient's position and the presence of bowel gas.
+   - bones/soft tissues: The ribs are visible. The clavicles are visible.
+
+5) IMPRESSION
+   - Diffuse bilateral interstitial opacities.
+   - Possible right upper lobe consolidation.
+   - The presence of a central line and catheter is noted.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image quality is limited by the portable nature of the study.
+   - The lung opacities obscure the cardiac silhouette.
+   - The upper abdomen is not well visualized.
+   - The tip position of the central line is not clearly visible.
+   - The presence of multiple catheters is noted, but their exact location is not clear.
+
+7) DOMAIN VECTOR

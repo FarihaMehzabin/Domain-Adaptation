@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving the upper portion of the abdomen and the lower portion of the chest unvisualized.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are well-visualized. The mediastinum is well-visualized. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are well-visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present on the left side of the image. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - tracheostomy tube: present, tip position not visualized with confidence 80%
+   - central line: present, course not visualized with confidence 80%
+   - pacemaker/defibrillator: present, tip position not visualized with confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a large opacity in the right lower lung field. The opacity obscures the right hemidiaphragm.
+     - left lung: clear with no obvious abnormalities.
+     - pleural effusion: possible small right pleural effusion.
+   - mediastinum/heart
+     - mediastinum: unremarkable.
+     - heart: size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: diaphragms are well-visualized.
+     - upper abdomen: the upper abdomen is not well visualized due to the image being cropped.
+   - bones/soft tissues
+     - ribs: ribs are unremarkable.
+     - clavicles: clavicles are unremarkable.
+     - scapulae: scapulae are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large opacity in the right lower lung field, concerning for pneumonia, atelectasis, or pleural effusion.
+   - Possible small right pleural effusion.
+   - Tracheostomy tube in place.
+   - Central line in place.
+   - Pacemaker/defibrillator in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is cropped, limiting visualization of the upper abdomen and lower chest.
+   - The tip position of the tracheostomy tube, central line, and pacemaker/defibrillator are not visualized.
+   - The extent of the right lower lung opacity is not fully defined.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "Portable" label on image.
+   - portable-likelihood (high) with evidence (label).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are visible, mediastinum is visible, bones are visible, and diaphragms and costophrenic angles are visible, although the apices and costophrenic angles are obscured.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, indicating the image is likely a right-sided view. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to have low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 90 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right-sided chest tube (present) with confidence 95 + a chest tube is present on the right side of the chest. The course is visible, terminating in the right hemithorax.
+   - Left-sided picc line (present) with confidence 90 + a picc line is present on the left side of the chest. The course is visible, terminating in the superior vena cava.
+   - Indeterminate (indeterminate) with confidence 100 + No other devices are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: There is a large opacity occupying the majority of the right hemithorax. The right lung is likely collapsed. There is a chest tube in place.
+     - Left lung: The left lung appears relatively clear, with some patchy opacities in the lower lung fields.
+     - Pleura: There is no obvious pleural effusion or pneumothorax.
+   - mediastinum/heart
+     - Mediastinum: The mediastinum is midline. The heart size is difficult to assess due to the opacity in the right hemithorax.
+     - Heart: The heart size is difficult to assess due to the opacity in the right hemithorax.
+   - diaphragms/upper abdomen
+     - Diaphragms: The diaphragms are visible.
+     - Upper abdomen: The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - Bones: The ribs are visible.
+     - Soft tissues: The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large opacity in the right hemithorax, likely representing a large pleural effusion or hemothorax.
+   - Left lung with some patchy opacities.
+   - Chest tube in place on the right side.
+   - Left-sided picc line in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are obscured, limiting the assessment of the lung fields and pleural spaces.
+   - The heart size is difficult to assess due to the opacity in the right hemithorax.
+   - The presence and extent of any underlying lung disease is not fully evaluated.
+
+7) DOMAIN VECTOR

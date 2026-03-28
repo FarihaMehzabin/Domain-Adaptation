@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (portable) with confidence 100 + the image is a portable chest radiograph.
+   - portable-likelihood (high) with evidence (portable equipment visible in the background).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be relatively free of rotation.
+   - inspiration (adequate) with confidence 90 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 95 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + the image is not significantly affected by motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not fully visualized due to the patient's position. The costophrenic angles are not fully visualized due to the patient's position. The lateral chest walls are not fully visualized due to the patient's position.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are relatively clear, the mediastinum is visible, the bones are visible, and the diaphragms and costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate) with evidence (no obvious artifacts are present).
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. Burned-in label top-left.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to be processed with low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, course: central, tip position: unknown, confidence 95 + an endotracheal tube is present, but the tip position is not clearly visualized.
+   - nasogastric tube (NGT) present, course: unknown, tip position: unknown, confidence 80 + a nasogastric tube is present, but the tip position is not clearly visualized.
+   - central venous catheter (CVC) present, course: central, tip position: unknown, confidence 85 + a central venous catheter is present, but the tip position is not clearly visualized.
+   - pacemaker/defibrillator present, course: unknown, tip position: unknown, confidence 70 + a pacemaker/defibrillator is present, but the tip position is not clearly visualized.
+   - other lines/tubes: indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - diffuse bilateral interstitial opacities are present, with a reticular pattern.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the cardiac silhouette appears enlarged.
+     - the mediastinum is unremarkable.
+   - diaphragms/upper abdomen
+     - the diaphragms are not fully visualized.
+     - the upper abdomen is not fully visualized.
+   - bones/soft tissues
+     - the bones are unremarkable.
+     - the soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - diffuse bilateral interstitial opacities, concerning for pulmonary edema, ARDS, or other inflammatory process.
+   - enlarged cardiac silhouette, potentially due to cardiomegaly or pericardial effusion.
+   - endotracheal tube, nasogastric tube, central venous catheter, and pacemaker/defibrillator are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - the apices, costophrenic angles, and lateral chest walls are not fully visualized due to the patient's position.
+   - the tip positions of the endotracheal tube, nasogastric tube, central venous catheter, and pacemaker/defibrillator are not clearly visualized.
+   - the upper abdomen is not fully visualized.
+
+7) DOMAIN VECTOR

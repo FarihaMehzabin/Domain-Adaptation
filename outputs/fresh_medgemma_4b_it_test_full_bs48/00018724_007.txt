@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest radiograph.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is likely a standard PA chest radiograph, not a portable.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, with the upper and lower borders of the image being slightly padded.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are relatively clear, with some increased opacity in the lower lung fields. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are several lines present, likely representing medical devices. There is no obvious grid or moiré pattern. There is no evidence of banding or detector dropout. There is no evidence of compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - central line: present, right internal jugular, tip position not visible with confidence 80%
+   - endotracheal tube: present, tip position not visible with confidence 80%
+   - nasogastric tube: present, tip position not visible with confidence 80%
+   - other lines: present, multiple lines are present, but their exact course and tip positions are not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - increased opacity in the lower lung fields bilaterally, likely representing pulmonary edema.
+     - no obvious pleural effusion.
+     - no pneumothorax.
+   - mediastinum/heart
+     - the heart size is normal.
+     - the mediastinal contours are normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is not well visualized due to the patient's position and the image's cropping.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+     - the scapulae are visible.
+
+5) IMPRESSION
+   - Pulmonary edema.
+   - Presence of multiple medical devices.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image is cropped, limiting the visualization of the upper abdomen.
+   - The exact tip positions of the central line, endotracheal tube, and nasogastric tube are not clearly visible.
+   - The presence of multiple lines makes it difficult to identify the specific type and location of each device.
+
+7) DOMAIN VECTOR

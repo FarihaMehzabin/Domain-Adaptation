@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + no significant rotation is apparent.
+   - inspiration: adequate with confidence 90% + adequate inspiration. Posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + adequate penetration. Vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + no motion blur is evident.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, leaving the apices and costophrenic angles partially obscured. Costal margins are visible.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles (lungs are well-visualized. Mediastinum is well-visualized. Bones are well-visualized. Diaphragms are well-visualized. Costophrenic angles are partially obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (no obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (contrast is low. Edge enhancement is low. No inversion is suspected. Noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - heart: present, normal size with confidence 95%
+   - lungs: present, normal lung markings with confidence 95%
+   - trachea: present, midline with confidence 95%
+   - esophagus: present, midline with confidence 95%
+   - ribs: present, normal rib anatomy with confidence 95%
+   - clavicles: present, normal clavicle anatomy with confidence 95%
+   - spine: present, normal vertebral anatomy with confidence 95%
+   - diaphragm: present, normal diaphragmatic anatomy with confidence 95%
+   - heart border: present, normal heart border with confidence 95%
+   - lung borders: present, normal lung borders with confidence 95%
+   - mediastinal borders: present, normal mediastinal borders with confidence 95%
+   - costophrenic angles: present, normal costophrenic angles with confidence 95%
+   - apical lung: present, normal apical lung with confidence 95%
+   - aortic arch: present, normal aortic arch with confidence 95%
+   - pulmonary arteries: present, normal pulmonary arteries with confidence 95%
+   - pulmonary veins: present, normal pulmonary veins with confidence 95%
+   - superior vena cava: present, normal superior vena cava with confidence 95%
+   - inferior vena cava: present, normal inferior vena cava with confidence 95%
+   - azygos vein: present, normal azygos vein with confidence 95%
+   - main bronchus: present, normal main bronchus with confidence 95%
+   - right subclavian vein: present, normal right subclavian vein with confidence 95%
+   - left subclavian vein: present, normal left subclavian vein with confidence 95%
+   - right jugular vein: present, normal right jugular vein with confidence 95%
+   - left jugular vein: present, normal left jugular vein with confidence 95%
+   - right innominate vein: present, normal right innominate vein with confidence 95%
+   - left innominate vein: present, normal left innominate vein with confidence 95%
+   - right common carotid artery: present, normal right common carotid artery with confidence 95%
+   - left common carotid artery: present, normal left common carotid artery with confidence 95%
+   - right subclavian artery: present, normal right subclavian artery with confidence 95%
+   - left subclavian artery: present, normal left subclavian artery with confidence 95%
+   - superior vena cava: present, normal superior vena cava with confidence 95%
+
+7) DOMAIN VECTOR

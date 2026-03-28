@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image shows the image is taken from the front, with the patient's chest facing the detector.
+   - patient position: Portable with confidence 90% + the image is taken in a portable setting, likely on a bedside table.
+   - portable-likelihood: High with evidence (portable machine, lack of full inspiration)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: None with confidence 95% + the image appears to be relatively free of significant rotation.
+   - inspiration: Low with confidence 80% + the image appears to be a single view, with the patient not fully expanding the lungs. The posterior rib count is not estimable.
+   - penetration: Adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: None with confidence 95% + the image is not significantly affected by motion blur.
+   - collimation/anatomic coverage: Apices? Costophrenic angles? Lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, with the upper and lower borders of the image being cut off.
+   - anatomical clarity: Lungs/Mediastinum/Bones/Diaphragms & costophrenic angles: The lungs are visible, but the image is limited by the patient's position and the presence of multiple lines and tubes. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: Lines, grid/moiré, banding, detector dropout, compression artifacts: The image contains multiple lines and tubes, which are likely medical devices. The presence of these lines and tubes obscures the visualization of the lung parenchyma.
+   - markers/overlays: Laterality marker present? Burned-in text present?: A laterality marker is present, indicating the left side of the image. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Right subclavian central line: Present, course: Right subclavian vein, tip position: Indeterminate, confidence 85%
+   - Left subclavian central line: Present, course: Left subclavian vein, tip position: Indeterminate, confidence 85%
+   - Right picc line: Present, course: Right subclavian vein, tip position: Indeterminate, confidence 85%
+   - Chest tube: Present, course: Left chest, tip position: Indeterminate, confidence 85%
+   - Other lines/tubes: Indeterminate, course: Various, tip position: Indeterminate, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: The lungs are diffusely opacified, with multiple areas of consolidation and/or infiltrates. There is a large opacity in the left lower lung field. There is also a small opacity in the right upper lung field. There is a possible pleural effusion in the left hemithorax.
+   - mediastinum/heart: The mediastinum is unremarkable. The heart size is difficult to assess due to the lung opacities.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is not well visualized due to the patient's position and the presence of multiple lines and tubes.
+   - bones/soft tissues: The ribs are visible. The clavicles are visible. The soft tissues are unremarkable.
+
+5) IMPRESSION
+   - Diffuse lung opacities, likely representing pneumonia, pulmonary edema, or other inflammatory processes.
+   - Possible left pleural effusion.
+   - Multiple lines and tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image is a single view, which limits the assessment of the lung fields.
+   - The presence of multiple lines and tubes obscures the visualization of the lung parenchyma.
+   - The patient's position limits the assessment of the heart size and the upper abdomen.
+   - The tip position of the central lines is indeterminate.
+
+7) DOMAIN VECTOR

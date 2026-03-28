@@ -1,0 +1,55 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + image is a portable chest X-ray.
+   - portable-likelihood (high) with evidence (portable marker on image).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image shows the upper chest, but the apices and costophrenic angles are not fully visualized due to the portable nature of the image).
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are visible, mediastinum is visible, bones are visible, and diaphragms and costophrenic angles are visible, but the apices and costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, burned-in text top-left) with confidence 100 + a laterality marker is present, and there is a burned-in text label in the top-left corner.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (present) with confidence 95 + a right subclavian line is visible, coursing from the superior vena cava to the distal arm.
+   - left subclavian line (present) with confidence 95 + a left subclavian line is visible, coursing from the superior vena cava to the distal arm.
+   - endotracheal tube (indeterminate) with confidence 50 + an endotracheal tube is not clearly visible.
+   - nasogastric tube (indeterminate) with confidence 50 + a nasogastric tube is not clearly visible.
+   - central line (indeterminate) with confidence 50 + a central line is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a large opacity in the right hemithorax, obscuring the right hemidiaphragm and likely representing a large pleural effusion. The right lung markings are not well visualized due to the opacity.
+     - left lung: the left lung appears clear.
+     - pleura: no obvious pleural effusion is seen on the left side.
+   - mediastinum/heart
+     - mediastinum: the mediastinum appears midline.
+     - heart: the heart size is within normal limits.
+   - diaphragms/upper abdomen
+     - diaphragms: the diaphragms are visible.
+     - upper abdomen: the upper abdomen is not well visualized due to the patient's position and the presence of the right subclavian line.
+   - bones/soft tissues
+     - ribs: the ribs are visible.
+     - clavicles: the clavicles are visible.
+     - scapulae: the scapulae are visible.
+     - soft tissues: no obvious subcutaneous emphysema is seen.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Large right pleural effusion.
+   - Right subclavian line in place.
+   - Left subclavian line in place.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are not fully visualized due to the portable nature of the image.
+   - The presence of the right subclavian line obscures the right lung markings.
+   - The presence of the left subclavian line obscures the left lung markings.
+   - The nasogastric tube and endotracheal tube are not clearly visible.
+   - The central line is not clearly visible.
+
+7) DOMAIN VECTOR

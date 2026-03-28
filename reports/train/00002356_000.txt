@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: The image is a PA chest X-ray.
+   - patient position: Upright with confidence 90% + evidence: The patient is standing in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a standard PA chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: The image appears to be free of significant rotation. Clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: The lungs appear to be well-expanded.
+   - penetration: adequate with confidence 95% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: There is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be adequately collimated, covering the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present on the left side of the image. A burned-in label is present in the top-left corner.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - catheter, central line: indeterminate with confidence 70% + evidence: No central line is clearly visible.
+   - catheter, peripheral line: indeterminate with confidence 70% + evidence: No peripheral line is clearly visible.
+   - tube, endotracheal: absent with confidence 95% + evidence: No endotracheal tube is visible.
+   - tube, nasogastric: absent with confidence 95% + evidence: No nasogastric tube is visible.
+   - tube, chest drain: absent with confidence 95% + evidence: No chest drain is visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: The lungs are clear bilaterally. There is no evidence of consolidation, pleural effusion, or pneumothorax.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues: The ribs are intact. The clavicles are symmetrical. The scapulae are unremarkable.
+
+5) IMPRESSION
+   - No acute cardiopulmonary abnormalities identified.
+   - A laterality marker is present on the left side of the image.
+   - A burned-in label is present in the top-left corner.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The absence of a central line or peripheral line makes it impossible to determine if these devices are present.
+   - The burned-in label in the top-left corner is not helpful for interpretation.
+   - The image quality is adequate, but there is some mild blurring in the lower lung fields.
+
+7) DOMAIN VECTOR

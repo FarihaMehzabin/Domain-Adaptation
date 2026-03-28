@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely upright.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the upper chest and abdomen. The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are visible. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present. Burned-in text is present at the top-left corner
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Indeterminate + No tubes or lines are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: increased opacity in the right lung field, particularly in the lower zone. The opacity is not uniform and may represent consolidation, edema, or other process.
+     - left lung: clear with confidence 95% + The left lung appears clear.
+     - pleural surfaces: clear with confidence 95% + No pleural effusions are identified.
+   - mediastinum/heart
+     - heart size: enlarged with confidence 90% + The heart appears enlarged.
+     - mediastinal contours: unremarkable with confidence 95% + The mediastinal contours are unremarkable.
+   - diaphragms/upper abdomen
+     - diaphragms: visible with confidence 95% + The diaphragms are visible.
+     - upper abdomen: visible with confidence 95% + The upper abdomen is visible.
+   - bones/soft tissues
+     - ribs: visible with confidence 95% + The ribs are visible.
+     - clavicles: visible with confidence 95% + The clavicles are visible.
+     - spine: visible with confidence 95% + The spine is visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right lung opacity, concerning for pneumonia or other process.
+   - Enlarged heart.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - No clinical history available.
+   - The opacity in the right lung is not well-defined and could represent a variety of conditions.
+   - The heart size is estimated based on the image.
+   - The presence of the burned-in text limits the ability to assess the image for subtle findings.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is taken from anterior to posterior.
+   - patient position: upright with confidence 90% + evidence: patient is standing or sitting upright.
+   - portable-likelihood: low with evidence: the image appears to be a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: the lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + evidence: no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are relatively clear, but there is increased opacity in the bilateral lung fields. The mediastinum is visible. The bones are well-defined. The diaphragms are visible. The costophrenic angles are obscured by the image cropping.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): the image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube: present, course: midline, tip position: unknown, confidence 80%
+   - nasogastric tube: present, course: midline, tip position: unknown, confidence 80%
+   - right internal jugular central venous catheter: present, course: right internal jugular vein, tip position: proximal superior vena cava, confidence 90%
+   - esophageal tube: present, course: midline, tip position: unknown, confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: bilateral diffuse hazy opacities are present throughout both lung fields, suggestive of pulmonary edema or other diffuse lung process. There is no obvious pleural effusion.
+   - mediastinum/heart: the mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: the diaphragms are visible. The upper abdomen is not well visualized due to the image cropping.
+   - bones/soft tissues: the bones are well-defined. No obvious soft tissue abnormalities are present.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral diffuse hazy opacities in the lungs, concerning for pulmonary edema or other diffuse lung process.
+   - Endotracheal tube, nasogastric tube, esophageal tube, and right internal jugular central venous catheter are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Image is cropped, obscuring the apices and costophrenic angles.
+   - The tip position of the endotracheal tube, nasogastric tube, and esophageal tube are not clearly visualized.
+   - The image quality is adequate, but the low contrast and edge enhancement may limit the ability to detect subtle abnormalities.
+
+7) DOMAIN VECTOR

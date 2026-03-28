@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: The image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + evidence: The patient is likely in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a standard chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: The clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: The lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: No obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be adequately cropped to include the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - lines/tubes: Indeterminate with confidence 80% + evidence: No lines or tubes are clearly visible in the image.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: clear with confidence 95% + evidence: The right lung appears clear.
+     - left lung: hazy opacity in the lower lung field with confidence 85% + evidence: There is a hazy opacity in the lower left lung field. The exact location and extent are difficult to determine due to the hazy appearance.
+   - mediastinum/heart
+     - mediastinum: normal in size and contour with confidence 90% + evidence: The mediastinum appears within normal limits.
+     - heart: normal size and shape with confidence 90% + evidence: The heart size and shape appear normal.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined with confidence 95% + evidence: The diaphragms are well-defined.
+     - upper abdomen: unremarkable with confidence 90% + evidence: The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - ribs: normal appearance with confidence 95% + evidence: The ribs appear normal.
+     - clavicles: symmetrical with confidence 95% + evidence: The clavicles are symmetrical.
+     - scapulae: normal appearance with confidence 90% + evidence: The scapulae appear normal.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Hazy opacity in the lower left lung field. Further evaluation with a lateral decubitus radiograph or CT scan may be considered to better characterize this finding.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The hazy opacity in the left lower lung field is difficult to fully characterize based on this single PA view.
+   - The exact location and extent of the opacity are not clearly defined.
+   - The absence of a lateral decubitus radiograph limits the ability to assess for a pleural effusion.
+
+7) DOMAIN VECTOR

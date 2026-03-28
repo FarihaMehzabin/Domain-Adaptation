@@ -1,0 +1,55 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 90% + adequate inspiration is present.
+   - penetration: adequate with confidence 95% + adequate penetration is present.
+   - motion blur: none with confidence 95% + no motion blur is evident.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles (The lungs are well-visualized. The mediastinum is well-visualized. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are obscured by cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (No obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - heart: present, normal size with confidence 95%
+   - lungs: present, normal lung markings with confidence 95%
+   - heart border: present, normal appearance with confidence 95%
+   - mediastinum: present, normal appearance with confidence 95%
+   - diaphragm: present, normal appearance with confidence 95%
+   - ribs: present, normal appearance with confidence 95%
+   - clavicles: present, normal appearance with confidence 95%
+   - trachea: present, normal appearance with confidence 95%
+   - esophagus: present, normal appearance with confidence 95%
+   - IVC: indeterminate, no IVC seen with confidence 50%
+   - central lines: indeterminate, no central lines seen with confidence 50%
+   - pulmonary artery: indeterminate, no pulmonary artery seen with confidence 50%
+   - pulmonary veins: indeterminate, no pulmonary veins seen with confidence 50%
+   - pleural effusion: indeterminate, no pleural effusion seen with confidence 50%
+   - pneumothorax: indeterminate, no pneumothorax seen with confidence 50%
+   - atelectasis: indeterminate, no atelectasis seen with confidence 50%
+   - consolidation: indeterminate, no consolidation seen with confidence 50%
+   - masses: indeterminate, no masses seen with confidence 50%
+   - foreign bodies: indeterminate, no foreign bodies seen with confidence 50%
+   - catheters: indeterminate, no catheters seen with confidence 50%
+   - wires: indeterminate, no wires seen with confidence 50%
+   - tubes: indeterminate, no tubes seen with confidence 50%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: lungs are clear. No pleural effusion or pneumothorax is identified.
+   - mediastinum/heart: The heart size is within normal limits. The mediastinum is unremarkable.
+   - diaphragms/upper abdomen: The diaphragms are well-visualized. The upper abdomen is unremarkable.
+   - bones/soft tissues: The bones are unremarkable. No acute fractures are identified.
+
+5) IMPRESSION
+   - No acute cardiopulmonary abnormalities identified.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image is cropped, obscuring the apices and costophrenic angles.
+   - The IVC, central lines, pulmonary artery, pulmonary veins, pleural effusion, pneumothorax, atelectasis, consolidation, masses, foreign bodies, catheters, wires, and tubes are not clearly visualized.
+
+7) DOMAIN VECTOR

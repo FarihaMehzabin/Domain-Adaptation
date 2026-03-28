@@ -1,0 +1,43 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is taken from anterior to posterior.
+   - patient position: portable with confidence 90% + patient is lying supine.
+   - portable-likelihood: high + image is taken with a portable X-ray machine.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving a small amount of padding on the lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are relatively clear, but there is some increased opacity in the lower lung fields. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are lines present in the image, likely from the portable X-ray machine. There is some mild grid/moiré artifact. There is some mild banding. There is no evidence of detector dropout or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - right picc line: present, course: right subclavian vein to right atrium, tip position: indeterminate, confidence 85% + The right picc line is visible, extending from the right subclavian vein to the right atrium. The tip position is not clearly visible.
+   - left picc line: present, course: left subclavian vein to left brachiocephalic vein, tip position: indeterminate, confidence 80% + The left picc line is visible, extending from the left subclavian vein to the left brachiocephalic vein. The tip position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral lower lung fields: increased opacity with possible pleural effusion, confidence 90% + There is increased opacity in the lower lung fields bilaterally, which could be due to pulmonary edema or pleural effusion. The costophrenic angles are blunted, suggesting possible pleural effusion.
+   - mediastinum/heart
+     - mediastinum: normal with confidence 95% + The mediastinum is within normal limits.
+     - heart: normal with confidence 95% + The heart size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: visible with confidence 95% + The diaphragms are visible.
+     - upper abdomen: partially visible with confidence 80% + The upper abdomen is partially visible.
+   - bones/soft tissues
+     - ribs: visible with confidence 95% + The ribs are visible.
+     - clavicles: visible with confidence 95% + The clavicles are visible.
+     - soft tissues: normal with confidence 90% + The soft tissues are normal.
+
+5) IMPRESSION
+   - Bilateral lower lung field opacities, possibly due to pulmonary edema or pleural effusion.
+   - Right and left picc lines are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip position of the picc lines is not clearly visible.
+   - The image is a portable chest X-ray, which may have limited anatomical coverage.
+   - The increased opacity in the lower lung fields could be due to several factors, and further evaluation may be needed to determine the underlying cause.
+
+7) DOMAIN VECTOR

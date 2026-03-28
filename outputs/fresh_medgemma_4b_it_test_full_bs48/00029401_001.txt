@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the costophrenic angles not fully visible. The apices are not fully visible due to cropping.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles (lungs are generally clear, mediastinum is visible, bones are visible, diaphragms are visible, and costophrenic angles are not fully visible due to cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (no obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the left side is the patient's right side. Burned-in text is present at the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (contrast is low, edge enhancement is low, and there is no evidence of inversion. Noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Indeterminate: No tubes or lines are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Right lung: opacity in the lower right lung field is present. The exact nature of the opacity is indeterminate.
+     - Left lung: clear.
+     - Pleura: no pleural effusion or pneumothorax is identified.
+   - mediastinum/heart
+     - Mediastinum: normal mediastinal contours.
+     - Heart: heart size is within normal limits.
+   - diaphragms/upper abdomen
+     - Diaphragms: diaphragms are visible.
+     - Upper abdomen: bowel loops are visible.
+   - bones/soft tissues
+     - Bones: ribs are visible.
+     - Soft tissues: no obvious soft tissue abnormalities are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right lower lung opacity: indeterminate. Further evaluation with a CT scan may be warranted.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - Cropping of the image limits the assessment of the costophrenic angles.
+   - The exact nature of the right lower lung opacity is indeterminate.
+   - No tubes or lines are clearly visible.
+
+7) DOMAIN VECTOR

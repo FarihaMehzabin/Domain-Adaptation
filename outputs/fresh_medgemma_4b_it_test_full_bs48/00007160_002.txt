@@ -1,0 +1,35 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 100 + image is a frontal view of the chest.
+   - patient position: upright with confidence 100 + the patient is standing or sitting upright.
+   - portable-likelihood: low + the image appears to be a standard PA chest radiograph.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 100 + the image appears to be properly rotated.
+   - inspiration: adequate with confidence 100 + the lungs are well-expanded.
+   - penetration: adequate with confidence 100 + the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 100 + the image is sharp and clear.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are not fully visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: No artifacts are apparent.
+   - markers/overlays: laterality marker present? burned-in text present?: No laterality marker is present. No burned-in text is present
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Indeterminate: No devices are visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: The lungs are clear. No pleural effusion or pneumothorax is identified.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is not well visualized due to the image cropping.
+   - bones/soft tissues: The ribs are visible. The clavicles are visible.
+
+5) IMPRESSION
+   - The chest radiograph is limited due to image cropping.
+   - No acute findings are identified.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image is cropped, obscuring the apices and costophrenic angles.
+   - The lateral chest walls are not fully visible.
+   - No devices are visible.
+
+7) DOMAIN VECTOR

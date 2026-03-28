@@ -1,0 +1,38 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest radiograph.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + the image appears to be a standard PA chest radiograph, not a portable.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + the image is not blurry.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs show diffuse bilateral infiltrates. The mediastinum is unremarkable. The bones are well-defined. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines and tubes present. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - central venous catheter (CVC): present, course: internal jugular vein, tip position: indeterminate, confidence 80% + a CVC is present, but the tip position is not clearly visible.
+   - endotracheal tube (ETT): present, course: trachea, tip position: indeterminate, confidence 70% + an ETT is present, but the tip position is not clearly visible.
+   - nasogastric tube (NGT): present, course: stomach, tip position: indeterminate, confidence 60% + an NGT is present, but the tip position is not clearly visible.
+   - chest tube: present, course: right pleural space, tip position: indeterminate, confidence 85% + a chest tube is present, but the tip position is not clearly visible.
+   - multiple lines: present, course: indeterminate, tip position: indeterminate, confidence 75% + multiple lines are present, but their courses and tip positions are not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: diffuse bilateral infiltrates are present throughout both lung fields. There is no evidence of pneumothorax.
+   - mediastinum/heart: The mediastinum is unremarkable. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is unremarkable.
+   - bones/soft tissues: The bones are well-defined. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION
+   - Diffuse bilateral infiltrates.
+   - Multiple lines and tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip positions of the CVC, ETT, NGT, and chest tube are not clearly visible.
+   - The image is cropped at the bottom, limiting the assessment of the lower lung fields.
+   - The presence of multiple lines and tubes makes it difficult to assess their courses and tip positions.
+
+7) DOMAIN VECTOR

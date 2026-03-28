@@ -1,0 +1,54 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the costophrenic angles not fully visible. The apices are not fully visible due to cropping.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are generally clear, mediastinum is visible, bones are visible, diaphragms are visible, and costophrenic angles are not fully visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. A burned-in label is present at the top-left corner
+   - presentation/processing cues: contrast (low/med/high): contrast is low. Edge enhancement (low/med/high): edge enhancement is low. Inversion suspected (yes/no): no inversion is suspected. Noise texture (low/med/high): noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Heart: present, normal size, normal shape.
+   - Lungs: present, clear.
+   - Mediastinum: present, normal width.
+   - Diaphragms: present, normal position.
+   - Tubes/Lines/Catheters: Indeterminate + No tubes, lines, or catheters are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - Right lung: there is a hazy opacity in the right upper lobe.
+     - Left lung: clear.
+     - Pleura: no pleural effusion or pneumothorax is identified.
+   - mediastinum/heart:
+     - Heart size: normal.
+     - Mediastinal width: normal.
+     - Cardiomediastinal silhouette: unremarkable.
+   - diaphragms/upper abdomen:
+     - Diaphragms: normal position.
+     - Liver: not well visualized due to the patient's position and cropping.
+     - Spleen: not well visualized due to the patient's position and cropping.
+   - bones/soft tissues:
+     - Ribs: normal.
+     - Clavicles: normal.
+     - Scapulae: normal.
+     - Spine: normal.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right upper lobe opacity. Further evaluation with CT is recommended to rule out pneumonia, mass, or other pathology.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Limited visualization of the costophrenic angles due to image cropping.
+   - Limited visualization of the liver and spleen due to patient's position and cropping.
+   - No tubes, lines, or catheters are clearly visible.
+
+7) DOMAIN VECTOR

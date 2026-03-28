@@ -47,6 +47,24 @@ import tarfile
 import zipfile
 from pathlib import Path
 
+NIH_FINDING_TO_COLUMN = [
+    ("Atelectasis", "label_atelectasis"),
+    ("Cardiomegaly", "label_cardiomegaly"),
+    ("Consolidation", "label_consolidation"),
+    ("Edema", "label_edema"),
+    ("Effusion", "label_pleural_effusion"),
+    ("Emphysema", "label_emphysema"),
+    ("Fibrosis", "label_fibrosis"),
+    ("Hernia", "label_hernia"),
+    ("Infiltration", "label_infiltration"),
+    ("Mass", "label_mass"),
+    ("Nodule", "label_nodule"),
+    ("Pleural_Thickening", "label_pleural_thickening"),
+    ("Pneumonia", "label_pneumonia"),
+    ("Pneumothorax", "label_pneumothorax"),
+]
+NIH_LABEL_COLUMNS = [column_name for _, column_name in NIH_FINDING_TO_COLUMN]
+
 DATASETS = {
     "nih_cxr14": {
         "kaggle_id": "nih-chest-xrays/data",
@@ -244,6 +262,117 @@ def resolve_nih_manifest(manifest_arg: str) -> Path:
     )
 
 
+def normalize_binary_label(value: str) -> str:
+    text = str(value).strip()
+    if text in {"0", "0.0"}:
+        return "0"
+    if text in {"1", "1.0"}:
+        return "1"
+    return text
+
+
+def parse_nih_findings(finding_labels: str) -> set[str]:
+    findings = {label.strip() for label in str(finding_labels).split("|") if label.strip()}
+    findings.discard("No Finding")
+    return findings
+
+
+def expanded_nih_manifest_path(manifest_path: Path) -> Path:
+    stem = manifest_path.stem.rstrip()
+    suffix = manifest_path.suffix or ".csv"
+    if stem.endswith("_all14"):
+        return manifest_path.with_name(f"{stem}{suffix}")
+    return manifest_path.with_name(f"{stem}_all14{suffix}")
+
+
+def maybe_expand_nih_manifest_labels(manifest_path: Path, raw_dir: Path, dry_run: bool) -> Path:
+    with manifest_path.open(newline="") as handle:
+        reader = csv.DictReader(handle)
+        if reader.fieldnames is None:
+            raise ValueError(f"Manifest {manifest_path} is missing a header row.")
+        fieldnames = list(reader.fieldnames)
+        rows = list(reader)
+
+    missing_columns = [column_name for column_name in NIH_LABEL_COLUMNS if column_name not in fieldnames]
+    if not missing_columns:
+        return manifest_path
+
+    metadata_path = raw_dir / "Data_Entry_2017.csv"
+    if not metadata_path.exists():
+        raise FileNotFoundError(
+            f"NIH metadata not found at {metadata_path}. Download NIH raw data before expanding the manifest."
+        )
+
+    findings_by_image: dict[str, set[str]] = {}
+    with metadata_path.open(newline="") as handle:
+        reader = csv.DictReader(handle)
+        if reader.fieldnames is None:
+            raise ValueError(f"NIH metadata {metadata_path} is missing a header row.")
+        required_columns = {"Image Index", "Finding Labels"}
+        missing_metadata_columns = required_columns.difference(reader.fieldnames)
+        if missing_metadata_columns:
+            raise ValueError(
+                f"NIH metadata {metadata_path} is missing required columns: {sorted(missing_metadata_columns)}"
+            )
+        for row in reader:
+            image_index = str(row["Image Index"]).strip()
+            findings_by_image[image_index] = parse_nih_findings(str(row["Finding Labels"]))
+
+    expanded_rows: list[dict[str, str]] = []
+    missing_images: list[str] = []
+    mismatched_labels: list[str] = []
+    expanded_fieldnames = fieldnames + missing_columns
+
+    for row in rows:
+        image_path = str(row.get("image_path", "")).strip()
+        image_index = Path(image_path).name
+        if not image_index:
+            raise ValueError(f"Manifest row is missing image_path: {row}")
+
+        findings = findings_by_image.get(image_index)
+        if findings is None:
+            missing_images.append(image_index)
+            continue
+
+        expanded_row = dict(row)
+        for finding_name, column_name in NIH_FINDING_TO_COLUMN:
+            derived_value = "1" if finding_name in findings else "0"
+            existing_value = normalize_binary_label(str(row.get(column_name, "")))
+            if existing_value in {"0", "1"} and existing_value != derived_value:
+                mismatched_labels.append(
+                    f"{image_index}:{column_name}=manifest({existing_value}) raw({derived_value})"
+                )
+            expanded_row[column_name] = existing_value if existing_value in {"0", "1"} else derived_value
+        expanded_rows.append(expanded_row)
+
+    if missing_images:
+        sample = ", ".join(missing_images[:5])
+        raise ValueError(
+            f"Could not find {len(missing_images)} manifest images in NIH metadata. Sample: {sample}"
+        )
+    if mismatched_labels:
+        sample = ", ".join(mismatched_labels[:5])
+        raise ValueError(
+            f"Existing manifest labels disagree with NIH metadata for {len(mismatched_labels)} values. Sample: {sample}"
+        )
+
+    output_path = expanded_nih_manifest_path(manifest_path)
+    if dry_run:
+        print(
+            f"[nih_cxr14] would expand manifest {manifest_path} to 14 labels at {output_path}"
+        )
+        return manifest_path
+
+    with output_path.open("w", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=expanded_fieldnames)
+        writer.writeheader()
+        writer.writerows(expanded_rows)
+    print(
+        f"[nih_cxr14] wrote 14-label manifest with existing split assignments to {output_path}"
+    )
+    return output_path
+
+
 def write_nih_split_files(manifest_path: Path, split_output_dir: Path, dry_run: bool) -> None:
     split_output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -367,6 +496,12 @@ def main() -> int:
         )
         if name == "nih_cxr14":
             manifest_path = resolve_nih_manifest(args.nih_manifest)
+            raw_dir = data_root / cfg["raw_rel"]
+            manifest_path = maybe_expand_nih_manifest_labels(
+                manifest_path=manifest_path,
+                raw_dir=raw_dir,
+                dry_run=args.dry_run,
+            )
             split_output_dir = (
                 Path(args.split_output_dir)
                 if args.split_output_dir

@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is likely a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + adequate inspiration is present.
+   - penetration: adequate with confidence 90% + adequate penetration is present.
+   - motion blur: none with confidence 95% + no significant motion blur is evident.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (cropped, some padding at the costophrenic angles)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are generally clear, mediastinum is visible, bones are visible, diaphragms are visible, and costophrenic angles are partially obscured by padding.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, likely indicating the left side. Burned-in text is present at the top-left corner
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Indeterminate: No tubes or lines are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - The lungs appear generally clear bilaterally. There is some increased opacity in the lower lung fields, possibly representing atelectasis or early consolidation.
+     - No pleural effusion is identified.
+     - No pneumothorax is identified.
+   - mediastinum/heart:
+     - The mediastinum is within normal limits in width.
+     - The heart size is normal.
+     - The pulmonary vasculature is unremarkable.
+   - diaphragms/upper abdomen:
+     - The diaphragms are visible.
+     - The upper abdomen is incompletely visualized due to the patient's position and the image's extent.
+   - bones/soft tissues:
+     - The ribs are visible.
+     - The clavicles are visible.
+     - The scapulae are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute findings are identified.
+   - Possible mild atelectasis in the lower lung fields.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is limited by the patient's position and the extent of the image.
+   - The upper abdomen is incompletely visualized.
+   - The presence of the laterality marker may not be accurate.
+   - The presence of burned-in text is not helpful.
+
+7) DOMAIN VECTOR

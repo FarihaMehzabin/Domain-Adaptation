@@ -1,0 +1,38 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + the image appears to be a standard chest X-ray, not a portable.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + the image is not blurry.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the top and bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are well-visualized. The mediastinum is clearly visible. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are well-visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines and tubes present. There is no evidence of grid or moiré artifacts. There is no evidence of banding or detector dropout. There is no evidence of compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is the left. There is burned-in text present at the top-left corner
+
+3) DEVICES / LINES / TUBES
+   - endotracheal tube: present, tip position: approximately 4 cm above the carina with confidence 90% + the endotracheal tube is visible.
+   - nasogastric tube: present, course: traverses the esophagus and stomach, tip position: not clearly visualized with confidence 70% + the nasogastric tube is visible. The tip is not clearly visualized.
+   - central venous catheter: present, course: right subclavian, tip position: at the cavoatrial junction with confidence 95% + the central venous catheter is visible. The tip is at the cavoatrial junction.
+   - chest tubes: present, course: bilateral, tip position: not clearly visualized with confidence 60% + the chest tubes are visible. The tip is not clearly visualized.
+   - other lines/tubes: present, course: multiple, tip position: not clearly visualized with confidence 50% + multiple lines and tubes are present, but the tip positions are not clearly visualized.
+
+4) FINDINGS
+   - lungs/pleura: right lower lobe opacity with confidence 80% + there is a hazy opacity in the right lower lung field.
+   - mediastinum/heart: the mediastinum is unremarkable. The heart size is within normal limits.
+   - diaphragms/upper abdomen: the diaphragms are well-visualized. The upper abdomen is unremarkable.
+   - bones/soft tissues: the ribs and clavicles are well-visualized.
+
+5) IMPRESSION
+   - Right lower lobe opacity, concerning for pneumonia or atelectasis.
+   - Multiple lines and tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip position of the nasogastric tube and chest tubes is not clearly visualized.
+   - The image is limited by the presence of multiple lines and tubes.
+   - The right lower lobe opacity is not fully characterized.
+
+7) DOMAIN VECTOR

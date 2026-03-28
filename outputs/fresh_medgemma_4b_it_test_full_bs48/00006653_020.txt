@@ -1,0 +1,38 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low with evidence (image is likely a portable chest X-ray due to the lack of a grid pattern and the presence of multiple lines).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the clavicles are symmetrical.
+   - inspiration: adequate with confidence 85% + the lungs are well-expanded.
+   - penetration: adequate with confidence 90% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are well-visualized. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are multiple lines present, likely representing medical devices. There is no grid pattern or moiré artifact. There is no obvious banding or detector dropout. There are no compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the right. There is burned-in text present at the top-left corner, but the content is not visible
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - NG tube: present, course: likely enters the stomach, tip position: not visible. Confidence: 90%
+   - Central line: present, course: likely enters the superior vena cava, tip position: not visible. Confidence: 90%
+   - ETT: present, course: likely terminates in the trachea, tip position: not visible. Confidence: 90%
+   - Other lines: present, course: multiple lines are present, but their exact course and tip positions are not clearly visible. Confidence: 60%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: The lungs are clear bilaterally. There is no evidence of consolidation, pleural effusion, or pneumothorax.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is not well visualized due to the patient's position and the presence of multiple lines.
+   - diaphragms/upper abdomen: The diaphragms are well-visualized. The upper abdomen is not well visualized due to the patient's position and the presence of multiple lines.
+   - bones/soft tissues: The ribs and clavicles are visible. There is no evidence of acute fractures.
+
+5) IMPRESSION
+   - Multiple medical devices are present.
+   - The lungs are clear.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The apices and costophrenic angles are obscured.
+   - The heart size is not well visualized.
+   - The exact course and tip positions of the multiple lines are not clearly visible.
+
+7) DOMAIN VECTOR

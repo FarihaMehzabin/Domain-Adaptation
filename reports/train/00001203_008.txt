@@ -1,0 +1,57 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + the image is labeled "portable".
+   - portable-likelihood (high) with evidence (label "portable").
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the image is likely a PA view, and the lung fields are reasonably expanded.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are also partially obscured.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are somewhat obscured by the cropping. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the right side is on the right. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to be a standard chest X-ray.
+   - edge enhancement (low) with confidence 100 + no obvious edge enhancement.
+   - inversion suspected (no) with confidence 100 + no obvious signs of inversion.
+   - noise texture (low) with confidence 100 + the image has a low level of noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, course: midline, tip position: approximately 4 cm above the carina, confidence 100
+   - nasogastric tube (NGT) present, course: midline, tip position: stomach, confidence 100
+   - right internal jugular central venous catheter (IJCV) present, course: right internal jugular vein, tip position: proximal superior vena cava, confidence 100
+   - left subclavian central venous catheter (SCCV) present, course: left subclavian vein, tip position: proximal superior vena cava, confidence 100
+   - esophageal temperature probe present, course: esophagus, tip position: stomach, confidence 100
+   - pacemaker/defibrillator leads present, course: right atrium, right ventricle, confidence 100
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lung fields are somewhat obscured by the cropping. There is some increased opacity in the right lung base, which could be due to atelectasis or consolidation.
+     - no obvious pleural effusion or pneumothorax.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in size and contour.
+     - the heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Endotracheal tube in appropriate position.
+   - Nasogastric tube in appropriate position.
+   - Central venous catheters in appropriate position.
+   - Possible right lower lobe opacity.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is cropped, obscuring the apices and costophrenic angles.
+   - The lung fields are somewhat obscured by the cropping.
+   - The presence of multiple lines and tubes makes it difficult to assess the lung fields in detail.
+   - The image is a portable AP view, which may not be ideal for assessing the lung fields.
+
+7) DOMAIN VECTOR

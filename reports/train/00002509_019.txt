@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: The image is a PA chest X-ray.
+   - patient position: Upright with confidence 90% + evidence: The patient is standing in an upright position.
+   - portable-likelihood: low with evidence: The image appears to be a standard PA chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: The clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: The lungs are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: The vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: No obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image covers the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are clearly visible. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? The laterality marker is present and indicates the left side is on the left. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - NG tube: absent with confidence 95%
+   - central line: absent with confidence 95%
+   - pacemaker: absent with confidence 95%
+   - other: indeterminate with confidence 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: There are bilateral interstitial opacities, predominantly in the lower lung fields. The pattern is suggestive of interstitial lung disease.
+     - pleura: No pleural effusion or pneumothorax is identified.
+   - mediastinum/heart
+     - mediastinum: The mediastinum is within normal limits in width.
+     - heart: The heart size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: The diaphragms are well-defined.
+     - upper abdomen: The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - bones: The ribs are intact.
+     - soft tissues: No subcutaneous emphysema is identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral interstitial opacities, predominantly in the lower lung fields, suggestive of interstitial lung disease.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image quality is adequate, but the low contrast limits the ability to fully assess the lung parenchyma.
+   - The interstitial pattern is suggestive but not diagnostic. Further evaluation with high-resolution CT is recommended for definitive diagnosis.
+
+7) DOMAIN VECTOR

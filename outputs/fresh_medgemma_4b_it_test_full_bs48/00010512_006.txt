@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the upper chest and abdomen. The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are well-aerated. The mediastinum is well-defined. The bones are well-defined. The diaphragms are well-defined. The costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube: present, course: midline, tip position: not visible with confidence 80%
+   - nasogastric tube: present, course: midline, tip position: not visible with confidence 80%
+   - central line: present, course: midline, tip position: not visible with confidence 80%
+   - chest tube: present, course: right side, tip position: not visible with confidence 80%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a large amount of subcutaneous emphysema in the right chest wall. There is also a large amount of free air in the abdomen.
+     - left lung: clear with no evidence of consolidation, effusion, or pneumothorax.
+   - mediastinum/heart
+     - mediastinum: unremarkable.
+     - heart: size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: there is a large amount of free air in the abdomen. There are also multiple radiopaque densities in the upper abdomen, likely representing surgical material.
+   - bones/soft tissues
+     - ribs: no acute fractures are identified.
+     - clavicles: symmetrical.
+     - soft tissues: subcutaneous emphysema is present in the right chest wall.
+
+5) IMPRESSION
+   - Large amount of free air in the abdomen.
+   - Right-sided chest tube in place.
+   - Subcutaneous emphysema in the right chest wall.
+   - Endotracheal tube, nasogastric tube, and central line are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip position of the endotracheal tube, nasogastric tube, and central line are not clearly visible.
+   - The tip position of the chest tube is not clearly visible.
+   - The exact location and density of the radiopaque densities in the upper abdomen are not clearly defined.
+
+7) DOMAIN VECTOR

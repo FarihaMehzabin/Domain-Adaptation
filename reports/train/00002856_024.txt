@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "Portable" label present.
+   - portable-likelihood (high) with evidence (label).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are visible, mediastinum is visible, bones are visible, and diaphragms and costophrenic angles are visible, although the apices and costophrenic angles are obscured.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. with confidence 100 + no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present. A burned-in label is present in the top-left corner.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to be displayed with low contrast. Edge enhancement is low. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 100 + the image appears to have low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Central line, internal jugular (CVC) with confidence 90 + A central line is present, likely an internal jugular central venous catheter (CVC). The catheter tip is likely in the superior vena cava, but the exact tip position is not clearly visible.
+   - Peripheral line, subclavian with confidence 90 + A peripheral line is present, likely a subclavian line. The catheter tip is likely in the superior vena cava, but the exact tip position is not clearly visible.
+   - ETT (Endotracheal Tube) with confidence 90 + An endotracheal tube is present. The tip is likely in the trachea, but the exact position is not clearly visible.
+   - NG tube (Nasogastric tube) with confidence 90 + A nasogastric tube is present. The tip is likely in the stomach, but the exact position is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Bilateral lung fields are visible. There is some increased opacity in the lower lung zones bilaterally, which could be due to atelectasis or fluid. The costophrenic angles are not fully visualized.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in size and contour. The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible. The upper abdomen is not well visualized due to the patient's position and the image being cropped.
+   - bones/soft tissues
+     - The ribs are visible. The clavicles are visible and appear symmetrical.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Central line and peripheral line present.
+   - Endotracheal tube present.
+   - Nasogastric tube present.
+   - Increased opacity in the lower lung zones bilaterally.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices and costophrenic angles are not fully visualized due to the image being cropped.
+   - The exact tip position of the central line and peripheral line is not clearly visible.
+   - The upper abdomen is not well visualized.
+
+7) DOMAIN VECTOR

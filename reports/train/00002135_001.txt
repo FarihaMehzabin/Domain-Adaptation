@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is PA view.
+   - patient position (upright) with confidence 100 + patient is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be a standard PA chest X-ray, with adequate coverage of the apices, costophrenic angles, and costal margins.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are well-aerated, the mediastinum is clearly defined, the bones are visible, and the diaphragms and costophrenic angles are well-visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None identified.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Cardiac catheter (Indeterminate) with confidence 50 + there is a linear density in the region of the heart, but it is not clearly defined and could be a normal structure or a catheter.
+   - Central line (Indeterminate) with confidence 50 + there is a linear density in the region of the superior vena cava, but it is not clearly defined and could be a normal structure or a central line.
+   - IVC filter (Indeterminate) with confidence 50 + there is a linear density in the region of the inferior vena cava, but it is not clearly defined and could be a normal structure or an IVC filter.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - The lungs are clear bilaterally, with no evidence of consolidation, effusion, or pneumothorax.
+     - The costophrenic angles are sharp.
+   - mediastinum/heart
+     - The mediastinum is within normal limits in width.
+     - The heart size is normal.
+     - The cardiac catheter is present in the region of the heart.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are intact.
+     - The clavicles are symmetrical.
+     - The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - No acute cardiopulmonary abnormalities identified.
+   - Cardiac catheter present in the region of the heart.
+   - Central line present in the region of the superior vena cava.
+   - IVC filter present in the region of the inferior vena cava.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The presence and course of the cardiac catheter, central line, and IVC filter are indeterminate.
+   - The image quality is adequate, but the low contrast and edge enhancement may limit the ability to detect subtle abnormalities.
+
+7) DOMAIN VECTOR

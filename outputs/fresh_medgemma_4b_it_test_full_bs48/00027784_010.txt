@@ -1,0 +1,44 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the costophrenic angles and apices not fully visualized. The costal margins are visible.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles (lungs are clear. Mediastinum is well-defined. Bones are visible. Diaphragms are visible. Costophrenic angles are not fully visualized due to cropping.)
+   - acquisition artifacts: none with confidence 95%
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, pointing to the right. Burned-in text is present at the top-left corner.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - heart: present, normal size with confidence 95%
+   - lungs: present, clear with confidence 95%
+   - trachea: present, midline with confidence 95%
+   - esophagus: present, midline with confidence 95%
+   - mediastinum: present, normal width with confidence 95%
+   - ribs: present, normal appearance with confidence 95%
+   - clavicles: present, normal appearance with confidence 95%
+   - diaphragm: present, normal appearance with confidence 95%
+   - heart catheter: indeterminate, no catheter is visible with confidence 90%
+   - central line: indeterminate, no central line is visible with confidence 90%
+   - pacemaker: indeterminate, no pacemaker is visible with confidence 90%
+   - other: indeterminate, no other devices are visible with confidence 90%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: lungs are clear bilaterally. No pleural effusion or pneumothorax is identified.
+   - mediastinum/heart: The heart size is within normal limits. The mediastinum is unremarkable.
+   - diaphragms/upper abdomen: Diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues: Bones are intact. Soft tissues are unremarkable.
+
+5) IMPRESSION
+   - No acute cardiopulmonary abnormalities identified.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The costophrenic angles are not fully visualized due to image cropping.
+   - The apices are not fully visualized due to image cropping.
+   - The presence of a heart catheter, central line, or pacemaker is indeterminate.
+
+7) DOMAIN VECTOR

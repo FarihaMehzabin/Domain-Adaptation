@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (portable) with confidence 100 + the image is labeled "portable".
+   - portable-likelihood (high) with evidence (label "portable").
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + the image is not severely under- or over-inflated.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, but the lung fields are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are well-visualized, the mediastinum is clear, the bones are visible, and the diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (None are apparent.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the right side is on the right.)
+   - presentation/processing cues: contrast (low) with confidence 100 + the image appears to have low contrast. edge enhancement (low) with confidence 100 + edge enhancement is not apparent. inversion suspected (no) with confidence 100 + no evidence of inversion. noise texture (low) with confidence 100 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (R subclavian line) present, course: right subclavian vein to superior vena cava, tip position: indeterminate, confidence 90.
+   - endotracheal tube (ETT) present, course: trachea, tip position: indeterminate, confidence 90.
+   - nasogastric tube (NGT) present, course: stomach, tip position: indeterminate, confidence 90.
+   - right picc line (R picc line) present, course: right subclavian vein to superior vena cava, tip position: indeterminate, confidence 90.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - there are bilateral patchy opacities, more prominent in the left lung.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in width.
+     - the heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-visualized.
+     - the upper abdomen is incompletely visualized.
+   - bones/soft tissues
+     - the ribs are intact.
+     - the clavicles are intact.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - bilateral patchy opacities, more prominent in the left lung.
+   - indeterminate position of endotracheal tube, nasogastric tube, and right picc line.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable chest X-ray, which may be limited in its ability to fully visualize the chest.
+   - The tip position of the endotracheal tube, nasogastric tube, and right picc line is indeterminate.
+   - The upper abdomen is incompletely visualized.
+
+7) DOMAIN VECTOR

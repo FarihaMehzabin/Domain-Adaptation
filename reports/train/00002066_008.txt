@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is standing or sitting upright.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 100 + the heart border is clearly visible behind the lung markings.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized due to the image cropping.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are clear. The mediastinum is well-defined. The bones are intact. The diaphragms are visible. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker present, pointing to the right. Burned-in text present, top-left, "L3".)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (Contrast is low. Edge enhancement is low. Inversion suspected is no. Noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right internal jugular central venous catheter (indeterminate) with confidence 50 + an indeterminate catheter is seen in the right internal jugular vein. The tip position is not clearly visualized.
+   - left chest tube (present) with confidence 100 + a left chest tube is present, terminating in the left pleural space.
+   - right chest tube (present) with confidence 100 + a right chest tube is present, terminating in the right pleural space.
+   - enteric tube (indeterminate) with confidence 20 + an indeterminate tube is seen coursing into the stomach. The tip position is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - left lung: there is a large area of consolidation in the left upper lobe, with associated air bronchograms. There is also a small amount of pleural effusion in the left pleural space.
+     - right lung: the right lung is clear.
+   - mediastinum/heart
+     - the mediastinum is midline. The heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are intact. The clavicles are intact.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Left upper lobe consolidation with associated pleural effusion.
+   - Right chest tube in place.
+   - Indeterminate right internal jugular central venous catheter.
+   - Indeterminate enteric tube.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are not fully visualized.
+   - The tip position of the right internal jugular central venous catheter is not clearly visualized.
+   - The tip position of the enteric tube is not clearly visualized.
+
+7) DOMAIN VECTOR

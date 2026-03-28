@@ -1,0 +1,43 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the upper chest and abdomen. The apices are visible. The costophrenic angles are visible. The lateral chest walls are visible.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are well-aerated. The mediastinum is clearly visible. The bones are well-defined. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present on the left side. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - central venous catheter: present, right subclavian, tip position not visible with confidence 80%
+
+4) FINDINGS
+   - lungs/pleura:
+     - right lung: there is a nodular opacity in the right lower lobe with confidence 85%.
+     - left lung: clear with confidence 95%.
+     - pleural surfaces: clear with confidence 95%.
+   - mediastinum/heart:
+     - heart size: normal with confidence 90%.
+     - mediastinal contours: normal with confidence 90%.
+   - diaphragms/upper abdomen:
+     - diaphragms: visible with confidence 95%.
+     - upper abdomen: visible with confidence 90%.
+   - bones/soft tissues:
+     - ribs: normal with confidence 95%.
+     - clavicles: normal with confidence 95%.
+     - scapulae: normal with confidence 95%.
+
+5) IMPRESSION
+   - Right lower lobe nodular opacity. Further evaluation with CT chest is recommended.
+   - Central venous catheter in place.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip position of the central venous catheter is not clearly visible.
+   - The nodular opacity in the right lower lobe cannot be further characterized on this single image.
+
+7) DOMAIN VECTOR

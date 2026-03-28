@@ -1,0 +1,37 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is AP.
+   - patient position: portable with confidence 90% + patient is in a portable position.
+   - portable-likelihood: high + image is likely a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + no obvious rotation.
+   - inspiration: adequate with confidence 90% + adequate inspiration.
+   - penetration: adequate with confidence 95% + adequate penetration.
+   - motion blur: none with confidence 95% + no motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving the upper and lower portions of the chest.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are visible. The mediastinum is visible. The bones are visible. The diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - central line: present, course: internal jugular, tip position: indeterminate, confidence 80% + central line is present, but the tip position is not clearly visible.
+   - endotracheal tube: present, course: trachea, tip position: indeterminate, confidence 80% + endotracheal tube is present, but the tip position is not clearly visible.
+   - nasogastric tube: present, course: stomach, tip position: indeterminate, confidence 80% + nasogastric tube is present, but the tip position is not clearly visible.
+   - other lines/tubes: indeterminate + other lines/tubes are not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: The lungs appear clear. No obvious consolidation, effusion, or pneumothorax is identified.
+   - mediastinum/heart: The heart is enlarged. The mediastinum is unremarkable.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is incompletely visualized.
+   - bones/soft tissues: The ribs are visible. The clavicles are visible.
+
+5) IMPRESSION
+   - Cardiomegaly.
+   - Presence of central line, endotracheal tube, and nasogastric tube.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image is a portable chest X-ray, which may have limited visualization of the lung bases.
+   - The tip position of the central line, endotracheal tube, and nasogastric tube is not clearly visible.
+   - The upper abdomen is incompletely visualized.
+
+7) DOMAIN VECTOR

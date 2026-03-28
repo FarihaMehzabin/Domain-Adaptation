@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be free of significant rotation.
+   - inspiration: adequate with confidence 90% + adequate inspiration is present.
+   - penetration: adequate with confidence 95% + adequate penetration is present.
+   - motion blur: none with confidence 95% + no motion blur is evident.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles (The lungs are well-visualized. The mediastinum is well-visualized. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are obscured by the image cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (No obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - heart: present, normal course, tip position not visible, confidence 95%
+   - lungs: present, normal course, tip position not visible, confidence 95%
+   - ribs: present, normal course, tip position not visible, confidence 95%
+   - clavicles: present, normal course, tip position not visible, confidence 95%
+   - trachea: present, normal course, tip position not visible, confidence 95%
+   - esophagus: present, normal course, tip position not visible, confidence 95%
+   - stomach: present, normal course, tip position not visible, confidence 95%
+   - bowel: present, normal course, tip position not visible, confidence 95%
+   - IVC: present, normal course, tip position not visible, confidence 95%
+   - femoral vein: present, normal course, tip position not visible, confidence 95%
+   - subclavian vein: present, normal course, tip position not visible, confidence 95%
+   - jugular vein: present, normal course, tip position not visible, confidence 95%
+   - pulmonary artery: present, normal course, tip position not visible, confidence 95%
+   - pulmonary vein: present, normal course, tip position not visible, confidence 95%
+   - aorta: present, normal course, tip position not visible, confidence 95%
+   - superior vena cava: present, normal course, tip position not visible, confidence 95%
+   - inferior vena cava: present, normal course, tip position not visible, confidence 95%
+   - diaphragm: present, normal course, tip position not visible, confidence 95%
+   - lung: present, normal course, tip position not visible, confidence 95%
+   - pleura: present, normal course, tip position not visible, confidence 95%
+   - heart border: present, normal course, tip position not visible, confidence 95%
+   - mediastinum: present, normal course, tip position not visible, confidence 95%
+   - ribs: present, normal course, tip position not visible, confidence 95%
+   - clavicle: present, normal course, tip position not visible, confidence 95%
+   - trachea: present, normal course, tip position not visible, confidence 95%
+   - esophagus: present, normal course, tip position not visible, confidence 95%
+   - stomach: present, normal course, tip position not visible, confidence 95%
+   - bowel: present, normal course, tip position not visible, confidence 95
+
+7) DOMAIN VECTOR

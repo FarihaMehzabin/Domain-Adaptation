@@ -1,0 +1,42 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely upright.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, with the upper and lower borders of the image being slightly padded.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are well visualized. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present, indicating the left side is on the left. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES
+   - central line: present, course: right subclavian, tip position: indeterminate, confidence 80% + A central line is present, coursing from the right subclavian vein into the superior vena cava. The tip position is not clearly visible.
+   - chest tube: present, course: right, tip position: indeterminate, confidence 80% + A chest tube is present, coursing from the right side of the chest. The tip position is not clearly visible.
+
+4) FINDINGS
+   - lungs/pleura
+     - diffuse bilateral infiltrates: present, appearance: hazy, patchy, with increased density, confidence 95% + There are diffuse bilateral infiltrates throughout both lungs. The infiltrates appear hazy and patchy, with increased density.
+   - mediastinum/heart
+     - mediastinal contours: normal with confidence 90% + The mediastinal contours are normal.
+     - heart size: normal with confidence 90% + The heart size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: visible with confidence 95% + The diaphragms are visible.
+     - upper abdomen: partially visible with confidence 85% + The upper abdomen is partially visible.
+   - bones/soft tissues
+     - ribs: visible with confidence 95% + The ribs are visible.
+     - clavicles: visible with confidence 95% + The clavicles are visible.
+
+5) IMPRESSION
+   - Diffuse bilateral infiltrates.
+   - Presence of central line and chest tube.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The tip position of the central line and chest tube is not clearly visible.
+   - The image is cropped, limiting the assessment of the lung bases.
+   - The presence of the infiltrates is not further characterized.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + image is a portable chest X-ray.
+   - portable-likelihood (high) with evidence (portable marker present).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + there is some degree of inspiration, but it is not adequate.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no motion blur is evident.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The image is cropped, obscuring the apices and costophrenic angles. The lateral chest walls are partially visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are visible, but the apices and costophrenic angles are obscured. The mediastinum is visible. The bones are visible. The diaphragms are visible. The costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (There are some faint lines visible, but they are not clearly defined. The image is not grid or moiré patterned. There is no banding or detector dropout. There are no compression artifacts.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present. There is a burned-in label top-left.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian central line: present, course: right subclavian vein, tip position: indeterminate, confidence 80.
+   - right chest tube: present, course: right hemithorax, tip position: indeterminate, confidence 80.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: there is a large opacity in the right lower lung field, which could represent a consolidation, atelectasis, or pleural effusion. The lung markings are somewhat obscured by the opacity.
+     - left lung: the left lung appears clear.
+     - pleural effusion: no pleural effusion is identified.
+   - mediastinum/heart
+     - heart size: the heart size is normal.
+     - mediastinal contours: the mediastinal contours are normal.
+   - diaphragms/upper abdomen
+     - diaphragms: the diaphragms are visible.
+     - upper abdomen: the upper abdomen is partially visible.
+   - bones/soft tissues
+     - ribs: the ribs are visible.
+     - clavicles: the clavicles are visible.
+     - subcutaneous emphysema: there is significant subcutaneous emphysema in the right chest wall.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right lower lung opacity, etiology unclear.
+   - Right chest tube in place.
+   - Right subclavian central line in place.
+   - Subcutaneous emphysema in the right chest wall.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are obscured, limiting the assessment of the lung fields.
+   - The tip position of the central line and chest tube is indeterminate.
+   - The extent of the right lower lung opacity is not fully defined.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is likely a standard PA chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the costophrenic angles not fully visible. The apices are not fully visible due to the crop.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles (lungs are clear. Mediastinum is well-defined. Bones are unremarkable. Diaphragms are visible. Costophrenic angles are not fully visible due to the crop.)
+   - acquisition artifacts: none
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, indicating the left side is the patient's right side. Burned-in text is present at the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low), edge enhancement (low), inversion suspected (no), noise texture (low)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - heart: present, normal size with confidence 95%
+   - lungs: present, clear with confidence 95%
+   - esophagus: present, normal course with confidence 95%
+   - trachea: present, normal course with confidence 95%
+   - major vessels: present, normal course with confidence 95%
+   - lines/tubes: Indeterminate, no lines or tubes are clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: lungs are clear bilaterally. No pleural effusion or pneumothorax is identified.
+   - mediastinum/heart: The heart size is within normal limits. The mediastinum is unremarkable.
+   - diaphragms/upper abdomen: Diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues: No acute bony abnormalities are identified.
+
+5) IMPRESSION
+   - No acute cardiopulmonary abnormalities identified.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The costophrenic angles are not fully visualized due to image cropping.
+   - The apices are not fully visualized due to image cropping.
+   - The burned-in text at the top-left corner is not legible.
+   - The presence of any subtle abnormalities cannot be ruled out due to the limitations of the image.
+
+7) DOMAIN VECTOR

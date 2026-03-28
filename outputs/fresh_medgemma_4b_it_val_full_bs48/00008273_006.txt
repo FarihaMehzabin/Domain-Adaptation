@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + adequate inspiration is present.
+   - penetration: adequate with confidence 90% + adequate penetration is present.
+   - motion blur: none with confidence 95% + no significant motion blur is evident.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving the upper and lower portions of the lungs.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are visible. The mediastinum is visible. The bones are visible. The diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side. Burned-in text is present at the top-left corner
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image has low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - endotracheal tube: absent
+   - nasogastric tube: absent
+   - central line: absent
+   - pacemaker: absent
+   - defibrillator: absent
+   - chest tube: absent
+   - IV line: absent
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: There is some increased opacity in the lower lung fields, possibly representing atelectasis or early infiltrate. The lung fields are otherwise clear. No pleural effusion is identified.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is unremarkable.
+   - bones/soft tissues: The ribs are visible. The clavicles are visible.
+
+5) IMPRESSION
+   - Increased opacity in the lower lung fields, possibly representing atelectasis or early infiltrate.
+
+6) LIMITATIONS / UNCERTAINTY
+   - Limited visualization of the lung bases due to the image cropping.
+   - The increased opacity in the lower lung fields could be due to various etiologies, including atelectasis, pneumonia, or other pulmonary processes. Further evaluation may be needed to determine the underlying cause.
+   - The presence of the laterality marker is not helpful in determining the clinical significance of the findings.
+
+7) DOMAIN VECTOR

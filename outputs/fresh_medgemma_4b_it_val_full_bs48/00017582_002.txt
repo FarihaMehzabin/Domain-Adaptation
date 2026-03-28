@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is likely not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the upper chest and lower lung fields. The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are generally clear, but there is some increased opacity in the right lower lung field. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are some faint lines visible, but they are not clearly defined. There is no obvious grid or moiré pattern. There is no obvious banding. There is no obvious detector dropout. There is no obvious compression artifact.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present, indicating the left side is the left. There is a burned-in label top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - central line: present, course: internal jugular, tip position: indeterminate, confidence 80% + A central line is present, but the tip position is not clearly visible.
+   - catheter: present, course: indeterminate, tip position: indeterminate, confidence 70% + A catheter is present, but the course and tip position are not clearly visible.
+
+4) FINDINGS
+   - lungs/pleura
+     - right lower lung field: increased opacity with confidence 85% + There is increased opacity in the right lower lung field, which could represent atelectasis, consolidation, or other pathology.
+     - left lung: clear with confidence 95% + The left lung appears clear.
+     - pleural effusion: indeterminate + There is no obvious pleural effusion.
+   - mediastinum/heart
+     - mediastinum: well-defined with confidence 90% + The mediastinum is well-defined.
+     - heart size: normal with confidence 80% + The heart size is within normal limits.
+   - diaphragms/upper abdomen
+     - diaphragms: visible with confidence 95% + The diaphragms are visible.
+     - upper abdomen: partially visualized with confidence 70% + The upper abdomen is partially visualized.
+   - bones/soft tissues
+     - ribs: visible with confidence 95% + The ribs are visible.
+     - clavicles: visible with confidence 95% + The clavicles are visible.
+     - shoulder: visible with confidence 90% + The shoulder is visible.
+
+5) IMPRESSION
+   - Increased opacity in the right lower lung field.
+   - Central line present, but tip position not clearly visualized.
+   - Catheter present, but course and tip position not clearly visualized.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The apices of the lungs are not fully visualized.
+   - The costophrenic angles are not fully visualized.
+   - The lateral chest walls are not fully visualized.
+   - The tip position of the central line is not clearly visualized.
+   - The course and tip position of the catheter are not clearly visualized.
+
+7) DOMAIN VECTOR

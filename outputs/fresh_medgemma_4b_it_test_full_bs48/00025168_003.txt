@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely upright.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving the upper and lower portions of the chest.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are visible. The mediastinum is visible. The bones are visible. The diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are lines present. The presence of lines is likely due to the patient's medical devices.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present. There is burned-in text present at the top-left corner
+
+3) DEVICES / LINES / TUBES
+   - central venous catheter: present, course: right subclavian, tip position: indeterminate, confidence 80%
+   - chest tube: present, course: left, tip position: indeterminate, confidence 80%
+   - indwelling catheter: present, course: indeterminate, tip position: indeterminate, confidence 80%
+
+4) FINDINGS
+   - lungs/pleura:
+     - right lung: increased opacity in the lower lung field, possibly representing consolidation or atelectasis.
+     - left lung: increased opacity in the upper lung field, possibly representing consolidation or atelectasis.
+     - pleural effusion: no pleural effusion is identified.
+   - mediastinum/heart:
+     - heart size: normal.
+     - mediastinal contours: normal.
+   - diaphragms/upper abdomen:
+     - diaphragms: diaphragms are visible.
+     - upper abdomen: the upper abdomen is not well visualized due to the patient's position and the image's cropping.
+   - bones/soft tissues:
+     - ribs: ribs are visible.
+     - clavicles: clavicles are visible.
+     - soft tissues: soft tissues are visible.
+
+5) IMPRESSION
+   - Increased opacity in the right lower lung field.
+   - Increased opacity in the left upper lung field.
+   - Presence of a central venous catheter.
+   - Presence of a chest tube.
+   - Presence of an indwelling catheter.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The image is cropped, limiting the visualization of the upper and lower portions of the chest.
+   - The tip position of the central venous catheter and chest tube is indeterminate.
+   - The tip position of the indwelling catheter is indeterminate.
+   - The presence of lines is likely due to the patient's medical devices.
+
+7) DOMAIN VECTOR

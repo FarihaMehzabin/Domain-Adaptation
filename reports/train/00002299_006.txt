@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is PA view.
+   - patient position (upright) with confidence 100 + image is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image covers the apices, costophrenic angles, and costal margins).
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are well-aerated, mediastinum is clear, bones are well-defined, and costophrenic angles are sharp.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the image is of the right side. No burned-in text is visible).
+   - presentation/processing cues: contrast (low) with confidence 100 + image contrast is low. Edge enhancement (low) with confidence 100 + edge enhancement is low. Inversion suspected (no) with confidence 100 + no evidence of inversion. Noise texture (low) with confidence 100 + low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Central line, internal jugular (CVC): absent with confidence 100 + no central line is visible.
+   - Chest tube: absent with confidence 100 + no chest tube is visible.
+   - Swan-Ganz catheter: absent with confidence 100 + no Swan-Ganz catheter is visible.
+   - Other lines/tubes: absent with confidence 100 + no other lines or tubes are visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - Bilateral lung fields are present.
+     - There are areas of increased opacity in the lower lung fields bilaterally. The exact location and extent of these opacities are difficult to precisely delineate due to the low image quality and the presence of overlying structures.
+     - No pleural effusion is identified.
+     - No pneumothorax is identified.
+   - mediastinum/heart
+     - The mediastinum is unremarkable.
+     - The heart size is within normal limits.
+     - The aorta is unremarkable.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-defined.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are unremarkable.
+     - The clavicles are unremarkable.
+     - The scapulae are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Bilateral lower lung field opacities. The etiology is uncertain and further evaluation is warranted.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image quality is low, which limits the ability to fully evaluate the lung fields.
+   - The exact location and extent of the lower lung field opacities are difficult to precisely delineate.
+   - The absence of clinical information makes it difficult to determine the significance of the findings.
+
+7) DOMAIN VECTOR

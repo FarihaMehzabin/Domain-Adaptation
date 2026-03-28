@@ -1,0 +1,49 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + patient is likely in an upright position.
+   - portable-likelihood: low + image is not a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + no significant rotation is apparent.
+   - inspiration: adequate with confidence 90% + adequate inspiration. Posterior rib count is estimable.
+   - penetration: adequate with confidence 95% + adequate penetration. Vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95% + no motion blur is evident.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles (lungs are generally clear, mediastinum is visible, bones are visible, diaphragms are visible, and costophrenic angles are obscured by cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (no obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the left side is on the right.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) (contrast is low, edge enhancement is low, and no inversion is suspected. Noise texture is low.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - NG tube: absent
+   - central line: absent
+   - pacemaker: absent
+   - ETT: absent
+   - chest tube: absent
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+     - pleura: unremarkable.
+   - mediastinum/heart
+     - mediastinum: normal in width.
+     - heart: normal size and shape.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: unremarkable.
+     - clavicles: unremarkable.
+     - scapulae: unremarkable.
+     - soft tissues: unremarkable.
+
+5) IMPRESSION
+   - No acute cardiopulmonary abnormalities identified.
+
+6) LIMITATIONS / UNCERTAINTY
+   - Image is cropped, obscuring the apices and costophrenic angles.
+   - The presence of a NG tube or central line cannot be confirmed.
+   - The presence of a pacemaker or ETT cannot be confirmed.
+
+7) DOMAIN VECTOR

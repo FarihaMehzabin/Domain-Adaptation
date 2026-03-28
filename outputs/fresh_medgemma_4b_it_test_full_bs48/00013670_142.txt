@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is anteroposterior.
+   - patient position: portable with confidence 90% + patient is in a portable position.
+   - portable-likelihood: high + the image is a portable chest X-ray.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 90% + clavicles are symmetrical.
+   - inspiration: adequate with confidence 85% + posterior rib count is estimable.
+   - penetration: adequate with confidence 90% + vertebral visibility behind the heart is good.
+   - motion blur: none with confidence 95%
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? + The image shows the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles + The lungs are visible, the mediastinum is visible, the bones are visible, and the diaphragms and costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. + There are multiple lines and tubes present. There is a grid pattern. There is some banding. There is no detector dropout or compression artifact.
+   - markers/overlays: laterality marker present? burned-in text present? + A laterality marker is present. There is burned-in text present at the top-left
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+   - tracheostomy tube: present, course: midline, tip position: unknown, confidence 95%
+   - central venous catheter: present, course: internal jugular vein, tip position: superior vena cava, confidence 90%
+   - right-sided chest tube: present, course: right hemithorax, tip position: unknown, confidence 90%
+   - left-sided chest tube: present, course: left hemithorax, tip position: unknown, confidence 90%
+   - nasogastric tube: present, course: stomach, tip position: unknown, confidence 90%
+   - other lines/tubes: indeterminate + There are other lines/tubes present, but their exact course and tip positions are not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right lung: increased opacity, likely representing consolidation or fluid, with some air bronchograms.
+     - left lung: increased opacity, likely representing consolidation or fluid, with some air bronchograms.
+     - pleural effusion: possible, but not clearly defined.
+   - mediastinum/heart
+     - heart size: enlarged.
+     - mediastinal width: normal.
+   - diaphragms/upper abdomen
+     - diaphragms: visible.
+     - upper abdomen: bowel loops are visible.
+   - bones/soft tissues
+     - ribs: visible.
+     - clavicles: visible.
+     - subcutaneous emphysema: possible, but not clearly defined.
+
+5) IMPRESSION
+   - Bilateral pulmonary opacities, likely representing consolidation or fluid.
+   - Enlarged heart.
+   - Multiple lines and tubes are present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - The exact tip positions of the chest tubes are not clearly visible.
+   - The extent of any pleural effusion is not clearly defined.
+   - The presence and extent of subcutaneous emphysema is not clearly defined.
+   - The exact course of the nasogastric tube is not clearly visible.
+
+7) DOMAIN VECTOR
