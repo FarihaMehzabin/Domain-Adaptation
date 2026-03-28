@@ -1,0 +1,53 @@
+{
+  "batch_size": 64,
+  "checkpoint_path": null,
+  "data_root": "/workspace/data",
+  "device_requested": "auto",
+  "device_resolved": "cuda",
+  "embedding_dim": 2048,
+  "encoder_backend": "torchvision",
+  "encoder_build_meta": {
+    "feature_source_builder": "children[:-2]"
+  },
+  "encoder_id": "resnet50",
+  "experiment_dir": "/workspace/experiments/exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test",
+  "experiment_id": "exp0001",
+  "experiment_name": "exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test",
+  "experiment_number": 1,
+  "extensions": [
+    ".jpeg",
+    ".jpg",
+    ".png"
+  ],
+  "feature_summary": {
+    "feature_source": "tensor",
+    "pooling": "avg",
+    "pooling_applied": "global_average_pool",
+    "raw_feature_shape": [
+      64,
+      2048,
+      7,
+      7
+    ]
+  },
+  "fp16_on_cuda": true,
+  "manifest_csv": "/workspace/manifest_nih_cxr14_all14.csv",
+  "max_images_per_split": null,
+  "normalization": "l2",
+  "num_embedded_images": 22330,
+  "num_failed_images": 0,
+  "num_input_images": 22330,
+  "num_workers": 4,
+  "output_dir": "/workspace/experiments/exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test/test",
+  "pooling": "avg",
+  "requested_input_size": null,
+  "resolved_input_size": [
+    224,
+    224
+  ],
+  "revision": null,
+  "run_date_utc": "2026-03-28T17:32:35.524548+00:00",
+  "split": "test",
+  "trust_manifest_paths": true,
+  "weights": "DEFAULT"
+}

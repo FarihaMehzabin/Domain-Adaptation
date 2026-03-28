@@ -1,0 +1,71 @@
+{
+  "argv": [
+    "/workspace/scripts/generate_nih_split_image_embeddings.py",
+    "--manifest-csv",
+    "/workspace/manifest_nih_cxr14_all14.csv",
+    "--data-root",
+    "/workspace/data",
+    "--splits",
+    "train",
+    "val",
+    "test",
+    "--encoder-backend",
+    "torchvision",
+    "--encoder-id",
+    "resnet50",
+    "--weights",
+    "DEFAULT",
+    "--pooling",
+    "avg",
+    "--device",
+    "auto",
+    "--fp16-on-cuda",
+    "--trust-manifest-paths",
+    "--experiment-name",
+    "nih_cxr14_all14_resnet50_default_avg_train_val_test_fast"
+  ],
+  "batch_size": 64,
+  "checkpoint_path": null,
+  "data_root": "/workspace/data",
+  "device_requested": "auto",
+  "device_resolved": "cuda",
+  "encoder_backend": "torchvision",
+  "encoder_build_meta": {
+    "feature_source_builder": "children[:-2]"
+  },
+  "encoder_id": "resnet50",
+  "experiment_dir": "/workspace/experiments/exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test",
+  "experiment_id": "exp0001",
+  "experiment_name": "exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test",
+  "experiment_number": 1,
+  "extensions": [
+    ".jpeg",
+    ".jpg",
+    ".png"
+  ],
+  "fp16_on_cuda": true,
+  "manifest_csv": "/workspace/manifest_nih_cxr14_all14.csv",
+  "max_images_per_split": null,
+  "normalization": "l2",
+  "num_workers": 4,
+  "pooling": "avg",
+  "requested_input_size": null,
+  "resolved_input_size": [
+    224,
+    224
+  ],
+  "revision": null,
+  "run_date_utc": "2026-03-28T17:13:52.251867+00:00",
+  "split_output_dirs": {
+    "test": "/workspace/experiments/exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test/test",
+    "train": "/workspace/experiments/exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test/train",
+    "val": "/workspace/experiments/exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test/val"
+  },
+  "splits": [
+    "train",
+    "val",
+    "test"
+  ],
+  "trust_manifest_paths": true,
+  "weights": "DEFAULT"
+}
