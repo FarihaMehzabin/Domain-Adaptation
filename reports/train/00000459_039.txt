@@ -1,0 +1,40 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "PORTABLE" label.
+   - portable-likelihood (high) with evidence (label).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (low) with confidence 80 + posterior rib count is difficult to estimate.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with some loss of the costophrenic angles. The apices are not well visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 70 + lungs show diffuse increased opacity. Mediastinum is unremarkable. Bones are unremarkable. Diaphragms are unremarkable. Costophrenic angles are not well visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, top-left. "PORTABLE" label present, top-right.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (likely) present, course: right subclavian vein to superior vena cava, tip position: indeterminate, confidence 80.
+   - left subclavian line (likely) present, course: left subclavian vein to superior vena cava, tip position: indeterminate, confidence 80.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - diffuse bilateral interstitial opacities are present throughout both lung fields. The pattern is suggestive of pulmonary edema, but other etiologies such as diffuse alveolar damage, or atypical infections should be considered.
+   - mediastinum/heart
+     - the mediastinum is unremarkable. The heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are unremarkable. The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the bones are unremarkable. The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - diffuse bilateral interstitial opacities.
+   - likely presence of two central venous catheters.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - limited visualization of the costophrenic angles.
+   - difficult to estimate posterior rib count.
+   - catheter tip positions are indeterminate.
+
+7) DOMAIN VECTOR

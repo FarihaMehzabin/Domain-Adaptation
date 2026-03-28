@@ -1,0 +1,55 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + the image is a portable chest X-ray.
+   - portable-likelihood (high) with evidence (portable equipment visible).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the image is a supine portable chest X-ray.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is adequate.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are not well visualized due to the cropping.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (lungs are poorly visualized due to the cropping and low inspiration. Mediastinum is visible. Bones are visible. Diaphragms are visible. Costophrenic angles are obscured.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate)
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. Burned-in label top-left.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to have low contrast. Edge enhancement (low) with confidence 90 + the image has low edge enhancement. Inversion suspected (no) with confidence 100 + no obvious signs of inversion. Noise texture (low) with confidence 90 + the image has low noise texture.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, course: central, tip position: unknown, confidence 95
+   - nasogastric tube (NGT) present, course: central, tip position: unknown, confidence 95
+   - right subclavian central line (SC line) present, course: central, tip position: superior vena cava (SVC), confidence 95
+   - right picc line present, course: central, tip position: superior vena cava (SVC), confidence 95
+   - esophageal probe present, course: central, tip position: unknown, confidence 95
+   - catheter present, course: central, tip position: unknown, confidence 95
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - diffuse bilateral opacities, predominantly in the lung fields, with a pattern suggestive of pulmonary edema or diffuse alveolar damage. The opacities are not uniform and may represent consolidation or interstitial edema.
+     - possible pleural effusions, but difficult to assess due to the cropping and low inspiration.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in size and contour.
+     - the heart size is difficult to assess due to the low inspiration and the presence of opacities obscuring the cardiac silhouette.
+   - diaphragms/upper abdomen
+     - the diaphragms are visible.
+     - the upper abdomen is not well visualized due to the cropping.
+   - bones/soft tissues
+     - the ribs are visible.
+     - the clavicles are visible.
+     - the soft tissues are not well visualized due to the cropping.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - diffuse bilateral pulmonary opacities, concerning for pulmonary edema, ARDS, or other diffuse lung process.
+   - possible pleural effusions.
+   - central lines present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The image is a portable chest X-ray, which is limited in its ability to provide a comprehensive assessment of the chest.
+   - The image is cropped, obscuring the apices and costophrenic angles.
+   - The inspiration is low, which can make it difficult to assess the heart size and pulmonary vasculature.
+   - The presence of multiple lines and tubes makes it difficult to identify the tip positions.
+   - The low contrast and low edge enhancement can make it difficult to visualize subtle findings.
+
+7) DOMAIN VECTOR

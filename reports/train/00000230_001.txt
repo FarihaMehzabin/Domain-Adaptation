@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + "PORTABLE" label.
+   - portable-likelihood (high) with evidence (label).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles appear symmetrical.
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate.
+   - motion blur (none) with confidence 100.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with the costophrenic angles not fully visible. The apices are not fully visible due to the crop.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 90 + lungs are generally clear. Mediastinum is visible. Bones are visible. Diaphragms are visible. Costophrenic angles are not fully visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100.
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, pointing to the left. "PORTABLE" label is present, top-left.)
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line (R subclavian line) present, course: right subclavian vein to superior vena cava, tip position: indeterminate, confidence 80.
+   - nasogastric tube (NG tube) present, course: from the stomach to the distal esophagus, tip position: indeterminate, confidence 70.
+   - central line (Central line) present, course: right internal jugular vein to superior vena cava, tip position: indeterminate, confidence 80.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+   - mediastinum/heart
+     - mediastinum: normal in width.
+     - heart: heart size is normal.
+   - diaphragms/upper abdomen
+     - diaphragms: diaphragms are visible.
+     - upper abdomen: the upper abdomen is not fully visualized due to the crop.
+   - bones/soft tissues
+     - bones: ribs are visible.
+     - soft tissues: no obvious soft tissue abnormalities are identified.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right subclavian line, central line, and nasogastric tube are present.
+   - No acute pulmonary process is identified.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Costophrenic angles are not fully visualized.
+   - Nasogastric tube tip position is indeterminate.
+   - Right subclavian line and central line tip positions are indeterminate.
+   - Upper abdomen is not fully visualized.
+
+7) DOMAIN VECTOR

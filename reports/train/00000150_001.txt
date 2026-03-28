@@ -1,0 +1,47 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is labeled AP
+   - patient position (upright) with confidence 100 + image is upright
+   - portable-likelihood (medium) with evidence (portable equipment visible)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image shows the upper chest, but the apices and costophrenic angles are not fully visualized due to the patient's positioning and the extent of the image)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + lungs are clear, mediastinum is well-defined, bones are visible, and diaphragms are visible. Costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker is present, indicating the left side is on the left)
+   - presentation/processing cues: contrast (low) with confidence 100, edge enhancement (low) with confidence 100, inversion suspected (no) with confidence 100, noise texture (low) with confidence 100
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian line: present, course: right subclavian vein to right atrium, tip position: indeterminate, confidence 100
+   - left subclavian line: present, course: left subclavian vein to left brachiocephalic vein, tip position: indeterminate, confidence 100
+   - catheter: present, course: indeterminate, tip position: indeterminate, confidence 100
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - lungs: clear bilaterally, no focal consolidation, pleural effusion, or pneumothorax identified.
+     - pleura: unremarkable.
+   - mediastinum/heart
+     - mediastinum: normal width.
+     - heart: normal size and contour.
+   - diaphragms/upper abdomen
+     - diaphragms: well-defined.
+     - upper abdomen: unremarkable.
+   - bones/soft tissues
+     - ribs: no acute fractures identified.
+     - clavicles: symmetrical.
+     - soft tissues: unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right subclavian line in place.
+   - Left subclavian line in place.
+   - No acute cardiopulmonary abnormalities identified.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The apices and costophrenic angles are not fully visualized due to the patient's positioning and the extent of the image.
+   - The tip positions of the subclavian lines are indeterminate.
+
+7) DOMAIN VECTOR

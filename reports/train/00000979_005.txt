@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is an anteroposterior chest radiograph.
+   - patient position (upright) with confidence 100 + the patient is in an upright position.
+   - portable-likelihood (low) with evidence (none)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be free of significant rotation.
+   - inspiration (adequate) with confidence 100 + the lungs appear to be well-expanded.
+   - penetration (adequate) with confidence 100 + the vertebral bodies are visible behind the heart.
+   - motion blur (none) with confidence 100 + there is no evidence of motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? (The apices are not fully visualized. The costophrenic angles are not fully visualized. The lateral chest walls are not fully visualized due to the image cropping.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are clear. The mediastinum is well-defined. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are not fully visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none) with confidence 100 + there are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? (Laterality marker is present, pointing to the left. Burned-in text is present in the top-left corner, but the content is not visible.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to be a low-contrast radiograph. Edge enhancement is low. Inversion suspected (no) with confidence 100 + there is no evidence of image inversion. Noise texture (low) with confidence 90 + the image has low noise.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right internal jugular central venous catheter (indeterminate) with confidence 50 + an internal jugular central venous catheter is present, but the tip position is not clearly visualized.
+   - left subclavian central venous catheter (indeterminate) with confidence 50 + a left subclavian central venous catheter is present, but the tip position is not clearly visualized.
+   - right atrial catheter (indeterminate) with confidence 50 + an atrial catheter is present, but the tip position is not clearly visualized.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - right upper lobe: opacity, hazy appearance, with confidence 80 + there is a hazy opacity in the right upper lobe.
+     - left lung: clear with confidence 95 + the left lung is clear.
+     - pleura: unremarkable with confidence 95 + there is no evidence of pleural effusion or pneumothorax.
+   - mediastinum/heart
+     - mediastinum: unremarkable with confidence 95 + the mediastinum is unremarkable.
+     - heart: normal size with confidence 90 + the heart size is within normal limits.
+   - diaphragms/upper abdomen
+     - diaphragms: well-visualized with confidence 95 + the diaphragms are well-visualized.
+     - upper abdomen: unremarkable with confidence 90 + the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - ribs: unremarkable with confidence 95 + the ribs are unremarkable.
+     - clavicles: unremarkable with confidence 95 + the clavicles are unremarkable.
+     - other bones: unremarkable with confidence 95 + other bones are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Right upper lobe opacity. Further evaluation with CT is recommended to assess for possible pneumonia, mass, or other pathology.
+   - Central venous catheters are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The apices and costophrenic angles are not fully visualized.
+   - The tip positions of the central venous catheters are not clearly visualized.
+   - The burned-in text in the top-left corner is not legible.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior view.
+   - patient position: portable with confidence 90% + the patient is in a portable position.
+   - portable-likelihood: high with evidence (patient is not in a standard radiology room).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving the upper and lower portions of the chest.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs appear somewhat hazy, with increased interstitial markings. The mediastinum is unremarkable. The bones are well-defined. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: There are no obvious lines, grid, or banding artifacts. There is no evidence of detector dropout or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present?: A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to be processed with low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - right subclavian central line: present, course: right subclavian vein, tip position: indeterminate, confidence 70%
+   - left subclavian central line: present, course: left subclavian vein, tip position: indeterminate, confidence 70%
+   - chest tube: present, course: right hemithorax, tip position: indeterminate, confidence 60%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: There are bilateral hazy opacities, particularly in the lung fields. The lung markings are increased. There is no obvious pleural effusion.
+   - mediastinum/heart: The mediastinum is unremarkable. The heart size is within normal limits.
+   - diaphragms/upper abdomen: The diaphragms are visible. The upper abdomen is unremarkable.
+   - bones/soft tissues: The bones are well-defined. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral hazy opacities in the lung fields, possibly representing pulmonary edema or other infiltrative process.
+   - Presence of two central venous catheters. Tip positions are indeterminate.
+   - Presence of a chest tube. Tip position is indeterminate.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Indeterminate tip positions of central venous catheters and chest tube.
+   - Limited assessment of the lung parenchyma due to the presence of hazy opacities.
+   - The image is a portable chest X-ray, which may have limitations in terms of image quality and anatomical coverage.
+
+7) DOMAIN VECTOR

@@ -1,0 +1,42 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is anteroposterior.
+   - patient position: portable with confidence 90% + the patient is in a portable position.
+   - portable-likelihood: high with evidence (patient is not in a standard radiology position).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to cover the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are several lines present in the image, likely from medical devices. The presence of these lines is not unusual in a portable chest X-ray.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no obvious inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - NG tube: present, course: likely in the stomach, tip position: indeterminate, confidence 70%
+   - IV line: present, course: likely in the subclavian vein, tip position: indeterminate, confidence 70%
+   - ETT: present, course: likely in the trachea, tip position: indeterminate, confidence 70%
+   - Cardiac monitor leads: present, course: likely on the chest, tip position: indeterminate, confidence 70%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: The lungs are clear bilaterally. There is no evidence of consolidation, pleural effusion, or pneumothorax.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size appears to be mildly enlarged.
+   - diaphragms/upper abdomen: The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues: The bones are intact. There are no obvious soft tissue abnormalities.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - The lungs are clear.
+   - The heart size appears to be mildly enlarged.
+   - NG tube, IV line, ETT, and cardiac monitor leads are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The patient is in a portable position, which may limit the visualization of the lung apices.
+   - The tip positions of the NG tube, IV line, ETT, and cardiac monitor leads are indeterminate.
+   - The image quality is adequate, but there are some artifacts from the medical devices.
+
+7) DOMAIN VECTOR

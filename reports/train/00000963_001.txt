@@ -1,0 +1,48 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is anteroposterior.
+   - patient position (supine) with confidence 100 + patient is lying on their back.
+   - portable-likelihood (high) with evidence (portable machine, lack of standard hospital markings).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (low) with confidence 80 + the lung volumes are low, and the posterior rib count is not easily estimable.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image is cropped, obscuring the apices and costophrenic angles. The costal margins are visible.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) (The lungs are visible, the mediastinum is visible, the bones are visible, and the diaphragms and costophrenic angles are visible, although the latter are obscured by the cropping.)
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (No obvious artifacts are present.)
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left.)
+   - presentation/processing cues: contrast (low) with confidence 90 + the image appears to have low contrast. edge enhancement (low) with confidence 90 + edge enhancement is present, but subtle. inversion suspected (no) with confidence 100 + no obvious signs of inversion are present. noise texture (low) with confidence 90 + the noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - NG tube (present) with confidence 95 + an NG tube is visible, coursing from the nose to the stomach. The tip is not clearly visible.
+   - IV line (present) with confidence 90 + an IV line is visible, coursing from the upper arm to the superior vena cava. The tip is not clearly visible.
+   - ETT (present) with confidence 95 + an ETT is visible, coursing from the nose to the trachea. The tip is not clearly visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There is a small area of increased opacity in the right upper lobe, which could represent atelectasis or early pneumonia.
+     - The lung fields are otherwise clear.
+     - No pleural effusion is identified.
+   - mediastinum/heart
+     - The mediastinum is within normal limits.
+     - The heart size is normal.
+   - diaphragms/upper abdomen
+     - The diaphragms are visible.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are visible.
+     - The clavicles are visible.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Small area of increased opacity in the right upper lobe, which could represent atelectasis or early pneumonia.
+   - NG tube, IV line, and ETT are present.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable AP radiograph, which may be suboptimal for full evaluation.
+   - The lung volumes are low, which can obscure subtle findings.
+   - The apices and costophrenic angles are obscured by cropping.
+   - The tip of the NG tube, IV line, and ETT are not clearly visible.
+
+7) DOMAIN VECTOR

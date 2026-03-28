@@ -1,0 +1,50 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is labeled AP
+   - patient position (upright) with confidence 100 + image is labeled AP
+   - portable-likelihood (medium) with evidence (portable label)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical
+   - inspiration (adequate) with confidence 100 + posterior rib count is estimable
+   - penetration (adequate) with confidence 100 + vertebral visibility behind heart is adequate
+   - motion blur (none) with confidence 100
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (image is cropped, with some padding at the costophrenic angles)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (none)
+   - markers/overlays: laterality marker present? burned-in text present? (laterality marker present, burned-in text "AP" top-left)
+   - presentation/processing cues: contrast (low) with confidence 100, edge enhancement (low) with confidence 100, inversion suspected (no) with confidence 100, noise texture (low) with confidence 100
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - left subclavian line (L subclavian line) present, course: left subclavian vein, tip position: indeterminate, confidence 90
+   - right subclavian line (R subclavian line) present, course: right subclavian vein, tip position: indeterminate, confidence 90
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - there are patchy opacities in the right lower lung field.
+     - there are also patchy opacities in the left lower lung field.
+     - the lung fields are otherwise clear.
+     - no pleural effusion is identified.
+     - no pneumothorax is identified.
+   - mediastinum/heart
+     - the mediastinum is unremarkable.
+     - the heart size is normal.
+     - the cardiac borders are well-defined.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-defined.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are unremarkable.
+     - the clavicles are unremarkable.
+     - the scapulae are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - patchy opacities in the right lower lung field and left lower lung field. Further evaluation with a lateral chest radiograph is recommended to assess for possible pneumonia or other pulmonary pathology.
+   - presence of two central venous catheters.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image is a portable AP radiograph, which may be limited in its ability to fully evaluate the chest.
+   - The tip position of the central venous catheters is not clearly visualized.
+   - The lower lung fields are somewhat obscured by the patient's body habitus.
+
+7) DOMAIN VECTOR

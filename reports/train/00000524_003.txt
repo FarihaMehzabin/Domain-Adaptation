@@ -1,0 +1,52 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + image is a PA chest X-ray.
+   - patient position: upright with confidence 90% + the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs are well-expanded.
+   - penetration: adequate with confidence 90% + the heart border is well-defined, and the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + the image is sharp and free of motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image covers the apices, costophrenic angles, and lateral chest walls.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are well-visualized. The mediastinum is clearly defined. The bones are well-visualized. The diaphragms are well-visualized, and the costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: No obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the left. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Central line: absent
+   - Chest tube: absent
+   - Swan-Ganz catheter: absent
+   - Other lines/tubes: indeterminate
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura:
+     - There are diffuse, bilateral interstitial opacities, predominantly in the lung periphery.
+     - The lung fields appear somewhat hazy.
+     - No pleural effusion is identified.
+     - No pneumothorax is identified.
+   - mediastinum/heart:
+     - The mediastinum is within normal limits in width.
+     - The heart size is normal.
+     - The pulmonary vasculature appears normal.
+   - diaphragms/upper abdomen:
+     - The diaphragms are well-visualized.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues:
+     - The ribs are well-visualized.
+     - The clavicles are well-visualized.
+     - The scapulae are well-visualized.
+     - The soft tissues are unremarkable.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Diffuse bilateral interstitial opacities, predominantly in the lung periphery.
+   - The etiology of the interstitial opacities is uncertain and requires further evaluation.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The image quality is adequate, but the low contrast and low edge enhancement may limit the ability to fully assess the lung parenchyma.
+   - The diffuse interstitial opacities are difficult to characterize definitively on a single chest X-ray.
+   - The absence of a clinical history and other imaging studies makes it difficult to determine the underlying cause of the interstitial opacities.
+
+7) DOMAIN VECTOR

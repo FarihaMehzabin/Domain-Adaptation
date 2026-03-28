@@ -1,0 +1,51 @@
+1) EXAM / TECHNIQUE
+   - projection (AP) with confidence 100 + image is AP.
+   - patient position (portable) with confidence 100 + the image is labeled as portable.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + the image appears to be a standard AP view.
+   - inspiration (adequate) with confidence 100 + the lungs are well-expanded.
+   - penetration (adequate) with confidence 100 + the heart border is visible.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image shows the upper lung fields, costophrenic angles, and costal margins. The lower lung fields are not fully visualized.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 95 + the lungs are clear, the mediastinum is well-defined, the bones are visible, and the costophrenic angles are clear.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. (Indeterminate) with confidence 100 + there are multiple lines present, but their origin is not clear.
+   - markers/overlays: laterality marker present? burned-in text present? (burned-in label top-left) with confidence 100 + a burned-in label is present in the top-left corner.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - endotracheal tube (ETT) present, tip position not visible, confidence 80 + an endotracheal tube is present, but the tip position is not clearly visible.
+   - nasogastric tube (NGT) present, course not visible, tip position not visible, confidence 70 + a nasogastric tube is present, but the course and tip position are not visible.
+   - central venous catheter (CVC) present, tip position not visible, confidence 80 + a central venous catheter is present, but the tip position is not clearly visible.
+   - chest tube (CT) present, tip position not visible, confidence 70 + a chest tube is present, but the tip position is not visible.
+   - pacemaker/defibrillator (PM/DF) present, tip position not visible, confidence 70 + a pacemaker/defibrillator is present, but the tip position is not visible.
+   - arterial line (AL) present, tip position not visible, confidence 70 + an arterial line is present, but the tip position is not visible.
+   - Foley catheter present, tip position not visible, confidence 70 + a Foley catheter is present, but the tip position is not visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - bilateral opacities present, predominantly in the lower lung fields, with a more prominent opacity in the right lower lobe, with possible pleural effusion.
+     - indistinctness of the costophrenic angles.
+     - possible pulmonary edema.
+   - mediastinum/heart
+     - the mediastinum is within normal limits in size and contour.
+     - the heart size is normal.
+   - diaphragms/upper abdomen
+     - the diaphragms are well-defined.
+     - the upper abdomen is unremarkable.
+   - bones/soft tissues
+     - the ribs are intact.
+     - the clavicles are intact.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Bilateral pulmonary opacities, predominantly in the lower lung fields, with possible pleural effusion.
+   - Possible pulmonary edema.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip position of the endotracheal tube, nasogastric tube, chest tube, pacemaker/defibrillator, arterial line, and Foley catheter are not clearly visible.
+   - The lower lung fields are not fully visualized.
+   - The presence of multiple lines makes it difficult to determine their origin.
+
+7) DOMAIN VECTOR

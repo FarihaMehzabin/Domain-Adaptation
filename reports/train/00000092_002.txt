@@ -1,0 +1,45 @@
+1) EXAM / TECHNIQUE
+   - projection (PA) with confidence 100 + image is PA view.
+   - patient position (upright) with confidence 100 + patient is upright.
+   - portable-likelihood (low) with evidence (no obvious signs of a portable exam).
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation (none) with confidence 100 + clavicles are symmetrical.
+   - inspiration (adequate) with confidence 100 + there is sufficient lung volume.
+   - penetration (adequate) with confidence 100 + vertebral visibility behind the heart is good.
+   - motion blur (none) with confidence 100 + no obvious motion artifacts.
+   - collimation/anatomic coverage: apices? costophrenic angles? costal margins? (The image appears to be a standard PA chest radiograph, with adequate coverage of the apices, costophrenic angles, and costal margins.)
+   - anatomical clarity (lungs/mediastinum/bones/diaphragms & costophrenic angles) with confidence 100 + the lungs are well-aerated, the mediastinum is clearly defined, the bones are visible, and the diaphragms and costophrenic angles are well-visualized.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc. with confidence 100 + no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? (A laterality marker is present, indicating the left side is on the left.)
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high) with confidence 100 + the image appears to be a standard PA chest radiograph with low contrast and no obvious edge enhancement or inversion.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Cardiac device (e.g., ICD, pacemaker) with confidence 80 + a device is present in the anterior mediastinum, likely a cardiac device. The tip position is not clearly visible.
+   - Indeterminate (e.g., central line, NG tube) with confidence 100 + no central line or NG tube is visible.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura
+     - There is a hazy opacity in the right lower lung field. The left lung appears clear.
+     - No pleural effusion is identified.
+   - mediastinum/heart
+     - The heart size is within normal limits.
+     - The mediastinal contours are unremarkable.
+   - diaphragms/upper abdomen
+     - The diaphragms are well-visualized.
+     - The upper abdomen is unremarkable.
+   - bones/soft tissues
+     - The ribs are intact.
+     - The clavicles are intact.
+     - The scapulae are intact.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+   - Right lower lung field opacity. Further evaluation with CT is recommended to rule out pneumonia, mass, or other pathology.
+   - Cardiac device present in the anterior mediastinum.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+   - The tip position of the cardiac device is not clearly visible.
+   - The hazy opacity in the right lower lung field could be due to various causes, and further evaluation is needed.
+
+7) DOMAIN VECTOR

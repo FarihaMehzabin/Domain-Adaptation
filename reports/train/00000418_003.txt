@@ -1,0 +1,41 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + image is an anteroposterior chest X-ray.
+   - patient position: upright with confidence 90% + the patient is standing or sitting upright.
+   - portable-likelihood: low with evidence (no obvious signs of a portable exam)
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + the heart border is well-defined, and the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + the image is not blurry.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped at the bottom.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: The lungs are clear. The mediastinum is well-defined. The bones are visible. The diaphragms are visible. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are several lines present in the image, likely from external devices. There is no evidence of grid/moiré, banding, detector dropout, or compression artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present. There is a burned-in label top-left.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - NG tube: present, course: from the mouth to the stomach, tip position: not clearly visible, confidence 60%
+   - IV line: present, course: from the right upper extremity to the superior vena cava, tip position: not clearly visible, confidence 60%
+   - ETT: present, course: from the trachea to the carina, tip position: not clearly visible, confidence 60%
+   - Skin tenting: present, course: throughout the abdomen, tip position: not clearly visible, confidence 60%
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: The lungs are clear bilaterally. There is no evidence of consolidation, pleural effusion, or pneumothorax.
+   - mediastinum/heart: The mediastinum is within normal limits. The heart size is normal.
+   - diaphragms/upper abdomen: The diaphragms are well-defined. The upper abdomen is unremarkable.
+   - bones/soft tissues: The ribs are intact. There are multiple metallic densities present in the left upper chest, likely from prior surgical intervention.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - NG tube, IV line, and ETT are present.
+   - No acute pulmonary process identified.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - The tip position of the NG tube, IV line, and ETT is not clearly visible.
+   - The image is cropped at the bottom, which may limit the assessment of the lower lung fields.
+   - The metallic densities in the left upper chest are likely from prior surgical intervention and do not require further comment.
+
+7) DOMAIN VECTOR

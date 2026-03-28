@@ -1,0 +1,39 @@
+1) EXAM / TECHNIQUE
+   - projection: PA with confidence 95% + evidence: clear visualization of the heart silhouette and lung fields.
+   - patient position: upright with confidence 90% + evidence: the patient is standing with their chest facing the detector.
+   - portable-likelihood: low with evidence: the image appears to be a standard chest X-ray, not a portable one.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the clavicles are symmetrical.
+   - inspiration: adequate with confidence 90% + evidence: the lung fields are well-expanded.
+   - penetration: adequate with confidence 95% + evidence: the vertebral bodies are clearly visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: no obvious motion artifacts are present.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image appears to be cropped, obscuring the apices and costophrenic angles. The lateral chest walls are also partially obscured.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: lungs are clear. Mediastinum is well-defined. Bones are intact. Diaphragms are visible. Costophrenic angles are obscured.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts: no obvious artifacts are present.
+   - markers/overlays: laterality marker present? burned-in text present? Laterality marker is present, indicating the left side is on the left. Burned-in text is present in the upper-left corner, but the content is not legible.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. No inversion is suspected. Noise texture is low.
+
+3) DEVICES / LINES / TUBES (RadLex-style names; each: present/indeterminate/absent, course, tip position if applicable, confidence 0–100)
+
+   - Cardiac device: present, course: internal, tip position: indeterminate, confidence 95% + evidence: A cardiac device is visible within the chest, with leads extending into the heart. The tip position is not clearly defined.
+   - Indeterminate: present, course: indeterminate, tip position: indeterminate, confidence 90% + evidence: An indeterminate device is present, but its exact location and function are not clear.
+
+4) FINDINGS (VERY detailed; organize by region)
+   - lungs/pleura: lungs are clear bilaterally. No focal consolidation, pleural effusion, or pneumothorax is identified.
+   - mediastinum/heart: the heart size appears enlarged. The mediastinal contours are unremarkable.
+   - diaphragms/upper abdomen: diaphragms are visible. The upper abdomen is not well visualized due to the image cropping.
+   - bones/soft tissues: bones are intact. No obvious soft tissue abnormalities are present.
+
+5) IMPRESSION (bulleted; prioritize urgent items first if any)
+
+   - Enlarged heart size.
+   - Presence of a cardiac device.
+
+6) LIMITATIONS / UNCERTAINTY (bulleted)
+
+   - Image cropping limits visualization of the apices and costophrenic angles.
+   - Indeterminate device location and function.
+   - Limited visualization of the upper abdomen.
+
+7) DOMAIN VECTOR

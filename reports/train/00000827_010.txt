@@ -1,0 +1,46 @@
+1) EXAM / TECHNIQUE
+   - projection: AP with confidence 95% + evidence: image is taken in an anteroposterior (AP) view.
+   - patient position: portable with confidence 90% + evidence: the image is a portable chest X-ray.
+   - portable-likelihood: high with evidence: the image is a portable chest X-ray, likely taken in a clinical setting.
+
+2) IMAGE QUALITY / TECHNICAL FACTORS
+   - rotation: none with confidence 95% + evidence: the image appears to be relatively free of rotation.
+   - inspiration: adequate with confidence 85% + evidence: the lungs appear to be well-expanded.
+   - penetration: adequate with confidence 90% + evidence: the vertebral bodies are visible behind the heart.
+   - motion blur: none with confidence 95% + evidence: there is no obvious motion blur.
+   - collimation/anatomic coverage: apices? costophrenic angles? lateral chest walls? The image shows the apices, costophrenic angles, and lateral chest walls. The image is cropped, leaving the upper and lower portions of the chest.
+   - anatomical clarity: lungs/mediastinum/bones/diaphragms & costophrenic angles: the lungs are well-visualized. The mediastinum is clearly visible. The bones are well-visualized. The diaphragms are well-visualized. The costophrenic angles are visible.
+   - acquisition artifacts: lines, grid/moiré, banding, detector dropout, compression artifacts, etc.: There are no obvious artifacts.
+   - markers/overlays: laterality marker present? burned-in text present? A laterality marker is present, indicating the left side is on the right. A burned-in label is present in the top-left corner.
+   - presentation/processing cues: contrast (low/med/high), edge enhancement (low/med/high), inversion suspected (yes/no), noise texture (low/med/high): The image appears to have low contrast and low edge enhancement. There is no evidence of inversion. The noise texture is low.
+
+3) DEVICES / LINES / TUBES
+   - right subclavian central line: present, course: right subclavian vein, tip position: indeterminate, confidence 80%
+   - left subclavian central line: present, course: left subclavian vein, tip position: indeterminate, confidence 80%
+   - indeterminate: the tip position of the central lines is not clearly visible.
+
+4) FINDINGS
+   - lungs/pleura:
+     - left lower lobe opacity: present, description: there is a hazy opacity in the left lower lobe, obscuring the costophrenic angle.
+     - right lung: clear with confidence 90% + evidence: the right lung appears clear.
+     - pleural effusion: indeterminate, description: there is no obvious pleural effusion.
+   - mediastinum/heart:
+     - mediastinal contours: normal with confidence 95% + evidence: the mediastinal contours are normal.
+     - heart size: normal with confidence 90% + evidence: the heart size appears normal.
+   - diaphragms/upper abdomen:
+     - diaphragms: well-visualized with confidence 95% + evidence: the diaphragms are well-visualized.
+     - upper abdomen: unremarkable with confidence 90% + evidence: the upper abdomen is unremarkable.
+   - bones/soft tissues:
+     - ribs: well-visualized with confidence 95% + evidence: the ribs are well-visualized.
+     - clavicles: well-visualized with confidence 95% + evidence: the clavicles are well-visualized.
+     - soft tissues: unremarkable with confidence 90% + evidence: the soft tissues are unremarkable.
+
+5) IMPRESSION
+   - Left lower lobe opacity, etiology unclear.
+   - Central lines present.
+
+6) LIMITATIONS / UNCERTAINTY
+   - Tip position of central lines not clearly visualized.
+   - The image is a portable chest X-ray, which may have limitations in terms of image quality and anatomical coverage.
+
+7) DOMAIN VECTOR
