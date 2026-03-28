@@ -9,6 +9,8 @@ Use these numbered entrypoints for the current source-stage workflow:
 5. `05_build_source_retrieval_memory.py`
 6. `06_evaluate_source_memory_only.py`
 7. `07_evaluate_probability_mixing.py`
+8. `08_evaluate_source_memory_test.py`
+9. `09_evaluate_probability_mixing_test.py`
 
 Notes:
 
@@ -17,6 +19,8 @@ Notes:
 - Step `05` builds the train-time retrieval memory from the selected frozen embedding source.
 - Step `06` evaluates the frozen train memory on held-out validation queries before any baseline fusion.
 - Step `07` evaluates probability mixing between the frozen baseline and the selected memory-only validation probabilities.
+- Step `08` evaluates the frozen train memory on the held-out test split using the validation-selected `k` and `tau`.
+- Step `09` evaluates frozen probability mixing on the held-out test split using the validation-selected `alpha`.
 - `scripts_old/` remains archived and is not part of the active workflow.
 - After each experiment run, the expectation is:
   - the experiment directory contains a `recreation_report.md`,
