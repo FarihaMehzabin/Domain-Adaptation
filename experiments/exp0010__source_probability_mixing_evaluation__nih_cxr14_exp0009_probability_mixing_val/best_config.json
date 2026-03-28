@@ -1,0 +1,38 @@
+{
+  "alpha": 0.7,
+  "memory_best_config": {
+    "k": 50,
+    "selection_metric": "macro_auroc",
+    "selection_trace": {
+      "final_candidates": 1,
+      "k_tied_candidates": 1,
+      "macro_auroc_tied_candidates": 1,
+      "macro_average_precision_tied_candidates": 1,
+      "max_macro_auroc": 0.6826692354604925,
+      "max_macro_average_precision_within_auroc_ties": 0.12867636618415504,
+      "selected_tau_after_k_tie_break": 1,
+      "smallest_k_within_metric_ties": 50,
+      "tie_break_rule": [
+        "highest validation macro AUROC",
+        "higher validation macro average precision",
+        "smaller k",
+        "tau = 10 if among tied settings, otherwise smaller tau"
+      ]
+    },
+    "tau": 1
+  },
+  "selection_metric": "macro_auroc",
+  "selection_trace": {
+    "final_candidates": 1,
+    "largest_alpha_within_metric_ties": 0.7,
+    "macro_auroc_tied_candidates": 1,
+    "macro_average_precision_tied_candidates": 1,
+    "max_macro_auroc": 0.7642617230502976,
+    "max_macro_average_precision_within_auroc_ties": 0.15661867825989392,
+    "tie_break_rule": [
+      "highest validation macro AUROC",
+      "higher validation macro average precision",
+      "larger alpha"
+    ]
+  }
+}
