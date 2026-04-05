@@ -1,0 +1,21 @@
+{
+  "k": 3000,
+  "selection_metric": "macro_auroc",
+  "selection_trace": {
+    "final_candidates": 1,
+    "k_tied_candidates": 1,
+    "macro_auroc_tied_candidates": 1,
+    "macro_average_precision_tied_candidates": 1,
+    "max_macro_auroc": 0.7388984574171197,
+    "max_macro_average_precision_within_auroc_ties": 0.13620564747154715,
+    "selected_tau_after_k_tie_break": 40.0,
+    "smallest_k_within_metric_ties": 3000,
+    "tie_break_rule": [
+      "highest validation macro AUROC",
+      "higher validation macro average precision",
+      "smaller k",
+      "tau = 10 if among tied settings, otherwise smaller tau"
+    ]
+  },
+  "tau": 40.0
+}

@@ -51,7 +51,7 @@ DEFAULT_SEED = 3407
 DEFAULT_SELECTION_METRIC = "macro_auroc"
 DEFAULT_ECE_BINS = 15
 SWEEP_K_VALUES = [1, 3, 5, 10, 20, 50]
-SWEEP_TAU_VALUES = [1, 5, 10, 20, 40]
+SWEEP_TAU_VALUES = [1.0, 5.0, 10.0, 20.0, 40.0]
 
 
 @dataclass(frozen=True)
@@ -292,6 +292,28 @@ def human_size(num_bytes: int) -> str:
     if unit_index == 0:
         return f"{int(value)}{units[unit_index]}"
     return f"{value:.2f}{units[unit_index]}"
+
+
+def unique_preserving_order(values: list[int] | list[float]) -> list[int] | list[float]:
+    unique_values: list[int] | list[float] = []
+    for value in values:
+        if value in unique_values:
+            continue
+        unique_values.append(value)
+    return unique_values
+
+
+def format_sweep_value(value: int | float) -> str:
+    numeric = float(value)
+    if not math.isfinite(numeric):
+        raise SystemExit(f"Encountered a non-finite sweep value: {value!r}")
+    if numeric.is_integer():
+        return str(int(numeric))
+    return f"{numeric:.12g}"
+
+
+def config_key(k: int, tau: float) -> str:
+    return f"k={int(k)},tau={format_sweep_value(tau)}"
 
 
 def summarize_values(values: np.ndarray) -> dict[str, float]:
@@ -699,9 +721,11 @@ def select_best_sweep_row(rows: list[dict[str, Any]]) -> tuple[dict[str, Any], d
 
     min_k = min(int(row["k"]) for row in ap_candidates)
     k_candidates = [row for row in ap_candidates if int(row["k"]) == min_k]
-    tau_values = [int(row["tau"]) for row in k_candidates]
-    selected_tau = 10 if 10 in tau_values else min(tau_values)
-    final_candidates = [row for row in k_candidates if int(row["tau"]) == selected_tau]
+    tau_values = [float(row["tau"]) for row in k_candidates]
+    selected_tau = 10.0 if any(np.isclose(tau, 10.0, atol=1e-12, rtol=0.0) for tau in tau_values) else min(tau_values)
+    final_candidates = [
+        row for row in k_candidates if np.isclose(float(row["tau"]), selected_tau, atol=1e-12, rtol=0.0)
+    ]
     best_row = final_candidates[0]
 
     trace = {
@@ -868,6 +892,8 @@ def build_recreation_report(
     norm_summary_before: dict[str, float],
     norm_summary_after: dict[str, float],
     index_details: dict[str, Any],
+    sweep_k_values: list[int],
+    sweep_tau_values: list[float],
     best_row: dict[str, Any],
     best_metrics: dict[str, Any],
     sweep_rows: list[dict[str, Any]],
@@ -881,12 +907,17 @@ def build_recreation_report(
         [
             [
                 str(int(row["k"])),
-                str(int(row["tau"])),
+                format_sweep_value(float(row["tau"])),
                 format_metric(row.get("macro_auroc")),
                 format_metric(row.get("macro_average_precision")),
                 format_metric(row.get("macro_ece")),
                 format_metric(row.get("macro_f1_at_0.5")),
-                "<- best" if int(row["k"]) == int(best_row["k"]) and int(row["tau"]) == int(best_row["tau"]) else "",
+                (
+                    "<- best"
+                    if int(row["k"]) == int(best_row["k"])
+                    and np.isclose(float(row["tau"]), float(best_row["tau"]), atol=1e-12, rtol=0.0)
+                    else ""
+                ),
             ]
             for row in sweep_rows
         ],
@@ -965,6 +996,8 @@ def build_recreation_report(
         f"- Memory embedding dim: `{memory_dim}`",
         f"- Index loaded from disk: `{str(index_details['loaded_from_disk']).lower()}`",
         f"- Index rebuilt from embeddings: `{str(index_details['rebuilt_from_embeddings']).lower()}`",
+        f"- Sweep k values: `{' '.join(str(value) for value in sweep_k_values)}`",
+        f"- Sweep tau values: `{' '.join(format_sweep_value(value) for value in sweep_tau_values)}`",
         "",
         "## Sweep Summary",
         "",
@@ -973,7 +1006,7 @@ def build_recreation_report(
         "## Best Configuration",
         "",
         f"- Best `k`: `{int(best_row['k'])}`",
-        f"- Best `tau`: `{int(best_row['tau'])}`",
+        f"- Best `tau`: `{format_sweep_value(float(best_row['tau']))}`",
         f"- Validation macro AUROC: `{format_metric(best_metrics['macro_auroc'])}`",
         f"- Validation macro average precision: `{format_metric(best_metrics['macro_average_precision'])}`",
         f"- Validation macro ECE: `{format_metric(best_metrics['macro_ece'])}`",
@@ -1040,6 +1073,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--manifest-csv", type=Path, default=DEFAULT_MANIFEST_CSV)
     parser.add_argument("--split", type=str, default=DEFAULT_SPLIT, choices=["val"])
     parser.add_argument("--experiments-root", type=Path, default=DEFAULT_EXPERIMENTS_ROOT)
+    parser.add_argument("--sweep-k-values", type=int, nargs="+", default=SWEEP_K_VALUES)
+    parser.add_argument("--sweep-tau-values", type=float, nargs="+", default=SWEEP_TAU_VALUES)
     parser.add_argument("--qualitative-queries", type=int, default=DEFAULT_QUALITATIVE_QUERIES)
     parser.add_argument("--seed", type=int, default=DEFAULT_SEED)
     parser.add_argument("--experiment-name", type=str, default=None)
@@ -1055,6 +1090,16 @@ def main() -> int:
     manifest_csv = args.manifest_csv.resolve()
     experiments_root = args.experiments_root.resolve()
     split = args.split
+    sweep_k_values = [int(value) for value in unique_preserving_order(list(args.sweep_k_values))]
+    sweep_tau_values = [float(value) for value in unique_preserving_order(list(args.sweep_tau_values))]
+    if not sweep_k_values:
+        raise SystemExit("The retrieval sweep requires at least one k value.")
+    if not sweep_tau_values:
+        raise SystemExit("The retrieval sweep requires at least one tau value.")
+    if any(value <= 0 for value in sweep_k_values):
+        raise SystemExit(f"All k values must be positive. Received: {sweep_k_values}")
+    if any(value <= 0.0 for value in sweep_tau_values):
+        raise SystemExit(f"All tau values must be positive. Received: {sweep_tau_values}")
 
     generated_slug = "nih_cxr14_exp0008_val"
     experiment_number, experiment_id, experiment_name, experiment_dir = resolve_experiment_identity(
@@ -1090,7 +1135,7 @@ def main() -> int:
     validate_query_alignment(val_row_ids, val_sidecar_image_paths, val_manifest_image_paths)
     normalized_val_embeddings, val_norm_summary_before, val_norm_summary_after = normalize_rows(val_embeddings)
 
-    max_k = max(SWEEP_K_VALUES)
+    max_k = max(sweep_k_values)
     if int(index.ntotal) < max_k:
         raise SystemExit(f"Memory contains only {int(index.ntotal)} rows, which is less than max sweep k={max_k}.")
     neighbor_scores, neighbor_indices = index.search(np.ascontiguousarray(normalized_val_embeddings.astype(np.float32)), max_k)
@@ -1098,8 +1143,8 @@ def main() -> int:
     sweep_rows: list[dict[str, Any]] = []
     metrics_by_config: dict[str, Any] = {}
     probabilities_by_config: dict[str, np.ndarray] = {}
-    for k in SWEEP_K_VALUES:
-        for tau in SWEEP_TAU_VALUES:
+    for k in sweep_k_values:
+        for tau in sweep_tau_values:
             probabilities = compute_memory_probabilities(
                 neighbor_indices,
                 neighbor_scores,
@@ -1110,7 +1155,7 @@ def main() -> int:
             metrics = evaluate_probabilities(val_labels, probabilities, label_names)
             row = {
                 "k": int(k),
-                "tau": int(tau),
+                "tau": float(tau),
                 "macro_auroc": metrics["macro_auroc"],
                 "macro_average_precision": metrics["macro_average_precision"],
                 "macro_ece": metrics["macro_ece"],
@@ -1118,12 +1163,12 @@ def main() -> int:
                 "diagnostic_macro_f1_at_tuned_thresholds": metrics["diagnostic_macro_f1_at_tuned_thresholds"],
             }
             sweep_rows.append(row)
-            key = f"k={k},tau={tau}"
+            key = config_key(k, float(tau))
             metrics_by_config[key] = metrics
             probabilities_by_config[key] = probabilities
 
     best_row, best_trace = select_best_sweep_row(sweep_rows)
-    best_key = f"k={int(best_row['k'])},tau={int(best_row['tau'])}"
+    best_key = config_key(int(best_row["k"]), float(best_row["tau"]))
     best_metrics = metrics_by_config[best_key]
     best_probabilities = probabilities_by_config[best_key]
 
@@ -1154,6 +1199,10 @@ def main() -> int:
         {
             "configs": sweep_rows,
             "metrics_by_config": metrics_by_config,
+            "sweep_grid": {
+                "k_values": sweep_k_values,
+                "tau_values": sweep_tau_values,
+            },
             "selection_trace": best_trace,
         },
     )
@@ -1161,7 +1210,7 @@ def main() -> int:
         best_config_path,
         {
             "k": int(best_row["k"]),
-            "tau": int(best_row["tau"]),
+            "tau": float(best_row["tau"]),
             "selection_metric": DEFAULT_SELECTION_METRIC,
             "selection_trace": best_trace,
         },
@@ -1176,7 +1225,7 @@ def main() -> int:
         "The canonical memory-only validation configuration for the current source memory stage is:",
         "",
         f"- k: `{int(best_row['k'])}`",
-        f"- tau: `{int(best_row['tau'])}`",
+        f"- tau: `{format_sweep_value(float(best_row['tau']))}`",
         f"- validation macro AUROC: `{format_metric(best_metrics['macro_auroc'])}`",
         f"- validation macro average precision: `{format_metric(best_metrics['macro_average_precision'])}`",
         f"- validation macro ECE: `{format_metric(best_metrics['macro_ece'])}`",
@@ -1221,10 +1270,14 @@ def main() -> int:
         "script_path": str(script_path),
         "script_sha256": script_hash,
         "seed": args.seed,
+        "sweep_grid": {
+            "k_values": sweep_k_values,
+            "tau_values": sweep_tau_values,
+        },
         "selection_metric": DEFAULT_SELECTION_METRIC,
         "best_config": {
             "k": int(best_row["k"]),
-            "tau": int(best_row["tau"]),
+            "tau": float(best_row["tau"]),
         },
         "best_metrics": best_metrics,
         "artifacts": {
@@ -1253,6 +1306,10 @@ def main() -> int:
         str(manifest_csv),
         "--split",
         split,
+        "--sweep-k-values",
+        *[str(value) for value in sweep_k_values],
+        "--sweep-tau-values",
+        *[format_sweep_value(value) for value in sweep_tau_values],
         "--qualitative-queries",
         str(args.qualitative_queries),
         "--seed",
@@ -1274,6 +1331,10 @@ def main() -> int:
         str(manifest_csv),
         "--split",
         split,
+        "--sweep-k-values",
+        *[str(value) for value in sweep_k_values],
+        "--sweep-tau-values",
+        *[format_sweep_value(value) for value in sweep_tau_values],
         "--qualitative-queries",
         str(args.qualitative_queries),
         "--seed",
@@ -1311,6 +1372,8 @@ def main() -> int:
         norm_summary_before=val_norm_summary_before,
         norm_summary_after=val_norm_summary_after,
         index_details=index_details,
+        sweep_k_values=sweep_k_values,
+        sweep_tau_values=sweep_tau_values,
         best_row=best_row,
         best_metrics=best_metrics,
         sweep_rows=sweep_rows,
@@ -1321,7 +1384,7 @@ def main() -> int:
     print(f"[saved] experiment_dir={experiment_dir}")
     print(
         "[best_config] "
-        f"k={int(best_row['k'])} tau={int(best_row['tau'])} "
+        f"k={int(best_row['k'])} tau={format_sweep_value(float(best_row['tau']))} "
         f"macro_auroc={format_metric(best_metrics['macro_auroc'])} "
         f"macro_ap={format_metric(best_metrics['macro_average_precision'])} "
         f"macro_ece={format_metric(best_metrics['macro_ece'])} "
