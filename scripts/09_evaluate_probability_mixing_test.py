@@ -572,7 +572,7 @@ def main() -> int:
         "",
         f"- selection root: `{mixing_selection_root}`",
         f"- memory test root: `{memory_test_root}`",
-        f"- alpha: `{applied_alpha:.1f}`",
+        f"- alpha: `{probability_mixing_mod.format_alpha_value(applied_alpha)}`",
         f"- mixed test macro AUROC: `{format_metric(mixed_test_metrics['macro_auroc'])}`",
         f"- mixed test macro average precision: `{format_metric(mixed_test_metrics['macro_average_precision'])}`",
         f"- mixed test macro ECE: `{format_metric(mixed_test_metrics['macro_ece'])}`",
@@ -716,7 +716,7 @@ def main() -> int:
     print(f"[saved] experiment_dir={experiment_dir}")
     print(
         "[applied_config] "
-        f"alpha={applied_alpha:.1f} "
+        f"alpha={probability_mixing_mod.format_alpha_value(applied_alpha)} "
         f"macro_auroc={format_metric(mixed_test_metrics['macro_auroc'])} "
         f"macro_ap={format_metric(mixed_test_metrics['macro_average_precision'])} "
         f"macro_ece={format_metric(mixed_test_metrics['macro_ece'])} "

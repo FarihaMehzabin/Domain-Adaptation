@@ -236,4 +236,82 @@ The narrowest defensible supervisor-facing summary for this update is therefore:
 - the memory-only branch remained weak for fixed-threshold classification despite better ranking metrics,
 - and the expanded retrieval sweep did not improve the final mixed system over the earlier 100-epoch branch in `exp0018`.
 
+### Production recommendation for the main branch
+
+For the production main branch, the retrieval configuration should remain the earlier 100-epoch setting selected in `exp0015`, namely `k=50` and `tau=1`, with `alpha=0.7` from `exp0016` for the mixed model. The reason is that the expanded retrieval sweep improved the retrieval-only branch in isolation, but it did not improve the final mixed system that is most relevant for deployment. Relative to the prior 100-epoch production branch in `exp0018`, the expanded-sweep mixed branch in `exp0024` was slightly lower on test macro AUROC (`0.775046` versus `0.775239`), test macro AP (`0.159121` versus `0.159950`), and test macro `F1 @ 0.5` (`0.211121` versus `0.211526`). The clearest supervisor-facing recommendation is therefore to keep the production retrieval configuration at `k=50`, `tau=1`, and `alpha=0.7`, while treating the expanded-sweep results as an analysis showing that stronger retrieval-only ranking performance does not necessarily translate into a better final mixed system.
+
 One remaining caveat is that the selected memory-only validation setting in `exp0021` still lies on the tested `k` ceiling of `3000`. That means the retrieval frontier is not fully closed on `k`, even though the completed expanded sweep is already sufficient to show that the original `exp0015` selection was boundary-limited and that further retrieval-only improvement does not automatically translate into a better mixed system.
+
+## 8. 2026-04-05 Fine Alpha-Sweep Update: Local Refinement On The 100-Epoch Production Branch
+
+This addendum records a targeted follow-up run that kept the 100-epoch production retrieval branch fixed and refined only the validation-time probability-mixing weight. The upstream fused embedding root remained `exp0003__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2`, the supervised baseline remained `exp0013__source_baseline_training__nih_cxr14_exp0003_fused_linear_e100_p4`, and the frozen retrieval configuration remained the original 100-epoch production setting from `exp0015`, namely `k=50` and `tau=1`. No image embeddings, report embeddings, fusion recipe, baseline-training budget, or retrieval hyperparameters were changed for this update.
+
+### Fine-alpha scope and experiment lineage
+
+- `exp0025`: validation probability-mixing sweep on top of the original 100-epoch production retrieval branch, using the same memory-only validation artifact as `exp0016` but with a finer alpha grid
+- `exp0026`: frozen probability-mixing test evaluation using the validation-selected alpha from `exp0025`
+
+### What changed relative to `exp0016` to `exp0018`
+
+- The retrieval inputs were held fixed at the earlier 100-epoch production configuration: `exp0015` for validation memory probabilities and `exp0017` for frozen test memory probabilities.
+- The probability-mixing script was updated to accept an explicit alpha grid so that the selection stage no longer had to be restricted to `alpha = 0.0, 0.1, ..., 1.0`.
+- The fine validation sweep in `exp0025` evaluated `alpha` on the full grid `0.00, 0.01, ..., 1.00` while preserving the same validation-only selection rule as before: highest macro AUROC, then higher macro AP, then larger alpha.
+- No tuning was performed on test. `exp0026` simply applied the validation-selected alpha from `exp0025` to the held-out test split.
+
+### Fine-alpha validation results
+
+The coarse 100-epoch production branch in `exp0016` selected `alpha=0.7`. The finer sweep in `exp0025` moved the validation-selected alpha slightly upward to `0.74`.
+
+#### Local validation ridge around the previous optimum
+
+| Alpha | Validation macro AUROC | Validation macro AP |
+| --- | ---: | ---: |
+| `0.70` | `0.774842` | `0.163146` |
+| `0.71` | `0.774849` | `0.163114` |
+| `0.72` | `0.774856` | `0.163099` |
+| `0.73` | `0.774863` | `0.163059` |
+| `0.74` | `0.774865` | `0.162973` |
+| `0.75` | `0.774864` | `0.163048` |
+
+This confirms that the optimum is real but extremely shallow. Relative to the earlier `alpha=0.7` choice, the validation macro AUROC gain at `alpha=0.74` is only `+0.000023`.
+
+#### Comparison: coarse alpha selection vs fine alpha selection on validation
+
+| Metric | Prior 100-epoch branch (`exp0016`, `alpha=0.7`) | Fine-alpha branch (`exp0025`, `alpha=0.74`) | Delta |
+| --- | ---: | ---: | ---: |
+| Selected `alpha` | `0.70` | `0.74` | `+0.04` |
+| Validation macro AUROC | `0.774842` | `0.774865` | `+0.000023` |
+| Validation macro AP | `0.163146` | `0.162973` | `-0.000173` |
+| Validation macro ECE | `0.227235` | `0.240306` | `+0.013071` |
+| Validation macro F1 @ 0.5 | `0.211561` | `0.208013` | `-0.003548` |
+| Diagnostic macro F1 @ tuned thresholds | `0.234437` | `0.234481` | `+0.000044` |
+
+### Frozen test comparison
+
+The fine-alpha branch was then frozen and evaluated on held-out test data in `exp0026`.
+
+| Metric | Prior 100-epoch branch (`exp0018`, `alpha=0.7`) | Fine-alpha branch (`exp0026`, `alpha=0.74`) | Delta |
+| --- | ---: | ---: | ---: |
+| Frozen `alpha` | `0.70` | `0.74` | `+0.04` |
+| Test macro AUROC | `0.775239` | `0.775224` | `-0.000014` |
+| Test macro AP | `0.159950` | `0.160043` | `+0.000092` |
+| Test macro ECE | `0.227412` | `0.240454` | `+0.013041` |
+| Test macro F1 @ 0.5 | `0.211526` | `0.209309` | `-0.002217` |
+| Test macro F1 @ frozen val thresholds | `0.220846` | `0.220639` | `-0.000207` |
+
+### Interpretation of the fine-alpha update
+
+The fine sweep shows that `alpha=0.7` was not the exact validation optimum on the 100-epoch production branch. Under the same frozen retrieval setting `k=50, tau=1`, the validation-selected alpha shifted slightly to `0.74` in `exp0025`.
+
+However, the practical effect size is negligible. The improvement at validation time is only on the order of `2e-05` macro AUROC, and the held-out test comparison does not show a meaningful global win for the refined alpha. On test, `alpha=0.74` produced slightly higher macro AP than `alpha=0.7` (`0.160043` versus `0.159950`), but slightly lower macro AUROC (`0.775224` versus `0.775239`), worse macro ECE (`0.240454` versus `0.227412`), and slightly lower threshold-based F1.
+
+The narrowest defensible supervisor-facing summary for this update is therefore:
+
+- the original 100-epoch production choice `alpha=0.7` was near-optimal but not exactly optimal on the coarse validation grid,
+- a finer sweep moved the validation-selected alpha to `0.74`,
+- the local optimum around `0.7` to `0.75` is extremely shallow,
+- and the refined alpha did not produce a clear test-set improvement over the original `alpha=0.7` production branch.
+
+### Recommendation after the fine-alpha check
+
+If the goal is strict adherence to validation-only selection, then `exp0025` supports using `alpha=0.74` as the updated validation winner on the original 100-epoch production retrieval branch. If the goal is stable production reporting with minimal complexity, `alpha=0.7` remains fully defensible because the fine-alpha sweep showed only a negligible validation gain and no convincing test-set improvement.

@@ -299,6 +299,24 @@ def human_size(num_bytes: int) -> str:
     return f"{value:.2f}{units[unit_index]}"
 
 
+def unique_preserving_order(values: list[float]) -> list[float]:
+    unique_values: list[float] = []
+    for value in values:
+        if value in unique_values:
+            continue
+        unique_values.append(value)
+    return unique_values
+
+
+def format_alpha_value(value: float) -> str:
+    numeric = float(value)
+    if not math.isfinite(numeric):
+        raise SystemExit(f"Encountered a non-finite alpha value: {value!r}")
+    if numeric.is_integer():
+        return f"{numeric:.1f}"
+    return f"{numeric:.12g}"
+
+
 def summarize_values(values: np.ndarray) -> dict[str, float]:
     return {
         "mean": float(values.mean()),
@@ -786,6 +804,7 @@ def build_recreation_report(
     split: str,
     row_count: int,
     label_names: list[str],
+    alpha_values: list[float],
     best_row: dict[str, Any],
     best_metrics: dict[str, Any],
     baseline_metrics: dict[str, Any],
@@ -800,7 +819,7 @@ def build_recreation_report(
         ["alpha", "Macro AUROC", "Macro AP", "Macro ECE", "Macro F1 @ 0.5", "Best"],
         [
             [
-                f"{float(row['alpha']):.1f}",
+                format_alpha_value(float(row["alpha"])),
                 format_metric(row.get("macro_auroc")),
                 format_metric(row.get("macro_average_precision")),
                 format_metric(row.get("macro_ece")),
@@ -848,6 +867,7 @@ def build_recreation_report(
         f"- Label count: `{len(label_names)}`",
         f"- Label names: `{' '.join(label_names)}`",
         f"- Selection metric: `{DEFAULT_SELECTION_METRIC}`",
+        f"- Alpha values: `{' '.join(format_alpha_value(value) for value in alpha_values)}`",
         "",
         "## Environment",
         "",
@@ -964,6 +984,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--split", type=str, default=DEFAULT_SPLIT, choices=["val"])
     parser.add_argument("--experiments-root", type=Path, default=DEFAULT_EXPERIMENTS_ROOT)
     parser.add_argument("--batch-size", type=int, default=DEFAULT_BATCH_SIZE)
+    parser.add_argument("--alpha-values", type=float, nargs="+", default=ALPHA_GRID)
     parser.add_argument("--seed", type=int, default=DEFAULT_SEED)
     parser.add_argument("--experiment-name", type=str, default=None)
     parser.add_argument("--overwrite", action="store_true")
@@ -978,6 +999,11 @@ def main() -> int:
     manifest_csv = args.manifest_csv.resolve()
     experiments_root = args.experiments_root.resolve()
     split = args.split
+    alpha_values = [float(value) for value in unique_preserving_order(list(args.alpha_values))]
+    if not alpha_values:
+        raise SystemExit("Alpha sweep must contain at least one value.")
+    if any(value < 0.0 or value > 1.0 for value in alpha_values):
+        raise SystemExit(f"All alpha values must be in [0, 1]. Received: {alpha_values}")
 
     generated_slug = "nih_cxr14_exp0009_probability_mixing_val"
     experiment_number, experiment_id, experiment_name, experiment_dir = resolve_experiment_identity(
@@ -1024,7 +1050,7 @@ def main() -> int:
     sweep_rows: list[dict[str, Any]] = []
     metrics_by_alpha: dict[str, Any] = {}
     mixed_by_alpha: dict[str, np.ndarray] = {}
-    for alpha in ALPHA_GRID:
+    for alpha in alpha_values:
         mixed_probabilities = mix_probabilities(baseline_probabilities, memory_probabilities, float(alpha))
         metrics = evaluate_probabilities(val_labels, mixed_probabilities, label_names)
         row = {
@@ -1036,12 +1062,12 @@ def main() -> int:
             "diagnostic_macro_f1_at_tuned_thresholds": metrics["diagnostic_macro_f1_at_tuned_thresholds"],
         }
         sweep_rows.append(row)
-        alpha_key = f"{float(alpha):.1f}"
+        alpha_key = format_alpha_value(float(alpha))
         metrics_by_alpha[alpha_key] = metrics
         mixed_by_alpha[alpha_key] = mixed_probabilities
 
     best_row, selection_trace = select_best_row(sweep_rows)
-    best_alpha_key = f"{float(best_row['alpha']):.1f}"
+    best_alpha_key = format_alpha_value(float(best_row["alpha"]))
     best_metrics = metrics_by_alpha[best_alpha_key]
     best_mixed_probabilities = mixed_by_alpha[best_alpha_key]
 
@@ -1057,6 +1083,7 @@ def main() -> int:
         sweep_results_path,
         {
             "alphas": sweep_rows,
+            "alpha_values": alpha_values,
             "metrics_by_alpha": metrics_by_alpha,
             "baseline_metrics": baseline_metrics,
             "memory_best_config": memory_best_config,
@@ -1088,7 +1115,7 @@ def main() -> int:
         "",
         "The canonical validation-only probability-mixing configuration for the current source stage is:",
         "",
-        f"- alpha: `{float(best_row['alpha']):.1f}`",
+        f"- alpha: `{format_alpha_value(float(best_row['alpha']))}`",
         f"- validation macro AUROC: `{format_metric(best_metrics['macro_auroc'])}`",
         f"- validation macro average precision: `{format_metric(best_metrics['macro_average_precision'])}`",
         f"- validation macro ECE: `{format_metric(best_metrics['macro_ece'])}`",
@@ -1128,6 +1155,7 @@ def main() -> int:
         "script_path": str(script_path),
         "script_sha256": script_hash,
         "seed": args.seed,
+        "alpha_values": alpha_values,
         "selection_metric": DEFAULT_SELECTION_METRIC,
         "best_config": {
             "alpha": float(best_row["alpha"]),
@@ -1161,6 +1189,8 @@ def main() -> int:
         split,
         "--batch-size",
         str(args.batch_size),
+        "--alpha-values",
+        *[format_alpha_value(value) for value in alpha_values],
         "--seed",
         str(args.seed),
         "--experiment-name",
@@ -1182,6 +1212,8 @@ def main() -> int:
         split,
         "--batch-size",
         str(args.batch_size),
+        "--alpha-values",
+        *[format_alpha_value(value) for value in alpha_values],
         "--seed",
         str(args.seed),
         "--experiment-name",
@@ -1210,6 +1242,7 @@ def main() -> int:
         split=split,
         row_count=int(val_embeddings.shape[0]),
         label_names=label_names,
+        alpha_values=alpha_values,
         best_row=best_row,
         best_metrics=best_metrics,
         baseline_metrics=baseline_metrics,
@@ -1222,7 +1255,7 @@ def main() -> int:
     print(f"[saved] experiment_dir={experiment_dir}")
     print(
         "[best_config] "
-        f"alpha={float(best_row['alpha']):.1f} "
+        f"alpha={format_alpha_value(float(best_row['alpha']))} "
         f"macro_auroc={format_metric(best_metrics['macro_auroc'])} "
         f"macro_ap={format_metric(best_metrics['macro_average_precision'])} "
         f"macro_ece={format_metric(best_metrics['macro_ece'])} "
