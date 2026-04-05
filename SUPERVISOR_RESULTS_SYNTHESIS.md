@@ -1,6 +1,6 @@
 # Supervisor-Facing Results Synthesis for the NIH CXR14 Source-Stage Experiments
 
-All statements below are derived from the local experiment artifacts only, including the original fused-lineage artifacts (`exp0007`-`exp0012`) and the April 5, 2026 rerun artifacts (`exp0013`-`exp0018`). No external sources were needed for this write-up. Metric values are reproduced exactly as reported in the experiment summaries and supporting artifacts.
+All statements below are derived from the local experiment artifacts only, including the original fused-lineage artifacts (`exp0007`-`exp0012`), the April 5, 2026 rerun and retrieval-refinement artifacts (`exp0013`-`exp0026`), and the April 5, 2026 fusion-weight sweep artifacts (`exp0027`-`exp0046`). No external sources were needed for this write-up. Metric values are reproduced exactly as reported in the experiment summaries and supporting artifacts.
 
 ## 1. Key findings
 
@@ -315,3 +315,76 @@ The narrowest defensible supervisor-facing summary for this update is therefore:
 ### Recommendation after the fine-alpha check
 
 If the goal is strict adherence to validation-only selection, then `exp0025` supports using `alpha=0.74` as the updated validation winner on the original 100-epoch production retrieval branch. If the goal is stable production reporting with minimal complexity, `alpha=0.7` remains fully defensible because the fine-alpha sweep showed only a negligible validation gain and no convincing test-set improvement.
+
+## 9. 2026-04-05 Fusion-Weight Sweep Update: Downweighting The Text Branch Before Final Normalization
+
+This addendum records a targeted rerun that kept the fusion recipe fixed but swept the text-branch contribution before final L2 normalization. The copied upstream image and report embedding roots were reused directly: `exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test` for image embeddings and `exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test` for report embeddings. Before execution, the copied `train`, `val`, and `test` embedding artifacts for both branches were explicitly checked to be present and readable, so no upstream image-embedding or report-embedding generation was rerun for this update.
+
+### Fusion-weight sweep scope and experiment lineage
+
+- `exp0027`, `exp0029`, `exp0031`, `exp0033`, `exp0035`, `exp0037`: fused embedding generations with image weight fixed at `1.0` and text weights `0.50`, `0.75`, `1.00`, `1.25`, `1.50`, and `2.00`
+- `exp0028`, `exp0030`, `exp0032`, `exp0034`, `exp0036`, `exp0038`: corresponding 100-epoch frozen linear baselines for the six fusion settings
+- `exp0039` to `exp0041`: retrieval-memory build, validation memory-only sweep, and fine alpha sweep for the validation-leading candidate `text weight = 0.50`
+- `exp0042` to `exp0044`: the same retrieval and mixing evaluation path for the runner-up candidate `text weight = 0.75`
+- `exp0045` and `exp0046`: frozen test evaluation for the validation-selected winner only
+
+### What changed relative to the prior equal-weight branch
+
+- The original fused embedding root `exp0003__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2` used equal branch weights. Its metadata records `image.weight = 1.0` and `report.weight = 1.0`.
+- In this sweep, the image branch was held fixed at `1.0` and only the text branch weight was changed.
+- The fusion recipe itself was unchanged: concatenation, image-referenced row alignment, and final L2 normalization.
+- The downstream supervised baseline protocol was unchanged from the 100-epoch production line: `100` epochs with `patience = 4`.
+- To keep cost moderate, the retrieval and probability-mixing stages were run only for the top two weights from the baseline screen, namely `0.50` and `0.75`.
+- The retrieval validation grid remained the moderate production grid `k = [1, 3, 5, 10, 20, 50]` and `tau = [1, 5, 10, 20, 40]`, and the mixing stage again used the fine alpha grid `0.00, 0.01, ..., 1.00`.
+
+### Stage-1 baseline sweep results
+
+| Text weight | Validation macro AUROC | Validation macro AP | Test macro AUROC | Test macro AP |
+| --- | ---: | ---: | ---: | ---: |
+| `0.50` | `0.775530` | `0.160135` | `0.774630` | `0.160831` |
+| `0.75` | `0.775114` | `0.159902` | `0.774719` | `0.160710` |
+| `1.00` | `0.774447` | `0.159506` | `0.774642` | `0.160414` |
+| `1.25` | `0.773663` | `0.158935` | `0.774430` | `0.160028` |
+| `1.50` | `0.772827` | `0.158282` | `0.774126` | `0.159587` |
+| `2.00` | `0.771124` | `0.157103` | `0.773377` | `0.158557` |
+
+The baseline sweep was monotonic on validation: as the text branch was weighted more heavily, validation macro AUROC and validation macro AP both decreased. The equal-weight setting `text = 1.0` reproduced the existing 100-epoch equal-weight baseline almost exactly, which makes the sweep directly comparable to the prior production branch. Within this realized pipeline, the baseline evidence therefore supports a weaker text branch than the original equal-weight choice.
+
+### Finalist validation comparison after retrieval and probability mixing
+
+| Text weight | Selected `k` | Selected `tau` | Selected `alpha` | Validation mixed macro AUROC | Validation mixed macro AP |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| `0.50` | `50` | `1` | `0.74` | `0.775935` | `0.161408` |
+| `0.75` | `50` | `1` | `0.77` | `0.775439` | `0.161926` |
+
+The validation winner on the primary selection metric was therefore `text weight = 0.50`. The runner-up `0.75` achieved slightly higher validation macro AP, but it was lower on the primary selection metric of validation macro AUROC.
+
+### Comparison against the prior equal-weight branch
+
+#### Baseline comparison: prior equal-weight branch vs sweep winner
+
+| Metric | Prior equal-weight baseline (`exp0013`, text weight `1.0`) | Sweep winner baseline (`exp0028`, text weight `0.50`) | Delta |
+| --- | ---: | ---: | ---: |
+| Validation macro AUROC | `0.774447` | `0.775530` | `+0.001083` |
+| Validation macro AP | `0.159506` | `0.160135` | `+0.000629` |
+| Test macro AUROC | `0.774642` | `0.774630` | `-0.000012` |
+| Test macro AP | `0.160414` | `0.160831` | `+0.000417` |
+
+#### Final mixed comparison: prior equal-weight branch vs sweep winner
+
+| Metric | Prior equal-weight mixed branch (`exp0026`, text weight `1.0`) | Sweep winner mixed branch (`exp0046`, text weight `0.50`) | Delta |
+| --- | ---: | ---: | ---: |
+| Validation macro AUROC | `0.774865` | `0.775935` | `+0.001070` |
+| Validation macro AP | `0.162973` | `0.161408` | `-0.001565` |
+| Test macro AUROC | `0.775224` | `0.774877` | `-0.000347` |
+| Test macro AP | `0.160043` | `0.160280` | `+0.000237` |
+
+### Interpretation of the fusion-weight sweep
+
+The sweep gave a clear sensitivity result even though it did not produce a decisive new production winner. The strongest and most stable pattern is that equal weighting was not validation-optimal in this pipeline. On the baseline screen, reducing the text weight below `1.0` improved validation performance, and the best validation baseline occurred at `text weight = 0.50`. That pattern survived into the finalist retrieval-and-mixing stage, where `text weight = 0.50` also won on validation macro AUROC.
+
+However, the held-out test result is more mixed than the validation result. Relative to the prior equal-weight mixed branch, the new `text weight = 0.50` branch was slightly lower on test macro AUROC (`0.774877` versus `0.775224`) but slightly higher on test macro AP (`0.160280` versus `0.160043`). The effect sizes are very small in both directions. The narrowest defensible interpretation is therefore that the sweep usefully established that the text branch should probably be somewhat weaker than the image branch in this concat-fusion setup, but it did not yield a clear held-out mixed-model improvement over the prior equal-weight production branch.
+
+### Recommendation after the fusion-weight sweep
+
+If the goal is strict adherence to validation-only model selection, then the sweep supports using `text weight = 0.50`, with `k = 50`, `tau = 1`, and `alpha = 0.74`, as the validation-selected winner of this branch. If the goal is conservative supervisor-facing reporting, the safer statement is that the sweep was informative rather than transformative: it showed that equal weighting was not optimal on validation, but it did not produce a decisive test-set improvement over the prior equal-weight mixed system. That makes the sweep worth presenting as a targeted fusion-sensitivity analysis, not as an unambiguous replacement of the earlier branch.

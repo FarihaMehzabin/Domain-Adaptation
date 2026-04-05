@@ -1,0 +1,4463 @@
+{
+  "applied_config": {
+    "alpha": 0.74
+  },
+  "argv": [
+    "/workspace/scripts/09_evaluate_probability_mixing_test.py",
+    "--memory-test-root",
+    "/workspace/experiments/exp0045__source_memory_only_test_evaluation__nih_cxr14_txtw050_test_e100_p4",
+    "--mixing-selection-root",
+    "/workspace/experiments/exp0041__source_probability_mixing_evaluation__nih_cxr14_txtw050_val_e100_p4_alpha_fine_001",
+    "--baseline-experiment-dir",
+    "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4",
+    "--query-embedding-root",
+    "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+    "--manifest-csv",
+    "/workspace/manifest_nih_cxr14_all14.csv",
+    "--split",
+    "test",
+    "--batch-size",
+    "2048",
+    "--seed",
+    "3407",
+    "--experiment-name",
+    "exp0046__source_probability_mixing_test_evaluation__nih_cxr14_txtw050_test_e100_p4_alpha_fine_001"
+  ],
+  "artifacts": {
+    "applied_config": "/workspace/experiments/exp0046__source_probability_mixing_test_evaluation__nih_cxr14_txtw050_test_e100_p4_alpha_fine_001/applied_config.json",
+    "experiment_meta": "/workspace/experiments/exp0046__source_probability_mixing_test_evaluation__nih_cxr14_txtw050_test_e100_p4_alpha_fine_001/experiment_meta.json",
+    "recreation_report": "/workspace/experiments/exp0046__source_probability_mixing_test_evaluation__nih_cxr14_txtw050_test_e100_p4_alpha_fine_001/recreation_report.md",
+    "summary": "/workspace/experiments/exp0046__source_probability_mixing_test_evaluation__nih_cxr14_txtw050_test_e100_p4_alpha_fine_001/probability_mixing_test_summary.md",
+    "test_metrics": "/workspace/experiments/exp0046__source_probability_mixing_test_evaluation__nih_cxr14_txtw050_test_e100_p4_alpha_fine_001/test_metrics.json",
+    "test_mixed_probabilities": "/workspace/experiments/exp0046__source_probability_mixing_test_evaluation__nih_cxr14_txtw050_test_e100_p4_alpha_fine_001/test_mixed_probabilities.npy"
+  },
+  "baseline_experiment_dir": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4",
+  "baseline_reconstruction": {
+    "batch_size": 2048,
+    "checkpoint_epoch": 100,
+    "checkpoint_label_names": [
+      "atelectasis",
+      "cardiomegaly",
+      "consolidation",
+      "edema",
+      "pleural_effusion",
+      "emphysema",
+      "fibrosis",
+      "hernia",
+      "infiltration",
+      "mass",
+      "nodule",
+      "pleural_thickening",
+      "pneumonia",
+      "pneumothorax"
+    ],
+    "input_dim": 2176,
+    "output_dim": 14
+  },
+  "baseline_reconstruction_metric_check": {
+    "comparison_scope": "forward_metrics_plus_frozen_val_threshold_f1_on_test",
+    "macro": {
+      "macro_auroc": {
+        "archived": 0.7746295393976524,
+        "delta": -1.5909076760411978e-06,
+        "reconstructed": 0.7746279484899764
+      },
+      "macro_average_precision": {
+        "archived": 0.16083075319675372,
+        "delta": -3.9803611573685505e-06,
+        "reconstructed": 0.16082677283559635
+      },
+      "macro_ece": {
+        "archived": 0.3221353678697777,
+        "delta": 1.1127194816995534e-05,
+        "reconstructed": 0.3221464950645947
+      },
+      "macro_f1_at_0.5": {
+        "archived": 0.18015367729000284,
+        "delta": 7.760914802756869e-07,
+        "reconstructed": 0.18015445338148312
+      },
+      "macro_f1_at_frozen_thresholds": {
+        "archived": 0.22150581657234264,
+        "delta": 1.209900287540977e-06,
+        "reconstructed": 0.22150702647263018
+      }
+    },
+    "matches_archived_metrics_within_5e-4": true,
+    "max_abs_delta": 0.00019334857047376142,
+    "per_label": {
+      "atelectasis": {
+        "auroc": {
+          "archived": 0.742989451905292,
+          "delta": -2.2098190710639898e-06,
+          "reconstructed": 0.7429872420862209
+        },
+        "average_precision": {
+          "archived": 0.24037178819251626,
+          "delta": -9.750131337638024e-06,
+          "reconstructed": 0.24036203806117862
+        },
+        "ece": {
+          "archived": 0.30695060484685344,
+          "delta": 3.9093707207560335e-06,
+          "reconstructed": 0.3069545142175742
+        },
+        "f1_at_0.5": {
+          "archived": 0.30288651640964814,
+          "delta": 0.0,
+          "reconstructed": 0.30288651640964814
+        },
+        "f1_at_frozen_threshold": {
+          "archived": 0.3141968325791855,
+          "delta": 4.4434568318374446e-05,
+          "reconstructed": 0.3142412671475039
+        }
+      },
+      "cardiomegaly": {
+        "auroc": {
+          "archived": 0.8109479851644428,
+          "delta": -2.104980262984668e-06,
+          "reconstructed": 0.8109458801841798
+        },
+        "average_precision": {
+          "archived": 0.16563399891364414,
+          "delta": 1.5193050994483093e-05,
+          "reconstructed": 0.16564919196463862
+        },
+        "ece": {
+          "archived": 0.2844645106140908,
+          "delta": 1.0232521200193023e-05,
+          "reconstructed": 0.284474743135291
+        },
+        "f1_at_0.5": {
+          "archived": 0.14850136239782016,
+          "delta": 0.0,
+          "reconstructed": 0.14850136239782016
+        },
+        "f1_at_frozen_threshold": {
+          "archived": 0.24344317417619368,
+          "delta": 0.00016382447791124521,
+          "reconstructed": 0.24360699865410493
+        }
+      },
+      "consolidation": {
+        "auroc": {
+          "archived": 0.7800687720360567,
+          "delta": 5.453882538364319e-06,
+          "reconstructed": 0.7800742259185951
+        },
+        "average_precision": {
+          "archived": 0.11957424726976291,
+          "delta": 2.010450306597078e-05,
+          "reconstructed": 0.11959435177282889
+        },
+        "ece": {
+          "archived": 0.3412770717163594,
+          "delta": -2.888137120016232e-07,
+          "reconstructed": 0.3412767829026474
+        },
+        "f1_at_0.5": {
+          "archived": 0.17819681791396583,
+          "delta": -2.09989179724146e-05,
+          "reconstructed": 0.1781758189959934
+        },
+        "f1_at_frozen_threshold": {
+          "archived": 0.17265143271672106,
+          "delta": 0.0,
+          "reconstructed": 0.17265143271672106
+        }
+      },
+      "edema": {
+        "auroc": {
+          "archived": 0.8856073553493635,
+          "delta": -4.02414865474654e-06,
+          "reconstructed": 0.8856033312007088
+        },
+        "average_precision": {
+          "archived": 0.12244080540844443,
+          "delta": -4.361426366839005e-05,
+          "reconstructed": 0.12239719114477604
+        },
+        "ece": {
+          "archived": 0.23476950360007734,
+          "delta": 1.9717827433263224e-05,
+          "reconstructed": 0.2347892214275106
+        },
+        "f1_at_0.5": {
+          "archived": 0.14942776938026345,
+          "delta": 0.0,
+          "reconstructed": 0.14942776938026345
+        },
+        "f1_at_frozen_threshold": {
+          "archived": 0.20493642483171276,
+          "delta": 0.0,
+          "reconstructed": 0.20493642483171276
+        }
+      },
+      "emphysema": {
+        "auroc": {
+          "archived": 0.8475604582492338,
+          "delta": -7.942737534349931e-07,
+          "reconstructed": 0.8475596639754803
+        },
+        "average_precision": {
+          "archived": 0.189310671482744,
+          "delta": -5.484902493432808e-05,
+          "reconstructed": 0.18925582245780967
+        },
+        "ece": {
+          "archived": 0.34301272042632175,
+          "delta": -2.1735714673121187e-06,
+          "reconstructed": 0.34301054685485444
+        },
+        "f1_at_0.5": {
+          "archived": 0.12232128890974504,
+          "delta": 0.0,
+          "reconstructed": 0.12232128890974504
+        },
+        "f1_at_frozen_threshold": {
+          "archived": 0.250386398763524,
+          "delta": -0.00019334857047376142,
+          "reconstructed": 0.2501930501930502
+        }
+      },
+      "fibrosis": {
+        "auroc": {
+          "archived": 0.759824756284612,
+          "delta": -1.2225310641600373e-06,
+          "reconstructed": 0.7598235337535478
+        },
+        "average_precision": {
+          "archived": 0.048284062373835555,
+          "delta": -4.612685944406503e-06,
+          "reconstructed": 0.04827944968789115
+        },
+        "ece": {
+          "archived": 0.34874667951587457,
+          "delta": 1.3036970989976915e-06,
+          "reconstructed": 0.34874798321297357
+        },
+        "f1_at_0.5": {
+          "archived": 0.06412213740458016,
+          "delta": 0.0,
+          "reconstructed": 0.06412213740458016
+        },
+        "f1_at_frozen_threshold": {
+          "archived": 0.08610567514677103,
+          "delta": 0.0,
+          "reconstructed": 0.08610567514677103
+        }
+      },
+      "hernia": {
+        "auroc": {
+          "archived": 0.8049967181995902,
+          "delta": -7.67327433970344e-06,
+          "reconstructed": 0.8049890449252505
+        },
+        "average_precision": {
+          "archived": 0.010360610870221354,
+          "delta": -1.8096647054609977e-06,
+          "reconstructed": 0.010358801205515893
+        },
+        "ece": {
+          "archived": 0.25338345425806785,
+          "delta": 9.01245320794608e-06,
+          "reconstructed": 0.2533924667112758
+        },
+        "f1_at_0.5": {
+          "archived": 0.01232394366197183,
+          "delta": 0.0,
+          "reconstructed": 0.01232394366197183
+        },
+        "f1_at_frozen_threshold": {
+          "archived": 0.03686635944700461,
+          "delta": 0.0,
+          "reconstructed": 0.03686635944700461
+        }
+      },
+      "infiltration": {
+        "auroc": {
+          "archived": 0.6814197931550156,
+          "delta": 5.580872253219127e-08,
+          "reconstructed": 0.6814198489637381
+        },
+        "average_precision": {
+          "archived": 0.3159070160015774,
+          "delta": 1.1956693930226248e-05,
+          "reconstructed": 0.3159189726955076
+        },
+        "ece": {
+          "archived": 0.2747294810136841,
+          "delta": 1.6602232965789998e-05,
+          "reconstructed": 0.2747460832466499
+        },
+        "f1_at_0.5": {
+          "archived": 0.3806896551724138,
+          "delta": 0.0,
+          "reconstructed": 0.3806896551724138
+        },
+        "f1_at_frozen_threshold": {
+          "archived": 0.37455905932656336,
+          "delta": 0.0,
+          "reconstructed": 0.37455905932656336
+        }
+      },
+      "mass": {
+        "auroc": {
+          "archived": 0.7445579565719123,
+          "delta": -1.1410511819853753e-06,
+          "reconstructed": 0.7445568155207303
+        },
+        "average_precision": {
+          "archived": 0.1405112069384509,
+          "delta": -2.5058978030956247e-06,
+          "reconstructed": 0.1405087010406478
+        },
+        "ece": {
+          "archived": 0.3793330005283664,
+          "delta": -8.882581345404095e-06,
+          "reconstructed": 0.379324117947021
+        },
+        "f1_at_0.5": {
+          "archived": 0.19021080688151198,
+          "delta": 4.610053487194565e-05,
+          "reconstructed": 0.19025690741638393
+        },
+        "f1_at_frozen_threshold": {
+          "archived": 0.23054755043227665,
+          "delta": 5.5380146632755256e-05,
+          "reconstructed": 0.2306029305789094
+        }
+      },
+      "nodule": {
+        "auroc": {
+          "archived": 0.6908042111086666,
+          "delta": -1.8793975986586275e-06,
+          "reconstructed": 0.690802331711068
+        },
+        "average_precision": {
+          "archived": 0.14010277574990168,
+          "delta": 1.0347622166451131e-05,
+          "reconstructed": 0.14011312337206813
+        },
+        "ece": {
+          "archived": 0.3931319076985871,
+          "delta": 1.9758965677352247e-05,
+          "reconstructed": 0.39315166666426443
+        },
+        "f1_at_0.5": {
+          "archived": 0.16897187644075612,
+          "delta": -5.840714705868111e-05,
+          "reconstructed": 0.16891346929369744
+        },
+        "f1_at_frozen_threshold": {
+          "archived": 0.20262349986045214,
+          "delta": -0.00016951213039079205,
+          "reconstructed": 0.20245398773006135
+        }
+      },
+      "pleural_effusion": {
+        "auroc": {
+          "archived": 0.8247100734011512,
+          "delta": -1.0116323265751959e-06,
+          "reconstructed": 0.8247090617688246
+        },
+        "average_precision": {
+          "archived": 0.4067613657554052,
+          "delta": 1.9154104271668082e-05,
+          "reconstructed": 0.4067805198596769
+        },
+        "ece": {
+          "archived": 0.2581784943017091,
+          "delta": 4.569561022199631e-05,
+          "reconstructed": 0.2582241899119311
+        },
+        "f1_at_0.5": {
+          "archived": 0.41435257410296406,
+          "delta": 0.0,
+          "reconstructed": 0.41435257410296406
+        },
+        "f1_at_frozen_threshold": {
+          "archived": 0.44657332350773765,
+          "delta": 6.582743565852756e-05,
+          "reconstructed": 0.4466391509433962
+        }
+      },
+      "pleural_thickening": {
+        "auroc": {
+          "archived": 0.729010912830649,
+          "delta": -4.0434416214152336e-06,
+          "reconstructed": 0.7290068693890276
+        },
+        "average_precision": {
+          "archived": 0.07059555908775468,
+          "delta": -3.388650616636957e-07,
+          "reconstructed": 0.07059522022269302
+        },
+        "ece": {
+          "archived": 0.3911511243738405,
+          "delta": -1.9423284053354806e-07,
+          "reconstructed": 0.39115093014099994
+        },
+        "f1_at_0.5": {
+          "archived": 0.11263556775120867,
+          "delta": 4.417081088284314e-05,
+          "reconstructed": 0.11267973856209151
+        },
+        "f1_at_frozen_threshold": {
+          "archived": 0.13383458646616542,
+          "delta": 5.033267636936345e-05,
+          "reconstructed": 0.13388491914253478
+        }
+      },
+      "pneumonia": {
+        "auroc": {
+          "archived": 0.7115494326844044,
+          "delta": 1.5551638724575767e-06,
+          "reconstructed": 0.7115509878482769
+        },
+        "average_precision": {
+          "archived": 0.029553250172567824,
+          "delta": 1.6984206464426554e-06,
+          "reconstructed": 0.029554948593214267
+        },
+        "ece": {
+          "archived": 0.370947946287359,
+          "delta": 4.484280816641206e-05,
+          "reconstructed": 0.3709927890955254
+        },
+        "f1_at_0.5": {
+          "archived": 0.052131032053539986,
+          "delta": 0.0,
+          "reconstructed": 0.052131032053539986
+        },
+        "f1_at_frozen_threshold": {
+          "archived": 0.06438896189224705,
+          "delta": 0.0,
+          "reconstructed": 0.06438896189224705
+        }
+      },
+      "pneumothorax": {
+        "auroc": {
+          "archived": 0.8307656746267453,
+          "delta": -3.2330127255342234e-06,
+          "reconstructed": 0.8307624416140198
+        },
+        "average_precision": {
+          "archived": 0.2522231865377255,
+          "delta": -1.6698917823076975e-05,
+          "reconstructed": 0.25220648761990244
+        },
+        "ece": {
+          "archived": 0.3298186509956967,
+          "delta": -3.7555598893512787e-06,
+          "reconstructed": 0.32981489543580733
+        },
+        "f1_at_0.5": {
+          "archived": 0.2253801335796504,
+          "delta": 0.0,
+          "reconstructed": 0.2253801335796504
+        },
+        "f1_at_frozen_threshold": {
+          "archived": 0.339968152866242,
+          "delta": 0.0,
+          "reconstructed": 0.339968152866242
+        }
+      }
+    }
+  },
+  "baseline_test_metrics": {
+    "macro_auroc": 0.7746279484899764,
+    "macro_average_precision": 0.16082677283559635,
+    "macro_ece": 0.3221464950645947,
+    "macro_f1_at_0.5": 0.18015445338148312,
+    "macro_f1_at_frozen_thresholds": 0.22150702647263018,
+    "per_label": {
+      "atelectasis": {
+        "auroc": 0.7429872420862209,
+        "average_precision": 0.24036203806117862,
+        "ece": 0.3069545142175742,
+        "f1_at_0.5": 0.30288651640964814,
+        "f1_at_frozen_threshold": 0.3142412671475039,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.34179743223965764,
+          "prevalence_on_val": 0.10268294856939121,
+          "threshold": 0.5985468741948544
+        },
+        "positive_count": 2305,
+        "threshold": 0.5985468626022339
+      },
+      "cardiomegaly": {
+        "auroc": 0.8109458801841798,
+        "average_precision": 0.16564919196463862,
+        "ece": 0.284474743135291,
+        "f1_at_0.5": 0.14850136239782016,
+        "f1_at_frozen_threshold": 0.24360699865410493,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.25121951219512195,
+          "prevalence_on_val": 0.027007754701845084,
+          "threshold": 0.7327830999605387
+        },
+        "positive_count": 534,
+        "threshold": 0.7327830791473389
+      },
+      "consolidation": {
+        "auroc": 0.7800742259185951,
+        "average_precision": 0.11959435177282889,
+        "ece": 0.3412767829026474,
+        "f1_at_0.5": 0.1781758189959934,
+        "f1_at_frozen_threshold": 0.17265143271672106,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.17162162162162162,
+          "prevalence_on_val": 0.04046706480078438,
+          "threshold": 0.7516481568828648
+        },
+        "positive_count": 988,
+        "threshold": 0.7516481280326843
+      },
+      "edema": {
+        "auroc": 0.8856033312007088,
+        "average_precision": 0.12239719114477604,
+        "ece": 0.2347892214275106,
+        "f1_at_0.5": 0.14942776938026345,
+        "f1_at_frozen_threshold": 0.20493642483171276,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.20672478206724781,
+          "prevalence_on_val": 0.022551029503520812,
+          "threshold": 0.8478418186787678
+        },
+        "positive_count": 437,
+        "threshold": 0.8478417992591858
+      },
+      "emphysema": {
+        "auroc": 0.8475596639754803,
+        "average_precision": 0.18925582245780967,
+        "ece": 0.34301054685485444,
+        "f1_at_0.5": 0.12232128890974504,
+        "f1_at_frozen_threshold": 0.2501930501930502,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.21363636363636362,
+          "prevalence_on_val": 0.01729209376949817,
+          "threshold": 0.9149009549929797
+        },
+        "positive_count": 490,
+        "threshold": 0.9149009585380554
+      },
+      "fibrosis": {
+        "auroc": 0.7598235337535478,
+        "average_precision": 0.04827944968789115,
+        "ece": 0.34874798321297357,
+        "f1_at_0.5": 0.06412213740458016,
+        "f1_at_frozen_threshold": 0.08610567514677103,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.14615384615384616,
+          "prevalence_on_val": 0.014083251626704697,
+          "threshold": 0.8397339676722393
+        },
+        "positive_count": 297,
+        "threshold": 0.8397339582443237
+      },
+      "hernia": {
+        "auroc": 0.8049890449252505,
+        "average_precision": 0.010358801205515893,
+        "ece": 0.2533924667112758,
+        "f1_at_0.5": 0.01232394366197183,
+        "f1_at_frozen_threshold": 0.03686635944700461,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.08333333333333333,
+          "prevalence_on_val": 0.0028523041269275335,
+          "threshold": 0.8614216740349067
+        },
+        "positive_count": 38,
+        "threshold": 0.8614216446876526
+      },
+      "infiltration": {
+        "auroc": 0.6814198489637381,
+        "average_precision": 0.3159189726955076,
+        "ece": 0.2747460832466499,
+        "f1_at_0.5": 0.3806896551724138,
+        "f1_at_frozen_threshold": 0.37455905932656336,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.40751211631663975,
+          "prevalence_on_val": 0.17951689098850165,
+          "threshold": 0.5461028068686584
+        },
+        "positive_count": 3886,
+        "threshold": 0.5461028218269348
+      },
+      "mass": {
+        "auroc": 0.7445568155207303,
+        "average_precision": 0.1405087010406478,
+        "ece": 0.379324117947021,
+        "f1_at_0.5": 0.19025690741638393,
+        "f1_at_frozen_threshold": 0.2306029305789094,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.22050489438433796,
+          "prevalence_on_val": 0.052054550316427486,
+          "threshold": 0.6561076251832212
+        },
+        "positive_count": 1181,
+        "threshold": 0.6561076045036316
+      },
+      "nodule": {
+        "auroc": 0.690802331711068,
+        "average_precision": 0.14011312337206813,
+        "ece": 0.39315166666426443,
+        "f1_at_0.5": 0.16891346929369744,
+        "f1_at_frozen_threshold": 0.20245398773006135,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.1875,
+          "prevalence_on_val": 0.05882877261788038,
+          "threshold": 0.6512439718513098
+        },
+        "positive_count": 1236,
+        "threshold": 0.6512439846992493
+      },
+      "pleural_effusion": {
+        "auroc": 0.8247090617688246,
+        "average_precision": 0.4067805198596769,
+        "ece": 0.2582241899119311,
+        "f1_at_0.5": 0.41435257410296406,
+        "f1_at_frozen_threshold": 0.4466391509433962,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.46230566148430624,
+          "prevalence_on_val": 0.12389696051341474,
+          "threshold": 0.6613763197684221
+        },
+        "positive_count": 2635,
+        "threshold": 0.6613762974739075
+      },
+      "pleural_thickening": {
+        "auroc": 0.7290068693890276,
+        "average_precision": 0.07059522022269302,
+        "ece": 0.39115093014099994,
+        "f1_at_0.5": 0.11267973856209151,
+        "f1_at_frozen_threshold": 0.13388491914253478,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.14577777777777778,
+          "prevalence_on_val": 0.027542561725643996,
+          "threshold": 0.7196792399871031
+        },
+        "positive_count": 662,
+        "threshold": 0.7196792364120483
+      },
+      "pneumonia": {
+        "auroc": 0.7115509878482769,
+        "average_precision": 0.029554948593214267,
+        "ece": 0.3709927890955254,
+        "f1_at_0.5": 0.052131032053539986,
+        "f1_at_frozen_threshold": 0.06438896189224705,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.0955223880597015,
+          "prevalence_on_val": 0.013013637579106872,
+          "threshold": 0.7193836258234395
+        },
+        "positive_count": 277,
+        "threshold": 0.7193835973739624
+      },
+      "pneumothorax": {
+        "auroc": 0.8307624416140198,
+        "average_precision": 0.25220648761990244,
+        "ece": 0.32981489543580733,
+        "f1_at_0.5": 0.2253801335796504,
+        "f1_at_frozen_threshold": 0.339968152866242,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.3193577163247101,
+          "prevalence_on_val": 0.044923789999108656,
+          "threshold": 0.8648820820120467
+        },
+        "positive_count": 1054,
+        "threshold": 0.8648821115493774
+      }
+    },
+    "thresholds": {
+      "atelectasis": {
+        "best_f1_on_val": 0.34179743223965764,
+        "prevalence_on_val": 0.10268294856939121,
+        "threshold": 0.5985468741948544
+      },
+      "cardiomegaly": {
+        "best_f1_on_val": 0.25121951219512195,
+        "prevalence_on_val": 0.027007754701845084,
+        "threshold": 0.7327830999605387
+      },
+      "consolidation": {
+        "best_f1_on_val": 0.17162162162162162,
+        "prevalence_on_val": 0.04046706480078438,
+        "threshold": 0.7516481568828648
+      },
+      "edema": {
+        "best_f1_on_val": 0.20672478206724781,
+        "prevalence_on_val": 0.022551029503520812,
+        "threshold": 0.8478418186787678
+      },
+      "emphysema": {
+        "best_f1_on_val": 0.21363636363636362,
+        "prevalence_on_val": 0.01729209376949817,
+        "threshold": 0.9149009549929797
+      },
+      "fibrosis": {
+        "best_f1_on_val": 0.14615384615384616,
+        "prevalence_on_val": 0.014083251626704697,
+        "threshold": 0.8397339676722393
+      },
+      "hernia": {
+        "best_f1_on_val": 0.08333333333333333,
+        "prevalence_on_val": 0.0028523041269275335,
+        "threshold": 0.8614216740349067
+      },
+      "infiltration": {
+        "best_f1_on_val": 0.40751211631663975,
+        "prevalence_on_val": 0.17951689098850165,
+        "threshold": 0.5461028068686584
+      },
+      "mass": {
+        "best_f1_on_val": 0.22050489438433796,
+        "prevalence_on_val": 0.052054550316427486,
+        "threshold": 0.6561076251832212
+      },
+      "nodule": {
+        "best_f1_on_val": 0.1875,
+        "prevalence_on_val": 0.05882877261788038,
+        "threshold": 0.6512439718513098
+      },
+      "pleural_effusion": {
+        "best_f1_on_val": 0.46230566148430624,
+        "prevalence_on_val": 0.12389696051341474,
+        "threshold": 0.6613763197684221
+      },
+      "pleural_thickening": {
+        "best_f1_on_val": 0.14577777777777778,
+        "prevalence_on_val": 0.027542561725643996,
+        "threshold": 0.7196792399871031
+      },
+      "pneumonia": {
+        "best_f1_on_val": 0.0955223880597015,
+        "prevalence_on_val": 0.013013637579106872,
+        "threshold": 0.7193836258234395
+      },
+      "pneumothorax": {
+        "best_f1_on_val": 0.3193577163247101,
+        "prevalence_on_val": 0.044923789999108656,
+        "threshold": 0.8648820820120467
+      }
+    }
+  },
+  "delta_vs_baseline": {
+    "macro_auroc": 0.00024901626392248577,
+    "macro_average_precision": -0.0005472354082850517,
+    "macro_ece": -0.08445800023055852,
+    "macro_f1_at_0.5": 0.028186572088311046,
+    "macro_f1_at_frozen_thresholds": -0.0017016157551807687
+  },
+  "experiment_dir": "/workspace/experiments/exp0046__source_probability_mixing_test_evaluation__nih_cxr14_txtw050_test_e100_p4_alpha_fine_001",
+  "experiment_id": "exp0046",
+  "experiment_name": "exp0046__source_probability_mixing_test_evaluation__nih_cxr14_txtw050_test_e100_p4_alpha_fine_001",
+  "experiment_number": 46,
+  "frozen_threshold_source": {
+    "path": "/workspace/experiments/exp0041__source_probability_mixing_evaluation__nih_cxr14_txtw050_val_e100_p4_alpha_fine_001/best_val_metrics.json",
+    "thresholds": {
+      "atelectasis": {
+        "best_f1_on_val": 0.3409350057012543,
+        "prevalence_on_val": 0.10268294856939121,
+        "threshold": 0.480777770280838
+      },
+      "cardiomegaly": {
+        "best_f1_on_val": 0.2554838709677419,
+        "prevalence_on_val": 0.027007754701845084,
+        "threshold": 0.5605528354644775
+      },
+      "consolidation": {
+        "best_f1_on_val": 0.1735419630156472,
+        "prevalence_on_val": 0.04046706480078438,
+        "threshold": 0.5872424840927124
+      },
+      "edema": {
+        "best_f1_on_val": 0.20689655172413796,
+        "prevalence_on_val": 0.022551029503520812,
+        "threshold": 0.6823241114616394
+      },
+      "emphysema": {
+        "best_f1_on_val": 0.19964349376114082,
+        "prevalence_on_val": 0.01729209376949817,
+        "threshold": 0.6755168437957764
+      },
+      "fibrosis": {
+        "best_f1_on_val": 0.16077170418006428,
+        "prevalence_on_val": 0.014083251626704697,
+        "threshold": 0.6175682544708252
+      },
+      "hernia": {
+        "best_f1_on_val": 0.08450704225352113,
+        "prevalence_on_val": 0.0028523041269275335,
+        "threshold": 0.6270456314086914
+      },
+      "infiltration": {
+        "best_f1_on_val": 0.40743767879035553,
+        "prevalence_on_val": 0.17951689098850165,
+        "threshold": 0.4620649218559265
+      },
+      "mass": {
+        "best_f1_on_val": 0.22541201488569906,
+        "prevalence_on_val": 0.052054550316427486,
+        "threshold": 0.5084910988807678
+      },
+      "nodule": {
+        "best_f1_on_val": 0.18453082057322343,
+        "prevalence_on_val": 0.05882877261788038,
+        "threshold": 0.4587520956993103
+      },
+      "pleural_effusion": {
+        "best_f1_on_val": 0.46526376477371,
+        "prevalence_on_val": 0.12389696051341474,
+        "threshold": 0.5331145524978638
+      },
+      "pleural_thickening": {
+        "best_f1_on_val": 0.1460147354320161,
+        "prevalence_on_val": 0.027542561725643996,
+        "threshold": 0.5097249150276184
+      },
+      "pneumonia": {
+        "best_f1_on_val": 0.09371428571428571,
+        "prevalence_on_val": 0.013013637579106872,
+        "threshold": 0.5534635186195374
+      },
+      "pneumothorax": {
+        "best_f1_on_val": 0.31603053435114503,
+        "prevalence_on_val": 0.044923789999108656,
+        "threshold": 0.6458160877227783
+      }
+    }
+  },
+  "label_columns": [
+    "label_atelectasis",
+    "label_cardiomegaly",
+    "label_consolidation",
+    "label_edema",
+    "label_pleural_effusion",
+    "label_emphysema",
+    "label_fibrosis",
+    "label_hernia",
+    "label_infiltration",
+    "label_mass",
+    "label_nodule",
+    "label_pleural_thickening",
+    "label_pneumonia",
+    "label_pneumothorax"
+  ],
+  "label_names": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion",
+    "emphysema",
+    "fibrosis",
+    "hernia",
+    "infiltration",
+    "mass",
+    "nodule",
+    "pleural_thickening",
+    "pneumonia",
+    "pneumothorax"
+  ],
+  "manifest_csv": "/workspace/manifest_nih_cxr14_all14.csv",
+  "memory_test_config": {
+    "k": 50,
+    "selection_metric": "macro_auroc",
+    "selection_mode": "frozen_validation_config",
+    "selection_root": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4",
+    "selection_trace": {
+      "final_candidates": 1,
+      "k_tied_candidates": 1,
+      "macro_auroc_tied_candidates": 1,
+      "macro_average_precision_tied_candidates": 1,
+      "max_macro_auroc": 0.6833095782624247,
+      "max_macro_average_precision_within_auroc_ties": 0.12520247506956086,
+      "selected_tau_after_k_tie_break": 1.0,
+      "smallest_k_within_metric_ties": 50,
+      "tie_break_rule": [
+        "highest validation macro AUROC",
+        "higher validation macro average precision",
+        "smaller k",
+        "tau = 10 if among tied settings, otherwise smaller tau"
+      ]
+    },
+    "tau": 1.0,
+    "threshold_source": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4/best_val_metrics.json"
+  },
+  "memory_test_metrics": {
+    "macro_auroc": 0.6827495484876319,
+    "macro_average_precision": 0.12480707362938029,
+    "macro_ece": 0.008228143558452394,
+    "macro_f1_at_0.5": 0.008520278898076085,
+    "macro_f1_at_frozen_thresholds": 0.17896413297052188,
+    "per_label": {
+      "atelectasis": {
+        "auroc": 0.685879310298136,
+        "average_precision": 0.18769791917467588,
+        "ece": 0.01156540325597976,
+        "f1_at_0.5": 0.0,
+        "f1_at_frozen_threshold": 0.2673336112269001,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.29405225125069484,
+          "prevalence_on_val": 0.10268294856939121,
+          "threshold": 0.1597757488489151
+        },
+        "positive_count": 2305,
+        "threshold": 0.1597757488489151
+      },
+      "cardiomegaly": {
+        "auroc": 0.6511903792263708,
+        "average_precision": 0.06590254477161561,
+        "ece": 0.006669807110767539,
+        "f1_at_0.5": 0.0,
+        "f1_at_frozen_threshold": 0.12450331125827814,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.14746543778801843,
+          "prevalence_on_val": 0.027007754701845084,
+          "threshold": 0.06016234681010246
+        },
+        "positive_count": 534,
+        "threshold": 0.06016234681010246
+      },
+      "consolidation": {
+        "auroc": 0.749059892925584,
+        "average_precision": 0.11307465858006191,
+        "ece": 0.008488209991462683,
+        "f1_at_0.5": 0.0,
+        "f1_at_frozen_threshold": 0.19392624728850325,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.1674704077159141,
+          "prevalence_on_val": 0.04046706480078438,
+          "threshold": 0.09942301362752914
+        },
+        "positive_count": 988,
+        "threshold": 0.09942301362752914
+      },
+      "edema": {
+        "auroc": 0.824905215620679,
+        "average_precision": 0.10329630530326711,
+        "ece": 0.0043303490705217575,
+        "f1_at_0.5": 0.0,
+        "f1_at_frozen_threshold": 0.16833333333333333,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.20168067226890757,
+          "prevalence_on_val": 0.022551029503520812,
+          "threshold": 0.13972635567188263
+        },
+        "positive_count": 437,
+        "threshold": 0.13972635567188263
+      },
+      "emphysema": {
+        "auroc": 0.7611793563579278,
+        "average_precision": 0.12358825237716649,
+        "ece": 0.0023323117321181123,
+        "f1_at_0.5": 0.0,
+        "f1_at_frozen_threshold": 0.1998572448251249,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.16074766355140188,
+          "prevalence_on_val": 0.01729209376949817,
+          "threshold": 0.11990052461624146
+        },
+        "positive_count": 490,
+        "threshold": 0.11990052461624146
+      },
+      "fibrosis": {
+        "auroc": 0.6305653243428399,
+        "average_precision": 0.02773175984497278,
+        "ece": 0.0015408745707849781,
+        "f1_at_0.5": 0.0,
+        "f1_at_frozen_threshold": 0.034285714285714294,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.07216494845360824,
+          "prevalence_on_val": 0.014083251626704697,
+          "threshold": 0.11923060566186905
+        },
+        "positive_count": 297,
+        "threshold": 0.11923060566186905
+      },
+      "hernia": {
+        "auroc": 0.6049662612029806,
+        "average_precision": 0.006024601488976681,
+        "ece": 4.688553525442583e-06,
+        "f1_at_0.5": 0.0,
+        "f1_at_frozen_threshold": 0.01680672268907563,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.025974025974025972,
+          "prevalence_on_val": 0.0028523041269275335,
+          "threshold": 0.039976831525564194
+        },
+        "positive_count": 38,
+        "threshold": 0.039976831525564194
+      },
+      "infiltration": {
+        "auroc": 0.6533329373704471,
+        "average_precision": 0.292474068887027,
+        "ece": 0.024973219373016095,
+        "f1_at_0.5": 0.05904761904761904,
+        "f1_at_frozen_threshold": 0.36056338028169016,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.38488872264821394,
+          "prevalence_on_val": 0.17951689098850165,
+          "threshold": 0.20011360943317413
+        },
+        "positive_count": 3886,
+        "threshold": 0.20011360943317413
+      },
+      "mass": {
+        "auroc": 0.6514085035698287,
+        "average_precision": 0.10398106449266617,
+        "ece": 0.010338945647528954,
+        "f1_at_0.5": 0.0,
+        "f1_at_frozen_threshold": 0.17345505617977527,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.19188191881918823,
+          "prevalence_on_val": 0.052054550316427486,
+          "threshold": 0.10040873289108276
+        },
+        "positive_count": 1181,
+        "threshold": 0.10040873289108276
+      },
+      "nodule": {
+        "auroc": 0.5883535495146859,
+        "average_precision": 0.09623336651133081,
+        "ece": 0.014893088186309038,
+        "f1_at_0.5": 0.0,
+        "f1_at_frozen_threshold": 0.1363080684596577,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.13887307911212293,
+          "prevalence_on_val": 0.05882877261788038,
+          "threshold": 0.10015537589788437
+        },
+        "positive_count": 1236,
+        "threshold": 0.10015537589788437
+      },
+      "pleural_effusion": {
+        "auroc": 0.7862875550436375,
+        "average_precision": 0.3422113261008194,
+        "ece": 0.011866419266223692,
+        "f1_at_0.5": 0.043382352941176476,
+        "f1_at_frozen_threshold": 0.39077558513079397,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.41364902506963785,
+          "prevalence_on_val": 0.12389696051341474,
+          "threshold": 0.15985353291034698
+        },
+        "positive_count": 2635,
+        "threshold": 0.15985353291034698
+      },
+      "pleural_thickening": {
+        "auroc": 0.6350344626712258,
+        "average_precision": 0.056432322720782156,
+        "ece": 0.006724818599895409,
+        "f1_at_0.5": 0.0,
+        "f1_at_frozen_threshold": 0.11444652908067543,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.10799584631360332,
+          "prevalence_on_val": 0.027542561725643996,
+          "threshold": 0.08004096150398254
+        },
+        "positive_count": 662,
+        "threshold": 0.08004096150398254
+      },
+      "pneumonia": {
+        "auroc": 0.56655430198434,
+        "average_precision": 0.018220046193237336,
+        "ece": 0.002802762375753314,
+        "f1_at_0.5": 0.0,
+        "f1_at_frozen_threshold": 0.040372670807453416,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.08398950131233597,
+          "prevalence_on_val": 0.013013637579106872,
+          "threshold": 0.07957327365875244
+        },
+        "positive_count": 277,
+        "threshold": 0.07957327365875244
+      },
+      "pneumothorax": {
+        "auroc": 0.7697766286981652,
+        "average_precision": 0.21043079436472487,
+        "ece": 0.008663112084446761,
+        "f1_at_0.5": 0.016853932584269662,
+        "f1_at_frozen_threshold": 0.2845303867403315,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.26917057902973396,
+          "prevalence_on_val": 0.044923789999108656,
+          "threshold": 0.14049631357192993
+        },
+        "positive_count": 1054,
+        "threshold": 0.14049631357192993
+      }
+    },
+    "thresholds": {
+      "atelectasis": {
+        "best_f1_on_val": 0.29405225125069484,
+        "prevalence_on_val": 0.10268294856939121,
+        "threshold": 0.1597757488489151
+      },
+      "cardiomegaly": {
+        "best_f1_on_val": 0.14746543778801843,
+        "prevalence_on_val": 0.027007754701845084,
+        "threshold": 0.06016234681010246
+      },
+      "consolidation": {
+        "best_f1_on_val": 0.1674704077159141,
+        "prevalence_on_val": 0.04046706480078438,
+        "threshold": 0.09942301362752914
+      },
+      "edema": {
+        "best_f1_on_val": 0.20168067226890757,
+        "prevalence_on_val": 0.022551029503520812,
+        "threshold": 0.13972635567188263
+      },
+      "emphysema": {
+        "best_f1_on_val": 0.16074766355140188,
+        "prevalence_on_val": 0.01729209376949817,
+        "threshold": 0.11990052461624146
+      },
+      "fibrosis": {
+        "best_f1_on_val": 0.07216494845360824,
+        "prevalence_on_val": 0.014083251626704697,
+        "threshold": 0.11923060566186905
+      },
+      "hernia": {
+        "best_f1_on_val": 0.025974025974025972,
+        "prevalence_on_val": 0.0028523041269275335,
+        "threshold": 0.039976831525564194
+      },
+      "infiltration": {
+        "best_f1_on_val": 0.38488872264821394,
+        "prevalence_on_val": 0.17951689098850165,
+        "threshold": 0.20011360943317413
+      },
+      "mass": {
+        "best_f1_on_val": 0.19188191881918823,
+        "prevalence_on_val": 0.052054550316427486,
+        "threshold": 0.10040873289108276
+      },
+      "nodule": {
+        "best_f1_on_val": 0.13887307911212293,
+        "prevalence_on_val": 0.05882877261788038,
+        "threshold": 0.10015537589788437
+      },
+      "pleural_effusion": {
+        "best_f1_on_val": 0.41364902506963785,
+        "prevalence_on_val": 0.12389696051341474,
+        "threshold": 0.15985353291034698
+      },
+      "pleural_thickening": {
+        "best_f1_on_val": 0.10799584631360332,
+        "prevalence_on_val": 0.027542561725643996,
+        "threshold": 0.08004096150398254
+      },
+      "pneumonia": {
+        "best_f1_on_val": 0.08398950131233597,
+        "prevalence_on_val": 0.013013637579106872,
+        "threshold": 0.07957327365875244
+      },
+      "pneumothorax": {
+        "best_f1_on_val": 0.26917057902973396,
+        "prevalence_on_val": 0.044923789999108656,
+        "threshold": 0.14049631357192993
+      }
+    }
+  },
+  "memory_test_reference": {
+    "applied_config": {
+      "k": 50,
+      "tau": 1.0
+    },
+    "argv": [
+      "/workspace/scripts/08_evaluate_source_memory_test.py",
+      "--memory-root",
+      "/workspace/experiments/exp0039__source_retrieval_memory_building__nih_cxr14_txtw050_train_instance_memory_e100_p4",
+      "--memory-selection-root",
+      "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4",
+      "--query-embedding-root",
+      "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+      "--baseline-experiment-dir",
+      "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4",
+      "--manifest-csv",
+      "/workspace/manifest_nih_cxr14_all14.csv",
+      "--split",
+      "test",
+      "--qualitative-queries",
+      "10",
+      "--seed",
+      "3407",
+      "--experiment-name",
+      "exp0045__source_memory_only_test_evaluation__nih_cxr14_txtw050_test_e100_p4"
+    ],
+    "artifacts": {
+      "applied_config": "/workspace/experiments/exp0045__source_memory_only_test_evaluation__nih_cxr14_txtw050_test_e100_p4/applied_config.json",
+      "experiment_meta": "/workspace/experiments/exp0045__source_memory_only_test_evaluation__nih_cxr14_txtw050_test_e100_p4/experiment_meta.json",
+      "qualitative_neighbors": "/workspace/experiments/exp0045__source_memory_only_test_evaluation__nih_cxr14_txtw050_test_e100_p4/qualitative_neighbors.json",
+      "recreation_report": "/workspace/experiments/exp0045__source_memory_only_test_evaluation__nih_cxr14_txtw050_test_e100_p4/recreation_report.md",
+      "summary": "/workspace/experiments/exp0045__source_memory_only_test_evaluation__nih_cxr14_txtw050_test_e100_p4/memory_only_test_summary.md",
+      "test_metrics": "/workspace/experiments/exp0045__source_memory_only_test_evaluation__nih_cxr14_txtw050_test_e100_p4/test_metrics.json",
+      "test_probabilities": "/workspace/experiments/exp0045__source_memory_only_test_evaluation__nih_cxr14_txtw050_test_e100_p4/test_probabilities.npy"
+    },
+    "baseline_experiment_dir": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4",
+    "experiment_dir": "/workspace/experiments/exp0045__source_memory_only_test_evaluation__nih_cxr14_txtw050_test_e100_p4",
+    "experiment_id": "exp0045",
+    "experiment_name": "exp0045__source_memory_only_test_evaluation__nih_cxr14_txtw050_test_e100_p4",
+    "experiment_number": 45,
+    "frozen_threshold_source": {
+      "path": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4/best_val_metrics.json",
+      "thresholds": {
+        "atelectasis": {
+          "best_f1_on_val": 0.29405225125069484,
+          "prevalence_on_val": 0.10268294856939121,
+          "threshold": 0.1597757488489151
+        },
+        "cardiomegaly": {
+          "best_f1_on_val": 0.14746543778801843,
+          "prevalence_on_val": 0.027007754701845084,
+          "threshold": 0.06016234681010246
+        },
+        "consolidation": {
+          "best_f1_on_val": 0.1674704077159141,
+          "prevalence_on_val": 0.04046706480078438,
+          "threshold": 0.09942301362752914
+        },
+        "edema": {
+          "best_f1_on_val": 0.20168067226890757,
+          "prevalence_on_val": 0.022551029503520812,
+          "threshold": 0.13972635567188263
+        },
+        "emphysema": {
+          "best_f1_on_val": 0.16074766355140188,
+          "prevalence_on_val": 0.01729209376949817,
+          "threshold": 0.11990052461624146
+        },
+        "fibrosis": {
+          "best_f1_on_val": 0.07216494845360824,
+          "prevalence_on_val": 0.014083251626704697,
+          "threshold": 0.11923060566186905
+        },
+        "hernia": {
+          "best_f1_on_val": 0.025974025974025972,
+          "prevalence_on_val": 0.0028523041269275335,
+          "threshold": 0.039976831525564194
+        },
+        "infiltration": {
+          "best_f1_on_val": 0.38488872264821394,
+          "prevalence_on_val": 0.17951689098850165,
+          "threshold": 0.20011360943317413
+        },
+        "mass": {
+          "best_f1_on_val": 0.19188191881918823,
+          "prevalence_on_val": 0.052054550316427486,
+          "threshold": 0.10040873289108276
+        },
+        "nodule": {
+          "best_f1_on_val": 0.13887307911212293,
+          "prevalence_on_val": 0.05882877261788038,
+          "threshold": 0.10015537589788437
+        },
+        "pleural_effusion": {
+          "best_f1_on_val": 0.41364902506963785,
+          "prevalence_on_val": 0.12389696051341474,
+          "threshold": 0.15985353291034698
+        },
+        "pleural_thickening": {
+          "best_f1_on_val": 0.10799584631360332,
+          "prevalence_on_val": 0.027542561725643996,
+          "threshold": 0.08004096150398254
+        },
+        "pneumonia": {
+          "best_f1_on_val": 0.08398950131233597,
+          "prevalence_on_val": 0.013013637579106872,
+          "threshold": 0.07957327365875244
+        },
+        "pneumothorax": {
+          "best_f1_on_val": 0.26917057902973396,
+          "prevalence_on_val": 0.044923789999108656,
+          "threshold": 0.14049631357192993
+        }
+      }
+    },
+    "index_details": {
+      "index_path": "/workspace/experiments/exp0039__source_retrieval_memory_building__nih_cxr14_txtw050_train_instance_memory_e100_p4/index.faiss",
+      "load_error": null,
+      "loaded_from_disk": true,
+      "rebuilt_from_embeddings": false
+    },
+    "label_columns": [
+      "label_atelectasis",
+      "label_cardiomegaly",
+      "label_consolidation",
+      "label_edema",
+      "label_pleural_effusion",
+      "label_emphysema",
+      "label_fibrosis",
+      "label_hernia",
+      "label_infiltration",
+      "label_mass",
+      "label_nodule",
+      "label_pleural_thickening",
+      "label_pneumonia",
+      "label_pneumothorax"
+    ],
+    "label_names": [
+      "atelectasis",
+      "cardiomegaly",
+      "consolidation",
+      "edema",
+      "pleural_effusion",
+      "emphysema",
+      "fibrosis",
+      "hernia",
+      "infiltration",
+      "mass",
+      "nodule",
+      "pleural_thickening",
+      "pneumonia",
+      "pneumothorax"
+    ],
+    "manifest_csv": "/workspace/manifest_nih_cxr14_all14.csv",
+    "memory_root": "/workspace/experiments/exp0039__source_retrieval_memory_building__nih_cxr14_txtw050_train_instance_memory_e100_p4",
+    "memory_selection_reference": {
+      "argv": [
+        "/workspace/scripts/06_evaluate_source_memory_only.py",
+        "--memory-root",
+        "/workspace/experiments/exp0039__source_retrieval_memory_building__nih_cxr14_txtw050_train_instance_memory_e100_p4",
+        "--query-embedding-root",
+        "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+        "--baseline-experiment-dir",
+        "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4",
+        "--manifest-csv",
+        "/workspace/manifest_nih_cxr14_all14.csv",
+        "--split",
+        "val",
+        "--sweep-k-values",
+        "1",
+        "3",
+        "5",
+        "10",
+        "20",
+        "50",
+        "--sweep-tau-values",
+        "1",
+        "5",
+        "10",
+        "20",
+        "40",
+        "--qualitative-queries",
+        "10",
+        "--seed",
+        "3407",
+        "--experiment-name",
+        "exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4"
+      ],
+      "artifacts": {
+        "best_config": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4/best_config.json",
+        "best_val_metrics": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4/best_val_metrics.json",
+        "experiment_meta": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4/experiment_meta.json",
+        "qualitative_neighbors": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4/qualitative_neighbors.json",
+        "recreation_report": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4/recreation_report.md",
+        "selection_summary": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4/memory_only_selection.md",
+        "sweep_results": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4/sweep_results.json",
+        "val_probabilities": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4/val_probabilities.npy"
+      },
+      "baseline_experiment_dir": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4",
+      "baseline_meta_path": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4/experiment_meta.json",
+      "baseline_reference": {
+        "argv": [
+          "/workspace/scripts/04_train_frozen_multilabel_baseline.py",
+          "--embedding-root",
+          "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+          "--manifest-csv",
+          "/workspace/manifest_nih_cxr14_all14.csv",
+          "--batch-size",
+          "512",
+          "--epochs",
+          "100",
+          "--lr",
+          "1e-3",
+          "--weight-decay",
+          "1e-4",
+          "--patience",
+          "4",
+          "--seed",
+          "1337",
+          "--device",
+          "auto",
+          "--fp16-on-cuda",
+          "--experiment-name",
+          "exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4"
+        ],
+        "best_epoch": 100,
+        "checkpoint_path": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4/best.ckpt",
+        "device_resolved": "cuda",
+        "embedding_root": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+        "experiment_dir": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4",
+        "experiment_id": "exp0028",
+        "experiment_name": "exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4",
+        "experiment_number": 28,
+        "input_dim": 2176,
+        "macro_metrics": {
+          "test": {
+            "auroc": 0.7746295393976524,
+            "average_precision": 0.16083075319675372,
+            "ece": 0.3221353678697777,
+            "f1_at_0.5": 0.18015367729000284,
+            "f1_at_tuned_thresholds": 0.22150581657234264
+          },
+          "val": {
+            "auroc": 0.7755303820964682,
+            "average_precision": 0.16013489316594035,
+            "ece": 0.3222188465081493,
+            "f1_at_0.5": 0.18187992002475029,
+            "f1_at_tuned_thresholds": 0.2317638054624284
+          }
+        },
+        "manifest_csv": "/workspace/manifest_nih_cxr14_all14.csv",
+        "num_labels": 14,
+        "operation_label": "source_baseline_training",
+        "run_date_utc": "2026-04-05T13:44:42.923580+00:00",
+        "selection_metric": "macro_auroc",
+        "split_inputs": {
+          "test": {
+            "embedding_dim": 2176,
+            "embeddings_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/test/embeddings.npy",
+            "first_row_id": "00000001_000",
+            "num_rows": 22330,
+            "sidecar_format": "lines",
+            "sidecar_parser": "stem",
+            "sidecar_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/test/image_paths.txt"
+          },
+          "train": {
+            "embedding_dim": 2176,
+            "embeddings_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/train/embeddings.npy",
+            "first_row_id": "00000002_000",
+            "num_rows": 78571,
+            "sidecar_format": "lines",
+            "sidecar_parser": "stem",
+            "sidecar_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/train/image_paths.txt"
+          },
+          "val": {
+            "embedding_dim": 2176,
+            "embeddings_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/val/embeddings.npy",
+            "first_row_id": "00000006_000",
+            "num_rows": 11219,
+            "sidecar_format": "lines",
+            "sidecar_parser": "stem",
+            "sidecar_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/val/image_paths.txt"
+          }
+        },
+        "stopped_early": false,
+        "test_metrics_path": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4/test_metrics.json",
+        "thresholds_path": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4/val_f1_thresholds.json",
+        "val_metrics_path": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4/val_metrics.json"
+      },
+      "best_config": {
+        "k": 50,
+        "tau": 1.0
+      },
+      "best_metrics": {
+        "diagnostic_macro_f1_at_tuned_thresholds": 0.19000029137910052,
+        "macro_auroc": 0.6833095782624247,
+        "macro_average_precision": 0.12520247506956086,
+        "macro_ece": 0.009440808562381636,
+        "macro_f1_at_0.5": 0.0097116076821241,
+        "per_label": {
+          "atelectasis": {
+            "auroc": 0.7038573760664658,
+            "average_precision": 0.2148354443098938,
+            "ece": 0.007348229160444524,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.29405225125069484,
+            "positive_count": 1152,
+            "threshold": 0.1597757488489151
+          },
+          "cardiomegaly": {
+            "auroc": 0.6761900356396944,
+            "average_precision": 0.07108703702860919,
+            "ece": 0.009269751949223014,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.14746543778801843,
+            "positive_count": 303,
+            "threshold": 0.06016234681010246
+          },
+          "consolidation": {
+            "auroc": 0.7134791940760868,
+            "average_precision": 0.08735809509246309,
+            "ece": 0.012854832981377164,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.1674704077159141,
+            "positive_count": 454,
+            "threshold": 0.09942301362752914
+          },
+          "edema": {
+            "auroc": 0.816839545011206,
+            "average_precision": 0.10453257130264963,
+            "ece": 0.005014681716950376,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.20168067226890757,
+            "positive_count": 253,
+            "threshold": 0.13972635567188263
+          },
+          "emphysema": {
+            "auroc": 0.7437662762699582,
+            "average_precision": 0.07010258989337385,
+            "ece": 0.004834377838341678,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.16074766355140188,
+            "positive_count": 194,
+            "threshold": 0.11990052461624146
+          },
+          "fibrosis": {
+            "auroc": 0.6274288496816847,
+            "average_precision": 0.03907341831965287,
+            "ece": 0.0023321251619259535,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.07216494845360824,
+            "positive_count": 158,
+            "threshold": 0.11923060566186905
+          },
+          "hernia": {
+            "auroc": 0.5558125502815768,
+            "average_precision": 0.005414207806965073,
+            "ece": 0.0011585833494336395,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.025974025974025972,
+            "positive_count": 32,
+            "threshold": 0.039976831525564194
+          },
+          "infiltration": {
+            "auroc": 0.6719481014754405,
+            "average_precision": 0.32566467003919614,
+            "ece": 0.018977956434446004,
+            "f1_at_0.5": 0.09287646528403967,
+            "f1_at_tuned_threshold": 0.38488872264821394,
+            "positive_count": 2014,
+            "threshold": 0.20011360943317413
+          },
+          "mass": {
+            "auroc": 0.644815999124112,
+            "average_precision": 0.10764906692929369,
+            "ece": 0.0120790766880656,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.19188191881918823,
+            "positive_count": 584,
+            "threshold": 0.10040873289108276
+          },
+          "nodule": {
+            "auroc": 0.5625311740379455,
+            "average_precision": 0.0837542793376908,
+            "ece": 0.022956704891861492,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.13887307911212293,
+            "positive_count": 660,
+            "threshold": 0.10015537589788437
+          },
+          "pleural_effusion": {
+            "auroc": 0.7867877760056682,
+            "average_precision": 0.36276675459893704,
+            "ece": 0.019397586719568358,
+            "f1_at_0.5": 0.03913347309573724,
+            "f1_at_tuned_threshold": 0.41364902506963785,
+            "positive_count": 1390,
+            "threshold": 0.15985353291034698
+          },
+          "pleural_thickening": {
+            "auroc": 0.64140526045699,
+            "average_precision": 0.057735617475328856,
+            "ece": 0.006732914368842404,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.10799584631360332,
+            "positive_count": 309,
+            "threshold": 0.08004096150398254
+          },
+          "pneumonia": {
+            "auroc": 0.6363884631134105,
+            "average_precision": 0.030301875371334108,
+            "ece": 0.0018092870075736788,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.08398950131233597,
+            "positive_count": 146,
+            "threshold": 0.07957327365875244
+          },
+          "pneumothorax": {
+            "auroc": 0.7850834944337044,
+            "average_precision": 0.19255902346846349,
+            "ece": 0.0074052116052890195,
+            "f1_at_0.5": 0.003952569169960474,
+            "f1_at_tuned_threshold": 0.26917057902973396,
+            "positive_count": 504,
+            "threshold": 0.14049631357192993
+          }
+        },
+        "thresholds": {
+          "atelectasis": {
+            "best_f1": 0.29405225125069484,
+            "prevalence": 0.10268294856939121,
+            "threshold": 0.1597757488489151
+          },
+          "cardiomegaly": {
+            "best_f1": 0.14746543778801843,
+            "prevalence": 0.027007754701845084,
+            "threshold": 0.06016234681010246
+          },
+          "consolidation": {
+            "best_f1": 0.1674704077159141,
+            "prevalence": 0.04046706480078438,
+            "threshold": 0.09942301362752914
+          },
+          "edema": {
+            "best_f1": 0.20168067226890757,
+            "prevalence": 0.022551029503520812,
+            "threshold": 0.13972635567188263
+          },
+          "emphysema": {
+            "best_f1": 0.16074766355140188,
+            "prevalence": 0.01729209376949817,
+            "threshold": 0.11990052461624146
+          },
+          "fibrosis": {
+            "best_f1": 0.07216494845360824,
+            "prevalence": 0.014083251626704697,
+            "threshold": 0.11923060566186905
+          },
+          "hernia": {
+            "best_f1": 0.025974025974025972,
+            "prevalence": 0.0028523041269275335,
+            "threshold": 0.039976831525564194
+          },
+          "infiltration": {
+            "best_f1": 0.38488872264821394,
+            "prevalence": 0.17951689098850165,
+            "threshold": 0.20011360943317413
+          },
+          "mass": {
+            "best_f1": 0.19188191881918823,
+            "prevalence": 0.052054550316427486,
+            "threshold": 0.10040873289108276
+          },
+          "nodule": {
+            "best_f1": 0.13887307911212293,
+            "prevalence": 0.05882877261788038,
+            "threshold": 0.10015537589788437
+          },
+          "pleural_effusion": {
+            "best_f1": 0.41364902506963785,
+            "prevalence": 0.12389696051341474,
+            "threshold": 0.15985353291034698
+          },
+          "pleural_thickening": {
+            "best_f1": 0.10799584631360332,
+            "prevalence": 0.027542561725643996,
+            "threshold": 0.08004096150398254
+          },
+          "pneumonia": {
+            "best_f1": 0.08398950131233597,
+            "prevalence": 0.013013637579106872,
+            "threshold": 0.07957327365875244
+          },
+          "pneumothorax": {
+            "best_f1": 0.26917057902973396,
+            "prevalence": 0.044923789999108656,
+            "threshold": 0.14049631357192993
+          }
+        }
+      },
+      "experiment_dir": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4",
+      "experiment_id": "exp0040",
+      "experiment_name": "exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4",
+      "experiment_number": 40,
+      "index_details": {
+        "index_path": "/workspace/experiments/exp0039__source_retrieval_memory_building__nih_cxr14_txtw050_train_instance_memory_e100_p4/index.faiss",
+        "load_error": null,
+        "loaded_from_disk": true,
+        "rebuilt_from_embeddings": false
+      },
+      "label_columns": [
+        "label_atelectasis",
+        "label_cardiomegaly",
+        "label_consolidation",
+        "label_edema",
+        "label_pleural_effusion",
+        "label_emphysema",
+        "label_fibrosis",
+        "label_hernia",
+        "label_infiltration",
+        "label_mass",
+        "label_nodule",
+        "label_pleural_thickening",
+        "label_pneumonia",
+        "label_pneumothorax"
+      ],
+      "label_names": [
+        "atelectasis",
+        "cardiomegaly",
+        "consolidation",
+        "edema",
+        "pleural_effusion",
+        "emphysema",
+        "fibrosis",
+        "hernia",
+        "infiltration",
+        "mass",
+        "nodule",
+        "pleural_thickening",
+        "pneumonia",
+        "pneumothorax"
+      ],
+      "manifest_csv": "/workspace/manifest_nih_cxr14_all14.csv",
+      "memory_root": "/workspace/experiments/exp0039__source_retrieval_memory_building__nih_cxr14_txtw050_train_instance_memory_e100_p4",
+      "memory_source_embeddings": {
+        "kind": "memory_artifact",
+        "source": "/workspace/experiments/exp0039__source_retrieval_memory_building__nih_cxr14_txtw050_train_instance_memory_e100_p4/embeddings.npy"
+      },
+      "memory_summary": {
+        "embedding_dim": 2176,
+        "row_count": 78571
+      },
+      "operation_label": "source_memory_only_evaluation",
+      "query_embedding_root": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+      "query_norm_summary": {
+        "normalized": {
+          "max": 1.000000066092574,
+          "mean": 1.0000000137956042,
+          "min": 0.9999999350067751,
+          "std": 2.81916682163782e-08
+        },
+        "raw": {
+          "max": 1.0000001125457962,
+          "mean": 1.0000000008160872,
+          "min": 0.9999998911055679,
+          "std": 3.821761585065575e-08
+        }
+      },
+      "query_split": {
+        "embedding_dim": 2176,
+        "num_rows": 11219,
+        "run_meta": {
+          "alignment": "reference",
+          "component_offsets": [
+            {
+              "end_col_exclusive": 2048,
+              "source": "image",
+              "start_col": 0,
+              "weight": 1.0,
+              "width": 2048
+            },
+            {
+              "end_col_exclusive": 2176,
+              "source": "report",
+              "start_col": 2048,
+              "weight": 0.5,
+              "width": 128
+            }
+          ],
+          "experiment_dir": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+          "fused_dim": 2176,
+          "fusion": "concat",
+          "normalize_output": "l2",
+          "num_rows": 11219,
+          "reference_sidecar_output": "image_paths.txt",
+          "reference_source": "image",
+          "row_chunk_size": 4096,
+          "row_id_source": "image_paths.txt",
+          "row_norm_summary": {
+            "method": "l2",
+            "post_norm_max": 1.0000001192092896,
+            "post_norm_mean": 1.0,
+            "post_norm_min": 0.9999998211860657,
+            "pre_norm_max": 1.1185648441314697,
+            "pre_norm_mean": 1.1180367150592745,
+            "pre_norm_min": 1.1175789833068848,
+            "rows": 11219
+          },
+          "run_date_utc": "2026-04-05T13:39:48.151027+00:00",
+          "source_order": [
+            "image",
+            "report"
+          ],
+          "sources": [
+            {
+              "aligned_rows": 11219,
+              "available_rows": 11219,
+              "embeddings_path": "/workspace/experiments/exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test/val/embeddings.npy",
+              "embeddings_shape": [
+                11219,
+                2048
+              ],
+              "name": "image",
+              "reference": true,
+              "root": "/workspace/experiments/exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test",
+              "sidecar": {
+                "column": null,
+                "format": "lines",
+                "parser": "stem",
+                "relative_path": "image_paths.txt"
+              },
+              "split_dir": "/workspace/experiments/exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test/val",
+              "weight": 1.0
+            },
+            {
+              "aligned_rows": 11219,
+              "available_rows": 11219,
+              "embeddings_path": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test/val/embeddings.npy",
+              "embeddings_shape": [
+                11219,
+                128
+              ],
+              "name": "report",
+              "reference": false,
+              "root": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test",
+              "sidecar": {
+                "column": null,
+                "format": "json_list",
+                "parser": "identity",
+                "relative_path": "report_ids.json"
+              },
+              "split_dir": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test/val",
+              "weight": 0.5
+            }
+          ],
+          "split": "val"
+        },
+        "split": "val"
+      },
+      "run_date_utc": "2026-04-05T14:15:12.642080+00:00",
+      "script_path": "/workspace/scripts/06_evaluate_source_memory_only.py",
+      "script_sha256": "86c8594ef12b8d43261951eba7643ac839f5c55f3e8bb475ee5ff1b7ae9ae4c4",
+      "seed": 3407,
+      "selection_metric": "macro_auroc",
+      "sweep_grid": {
+        "k_values": [
+          1,
+          3,
+          5,
+          10,
+          20,
+          50
+        ],
+        "tau_values": [
+          1.0,
+          5.0,
+          10.0,
+          20.0,
+          40.0
+        ]
+      }
+    },
+    "memory_selection_root": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4",
+    "memory_source_embeddings": {
+      "kind": "memory_artifact",
+      "source": "/workspace/experiments/exp0039__source_retrieval_memory_building__nih_cxr14_txtw050_train_instance_memory_e100_p4/embeddings.npy"
+    },
+    "memory_summary": {
+      "embedding_dim": 2176,
+      "row_count": 78571
+    },
+    "operation_label": "source_memory_only_test_evaluation",
+    "query_embedding_root": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+    "query_norm_summary": {
+      "normalized": {
+        "max": 1.000000062177133,
+        "mean": 1.000000013581738,
+        "min": 0.9999999366552638,
+        "std": 2.816690816242568e-08
+      },
+      "raw": {
+        "max": 1.0000001120626059,
+        "mean": 1.0000000010653716,
+        "min": 0.9999998824870946,
+        "std": 3.8007426469424224e-08
+      }
+    },
+    "query_split": {
+      "embedding_dim": 2176,
+      "num_rows": 22330,
+      "run_meta": {
+        "alignment": "reference",
+        "component_offsets": [
+          {
+            "end_col_exclusive": 2048,
+            "source": "image",
+            "start_col": 0,
+            "weight": 1.0,
+            "width": 2048
+          },
+          {
+            "end_col_exclusive": 2176,
+            "source": "report",
+            "start_col": 2048,
+            "weight": 0.5,
+            "width": 128
+          }
+        ],
+        "experiment_dir": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+        "fused_dim": 2176,
+        "fusion": "concat",
+        "normalize_output": "l2",
+        "num_rows": 22330,
+        "reference_sidecar_output": "image_paths.txt",
+        "reference_source": "image",
+        "row_chunk_size": 4096,
+        "row_id_source": "image_paths.txt",
+        "row_norm_summary": {
+          "method": "l2",
+          "post_norm_max": 1.0000001192092896,
+          "post_norm_mean": 1.0,
+          "post_norm_min": 0.9999998211860657,
+          "pre_norm_max": 1.11855149269104,
+          "pre_norm_mean": 1.1180352682070085,
+          "pre_norm_min": 1.1175763607025146,
+          "rows": 22330
+        },
+        "run_date_utc": "2026-04-05T13:39:49.443771+00:00",
+        "source_order": [
+          "image",
+          "report"
+        ],
+        "sources": [
+          {
+            "aligned_rows": 22330,
+            "available_rows": 22330,
+            "embeddings_path": "/workspace/experiments/exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test/test/embeddings.npy",
+            "embeddings_shape": [
+              22330,
+              2048
+            ],
+            "name": "image",
+            "reference": true,
+            "root": "/workspace/experiments/exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test",
+            "sidecar": {
+              "column": null,
+              "format": "lines",
+              "parser": "stem",
+              "relative_path": "image_paths.txt"
+            },
+            "split_dir": "/workspace/experiments/exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test/test",
+            "weight": 1.0
+          },
+          {
+            "aligned_rows": 22330,
+            "available_rows": 22330,
+            "embeddings_path": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test/test/embeddings.npy",
+            "embeddings_shape": [
+              22330,
+              128
+            ],
+            "name": "report",
+            "reference": false,
+            "root": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test",
+            "sidecar": {
+              "column": null,
+              "format": "json_list",
+              "parser": "identity",
+              "relative_path": "report_ids.json"
+            },
+            "split_dir": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test/test",
+            "weight": 0.5
+          }
+        ],
+        "split": "test"
+      },
+      "split": "test"
+    },
+    "run_date_utc": "2026-04-05T14:20:10.595266+00:00",
+    "script_path": "/workspace/scripts/08_evaluate_source_memory_test.py",
+    "script_sha256": "a9a2c407354255e85343f693e5d9de3ff21c1e8f281c51b2ac0743d5f425b7c4",
+    "seed": 3407,
+    "selection_mode": "frozen_validation_config",
+    "test_metrics": {
+      "macro_auroc": 0.6827495484876319,
+      "macro_average_precision": 0.12480707362938029,
+      "macro_ece": 0.008228143558452394,
+      "macro_f1_at_0.5": 0.008520278898076085,
+      "macro_f1_at_frozen_thresholds": 0.17896413297052188,
+      "per_label": {
+        "atelectasis": {
+          "auroc": 0.685879310298136,
+          "average_precision": 0.18769791917467588,
+          "ece": 0.01156540325597976,
+          "f1_at_0.5": 0.0,
+          "f1_at_frozen_threshold": 0.2673336112269001,
+          "frozen_threshold_source": {
+            "best_f1_on_val": 0.29405225125069484,
+            "prevalence_on_val": 0.10268294856939121,
+            "threshold": 0.1597757488489151
+          },
+          "positive_count": 2305,
+          "threshold": 0.1597757488489151
+        },
+        "cardiomegaly": {
+          "auroc": 0.6511903792263708,
+          "average_precision": 0.06590254477161561,
+          "ece": 0.006669807110767539,
+          "f1_at_0.5": 0.0,
+          "f1_at_frozen_threshold": 0.12450331125827814,
+          "frozen_threshold_source": {
+            "best_f1_on_val": 0.14746543778801843,
+            "prevalence_on_val": 0.027007754701845084,
+            "threshold": 0.06016234681010246
+          },
+          "positive_count": 534,
+          "threshold": 0.06016234681010246
+        },
+        "consolidation": {
+          "auroc": 0.749059892925584,
+          "average_precision": 0.11307465858006191,
+          "ece": 0.008488209991462683,
+          "f1_at_0.5": 0.0,
+          "f1_at_frozen_threshold": 0.19392624728850325,
+          "frozen_threshold_source": {
+            "best_f1_on_val": 0.1674704077159141,
+            "prevalence_on_val": 0.04046706480078438,
+            "threshold": 0.09942301362752914
+          },
+          "positive_count": 988,
+          "threshold": 0.09942301362752914
+        },
+        "edema": {
+          "auroc": 0.824905215620679,
+          "average_precision": 0.10329630530326711,
+          "ece": 0.0043303490705217575,
+          "f1_at_0.5": 0.0,
+          "f1_at_frozen_threshold": 0.16833333333333333,
+          "frozen_threshold_source": {
+            "best_f1_on_val": 0.20168067226890757,
+            "prevalence_on_val": 0.022551029503520812,
+            "threshold": 0.13972635567188263
+          },
+          "positive_count": 437,
+          "threshold": 0.13972635567188263
+        },
+        "emphysema": {
+          "auroc": 0.7611793563579278,
+          "average_precision": 0.12358825237716649,
+          "ece": 0.0023323117321181123,
+          "f1_at_0.5": 0.0,
+          "f1_at_frozen_threshold": 0.1998572448251249,
+          "frozen_threshold_source": {
+            "best_f1_on_val": 0.16074766355140188,
+            "prevalence_on_val": 0.01729209376949817,
+            "threshold": 0.11990052461624146
+          },
+          "positive_count": 490,
+          "threshold": 0.11990052461624146
+        },
+        "fibrosis": {
+          "auroc": 0.6305653243428399,
+          "average_precision": 0.02773175984497278,
+          "ece": 0.0015408745707849781,
+          "f1_at_0.5": 0.0,
+          "f1_at_frozen_threshold": 0.034285714285714294,
+          "frozen_threshold_source": {
+            "best_f1_on_val": 0.07216494845360824,
+            "prevalence_on_val": 0.014083251626704697,
+            "threshold": 0.11923060566186905
+          },
+          "positive_count": 297,
+          "threshold": 0.11923060566186905
+        },
+        "hernia": {
+          "auroc": 0.6049662612029806,
+          "average_precision": 0.006024601488976681,
+          "ece": 4.688553525442583e-06,
+          "f1_at_0.5": 0.0,
+          "f1_at_frozen_threshold": 0.01680672268907563,
+          "frozen_threshold_source": {
+            "best_f1_on_val": 0.025974025974025972,
+            "prevalence_on_val": 0.0028523041269275335,
+            "threshold": 0.039976831525564194
+          },
+          "positive_count": 38,
+          "threshold": 0.039976831525564194
+        },
+        "infiltration": {
+          "auroc": 0.6533329373704471,
+          "average_precision": 0.292474068887027,
+          "ece": 0.024973219373016095,
+          "f1_at_0.5": 0.05904761904761904,
+          "f1_at_frozen_threshold": 0.36056338028169016,
+          "frozen_threshold_source": {
+            "best_f1_on_val": 0.38488872264821394,
+            "prevalence_on_val": 0.17951689098850165,
+            "threshold": 0.20011360943317413
+          },
+          "positive_count": 3886,
+          "threshold": 0.20011360943317413
+        },
+        "mass": {
+          "auroc": 0.6514085035698287,
+          "average_precision": 0.10398106449266617,
+          "ece": 0.010338945647528954,
+          "f1_at_0.5": 0.0,
+          "f1_at_frozen_threshold": 0.17345505617977527,
+          "frozen_threshold_source": {
+            "best_f1_on_val": 0.19188191881918823,
+            "prevalence_on_val": 0.052054550316427486,
+            "threshold": 0.10040873289108276
+          },
+          "positive_count": 1181,
+          "threshold": 0.10040873289108276
+        },
+        "nodule": {
+          "auroc": 0.5883535495146859,
+          "average_precision": 0.09623336651133081,
+          "ece": 0.014893088186309038,
+          "f1_at_0.5": 0.0,
+          "f1_at_frozen_threshold": 0.1363080684596577,
+          "frozen_threshold_source": {
+            "best_f1_on_val": 0.13887307911212293,
+            "prevalence_on_val": 0.05882877261788038,
+            "threshold": 0.10015537589788437
+          },
+          "positive_count": 1236,
+          "threshold": 0.10015537589788437
+        },
+        "pleural_effusion": {
+          "auroc": 0.7862875550436375,
+          "average_precision": 0.3422113261008194,
+          "ece": 0.011866419266223692,
+          "f1_at_0.5": 0.043382352941176476,
+          "f1_at_frozen_threshold": 0.39077558513079397,
+          "frozen_threshold_source": {
+            "best_f1_on_val": 0.41364902506963785,
+            "prevalence_on_val": 0.12389696051341474,
+            "threshold": 0.15985353291034698
+          },
+          "positive_count": 2635,
+          "threshold": 0.15985353291034698
+        },
+        "pleural_thickening": {
+          "auroc": 0.6350344626712258,
+          "average_precision": 0.056432322720782156,
+          "ece": 0.006724818599895409,
+          "f1_at_0.5": 0.0,
+          "f1_at_frozen_threshold": 0.11444652908067543,
+          "frozen_threshold_source": {
+            "best_f1_on_val": 0.10799584631360332,
+            "prevalence_on_val": 0.027542561725643996,
+            "threshold": 0.08004096150398254
+          },
+          "positive_count": 662,
+          "threshold": 0.08004096150398254
+        },
+        "pneumonia": {
+          "auroc": 0.56655430198434,
+          "average_precision": 0.018220046193237336,
+          "ece": 0.002802762375753314,
+          "f1_at_0.5": 0.0,
+          "f1_at_frozen_threshold": 0.040372670807453416,
+          "frozen_threshold_source": {
+            "best_f1_on_val": 0.08398950131233597,
+            "prevalence_on_val": 0.013013637579106872,
+            "threshold": 0.07957327365875244
+          },
+          "positive_count": 277,
+          "threshold": 0.07957327365875244
+        },
+        "pneumothorax": {
+          "auroc": 0.7697766286981652,
+          "average_precision": 0.21043079436472487,
+          "ece": 0.008663112084446761,
+          "f1_at_0.5": 0.016853932584269662,
+          "f1_at_frozen_threshold": 0.2845303867403315,
+          "frozen_threshold_source": {
+            "best_f1_on_val": 0.26917057902973396,
+            "prevalence_on_val": 0.044923789999108656,
+            "threshold": 0.14049631357192993
+          },
+          "positive_count": 1054,
+          "threshold": 0.14049631357192993
+        }
+      },
+      "thresholds": {
+        "atelectasis": {
+          "best_f1_on_val": 0.29405225125069484,
+          "prevalence_on_val": 0.10268294856939121,
+          "threshold": 0.1597757488489151
+        },
+        "cardiomegaly": {
+          "best_f1_on_val": 0.14746543778801843,
+          "prevalence_on_val": 0.027007754701845084,
+          "threshold": 0.06016234681010246
+        },
+        "consolidation": {
+          "best_f1_on_val": 0.1674704077159141,
+          "prevalence_on_val": 0.04046706480078438,
+          "threshold": 0.09942301362752914
+        },
+        "edema": {
+          "best_f1_on_val": 0.20168067226890757,
+          "prevalence_on_val": 0.022551029503520812,
+          "threshold": 0.13972635567188263
+        },
+        "emphysema": {
+          "best_f1_on_val": 0.16074766355140188,
+          "prevalence_on_val": 0.01729209376949817,
+          "threshold": 0.11990052461624146
+        },
+        "fibrosis": {
+          "best_f1_on_val": 0.07216494845360824,
+          "prevalence_on_val": 0.014083251626704697,
+          "threshold": 0.11923060566186905
+        },
+        "hernia": {
+          "best_f1_on_val": 0.025974025974025972,
+          "prevalence_on_val": 0.0028523041269275335,
+          "threshold": 0.039976831525564194
+        },
+        "infiltration": {
+          "best_f1_on_val": 0.38488872264821394,
+          "prevalence_on_val": 0.17951689098850165,
+          "threshold": 0.20011360943317413
+        },
+        "mass": {
+          "best_f1_on_val": 0.19188191881918823,
+          "prevalence_on_val": 0.052054550316427486,
+          "threshold": 0.10040873289108276
+        },
+        "nodule": {
+          "best_f1_on_val": 0.13887307911212293,
+          "prevalence_on_val": 0.05882877261788038,
+          "threshold": 0.10015537589788437
+        },
+        "pleural_effusion": {
+          "best_f1_on_val": 0.41364902506963785,
+          "prevalence_on_val": 0.12389696051341474,
+          "threshold": 0.15985353291034698
+        },
+        "pleural_thickening": {
+          "best_f1_on_val": 0.10799584631360332,
+          "prevalence_on_val": 0.027542561725643996,
+          "threshold": 0.08004096150398254
+        },
+        "pneumonia": {
+          "best_f1_on_val": 0.08398950131233597,
+          "prevalence_on_val": 0.013013637579106872,
+          "threshold": 0.07957327365875244
+        },
+        "pneumothorax": {
+          "best_f1_on_val": 0.26917057902973396,
+          "prevalence_on_val": 0.044923789999108656,
+          "threshold": 0.14049631357192993
+        }
+      }
+    }
+  },
+  "memory_test_root": "/workspace/experiments/exp0045__source_memory_only_test_evaluation__nih_cxr14_txtw050_test_e100_p4",
+  "mixed_test_metrics": {
+    "macro_auroc": 0.7748769647538989,
+    "macro_average_precision": 0.1602795374273113,
+    "macro_ece": 0.23768849483403617,
+    "macro_f1_at_0.5": 0.20834102546979416,
+    "macro_f1_at_frozen_thresholds": 0.2198054107174494,
+    "per_label": {
+      "atelectasis": {
+        "auroc": 0.743255756768248,
+        "average_precision": 0.23952333802993955,
+        "ece": 0.22591756140238506,
+        "f1_at_0.5": 0.31165228113440197,
+        "f1_at_frozen_threshold": 0.31592284950021116,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.3409350057012543,
+          "prevalence_on_val": 0.10268294856939121,
+          "threshold": 0.480777770280838
+        },
+        "positive_count": 2305,
+        "threshold": 0.480777770280838
+      },
+      "cardiomegaly": {
+        "auroc": 0.8104393961576292,
+        "average_precision": 0.1593274500905844,
+        "ece": 0.20877716007808864,
+        "f1_at_0.5": 0.22124756335282653,
+        "f1_at_frozen_threshold": 0.24466571834992884,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.2554838709677419,
+          "prevalence_on_val": 0.027007754701845084,
+          "threshold": 0.5605528354644775
+        },
+        "positive_count": 534,
+        "threshold": 0.5605528354644775
+      },
+      "consolidation": {
+        "auroc": 0.7820179659427325,
+        "average_precision": 0.12297748968871051,
+        "ece": 0.2515003729906922,
+        "f1_at_0.5": 0.20961503039233745,
+        "f1_at_frozen_threshold": 0.178939617083947,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.1735419630156472,
+          "prevalence_on_val": 0.04046706480078438,
+          "threshold": 0.5872424840927124
+        },
+        "positive_count": 988,
+        "threshold": 0.5872424840927124
+      },
+      "edema": {
+        "auroc": 0.8859675950464716,
+        "average_precision": 0.12630900004589343,
+        "ece": 0.17412753903642347,
+        "f1_at_0.5": 0.1755285073670724,
+        "f1_at_frozen_threshold": 0.1892147587511826,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.20689655172413796,
+          "prevalence_on_val": 0.022551029503520812,
+          "threshold": 0.6823241114616394
+        },
+        "positive_count": 437,
+        "threshold": 0.6823241114616394
+      },
+      "emphysema": {
+        "auroc": 0.847126317559991,
+        "average_precision": 0.17551873659821007,
+        "ece": 0.2542773408925789,
+        "f1_at_0.5": 0.17030335284725917,
+        "f1_at_frozen_threshold": 0.25236593059936907,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.19964349376114082,
+          "prevalence_on_val": 0.01729209376949817,
+          "threshold": 0.6755168437957764
+        },
+        "positive_count": 490,
+        "threshold": 0.6755168437957764
+      },
+      "fibrosis": {
+        "auroc": 0.7601740945361878,
+        "average_precision": 0.05230941932149141,
+        "ece": 0.2580720043251106,
+        "f1_at_0.5": 0.08574091332712022,
+        "f1_at_frozen_threshold": 0.08403361344537817,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.16077170418006428,
+          "prevalence_on_val": 0.014083251626704697,
+          "threshold": 0.6175682544708252
+        },
+        "positive_count": 297,
+        "threshold": 0.6175682544708252
+      },
+      "hernia": {
+        "auroc": 0.8052428532303304,
+        "average_precision": 0.010650475036246177,
+        "ece": 0.1875092062926113,
+        "f1_at_0.5": 0.020408163265306124,
+        "f1_at_frozen_threshold": 0.030188679245283023,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.08450704225352113,
+          "prevalence_on_val": 0.0028523041269275335,
+          "threshold": 0.6270456314086914
+        },
+        "positive_count": 38,
+        "threshold": 0.6270456314086914
+      },
+      "infiltration": {
+        "auroc": 0.6823688972185268,
+        "average_precision": 0.3161750905113791,
+        "ece": 0.20359167089970237,
+        "f1_at_0.5": 0.3631943600340343,
+        "f1_at_frozen_threshold": 0.37726042230644286,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.40743767879035553,
+          "prevalence_on_val": 0.17951689098850165,
+          "threshold": 0.4620649218559265
+        },
+        "positive_count": 3886,
+        "threshold": 0.4620649218559265
+      },
+      "mass": {
+        "auroc": 0.7447852259415464,
+        "average_precision": 0.14128555056807837,
+        "ece": 0.27837161464117005,
+        "f1_at_0.5": 0.23016812692398772,
+        "f1_at_frozen_threshold": 0.22864259028642592,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.22541201488569906,
+          "prevalence_on_val": 0.052054550316427486,
+          "threshold": 0.5084910988807678
+        },
+        "positive_count": 1181,
+        "threshold": 0.5084910988807678
+      },
+      "nodule": {
+        "auroc": 0.690439972347541,
+        "average_precision": 0.13920429236870305,
+        "ece": 0.2903233239342961,
+        "f1_at_0.5": 0.19817326321616385,
+        "f1_at_frozen_threshold": 0.19212533498247786,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.18453082057322343,
+          "prevalence_on_val": 0.05882877261788038,
+          "threshold": 0.4587520956993103
+        },
+        "positive_count": 1236,
+        "threshold": 0.4587520956993103
+      },
+      "pleural_effusion": {
+        "auroc": 0.8255756741927295,
+        "average_precision": 0.4087654642090983,
+        "ece": 0.1881819084005583,
+        "f1_at_0.5": 0.43964722916940896,
+        "f1_at_frozen_threshold": 0.44563331405436674,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.46526376477371,
+          "prevalence_on_val": 0.12389696051341474,
+          "threshold": 0.5331145524978638
+        },
+        "positive_count": 2635,
+        "threshold": 0.5331145524978638
+      },
+      "pleural_thickening": {
+        "auroc": 0.7294226467309193,
+        "average_precision": 0.07130098541781381,
+        "ece": 0.28886441509491706,
+        "f1_at_0.5": 0.13709898546750754,
+        "f1_at_frozen_threshold": 0.1377087606211544,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.1460147354320161,
+          "prevalence_on_val": 0.027542561725643996,
+          "threshold": 0.5097249150276184
+        },
+        "positive_count": 662,
+        "threshold": 0.5097249150276184
+      },
+      "pneumonia": {
+        "auroc": 0.7107432848433238,
+        "average_precision": 0.029374168061161013,
+        "ece": 0.27428580208865455,
+        "f1_at_0.5": 0.06269315673289183,
+        "f1_at_frozen_threshold": 0.06782215523737756,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.09371428571428571,
+          "prevalence_on_val": 0.013013637579106872,
+          "threshold": 0.5534635186195374
+        },
+        "positive_count": 277,
+        "threshold": 0.5534635186195374
+      },
+      "pneumothorax": {
+        "auroc": 0.830717826038408,
+        "average_precision": 0.2511920640350485,
+        "ece": 0.24383900759931848,
+        "f1_at_0.5": 0.29130342334679993,
+        "f1_at_frozen_threshold": 0.3327520055807464,
+        "frozen_threshold_source": {
+          "best_f1_on_val": 0.31603053435114503,
+          "prevalence_on_val": 0.044923789999108656,
+          "threshold": 0.6458160877227783
+        },
+        "positive_count": 1054,
+        "threshold": 0.6458160877227783
+      }
+    },
+    "thresholds": {
+      "atelectasis": {
+        "best_f1_on_val": 0.3409350057012543,
+        "prevalence_on_val": 0.10268294856939121,
+        "threshold": 0.480777770280838
+      },
+      "cardiomegaly": {
+        "best_f1_on_val": 0.2554838709677419,
+        "prevalence_on_val": 0.027007754701845084,
+        "threshold": 0.5605528354644775
+      },
+      "consolidation": {
+        "best_f1_on_val": 0.1735419630156472,
+        "prevalence_on_val": 0.04046706480078438,
+        "threshold": 0.5872424840927124
+      },
+      "edema": {
+        "best_f1_on_val": 0.20689655172413796,
+        "prevalence_on_val": 0.022551029503520812,
+        "threshold": 0.6823241114616394
+      },
+      "emphysema": {
+        "best_f1_on_val": 0.19964349376114082,
+        "prevalence_on_val": 0.01729209376949817,
+        "threshold": 0.6755168437957764
+      },
+      "fibrosis": {
+        "best_f1_on_val": 0.16077170418006428,
+        "prevalence_on_val": 0.014083251626704697,
+        "threshold": 0.6175682544708252
+      },
+      "hernia": {
+        "best_f1_on_val": 0.08450704225352113,
+        "prevalence_on_val": 0.0028523041269275335,
+        "threshold": 0.6270456314086914
+      },
+      "infiltration": {
+        "best_f1_on_val": 0.40743767879035553,
+        "prevalence_on_val": 0.17951689098850165,
+        "threshold": 0.4620649218559265
+      },
+      "mass": {
+        "best_f1_on_val": 0.22541201488569906,
+        "prevalence_on_val": 0.052054550316427486,
+        "threshold": 0.5084910988807678
+      },
+      "nodule": {
+        "best_f1_on_val": 0.18453082057322343,
+        "prevalence_on_val": 0.05882877261788038,
+        "threshold": 0.4587520956993103
+      },
+      "pleural_effusion": {
+        "best_f1_on_val": 0.46526376477371,
+        "prevalence_on_val": 0.12389696051341474,
+        "threshold": 0.5331145524978638
+      },
+      "pleural_thickening": {
+        "best_f1_on_val": 0.1460147354320161,
+        "prevalence_on_val": 0.027542561725643996,
+        "threshold": 0.5097249150276184
+      },
+      "pneumonia": {
+        "best_f1_on_val": 0.09371428571428571,
+        "prevalence_on_val": 0.013013637579106872,
+        "threshold": 0.5534635186195374
+      },
+      "pneumothorax": {
+        "best_f1_on_val": 0.31603053435114503,
+        "prevalence_on_val": 0.044923789999108656,
+        "threshold": 0.6458160877227783
+      }
+    }
+  },
+  "mixing_selection_reference": {
+    "alpha_values": [
+      0.0,
+      0.01,
+      0.02,
+      0.03,
+      0.04,
+      0.05,
+      0.06,
+      0.07,
+      0.08,
+      0.09,
+      0.1,
+      0.11,
+      0.12,
+      0.13,
+      0.14,
+      0.15,
+      0.16,
+      0.17,
+      0.18,
+      0.19,
+      0.2,
+      0.21,
+      0.22,
+      0.23,
+      0.24,
+      0.25,
+      0.26,
+      0.27,
+      0.28,
+      0.29,
+      0.3,
+      0.31,
+      0.32,
+      0.33,
+      0.34,
+      0.35,
+      0.36,
+      0.37,
+      0.38,
+      0.39,
+      0.4,
+      0.41,
+      0.42,
+      0.43,
+      0.44,
+      0.45,
+      0.46,
+      0.47,
+      0.48,
+      0.49,
+      0.5,
+      0.51,
+      0.52,
+      0.53,
+      0.54,
+      0.55,
+      0.56,
+      0.57,
+      0.58,
+      0.59,
+      0.6,
+      0.61,
+      0.62,
+      0.63,
+      0.64,
+      0.65,
+      0.66,
+      0.67,
+      0.68,
+      0.69,
+      0.7,
+      0.71,
+      0.72,
+      0.73,
+      0.74,
+      0.75,
+      0.76,
+      0.77,
+      0.78,
+      0.79,
+      0.8,
+      0.81,
+      0.82,
+      0.83,
+      0.84,
+      0.85,
+      0.86,
+      0.87,
+      0.88,
+      0.89,
+      0.9,
+      0.91,
+      0.92,
+      0.93,
+      0.94,
+      0.95,
+      0.96,
+      0.97,
+      0.98,
+      0.99,
+      1.0
+    ],
+    "argv": [
+      "/workspace/scripts/07_evaluate_probability_mixing.py",
+      "--memory-eval-root",
+      "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4",
+      "--baseline-experiment-dir",
+      "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4",
+      "--query-embedding-root",
+      "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+      "--manifest-csv",
+      "/workspace/manifest_nih_cxr14_all14.csv",
+      "--split",
+      "val",
+      "--batch-size",
+      "2048",
+      "--alpha-values",
+      "0.00",
+      "0.01",
+      "0.02",
+      "0.03",
+      "0.04",
+      "0.05",
+      "0.06",
+      "0.07",
+      "0.08",
+      "0.09",
+      "0.10",
+      "0.11",
+      "0.12",
+      "0.13",
+      "0.14",
+      "0.15",
+      "0.16",
+      "0.17",
+      "0.18",
+      "0.19",
+      "0.20",
+      "0.21",
+      "0.22",
+      "0.23",
+      "0.24",
+      "0.25",
+      "0.26",
+      "0.27",
+      "0.28",
+      "0.29",
+      "0.30",
+      "0.31",
+      "0.32",
+      "0.33",
+      "0.34",
+      "0.35",
+      "0.36",
+      "0.37",
+      "0.38",
+      "0.39",
+      "0.40",
+      "0.41",
+      "0.42",
+      "0.43",
+      "0.44",
+      "0.45",
+      "0.46",
+      "0.47",
+      "0.48",
+      "0.49",
+      "0.50",
+      "0.51",
+      "0.52",
+      "0.53",
+      "0.54",
+      "0.55",
+      "0.56",
+      "0.57",
+      "0.58",
+      "0.59",
+      "0.60",
+      "0.61",
+      "0.62",
+      "0.63",
+      "0.64",
+      "0.65",
+      "0.66",
+      "0.67",
+      "0.68",
+      "0.69",
+      "0.70",
+      "0.71",
+      "0.72",
+      "0.73",
+      "0.74",
+      "0.75",
+      "0.76",
+      "0.77",
+      "0.78",
+      "0.79",
+      "0.80",
+      "0.81",
+      "0.82",
+      "0.83",
+      "0.84",
+      "0.85",
+      "0.86",
+      "0.87",
+      "0.88",
+      "0.89",
+      "0.90",
+      "0.91",
+      "0.92",
+      "0.93",
+      "0.94",
+      "0.95",
+      "0.96",
+      "0.97",
+      "0.98",
+      "0.99",
+      "1.00",
+      "--seed",
+      "3407",
+      "--experiment-name",
+      "exp0041__source_probability_mixing_evaluation__nih_cxr14_txtw050_val_e100_p4_alpha_fine_001"
+    ],
+    "artifacts": {
+      "best_config": "/workspace/experiments/exp0041__source_probability_mixing_evaluation__nih_cxr14_txtw050_val_e100_p4_alpha_fine_001/best_config.json",
+      "best_val_metrics": "/workspace/experiments/exp0041__source_probability_mixing_evaluation__nih_cxr14_txtw050_val_e100_p4_alpha_fine_001/best_val_metrics.json",
+      "experiment_meta": "/workspace/experiments/exp0041__source_probability_mixing_evaluation__nih_cxr14_txtw050_val_e100_p4_alpha_fine_001/experiment_meta.json",
+      "recreation_report": "/workspace/experiments/exp0041__source_probability_mixing_evaluation__nih_cxr14_txtw050_val_e100_p4_alpha_fine_001/recreation_report.md",
+      "selection_summary": "/workspace/experiments/exp0041__source_probability_mixing_evaluation__nih_cxr14_txtw050_val_e100_p4_alpha_fine_001/probability_mixing_selection.md",
+      "sweep_results": "/workspace/experiments/exp0041__source_probability_mixing_evaluation__nih_cxr14_txtw050_val_e100_p4_alpha_fine_001/sweep_results.json",
+      "val_mixed_probabilities": "/workspace/experiments/exp0041__source_probability_mixing_evaluation__nih_cxr14_txtw050_val_e100_p4_alpha_fine_001/val_mixed_probabilities.npy"
+    },
+    "baseline_experiment_dir": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4",
+    "baseline_meta_path": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4/experiment_meta.json",
+    "baseline_metrics": {
+      "diagnostic_macro_f1_at_tuned_thresholds": 0.23231606243366695,
+      "macro_auroc": 0.7755332869053756,
+      "macro_average_precision": 0.16013305245270928,
+      "macro_ece": 0.32223022534525,
+      "macro_f1_at_0.5": 0.18185227182283817,
+      "per_label": {
+        "atelectasis": {
+          "auroc": 0.7551230108964383,
+          "average_precision": 0.2605335648893772,
+          "ece": 0.3044944597324,
+          "f1_at_0.5": 0.318172629876693,
+          "f1_at_tuned_threshold": 0.3418949771689498,
+          "positive_count": 1152,
+          "threshold": 0.5984528660774231
+        },
+        "cardiomegaly": {
+          "auroc": 0.8186989274229731,
+          "average_precision": 0.1516473129246273,
+          "ece": 0.28698032997007006,
+          "f1_at_0.5": 0.17003005581794764,
+          "f1_at_tuned_threshold": 0.25121951219512195,
+          "positive_count": 303,
+          "threshold": 0.73272305727005
+        },
+        "consolidation": {
+          "auroc": 0.7511958521149671,
+          "average_precision": 0.10228738073447312,
+          "ece": 0.35084098285293713,
+          "f1_at_0.5": 0.15176908752327745,
+          "f1_at_tuned_threshold": 0.1713900134952767,
+          "positive_count": 454,
+          "threshold": 0.7515078186988831
+        },
+        "edema": {
+          "auroc": 0.8699170054188332,
+          "average_precision": 0.11828541529288022,
+          "ece": 0.24495527528504302,
+          "f1_at_0.5": 0.15263571990558616,
+          "f1_at_tuned_threshold": 0.20672478206724784,
+          "positive_count": 253,
+          "threshold": 0.8479474782943726
+        },
+        "emphysema": {
+          "auroc": 0.8209444327559202,
+          "average_precision": 0.12171738909650813,
+          "ece": 0.3372096603740267,
+          "f1_at_0.5": 0.09013157894736844,
+          "f1_at_tuned_threshold": 0.21363636363636365,
+          "positive_count": 194,
+          "threshold": 0.9149684309959412
+        },
+        "fibrosis": {
+          "auroc": 0.7913603961461126,
+          "average_precision": 0.0842825945202409,
+          "ece": 0.3469281514411076,
+          "f1_at_0.5": 0.07069320521619767,
+          "f1_at_tuned_threshold": 0.14615384615384616,
+          "positive_count": 158,
+          "threshold": 0.8397635221481323
+        },
+        "hernia": {
+          "auroc": 0.8277660454098508,
+          "average_precision": 0.03476987351267465,
+          "ece": 0.2462814038139003,
+          "f1_at_0.5": 0.02304147465437788,
+          "f1_at_tuned_threshold": 0.08333333333333333,
+          "positive_count": 32,
+          "threshold": 0.8613160252571106
+        },
+        "infiltration": {
+          "auroc": 0.6946758621210463,
+          "average_precision": 0.3463304255447372,
+          "ece": 0.27714130175481333,
+          "f1_at_0.5": 0.40162200282087446,
+          "f1_at_tuned_threshold": 0.40742984050070663,
+          "positive_count": 2014,
+          "threshold": 0.5461331009864807
+        },
+        "mass": {
+          "auroc": 0.7221788035112803,
+          "average_precision": 0.14418964894576103,
+          "ece": 0.38041969031169887,
+          "f1_at_0.5": 0.17486860965121834,
+          "f1_at_tuned_threshold": 0.22027792074112196,
+          "positive_count": 584,
+          "threshold": 0.6560229659080505
+        },
+        "nodule": {
+          "auroc": 0.6714748584433213,
+          "average_precision": 0.1257670035180779,
+          "ece": 0.39366846747728945,
+          "f1_at_0.5": 0.16257257704332292,
+          "f1_at_tuned_threshold": 0.18740074113287455,
+          "positive_count": 660,
+          "threshold": 0.6512499451637268
+        },
+        "pleural_effusion": {
+          "auroc": 0.8333590000519678,
+          "average_precision": 0.41091051572372045,
+          "ece": 0.25155681861930274,
+          "f1_at_0.5": 0.4368421052631579,
+          "f1_at_tuned_threshold": 0.46230566148430624,
+          "positive_count": 1390,
+          "threshold": 0.6614486575126648
+        },
+        "pleural_thickening": {
+          "auroc": 0.738670024531397,
+          "average_precision": 0.07610426634417468,
+          "ece": 0.3851776195683229,
+          "f1_at_0.5": 0.10762086861513248,
+          "f1_at_tuned_threshold": 0.14577777777777778,
+          "positive_count": 309,
+          "threshold": 0.7196140289306641
+        },
+        "pneumonia": {
+          "auroc": 0.7178172501543307,
+          "average_precision": 0.04013391325648662,
+          "ece": 0.3786872623767064,
+          "f1_at_0.5": 0.056356487549148106,
+          "f1_at_tuned_threshold": 0.09552238805970148,
+          "positive_count": 146,
+          "threshold": 0.7193517088890076
+        },
+        "pneumothorax": {
+          "auroc": 0.8442845476968203,
+          "average_precision": 0.2249034300341902,
+          "ece": 0.32688173125588066,
+          "f1_at_0.5": 0.22957540263543194,
+          "f1_at_tuned_threshold": 0.3193577163247101,
+          "positive_count": 504,
+          "threshold": 0.8648830652236938
+        }
+      },
+      "thresholds": {
+        "atelectasis": {
+          "best_f1": 0.3418949771689498,
+          "prevalence": 0.10268294856939121,
+          "threshold": 0.5984528660774231
+        },
+        "cardiomegaly": {
+          "best_f1": 0.25121951219512195,
+          "prevalence": 0.027007754701845084,
+          "threshold": 0.73272305727005
+        },
+        "consolidation": {
+          "best_f1": 0.1713900134952767,
+          "prevalence": 0.04046706480078438,
+          "threshold": 0.7515078186988831
+        },
+        "edema": {
+          "best_f1": 0.20672478206724784,
+          "prevalence": 0.022551029503520812,
+          "threshold": 0.8479474782943726
+        },
+        "emphysema": {
+          "best_f1": 0.21363636363636365,
+          "prevalence": 0.01729209376949817,
+          "threshold": 0.9149684309959412
+        },
+        "fibrosis": {
+          "best_f1": 0.14615384615384616,
+          "prevalence": 0.014083251626704697,
+          "threshold": 0.8397635221481323
+        },
+        "hernia": {
+          "best_f1": 0.08333333333333333,
+          "prevalence": 0.0028523041269275335,
+          "threshold": 0.8613160252571106
+        },
+        "infiltration": {
+          "best_f1": 0.40742984050070663,
+          "prevalence": 0.17951689098850165,
+          "threshold": 0.5461331009864807
+        },
+        "mass": {
+          "best_f1": 0.22027792074112196,
+          "prevalence": 0.052054550316427486,
+          "threshold": 0.6560229659080505
+        },
+        "nodule": {
+          "best_f1": 0.18740074113287455,
+          "prevalence": 0.05882877261788038,
+          "threshold": 0.6512499451637268
+        },
+        "pleural_effusion": {
+          "best_f1": 0.46230566148430624,
+          "prevalence": 0.12389696051341474,
+          "threshold": 0.6614486575126648
+        },
+        "pleural_thickening": {
+          "best_f1": 0.14577777777777778,
+          "prevalence": 0.027542561725643996,
+          "threshold": 0.7196140289306641
+        },
+        "pneumonia": {
+          "best_f1": 0.09552238805970148,
+          "prevalence": 0.013013637579106872,
+          "threshold": 0.7193517088890076
+        },
+        "pneumothorax": {
+          "best_f1": 0.3193577163247101,
+          "prevalence": 0.044923789999108656,
+          "threshold": 0.8648830652236938
+        }
+      }
+    },
+    "baseline_reconstruction": {
+      "batch_size": 2048,
+      "checkpoint_epoch": 100,
+      "checkpoint_label_names": [
+        "atelectasis",
+        "cardiomegaly",
+        "consolidation",
+        "edema",
+        "pleural_effusion",
+        "emphysema",
+        "fibrosis",
+        "hernia",
+        "infiltration",
+        "mass",
+        "nodule",
+        "pleural_thickening",
+        "pneumonia",
+        "pneumothorax"
+      ],
+      "input_dim": 2176,
+      "output_dim": 14
+    },
+    "baseline_reconstruction_metric_check": {
+      "comparison_scope": "forward_metrics_only_excluding_threshold_retuning",
+      "macro": {
+        "macro_auroc": {
+          "archived": 0.7755303820964682,
+          "delta": 2.9048089074112937e-06,
+          "reconstructed": 0.7755332869053756
+        },
+        "macro_average_precision": {
+          "archived": 0.16013489316594035,
+          "delta": -1.8407132310604979e-06,
+          "reconstructed": 0.16013305245270928
+        },
+        "macro_ece": {
+          "archived": 0.3222188465081493,
+          "delta": 1.137883710067289e-05,
+          "reconstructed": 0.32223022534525
+        },
+        "macro_f1_at_0.5": {
+          "archived": 0.18187992002475029,
+          "delta": -2.7648201912117143e-05,
+          "reconstructed": 0.18185227182283817
+        }
+      },
+      "matches_archived_metrics_within_5e-4": true,
+      "max_abs_delta": 0.00043012122701344135,
+      "per_label": {
+        "atelectasis": {
+          "auroc": {
+            "archived": 0.755119303099787,
+            "delta": 3.7077966512644167e-06,
+            "reconstructed": 0.7551230108964383
+          },
+          "average_precision": {
+            "archived": 0.2604958210025731,
+            "delta": 3.7743886804053606e-05,
+            "reconstructed": 0.2605335648893772
+          },
+          "ece": {
+            "archived": 0.304488332347437,
+            "delta": 6.127384963028337e-06,
+            "reconstructed": 0.3044944597324
+          },
+          "f1_at_0.5": {
+            "archived": 0.318172629876693,
+            "delta": 0.0,
+            "reconstructed": 0.318172629876693
+          }
+        },
+        "cardiomegaly": {
+          "auroc": {
+            "archived": 0.8186968110515705,
+            "delta": 2.116371402571815e-06,
+            "reconstructed": 0.8186989274229731
+          },
+          "average_precision": {
+            "archived": 0.15177740820336252,
+            "delta": -0.00013009527873522608,
+            "reconstructed": 0.1516473129246273
+          },
+          "ece": {
+            "archived": 0.2869713703839839,
+            "delta": 8.959586086154658e-06,
+            "reconstructed": 0.28698032997007006
+          },
+          "f1_at_0.5": {
+            "archived": 0.17003005581794764,
+            "delta": 0.0,
+            "reconstructed": 0.17003005581794764
+          }
+        },
+        "consolidation": {
+          "auroc": {
+            "archived": 0.7511929875534803,
+            "delta": 2.864561486792816e-06,
+            "reconstructed": 0.7511958521149671
+          },
+          "average_precision": {
+            "archived": 0.10226308297492213,
+            "delta": 2.429775955098412e-05,
+            "reconstructed": 0.10228738073447312
+          },
+          "ece": {
+            "archived": 0.3508422330306017,
+            "delta": -1.2501776645579277e-06,
+            "reconstructed": 0.35084098285293713
+          },
+          "f1_at_0.5": {
+            "archived": 0.1521992087502909,
+            "delta": -0.00043012122701344135,
+            "reconstructed": 0.15176908752327745
+          }
+        },
+        "edema": {
+          "auroc": {
+            "archived": 0.869911959279094,
+            "delta": 5.046139739173228e-06,
+            "reconstructed": 0.8699170054188332
+          },
+          "average_precision": {
+            "archived": 0.11826016578966732,
+            "delta": 2.5249503212906865e-05,
+            "reconstructed": 0.11828541529288022
+          },
+          "ece": {
+            "archived": 0.24493434226056196,
+            "delta": 2.0933024481056828e-05,
+            "reconstructed": 0.24495527528504302
+          },
+          "f1_at_0.5": {
+            "archived": 0.15263571990558616,
+            "delta": 0.0,
+            "reconstructed": 0.15263571990558616
+          }
+        },
+        "emphysema": {
+          "auroc": {
+            "archived": 0.8209434976739837,
+            "delta": 9.350819365483432e-07,
+            "reconstructed": 0.8209444327559202
+          },
+          "average_precision": {
+            "archived": 0.12175735966960301,
+            "delta": -3.997057309487739e-05,
+            "reconstructed": 0.12171738909650813
+          },
+          "ece": {
+            "archived": 0.3372130707873207,
+            "delta": -3.41041329399161e-06,
+            "reconstructed": 0.3372096603740267
+          },
+          "f1_at_0.5": {
+            "archived": 0.0901612372490951,
+            "delta": -2.9658301726659397e-05,
+            "reconstructed": 0.09013157894736844
+          }
+        },
+        "fibrosis": {
+          "auroc": {
+            "archived": 0.7913475216263323,
+            "delta": 1.2874519780381455e-05,
+            "reconstructed": 0.7913603961461126
+          },
+          "average_precision": {
+            "archived": 0.08426901624497242,
+            "delta": 1.3578275268474882e-05,
+            "reconstructed": 0.0842825945202409
+          },
+          "ece": {
+            "archived": 0.3469258629195922,
+            "delta": 2.2885215154033745e-06,
+            "reconstructed": 0.3469281514411076
+          },
+          "f1_at_0.5": {
+            "archived": 0.07062050051422694,
+            "delta": 7.270470197072443e-05,
+            "reconstructed": 0.07069320521619767
+          }
+        },
+        "hernia": {
+          "auroc": {
+            "archived": 0.8277353177795655,
+            "delta": 3.0727630285221075e-05,
+            "reconstructed": 0.8277660454098508
+          },
+          "average_precision": {
+            "archived": 0.034756355373595726,
+            "delta": 1.3518139078926017e-05,
+            "reconstructed": 0.03476987351267465
+          },
+          "ece": {
+            "archived": 0.24627093013655957,
+            "delta": 1.0473677340722132e-05,
+            "reconstructed": 0.2462814038139003
+          },
+          "f1_at_0.5": {
+            "archived": 0.02304147465437788,
+            "delta": 0.0,
+            "reconstructed": 0.02304147465437788
+          }
+        },
+        "infiltration": {
+          "auroc": {
+            "archived": 0.6946711962487465,
+            "delta": 4.665872299747242e-06,
+            "reconstructed": 0.6946758621210463
+          },
+          "average_precision": {
+            "archived": 0.3463294998893809,
+            "delta": 9.256553563097292e-07,
+            "reconstructed": 0.3463304255447372
+          },
+          "ece": {
+            "archived": 0.2771230460544805,
+            "delta": 1.8255700332814317e-05,
+            "reconstructed": 0.27714130175481333
+          },
+          "f1_at_0.5": {
+            "archived": 0.40162200282087446,
+            "delta": 0.0,
+            "reconstructed": 0.40162200282087446
+          }
+        },
+        "mass": {
+          "auroc": {
+            "archived": 0.7221822652008424,
+            "delta": -3.4616895621120136e-06,
+            "reconstructed": 0.7221788035112803
+          },
+          "average_precision": {
+            "archived": 0.14419035882454115,
+            "delta": -7.098787801196327e-07,
+            "reconstructed": 0.14418964894576103
+          },
+          "ece": {
+            "archived": 0.3804295833825317,
+            "delta": -9.893070832822648e-06,
+            "reconstructed": 0.38041969031169887
+          },
+          "f1_at_0.5": {
+            "archived": 0.17486860965121834,
+            "delta": 0.0,
+            "reconstructed": 0.17486860965121834
+          }
+        },
+        "nodule": {
+          "auroc": {
+            "archived": 0.6714821766294443,
+            "delta": -7.318186122984294e-06,
+            "reconstructed": 0.6714748584433213
+          },
+          "average_precision": {
+            "archived": 0.1257681888277718,
+            "delta": -1.185309693896297e-06,
+            "reconstructed": 0.1257670035180779
+          },
+          "ece": {
+            "archived": 0.39364865058308435,
+            "delta": 1.9816894205104685e-05,
+            "reconstructed": 0.39366846747728945
+          },
+          "f1_at_0.5": {
+            "archived": 0.16257257704332292,
+            "delta": 0.0,
+            "reconstructed": 0.16257257704332292
+          }
+        },
+        "pleural_effusion": {
+          "auroc": {
+            "archived": 0.8333630257255179,
+            "delta": -4.0256735500676655e-06,
+            "reconstructed": 0.8333590000519678
+          },
+          "average_precision": {
+            "archived": 0.4109309993814476,
+            "delta": -2.0483657727166094e-05,
+            "reconstructed": 0.41091051572372045
+          },
+          "ece": {
+            "archived": 0.2515108528255427,
+            "delta": 4.596579376003884e-05,
+            "reconstructed": 0.25155681861930274
+          },
+          "f1_at_0.5": {
+            "archived": 0.4368421052631579,
+            "delta": 0.0,
+            "reconstructed": 0.4368421052631579
+          }
+        },
+        "pleural_thickening": {
+          "auroc": {
+            "archived": 0.7386738807364759,
+            "delta": -3.856205078922592e-06,
+            "reconstructed": 0.738670024531397
+          },
+          "average_precision": {
+            "archived": 0.07609912883466573,
+            "delta": 5.137509508951199e-06,
+            "reconstructed": 0.07610426634417468
+          },
+          "ece": {
+            "archived": 0.3851783373994291,
+            "delta": -7.178311061672993e-07,
+            "reconstructed": 0.3851776195683229
+          },
+          "f1_at_0.5": {
+            "archived": 0.10762086861513248,
+            "delta": 0.0,
+            "reconstructed": 0.10762086861513248
+          }
+        },
+        "pneumonia": {
+          "auroc": {
+            "archived": 0.7178163223143051,
+            "delta": 9.278400255885444e-07,
+            "reconstructed": 0.7178172501543307
+          },
+          "average_precision": {
+            "archived": 0.04012598550152415,
+            "delta": 7.927754962465394e-06,
+            "reconstructed": 0.04013391325648662
+          },
+          "ece": {
+            "archived": 0.3786414245427109,
+            "delta": 4.583783399553232e-05,
+            "reconstructed": 0.3786872623767064
+          },
+          "f1_at_0.5": {
+            "archived": 0.056356487549148106,
+            "delta": 0.0,
+            "reconstructed": 0.056356487549148106
+          }
+        },
+        "pneumothorax": {
+          "auroc": {
+            "archived": 0.8442890844314083,
+            "delta": -4.536734588000968e-06,
+            "reconstructed": 0.8442845476968203
+          },
+          "average_precision": {
+            "archived": 0.22486513380513728,
+            "delta": 3.829622905290875e-05,
+            "reconstructed": 0.2249034300341902
+          },
+          "ece": {
+            "archived": 0.32688581446025367,
+            "delta": -4.083204373006577e-06,
+            "reconstructed": 0.32688173125588066
+          },
+          "f1_at_0.5": {
+            "archived": 0.22957540263543194,
+            "delta": 0.0,
+            "reconstructed": 0.22957540263543194
+          }
+        }
+      }
+    },
+    "baseline_reference": {
+      "argv": [
+        "/workspace/scripts/04_train_frozen_multilabel_baseline.py",
+        "--embedding-root",
+        "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+        "--manifest-csv",
+        "/workspace/manifest_nih_cxr14_all14.csv",
+        "--batch-size",
+        "512",
+        "--epochs",
+        "100",
+        "--lr",
+        "1e-3",
+        "--weight-decay",
+        "1e-4",
+        "--patience",
+        "4",
+        "--seed",
+        "1337",
+        "--device",
+        "auto",
+        "--fp16-on-cuda",
+        "--experiment-name",
+        "exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4"
+      ],
+      "best_epoch": 100,
+      "checkpoint_path": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4/best.ckpt",
+      "device_resolved": "cuda",
+      "embedding_root": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+      "experiment_dir": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4",
+      "experiment_id": "exp0028",
+      "experiment_name": "exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4",
+      "experiment_number": 28,
+      "input_dim": 2176,
+      "macro_metrics": {
+        "test": {
+          "auroc": 0.7746295393976524,
+          "average_precision": 0.16083075319675372,
+          "ece": 0.3221353678697777,
+          "f1_at_0.5": 0.18015367729000284,
+          "f1_at_tuned_thresholds": 0.22150581657234264
+        },
+        "val": {
+          "auroc": 0.7755303820964682,
+          "average_precision": 0.16013489316594035,
+          "ece": 0.3222188465081493,
+          "f1_at_0.5": 0.18187992002475029,
+          "f1_at_tuned_thresholds": 0.2317638054624284
+        }
+      },
+      "manifest_csv": "/workspace/manifest_nih_cxr14_all14.csv",
+      "num_labels": 14,
+      "operation_label": "source_baseline_training",
+      "run_date_utc": "2026-04-05T13:44:42.923580+00:00",
+      "selection_metric": "macro_auroc",
+      "split_inputs": {
+        "test": {
+          "embedding_dim": 2176,
+          "embeddings_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/test/embeddings.npy",
+          "first_row_id": "00000001_000",
+          "num_rows": 22330,
+          "sidecar_format": "lines",
+          "sidecar_parser": "stem",
+          "sidecar_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/test/image_paths.txt"
+        },
+        "train": {
+          "embedding_dim": 2176,
+          "embeddings_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/train/embeddings.npy",
+          "first_row_id": "00000002_000",
+          "num_rows": 78571,
+          "sidecar_format": "lines",
+          "sidecar_parser": "stem",
+          "sidecar_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/train/image_paths.txt"
+        },
+        "val": {
+          "embedding_dim": 2176,
+          "embeddings_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/val/embeddings.npy",
+          "first_row_id": "00000006_000",
+          "num_rows": 11219,
+          "sidecar_format": "lines",
+          "sidecar_parser": "stem",
+          "sidecar_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/val/image_paths.txt"
+        }
+      },
+      "stopped_early": false,
+      "test_metrics_path": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4/test_metrics.json",
+      "thresholds_path": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4/val_f1_thresholds.json",
+      "val_metrics_path": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4/val_metrics.json"
+    },
+    "best_config": {
+      "alpha": 0.74
+    },
+    "best_metrics": {
+      "diagnostic_macro_f1_at_tuned_thresholds": 0.2328702475802816,
+      "macro_auroc": 0.77593486588544,
+      "macro_average_precision": 0.16140798410051094,
+      "macro_ece": 0.23752275568451225,
+      "macro_f1_at_0.5": 0.20902477243896317,
+      "per_label": {
+        "atelectasis": {
+          "auroc": 0.7562797572238226,
+          "average_precision": 0.2639790505071918,
+          "ece": 0.22423331978265898,
+          "f1_at_0.5": 0.3315508021390374,
+          "f1_at_tuned_threshold": 0.3409350057012543,
+          "positive_count": 1152,
+          "threshold": 0.480777770280838
+        },
+        "cardiomegaly": {
+          "auroc": 0.8195675467143636,
+          "average_precision": 0.15241367845301773,
+          "ece": 0.2099785104004462,
+          "f1_at_0.5": 0.22103386809269163,
+          "f1_at_tuned_threshold": 0.2554838709677419,
+          "positive_count": 303,
+          "threshold": 0.5605528354644775
+        },
+        "consolidation": {
+          "auroc": 0.7520030446196374,
+          "average_precision": 0.10343921305147466,
+          "ece": 0.2595413918261188,
+          "f1_at_0.5": 0.15860597439544807,
+          "f1_at_tuned_threshold": 0.1735419630156472,
+          "positive_count": 454,
+          "threshold": 0.5872424840927124
+        },
+        "edema": {
+          "auroc": 0.8705448893778037,
+          "average_precision": 0.12134743499099482,
+          "ece": 0.1813255213736687,
+          "f1_at_0.5": 0.17633674630261661,
+          "f1_at_tuned_threshold": 0.20689655172413796,
+          "positive_count": 253,
+          "threshold": 0.6823241114616394
+        },
+        "emphysema": {
+          "auroc": 0.8218238773172499,
+          "average_precision": 0.10356300013495061,
+          "ece": 0.2507920867956216,
+          "f1_at_0.5": 0.13053892215568863,
+          "f1_at_tuned_threshold": 0.19964349376114082,
+          "positive_count": 194,
+          "threshold": 0.6755168437957764
+        },
+        "fibrosis": {
+          "auroc": 0.7909386840981942,
+          "average_precision": 0.08838194169359519,
+          "ece": 0.25662035080243567,
+          "f1_at_0.5": 0.10433070866141732,
+          "f1_at_tuned_threshold": 0.16077170418006428,
+          "positive_count": 158,
+          "threshold": 0.6175682544708252
+        },
+        "hernia": {
+          "auroc": 0.8273582059533386,
+          "average_precision": 0.0354179910293792,
+          "ece": 0.1819525784918761,
+          "f1_at_0.5": 0.028050490883590462,
+          "f1_at_tuned_threshold": 0.08450704225352113,
+          "positive_count": 32,
+          "threshold": 0.6270456314086914
+        },
+        "infiltration": {
+          "auroc": 0.6959363219009573,
+          "average_precision": 0.3470379437226334,
+          "ece": 0.20462983189334485,
+          "f1_at_0.5": 0.4016374801000683,
+          "f1_at_tuned_threshold": 0.40743767879035553,
+          "positive_count": 2014,
+          "threshold": 0.4620649218559265
+        },
+        "mass": {
+          "auroc": 0.7226378396480991,
+          "average_precision": 0.14674790722861916,
+          "ece": 0.279083751717803,
+          "f1_at_0.5": 0.21953675730110775,
+          "f1_at_tuned_threshold": 0.22541201488569906,
+          "positive_count": 584,
+          "threshold": 0.5084910988807678
+        },
+        "nodule": {
+          "auroc": 0.6697205026876397,
+          "average_precision": 0.1231719819643625,
+          "ece": 0.2899325802159857,
+          "f1_at_0.5": 0.18191433104177682,
+          "f1_at_tuned_threshold": 0.18453082057322343,
+          "positive_count": 660,
+          "threshold": 0.4587520956993103
+        },
+        "pleural_effusion": {
+          "auroc": 0.8339493101825387,
+          "average_precision": 0.4193753919474057,
+          "ece": 0.18110867330304894,
+          "f1_at_0.5": 0.4559666492965086,
+          "f1_at_tuned_threshold": 0.46526376477371,
+          "positive_count": 1390,
+          "threshold": 0.5331145524978638
+        },
+        "pleural_thickening": {
+          "auroc": 0.7393614717651631,
+          "average_precision": 0.07551249222341902,
+          "ece": 0.2846888436882963,
+          "f1_at_0.5": 0.14330218068535827,
+          "f1_at_tuned_threshold": 0.1460147354320161,
+          "positive_count": 309,
+          "threshold": 0.5097249150276184
+        },
+        "pneumonia": {
+          "auroc": 0.7180745711214122,
+          "average_precision": 0.043271966045986786,
+          "ece": 0.2800400076683553,
+          "f1_at_0.5": 0.08436363636363636,
+          "f1_at_tuned_threshold": 0.09371428571428571,
+          "positive_count": 146,
+          "threshold": 0.5534635186195374
+        },
+        "pneumothorax": {
+          "auroc": 0.8448920997859402,
+          "average_precision": 0.23605178441412267,
+          "ece": 0.24139113162351133,
+          "f1_at_0.5": 0.28917826672653796,
+          "f1_at_tuned_threshold": 0.31603053435114503,
+          "positive_count": 504,
+          "threshold": 0.6458160877227783
+        }
+      },
+      "thresholds": {
+        "atelectasis": {
+          "best_f1": 0.3409350057012543,
+          "prevalence": 0.10268294856939121,
+          "threshold": 0.480777770280838
+        },
+        "cardiomegaly": {
+          "best_f1": 0.2554838709677419,
+          "prevalence": 0.027007754701845084,
+          "threshold": 0.5605528354644775
+        },
+        "consolidation": {
+          "best_f1": 0.1735419630156472,
+          "prevalence": 0.04046706480078438,
+          "threshold": 0.5872424840927124
+        },
+        "edema": {
+          "best_f1": 0.20689655172413796,
+          "prevalence": 0.022551029503520812,
+          "threshold": 0.6823241114616394
+        },
+        "emphysema": {
+          "best_f1": 0.19964349376114082,
+          "prevalence": 0.01729209376949817,
+          "threshold": 0.6755168437957764
+        },
+        "fibrosis": {
+          "best_f1": 0.16077170418006428,
+          "prevalence": 0.014083251626704697,
+          "threshold": 0.6175682544708252
+        },
+        "hernia": {
+          "best_f1": 0.08450704225352113,
+          "prevalence": 0.0028523041269275335,
+          "threshold": 0.6270456314086914
+        },
+        "infiltration": {
+          "best_f1": 0.40743767879035553,
+          "prevalence": 0.17951689098850165,
+          "threshold": 0.4620649218559265
+        },
+        "mass": {
+          "best_f1": 0.22541201488569906,
+          "prevalence": 0.052054550316427486,
+          "threshold": 0.5084910988807678
+        },
+        "nodule": {
+          "best_f1": 0.18453082057322343,
+          "prevalence": 0.05882877261788038,
+          "threshold": 0.4587520956993103
+        },
+        "pleural_effusion": {
+          "best_f1": 0.46526376477371,
+          "prevalence": 0.12389696051341474,
+          "threshold": 0.5331145524978638
+        },
+        "pleural_thickening": {
+          "best_f1": 0.1460147354320161,
+          "prevalence": 0.027542561725643996,
+          "threshold": 0.5097249150276184
+        },
+        "pneumonia": {
+          "best_f1": 0.09371428571428571,
+          "prevalence": 0.013013637579106872,
+          "threshold": 0.5534635186195374
+        },
+        "pneumothorax": {
+          "best_f1": 0.31603053435114503,
+          "prevalence": 0.044923789999108656,
+          "threshold": 0.6458160877227783
+        }
+      }
+    },
+    "experiment_dir": "/workspace/experiments/exp0041__source_probability_mixing_evaluation__nih_cxr14_txtw050_val_e100_p4_alpha_fine_001",
+    "experiment_id": "exp0041",
+    "experiment_name": "exp0041__source_probability_mixing_evaluation__nih_cxr14_txtw050_val_e100_p4_alpha_fine_001",
+    "experiment_number": 41,
+    "label_columns": [
+      "label_atelectasis",
+      "label_cardiomegaly",
+      "label_consolidation",
+      "label_edema",
+      "label_pleural_effusion",
+      "label_emphysema",
+      "label_fibrosis",
+      "label_hernia",
+      "label_infiltration",
+      "label_mass",
+      "label_nodule",
+      "label_pleural_thickening",
+      "label_pneumonia",
+      "label_pneumothorax"
+    ],
+    "label_names": [
+      "atelectasis",
+      "cardiomegaly",
+      "consolidation",
+      "edema",
+      "pleural_effusion",
+      "emphysema",
+      "fibrosis",
+      "hernia",
+      "infiltration",
+      "mass",
+      "nodule",
+      "pleural_thickening",
+      "pneumonia",
+      "pneumothorax"
+    ],
+    "manifest_csv": "/workspace/manifest_nih_cxr14_all14.csv",
+    "memory_best_config": {
+      "k": 50,
+      "selection_metric": "macro_auroc",
+      "selection_trace": {
+        "final_candidates": 1,
+        "k_tied_candidates": 1,
+        "macro_auroc_tied_candidates": 1,
+        "macro_average_precision_tied_candidates": 1,
+        "max_macro_auroc": 0.6833095782624247,
+        "max_macro_average_precision_within_auroc_ties": 0.12520247506956086,
+        "selected_tau_after_k_tie_break": 1.0,
+        "smallest_k_within_metric_ties": 50,
+        "tie_break_rule": [
+          "highest validation macro AUROC",
+          "higher validation macro average precision",
+          "smaller k",
+          "tau = 10 if among tied settings, otherwise smaller tau"
+        ]
+      },
+      "tau": 1.0
+    },
+    "memory_best_metrics": {
+      "diagnostic_macro_f1_at_tuned_thresholds": 0.19000029137910052,
+      "macro_auroc": 0.6833095782624247,
+      "macro_average_precision": 0.12520247506956086,
+      "macro_ece": 0.009440808562381636,
+      "macro_f1_at_0.5": 0.0097116076821241,
+      "per_label": {
+        "atelectasis": {
+          "auroc": 0.7038573760664658,
+          "average_precision": 0.2148354443098938,
+          "ece": 0.007348229160444524,
+          "f1_at_0.5": 0.0,
+          "f1_at_tuned_threshold": 0.29405225125069484,
+          "positive_count": 1152,
+          "threshold": 0.1597757488489151
+        },
+        "cardiomegaly": {
+          "auroc": 0.6761900356396944,
+          "average_precision": 0.07108703702860919,
+          "ece": 0.009269751949223014,
+          "f1_at_0.5": 0.0,
+          "f1_at_tuned_threshold": 0.14746543778801843,
+          "positive_count": 303,
+          "threshold": 0.06016234681010246
+        },
+        "consolidation": {
+          "auroc": 0.7134791940760868,
+          "average_precision": 0.08735809509246309,
+          "ece": 0.012854832981377164,
+          "f1_at_0.5": 0.0,
+          "f1_at_tuned_threshold": 0.1674704077159141,
+          "positive_count": 454,
+          "threshold": 0.09942301362752914
+        },
+        "edema": {
+          "auroc": 0.816839545011206,
+          "average_precision": 0.10453257130264963,
+          "ece": 0.005014681716950376,
+          "f1_at_0.5": 0.0,
+          "f1_at_tuned_threshold": 0.20168067226890757,
+          "positive_count": 253,
+          "threshold": 0.13972635567188263
+        },
+        "emphysema": {
+          "auroc": 0.7437662762699582,
+          "average_precision": 0.07010258989337385,
+          "ece": 0.004834377838341678,
+          "f1_at_0.5": 0.0,
+          "f1_at_tuned_threshold": 0.16074766355140188,
+          "positive_count": 194,
+          "threshold": 0.11990052461624146
+        },
+        "fibrosis": {
+          "auroc": 0.6274288496816847,
+          "average_precision": 0.03907341831965287,
+          "ece": 0.0023321251619259535,
+          "f1_at_0.5": 0.0,
+          "f1_at_tuned_threshold": 0.07216494845360824,
+          "positive_count": 158,
+          "threshold": 0.11923060566186905
+        },
+        "hernia": {
+          "auroc": 0.5558125502815768,
+          "average_precision": 0.005414207806965073,
+          "ece": 0.0011585833494336395,
+          "f1_at_0.5": 0.0,
+          "f1_at_tuned_threshold": 0.025974025974025972,
+          "positive_count": 32,
+          "threshold": 0.039976831525564194
+        },
+        "infiltration": {
+          "auroc": 0.6719481014754405,
+          "average_precision": 0.32566467003919614,
+          "ece": 0.018977956434446004,
+          "f1_at_0.5": 0.09287646528403967,
+          "f1_at_tuned_threshold": 0.38488872264821394,
+          "positive_count": 2014,
+          "threshold": 0.20011360943317413
+        },
+        "mass": {
+          "auroc": 0.644815999124112,
+          "average_precision": 0.10764906692929369,
+          "ece": 0.0120790766880656,
+          "f1_at_0.5": 0.0,
+          "f1_at_tuned_threshold": 0.19188191881918823,
+          "positive_count": 584,
+          "threshold": 0.10040873289108276
+        },
+        "nodule": {
+          "auroc": 0.5625311740379455,
+          "average_precision": 0.0837542793376908,
+          "ece": 0.022956704891861492,
+          "f1_at_0.5": 0.0,
+          "f1_at_tuned_threshold": 0.13887307911212293,
+          "positive_count": 660,
+          "threshold": 0.10015537589788437
+        },
+        "pleural_effusion": {
+          "auroc": 0.7867877760056682,
+          "average_precision": 0.36276675459893704,
+          "ece": 0.019397586719568358,
+          "f1_at_0.5": 0.03913347309573724,
+          "f1_at_tuned_threshold": 0.41364902506963785,
+          "positive_count": 1390,
+          "threshold": 0.15985353291034698
+        },
+        "pleural_thickening": {
+          "auroc": 0.64140526045699,
+          "average_precision": 0.057735617475328856,
+          "ece": 0.006732914368842404,
+          "f1_at_0.5": 0.0,
+          "f1_at_tuned_threshold": 0.10799584631360332,
+          "positive_count": 309,
+          "threshold": 0.08004096150398254
+        },
+        "pneumonia": {
+          "auroc": 0.6363884631134105,
+          "average_precision": 0.030301875371334108,
+          "ece": 0.0018092870075736788,
+          "f1_at_0.5": 0.0,
+          "f1_at_tuned_threshold": 0.08398950131233597,
+          "positive_count": 146,
+          "threshold": 0.07957327365875244
+        },
+        "pneumothorax": {
+          "auroc": 0.7850834944337044,
+          "average_precision": 0.19255902346846349,
+          "ece": 0.0074052116052890195,
+          "f1_at_0.5": 0.003952569169960474,
+          "f1_at_tuned_threshold": 0.26917057902973396,
+          "positive_count": 504,
+          "threshold": 0.14049631357192993
+        }
+      },
+      "thresholds": {
+        "atelectasis": {
+          "best_f1": 0.29405225125069484,
+          "prevalence": 0.10268294856939121,
+          "threshold": 0.1597757488489151
+        },
+        "cardiomegaly": {
+          "best_f1": 0.14746543778801843,
+          "prevalence": 0.027007754701845084,
+          "threshold": 0.06016234681010246
+        },
+        "consolidation": {
+          "best_f1": 0.1674704077159141,
+          "prevalence": 0.04046706480078438,
+          "threshold": 0.09942301362752914
+        },
+        "edema": {
+          "best_f1": 0.20168067226890757,
+          "prevalence": 0.022551029503520812,
+          "threshold": 0.13972635567188263
+        },
+        "emphysema": {
+          "best_f1": 0.16074766355140188,
+          "prevalence": 0.01729209376949817,
+          "threshold": 0.11990052461624146
+        },
+        "fibrosis": {
+          "best_f1": 0.07216494845360824,
+          "prevalence": 0.014083251626704697,
+          "threshold": 0.11923060566186905
+        },
+        "hernia": {
+          "best_f1": 0.025974025974025972,
+          "prevalence": 0.0028523041269275335,
+          "threshold": 0.039976831525564194
+        },
+        "infiltration": {
+          "best_f1": 0.38488872264821394,
+          "prevalence": 0.17951689098850165,
+          "threshold": 0.20011360943317413
+        },
+        "mass": {
+          "best_f1": 0.19188191881918823,
+          "prevalence": 0.052054550316427486,
+          "threshold": 0.10040873289108276
+        },
+        "nodule": {
+          "best_f1": 0.13887307911212293,
+          "prevalence": 0.05882877261788038,
+          "threshold": 0.10015537589788437
+        },
+        "pleural_effusion": {
+          "best_f1": 0.41364902506963785,
+          "prevalence": 0.12389696051341474,
+          "threshold": 0.15985353291034698
+        },
+        "pleural_thickening": {
+          "best_f1": 0.10799584631360332,
+          "prevalence": 0.027542561725643996,
+          "threshold": 0.08004096150398254
+        },
+        "pneumonia": {
+          "best_f1": 0.08398950131233597,
+          "prevalence": 0.013013637579106872,
+          "threshold": 0.07957327365875244
+        },
+        "pneumothorax": {
+          "best_f1": 0.26917057902973396,
+          "prevalence": 0.044923789999108656,
+          "threshold": 0.14049631357192993
+        }
+      }
+    },
+    "memory_eval_reference": {
+      "argv": [
+        "/workspace/scripts/06_evaluate_source_memory_only.py",
+        "--memory-root",
+        "/workspace/experiments/exp0039__source_retrieval_memory_building__nih_cxr14_txtw050_train_instance_memory_e100_p4",
+        "--query-embedding-root",
+        "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+        "--baseline-experiment-dir",
+        "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4",
+        "--manifest-csv",
+        "/workspace/manifest_nih_cxr14_all14.csv",
+        "--split",
+        "val",
+        "--sweep-k-values",
+        "1",
+        "3",
+        "5",
+        "10",
+        "20",
+        "50",
+        "--sweep-tau-values",
+        "1",
+        "5",
+        "10",
+        "20",
+        "40",
+        "--qualitative-queries",
+        "10",
+        "--seed",
+        "3407",
+        "--experiment-name",
+        "exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4"
+      ],
+      "artifacts": {
+        "best_config": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4/best_config.json",
+        "best_val_metrics": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4/best_val_metrics.json",
+        "experiment_meta": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4/experiment_meta.json",
+        "qualitative_neighbors": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4/qualitative_neighbors.json",
+        "recreation_report": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4/recreation_report.md",
+        "selection_summary": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4/memory_only_selection.md",
+        "sweep_results": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4/sweep_results.json",
+        "val_probabilities": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4/val_probabilities.npy"
+      },
+      "baseline_experiment_dir": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4",
+      "baseline_meta_path": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4/experiment_meta.json",
+      "baseline_reference": {
+        "argv": [
+          "/workspace/scripts/04_train_frozen_multilabel_baseline.py",
+          "--embedding-root",
+          "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+          "--manifest-csv",
+          "/workspace/manifest_nih_cxr14_all14.csv",
+          "--batch-size",
+          "512",
+          "--epochs",
+          "100",
+          "--lr",
+          "1e-3",
+          "--weight-decay",
+          "1e-4",
+          "--patience",
+          "4",
+          "--seed",
+          "1337",
+          "--device",
+          "auto",
+          "--fp16-on-cuda",
+          "--experiment-name",
+          "exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4"
+        ],
+        "best_epoch": 100,
+        "checkpoint_path": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4/best.ckpt",
+        "device_resolved": "cuda",
+        "embedding_root": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+        "experiment_dir": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4",
+        "experiment_id": "exp0028",
+        "experiment_name": "exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4",
+        "experiment_number": 28,
+        "input_dim": 2176,
+        "macro_metrics": {
+          "test": {
+            "auroc": 0.7746295393976524,
+            "average_precision": 0.16083075319675372,
+            "ece": 0.3221353678697777,
+            "f1_at_0.5": 0.18015367729000284,
+            "f1_at_tuned_thresholds": 0.22150581657234264
+          },
+          "val": {
+            "auroc": 0.7755303820964682,
+            "average_precision": 0.16013489316594035,
+            "ece": 0.3222188465081493,
+            "f1_at_0.5": 0.18187992002475029,
+            "f1_at_tuned_thresholds": 0.2317638054624284
+          }
+        },
+        "manifest_csv": "/workspace/manifest_nih_cxr14_all14.csv",
+        "num_labels": 14,
+        "operation_label": "source_baseline_training",
+        "run_date_utc": "2026-04-05T13:44:42.923580+00:00",
+        "selection_metric": "macro_auroc",
+        "split_inputs": {
+          "test": {
+            "embedding_dim": 2176,
+            "embeddings_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/test/embeddings.npy",
+            "first_row_id": "00000001_000",
+            "num_rows": 22330,
+            "sidecar_format": "lines",
+            "sidecar_parser": "stem",
+            "sidecar_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/test/image_paths.txt"
+          },
+          "train": {
+            "embedding_dim": 2176,
+            "embeddings_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/train/embeddings.npy",
+            "first_row_id": "00000002_000",
+            "num_rows": 78571,
+            "sidecar_format": "lines",
+            "sidecar_parser": "stem",
+            "sidecar_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/train/image_paths.txt"
+          },
+          "val": {
+            "embedding_dim": 2176,
+            "embeddings_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/val/embeddings.npy",
+            "first_row_id": "00000006_000",
+            "num_rows": 11219,
+            "sidecar_format": "lines",
+            "sidecar_parser": "stem",
+            "sidecar_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/val/image_paths.txt"
+          }
+        },
+        "stopped_early": false,
+        "test_metrics_path": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4/test_metrics.json",
+        "thresholds_path": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4/val_f1_thresholds.json",
+        "val_metrics_path": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4/val_metrics.json"
+      },
+      "best_config": {
+        "k": 50,
+        "tau": 1.0
+      },
+      "best_metrics": {
+        "diagnostic_macro_f1_at_tuned_thresholds": 0.19000029137910052,
+        "macro_auroc": 0.6833095782624247,
+        "macro_average_precision": 0.12520247506956086,
+        "macro_ece": 0.009440808562381636,
+        "macro_f1_at_0.5": 0.0097116076821241,
+        "per_label": {
+          "atelectasis": {
+            "auroc": 0.7038573760664658,
+            "average_precision": 0.2148354443098938,
+            "ece": 0.007348229160444524,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.29405225125069484,
+            "positive_count": 1152,
+            "threshold": 0.1597757488489151
+          },
+          "cardiomegaly": {
+            "auroc": 0.6761900356396944,
+            "average_precision": 0.07108703702860919,
+            "ece": 0.009269751949223014,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.14746543778801843,
+            "positive_count": 303,
+            "threshold": 0.06016234681010246
+          },
+          "consolidation": {
+            "auroc": 0.7134791940760868,
+            "average_precision": 0.08735809509246309,
+            "ece": 0.012854832981377164,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.1674704077159141,
+            "positive_count": 454,
+            "threshold": 0.09942301362752914
+          },
+          "edema": {
+            "auroc": 0.816839545011206,
+            "average_precision": 0.10453257130264963,
+            "ece": 0.005014681716950376,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.20168067226890757,
+            "positive_count": 253,
+            "threshold": 0.13972635567188263
+          },
+          "emphysema": {
+            "auroc": 0.7437662762699582,
+            "average_precision": 0.07010258989337385,
+            "ece": 0.004834377838341678,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.16074766355140188,
+            "positive_count": 194,
+            "threshold": 0.11990052461624146
+          },
+          "fibrosis": {
+            "auroc": 0.6274288496816847,
+            "average_precision": 0.03907341831965287,
+            "ece": 0.0023321251619259535,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.07216494845360824,
+            "positive_count": 158,
+            "threshold": 0.11923060566186905
+          },
+          "hernia": {
+            "auroc": 0.5558125502815768,
+            "average_precision": 0.005414207806965073,
+            "ece": 0.0011585833494336395,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.025974025974025972,
+            "positive_count": 32,
+            "threshold": 0.039976831525564194
+          },
+          "infiltration": {
+            "auroc": 0.6719481014754405,
+            "average_precision": 0.32566467003919614,
+            "ece": 0.018977956434446004,
+            "f1_at_0.5": 0.09287646528403967,
+            "f1_at_tuned_threshold": 0.38488872264821394,
+            "positive_count": 2014,
+            "threshold": 0.20011360943317413
+          },
+          "mass": {
+            "auroc": 0.644815999124112,
+            "average_precision": 0.10764906692929369,
+            "ece": 0.0120790766880656,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.19188191881918823,
+            "positive_count": 584,
+            "threshold": 0.10040873289108276
+          },
+          "nodule": {
+            "auroc": 0.5625311740379455,
+            "average_precision": 0.0837542793376908,
+            "ece": 0.022956704891861492,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.13887307911212293,
+            "positive_count": 660,
+            "threshold": 0.10015537589788437
+          },
+          "pleural_effusion": {
+            "auroc": 0.7867877760056682,
+            "average_precision": 0.36276675459893704,
+            "ece": 0.019397586719568358,
+            "f1_at_0.5": 0.03913347309573724,
+            "f1_at_tuned_threshold": 0.41364902506963785,
+            "positive_count": 1390,
+            "threshold": 0.15985353291034698
+          },
+          "pleural_thickening": {
+            "auroc": 0.64140526045699,
+            "average_precision": 0.057735617475328856,
+            "ece": 0.006732914368842404,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.10799584631360332,
+            "positive_count": 309,
+            "threshold": 0.08004096150398254
+          },
+          "pneumonia": {
+            "auroc": 0.6363884631134105,
+            "average_precision": 0.030301875371334108,
+            "ece": 0.0018092870075736788,
+            "f1_at_0.5": 0.0,
+            "f1_at_tuned_threshold": 0.08398950131233597,
+            "positive_count": 146,
+            "threshold": 0.07957327365875244
+          },
+          "pneumothorax": {
+            "auroc": 0.7850834944337044,
+            "average_precision": 0.19255902346846349,
+            "ece": 0.0074052116052890195,
+            "f1_at_0.5": 0.003952569169960474,
+            "f1_at_tuned_threshold": 0.26917057902973396,
+            "positive_count": 504,
+            "threshold": 0.14049631357192993
+          }
+        },
+        "thresholds": {
+          "atelectasis": {
+            "best_f1": 0.29405225125069484,
+            "prevalence": 0.10268294856939121,
+            "threshold": 0.1597757488489151
+          },
+          "cardiomegaly": {
+            "best_f1": 0.14746543778801843,
+            "prevalence": 0.027007754701845084,
+            "threshold": 0.06016234681010246
+          },
+          "consolidation": {
+            "best_f1": 0.1674704077159141,
+            "prevalence": 0.04046706480078438,
+            "threshold": 0.09942301362752914
+          },
+          "edema": {
+            "best_f1": 0.20168067226890757,
+            "prevalence": 0.022551029503520812,
+            "threshold": 0.13972635567188263
+          },
+          "emphysema": {
+            "best_f1": 0.16074766355140188,
+            "prevalence": 0.01729209376949817,
+            "threshold": 0.11990052461624146
+          },
+          "fibrosis": {
+            "best_f1": 0.07216494845360824,
+            "prevalence": 0.014083251626704697,
+            "threshold": 0.11923060566186905
+          },
+          "hernia": {
+            "best_f1": 0.025974025974025972,
+            "prevalence": 0.0028523041269275335,
+            "threshold": 0.039976831525564194
+          },
+          "infiltration": {
+            "best_f1": 0.38488872264821394,
+            "prevalence": 0.17951689098850165,
+            "threshold": 0.20011360943317413
+          },
+          "mass": {
+            "best_f1": 0.19188191881918823,
+            "prevalence": 0.052054550316427486,
+            "threshold": 0.10040873289108276
+          },
+          "nodule": {
+            "best_f1": 0.13887307911212293,
+            "prevalence": 0.05882877261788038,
+            "threshold": 0.10015537589788437
+          },
+          "pleural_effusion": {
+            "best_f1": 0.41364902506963785,
+            "prevalence": 0.12389696051341474,
+            "threshold": 0.15985353291034698
+          },
+          "pleural_thickening": {
+            "best_f1": 0.10799584631360332,
+            "prevalence": 0.027542561725643996,
+            "threshold": 0.08004096150398254
+          },
+          "pneumonia": {
+            "best_f1": 0.08398950131233597,
+            "prevalence": 0.013013637579106872,
+            "threshold": 0.07957327365875244
+          },
+          "pneumothorax": {
+            "best_f1": 0.26917057902973396,
+            "prevalence": 0.044923789999108656,
+            "threshold": 0.14049631357192993
+          }
+        }
+      },
+      "experiment_dir": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4",
+      "experiment_id": "exp0040",
+      "experiment_name": "exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4",
+      "experiment_number": 40,
+      "index_details": {
+        "index_path": "/workspace/experiments/exp0039__source_retrieval_memory_building__nih_cxr14_txtw050_train_instance_memory_e100_p4/index.faiss",
+        "load_error": null,
+        "loaded_from_disk": true,
+        "rebuilt_from_embeddings": false
+      },
+      "label_columns": [
+        "label_atelectasis",
+        "label_cardiomegaly",
+        "label_consolidation",
+        "label_edema",
+        "label_pleural_effusion",
+        "label_emphysema",
+        "label_fibrosis",
+        "label_hernia",
+        "label_infiltration",
+        "label_mass",
+        "label_nodule",
+        "label_pleural_thickening",
+        "label_pneumonia",
+        "label_pneumothorax"
+      ],
+      "label_names": [
+        "atelectasis",
+        "cardiomegaly",
+        "consolidation",
+        "edema",
+        "pleural_effusion",
+        "emphysema",
+        "fibrosis",
+        "hernia",
+        "infiltration",
+        "mass",
+        "nodule",
+        "pleural_thickening",
+        "pneumonia",
+        "pneumothorax"
+      ],
+      "manifest_csv": "/workspace/manifest_nih_cxr14_all14.csv",
+      "memory_root": "/workspace/experiments/exp0039__source_retrieval_memory_building__nih_cxr14_txtw050_train_instance_memory_e100_p4",
+      "memory_source_embeddings": {
+        "kind": "memory_artifact",
+        "source": "/workspace/experiments/exp0039__source_retrieval_memory_building__nih_cxr14_txtw050_train_instance_memory_e100_p4/embeddings.npy"
+      },
+      "memory_summary": {
+        "embedding_dim": 2176,
+        "row_count": 78571
+      },
+      "operation_label": "source_memory_only_evaluation",
+      "query_embedding_root": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+      "query_norm_summary": {
+        "normalized": {
+          "max": 1.000000066092574,
+          "mean": 1.0000000137956042,
+          "min": 0.9999999350067751,
+          "std": 2.81916682163782e-08
+        },
+        "raw": {
+          "max": 1.0000001125457962,
+          "mean": 1.0000000008160872,
+          "min": 0.9999998911055679,
+          "std": 3.821761585065575e-08
+        }
+      },
+      "query_split": {
+        "embedding_dim": 2176,
+        "num_rows": 11219,
+        "run_meta": {
+          "alignment": "reference",
+          "component_offsets": [
+            {
+              "end_col_exclusive": 2048,
+              "source": "image",
+              "start_col": 0,
+              "weight": 1.0,
+              "width": 2048
+            },
+            {
+              "end_col_exclusive": 2176,
+              "source": "report",
+              "start_col": 2048,
+              "weight": 0.5,
+              "width": 128
+            }
+          ],
+          "experiment_dir": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+          "fused_dim": 2176,
+          "fusion": "concat",
+          "normalize_output": "l2",
+          "num_rows": 11219,
+          "reference_sidecar_output": "image_paths.txt",
+          "reference_source": "image",
+          "row_chunk_size": 4096,
+          "row_id_source": "image_paths.txt",
+          "row_norm_summary": {
+            "method": "l2",
+            "post_norm_max": 1.0000001192092896,
+            "post_norm_mean": 1.0,
+            "post_norm_min": 0.9999998211860657,
+            "pre_norm_max": 1.1185648441314697,
+            "pre_norm_mean": 1.1180367150592745,
+            "pre_norm_min": 1.1175789833068848,
+            "rows": 11219
+          },
+          "run_date_utc": "2026-04-05T13:39:48.151027+00:00",
+          "source_order": [
+            "image",
+            "report"
+          ],
+          "sources": [
+            {
+              "aligned_rows": 11219,
+              "available_rows": 11219,
+              "embeddings_path": "/workspace/experiments/exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test/val/embeddings.npy",
+              "embeddings_shape": [
+                11219,
+                2048
+              ],
+              "name": "image",
+              "reference": true,
+              "root": "/workspace/experiments/exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test",
+              "sidecar": {
+                "column": null,
+                "format": "lines",
+                "parser": "stem",
+                "relative_path": "image_paths.txt"
+              },
+              "split_dir": "/workspace/experiments/exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test/val",
+              "weight": 1.0
+            },
+            {
+              "aligned_rows": 11219,
+              "available_rows": 11219,
+              "embeddings_path": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test/val/embeddings.npy",
+              "embeddings_shape": [
+                11219,
+                128
+              ],
+              "name": "report",
+              "reference": false,
+              "root": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test",
+              "sidecar": {
+                "column": null,
+                "format": "json_list",
+                "parser": "identity",
+                "relative_path": "report_ids.json"
+              },
+              "split_dir": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test/val",
+              "weight": 0.5
+            }
+          ],
+          "split": "val"
+        },
+        "split": "val"
+      },
+      "run_date_utc": "2026-04-05T14:15:12.642080+00:00",
+      "script_path": "/workspace/scripts/06_evaluate_source_memory_only.py",
+      "script_sha256": "86c8594ef12b8d43261951eba7643ac839f5c55f3e8bb475ee5ff1b7ae9ae4c4",
+      "seed": 3407,
+      "selection_metric": "macro_auroc",
+      "sweep_grid": {
+        "k_values": [
+          1,
+          3,
+          5,
+          10,
+          20,
+          50
+        ],
+        "tau_values": [
+          1.0,
+          5.0,
+          10.0,
+          20.0,
+          40.0
+        ]
+      }
+    },
+    "memory_eval_root": "/workspace/experiments/exp0040__source_memory_only_evaluation__nih_cxr14_txtw050_val_e100_p4",
+    "operation_label": "source_probability_mixing_evaluation",
+    "query_embedding_root": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+    "query_norm_summary": {
+      "normalized": {
+        "max": 1.000000066092574,
+        "mean": 1.0000000137956042,
+        "min": 0.9999999350067751,
+        "std": 2.81916682163782e-08
+      },
+      "raw": {
+        "max": 1.0000001125457962,
+        "mean": 1.0000000008160872,
+        "min": 0.9999998911055679,
+        "std": 3.821761585065575e-08
+      }
+    },
+    "run_date_utc": "2026-04-05T14:15:36.735276+00:00",
+    "script_path": "/workspace/scripts/07_evaluate_probability_mixing.py",
+    "script_sha256": "bc7835587290462e3f45065734b7633c287649b59f64a94c06863c631941356b",
+    "seed": 3407,
+    "selection_metric": "macro_auroc"
+  },
+  "mixing_selection_root": "/workspace/experiments/exp0041__source_probability_mixing_evaluation__nih_cxr14_txtw050_val_e100_p4_alpha_fine_001",
+  "operation_label": "source_probability_mixing_test_evaluation",
+  "query_embedding_root": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+  "query_norm_summary": {
+    "normalized": {
+      "max": 1.000000062177133,
+      "mean": 1.000000013581738,
+      "min": 0.9999999366552638,
+      "std": 2.816690816242568e-08
+    },
+    "raw": {
+      "max": 1.0000001120626059,
+      "mean": 1.0000000010653716,
+      "min": 0.9999998824870946,
+      "std": 3.8007426469424224e-08
+    }
+  },
+  "run_date_utc": "2026-04-05T14:20:15.750570+00:00",
+  "script_path": "/workspace/scripts/09_evaluate_probability_mixing_test.py",
+  "script_sha256": "088a52f983d1b9d54d00c085087cbd4448300e2d1b9d8fa7f4ffa188f836c41a",
+  "seed": 3407,
+  "selection_mode": "frozen_validation_config"
+}

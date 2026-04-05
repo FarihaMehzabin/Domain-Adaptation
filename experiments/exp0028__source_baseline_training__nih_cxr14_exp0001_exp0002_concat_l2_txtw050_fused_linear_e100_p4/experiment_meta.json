@@ -1,0 +1,89 @@
+{
+  "argv": [
+    "/workspace/scripts/04_train_frozen_multilabel_baseline.py",
+    "--embedding-root",
+    "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+    "--manifest-csv",
+    "/workspace/manifest_nih_cxr14_all14.csv",
+    "--batch-size",
+    "512",
+    "--epochs",
+    "100",
+    "--lr",
+    "1e-3",
+    "--weight-decay",
+    "1e-4",
+    "--patience",
+    "4",
+    "--seed",
+    "1337",
+    "--device",
+    "auto",
+    "--fp16-on-cuda",
+    "--experiment-name",
+    "exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4"
+  ],
+  "best_epoch": 100,
+  "checkpoint_path": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4/best.ckpt",
+  "device_resolved": "cuda",
+  "embedding_root": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050",
+  "experiment_dir": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4",
+  "experiment_id": "exp0028",
+  "experiment_name": "exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4",
+  "experiment_number": 28,
+  "input_dim": 2176,
+  "macro_metrics": {
+    "test": {
+      "auroc": 0.7746295393976524,
+      "average_precision": 0.16083075319675372,
+      "ece": 0.3221353678697777,
+      "f1_at_0.5": 0.18015367729000284,
+      "f1_at_tuned_thresholds": 0.22150581657234264
+    },
+    "val": {
+      "auroc": 0.7755303820964682,
+      "average_precision": 0.16013489316594035,
+      "ece": 0.3222188465081493,
+      "f1_at_0.5": 0.18187992002475029,
+      "f1_at_tuned_thresholds": 0.2317638054624284
+    }
+  },
+  "manifest_csv": "/workspace/manifest_nih_cxr14_all14.csv",
+  "num_labels": 14,
+  "operation_label": "source_baseline_training",
+  "run_date_utc": "2026-04-05T13:44:42.923580+00:00",
+  "selection_metric": "macro_auroc",
+  "split_inputs": {
+    "test": {
+      "embedding_dim": 2176,
+      "embeddings_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/test/embeddings.npy",
+      "first_row_id": "00000001_000",
+      "num_rows": 22330,
+      "sidecar_format": "lines",
+      "sidecar_parser": "stem",
+      "sidecar_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/test/image_paths.txt"
+    },
+    "train": {
+      "embedding_dim": 2176,
+      "embeddings_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/train/embeddings.npy",
+      "first_row_id": "00000002_000",
+      "num_rows": 78571,
+      "sidecar_format": "lines",
+      "sidecar_parser": "stem",
+      "sidecar_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/train/image_paths.txt"
+    },
+    "val": {
+      "embedding_dim": 2176,
+      "embeddings_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/val/embeddings.npy",
+      "first_row_id": "00000006_000",
+      "num_rows": 11219,
+      "sidecar_format": "lines",
+      "sidecar_parser": "stem",
+      "sidecar_path": "/workspace/experiments/exp0027__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw050/val/image_paths.txt"
+    }
+  },
+  "stopped_early": false,
+  "test_metrics_path": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4/test_metrics.json",
+  "thresholds_path": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4/val_f1_thresholds.json",
+  "val_metrics_path": "/workspace/experiments/exp0028__source_baseline_training__nih_cxr14_exp0001_exp0002_concat_l2_txtw050_fused_linear_e100_p4/val_metrics.json"
+}

@@ -1,0 +1,86 @@
+{
+  "alignment": "reference",
+  "component_offsets": [
+    {
+      "end_col_exclusive": 2048,
+      "source": "image",
+      "start_col": 0,
+      "weight": 1.0,
+      "width": 2048
+    },
+    {
+      "end_col_exclusive": 2176,
+      "source": "report",
+      "start_col": 2048,
+      "weight": 1.5,
+      "width": 128
+    }
+  ],
+  "experiment_dir": "/workspace/experiments/exp0035__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2_txtw150",
+  "fused_dim": 2176,
+  "fusion": "concat",
+  "normalize_output": "l2",
+  "num_rows": 78571,
+  "reference_sidecar_output": "image_paths.txt",
+  "reference_source": "image",
+  "row_chunk_size": 4096,
+  "row_id_source": "image_paths.txt",
+  "row_norm_summary": {
+    "method": "l2",
+    "post_norm_max": 1.0000001192092896,
+    "post_norm_mean": 1.0,
+    "post_norm_min": 0.9999998211860657,
+    "pre_norm_max": 1.8030972480773926,
+    "pre_norm_mean": 1.8027754281358581,
+    "pre_norm_min": 1.8024420738220215,
+    "rows": 78571
+  },
+  "run_date_utc": "2026-04-05T14:01:10.043986+00:00",
+  "source_order": [
+    "image",
+    "report"
+  ],
+  "sources": [
+    {
+      "aligned_rows": 78571,
+      "available_rows": 78571,
+      "embeddings_path": "/workspace/experiments/exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test/train/embeddings.npy",
+      "embeddings_shape": [
+        78571,
+        2048
+      ],
+      "name": "image",
+      "reference": true,
+      "root": "/workspace/experiments/exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test",
+      "sidecar": {
+        "column": null,
+        "format": "lines",
+        "parser": "stem",
+        "relative_path": "image_paths.txt"
+      },
+      "split_dir": "/workspace/experiments/exp0001__embedding_generation__nih_cxr14_all14_resnet50_default_avg_train_val_test/train",
+      "weight": 1.0
+    },
+    {
+      "aligned_rows": 78571,
+      "available_rows": 78571,
+      "embeddings_path": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test/train/embeddings.npy",
+      "embeddings_shape": [
+        78571,
+        128
+      ],
+      "name": "report",
+      "reference": false,
+      "root": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test",
+      "sidecar": {
+        "column": null,
+        "format": "json_list",
+        "parser": "identity",
+        "relative_path": "report_ids.json"
+      },
+      "split_dir": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test/train",
+      "weight": 1.5
+    }
+  ],
+  "split": "train"
+}
