@@ -1,0 +1,357 @@
+{
+  "embedding_sanity": {
+    "embedding_dim": 2688,
+    "no_nan_or_inf": true,
+    "normalized_norm_summary": {
+      "max": 1.0000000606113426,
+      "mean": 1.0000000120298913,
+      "min": 0.9999999381881028,
+      "std": 2.5422003542862826e-08
+    },
+    "raw_norm_summary": {
+      "max": 1.0000001087628037,
+      "mean": 1.0000000005069205,
+      "min": 0.9999998876126446,
+      "std": 2.9582176017693426e-08
+    },
+    "row_count": 78569
+  },
+  "label_agreement": {
+    "chance_query_positive_prevalence": 0.0975437258364436,
+    "global_label_prevalence": {
+      "atelectasis": 0.10311955213546753,
+      "cardiomegaly": 0.024678945541381836,
+      "consolidation": 0.04104672372341156,
+      "edema": 0.020529724657535553,
+      "emphysema": 0.023317083716392517,
+      "fibrosis": 0.015667757019400597,
+      "hernia": 0.001998243620619178,
+      "infiltration": 0.17811095714569092,
+      "mass": 0.05112703517079353,
+      "nodule": 0.05644720047712326,
+      "pleural_effusion": 0.11826547235250473,
+      "pleural_thickening": 0.03072458691895008,
+      "pneumonia": 0.012829487212002277,
+      "pneumothorax": 0.04765238240361214
+    },
+    "mean_positive_jaccard": 0.17235690235690235,
+    "mean_query_positive_neighbor_prevalence": 0.22981366459627328,
+    "mean_random_positive_jaccard": 0.0869023569023569,
+    "num_queries": 200,
+    "per_label": {
+      "atelectasis": {
+        "chance_prevalence": 0.10311955213546753,
+        "mean_neighbor_prevalence": 0.20952380952380953,
+        "positive_queries": 21,
+        "prevalence_lift": 2.0318533700433394
+      },
+      "cardiomegaly": {
+        "chance_prevalence": 0.024678945541381836,
+        "mean_neighbor_prevalence": 0.14285714285714285,
+        "positive_queries": 7,
+        "prevalence_lift": 5.7886242593954815
+      },
+      "consolidation": {
+        "chance_prevalence": 0.04104672372341156,
+        "mean_neighbor_prevalence": 0.15384615384615385,
+        "positive_queries": 13,
+        "prevalence_lift": 3.748073899462178
+      },
+      "edema": {
+        "chance_prevalence": 0.020529724657535553,
+        "mean_neighbor_prevalence": 0.028571428571428574,
+        "positive_queries": 7,
+        "prevalence_lift": 1.3917102663596255
+      },
+      "emphysema": {
+        "chance_prevalence": 0.023317083716392517,
+        "mean_neighbor_prevalence": 0.03333333333333333,
+        "positive_queries": 6,
+        "prevalence_lift": 1.4295669964035482
+      },
+      "fibrosis": {
+        "chance_prevalence": 0.015667757019400597,
+        "mean_neighbor_prevalence": 0.1,
+        "positive_queries": 2,
+        "prevalence_lift": 6.382534518257784
+      },
+      "hernia": {
+        "chance_prevalence": 0.001998243620619178,
+        "mean_neighbor_prevalence": null,
+        "positive_queries": 0,
+        "prevalence_lift": null
+      },
+      "infiltration": {
+        "chance_prevalence": 0.17811095714569092,
+        "mean_neighbor_prevalence": 0.3285714285714286,
+        "positive_queries": 42,
+        "prevalence_lift": 1.8447569640685513
+      },
+      "mass": {
+        "chance_prevalence": 0.05112703517079353,
+        "mean_neighbor_prevalence": 0.07500000000000001,
+        "positive_queries": 8,
+        "prevalence_lift": 1.4669342696962013
+      },
+      "nodule": {
+        "chance_prevalence": 0.05644720047712326,
+        "mean_neighbor_prevalence": 0.16363636363636364,
+        "positive_queries": 11,
+        "prevalence_lift": 2.8989278875341506
+      },
+      "pleural_effusion": {
+        "chance_prevalence": 0.11826547235250473,
+        "mean_neighbor_prevalence": 0.3241379310344827,
+        "positive_queries": 29,
+        "prevalence_lift": 2.740765538637937
+      },
+      "pleural_thickening": {
+        "chance_prevalence": 0.03072458691895008,
+        "mean_neighbor_prevalence": 0.05,
+        "positive_queries": 4,
+        "prevalence_lift": 1.6273611792372504
+      },
+      "pneumonia": {
+        "chance_prevalence": 0.012829487212002277,
+        "mean_neighbor_prevalence": 0.0,
+        "positive_queries": 2,
+        "prevalence_lift": 0.0
+      },
+      "pneumothorax": {
+        "chance_prevalence": 0.04765238240361214,
+        "mean_neighbor_prevalence": 0.3555555555555555,
+        "positive_queries": 9,
+        "prevalence_lift": 7.461443428872588
+      }
+    },
+    "positive_jaccard_lift": 1.983339790778768,
+    "positive_prevalence_lift": 2.3560066280594327,
+    "positive_query_count": 99,
+    "sample_queries": [
+      {
+        "neighbor_row_ids": [
+          "00000580_000",
+          "00000580_006",
+          "00000580_005",
+          "00012616_010",
+          "00012722_006"
+        ],
+        "neighbor_similarities": [
+          0.9607848525047302,
+          0.9568703174591064,
+          0.9427825212478638,
+          0.929222583770752,
+          0.9274839162826538
+        ],
+        "query_index": 1548,
+        "query_labels": [
+          "atelectasis",
+          "pleural_thickening"
+        ],
+        "query_row_id": "00000580_008"
+      },
+      {
+        "neighbor_row_ids": [
+          "00000127_003",
+          "00020673_018",
+          "00012229_002",
+          "00016977_003",
+          "00014472_009"
+        ],
+        "neighbor_similarities": [
+          0.9487777948379517,
+          0.9482283592224121,
+          0.9464548826217651,
+          0.9456651210784912,
+          0.9435129165649414
+        ],
+        "query_index": 2055,
+        "query_labels": [
+          "consolidation"
+        ],
+        "query_row_id": "00000798_021"
+      },
+      {
+        "neighbor_row_ids": [
+          "00011850_009",
+          "00015160_024",
+          "00001301_017",
+          "00006492_006",
+          "00010718_013"
+        ],
+        "neighbor_similarities": [
+          0.943191409111023,
+          0.9423540830612183,
+          0.9421062469482422,
+          0.9387893080711365,
+          0.937116265296936
+        ],
+        "query_index": 3387,
+        "query_labels": [
+          "infiltration"
+        ],
+        "query_row_id": "00001301_015"
+      },
+      {
+        "neighbor_row_ids": [
+          "00002365_003",
+          "00007804_008",
+          "00013417_000",
+          "00011269_015",
+          "00022267_004"
+        ],
+        "neighbor_similarities": [
+          0.9264365434646606,
+          0.9257814884185791,
+          0.9221257567405701,
+          0.9219305515289307,
+          0.921022891998291
+        ],
+        "query_index": 4340,
+        "query_labels": [
+          "infiltration",
+          "pneumothorax"
+        ],
+        "query_row_id": "00001673_007"
+      },
+      {
+        "neighbor_row_ids": [
+          "00000336_000",
+          "00006875_015",
+          "00005416_000",
+          "00025126_000",
+          "00011322_001"
+        ],
+        "neighbor_similarities": [
+          0.9163130521774292,
+          0.9146981239318848,
+          0.9060027599334717,
+          0.9035594463348389,
+          0.9012802839279175
+        ],
+        "query_index": 4682,
+        "query_labels": [
+          "infiltration"
+        ],
+        "query_row_id": "00001806_012"
+      },
+      {
+        "neighbor_row_ids": [
+          "00017425_005",
+          "00008806_008",
+          "00001854_002",
+          "00015462_000",
+          "00016009_027"
+        ],
+        "neighbor_similarities": [
+          0.9080921411514282,
+          0.9053601026535034,
+          0.8973864316940308,
+          0.8937255144119263,
+          0.8933525085449219
+        ],
+        "query_index": 4922,
+        "query_labels": [
+          "infiltration"
+        ],
+        "query_row_id": "00001854_000"
+      },
+      {
+        "neighbor_row_ids": [
+          "00016971_037",
+          "00014414_015",
+          "00014398_031",
+          "00011579_042",
+          "00009899_002"
+        ],
+        "neighbor_similarities": [
+          0.9364466667175293,
+          0.9342479705810547,
+          0.9314448833465576,
+          0.9272195100784302,
+          0.9270846843719482
+        ],
+        "query_index": 6404,
+        "query_labels": [
+          "pleural_effusion",
+          "infiltration"
+        ],
+        "query_row_id": "00002395_011"
+      },
+      {
+        "neighbor_row_ids": [
+          "00008274_001",
+          "00013304_003",
+          "00011427_001",
+          "00002451_000",
+          "00003468_012"
+        ],
+        "neighbor_similarities": [
+          0.9445397853851318,
+          0.9427077770233154,
+          0.9417753219604492,
+          0.9415206909179688,
+          0.9399346709251404
+        ],
+        "query_index": 6770,
+        "query_labels": [
+          "pneumothorax"
+        ],
+        "query_row_id": "00002492_003"
+      },
+      {
+        "neighbor_row_ids": [
+          "00001802_001",
+          "00006996_012",
+          "00018464_022",
+          "00007559_002",
+          "00006519_001"
+        ],
+        "neighbor_similarities": [
+          0.9372724294662476,
+          0.935203492641449,
+          0.9345659017562866,
+          0.9321674108505249,
+          0.9316992163658142
+        ],
+        "query_index": 7227,
+        "query_labels": [
+          "atelectasis"
+        ],
+        "query_row_id": "00002644_001"
+      },
+      {
+        "neighbor_row_ids": [
+          "00028974_008",
+          "00005609_012",
+          "00010007_037",
+          "00004931_010",
+          "00025754_008"
+        ],
+        "neighbor_similarities": [
+          0.9443426132202148,
+          0.9411476254463196,
+          0.9353193044662476,
+          0.9345664978027344,
+          0.9338880777359009
+        ],
+        "query_index": 7792,
+        "query_labels": [
+          "edema",
+          "pleural_effusion"
+        ],
+        "query_row_id": "00002892_006"
+      }
+    ],
+    "top_k": 5
+  },
+  "qualitative_neighbors_path": "/workspace/experiments/exp0029__source_retrieval_memory_building__xattn_long_e50_hybrid_memory_train/qualitative_neighbors.json",
+  "self_retrieval": {
+    "miss_examples": [],
+    "sample_size": 512,
+    "top1_self_hit_rate": 1.0,
+    "top1_similarity_mean": 1.0,
+    "top1_similarity_min": 0.9999996423721313,
+    "top5_contains_self_rate": 1.0
+  }
+}

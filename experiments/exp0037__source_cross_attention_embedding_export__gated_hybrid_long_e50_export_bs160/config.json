@@ -1,0 +1,56 @@
+{
+  "argv": [
+    "/workspace/scripts/11_export_cross_attention_embeddings.py",
+    "--training-experiment-dir",
+    "/workspace/experiments/exp0036__source_cross_attention_training__gated_hybrid_long_e50_pat5_bs32_ml256",
+    "--experiment-name",
+    "gated_hybrid_long_e50_export_bs160",
+    "--overwrite",
+    "--trust-manifest-paths",
+    "--device",
+    "auto",
+    "--fp16-on-cuda",
+    "--batch-size",
+    "160",
+    "--num-workers",
+    "8"
+  ],
+  "batch_size": 160,
+  "checkpoint_epoch": 4,
+  "data_root": "/workspace/data",
+  "device_requested": "auto",
+  "device_resolved": "cuda",
+  "embedding_dim": 512,
+  "experiment_dir": "/workspace/experiments/exp0037__source_cross_attention_embedding_export__gated_hybrid_long_e50_export_bs160",
+  "experiment_id": "exp0037",
+  "experiment_name": "exp0037__source_cross_attention_embedding_export__gated_hybrid_long_e50_export_bs160",
+  "experiment_number": 37,
+  "fp16_on_cuda": true,
+  "gated_hybrid": true,
+  "manifest_csv": "/workspace/manifest_nih_cxr14_all14.csv",
+  "max_length": 256,
+  "num_workers": 8,
+  "operation_label": "source_cross_attention_embedding_export",
+  "reports_root": "/workspace/reports",
+  "run_date_utc": "2026-04-10T17:38:13.188504+00:00",
+  "script_path": "/workspace/scripts/11_export_cross_attention_embeddings.py",
+  "script_sha256": "61709d42ec19821968000d50dae56c4bc887c48754d07856530764212328a00b",
+  "split_inputs": {
+    "test": {
+      "first_row_id": "00000001_000",
+      "num_rows": 22330
+    },
+    "train": {
+      "first_row_id": "00000002_000",
+      "num_rows": 78571
+    },
+    "val": {
+      "first_row_id": "00000006_000",
+      "num_rows": 11219
+    }
+  },
+  "training_checkpoint_path": "/workspace/experiments/exp0036__source_cross_attention_training__gated_hybrid_long_e50_pat5_bs32_ml256/best.ckpt",
+  "training_config_path": "/workspace/experiments/exp0036__source_cross_attention_training__gated_hybrid_long_e50_pat5_bs32_ml256/config.json",
+  "training_experiment_dir": "/workspace/experiments/exp0036__source_cross_attention_training__gated_hybrid_long_e50_pat5_bs32_ml256",
+  "trust_manifest_paths": true
+}

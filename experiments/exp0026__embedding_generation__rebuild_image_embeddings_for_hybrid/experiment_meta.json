@@ -1,0 +1,71 @@
+{
+  "argv": [
+    "/workspace/scripts/01_generate_nih_split_image_embeddings.py",
+    "--manifest-csv",
+    "/workspace/manifest_nih_cxr14_all14.csv",
+    "--data-root",
+    "/workspace/data",
+    "--splits",
+    "train",
+    "val",
+    "test",
+    "--encoder-backend",
+    "torchvision",
+    "--encoder-id",
+    "resnet50",
+    "--weights",
+    "DEFAULT",
+    "--pooling",
+    "avg",
+    "--device",
+    "cuda",
+    "--fp16-on-cuda",
+    "--trust-manifest-paths",
+    "--experiment-name",
+    "rebuild_image_embeddings_for_hybrid"
+  ],
+  "batch_size": 64,
+  "checkpoint_path": null,
+  "data_root": "/workspace/data",
+  "device_requested": "cuda",
+  "device_resolved": "cuda",
+  "encoder_backend": "torchvision",
+  "encoder_build_meta": {
+    "feature_source_builder": "children[:-2]"
+  },
+  "encoder_id": "resnet50",
+  "experiment_dir": "/workspace/experiments/exp0026__embedding_generation__rebuild_image_embeddings_for_hybrid",
+  "experiment_id": "exp0026",
+  "experiment_name": "exp0026__embedding_generation__rebuild_image_embeddings_for_hybrid",
+  "experiment_number": 26,
+  "extensions": [
+    ".jpeg",
+    ".jpg",
+    ".png"
+  ],
+  "fp16_on_cuda": true,
+  "manifest_csv": "/workspace/manifest_nih_cxr14_all14.csv",
+  "max_images_per_split": null,
+  "normalization": "l2",
+  "num_workers": 4,
+  "pooling": "avg",
+  "requested_input_size": null,
+  "resolved_input_size": [
+    224,
+    224
+  ],
+  "revision": null,
+  "run_date_utc": "2026-04-10T15:16:45.840108+00:00",
+  "split_output_dirs": {
+    "test": "/workspace/experiments/exp0026__embedding_generation__rebuild_image_embeddings_for_hybrid/test",
+    "train": "/workspace/experiments/exp0026__embedding_generation__rebuild_image_embeddings_for_hybrid/train",
+    "val": "/workspace/experiments/exp0026__embedding_generation__rebuild_image_embeddings_for_hybrid/val"
+  },
+  "splits": [
+    "train",
+    "val",
+    "test"
+  ],
+  "trust_manifest_paths": true,
+  "weights": "DEFAULT"
+}

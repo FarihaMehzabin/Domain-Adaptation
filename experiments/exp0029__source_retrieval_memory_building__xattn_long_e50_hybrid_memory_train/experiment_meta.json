@@ -1,0 +1,647 @@
+{
+  "argv": [
+    "/workspace/scripts/05_build_source_retrieval_memory.py",
+    "--embedding-root",
+    "/workspace/experiments/exp0027__fused_embedding_generation__xattn_long_e50_hybrid_concat",
+    "--baseline-experiment-dir",
+    "/workspace/experiments/exp0028__source_baseline_training__xattn_long_e50_hybrid_baseline_bs4096",
+    "--manifest-csv",
+    "/workspace/manifest_nih_cxr14_all14.csv",
+    "--experiment-name",
+    "xattn_long_e50_hybrid_memory_train"
+  ],
+  "artifacts": {
+    "embeddings": "/workspace/experiments/exp0029__source_retrieval_memory_building__xattn_long_e50_hybrid_memory_train/embeddings.npy",
+    "gitignore": "/workspace/experiments/exp0029__source_retrieval_memory_building__xattn_long_e50_hybrid_memory_train/.gitignore",
+    "image_paths": "/workspace/experiments/exp0029__source_retrieval_memory_building__xattn_long_e50_hybrid_memory_train/image_paths.txt",
+    "index": "/workspace/experiments/exp0029__source_retrieval_memory_building__xattn_long_e50_hybrid_memory_train/index.faiss",
+    "items": "/workspace/experiments/exp0029__source_retrieval_memory_building__xattn_long_e50_hybrid_memory_train/items.jsonl",
+    "labels": "/workspace/experiments/exp0029__source_retrieval_memory_building__xattn_long_e50_hybrid_memory_train/labels.npy",
+    "qualitative_neighbors": "/workspace/experiments/exp0029__source_retrieval_memory_building__xattn_long_e50_hybrid_memory_train/qualitative_neighbors.json",
+    "recreation_report": "/workspace/experiments/exp0029__source_retrieval_memory_building__xattn_long_e50_hybrid_memory_train/recreation_report.md",
+    "row_ids": "/workspace/experiments/exp0029__source_retrieval_memory_building__xattn_long_e50_hybrid_memory_train/row_ids.json",
+    "sanity_report": "/workspace/experiments/exp0029__source_retrieval_memory_building__xattn_long_e50_hybrid_memory_train/sanity_report.json"
+  },
+  "baseline_experiment_dir": "/workspace/experiments/exp0028__source_baseline_training__xattn_long_e50_hybrid_baseline_bs4096",
+  "baseline_meta_path": "/workspace/experiments/exp0028__source_baseline_training__xattn_long_e50_hybrid_baseline_bs4096/experiment_meta.json",
+  "baseline_reference": {
+    "argv": [
+      "/workspace/scripts/04_train_frozen_multilabel_baseline.py",
+      "--embedding-root",
+      "/workspace/experiments/exp0027__fused_embedding_generation__xattn_long_e50_hybrid_concat",
+      "--manifest-csv",
+      "/workspace/manifest_nih_cxr14_all14.csv",
+      "--device",
+      "cuda",
+      "--fp16-on-cuda",
+      "--batch-size",
+      "4096",
+      "--epochs",
+      "20",
+      "--patience",
+      "3",
+      "--experiment-name",
+      "xattn_long_e50_hybrid_baseline_bs4096"
+    ],
+    "best_epoch": 20,
+    "checkpoint_path": "/workspace/experiments/exp0028__source_baseline_training__xattn_long_e50_hybrid_baseline_bs4096/best.ckpt",
+    "device_resolved": "cuda",
+    "embedding_root": "/workspace/experiments/exp0027__fused_embedding_generation__xattn_long_e50_hybrid_concat",
+    "experiment_dir": "/workspace/experiments/exp0028__source_baseline_training__xattn_long_e50_hybrid_baseline_bs4096",
+    "experiment_id": "exp0028",
+    "experiment_name": "exp0028__source_baseline_training__xattn_long_e50_hybrid_baseline_bs4096",
+    "experiment_number": 28,
+    "input_dim": 2688,
+    "macro_metrics": {
+      "test": {
+        "auroc": 0.7708291526952876,
+        "average_precision": 0.15151025088809708,
+        "ece": 0.32481758980996833,
+        "f1_at_0.5": 0.17326234744111854,
+        "f1_at_tuned_thresholds": 0.20746516247659744
+      },
+      "val": {
+        "auroc": 0.7660783211543876,
+        "average_precision": 0.15184884933052342,
+        "ece": 0.3240192481664139,
+        "f1_at_0.5": 0.17449956705500277,
+        "f1_at_tuned_thresholds": 0.22432805829304409
+      }
+    },
+    "manifest_csv": "/workspace/manifest_nih_cxr14_all14.csv",
+    "num_labels": 14,
+    "operation_label": "source_baseline_training",
+    "run_date_utc": "2026-04-10T15:44:54.736739+00:00",
+    "selection_metric": "macro_auroc",
+    "split_inputs": {
+      "test": {
+        "embedding_dim": 2688,
+        "embeddings_path": "/workspace/experiments/exp0027__fused_embedding_generation__xattn_long_e50_hybrid_concat/test/embeddings.npy",
+        "first_row_id": "00000001_000",
+        "num_rows": 22330,
+        "sidecar_format": "lines",
+        "sidecar_parser": "stem",
+        "sidecar_path": "/workspace/experiments/exp0027__fused_embedding_generation__xattn_long_e50_hybrid_concat/test/image_paths.txt"
+      },
+      "train": {
+        "embedding_dim": 2688,
+        "embeddings_path": "/workspace/experiments/exp0027__fused_embedding_generation__xattn_long_e50_hybrid_concat/train/embeddings.npy",
+        "first_row_id": "00000002_000",
+        "num_rows": 78569,
+        "sidecar_format": "lines",
+        "sidecar_parser": "stem",
+        "sidecar_path": "/workspace/experiments/exp0027__fused_embedding_generation__xattn_long_e50_hybrid_concat/train/image_paths.txt"
+      },
+      "val": {
+        "embedding_dim": 2688,
+        "embeddings_path": "/workspace/experiments/exp0027__fused_embedding_generation__xattn_long_e50_hybrid_concat/val/embeddings.npy",
+        "first_row_id": "00000006_000",
+        "num_rows": 11219,
+        "sidecar_format": "lines",
+        "sidecar_parser": "stem",
+        "sidecar_path": "/workspace/experiments/exp0027__fused_embedding_generation__xattn_long_e50_hybrid_concat/val/image_paths.txt"
+      }
+    },
+    "stopped_early": false,
+    "test_metrics_path": "/workspace/experiments/exp0028__source_baseline_training__xattn_long_e50_hybrid_baseline_bs4096/test_metrics.json",
+    "thresholds_path": "/workspace/experiments/exp0028__source_baseline_training__xattn_long_e50_hybrid_baseline_bs4096/val_f1_thresholds.json",
+    "val_metrics_path": "/workspace/experiments/exp0028__source_baseline_training__xattn_long_e50_hybrid_baseline_bs4096/val_metrics.json"
+  },
+  "embedding_root": "/workspace/experiments/exp0027__fused_embedding_generation__xattn_long_e50_hybrid_concat",
+  "embedding_sanity": {
+    "normalized_norm_summary": {
+      "max": 1.0000000606113426,
+      "mean": 1.0000000120298913,
+      "min": 0.9999999381881028,
+      "std": 2.5422003542862826e-08
+    },
+    "raw_norm_summary": {
+      "max": 1.0000001087628037,
+      "mean": 1.0000000005069205,
+      "min": 0.9999998876126446,
+      "std": 2.9582176017693426e-08
+    },
+    "source_embeddings_already_near_unit_norm": true
+  },
+  "experiment_dir": "/workspace/experiments/exp0029__source_retrieval_memory_building__xattn_long_e50_hybrid_memory_train",
+  "experiment_id": "exp0029",
+  "experiment_name": "exp0029__source_retrieval_memory_building__xattn_long_e50_hybrid_memory_train",
+  "experiment_number": 29,
+  "index": {
+    "metric": "inner_product_on_l2_normalized_vectors",
+    "ntotal": 78569,
+    "type": "faiss.IndexFlatIP"
+  },
+  "label_columns": [
+    "label_atelectasis",
+    "label_cardiomegaly",
+    "label_consolidation",
+    "label_edema",
+    "label_pleural_effusion",
+    "label_emphysema",
+    "label_fibrosis",
+    "label_hernia",
+    "label_infiltration",
+    "label_mass",
+    "label_nodule",
+    "label_pleural_thickening",
+    "label_pneumonia",
+    "label_pneumothorax"
+  ],
+  "label_names": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion",
+    "emphysema",
+    "fibrosis",
+    "hernia",
+    "infiltration",
+    "mass",
+    "nodule",
+    "pleural_thickening",
+    "pneumonia",
+    "pneumothorax"
+  ],
+  "manifest_csv": "/workspace/manifest_nih_cxr14_all14.csv",
+  "memory": {
+    "embedding_dim": 2688,
+    "granularity": "instance",
+    "row_count": 78569,
+    "value_type": "multilabel_float32"
+  },
+  "operation_label": "source_retrieval_memory_building",
+  "run_date_utc": "2026-04-10T15:45:27.034491+00:00",
+  "sanity_checks": {
+    "label_agreement": {
+      "chance_query_positive_prevalence": 0.0975437258364436,
+      "global_label_prevalence": {
+        "atelectasis": 0.10311955213546753,
+        "cardiomegaly": 0.024678945541381836,
+        "consolidation": 0.04104672372341156,
+        "edema": 0.020529724657535553,
+        "emphysema": 0.023317083716392517,
+        "fibrosis": 0.015667757019400597,
+        "hernia": 0.001998243620619178,
+        "infiltration": 0.17811095714569092,
+        "mass": 0.05112703517079353,
+        "nodule": 0.05644720047712326,
+        "pleural_effusion": 0.11826547235250473,
+        "pleural_thickening": 0.03072458691895008,
+        "pneumonia": 0.012829487212002277,
+        "pneumothorax": 0.04765238240361214
+      },
+      "mean_positive_jaccard": 0.17235690235690235,
+      "mean_query_positive_neighbor_prevalence": 0.22981366459627328,
+      "mean_random_positive_jaccard": 0.0869023569023569,
+      "num_queries": 200,
+      "per_label": {
+        "atelectasis": {
+          "chance_prevalence": 0.10311955213546753,
+          "mean_neighbor_prevalence": 0.20952380952380953,
+          "positive_queries": 21,
+          "prevalence_lift": 2.0318533700433394
+        },
+        "cardiomegaly": {
+          "chance_prevalence": 0.024678945541381836,
+          "mean_neighbor_prevalence": 0.14285714285714285,
+          "positive_queries": 7,
+          "prevalence_lift": 5.7886242593954815
+        },
+        "consolidation": {
+          "chance_prevalence": 0.04104672372341156,
+          "mean_neighbor_prevalence": 0.15384615384615385,
+          "positive_queries": 13,
+          "prevalence_lift": 3.748073899462178
+        },
+        "edema": {
+          "chance_prevalence": 0.020529724657535553,
+          "mean_neighbor_prevalence": 0.028571428571428574,
+          "positive_queries": 7,
+          "prevalence_lift": 1.3917102663596255
+        },
+        "emphysema": {
+          "chance_prevalence": 0.023317083716392517,
+          "mean_neighbor_prevalence": 0.03333333333333333,
+          "positive_queries": 6,
+          "prevalence_lift": 1.4295669964035482
+        },
+        "fibrosis": {
+          "chance_prevalence": 0.015667757019400597,
+          "mean_neighbor_prevalence": 0.1,
+          "positive_queries": 2,
+          "prevalence_lift": 6.382534518257784
+        },
+        "hernia": {
+          "chance_prevalence": 0.001998243620619178,
+          "mean_neighbor_prevalence": null,
+          "positive_queries": 0,
+          "prevalence_lift": null
+        },
+        "infiltration": {
+          "chance_prevalence": 0.17811095714569092,
+          "mean_neighbor_prevalence": 0.3285714285714286,
+          "positive_queries": 42,
+          "prevalence_lift": 1.8447569640685513
+        },
+        "mass": {
+          "chance_prevalence": 0.05112703517079353,
+          "mean_neighbor_prevalence": 0.07500000000000001,
+          "positive_queries": 8,
+          "prevalence_lift": 1.4669342696962013
+        },
+        "nodule": {
+          "chance_prevalence": 0.05644720047712326,
+          "mean_neighbor_prevalence": 0.16363636363636364,
+          "positive_queries": 11,
+          "prevalence_lift": 2.8989278875341506
+        },
+        "pleural_effusion": {
+          "chance_prevalence": 0.11826547235250473,
+          "mean_neighbor_prevalence": 0.3241379310344827,
+          "positive_queries": 29,
+          "prevalence_lift": 2.740765538637937
+        },
+        "pleural_thickening": {
+          "chance_prevalence": 0.03072458691895008,
+          "mean_neighbor_prevalence": 0.05,
+          "positive_queries": 4,
+          "prevalence_lift": 1.6273611792372504
+        },
+        "pneumonia": {
+          "chance_prevalence": 0.012829487212002277,
+          "mean_neighbor_prevalence": 0.0,
+          "positive_queries": 2,
+          "prevalence_lift": 0.0
+        },
+        "pneumothorax": {
+          "chance_prevalence": 0.04765238240361214,
+          "mean_neighbor_prevalence": 0.3555555555555555,
+          "positive_queries": 9,
+          "prevalence_lift": 7.461443428872588
+        }
+      },
+      "positive_jaccard_lift": 1.983339790778768,
+      "positive_prevalence_lift": 2.3560066280594327,
+      "positive_query_count": 99,
+      "sample_queries": [
+        {
+          "neighbor_row_ids": [
+            "00000580_000",
+            "00000580_006",
+            "00000580_005",
+            "00012616_010",
+            "00012722_006"
+          ],
+          "neighbor_similarities": [
+            0.9607848525047302,
+            0.9568703174591064,
+            0.9427825212478638,
+            0.929222583770752,
+            0.9274839162826538
+          ],
+          "query_index": 1548,
+          "query_labels": [
+            "atelectasis",
+            "pleural_thickening"
+          ],
+          "query_row_id": "00000580_008"
+        },
+        {
+          "neighbor_row_ids": [
+            "00000127_003",
+            "00020673_018",
+            "00012229_002",
+            "00016977_003",
+            "00014472_009"
+          ],
+          "neighbor_similarities": [
+            0.9487777948379517,
+            0.9482283592224121,
+            0.9464548826217651,
+            0.9456651210784912,
+            0.9435129165649414
+          ],
+          "query_index": 2055,
+          "query_labels": [
+            "consolidation"
+          ],
+          "query_row_id": "00000798_021"
+        },
+        {
+          "neighbor_row_ids": [
+            "00011850_009",
+            "00015160_024",
+            "00001301_017",
+            "00006492_006",
+            "00010718_013"
+          ],
+          "neighbor_similarities": [
+            0.943191409111023,
+            0.9423540830612183,
+            0.9421062469482422,
+            0.9387893080711365,
+            0.937116265296936
+          ],
+          "query_index": 3387,
+          "query_labels": [
+            "infiltration"
+          ],
+          "query_row_id": "00001301_015"
+        },
+        {
+          "neighbor_row_ids": [
+            "00002365_003",
+            "00007804_008",
+            "00013417_000",
+            "00011269_015",
+            "00022267_004"
+          ],
+          "neighbor_similarities": [
+            0.9264365434646606,
+            0.9257814884185791,
+            0.9221257567405701,
+            0.9219305515289307,
+            0.921022891998291
+          ],
+          "query_index": 4340,
+          "query_labels": [
+            "infiltration",
+            "pneumothorax"
+          ],
+          "query_row_id": "00001673_007"
+        },
+        {
+          "neighbor_row_ids": [
+            "00000336_000",
+            "00006875_015",
+            "00005416_000",
+            "00025126_000",
+            "00011322_001"
+          ],
+          "neighbor_similarities": [
+            0.9163130521774292,
+            0.9146981239318848,
+            0.9060027599334717,
+            0.9035594463348389,
+            0.9012802839279175
+          ],
+          "query_index": 4682,
+          "query_labels": [
+            "infiltration"
+          ],
+          "query_row_id": "00001806_012"
+        },
+        {
+          "neighbor_row_ids": [
+            "00017425_005",
+            "00008806_008",
+            "00001854_002",
+            "00015462_000",
+            "00016009_027"
+          ],
+          "neighbor_similarities": [
+            0.9080921411514282,
+            0.9053601026535034,
+            0.8973864316940308,
+            0.8937255144119263,
+            0.8933525085449219
+          ],
+          "query_index": 4922,
+          "query_labels": [
+            "infiltration"
+          ],
+          "query_row_id": "00001854_000"
+        },
+        {
+          "neighbor_row_ids": [
+            "00016971_037",
+            "00014414_015",
+            "00014398_031",
+            "00011579_042",
+            "00009899_002"
+          ],
+          "neighbor_similarities": [
+            0.9364466667175293,
+            0.9342479705810547,
+            0.9314448833465576,
+            0.9272195100784302,
+            0.9270846843719482
+          ],
+          "query_index": 6404,
+          "query_labels": [
+            "pleural_effusion",
+            "infiltration"
+          ],
+          "query_row_id": "00002395_011"
+        },
+        {
+          "neighbor_row_ids": [
+            "00008274_001",
+            "00013304_003",
+            "00011427_001",
+            "00002451_000",
+            "00003468_012"
+          ],
+          "neighbor_similarities": [
+            0.9445397853851318,
+            0.9427077770233154,
+            0.9417753219604492,
+            0.9415206909179688,
+            0.9399346709251404
+          ],
+          "query_index": 6770,
+          "query_labels": [
+            "pneumothorax"
+          ],
+          "query_row_id": "00002492_003"
+        },
+        {
+          "neighbor_row_ids": [
+            "00001802_001",
+            "00006996_012",
+            "00018464_022",
+            "00007559_002",
+            "00006519_001"
+          ],
+          "neighbor_similarities": [
+            0.9372724294662476,
+            0.935203492641449,
+            0.9345659017562866,
+            0.9321674108505249,
+            0.9316992163658142
+          ],
+          "query_index": 7227,
+          "query_labels": [
+            "atelectasis"
+          ],
+          "query_row_id": "00002644_001"
+        },
+        {
+          "neighbor_row_ids": [
+            "00028974_008",
+            "00005609_012",
+            "00010007_037",
+            "00004931_010",
+            "00025754_008"
+          ],
+          "neighbor_similarities": [
+            0.9443426132202148,
+            0.9411476254463196,
+            0.9353193044662476,
+            0.9345664978027344,
+            0.9338880777359009
+          ],
+          "query_index": 7792,
+          "query_labels": [
+            "edema",
+            "pleural_effusion"
+          ],
+          "query_row_id": "00002892_006"
+        }
+      ],
+      "top_k": 5
+    },
+    "self_retrieval": {
+      "miss_examples": [],
+      "sample_size": 512,
+      "top1_self_hit_rate": 1.0,
+      "top1_similarity_mean": 1.0,
+      "top1_similarity_min": 0.9999996423721313,
+      "top5_contains_self_rate": 1.0
+    }
+  },
+  "script_path": "/workspace/scripts/05_build_source_retrieval_memory.py",
+  "script_sha256": "1c43971d984bad0f36c2a65df456ffd3c86e65e2c1fc5a6c213f687eaa9bc98e",
+  "seed": 3407,
+  "source_run_meta": {
+    "alignment": "intersection",
+    "component_offsets": [
+      {
+        "end_col_exclusive": 512,
+        "source": "xattn",
+        "start_col": 0,
+        "weight": 1.0,
+        "width": 512
+      },
+      {
+        "end_col_exclusive": 2560,
+        "source": "image",
+        "start_col": 512,
+        "weight": 1.0,
+        "width": 2048
+      },
+      {
+        "end_col_exclusive": 2688,
+        "source": "report",
+        "start_col": 2560,
+        "weight": 1.0,
+        "width": 128
+      }
+    ],
+    "experiment_dir": "/workspace/experiments/exp0027__fused_embedding_generation__xattn_long_e50_hybrid_concat",
+    "fused_dim": 2688,
+    "fusion": "concat",
+    "normalize_output": "l2",
+    "num_rows": 78569,
+    "reference_sidecar_output": "image_paths.txt",
+    "reference_source": "xattn",
+    "row_chunk_size": 4096,
+    "row_id_source": "image_paths.txt",
+    "row_norm_summary": {
+      "method": "l2",
+      "post_norm_max": 1.0000001192092896,
+      "post_norm_mean": 1.0,
+      "post_norm_min": 0.9999998807907104,
+      "pre_norm_max": 1.732385516166687,
+      "pre_norm_mean": 1.7320505944366973,
+      "pre_norm_min": 1.731703519821167,
+      "rows": 78569
+    },
+    "run_date_utc": "2026-04-10T15:43:50.104969+00:00",
+    "source_order": [
+      "xattn",
+      "image",
+      "report"
+    ],
+    "sources": [
+      {
+        "aligned_rows": 78569,
+        "available_rows": 78569,
+        "embeddings_path": "/workspace/experiments/exp0019__source_cross_attention_embedding_export__xattn_long_e50_export_bs160/train/embeddings.npy",
+        "embeddings_shape": [
+          78569,
+          512
+        ],
+        "name": "xattn",
+        "reference": true,
+        "root": "/workspace/experiments/exp0019__source_cross_attention_embedding_export__xattn_long_e50_export_bs160",
+        "sidecar": {
+          "column": null,
+          "format": "lines",
+          "parser": "stem",
+          "relative_path": "image_paths.txt"
+        },
+        "split_dir": "/workspace/experiments/exp0019__source_cross_attention_embedding_export__xattn_long_e50_export_bs160/train",
+        "weight": 1.0
+      },
+      {
+        "aligned_rows": 78569,
+        "available_rows": 78571,
+        "embeddings_path": "/workspace/experiments/exp0026__embedding_generation__rebuild_image_embeddings_for_hybrid/train/embeddings.npy",
+        "embeddings_shape": [
+          78571,
+          2048
+        ],
+        "name": "image",
+        "reference": false,
+        "root": "/workspace/experiments/exp0026__embedding_generation__rebuild_image_embeddings_for_hybrid",
+        "sidecar": {
+          "column": null,
+          "format": "lines",
+          "parser": "stem",
+          "relative_path": "image_paths.txt"
+        },
+        "split_dir": "/workspace/experiments/exp0026__embedding_generation__rebuild_image_embeddings_for_hybrid/train",
+        "weight": 1.0
+      },
+      {
+        "aligned_rows": 78569,
+        "available_rows": 78571,
+        "embeddings_path": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test/train/embeddings.npy",
+        "embeddings_shape": [
+          78571,
+          128
+        ],
+        "name": "report",
+        "reference": false,
+        "root": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test",
+        "sidecar": {
+          "column": null,
+          "format": "json_list",
+          "parser": "identity",
+          "relative_path": "report_ids.json"
+        },
+        "split_dir": "/workspace/experiments/exp0002__report_embedding_generation__nih_cxr14_all14_biomedvlp_cxr_bert_specialized_auto_train_val_test/train",
+        "weight": 1.0
+      }
+    ],
+    "split": "train"
+  },
+  "split": "train",
+  "split_input": {
+    "alignment_manifest_path": "/workspace/experiments/exp0027__fused_embedding_generation__xattn_long_e50_hybrid_concat/train/alignment_manifest.csv",
+    "embedding_dim": 2688,
+    "embeddings_path": "/workspace/experiments/exp0027__fused_embedding_generation__xattn_long_e50_hybrid_concat/train/embeddings.npy",
+    "image_paths_path": "/workspace/experiments/exp0027__fused_embedding_generation__xattn_long_e50_hybrid_concat/train/image_paths.txt",
+    "num_rows": 78569,
+    "row_id_sidecar": {
+      "column": null,
+      "format": "json_list",
+      "parser": "identity",
+      "relative_path": "row_ids.json"
+    },
+    "run_meta_path": "/workspace/experiments/exp0027__fused_embedding_generation__xattn_long_e50_hybrid_concat/train/run_meta.json"
+  }
+}

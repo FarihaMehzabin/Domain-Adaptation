@@ -1,0 +1,24 @@
+{
+  "k": 50,
+  "selection_metric": "macro_auroc",
+  "selection_mode": "frozen_validation_config",
+  "selection_root": "/workspace/experiments/exp0030__source_memory_only_evaluation__xattn_long_e50_hybrid_memory_val",
+  "selection_trace": {
+    "final_candidates": 1,
+    "k_tied_candidates": 1,
+    "macro_auroc_tied_candidates": 1,
+    "macro_average_precision_tied_candidates": 1,
+    "max_macro_auroc": 0.718101234606473,
+    "max_macro_average_precision_within_auroc_ties": 0.14357424434833396,
+    "selected_tau_after_k_tie_break": 1.0,
+    "smallest_k_within_metric_ties": 50,
+    "tie_break_rule": [
+      "highest validation macro AUROC",
+      "higher validation macro average precision",
+      "smaller k",
+      "tau = 10 if among tied settings, otherwise smaller tau"
+    ]
+  },
+  "tau": 1.0,
+  "threshold_source": "/workspace/experiments/exp0030__source_memory_only_evaluation__xattn_long_e50_hybrid_memory_val/best_val_metrics.json"
+}

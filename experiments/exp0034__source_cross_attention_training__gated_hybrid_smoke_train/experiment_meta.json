@@ -1,0 +1,71 @@
+{
+  "argv": [
+    "/workspace/scripts/10_train_cross_attention_encoder.py",
+    "--experiment-name",
+    "gated_hybrid_smoke_train",
+    "--overwrite",
+    "--trust-remote-code",
+    "--trust-manifest-paths",
+    "--device",
+    "auto",
+    "--batch-size",
+    "2",
+    "--num-workers",
+    "0",
+    "--epochs",
+    "1",
+    "--patience",
+    "0",
+    "--max-length",
+    "64",
+    "--max-samples-per-split",
+    "8"
+  ],
+  "best_epoch": 1,
+  "checkpoint_path": "/workspace/experiments/exp0034__source_cross_attention_training__gated_hybrid_smoke_train/best.ckpt",
+  "data_root": "/workspace/data",
+  "device_resolved": "cuda",
+  "experiment_dir": "/workspace/experiments/exp0034__source_cross_attention_training__gated_hybrid_smoke_train",
+  "experiment_id": "exp0034",
+  "experiment_name": "exp0034__source_cross_attention_training__gated_hybrid_smoke_train",
+  "experiment_number": 34,
+  "macro_metrics": {
+    "test": {
+      "auroc": 0.41714285714285715,
+      "average_precision": 0.2855555555555555,
+      "ece": 0.3726934219887659,
+      "f1_at_0.5": 0.0,
+      "f1_at_tuned_thresholds": 0.0
+    },
+    "val": {
+      "auroc": null,
+      "average_precision": null,
+      "ece": 0.4440144460685383,
+      "f1_at_0.5": 0.0,
+      "f1_at_tuned_thresholds": 0.0
+    }
+  },
+  "manifest_csv": "/workspace/manifest_nih_cxr14_all14.csv",
+  "model_config": {
+    "dropout": 0.1,
+    "embedding_dim": 512,
+    "fusion_dim": 256,
+    "fusion_heads": 8,
+    "fusion_layers": 2,
+    "gated_hybrid": true,
+    "image_encoder_id": "resnet50",
+    "image_feature_dim": 2048,
+    "image_token_count": 49,
+    "legacy_text_feature_dim": 128,
+    "num_labels": 14,
+    "text_hidden_size": 768,
+    "text_model_id": "microsoft/BiomedVLP-CXR-BERT-specialized",
+    "tokenizer_id": "microsoft/BiomedVLP-CXR-BERT-specialized"
+  },
+  "operation_label": "source_cross_attention_training",
+  "reports_root": "/workspace/reports",
+  "run_date_utc": "2026-04-10T16:13:03.772643+00:00",
+  "selection_metric": "macro_auroc",
+  "stopped_early": false,
+  "thresholds_path": "/workspace/experiments/exp0034__source_cross_attention_training__gated_hybrid_smoke_train/val_f1_thresholds.json"
+}

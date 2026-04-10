@@ -1,0 +1,83 @@
+{
+  "argv": [
+    "/workspace/scripts/04_train_frozen_multilabel_baseline.py",
+    "--embedding-root",
+    "/workspace/experiments/exp0011__source_cross_attention_embedding_export__xattn_full_pipeline_export_bs160",
+    "--manifest-csv",
+    "/workspace/manifest_nih_cxr14_all14.csv",
+    "--device",
+    "cuda",
+    "--fp16-on-cuda",
+    "--batch-size",
+    "4096",
+    "--epochs",
+    "20",
+    "--patience",
+    "3",
+    "--experiment-name",
+    "xattn_full_pipeline_baseline_bs4096"
+  ],
+  "best_epoch": 20,
+  "checkpoint_path": "/workspace/experiments/exp0012__source_baseline_training__xattn_full_pipeline_baseline_bs4096/best.ckpt",
+  "device_resolved": "cuda",
+  "embedding_root": "/workspace/experiments/exp0011__source_cross_attention_embedding_export__xattn_full_pipeline_export_bs160",
+  "experiment_dir": "/workspace/experiments/exp0012__source_baseline_training__xattn_full_pipeline_baseline_bs4096",
+  "experiment_id": "exp0012",
+  "experiment_name": "exp0012__source_baseline_training__xattn_full_pipeline_baseline_bs4096",
+  "experiment_number": 12,
+  "input_dim": 512,
+  "macro_metrics": {
+    "test": {
+      "auroc": 0.7277847227243422,
+      "average_precision": 0.11175647831245437,
+      "ece": 0.36860937402564586,
+      "f1_at_0.5": 0.1551032977787755,
+      "f1_at_tuned_thresholds": 0.17300758870772762
+    },
+    "val": {
+      "auroc": 0.7228235972081507,
+      "average_precision": 0.11782529913316465,
+      "ece": 0.36760579675990457,
+      "f1_at_0.5": 0.15323972150973977,
+      "f1_at_tuned_thresholds": 0.18607354084923292
+    }
+  },
+  "manifest_csv": "/workspace/manifest_nih_cxr14_all14.csv",
+  "num_labels": 14,
+  "operation_label": "source_baseline_training",
+  "run_date_utc": "2026-04-10T11:22:08.489490+00:00",
+  "selection_metric": "macro_auroc",
+  "split_inputs": {
+    "test": {
+      "embedding_dim": 512,
+      "embeddings_path": "/workspace/experiments/exp0011__source_cross_attention_embedding_export__xattn_full_pipeline_export_bs160/test/embeddings.npy",
+      "first_row_id": "00000001_000",
+      "num_rows": 22330,
+      "sidecar_format": "lines",
+      "sidecar_parser": "stem",
+      "sidecar_path": "/workspace/experiments/exp0011__source_cross_attention_embedding_export__xattn_full_pipeline_export_bs160/test/image_paths.txt"
+    },
+    "train": {
+      "embedding_dim": 512,
+      "embeddings_path": "/workspace/experiments/exp0011__source_cross_attention_embedding_export__xattn_full_pipeline_export_bs160/train/embeddings.npy",
+      "first_row_id": "00000002_000",
+      "num_rows": 78569,
+      "sidecar_format": "lines",
+      "sidecar_parser": "stem",
+      "sidecar_path": "/workspace/experiments/exp0011__source_cross_attention_embedding_export__xattn_full_pipeline_export_bs160/train/image_paths.txt"
+    },
+    "val": {
+      "embedding_dim": 512,
+      "embeddings_path": "/workspace/experiments/exp0011__source_cross_attention_embedding_export__xattn_full_pipeline_export_bs160/val/embeddings.npy",
+      "first_row_id": "00000006_000",
+      "num_rows": 11219,
+      "sidecar_format": "lines",
+      "sidecar_parser": "stem",
+      "sidecar_path": "/workspace/experiments/exp0011__source_cross_attention_embedding_export__xattn_full_pipeline_export_bs160/val/image_paths.txt"
+    }
+  },
+  "stopped_early": false,
+  "test_metrics_path": "/workspace/experiments/exp0012__source_baseline_training__xattn_full_pipeline_baseline_bs4096/test_metrics.json",
+  "thresholds_path": "/workspace/experiments/exp0012__source_baseline_training__xattn_full_pipeline_baseline_bs4096/val_f1_thresholds.json",
+  "val_metrics_path": "/workspace/experiments/exp0012__source_baseline_training__xattn_full_pipeline_baseline_bs4096/val_metrics.json"
+}

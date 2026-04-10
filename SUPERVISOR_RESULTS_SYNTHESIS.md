@@ -388,3 +388,268 @@ However, the held-out test result is more mixed than the validation result. Rela
 ### Recommendation after the fusion-weight sweep
 
 If the goal is strict adherence to validation-only model selection, then the sweep supports using `text weight = 0.50`, with `k = 50`, `tau = 1`, and `alpha = 0.74`, as the validation-selected winner of this branch. If the goal is conservative supervisor-facing reporting, the safer statement is that the sweep was informative rather than transformative: it showed that equal weighting was not optimal on validation, but it did not produce a decisive test-set improvement over the prior equal-weight mixed system. That makes the sweep worth presenting as a targeted fusion-sensitivity analysis, not as an unambiguous replacement of the earlier branch.
+
+## 10. 2026-04-10 Correction Addendum: Actual `exp0010`-`exp0043` Chronology
+
+This addendum supersedes the earlier post-`exp0009` chronology used in Sections `6` to `9` of this file. The local experiment directories show that the actual sequence after `exp0009` began with the one-epoch full-pipeline cross-attention training run `exp0010` on `2026-04-10`, then progressed through export, frozen-baseline, retrieval, longer cross-attention, hybrid concat, and gated-hybrid branches. All dates and times below are reported in UTC, and all metric values are copied from local artifacts only.
+
+### Actual chronology overview
+
+| Experiments | UTC timestamp(s) | Main action | Main output |
+| --- | --- | --- | --- |
+| `exp0010` | `2026-04-10T11:02:45Z` | one-epoch full-pipeline cross-attention training | first direct xattn classifier on the active source-stage split |
+| `exp0011` to `exp0017` | `2026-04-10T11:21:05Z` to `2026-04-10T11:24:13Z` | export, frozen baseline, retrieval memory, validation selection, and frozen test evaluation | first completed xattn export-and-retrieval branch with `k=50`, `tau=20`, and `alpha=0.6` |
+| `exp0018` to `exp0025` | `2026-04-10T13:57:50Z` to `2026-04-10T14:34:06Z` | longer xattn training plus the same downstream evaluation path | stronger 50-epoch-budget xattn branch with `k=50`, `tau=1`, and `alpha=0.8` |
+| `exp0026` to `exp0033` | `2026-04-10T15:16:45Z` to `2026-04-10T15:49:07Z` | rebuilt image embeddings, generated hybrid concat embeddings, then reran baseline and retrieval stages | strongest completed mixed branch in the local artifacts |
+| `exp0034` to `exp0035` | `2026-04-10T16:13:03Z` to `2026-04-10T16:13:19Z` | smoke gated-hybrid training and export | pipeline sanity check only, not a full-data comparison run |
+| `exp0036` to `exp0043` | `2026-04-10T16:15:30Z` to `2026-04-10T17:57:48Z` | long gated-hybrid training plus downstream baseline and retrieval stages | completed gated-hybrid downstream branch, with partial training metadata for `exp0036` |
+
+## 11. 2026-04-10 Full-Pipeline XAttn Branch: `exp0010`-`exp0017`
+
+The first actual post-`exp0009` branch was the full-pipeline cross-attention line. `exp0010` trained the cross-attention encoder directly for one epoch, `exp0011` exported `512`-dimensional embeddings from that checkpoint, `exp0012` trained a frozen linear multilabel probe on those exported embeddings, and `exp0013` to `exp0017` evaluated retrieval-only and mixed variants on top of the exported representation.
+
+### Branch lineage and timestamps
+
+- `exp0010` at `2026-04-10T11:02:45Z`: direct full-pipeline cross-attention training with `epochs=1`, `patience=0`, `batch_size=32`, and `max_length=256`
+- `exp0011` at `2026-04-10T11:21:05Z`: embedding export from the `exp0010` checkpoint with export batch size `160`
+- `exp0012` at `2026-04-10T11:22:08Z`: frozen linear baseline trained on the exported `512`-dimensional embeddings
+- `exp0013` at `2026-04-10T11:22:27Z`: FAISS train-memory build from the same `exp0011` embedding root
+- `exp0014` at `2026-04-10T11:23:03Z`: memory-only validation sweep selecting `k=50` and `tau=20`
+- `exp0015` at `2026-04-10T11:23:14Z`: validation probability-mixing sweep selecting `alpha=0.6`
+- `exp0016` at `2026-04-10T11:24:01Z`: frozen memory-only test evaluation
+- `exp0017` at `2026-04-10T11:24:13Z`: frozen mixed test evaluation
+
+### Direct model versus frozen exported-embedding probe
+
+| Model | Validation macro AUROC | Validation macro AP | Test macro AUROC | Test macro AP | Test macro ECE | Test macro F1 @ 0.5 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Direct xattn classifier (`exp0010`) | `0.718285` | `0.110125` | `0.722673` | `0.108092` | `0.386266` | `0.157584` |
+| Frozen linear probe on exported xattn embeddings (`exp0012`) | `0.722824` | `0.117825` | `0.727785` | `0.111756` | `0.368609` | `0.155103` |
+
+Relative to the direct one-epoch xattn classifier in `exp0010`, the frozen exported-embedding baseline in `exp0012` improved test macro AUROC by `+0.005111`, test macro AP by `+0.003665`, and test macro ECE by `-0.017656`, while slightly reducing test macro `F1 @ 0.5` by `-0.002480`.
+
+### Validation-time retrieval and mixing selections
+
+| Validation artifact | Selected config | Validation macro AUROC | Validation macro AP | Validation macro ECE | Validation macro F1 @ 0.5 |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Memory-only selection (`exp0014`) | `k=50`, `tau=20` | `0.679425` | `0.111083` | `0.010496` | `0.004427` |
+| Probability-mixing selection (`exp0015`) | `alpha=0.6` | `0.724728` | `0.119263` | `0.220573` | `0.141794` |
+
+### Frozen test comparison within the branch
+
+| Method | Frozen config | Test macro AUROC | Test macro AP | Test macro ECE | Test macro F1 @ 0.5 |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Frozen supervised baseline (`exp0012`) | supervised only | `0.727785` | `0.111756` | `0.368609` | `0.155103` |
+| Memory-only retrieval (`exp0016`) | `k=50`, `tau=20` | `0.682572` | `0.107575` | `0.010428` | `0.003845` |
+| Mixed model (`exp0017`) | `k=50`, `tau=20`, `alpha=0.6` | `0.729254` | `0.114845` | `0.221457` | `0.140398` |
+
+Within this first xattn branch, the memory-only system was clearly weaker than the supervised baseline on ranking and fixed-threshold classification, despite much lower ECE. Relative to `exp0012`, the memory-only branch in `exp0016` changed test macro AUROC by `-0.045213`, macro AP by `-0.004182`, macro ECE by `-0.358181`, and macro `F1 @ 0.5` by `-0.151259`. Probability mixing in `exp0017` recovered a small ranking gain over the frozen baseline, with `+0.001470` test macro AUROC and `+0.003089` test macro AP, but it still remained below the frozen baseline on test macro `F1 @ 0.5` by `-0.014705`.
+
+The narrowest defensible summary for the `exp0010` to `exp0017` branch is therefore:
+
+- the full-pipeline xattn representation was viable, but the frozen exported-embedding baseline in `exp0012` was already slightly stronger than the direct one-epoch classifier in `exp0010`,
+- retrieval-only prediction was not competitive as a standalone decision rule,
+- and probability mixing delivered a small ranking improvement over the frozen baseline without producing the branch’s best fixed-threshold F1.
+
+## 12. 2026-04-10 Long Cross-Attention Update: `exp0018`-`exp0025`
+
+The next branch reran the xattn model with a substantially larger training budget. `exp0018` trained the direct cross-attention encoder with a `50`-epoch budget and `patience=5`, stopping early at best epoch `4`. `exp0019` exported embeddings from that stronger checkpoint, `exp0020` trained a frozen linear probe on the exported embeddings, and `exp0021` to `exp0025` repeated the retrieval-memory, validation-selection, and frozen-test stages.
+
+### Branch lineage and timestamps
+
+- `exp0018` at `2026-04-10T13:57:50Z`: long xattn training with `epochs=50`, `patience=5`, `batch_size=32`, and `max_length=256`; best epoch `4`
+- `exp0019` at `2026-04-10T14:31:14Z`: embedding export from the `exp0018` checkpoint
+- `exp0020` at `2026-04-10T14:32:09Z`: frozen linear baseline on exported `512`-dimensional long-xattn embeddings
+- `exp0021` at `2026-04-10T14:32:29Z`: FAISS memory build for the long-xattn embedding root
+- `exp0022` at `2026-04-10T14:32:59Z`: memory-only validation sweep selecting `k=50` and `tau=1`
+- `exp0023` at `2026-04-10T14:33:10Z`: validation probability-mixing sweep selecting `alpha=0.8`
+- `exp0024` at `2026-04-10T14:33:55Z`: frozen memory-only test evaluation
+- `exp0025` at `2026-04-10T14:34:06Z`: frozen mixed test evaluation
+
+### Direct long-xattn model versus frozen exported-embedding probe
+
+| Model | Validation macro AUROC | Validation macro AP | Test macro AUROC | Test macro AP | Test macro ECE | Test macro F1 @ 0.5 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Direct long-xattn classifier (`exp0018`) | `0.755222` | `0.138868` | `0.759965` | `0.137380` | `0.360090` | `0.161734` |
+| Frozen linear probe on exported long-xattn embeddings (`exp0020`) | `0.755293` | `0.139524` | `0.759056` | `0.137536` | `0.318471` | `0.168394` |
+
+Relative to the direct model in `exp0018`, the frozen exported-embedding baseline in `exp0020` was nearly tied on test macro AUROC (`-0.000909`) while slightly improving macro AP (`+0.000156`), substantially lowering macro ECE (`-0.041619`), and improving macro `F1 @ 0.5` (`+0.006660`).
+
+### Validation-time retrieval and mixing selections
+
+| Validation artifact | Selected config | Validation macro AUROC | Validation macro AP | Validation macro ECE | Validation macro F1 @ 0.5 |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Memory-only selection (`exp0022`) | `k=50`, `tau=1` | `0.702234` | `0.128844` | `0.011892` | `0.018889` |
+| Probability-mixing selection (`exp0023`) | `alpha=0.8` | `0.755483` | `0.141482` | `0.254518` | `0.186476` |
+
+### Frozen test comparison within the branch
+
+| Method | Frozen config | Test macro AUROC | Test macro AP | Test macro ECE | Test macro F1 @ 0.5 |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Frozen supervised baseline (`exp0020`) | supervised only | `0.759056` | `0.137536` | `0.318471` | `0.168394` |
+| Memory-only retrieval (`exp0024`) | `k=50`, `tau=1` | `0.700407` | `0.127088` | `0.011227` | `0.021696` |
+| Mixed model (`exp0025`) | `k=50`, `tau=1`, `alpha=0.8` | `0.759259` | `0.139147` | `0.255039` | `0.186855` |
+
+Relative to the long-xattn frozen baseline in `exp0020`, the memory-only branch in `exp0024` remained much weaker on discrimination and fixed-threshold F1, with `-0.058649` test macro AUROC, `-0.010448` test macro AP, and `-0.146699` test macro `F1 @ 0.5`, even though macro ECE dropped by `-0.307244`. The mixed branch in `exp0025` was only slightly better than the frozen baseline on ranking, with `+0.000204` test macro AUROC and `+0.001611` macro AP, but it also improved macro ECE by `-0.063432` and macro `F1 @ 0.5` by `+0.018461`.
+
+### Comparison against the earlier full-pipeline xattn branch
+
+| Comparison | Delta test macro AUROC | Delta test macro AP | Delta test macro ECE | Delta test macro F1 @ 0.5 |
+| --- | ---: | ---: | ---: | ---: |
+| Long-xattn frozen baseline (`exp0020`) minus first frozen xattn baseline (`exp0012`) | `+0.031271` | `+0.025779` | `-0.050138` | `+0.013291` |
+| Long-xattn memory-only (`exp0024`) minus first memory-only (`exp0016`) | `+0.017835` | `+0.019513` | `+0.000799` | `+0.017851` |
+| Long-xattn mixed (`exp0025`) minus first mixed system (`exp0017`) | `+0.030005` | `+0.024302` | `+0.033582` | `+0.046457` |
+
+The most important change in this branch was the stronger supervised representation. Moving from the one-epoch full-pipeline xattn line to the longer xattn line materially improved both the frozen baseline and the final mixed system on test macro AUROC, macro AP, and macro `F1 @ 0.5`. It also changed the retrieval selection regime: the best validation memory-only setting moved from `tau=20` in `exp0014` to `tau=1` in `exp0022`, while `k` remained `50`.
+
+## 13. 2026-04-10 Hybrid Concat Update: `exp0026`-`exp0033`
+
+The hybrid branch augmented the stronger long-xattn export with separate image and report embeddings. `exp0026` rebuilt ResNet50 image embeddings, and `exp0027` concatenated three sources in order: exported long-xattn embeddings from `exp0019`, rebuilt image embeddings from `exp0026`, and report embeddings from `exp0002`. The resulting representation was `2688`-dimensional and L2-normalized after concatenation. `exp0028` then trained a frozen linear baseline on that hybrid representation, and `exp0029` to `exp0033` repeated the retrieval-memory and mixing stages.
+
+### Branch lineage and timestamps
+
+- `exp0026` at `2026-04-10T15:16:45Z`: rebuilt ResNet50 image embeddings for the hybrid branch
+- `exp0027` at `2026-04-10T15:43:56Z`: generated the `2688`-dimensional L2-normalized hybrid concat embeddings
+- `exp0028` at `2026-04-10T15:44:54Z`: frozen linear baseline on the hybrid embedding root
+- `exp0029` at `2026-04-10T15:45:27Z`: FAISS memory build for the hybrid embedding root
+- `exp0030` at `2026-04-10T15:46:37Z`: memory-only validation sweep selecting `k=50` and `tau=1`
+- `exp0031` at `2026-04-10T15:46:49Z`: validation probability-mixing sweep selecting `alpha=0.6`
+- `exp0032` at `2026-04-10T15:48:56Z`: frozen memory-only test evaluation
+- `exp0033` at `2026-04-10T15:49:07Z`: frozen mixed test evaluation
+
+### Validation-time retrieval and mixing selections
+
+| Validation artifact | Selected config | Validation macro AUROC | Validation macro AP | Validation macro ECE | Validation macro F1 @ 0.5 |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Memory-only selection (`exp0030`) | `k=50`, `tau=1` | `0.718101` | `0.143574` | `0.011127` | `0.027371` |
+| Probability-mixing selection (`exp0031`) | `alpha=0.6` | `0.766955` | `0.156347` | `0.194820` | `0.204543` |
+
+### Frozen test comparison within the branch
+
+| Method | Frozen config | Test macro AUROC | Test macro AP | Test macro ECE | Test macro F1 @ 0.5 |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Frozen supervised baseline (`exp0028`) | supervised only | `0.770829` | `0.151510` | `0.324818` | `0.173262` |
+| Memory-only retrieval (`exp0032`) | `k=50`, `tau=1` | `0.717359` | `0.142505` | `0.010017` | `0.029407` |
+| Mixed model (`exp0033`) | `k=50`, `tau=1`, `alpha=0.6` | `0.772098` | `0.154132` | `0.195644` | `0.200968` |
+
+### Comparison against the long-xattn branch
+
+| Comparison | Delta test macro AUROC | Delta test macro AP | Delta test macro ECE | Delta test macro F1 @ 0.5 |
+| --- | ---: | ---: | ---: | ---: |
+| Hybrid frozen baseline (`exp0028`) minus long-xattn frozen baseline (`exp0020`) | `+0.011774` | `+0.013974` | `+0.006346` | `+0.004868` |
+| Hybrid memory-only (`exp0032`) minus long-xattn memory-only (`exp0024`) | `+0.016952` | `+0.015417` | `-0.001211` | `+0.007711` |
+| Hybrid mixed (`exp0033`) minus long-xattn mixed (`exp0025`) | `+0.012839` | `+0.014985` | `-0.059395` | `+0.014113` |
+
+The hybrid branch was the strongest completed branch in the local artifacts. It improved the frozen baseline over the long-xattn baseline on test macro AUROC, macro AP, and macro `F1 @ 0.5`, although its baseline macro ECE was slightly higher. More importantly, the hybrid mixed system in `exp0033` was the strongest completed mixed model overall, reaching test macro AUROC `0.772098`, macro AP `0.154132`, macro ECE `0.195644`, and macro `F1 @ 0.5` `0.200968`.
+
+## 14. 2026-04-10 Gated-Hybrid Update: `exp0034`-`exp0043`
+
+### Smoke sanity check: `exp0034`-`exp0035`
+
+Before the full gated-hybrid branch, the pipeline was sanity-checked with a smoke run. `exp0034` trained a gated-hybrid model with `max_samples_per_split=8`, `epochs=1`, `patience=0`, `batch_size=2`, and `max_length=64`. `exp0035` then exported embeddings from that smoke checkpoint.
+
+| Smoke artifact | UTC timestamp | Key setup | Reported output |
+| --- | --- | --- | --- |
+| `exp0034` | `2026-04-10T16:13:03Z` | gated-hybrid smoke train on `8` samples per split | validation AUROC and AP were `null`; test macro AUROC `0.417143`, test macro AP `0.285556` |
+| `exp0035` | `2026-04-10T16:13:19Z` | smoke export from `exp0034` checkpoint | confirmed the gated-hybrid export path produced `512`-dimensional embeddings |
+
+These smoke artifacts are useful as pipeline checks only and should not be presented as comparable to the full-data branches.
+
+### Long gated-hybrid branch: `exp0036`-`exp0043`
+
+The full gated-hybrid branch then trained a longer model with `gated_hybrid=true`, exported embeddings, and repeated the frozen-baseline and retrieval path. Unlike the completed branches above, the training directory for `exp0036` contains `config.json`, `train_log.jsonl`, and `best.ckpt`, but it does not contain final `experiment_meta.json`, `val_metrics.json`, `test_metrics.json`, or `recreation_report.md`. The downstream export and evaluation artifacts `exp0037` to `exp0043` do exist and are internally consistent, so the branch is reportable with an explicit caveat that the training stage itself is only partially finalized.
+
+#### `exp0036` logged training trajectory
+
+| Logged epoch | Improved checkpoint | Validation macro AUROC | Validation macro AP | Validation macro ECE | Validation macro F1 @ 0.5 |
+| --- | --- | ---: | ---: | ---: | ---: |
+| `1` | yes | `0.728602` | `0.119555` | `0.371746` | `0.157417` |
+| `2` | yes | `0.748826` | `0.128147` | `0.400675` | `0.154009` |
+| `3` | yes | `0.750791` | `0.135547` | `0.366147` | `0.162004` |
+| `4` | yes | `0.754376` | `0.140957` | `0.340756` | `0.166335` |
+| `5` | no | `0.749549` | `0.142428` | `0.329444` | `0.170396` |
+| `6` | no | `0.750489` | `0.142064` | `0.346604` | `0.164609` |
+
+The strongest logged validation AUROC in `exp0036` was therefore `0.754376` at epoch `4`, and the export stage `exp0037` explicitly points to the `exp0036` `best.ckpt` file. The defensible wording is that the gated-hybrid training run appears to have produced a usable checkpoint, but the final training metadata is incomplete.
+
+#### Completed downstream lineage and timestamps
+
+- `exp0036` config timestamp `2026-04-10T16:15:30Z`: long gated-hybrid training launched with `epochs=50`, `patience=5`, `batch_size=32`, and `max_length=256`
+- `exp0037` at `2026-04-10T17:54:52Z`: embedding export from the `exp0036` checkpoint
+- `exp0038` at `2026-04-10T17:55:42Z`: frozen linear baseline on exported gated-hybrid embeddings
+- `exp0039` at `2026-04-10T17:56:04Z`: FAISS memory build for the gated-hybrid embedding root
+- `exp0040` at `2026-04-10T17:56:37Z`: memory-only validation sweep selecting `k=50` and `tau=1`
+- `exp0041` at `2026-04-10T17:56:50Z`: validation probability-mixing sweep selecting `alpha=0.6`
+- `exp0042` at `2026-04-10T17:57:38Z`: frozen memory-only test evaluation
+- `exp0043` at `2026-04-10T17:57:48Z`: frozen mixed test evaluation
+
+### Validation-time retrieval and mixing selections
+
+| Validation artifact | Selected config | Validation macro AUROC | Validation macro AP | Validation macro ECE | Validation macro F1 @ 0.5 |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Memory-only selection (`exp0040`) | `k=50`, `tau=1` | `0.709453` | `0.132715` | `0.011119` | `0.017974` |
+| Probability-mixing selection (`exp0041`) | `alpha=0.6` | `0.755682` | `0.142884` | `0.193870` | `0.194022` |
+
+### Frozen test comparison within the branch
+
+| Method | Frozen config | Test macro AUROC | Test macro AP | Test macro ECE | Test macro F1 @ 0.5 |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Frozen supervised baseline (`exp0038`) | supervised only | `0.759012` | `0.141954` | `0.323712` | `0.168837` |
+| Memory-only retrieval (`exp0042`) | `k=50`, `tau=1` | `0.709685` | `0.132874` | `0.011057` | `0.023517` |
+| Mixed model (`exp0043`) | `k=50`, `tau=1`, `alpha=0.6` | `0.759226` | `0.143809` | `0.194621` | `0.193147` |
+
+### Comparison against the hybrid and long-xattn branches
+
+| Comparison | Delta test macro AUROC | Delta test macro AP | Delta test macro ECE | Delta test macro F1 @ 0.5 |
+| --- | ---: | ---: | ---: | ---: |
+| Gated-hybrid frozen baseline (`exp0038`) minus hybrid frozen baseline (`exp0028`) | `-0.011817` | `-0.009556` | `-0.001106` | `-0.004426` |
+| Gated-hybrid memory-only (`exp0042`) minus hybrid memory-only (`exp0032`) | `-0.007675` | `-0.009631` | `+0.001040` | `-0.005890` |
+| Gated-hybrid mixed (`exp0043`) minus hybrid mixed (`exp0033`) | `-0.012872` | `-0.010323` | `-0.001024` | `-0.007821` |
+| Gated-hybrid mixed (`exp0043`) minus long-xattn mixed (`exp0025`) | `-0.000033` | `+0.004662` | `-0.060419` | `+0.006292` |
+
+The gated-hybrid branch therefore did not surpass the hybrid concat branch on any of the main completed downstream comparisons. Its mixed system `exp0043` was materially below the hybrid mixed system `exp0033` on test macro AUROC and macro AP. However, it was competitive with the long-xattn mixed branch `exp0025`: test macro AUROC was essentially tied, while macro AP, macro ECE, and macro `F1 @ 0.5` were modestly better in `exp0043`.
+
+## 15. 2026-04-10 Cross-Branch Comparison And Supervisor Summary
+
+### Direct learned-model checkpoints
+
+| Branch | Training artifact | Status | Best epoch | Validation macro AUROC | Validation macro AP | Test macro AUROC | Test macro AP | Note |
+| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
+| Full-pipeline xattn | `exp0010` | complete | `1` | `0.718285` | `0.110125` | `0.722673` | `0.108092` | one-epoch direct cross-attention classifier |
+| Long xattn | `exp0018` | complete | `4` | `0.755222` | `0.138868` | `0.759965` | `0.137380` | `50`-epoch budget, stopped early at epoch `4` |
+| Long gated hybrid | `exp0036` | partial | best logged `4/6` | `0.754376` | `0.140957` | n/a | n/a | usable checkpoint and downstream export exist, but final training metadata is missing |
+
+### Completed frozen baselines
+
+| Branch | Baseline artifact | Representation | Test macro AUROC | Test macro AP | Test macro ECE | Test macro F1 @ 0.5 |
+| --- | --- | --- | ---: | ---: | ---: | ---: |
+| First xattn export branch | `exp0012` | exported xattn embeddings, `512` dims | `0.727785` | `0.111756` | `0.368609` | `0.155103` |
+| Long xattn export branch | `exp0020` | exported long-xattn embeddings, `512` dims | `0.759056` | `0.137536` | `0.318471` | `0.168394` |
+| Hybrid concat branch | `exp0028` | xattn + image + report concat, `2688` dims | `0.770829` | `0.151510` | `0.324818` | `0.173262` |
+| Gated-hybrid export branch | `exp0038` | exported gated-hybrid embeddings, `512` dims | `0.759012` | `0.141954` | `0.323712` | `0.168837` |
+
+### Completed mixed systems
+
+| Branch | Mixed artifact | Selected config | Test macro AUROC | Test macro AP | Test macro ECE | Test macro F1 @ 0.5 |
+| --- | --- | --- | ---: | ---: | ---: | ---: |
+| First xattn export branch | `exp0017` | `k=50`, `tau=20`, `alpha=0.6` | `0.729254` | `0.114845` | `0.221457` | `0.140398` |
+| Long xattn export branch | `exp0025` | `k=50`, `tau=1`, `alpha=0.8` | `0.759259` | `0.139147` | `0.255039` | `0.186855` |
+| Hybrid concat branch | `exp0033` | `k=50`, `tau=1`, `alpha=0.6` | `0.772098` | `0.154132` | `0.195644` | `0.200968` |
+| Gated-hybrid export branch | `exp0043` | `k=50`, `tau=1`, `alpha=0.6` | `0.759226` | `0.143809` | `0.194621` | `0.193147` |
+
+### Completed memory-only systems
+
+| Branch | Memory-only artifact | Selected config | Test macro AUROC | Test macro AP | Test macro ECE | Test macro F1 @ 0.5 |
+| --- | --- | --- | ---: | ---: | ---: | ---: |
+| First xattn export branch | `exp0016` | `k=50`, `tau=20` | `0.682572` | `0.107575` | `0.010428` | `0.003845` |
+| Long xattn export branch | `exp0024` | `k=50`, `tau=1` | `0.700407` | `0.127088` | `0.011227` | `0.021696` |
+| Hybrid concat branch | `exp0032` | `k=50`, `tau=1` | `0.717359` | `0.142505` | `0.010017` | `0.029407` |
+| Gated-hybrid export branch | `exp0042` | `k=50`, `tau=1` | `0.709685` | `0.132874` | `0.011057` | `0.023517` |
+
+### Supervisor-facing synthesis
+
+- The actual experimental progression after `exp0009` was full-pipeline xattn (`exp0010` to `exp0017`), then a stronger long-xattn branch (`exp0018` to `exp0025`), then a hybrid concat branch (`exp0026` to `exp0033`), and finally a gated-hybrid branch (`exp0034` to `exp0043`).
+- The main retrieval-selection change happened after the first branch: the memory-only winner used `tau=20` in `exp0014`, but every later completed branch selected `tau=1`. Across all completed branches, the selected `k` remained `50`.
+- The strongest completed frozen baseline was the hybrid concat baseline `exp0028`, and the strongest completed mixed system was the hybrid concat mixed model `exp0033`.
+- The gated-hybrid branch was informative but not dominant. Its downstream mixed result `exp0043` did not beat the hybrid mixed result `exp0033`, although it was competitive with the long-xattn mixed result `exp0025` and better than it on macro AP, macro ECE, and macro `F1 @ 0.5`.
+- The incomplete training metadata for `exp0036` should be mentioned explicitly in any supervisor-facing presentation. The downstream gated-hybrid branch is still usable for comparison because `exp0037` to `exp0043` are present and internally coherent, but the training run itself should be described as partially finalized rather than fully documented.

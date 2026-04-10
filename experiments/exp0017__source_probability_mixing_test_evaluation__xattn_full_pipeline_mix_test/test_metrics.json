@@ -1,0 +1,277 @@
+{
+  "macro_auroc": 0.7292543489978319,
+  "macro_average_precision": 0.11484508981018772,
+  "macro_ece": 0.22145679763337564,
+  "macro_f1_at_0.5": 0.1403980383911092,
+  "macro_f1_at_frozen_thresholds": 0.1748509625198023,
+  "per_label": {
+    "atelectasis": {
+      "auroc": 0.6970634104332708,
+      "average_precision": 0.18017281308229743,
+      "ece": 0.2103935877497667,
+      "f1_at_0.5": 0.14894217207334273,
+      "f1_at_frozen_threshold": 0.269211324570273,
+      "frozen_threshold_source": {
+        "best_f1_on_val": 0.2990119604784191,
+        "prevalence_on_val": 0.10268294856939121,
+        "threshold": 0.4299076795578003
+      },
+      "positive_count": 2305,
+      "threshold": 0.4299076795578003
+    },
+    "cardiomegaly": {
+      "auroc": 0.6786152649388302,
+      "average_precision": 0.04495288735629977,
+      "ece": 0.26507491351969026,
+      "f1_at_0.5": 0.04139715394566623,
+      "f1_at_frozen_threshold": 0.07891491985203453,
+      "frozen_threshold_source": {
+        "best_f1_on_val": 0.10389610389610389,
+        "prevalence_on_val": 0.027007754701845084,
+        "threshold": 0.4084088206291199
+      },
+      "positive_count": 534,
+      "threshold": 0.4084088206291199
+    },
+    "consolidation": {
+      "auroc": 0.7632915385715646,
+      "average_precision": 0.11017098391173344,
+      "ece": 0.21648777847866865,
+      "f1_at_0.5": 0.06141732283464567,
+      "f1_at_frozen_threshold": 0.19091813059330462,
+      "frozen_threshold_source": {
+        "best_f1_on_val": 0.15683774306662418,
+        "prevalence_on_val": 0.04046706480078438,
+        "threshold": 0.4332394301891327
+      },
+      "positive_count": 988,
+      "threshold": 0.4332394301891327
+    },
+    "edema": {
+      "auroc": 0.8426522860665892,
+      "average_precision": 0.07812434845400039,
+      "ece": 0.21120962319412656,
+      "f1_at_0.5": 0.12409812409812408,
+      "f1_at_frozen_threshold": 0.12785690626035112,
+      "frozen_threshold_source": {
+        "best_f1_on_val": 0.156062424969988,
+        "prevalence_on_val": 0.022551029503520812,
+        "threshold": 0.48728832602500916
+      },
+      "positive_count": 437,
+      "threshold": 0.48728832602500916
+    },
+    "emphysema": {
+      "auroc": 0.7911815522912462,
+      "average_precision": 0.09839254001797419,
+      "ece": 0.2006039227975013,
+      "f1_at_0.5": 0.18514644351464435,
+      "f1_at_frozen_threshold": 0.18778135048231512,
+      "frozen_threshold_source": {
+        "best_f1_on_val": 0.13253012048192772,
+        "prevalence_on_val": 0.01729209376949817,
+        "threshold": 0.5331801176071167
+      },
+      "positive_count": 490,
+      "threshold": 0.5331801176071167
+    },
+    "fibrosis": {
+      "auroc": 0.7411001648735956,
+      "average_precision": 0.03946243028245286,
+      "ece": 0.24577094464626648,
+      "f1_at_0.5": 0.06920415224913495,
+      "f1_at_frozen_threshold": 0.07170294494238157,
+      "frozen_threshold_source": {
+        "best_f1_on_val": 0.10802919708029197,
+        "prevalence_on_val": 0.014083251626704697,
+        "threshold": 0.4959500730037689
+      },
+      "positive_count": 297,
+      "threshold": 0.4959500730037689
+    },
+    "hernia": {
+      "auroc": 0.7771303370574292,
+      "average_precision": 0.008034039316867345,
+      "ece": 0.18927906771034897,
+      "f1_at_0.5": 0.01861130994989263,
+      "f1_at_frozen_threshold": 0.0,
+      "frozen_threshold_source": {
+        "best_f1_on_val": 0.11428571428571428,
+        "prevalence_on_val": 0.0028523041269275335,
+        "threshold": 0.5940202474594116
+      },
+      "positive_count": 38,
+      "threshold": 0.5940202474594116
+    },
+    "infiltration": {
+      "auroc": 0.6450863824149841,
+      "average_precision": 0.27987508008777495,
+      "ece": 0.18284622291265665,
+      "f1_at_0.5": 0.3350943396226415,
+      "f1_at_frozen_threshold": 0.3597322922476297,
+      "frozen_threshold_source": {
+        "best_f1_on_val": 0.38975265017667843,
+        "prevalence_on_val": 0.17951689098850165,
+        "threshold": 0.4231753945350647
+      },
+      "positive_count": 3886,
+      "threshold": 0.4231753945350647
+    },
+    "mass": {
+      "auroc": 0.6770167949521817,
+      "average_precision": 0.10254507146331736,
+      "ece": 0.2429574323638746,
+      "f1_at_0.5": 0.12741139524450426,
+      "f1_at_frozen_threshold": 0.16647662485746867,
+      "frozen_threshold_source": {
+        "best_f1_on_val": 0.16687898089171974,
+        "prevalence_on_val": 0.052054550316427486,
+        "threshold": 0.4486197829246521
+      },
+      "positive_count": 1181,
+      "threshold": 0.4486197829246521
+    },
+    "nodule": {
+      "auroc": 0.6457690886195034,
+      "average_precision": 0.10143259439991452,
+      "ece": 0.25421462049411647,
+      "f1_at_0.5": 0.09453302961275625,
+      "f1_at_frozen_threshold": 0.1673178579636865,
+      "frozen_threshold_source": {
+        "best_f1_on_val": 0.15059687786960513,
+        "prevalence_on_val": 0.05882877261788038,
+        "threshold": 0.40624386072158813
+      },
+      "positive_count": 1236,
+      "threshold": 0.40624386072158813
+    },
+    "pleural_effusion": {
+      "auroc": 0.779573929367831,
+      "average_precision": 0.28817837666089946,
+      "ece": 0.17465317514689574,
+      "f1_at_0.5": 0.3599263142978603,
+      "f1_at_frozen_threshold": 0.373070901364348,
+      "frozen_threshold_source": {
+        "best_f1_on_val": 0.38995373430270985,
+        "prevalence_on_val": 0.12389696051341474,
+        "threshold": 0.4669263958930969
+      },
+      "positive_count": 2635,
+      "threshold": 0.4669263958930969
+    },
+    "pleural_thickening": {
+      "auroc": 0.7177741188504133,
+      "average_precision": 0.0725111381513269,
+      "ece": 0.24134056120510333,
+      "f1_at_0.5": 0.1373679154658982,
+      "f1_at_frozen_threshold": 0.1448087431693989,
+      "frozen_threshold_source": {
+        "best_f1_on_val": 0.13200306983883345,
+        "prevalence_on_val": 0.027542561725643996,
+        "threshold": 0.46473556756973267
+      },
+      "positive_count": 662,
+      "threshold": 0.46473556756973267
+    },
+    "pneumonia": {
+      "auroc": 0.6706653203858575,
+      "average_precision": 0.0225557636076633,
+      "ece": 0.26731494905045894,
+      "f1_at_0.5": 0.0,
+      "f1_at_frozen_threshold": 0.045105999097880024,
+      "frozen_threshold_source": {
+        "best_f1_on_val": 0.058506543494996156,
+        "prevalence_on_val": 0.013013637579106872,
+        "threshold": 0.4227061867713928
+      },
+      "positive_count": 277,
+      "threshold": 0.4227061867713928
+    },
+    "pneumothorax": {
+      "auroc": 0.7826406971463512,
+      "average_precision": 0.18142319055010628,
+      "ece": 0.198248367597784,
+      "f1_at_0.5": 0.2624228645664176,
+      "f1_at_frozen_threshold": 0.265015479876161,
+      "frozen_threshold_source": {
+        "best_f1_on_val": 0.26369168356997974,
+        "prevalence_on_val": 0.044923789999108656,
+        "threshold": 0.4871059060096741
+      },
+      "positive_count": 1054,
+      "threshold": 0.4871059060096741
+    }
+  },
+  "thresholds": {
+    "atelectasis": {
+      "best_f1_on_val": 0.2990119604784191,
+      "prevalence_on_val": 0.10268294856939121,
+      "threshold": 0.4299076795578003
+    },
+    "cardiomegaly": {
+      "best_f1_on_val": 0.10389610389610389,
+      "prevalence_on_val": 0.027007754701845084,
+      "threshold": 0.4084088206291199
+    },
+    "consolidation": {
+      "best_f1_on_val": 0.15683774306662418,
+      "prevalence_on_val": 0.04046706480078438,
+      "threshold": 0.4332394301891327
+    },
+    "edema": {
+      "best_f1_on_val": 0.156062424969988,
+      "prevalence_on_val": 0.022551029503520812,
+      "threshold": 0.48728832602500916
+    },
+    "emphysema": {
+      "best_f1_on_val": 0.13253012048192772,
+      "prevalence_on_val": 0.01729209376949817,
+      "threshold": 0.5331801176071167
+    },
+    "fibrosis": {
+      "best_f1_on_val": 0.10802919708029197,
+      "prevalence_on_val": 0.014083251626704697,
+      "threshold": 0.4959500730037689
+    },
+    "hernia": {
+      "best_f1_on_val": 0.11428571428571428,
+      "prevalence_on_val": 0.0028523041269275335,
+      "threshold": 0.5940202474594116
+    },
+    "infiltration": {
+      "best_f1_on_val": 0.38975265017667843,
+      "prevalence_on_val": 0.17951689098850165,
+      "threshold": 0.4231753945350647
+    },
+    "mass": {
+      "best_f1_on_val": 0.16687898089171974,
+      "prevalence_on_val": 0.052054550316427486,
+      "threshold": 0.4486197829246521
+    },
+    "nodule": {
+      "best_f1_on_val": 0.15059687786960513,
+      "prevalence_on_val": 0.05882877261788038,
+      "threshold": 0.40624386072158813
+    },
+    "pleural_effusion": {
+      "best_f1_on_val": 0.38995373430270985,
+      "prevalence_on_val": 0.12389696051341474,
+      "threshold": 0.4669263958930969
+    },
+    "pleural_thickening": {
+      "best_f1_on_val": 0.13200306983883345,
+      "prevalence_on_val": 0.027542561725643996,
+      "threshold": 0.46473556756973267
+    },
+    "pneumonia": {
+      "best_f1_on_val": 0.058506543494996156,
+      "prevalence_on_val": 0.013013637579106872,
+      "threshold": 0.4227061867713928
+    },
+    "pneumothorax": {
+      "best_f1_on_val": 0.26369168356997974,
+      "prevalence_on_val": 0.044923789999108656,
+      "threshold": 0.4871059060096741
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "argv": [
+    "/workspace/scripts/10_train_cross_attention_encoder.py",
+    "--device",
+    "cuda",
+    "--fp16-on-cuda",
+    "--trust-remote-code",
+    "--trust-manifest-paths",
+    "--batch-size",
+    "32",
+    "--num-workers",
+    "8",
+    "--max-length",
+    "256",
+    "--epochs",
+    "1",
+    "--patience",
+    "0",
+    "--experiment-name",
+    "xattn_full_pipeline_e1_bs32_ml256"
+  ],
+  "best_epoch": 1,
+  "checkpoint_path": "/workspace/experiments/exp0010__source_cross_attention_training__xattn_full_pipeline_e1_bs32_ml256/best.ckpt",
+  "data_root": "/workspace/data",
+  "device_resolved": "cuda",
+  "experiment_dir": "/workspace/experiments/exp0010__source_cross_attention_training__xattn_full_pipeline_e1_bs32_ml256",
+  "experiment_id": "exp0010",
+  "experiment_name": "exp0010__source_cross_attention_training__xattn_full_pipeline_e1_bs32_ml256",
+  "experiment_number": 10,
+  "macro_metrics": {
+    "test": {
+      "auroc": 0.7226732812397072,
+      "average_precision": 0.10809150512771046,
+      "ece": 0.38626560026047124,
+      "f1_at_0.5": 0.15758375493156443,
+      "f1_at_tuned_thresholds": 0.1726641904492372
+    },
+    "val": {
+      "auroc": 0.7182846651409924,
+      "average_precision": 0.1101251685245536,
+      "ece": 0.38508684827522593,
+      "f1_at_0.5": 0.15552299673921696,
+      "f1_at_tuned_thresholds": 0.18008800909305409
+    }
+  },
+  "manifest_csv": "/workspace/manifest_nih_cxr14_all14.csv",
+  "model_config": {
+    "dropout": 0.1,
+    "embedding_dim": 512,
+    "fusion_dim": 256,
+    "fusion_heads": 8,
+    "fusion_layers": 2,
+    "image_encoder_id": "resnet50",
+    "image_feature_dim": 2048,
+    "image_token_count": 49,
+    "num_labels": 14,
+    "text_hidden_size": 768,
+    "text_model_id": "microsoft/BiomedVLP-CXR-BERT-specialized",
+    "tokenizer_id": "microsoft/BiomedVLP-CXR-BERT-specialized"
+  },
+  "operation_label": "source_cross_attention_training",
+  "reports_root": "/workspace/reports",
+  "run_date_utc": "2026-04-10T11:02:45.860099+00:00",
+  "selection_metric": "macro_auroc",
+  "stopped_early": false,
+  "thresholds_path": "/workspace/experiments/exp0010__source_cross_attention_training__xattn_full_pipeline_e1_bs32_ml256/val_f1_thresholds.json"
+}
