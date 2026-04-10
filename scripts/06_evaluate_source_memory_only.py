@@ -34,13 +34,13 @@ except Exception as exc:  # pragma: no cover
 
 DEFAULT_MANIFEST_CSV = Path("/workspace/manifest_nih_cxr14_all14.csv")
 DEFAULT_MEMORY_ROOT = Path(
-    "/workspace/experiments/exp0008__source_retrieval_memory_building__nih_cxr14_exp0003_fused_train_instance_memory"
+    "/workspace/experiments/exp0005__source_retrieval_memory_building__nih_cxr14_exp0003_fused_train_instance_memory_e100_p4"
 )
 DEFAULT_QUERY_EMBEDDING_ROOT = Path(
     "/workspace/experiments/exp0003__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2"
 )
 DEFAULT_BASELINE_EXPERIMENT_DIR = Path(
-    "/workspace/experiments/exp0006__source_baseline_training__nih_cxr14_exp0003_fused_linear"
+    "/workspace/experiments/exp0004__source_baseline_training__nih_cxr14_exp0003_fused_linear_e100_p4"
 )
 DEFAULT_EXPERIMENTS_ROOT = Path("/workspace/experiments")
 DEFAULT_OPERATION_LABEL = "source_memory_only_evaluation"
@@ -483,7 +483,7 @@ def load_memory_embeddings(memory_root: Path, memory_meta: dict[str, Any]) -> tu
             pass
     raise SystemExit(
         "Could not locate train embeddings for the memory. Expected either "
-        f"{memory_embeddings_path} or a valid fallback embedding path in exp0008 metadata."
+        f"{memory_embeddings_path} or a valid fallback embedding path in exp0005 metadata."
     )
 
 
@@ -985,7 +985,7 @@ def build_recreation_report(
         f"- The query embeddings must already exist at `{query_embedding_root / split}`.",
         f"- The manifest must be present at `{manifest_csv}`.",
         "- The required Python packages must be importable: `numpy`, `faiss`.",
-        "- If the `exp0008` local FAISS index is missing, this script can rebuild it from the local train embeddings.",
+        "- If the `exp0005` local FAISS index is missing, this script can rebuild it from the local train embeddings.",
         "",
         "## Input Summary",
         "",
@@ -1045,9 +1045,9 @@ def build_recreation_report(
             "",
             "## Important Reproduction Notes",
             "",
-            "- All configuration selection in `exp0009` is validation-only.",
+            "- All configuration selection in `exp0006` is validation-only.",
             "- `val_probabilities.npy` contains the best-config validation probabilities and is small enough for plain Git.",
-            "- If the local `exp0008/index.faiss` is unavailable, rerun `exp0008` or keep the local train embeddings available so the index can be rebuilt.",
+            "- If the local `exp0005/index.faiss` is unavailable, rerun `exp0005` or keep the local train embeddings available so the index can be rebuilt.",
             "- Threshold-tuned F1 is recorded as diagnostic only because thresholds are chosen on the same validation split.",
             "",
             "## Agent Handoff Text",
@@ -1101,7 +1101,7 @@ def main() -> int:
     if any(value <= 0.0 for value in sweep_tau_values):
         raise SystemExit(f"All tau values must be positive. Received: {sweep_tau_values}")
 
-    generated_slug = "nih_cxr14_exp0008_val"
+    generated_slug = "nih_cxr14_exp0005_val_e100_p4"
     experiment_number, experiment_id, experiment_name, experiment_dir = resolve_experiment_identity(
         experiments_root=experiments_root,
         requested_name=args.experiment_name,

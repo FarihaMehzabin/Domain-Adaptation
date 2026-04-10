@@ -37,7 +37,7 @@ DEFAULT_EMBEDDING_ROOT = Path(
     "/workspace/experiments/exp0003__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2"
 )
 DEFAULT_BASELINE_EXPERIMENT_DIR = Path(
-    "/workspace/experiments/exp0006__source_baseline_training__nih_cxr14_exp0003_fused_linear"
+    "/workspace/experiments/exp0004__source_baseline_training__nih_cxr14_exp0003_fused_linear_e100_p4"
 )
 DEFAULT_EXPERIMENTS_ROOT = Path("/workspace/experiments")
 DEFAULT_OPERATION_LABEL = "source_retrieval_memory_building"
@@ -997,7 +997,7 @@ def build_recreation_report(
             "- `embeddings.npy` and `index.faiss` are large duplicated retrieval artifacts and are intentionally ignored by the experiment-local `.gitignore` for plain Git commits.",
             "- `labels.npy`, `row_ids.json`, `image_paths.txt`, and `items.jsonl` are the main pushable provenance/value artifacts for this memory stage.",
             "- The script defensively re-normalizes the fused embeddings even though the source fused experiment already reports unit-length rows.",
-            "- The FAISS index is frozen after build. No training or hyperparameter tuning happens in `exp0008`.",
+            "- The FAISS index is frozen after build. No training or hyperparameter tuning happens in `exp0005`.",
             "",
             "## Agent Handoff Text",
             "",
@@ -1041,7 +1041,7 @@ def main() -> int:
     experiments_root = args.experiments_root.resolve()
     split = args.split
 
-    generated_slug = "nih_cxr14_exp0003_fused_train_instance_memory"
+    generated_slug = "nih_cxr14_exp0003_fused_train_instance_memory_e100_p4"
     experiment_number, experiment_id, experiment_name, experiment_dir = resolve_experiment_identity(
         experiments_root=experiments_root,
         requested_name=args.experiment_name,

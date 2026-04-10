@@ -31,10 +31,10 @@ except Exception as exc:  # pragma: no cover
 
 DEFAULT_MANIFEST_CSV = Path("/workspace/manifest_nih_cxr14_all14.csv")
 DEFAULT_MEMORY_EVAL_ROOT = Path(
-    "/workspace/experiments/exp0009__source_memory_only_evaluation__nih_cxr14_exp0008_val"
+    "/workspace/experiments/exp0006__source_memory_only_evaluation__nih_cxr14_exp0005_val_e100_p4"
 )
 DEFAULT_BASELINE_EXPERIMENT_DIR = Path(
-    "/workspace/experiments/exp0006__source_baseline_training__nih_cxr14_exp0003_fused_linear"
+    "/workspace/experiments/exp0004__source_baseline_training__nih_cxr14_exp0003_fused_linear_e100_p4"
 )
 DEFAULT_QUERY_EMBEDDING_ROOT = Path(
     "/workspace/experiments/exp0003__fused_embedding_generation__nih_cxr14_exp0001_exp0002_concat_l2"
@@ -835,7 +835,7 @@ def build_recreation_report(
     delta_ap = None
     if best_metrics["macro_average_precision"] is not None and baseline_metrics["macro_average_precision"] is not None:
         delta_ap = float(best_metrics["macro_average_precision"] - baseline_metrics["macro_average_precision"])
-    faiss_note = "Not used directly in this stage; memory probabilities come from exp0009."
+    faiss_note = "Not used directly in this stage; memory probabilities come from exp0006."
     lines = [
         "# Source Probability-Mixing Recreation Report",
         "",
@@ -925,7 +925,7 @@ def build_recreation_report(
         f"- Frozen baseline validation macro average precision: `{format_metric(baseline_metrics['macro_average_precision'])}`",
         f"- Best mixed minus baseline macro AUROC: `{format_metric(delta_auroc)}`",
         f"- Best mixed minus baseline macro average precision: `{format_metric(delta_ap)}`",
-        f"- Baseline reconstruction matches archived exp0006 forward metrics within 5e-4: `{str(baseline_comparison['matches_archived_metrics_within_5e-4']).lower()}`",
+        f"- Baseline reconstruction matches archived exp0004 forward metrics within 5e-4: `{str(baseline_comparison['matches_archived_metrics_within_5e-4']).lower()}`",
         f"- Baseline reconstruction max absolute metric delta: `{baseline_comparison['max_abs_delta']:.12f}`",
         "",
         "## Expected Outputs",
@@ -954,8 +954,8 @@ def build_recreation_report(
             "",
             "## Important Reproduction Notes",
             "",
-            "- All selection in `exp0010` is validation-only.",
-            "- `alpha=1.0` corresponds to the frozen baseline alone, and `alpha=0.0` corresponds to the selected memory-only probabilities from `exp0009`.",
+            "- All selection in `exp0007` is validation-only.",
+            "- `alpha=1.0` corresponds to the frozen baseline alone, and `alpha=0.0` corresponds to the selected memory-only probabilities from `exp0006`.",
             "- `val_mixed_probabilities.npy` stores the best-config mixed probabilities in validation row order.",
             "- Tied settings are resolved conservatively in favor of larger alpha.",
             "",
@@ -966,7 +966,7 @@ def build_recreation_report(
                 "Use /workspace/scripts/07_evaluate_probability_mixing.py and the report "
                 f"{experiment_dir / 'recreation_report.md'} to recreate the validation-only probability-mixing stage "
                 f"that combines {baseline_experiment_dir} with {memory_eval_root}. Reconstruct the frozen baseline "
-                "validation probabilities, mix them with the exp0009 memory probabilities across alpha in [0.0, 1.0], "
+                "validation probabilities, mix them with the exp0006 memory probabilities across alpha in [0.0, 1.0], "
                 "and verify the saved best_config.json, best_val_metrics.json, and val_mixed_probabilities.npy artifacts."
             ),
             "```",
@@ -1005,7 +1005,7 @@ def main() -> int:
     if any(value < 0.0 or value > 1.0 for value in alpha_values):
         raise SystemExit(f"All alpha values must be in [0, 1]. Received: {alpha_values}")
 
-    generated_slug = "nih_cxr14_exp0009_probability_mixing_val"
+    generated_slug = "nih_cxr14_exp0006_val_e100_p4"
     experiment_number, experiment_id, experiment_name, experiment_dir = resolve_experiment_identity(
         experiments_root=experiments_root,
         requested_name=args.experiment_name,

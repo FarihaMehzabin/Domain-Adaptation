@@ -33,7 +33,7 @@ SOURCE_SELECTION_SCRIPT_PATH, source_memory_mod = load_module(
 DEFAULT_MANIFEST_CSV = source_memory_mod.DEFAULT_MANIFEST_CSV
 DEFAULT_MEMORY_ROOT = source_memory_mod.DEFAULT_MEMORY_ROOT
 DEFAULT_MEMORY_SELECTION_ROOT = Path(
-    "/workspace/experiments/exp0009__source_memory_only_evaluation__nih_cxr14_exp0008_val"
+    "/workspace/experiments/exp0006__source_memory_only_evaluation__nih_cxr14_exp0005_val_e100_p4"
 )
 DEFAULT_QUERY_EMBEDDING_ROOT = source_memory_mod.DEFAULT_QUERY_EMBEDDING_ROOT
 DEFAULT_BASELINE_EXPERIMENT_DIR = source_memory_mod.DEFAULT_BASELINE_EXPERIMENT_DIR
@@ -328,7 +328,7 @@ def build_recreation_report(
             "",
             "## Important Reproduction Notes",
             "",
-            "- This test stage does not sweep `k` or `tau`; it reuses the validation-selected configuration from `exp0009`.",
+            "- This test stage does not sweep `k` or `tau`; it reuses the validation-selected configuration from `exp0006`.",
             "- Threshold-based F1 on test uses frozen thresholds from the validation artifact, not thresholds retuned on test.",
             "- `test_probabilities.npy` stores held-out test probabilities in test row order and is small enough for plain Git.",
             "",
@@ -339,7 +339,7 @@ def build_recreation_report(
                 "Use /workspace/scripts/08_evaluate_source_memory_test.py and the report "
                 f"{experiment_dir / 'recreation_report.md'} to recreate the held-out test memory evaluation for "
                 f"{memory_root}. Apply the frozen validation-selected k/tau from {memory_selection_root} on the test "
-                "split, reuse the validation thresholds from exp0009 for threshold-based F1 reporting, and verify the "
+                "split, reuse the validation thresholds from exp0006 for threshold-based F1 reporting, and verify the "
                 "saved applied_config.json, test_metrics.json, and test_probabilities.npy artifacts."
             ),
             "```",
@@ -376,7 +376,7 @@ def main() -> int:
     experiments_root = args.experiments_root.resolve()
     split = args.split
 
-    generated_slug = "nih_cxr14_exp0009_test"
+    generated_slug = "nih_cxr14_exp0006_test_e100_p4"
     experiment_number, experiment_id, experiment_name, experiment_dir = resolve_experiment_identity(
         experiments_root=experiments_root,
         requested_name=args.experiment_name,

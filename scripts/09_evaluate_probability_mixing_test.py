@@ -32,10 +32,10 @@ MIXING_SELECTION_SCRIPT_PATH, probability_mixing_mod = load_module(
 
 DEFAULT_MANIFEST_CSV = probability_mixing_mod.DEFAULT_MANIFEST_CSV
 DEFAULT_MEMORY_TEST_ROOT = Path(
-    "/workspace/experiments/exp0011__source_memory_only_test_evaluation__nih_cxr14_exp0009_test"
+    "/workspace/experiments/exp0008__source_memory_only_test_evaluation__nih_cxr14_exp0006_test_e100_p4"
 )
 DEFAULT_MIXING_SELECTION_ROOT = Path(
-    "/workspace/experiments/exp0010__source_probability_mixing_evaluation__nih_cxr14_exp0009_probability_mixing_val"
+    "/workspace/experiments/exp0007__source_probability_mixing_evaluation__nih_cxr14_exp0006_val_e100_p4"
 )
 DEFAULT_BASELINE_EXPERIMENT_DIR = probability_mixing_mod.DEFAULT_BASELINE_EXPERIMENT_DIR
 DEFAULT_QUERY_EMBEDDING_ROOT = probability_mixing_mod.DEFAULT_QUERY_EMBEDDING_ROOT
@@ -359,7 +359,7 @@ def build_recreation_report(
         f"- Mixed minus baseline macro ECE: `{format_metric(delta_summary['macro_ece'])}`",
         f"- Mixed minus baseline macro F1 @ 0.5: `{format_metric(delta_summary['macro_f1_at_0.5'])}`",
         f"- Mixed minus baseline macro F1 @ frozen val thresholds: `{format_metric(delta_summary['macro_f1_at_frozen_thresholds'])}`",
-        f"- Baseline reconstruction matches archived exp0006 test metrics within 5e-4: `{str(baseline_comparison['matches_archived_metrics_within_5e-4']).lower()}`",
+        f"- Baseline reconstruction matches archived exp0004 test metrics within 5e-4: `{str(baseline_comparison['matches_archived_metrics_within_5e-4']).lower()}`",
         f"- Baseline reconstruction max absolute metric delta: `{baseline_comparison['max_abs_delta']:.12f}`",
         "",
         "## Expected Outputs",
@@ -387,7 +387,7 @@ def build_recreation_report(
             "",
             "## Important Reproduction Notes",
             "",
-            "- This test stage does not sweep alpha; it reuses the validation-selected alpha from `exp0010`.",
+            "- This test stage does not sweep alpha; it reuses the validation-selected alpha from `exp0007`.",
             "- Threshold-based F1 on test uses frozen thresholds from the validation mixing artifact, not thresholds retuned on test.",
             "- `test_mixed_probabilities.npy` stores held-out mixed probabilities in test row order and is small enough for plain Git.",
             "",
@@ -398,7 +398,7 @@ def build_recreation_report(
                 "Use /workspace/scripts/09_evaluate_probability_mixing_test.py and the report "
                 f"{experiment_dir / 'recreation_report.md'} to recreate the held-out test probability-mixing stage "
                 f"that combines {baseline_experiment_dir} with {memory_test_root}. Apply the frozen validation-"
-                f"selected alpha from {mixing_selection_root}, reuse the validation thresholds from exp0010 for "
+                f"selected alpha from {mixing_selection_root}, reuse the validation thresholds from exp0007 for "
                 "threshold-based F1 reporting, and verify the saved applied_config.json, test_metrics.json, and "
                 "test_mixed_probabilities.npy artifacts."
             ),
@@ -436,7 +436,7 @@ def main() -> int:
     experiments_root = args.experiments_root.resolve()
     split = args.split
 
-    generated_slug = "nih_cxr14_exp0010_test"
+    generated_slug = "nih_cxr14_exp0007_test_e100_p4"
     experiment_number, experiment_id, experiment_name, experiment_dir = resolve_experiment_identity(
         experiments_root=experiments_root,
         requested_name=args.experiment_name,
