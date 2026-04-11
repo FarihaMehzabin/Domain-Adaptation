@@ -1,0 +1,42 @@
+{
+  "domain": "d0_nih",
+  "embedding_shape": [
+    10000,
+    2048
+  ],
+  "embeddings_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d0_nih/train/embeddings.npy",
+  "encoder_backend": "torchvision",
+  "encoder_id": "resnet50",
+  "feature_summary": {
+    "feature_source": "tensor",
+    "pooling_applied": "global_average_pool",
+    "raw_feature_shape": [
+      1536,
+      2048,
+      7,
+      7
+    ]
+  },
+  "image_paths_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d0_nih/train/image_paths.txt",
+  "label_names": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion",
+    "pneumonia",
+    "pneumothorax"
+  ],
+  "num_embedded_rows": 10000,
+  "num_failed_rows": 0,
+  "num_requested_rows": 10000,
+  "pooling": "avg",
+  "resolved_input_size": [
+    224,
+    224
+  ],
+  "row_ids_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d0_nih/train/row_ids.json",
+  "run_date_utc": "2026-04-11T09:18:25.252721+00:00",
+  "split": "train",
+  "weights_label": "DEFAULT"
+}

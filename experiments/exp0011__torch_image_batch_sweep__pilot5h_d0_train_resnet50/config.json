@@ -1,0 +1,49 @@
+{
+  "argv": [
+    "/workspace/scripts/19_benchmark_torch_image_batch_sizes.py",
+    "--manifest-csv",
+    "/workspace/manifest_common_labels_pilot5h.csv",
+    "--candidate-batch-sizes",
+    "256",
+    "512",
+    "768",
+    "1024",
+    "1280",
+    "1536",
+    "1792",
+    "2048",
+    "--experiment-name",
+    "exp0011__torch_image_batch_sweep__pilot5h_d0_train_resnet50",
+    "--overwrite"
+  ],
+  "candidate_batch_sizes": [
+    256,
+    512,
+    768,
+    1024,
+    1280,
+    1536,
+    1792,
+    2048
+  ],
+  "data_root": "/workspace",
+  "device": "cuda",
+  "domain": "d0_nih",
+  "encoder_backend": "torchvision",
+  "encoder_id": "resnet50",
+  "experiment_dir": "/workspace/experiments/exp0011__torch_image_batch_sweep__pilot5h_d0_train_resnet50",
+  "experiment_id": "exp0011",
+  "experiment_name": "exp0011__torch_image_batch_sweep__pilot5h_d0_train_resnet50",
+  "experiment_number": 11,
+  "fp16_on_cuda": false,
+  "manifest_csv": "/workspace/manifest_common_labels_pilot5h.csv",
+  "num_workers": 4,
+  "pooling": "avg",
+  "resolved_input_size": [
+    224,
+    224
+  ],
+  "run_date_utc": "2026-04-11T09:07:06.213368+00:00",
+  "split": "train",
+  "weights_label": "DEFAULT"
+}

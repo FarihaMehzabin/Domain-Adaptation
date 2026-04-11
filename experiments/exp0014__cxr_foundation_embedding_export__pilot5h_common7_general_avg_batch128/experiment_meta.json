@@ -1,0 +1,156 @@
+{
+  "data_root": "/workspace",
+  "embedding_index_csv": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/embedding_index.csv",
+  "embedding_kind": "general",
+  "experiment_dir": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128",
+  "experiment_id": "exp0014",
+  "experiment_name": "exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128",
+  "experiment_number": 14,
+  "label_names": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion",
+    "pneumonia",
+    "pneumothorax"
+  ],
+  "label_names_json": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/label_names.json",
+  "manifest_csv": "/workspace/manifest_common_labels_pilot5h.csv",
+  "model_dir": "/workspace/.cache/cxr_foundation",
+  "operation_label": "cxr_foundation_embedding_export",
+  "run_date_utc": "2026-04-11T14:07:43.015446+00:00",
+  "split_outputs": {
+    "d0_nih/test": {
+      "domain": "d0_nih",
+      "embedding_kind": "general",
+      "embedding_shape": [
+        2000,
+        768
+      ],
+      "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/test/embeddings.npy",
+      "image_paths_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/test/image_paths.txt",
+      "label_names": [
+        "atelectasis",
+        "cardiomegaly",
+        "consolidation",
+        "edema",
+        "pleural_effusion",
+        "pneumonia",
+        "pneumothorax"
+      ],
+      "num_embedded_rows": 2000,
+      "num_failed_rows": 0,
+      "num_requested_rows": 2000,
+      "row_ids_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/test/row_ids.json",
+      "run_date_utc": "2026-04-11T10:02:54.286604+00:00",
+      "split": "test",
+      "token_pooling": "avg"
+    },
+    "d0_nih/train": {
+      "domain": "d0_nih",
+      "embedding_kind": "general",
+      "embedding_shape": [
+        10000,
+        768
+      ],
+      "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/train/embeddings.npy",
+      "image_paths_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/train/image_paths.txt",
+      "label_names": [
+        "atelectasis",
+        "cardiomegaly",
+        "consolidation",
+        "edema",
+        "pleural_effusion",
+        "pneumonia",
+        "pneumothorax"
+      ],
+      "num_embedded_rows": 10000,
+      "num_failed_rows": 0,
+      "num_requested_rows": 10000,
+      "row_ids_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/train/row_ids.json",
+      "run_date_utc": "2026-04-11T13:25:25.877549+00:00",
+      "split": "train",
+      "token_pooling": "avg"
+    },
+    "d0_nih/val": {
+      "domain": "d0_nih",
+      "embedding_kind": "general",
+      "embedding_shape": [
+        1000,
+        768
+      ],
+      "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/val/embeddings.npy",
+      "image_paths_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/val/image_paths.txt",
+      "label_names": [
+        "atelectasis",
+        "cardiomegaly",
+        "consolidation",
+        "edema",
+        "pleural_effusion",
+        "pneumonia",
+        "pneumothorax"
+      ],
+      "num_embedded_rows": 1000,
+      "num_failed_rows": 0,
+      "num_requested_rows": 1000,
+      "row_ids_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/val/row_ids.json",
+      "run_date_utc": "2026-04-11T13:45:35.463797+00:00",
+      "split": "val",
+      "token_pooling": "avg"
+    },
+    "d1_chexpert/val": {
+      "domain": "d1_chexpert",
+      "embedding_kind": "general",
+      "embedding_shape": [
+        234,
+        768
+      ],
+      "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d1_chexpert/val/embeddings.npy",
+      "image_paths_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d1_chexpert/val/image_paths.txt",
+      "label_names": [
+        "atelectasis",
+        "cardiomegaly",
+        "consolidation",
+        "edema",
+        "pleural_effusion",
+        "pneumonia",
+        "pneumothorax"
+      ],
+      "num_embedded_rows": 234,
+      "num_failed_rows": 0,
+      "num_requested_rows": 234,
+      "row_ids_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d1_chexpert/val/row_ids.json",
+      "run_date_utc": "2026-04-11T13:48:31.548815+00:00",
+      "split": "val",
+      "token_pooling": "avg"
+    },
+    "d2_mimic/test": {
+      "domain": "d2_mimic",
+      "embedding_kind": "general",
+      "embedding_shape": [
+        1455,
+        768
+      ],
+      "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d2_mimic/test/embeddings.npy",
+      "image_paths_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d2_mimic/test/image_paths.txt",
+      "label_names": [
+        "atelectasis",
+        "cardiomegaly",
+        "consolidation",
+        "edema",
+        "pleural_effusion",
+        "pneumonia",
+        "pneumothorax"
+      ],
+      "num_embedded_rows": 1455,
+      "num_failed_rows": 0,
+      "num_requested_rows": 1455,
+      "row_ids_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d2_mimic/test/row_ids.json",
+      "run_date_utc": "2026-04-11T14:07:42.840154+00:00",
+      "split": "test",
+      "token_pooling": "avg"
+    }
+  },
+  "token_pooling": "avg"
+}

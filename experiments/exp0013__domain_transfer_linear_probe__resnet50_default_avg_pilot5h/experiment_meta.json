@@ -1,0 +1,111 @@
+{
+  "best_epoch": 50,
+  "checkpoint_path": "/workspace/experiments/exp0013__domain_transfer_linear_probe__resnet50_default_avg_pilot5h/best.ckpt",
+  "device_resolved": "cuda",
+  "embedding_layout": "domain_split",
+  "embedding_root": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h",
+  "experiment_dir": "/workspace/experiments/exp0013__domain_transfer_linear_probe__resnet50_default_avg_pilot5h",
+  "experiment_id": "exp0013",
+  "experiment_name": "exp0013__domain_transfer_linear_probe__resnet50_default_avg_pilot5h",
+  "experiment_number": 13,
+  "input_dim": 2048,
+  "l2_normalize_features": false,
+  "macro_metrics": {
+    "d0_test": {
+      "auroc": 0.7305629504615647,
+      "average_precision": 0.12626616597643434,
+      "ece": 0.4061671228967674,
+      "f1_at_0.5": 0.17201104995249036,
+      "f1_at_tuned_thresholds": 0.18391187037714582
+    },
+    "d0_val": {
+      "auroc": 0.7376169170752449,
+      "average_precision": 0.12728280935906708,
+      "ece": 0.40469665870855476,
+      "f1_at_0.5": 0.18379009478401379,
+      "f1_at_tuned_thresholds": 0.20958460619345126
+    },
+    "d1_transfer": {
+      "auroc": 0.7217773639736019,
+      "average_precision": 0.37484096464684485,
+      "ece": 0.30911433591529885,
+      "f1_at_0.5": 0.365637098914354,
+      "f1_at_tuned_thresholds": 0.2945835279934305
+    },
+    "d2_transfer": {
+      "auroc": 0.4995752128506105,
+      "average_precision": 0.12780386977122096,
+      "ece": 0.4289106709603273,
+      "f1_at_0.5": 0.20643061744114563,
+      "f1_at_tuned_thresholds": 0.19329480366732746
+    }
+  },
+  "manifest_csv": "/workspace/manifest_common_labels_pilot5h.csv",
+  "num_labels": 7,
+  "operation_label": "domain_transfer_linear_probe",
+  "run_date_utc": "2026-04-11T09:20:17.938177+00:00",
+  "split_inputs": {
+    "d0_test": {
+      "domain": "d0_nih",
+      "embeddings_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d0_nih/test/embeddings.npy",
+      "num_rows": 2000,
+      "shape": [
+        2000,
+        2048
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d0_nih/test/row_ids.json",
+      "split": "test"
+    },
+    "d0_train": {
+      "domain": "d0_nih",
+      "embeddings_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d0_nih/train/embeddings.npy",
+      "num_rows": 10000,
+      "shape": [
+        10000,
+        2048
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d0_nih/train/row_ids.json",
+      "split": "train"
+    },
+    "d0_val": {
+      "domain": "d0_nih",
+      "embeddings_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d0_nih/val/embeddings.npy",
+      "num_rows": 1000,
+      "shape": [
+        1000,
+        2048
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d0_nih/val/row_ids.json",
+      "split": "val"
+    },
+    "d1_transfer": {
+      "domain": "d1_chexpert",
+      "embeddings_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d1_chexpert/val/embeddings.npy",
+      "num_rows": 234,
+      "shape": [
+        234,
+        2048
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d1_chexpert/val/row_ids.json",
+      "split": "val"
+    },
+    "d2_transfer": {
+      "domain": "d2_mimic",
+      "embeddings_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d2_mimic/test/embeddings.npy",
+      "num_rows": 1455,
+      "shape": [
+        1455,
+        2048
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d2_mimic/test/row_ids.json",
+      "split": "test"
+    }
+  },
+  "thresholds_path": "/workspace/experiments/exp0013__domain_transfer_linear_probe__resnet50_default_avg_pilot5h/d0_val_f1_thresholds.json",
+  "token_pooling": "avg"
+}

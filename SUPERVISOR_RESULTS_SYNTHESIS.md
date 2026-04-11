@@ -1,5 +1,199 @@
 # Supervisor-Facing Results Synthesis for the NIH CXR14 Source-Stage Experiments
 
+Prepared on April 11, 2026 (UTC).
+
+Most recent update: the current active image-only domain-transfer pilot is summarized in Section 0 below. If any older section later in this file conflicts with Section 0, treat Section 0 as the current result for the present workspace.
+
+## 0. April 11, 2026 Update: Pilot Image-Only Domain-Transfer Comparison
+
+### Objective
+
+Run a controlled pilot comparison of two simple image-only source baselines before committing to long full-data runs:
+
+- `ResNet50` image embeddings as the simple CNN baseline
+- `CXR Foundation` image embeddings as the chest-X-ray-specific foundation baseline
+
+The experimental goal was to train on NIH and then measure direct transfer to CheXpert and MIMIC under the same frozen linear-probe protocol.
+
+### Experimental protocol
+
+- Domains:
+  - `D0 = NIH CXR14`
+  - `D1 = CheXpert`
+  - `D2 = MIMIC-CXR`
+- Shared labels:
+  - `atelectasis`
+  - `cardiomegaly`
+  - `consolidation`
+  - `edema`
+  - `pleural_effusion`
+  - `pneumonia`
+  - `pneumothorax`
+- Pilot subset manifest:
+  - `/workspace/manifest_common_labels_pilot5h.csv`
+- Pilot subset sizes:
+  - `D0 train = 10,000`
+  - `D0 val = 1,000`
+  - `D0 test = 2,000`
+  - `D1 val = 234`
+  - `D2 test = 1,455`
+- Training rule:
+  - train a frozen multilabel linear head on `D0 train` embeddings only
+  - early stop on `D0 val` macro AUROC
+  - evaluate the selected checkpoint on `D0 test`, `D1 val`, and `D2 test`
+- Deployment interpretation:
+  - this is still an image-only pipeline at inference time
+  - no report input is required at deployment
+  - for CXR Foundation, report information only enters indirectly through pretraining of the backbone
+
+### Run lineage and implementation details
+
+| Experiment | Purpose | Key settings | Main outcome |
+| --- | --- | --- | --- |
+| `exp0011` | ResNet50 batch-size sweep | `256` to `2048` on `D0 train` | highest successful batch size was `1536`; `1792` produced CUDA OOM |
+| `exp0012` | ResNet50 pilot embedding export | torchvision `resnet50`, avg pooling, `2048`-dim embeddings, batch size `1536` | completed all `14,689` pilot images |
+| `exp0013` | ResNet50 pilot linear probe | frozen linear probe, best epoch `50` | completed source and transfer evaluation |
+| `exp0014` | CXR Foundation pilot embedding export | existing `/workspace/scripts/14_generate_cxr_foundation_embeddings.py` path, `general` embeddings, `avg` token pooling, `768`-dim embeddings, batch size `128` | completed all `14,689` pilot images |
+| `exp0015` | CXR Foundation pilot linear probe | frozen linear probe, best epoch `49` | completed source and transfer evaluation |
+
+Additional implementation notes:
+
+- The CXR Foundation exporter in `exp0014` was patched to checkpoint every batch into `_partial_batches` and to update `split_progress.json` after each completed batch. This was done so that partial progress would be preserved if a long run was interrupted.
+- The CXR Foundation export intentionally followed the existing `14_generate_cxr_foundation_embeddings.py` path rather than switching to an alternative feature path mid-study. That kept the comparison aligned with the original planned experiment.
+
+### Runtime summary
+
+- `exp0011` ResNet50 batch sweep:
+  - started `2026-04-11T09:07:06Z`
+  - finished `2026-04-11T09:12:23Z`
+  - duration about `5m 17s`
+- `exp0012` ResNet50 pilot embedding export:
+  - started `2026-04-11T09:14:43Z`
+  - finished `2026-04-11T09:19:51Z`
+  - duration about `5m 08s`
+- `exp0014` CXR Foundation pilot embedding export:
+  - started `2026-04-11T09:20:33Z`
+  - finished `2026-04-11T14:07:43Z`
+  - duration about `4h 47m 10s`
+
+The practical throughput difference was large:
+
+- ResNet50 export was fast enough that the full pilot subset finished in a few minutes.
+- CXR Foundation export required several hours on the same subset.
+- The observed CXR Foundation throughput on this machine, using the existing exporter path, was roughly `1.43 seconds/image`.
+
+### Main quantitative results
+
+#### Macro metrics
+
+| Model | D0 val AUROC | D0 test AUROC | D0 test AP | D1 transfer AUROC | D1 transfer AP | D2 transfer AUROC | D2 transfer AP |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| ResNet50 | `0.7376` | `0.7306` | `0.1263` | `0.7218` | `0.3748` | `0.4996` | `0.1278` |
+| CXR Foundation | `0.8482` | `0.8455` | `0.2541` | `0.8454` | `0.5430` | `0.5007` | `0.1258` |
+| Delta (`CXR - ResNet`) | `+0.1106` | `+0.1149` | `+0.1278` | `+0.1237` | `+0.1682` | `+0.0011` | `-0.0020` |
+
+#### Key interpretation of the table
+
+- On the NIH source test set, CXR Foundation substantially outperformed ResNet50.
+- On direct transfer from NIH to CheXpert, CXR Foundation also substantially outperformed ResNet50.
+- On direct transfer from NIH to MIMIC, neither model performed meaningfully above chance at the macro level.
+- Therefore:
+  - `CXR Foundation` is clearly the stronger source backbone
+  - but a stronger source backbone alone is not enough to solve the NIH to MIMIC shift
+
+### Label-level observations
+
+#### NIH test (`D0`)
+
+CXR Foundation improved AUROC over ResNet50 for all 7 labels:
+
+- `atelectasis`: `0.7995` vs `0.7052`
+- `cardiomegaly`: `0.8730` vs `0.7028`
+- `consolidation`: `0.8062` vs `0.7318`
+- `edema`: `0.9056` vs `0.8462`
+- `pleural_effusion`: `0.8666` vs `0.7590`
+- `pneumonia`: `0.8097` vs `0.6552`
+- `pneumothorax`: `0.8579` vs `0.7138`
+
+#### CheXpert validation transfer (`D1`)
+
+CXR Foundation again improved AUROC over ResNet50 for all 7 labels:
+
+- `atelectasis`: `0.8471` vs `0.7822`
+- `cardiomegaly`: `0.7371` vs `0.5045`
+- `consolidation`: `0.9145` vs `0.7790`
+- `edema`: `0.8455` vs `0.7586`
+- `pleural_effusion`: `0.9057` vs `0.7934`
+- `pneumonia`: `0.8966` vs `0.8042`
+- `pneumothorax`: `0.7716` vs `0.6305`
+
+The largest practical gap on CheXpert was for `cardiomegaly`, where the ResNet50 baseline was weak and the CXR Foundation backbone materially improved transfer.
+
+#### MIMIC test transfer (`D2`)
+
+The MIMIC result was qualitatively different:
+
+- ResNet50 macro AUROC: `0.4996`
+- CXR Foundation macro AUROC: `0.5007`
+
+Per-label MIMIC AUROCs for CXR Foundation stayed tightly clustered around chance:
+
+- `atelectasis`: `0.5077`
+- `cardiomegaly`: `0.4996`
+- `consolidation`: `0.4972`
+- `edema`: `0.5002`
+- `pleural_effusion`: `0.5016`
+- `pneumonia`: `0.5019`
+- `pneumothorax`: `0.4968`
+
+This means the main limitation is not simply that ResNet50 is too weak. The larger issue is that direct NIH to MIMIC transfer is a hard domain shift in this setup.
+
+### Supervisor-facing interpretation
+
+The strongest supervisor-facing conclusion is:
+
+- We started with a simple, controlled image-only transfer study on a manageable pilot subset rather than running expensive full-data experiments blindly.
+- Under the same data split and the same frozen linear-probe protocol, `CXR Foundation` clearly beat the old `ResNet50` image-only baseline on the NIH source task and on direct transfer to CheXpert.
+- However, neither backbone solved direct transfer to MIMIC.
+- This suggests that:
+  - choosing the right chest-X-ray-specific source backbone matters
+  - but for the hardest target domain, representation quality alone is not sufficient
+  - actual domain adaptation is still needed for MIMIC
+
+This gives a coherent staged story for presentation:
+
+1. Start with a simple CNN source baseline.
+2. Replace it with a chest-X-ray-specific foundation model.
+3. Show that the stronger source backbone improves source classification and easier cross-domain transfer.
+4. Use the remaining failure on MIMIC to motivate the next adaptation step.
+
+### Recommendation
+
+Based on this pilot, the most defensible next move is:
+
+- promote `CXR Foundation` as the primary image-only source backbone for subsequent adaptation experiments
+- keep `ResNet50` as the simple baseline comparator
+- use `MIMIC` as the main target domain for adaptation experiments, because it is the domain where simple direct transfer still fails
+
+### Key artifact locations for presentation
+
+- Pilot manifest:
+  - `/workspace/manifest_common_labels_pilot5h.csv`
+- ResNet50 embedding export:
+  - `/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h`
+- ResNet50 transfer evaluation:
+  - `/workspace/experiments/exp0013__domain_transfer_linear_probe__resnet50_default_avg_pilot5h`
+- CXR Foundation embedding export:
+  - `/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128`
+- CXR Foundation transfer evaluation:
+  - `/workspace/experiments/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h`
+- Main logs:
+  - `/workspace/logs/exp0011__torch_image_batch_sweep__pilot5h_d0_train_resnet50.log`
+  - `/workspace/logs/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h.log`
+  - `/workspace/logs/exp0013__domain_transfer_linear_probe__resnet50_default_avg_pilot5h.log`
+  - `/workspace/logs/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128.log`
+  - `/workspace/logs/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h.log`
+
 All statements below are derived from the local experiment artifacts only, including the original fused-lineage artifacts (`exp0007`-`exp0012`), the April 5, 2026 rerun and retrieval-refinement artifacts (`exp0013`-`exp0026`), and the April 5, 2026 fusion-weight sweep artifacts (`exp0027`-`exp0046`). No external sources were needed for this write-up. Metric values are reproduced exactly as reported in the experiment summaries and supporting artifacts.
 
 ## 1. Key findings

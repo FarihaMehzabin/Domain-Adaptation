@@ -1,0 +1,41 @@
+{
+  "argv": [
+    "/workspace/scripts/17_generate_domain_transfer_image_embeddings.py",
+    "--manifest-csv",
+    "/workspace/manifest_common_labels_pilot5h.csv",
+    "--batch-size",
+    "1536",
+    "--experiment-name",
+    "exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h",
+    "--overwrite"
+  ],
+  "batch_size": 1536,
+  "data_root": "/workspace",
+  "device": "cuda",
+  "encoder_backend": "torchvision",
+  "encoder_id": "resnet50",
+  "experiment_dir": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h",
+  "experiment_id": "exp0012",
+  "experiment_name": "exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h",
+  "experiment_number": 12,
+  "fp16_on_cuda": false,
+  "label_names": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion",
+    "pneumonia",
+    "pneumothorax"
+  ],
+  "manifest_csv": "/workspace/manifest_common_labels_pilot5h.csv",
+  "max_rows_per_split": null,
+  "num_workers": 4,
+  "pooling": "avg",
+  "resolved_input_size": [
+    224,
+    224
+  ],
+  "run_date_utc": "2026-04-11T09:14:43.234227+00:00",
+  "weights_label": "DEFAULT"
+}
