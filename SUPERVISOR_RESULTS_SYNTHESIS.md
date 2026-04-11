@@ -2,7 +2,7 @@
 
 Prepared on April 11, 2026 (UTC).
 
-Most recent update: the current active image-only domain-transfer pilot is summarized in Section 0 below. If any older section later in this file conflicts with Section 0, treat Section 0 as the current result for the present workspace.
+Most recent updates: the current active image-only domain-transfer pilot is summarized in Sections 0 and 0A below. If any older section later in this file conflicts with Sections 0 or 0A, treat Sections 0 and 0A as the current result for the present workspace.
 
 ## 0. April 11, 2026 Update: Pilot Image-Only Domain-Transfer Comparison
 
@@ -164,7 +164,7 @@ This gives a coherent staged story for presentation:
 
 1. Start with a simple CNN source baseline.
 2. Replace it with a chest-X-ray-specific foundation model.
-3. Show that the stronger source backbone improves source classification and easier cross-domain transfer.
+3. Show that the stronger source backbone improves source    classification and easier cross-domain transfer.
 4. Use the remaining failure on MIMIC to motivate the next adaptation step.
 
 ### Recommendation
@@ -193,6 +193,290 @@ Based on this pilot, the most defensible next move is:
   - `/workspace/logs/exp0013__domain_transfer_linear_probe__resnet50_default_avg_pilot5h.log`
   - `/workspace/logs/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128.log`
   - `/workspace/logs/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h.log`
+
+## 0A. April 11, 2026 Update: Source-Trained MLP Sweep on the Same Pilot Transfer Setup
+
+### Objective
+
+After establishing that `CXR Foundation` was the stronger image-only source backbone, the next controlled question was whether a slightly more expressive source-trained head could improve transfer further without changing the embedding backbone.
+
+The specific comparison was:
+
+- keep the same frozen pilot embeddings
+- keep the same NIH-source training rule
+- replace the linear multilabel head with a small one-hidden-layer MLP
+- evaluate whether this improves:
+  - `D0 = NIH` source classification
+  - `D1 = CheXpert` direct transfer
+  - `D2 = MIMIC-CXR` direct transfer
+
+### Experimental protocol
+
+- Date of sweep:
+  - `April 11, 2026 (UTC)`
+- Data:
+  - reused the exact same pilot subset manifest from Section 0:
+    - `/workspace/manifest_common_labels_pilot5h.csv`
+- Embedding roots:
+  - ResNet50 pilot embeddings:
+    - `/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h`
+  - CXR Foundation pilot embeddings:
+    - `/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128`
+- Head family:
+  - one-hidden-layer MLP
+  - `ReLU`
+  - dropout `0.2`
+  - hidden sizes swept:
+    - `256`
+    - `512`
+    - `1024`
+- Selection rule:
+  - rank all candidate MLP runs only by `D0 val` macro AUROC
+  - break ties by `D0 val` macro average precision
+  - final tie-break by lower `D0 val` loss
+- Training rule:
+  - train on `NIH train` only
+  - early stop on `NIH val` macro AUROC
+  - evaluate on:
+    - `NIH test`
+    - `CheXpert val`
+    - `MIMIC test`
+
+This means the MLP sweep did not introduce any target-domain tuning. It stayed within the same NIH-source direct-transfer framing as the linear baseline.
+
+### Run lineage
+
+| Experiment | Purpose | Main outcome |
+| --- | --- | --- |
+| `exp0016` | pilot MLP sweep orchestrator | launched all 6 source-trained MLP runs and built the ranked leaderboard |
+| `exp0017` | ResNet50 + MLP `256` | best ResNet MLP by `D0 val` |
+| `exp0018` | ResNet50 + MLP `512` | completed |
+| `exp0019` | ResNet50 + MLP `1024` | completed |
+| `exp0020` | CXR Foundation + MLP `256` | completed |
+| `exp0021` | CXR Foundation + MLP `512` | completed |
+| `exp0022` | CXR Foundation + MLP `1024` | best overall MLP by `D0 val` |
+
+### Main quantitative results
+
+#### Linear baseline versus best MLP per backbone
+
+| Backbone | Head | Selection experiment | D0 val AUROC | D0 test AUROC | D1 transfer AUROC | D2 transfer AUROC |
+| --- | --- | --- | ---: | ---: | ---: | ---: |
+| ResNet50 | Linear | `exp0013` | `0.7376` | `0.7306` | `0.7218` | `0.4996` |
+| ResNet50 | Best MLP (`256`) | `exp0017` | `0.7600` | `0.7590` | `0.7073` | `0.5037` |
+| Delta (`MLP - Linear`) |  |  | `+0.0224` | `+0.0284` | `-0.0145` | `+0.0041` |
+| CXR Foundation | Linear | `exp0015` | `0.8482` | `0.8455` | `0.8454` | `0.5007` |
+| CXR Foundation | Best MLP (`1024`) | `exp0022` | `0.8527` | `0.8473` | `0.8369` | `0.5029` |
+| Delta (`MLP - Linear`) |  |  | `+0.0045` | `+0.0018` | `-0.0085` | `+0.0022` |
+
+#### Full MLP sweep summary
+
+| Backbone | Hidden size | Experiment | D0 val AUROC | D0 test AUROC | D1 transfer AUROC | D2 transfer AUROC |
+| --- | ---: | --- | ---: | ---: | ---: | ---: |
+| ResNet50 | `256` | `exp0017` | `0.7600` | `0.7590` | `0.7073` | `0.5037` |
+| ResNet50 | `512` | `exp0018` | `0.7571` | `0.7560` | `0.7037` | `0.5025` |
+| ResNet50 | `1024` | `exp0019` | `0.7572` | `0.7587` | `0.7160` | `0.5063` |
+| CXR Foundation | `256` | `exp0020` | `0.8513` | `0.8468` | `0.8201` | `0.5001` |
+| CXR Foundation | `512` | `exp0021` | `0.8514` | `0.8438` | `0.8421` | `0.5056` |
+| CXR Foundation | `1024` | `exp0022` | `0.8527` | `0.8473` | `0.8369` | `0.5029` |
+
+### Key interpretation
+
+The MLP result was mixed and is useful precisely because it was run in a controlled way.
+
+- For `ResNet50`, all three MLP variants improved `NIH` source performance relative to the linear head.
+- However, all three `ResNet50` MLP variants reduced direct transfer to `CheXpert`.
+- For `CXR Foundation`, the best MLP by the official selection rule slightly improved `NIH` source performance relative to the linear head.
+- But none of the `CXR Foundation` MLP variants beat the linear head on `CheXpert` transfer.
+- For `MIMIC`, all changes were very small and remained effectively near chance overall.
+
+The most important interpretation is:
+
+- a more expressive source head can improve source fitting on `NIH`
+- but that extra source expressiveness does not automatically improve cross-domain transfer
+- in this pilot, the MLP tended to help `D0` more than `D1`
+
+### Supervisor-facing conclusion
+
+The supervisor-facing conclusion from the MLP sweep is narrower than the backbone conclusion in Section 0.
+
+- The backbone change from `ResNet50` to `CXR Foundation` clearly improved both source performance and `CheXpert` transfer.
+- The head change from `linear` to `small MLP` did not produce the same kind of transfer benefit.
+- Therefore, the practical recommendation is:
+  - keep `CXR Foundation` as the stronger source backbone
+  - keep the `linear` head as the default direct-transfer head
+  - treat the small MLP as an informative ablation showing that better source fit alone does not guarantee better domain transfer
+
+This is useful for presentation because it shows the experimental sequence was not random:
+
+1. start from a simple CNN and linear head
+2. improve the backbone while keeping the head simple
+3. separately test whether a more flexible head explains the gains
+4. conclude that the main improvement came from the chest-X-ray-specific backbone, not from simply making the classifier head larger
+
+### Recommendation
+
+For the next stage, the most defensible default is still:
+
+- `CXR Foundation` embeddings
+- `linear` source-trained multilabel head
+- adaptation experiments focused on the hardest transfer case, `NIH -> MIMIC`
+
+The MLP sweep should be kept in the write-up as a negative-but-informative control:
+
+- it improved source-domain NIH metrics
+- it did not improve the main transfer result that matters most for the story
+
+### Key artifact locations for presentation
+
+- MLP sweep orchestrator:
+  - `/workspace/experiments/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep`
+- MLP sweep leaderboard:
+  - `/workspace/experiments/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep/leaderboard.json`
+  - `/workspace/experiments/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep/leaderboard.csv`
+  - `/workspace/experiments/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep/summary.md`
+- ResNet50 MLP runs:
+  - `/workspace/experiments/exp0017__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-256__dropout-0p2`
+  - `/workspace/experiments/exp0018__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-512__dropout-0p2`
+  - `/workspace/experiments/exp0019__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-1024__dropout-0p2`
+- CXR Foundation MLP runs:
+  - `/workspace/experiments/exp0020__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-256__dropout-0p2`
+  - `/workspace/experiments/exp0021__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-512__dropout-0p2`
+  - `/workspace/experiments/exp0022__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-1024__dropout-0p2`
+- Main logs:
+  - `/workspace/logs/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep.log`
+  - `/workspace/logs/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep__exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__hidden-256.log`
+  - `/workspace/logs/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep__exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__hidden-512.log`
+  - `/workspace/logs/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep__exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__hidden-1024.log`
+  - `/workspace/logs/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep__exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__hidden-256.log`
+  - `/workspace/logs/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep__exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__hidden-512.log`
+  - `/workspace/logs/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep__exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__hidden-1024.log`
+
+## 0B. April 11, 2026 Update: Image-Only ViT LoRA Pilot
+
+### Objective
+
+After the MLP sweep, the next question was whether a lightweight parameter-efficient backbone adaptation could beat the simple frozen-image baselines without requiring full backbone finetuning.
+
+This pilot tested:
+
+- a generic vision transformer backbone
+- LoRA adapters on the attention projections
+- the same `NIH -> CheXpert/MIMIC` direct-transfer protocol as Sections 0 and 0A
+
+### Experimental protocol
+
+- Model:
+  - `google/vit-base-patch16-224-in21k`
+- Adaptation method:
+  - LoRA on attention `query` and `value` modules
+  - `r = 8`
+  - `alpha = 16`
+  - `dropout = 0.1`
+- Training setup:
+  - image-only
+  - `batch size = 256`
+  - mixed precision on CUDA
+  - max `12` epochs
+  - early stopping patience `3`
+- Data:
+  - the same pilot manifest:
+    - `/workspace/manifest_common_labels_pilot5h.csv`
+- Selection rule:
+  - train on `NIH train`
+  - early stop on `NIH val` macro AUROC
+  - evaluate on:
+    - `NIH test`
+    - `CheXpert val`
+    - `MIMIC test`
+
+### Run lineage
+
+| Experiment | Purpose | Main outcome |
+| --- | --- | --- |
+| `exp0023` | smoke run | verified end-to-end LoRA training path |
+| `exp0024` | batch fit test `64` | successful |
+| `exp0025` | batch fit test `128` | successful |
+| `exp0026` | batch fit test `256` | successful |
+| `exp0027` | full pilot LoRA run | completed; best epoch `10` |
+
+### Main quantitative results
+
+#### ViT LoRA result
+
+| Model | D0 val AUROC | D0 test AUROC | D1 transfer AUROC | D2 transfer AUROC |
+| --- | ---: | ---: | ---: | ---: |
+| ViT LoRA (`exp0027`) | `0.7938` | `0.7819` | `0.7299` | `0.4997` |
+
+#### Comparison against the existing image-only baselines
+
+| Model | D0 test AUROC | D1 transfer AUROC | D2 transfer AUROC |
+| --- | ---: | ---: | ---: |
+| ResNet50 linear (`exp0013`) | `0.7306` | `0.7218` | `0.4996` |
+| CXR Foundation linear (`exp0015`) | `0.8455` | `0.8454` | `0.5007` |
+| ViT LoRA (`exp0027`) | `0.7819` | `0.7299` | `0.4997` |
+
+#### Delta view
+
+- Compared with `ResNet50` linear:
+  - `D0 test`: `+0.0513`
+  - `D1 transfer`: `+0.0081`
+  - `D2 transfer`: `+0.0001`
+- Compared with `CXR Foundation` linear:
+  - `D0 test`: `-0.0636`
+  - `D1 transfer`: `-0.1155`
+  - `D2 transfer`: `-0.0010`
+
+### Key interpretation
+
+The LoRA pilot was useful because it tested a genuine backbone-adaptation step rather than only changing the classifier head.
+
+- The ViT LoRA model clearly beat the old `ResNet50` linear source baseline on `NIH test`.
+- It also slightly improved `CheXpert` transfer relative to `ResNet50`.
+- However, it remained far behind `CXR Foundation` on both `NIH` and `CheXpert`.
+- It did not change the `MIMIC` story; transfer stayed effectively at chance overall.
+
+So the most defensible interpretation is:
+
+- generic vision-transformer LoRA is a meaningful improvement over a basic frozen ResNet baseline
+- but chest-X-ray-specific pretraining still matters more than generic LoRA adaptation in this pilot
+- and neither approach alone solves the `NIH -> MIMIC` domain gap
+
+### Supervisor-facing conclusion
+
+This LoRA result strengthens the overall narrative rather than weakening it.
+
+- We did not assume that the gain from `CXR Foundation` came only from having a slightly more flexible head.
+- We also tested a parameter-efficient backbone adaptation path using a standard vision transformer with LoRA.
+- That LoRA path improved over the simple ResNet baseline, which is useful to show.
+- But it still did not approach the `CXR Foundation` transfer result.
+
+That supports a clear supervisor-facing message:
+
+1. simple frozen ResNet is a weak starting point
+2. generic backbone adaptation with LoRA helps somewhat
+3. chest-X-ray-specific pretrained backbones still provide the strongest direct-transfer performance
+4. the hardest remaining problem is still actual target adaptation, especially for `MIMIC`
+
+### Recommendation
+
+The best image-only default remains:
+
+- `CXR Foundation` backbone
+- `linear` source-trained head
+
+The ViT LoRA branch should be kept as a useful comparison point:
+
+- it is stronger than the old ResNet baseline
+- it is weaker than `CXR Foundation`
+- it does not solve `MIMIC`
+
+### Key artifact locations for presentation
+
+- Full pilot LoRA run:
+  - `/workspace/experiments/exp0027__domain_transfer_lora_training__vit_base_patch16_224_in21k_pilot5h`
+- Full pilot log:
+  - `/workspace/logs/exp0027__domain_transfer_lora_training__vit_base_patch16_224_in21k_pilot5h.log`
 
 All statements below are derived from the local experiment artifacts only, including the original fused-lineage artifacts (`exp0007`-`exp0012`), the April 5, 2026 rerun and retrieval-refinement artifacts (`exp0013`-`exp0026`), and the April 5, 2026 fusion-weight sweep artifacts (`exp0027`-`exp0046`). No external sources were needed for this write-up. Metric values are reproduced exactly as reported in the experiment summaries and supporting artifacts.
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Train and evaluate an image-only multilabel linear probe for D0/D1/D2 transfer."""
+"""Train and evaluate an image-only multilabel head for D0/D1/D2 transfer."""
 
 from __future__ import annotations
 
@@ -34,9 +34,11 @@ DEFAULT_WEIGHT_DECAY = 1e-4
 DEFAULT_PATIENCE = 5
 DEFAULT_SEED = 1337
 DEFAULT_DEVICE = "auto"
-DEFAULT_OPERATION_LABEL = "domain_transfer_linear_probe"
+DEFAULT_OPERATION_LABEL = "domain_transfer_head_training"
 DEFAULT_EXPERIMENT_ID_WIDTH = 4
 DEFAULT_ECE_BINS = 15
+DEFAULT_HEAD_TYPE = "linear"
+DEFAULT_MLP_DROPOUT = 0.2
 
 
 @dataclass(frozen=True)
@@ -408,6 +410,20 @@ def load_split_data(
     )
 
 
+def normalize_mlp_hidden_dims(raw_dims: list[int] | tuple[int, ...] | None) -> tuple[int, ...]:
+    if not raw_dims:
+        return tuple()
+    dims = tuple(int(dim) for dim in raw_dims)
+    for dim in dims:
+        if dim <= 0:
+            raise SystemExit("--mlp-hidden-dims values must be positive.")
+    return dims
+
+
+def format_float_slug(value: float) -> str:
+    return str(value).replace(".", "p")
+
+
 def pool_feature_row(feature: np.ndarray, pooling: str) -> np.ndarray:
     array = np.asarray(feature, dtype=np.float32)
     if array.ndim == 1:
@@ -504,6 +520,63 @@ class LinearProbe(nn.Module):
 
     def forward(self, features: torch.Tensor) -> torch.Tensor:
         return self.classifier(features)
+
+
+class SmallMLPProbe(nn.Module):
+    def __init__(self, input_dim: int, hidden_dims: tuple[int, ...], num_labels: int, dropout: float) -> None:
+        super().__init__()
+        layers: list[nn.Module] = []
+        previous_dim = input_dim
+        for hidden_dim in hidden_dims:
+            linear = nn.Linear(previous_dim, hidden_dim)
+            nn.init.xavier_uniform_(linear.weight)
+            nn.init.zeros_(linear.bias)
+            layers.extend([linear, nn.ReLU(), nn.Dropout(dropout)])
+            previous_dim = hidden_dim
+        output = nn.Linear(previous_dim, num_labels)
+        nn.init.xavier_uniform_(output.weight)
+        nn.init.zeros_(output.bias)
+        layers.append(output)
+        self.classifier = nn.Sequential(*layers)
+
+    def forward(self, features: torch.Tensor) -> torch.Tensor:
+        return self.classifier(features)
+
+
+def build_probe_model(
+    *,
+    head_type: str,
+    input_dim: int,
+    num_labels: int,
+    mlp_hidden_dims: tuple[int, ...],
+    mlp_dropout: float,
+) -> nn.Module:
+    if head_type == "linear":
+        return LinearProbe(input_dim=input_dim, num_labels=num_labels)
+    if head_type == "mlp":
+        return SmallMLPProbe(
+            input_dim=input_dim,
+            hidden_dims=mlp_hidden_dims,
+            num_labels=num_labels,
+            dropout=mlp_dropout,
+        )
+    raise SystemExit(f"Unsupported --head-type value: {head_type}")
+
+
+def describe_head(
+    *,
+    head_type: str,
+    mlp_hidden_dims: tuple[int, ...],
+    mlp_dropout: float,
+) -> str:
+    if head_type == "linear":
+        return "linear"
+    dims = "x".join(str(dim) for dim in mlp_hidden_dims)
+    return f"mlp(hidden={dims},dropout={mlp_dropout})"
+
+
+def count_parameters(model: nn.Module) -> int:
+    return int(sum(parameter.numel() for parameter in model.parameters()))
 
 
 def compute_pos_weight(labels: np.ndarray) -> torch.Tensor:
@@ -807,7 +880,7 @@ def render_recreation_report(
         )
     return "\n".join(
         [
-            "# Domain Transfer Linear Probe Recreation Report",
+            "# Domain Transfer Head Recreation Report",
             "",
             "## Scope",
             "",
@@ -816,6 +889,9 @@ def render_recreation_report(
             f"- Manifest: `{config['manifest_csv']}`",
             f"- Embedding layout: `{config['embedding_layout']}`",
             f"- Token pooling: `{config['token_pooling']}`",
+            f"- Head type: `{config['head_type']}`",
+            f"- MLP hidden dims: `{config['mlp_hidden_dims']}`",
+            f"- MLP dropout: `{config['mlp_dropout']}`",
             "",
             "## Recreation Command",
             "",
@@ -844,7 +920,7 @@ def render_recreation_report(
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "Train a frozen image-only multilabel linear probe on D0 embeddings and evaluate direct transfer to D1/D2."
+            "Train a frozen image-only multilabel linear or MLP head on D0 embeddings and evaluate direct transfer to D1/D2."
         )
     )
     parser.add_argument("--embedding-root", type=Path, required=True)
@@ -864,6 +940,15 @@ def parse_args() -> argparse.Namespace:
         help="How to pool per-image token grids before the linear head. Ignored for already 1D rows.",
     )
     parser.add_argument("--l2-normalize-features", action="store_true")
+    parser.add_argument("--head-type", choices=("linear", "mlp"), default=DEFAULT_HEAD_TYPE)
+    parser.add_argument(
+        "--mlp-hidden-dims",
+        type=int,
+        nargs="*",
+        default=None,
+        help="Hidden layer sizes for --head-type mlp. Leave unset for linear.",
+    )
+    parser.add_argument("--mlp-dropout", type=float, default=DEFAULT_MLP_DROPOUT)
     parser.add_argument("--batch-size", type=int, default=DEFAULT_BATCH_SIZE)
     parser.add_argument("--num-workers", type=int, default=DEFAULT_NUM_WORKERS)
     parser.add_argument("--epochs", type=int, default=DEFAULT_EPOCHS)
@@ -892,8 +977,15 @@ def main() -> int:
         raise SystemExit("--weight-decay must be >= 0.")
     if args.patience < 0:
         raise SystemExit("--patience must be >= 0.")
+    if not (0.0 <= float(args.mlp_dropout) < 1.0):
+        raise SystemExit("--mlp-dropout must be in [0.0, 1.0).")
     if args.max_rows_per_split is not None and args.max_rows_per_split <= 0:
         raise SystemExit("--max-rows-per-split must be positive when provided.")
+    mlp_hidden_dims = normalize_mlp_hidden_dims(args.mlp_hidden_dims)
+    if args.head_type == "linear" and mlp_hidden_dims:
+        raise SystemExit("--mlp-hidden-dims is only valid with --head-type mlp.")
+    if args.head_type == "mlp" and not mlp_hidden_dims:
+        raise SystemExit("--head-type mlp requires at least one --mlp-hidden-dims value.")
 
     seed_everything(int(args.seed))
     device = resolve_device(args.device)
@@ -941,6 +1033,9 @@ def main() -> int:
             slugify(embedding_root.name, fallback="embedding-root"),
             f"layout-{args.embedding_layout}",
             f"pool-{args.token_pooling}",
+            f"head-{args.head_type}",
+            f"hidden-{'x'.join(str(dim) for dim in mlp_hidden_dims) if mlp_hidden_dims else 'none'}",
+            f"dropout-{format_float_slug(float(args.mlp_dropout))}",
             f"dim-{input_dim}",
         ]
     )
@@ -974,11 +1069,18 @@ def main() -> int:
         if alias != "d0_train"
     }
 
-    model = LinearProbe(input_dim=input_dim, num_labels=len(label_names)).to(device)
+    model = build_probe_model(
+        head_type=args.head_type,
+        input_dim=input_dim,
+        num_labels=len(label_names),
+        mlp_hidden_dims=mlp_hidden_dims,
+        mlp_dropout=float(args.mlp_dropout),
+    ).to(device)
     pos_weight = compute_pos_weight(split_data["d0_train"].labels).to(device)
     criterion = nn.BCEWithLogitsLoss(pos_weight=pos_weight)
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
     scaler = torch.cuda.amp.GradScaler(enabled=bool(args.fp16_on_cuda and device.type == "cuda"))
+    model_num_parameters = count_parameters(model)
 
     config = {
         "argv": list(sys.argv),
@@ -992,8 +1094,17 @@ def main() -> int:
         "embedding_layout": args.embedding_layout,
         "token_pooling": args.token_pooling,
         "l2_normalize_features": bool(args.l2_normalize_features),
+        "head_type": args.head_type,
+        "head_description": describe_head(
+            head_type=args.head_type,
+            mlp_hidden_dims=mlp_hidden_dims,
+            mlp_dropout=float(args.mlp_dropout),
+        ),
+        "mlp_hidden_dims": list(mlp_hidden_dims),
+        "mlp_dropout": float(args.mlp_dropout),
         "label_names": label_names,
         "input_dim": input_dim,
+        "model_num_parameters": model_num_parameters,
         "batch_size": int(args.batch_size),
         "num_workers": int(args.num_workers),
         "epochs": int(args.epochs),
@@ -1023,7 +1134,10 @@ def main() -> int:
 
     print(f"[info] experiment_dir={experiment_dir}")
     print(f"[info] embedding_root={embedding_root}")
-    print(f"[info] input_dim={input_dim} labels={len(label_names)} device={device}")
+    print(
+        f"[info] input_dim={input_dim} labels={len(label_names)} device={device} "
+        f"head={config['head_description']} params={model_num_parameters}"
+    )
 
     best_epoch = 0
     best_summary: dict[str, Any] | None = None
@@ -1067,6 +1181,11 @@ def main() -> int:
                     "state_dict": best_state,
                     "best_summary": best_summary,
                     "label_names": label_names,
+                    "head_type": args.head_type,
+                    "mlp_hidden_dims": list(mlp_hidden_dims),
+                    "mlp_dropout": float(args.mlp_dropout),
+                    "input_dim": input_dim,
+                    "num_labels": len(label_names),
                 },
                 experiment_dir / "best.ckpt",
             )
@@ -1143,6 +1262,11 @@ def main() -> int:
             "tuned_thresholds": tuned_thresholds.tolist(),
             "token_pooling": args.token_pooling,
             "l2_normalize_features": bool(args.l2_normalize_features),
+            "head_type": args.head_type,
+            "mlp_hidden_dims": list(mlp_hidden_dims),
+            "mlp_dropout": float(args.mlp_dropout),
+            "input_dim": input_dim,
+            "num_labels": len(label_names),
         },
         experiment_dir / "best.ckpt",
     )
@@ -1159,10 +1283,15 @@ def main() -> int:
         "embedding_layout": args.embedding_layout,
         "token_pooling": args.token_pooling,
         "l2_normalize_features": bool(args.l2_normalize_features),
+        "head_type": args.head_type,
+        "head_description": config["head_description"],
+        "mlp_hidden_dims": list(mlp_hidden_dims),
+        "mlp_dropout": float(args.mlp_dropout),
         "device_resolved": str(device),
         "best_epoch": int(best_epoch),
         "input_dim": int(input_dim),
         "num_labels": len(label_names),
+        "model_num_parameters": model_num_parameters,
         "split_inputs": config["split_inputs"],
         "macro_metrics": {alias: summary["macro"] for alias, summary in metrics_by_alias.items()},
         "thresholds_path": str(experiment_dir / "d0_val_f1_thresholds.json"),
@@ -1181,6 +1310,7 @@ def main() -> int:
     print(
         "[done] "
         f"best_epoch={best_epoch} "
+        f"head={config['head_description']} "
         f"d0_val_macro_auroc={format_metric(metrics_by_alias['d0_val']['macro']['auroc'])} "
         f"d0_test_macro_auroc={format_metric(metrics_by_alias['d0_test']['macro']['auroc'])} "
         f"output_dir={experiment_dir}"

@@ -1,0 +1,135 @@
+{
+  "argv": [
+    "/workspace/scripts/15_train_domain_transfer_linear_probe.py",
+    "--embedding-root",
+    "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128",
+    "--manifest-csv",
+    "/workspace/manifest_common_labels_pilot5h.csv",
+    "--head-type",
+    "mlp",
+    "--mlp-hidden-dims",
+    "256",
+    "--mlp-dropout",
+    "0.2",
+    "--batch-size",
+    "512",
+    "--num-workers",
+    "0",
+    "--epochs",
+    "50",
+    "--lr",
+    "0.001",
+    "--weight-decay",
+    "0.0001",
+    "--patience",
+    "5",
+    "--seed",
+    "1337",
+    "--device",
+    "auto",
+    "--token-pooling",
+    "avg",
+    "--experiment-name",
+    "cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-256__dropout-0p2"
+  ],
+  "batch_size": 512,
+  "device_requested": "auto",
+  "device_resolved": "cuda",
+  "embedding_layout": "domain_split",
+  "embedding_root": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128",
+  "epochs": 50,
+  "experiment_dir": "/workspace/experiments/exp0020__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-256__dropout-0p2",
+  "experiment_id": "exp0020",
+  "experiment_name": "exp0020__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-256__dropout-0p2",
+  "experiment_number": 20,
+  "fp16_on_cuda": false,
+  "head_description": "mlp(hidden=256,dropout=0.2)",
+  "head_type": "mlp",
+  "input_dim": 768,
+  "l2_normalize_features": false,
+  "label_names": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion",
+    "pneumonia",
+    "pneumothorax"
+  ],
+  "lr": 0.001,
+  "manifest_csv": "/workspace/manifest_common_labels_pilot5h.csv",
+  "max_rows_per_split": null,
+  "mlp_dropout": 0.2,
+  "mlp_hidden_dims": [
+    256
+  ],
+  "model_num_parameters": 198663,
+  "num_workers": 0,
+  "patience": 5,
+  "run_date_utc": "2026-04-11T15:37:45.938294+00:00",
+  "seed": 1337,
+  "split_inputs": {
+    "d0_test": {
+      "domain": "d0_nih",
+      "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/test/embeddings.npy",
+      "num_rows": 2000,
+      "shape": [
+        2000,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/test/row_ids.json",
+      "split": "test"
+    },
+    "d0_train": {
+      "domain": "d0_nih",
+      "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/train/embeddings.npy",
+      "num_rows": 10000,
+      "shape": [
+        10000,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/train/row_ids.json",
+      "split": "train"
+    },
+    "d0_val": {
+      "domain": "d0_nih",
+      "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/val/embeddings.npy",
+      "num_rows": 1000,
+      "shape": [
+        1000,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/val/row_ids.json",
+      "split": "val"
+    },
+    "d1_transfer": {
+      "domain": "d1_chexpert",
+      "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d1_chexpert/val/embeddings.npy",
+      "num_rows": 234,
+      "shape": [
+        234,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d1_chexpert/val/row_ids.json",
+      "split": "val"
+    },
+    "d2_transfer": {
+      "domain": "d2_mimic",
+      "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d2_mimic/test/embeddings.npy",
+      "num_rows": 1455,
+      "shape": [
+        1455,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d2_mimic/test/row_ids.json",
+      "split": "test"
+    }
+  },
+  "token_pooling": "avg",
+  "weight_decay": 0.0001
+}

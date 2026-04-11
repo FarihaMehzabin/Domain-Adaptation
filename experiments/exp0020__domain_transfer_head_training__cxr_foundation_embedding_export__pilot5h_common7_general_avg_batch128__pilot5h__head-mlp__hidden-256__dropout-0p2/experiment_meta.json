@@ -1,0 +1,118 @@
+{
+  "best_epoch": 12,
+  "checkpoint_path": "/workspace/experiments/exp0020__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-256__dropout-0p2/best.ckpt",
+  "device_resolved": "cuda",
+  "embedding_layout": "domain_split",
+  "embedding_root": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128",
+  "experiment_dir": "/workspace/experiments/exp0020__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-256__dropout-0p2",
+  "experiment_id": "exp0020",
+  "experiment_name": "exp0020__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-256__dropout-0p2",
+  "experiment_number": 20,
+  "head_description": "mlp(hidden=256,dropout=0.2)",
+  "head_type": "mlp",
+  "input_dim": 768,
+  "l2_normalize_features": false,
+  "macro_metrics": {
+    "d0_test": {
+      "auroc": 0.8468445248890266,
+      "average_precision": 0.24284769713208232,
+      "ece": 0.23738617597770653,
+      "f1_at_0.5": 0.25094138843056046,
+      "f1_at_tuned_thresholds": 0.2842816811101259
+    },
+    "d0_val": {
+      "auroc": 0.8513392897789223,
+      "average_precision": 0.2593368032128551,
+      "ece": 0.2416966154947238,
+      "f1_at_0.5": 0.2612881481161276,
+      "f1_at_tuned_thresholds": 0.35078629142961887
+    },
+    "d1_transfer": {
+      "auroc": 0.820078201015978,
+      "average_precision": 0.5437947202446094,
+      "ece": 0.21598622043463697,
+      "f1_at_0.5": 0.4380577820353731,
+      "f1_at_tuned_thresholds": 0.2973645251445996
+    },
+    "d2_transfer": {
+      "auroc": 0.5001385358348951,
+      "average_precision": 0.12663755048495792,
+      "ece": 0.40214641992336636,
+      "f1_at_0.5": 0.1915539832239192,
+      "f1_at_tuned_thresholds": 0.13097598420211914
+    }
+  },
+  "manifest_csv": "/workspace/manifest_common_labels_pilot5h.csv",
+  "mlp_dropout": 0.2,
+  "mlp_hidden_dims": [
+    256
+  ],
+  "model_num_parameters": 198663,
+  "num_labels": 7,
+  "operation_label": "domain_transfer_head_training",
+  "run_date_utc": "2026-04-11T15:37:53.554198+00:00",
+  "split_inputs": {
+    "d0_test": {
+      "domain": "d0_nih",
+      "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/test/embeddings.npy",
+      "num_rows": 2000,
+      "shape": [
+        2000,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/test/row_ids.json",
+      "split": "test"
+    },
+    "d0_train": {
+      "domain": "d0_nih",
+      "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/train/embeddings.npy",
+      "num_rows": 10000,
+      "shape": [
+        10000,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/train/row_ids.json",
+      "split": "train"
+    },
+    "d0_val": {
+      "domain": "d0_nih",
+      "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/val/embeddings.npy",
+      "num_rows": 1000,
+      "shape": [
+        1000,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/val/row_ids.json",
+      "split": "val"
+    },
+    "d1_transfer": {
+      "domain": "d1_chexpert",
+      "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d1_chexpert/val/embeddings.npy",
+      "num_rows": 234,
+      "shape": [
+        234,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d1_chexpert/val/row_ids.json",
+      "split": "val"
+    },
+    "d2_transfer": {
+      "domain": "d2_mimic",
+      "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d2_mimic/test/embeddings.npy",
+      "num_rows": 1455,
+      "shape": [
+        1455,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d2_mimic/test/row_ids.json",
+      "split": "test"
+    }
+  },
+  "thresholds_path": "/workspace/experiments/exp0020__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-256__dropout-0p2/d0_val_f1_thresholds.json",
+  "token_pooling": "avg"
+}

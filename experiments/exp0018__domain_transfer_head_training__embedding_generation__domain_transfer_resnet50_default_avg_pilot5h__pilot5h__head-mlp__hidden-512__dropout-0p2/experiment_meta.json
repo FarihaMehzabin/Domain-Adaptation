@@ -1,0 +1,118 @@
+{
+  "best_epoch": 24,
+  "checkpoint_path": "/workspace/experiments/exp0018__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-512__dropout-0p2/best.ckpt",
+  "device_resolved": "cuda",
+  "embedding_layout": "domain_split",
+  "embedding_root": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h",
+  "experiment_dir": "/workspace/experiments/exp0018__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-512__dropout-0p2",
+  "experiment_id": "exp0018",
+  "experiment_name": "exp0018__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-512__dropout-0p2",
+  "experiment_number": 18,
+  "head_description": "mlp(hidden=512,dropout=0.2)",
+  "head_type": "mlp",
+  "input_dim": 2048,
+  "l2_normalize_features": false,
+  "macro_metrics": {
+    "d0_test": {
+      "auroc": 0.7559672455501195,
+      "average_precision": 0.14686123454241046,
+      "ece": 0.31544417221794285,
+      "f1_at_0.5": 0.1906143042252396,
+      "f1_at_tuned_thresholds": 0.20761296310444938
+    },
+    "d0_val": {
+      "auroc": 0.7570595947577063,
+      "average_precision": 0.15864332484408558,
+      "ece": 0.31422383133254933,
+      "f1_at_0.5": 0.19895615359453278,
+      "f1_at_tuned_thresholds": 0.2226004539948867
+    },
+    "d1_transfer": {
+      "auroc": 0.703680973714328,
+      "average_precision": 0.33546349902371586,
+      "ece": 0.20775261090978342,
+      "f1_at_0.5": 0.32520295701663715,
+      "f1_at_tuned_thresholds": 0.153064453296309
+    },
+    "d2_transfer": {
+      "auroc": 0.5024723209448761,
+      "average_precision": 0.13117778204304625,
+      "ece": 0.38470703556506214,
+      "f1_at_0.5": 0.19195209262653729,
+      "f1_at_tuned_thresholds": 0.1255392990742919
+    }
+  },
+  "manifest_csv": "/workspace/manifest_common_labels_pilot5h.csv",
+  "mlp_dropout": 0.2,
+  "mlp_hidden_dims": [
+    512
+  ],
+  "model_num_parameters": 1052679,
+  "num_labels": 7,
+  "operation_label": "domain_transfer_head_training",
+  "run_date_utc": "2026-04-11T15:37:30.168396+00:00",
+  "split_inputs": {
+    "d0_test": {
+      "domain": "d0_nih",
+      "embeddings_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d0_nih/test/embeddings.npy",
+      "num_rows": 2000,
+      "shape": [
+        2000,
+        2048
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d0_nih/test/row_ids.json",
+      "split": "test"
+    },
+    "d0_train": {
+      "domain": "d0_nih",
+      "embeddings_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d0_nih/train/embeddings.npy",
+      "num_rows": 10000,
+      "shape": [
+        10000,
+        2048
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d0_nih/train/row_ids.json",
+      "split": "train"
+    },
+    "d0_val": {
+      "domain": "d0_nih",
+      "embeddings_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d0_nih/val/embeddings.npy",
+      "num_rows": 1000,
+      "shape": [
+        1000,
+        2048
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d0_nih/val/row_ids.json",
+      "split": "val"
+    },
+    "d1_transfer": {
+      "domain": "d1_chexpert",
+      "embeddings_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d1_chexpert/val/embeddings.npy",
+      "num_rows": 234,
+      "shape": [
+        234,
+        2048
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d1_chexpert/val/row_ids.json",
+      "split": "val"
+    },
+    "d2_transfer": {
+      "domain": "d2_mimic",
+      "embeddings_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d2_mimic/test/embeddings.npy",
+      "num_rows": 1455,
+      "shape": [
+        1455,
+        2048
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h/d2_mimic/test/row_ids.json",
+      "split": "test"
+    }
+  },
+  "thresholds_path": "/workspace/experiments/exp0018__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-512__dropout-0p2/d0_val_f1_thresholds.json",
+  "token_pooling": "avg"
+}

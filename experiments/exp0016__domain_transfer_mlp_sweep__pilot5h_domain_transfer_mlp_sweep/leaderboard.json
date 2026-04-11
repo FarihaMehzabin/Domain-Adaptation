@@ -1,0 +1,142 @@
+{
+  "ranking_metric": {
+    "primary": "d0_val.macro.auroc",
+    "tie_break_1": "d0_val.macro.average_precision",
+    "tie_break_2": "lower_d0_val.loss"
+  },
+  "rows": [
+    {
+      "d0_test_macro_auroc": 0.8473469130293877,
+      "d0_val_loss": 0.9187749419212341,
+      "d0_val_macro_auroc": 0.8527278037045128,
+      "d0_val_macro_average_precision": 0.26310118916237585,
+      "d1_transfer_macro_auroc": 0.8368975187409712,
+      "d2_transfer_macro_auroc": 0.5029391048850221,
+      "delta_vs_linear_d0_test_auroc": 0.001849390685614405,
+      "delta_vs_linear_d1_transfer_auroc": -0.008533531949513118,
+      "delta_vs_linear_d2_transfer_auroc": 0.0022327794880104834,
+      "embedding_root": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128",
+      "experiment_name": "exp0022__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-1024__dropout-0p2",
+      "head_type": "mlp",
+      "linear_baseline_run_dir": "/workspace/experiments/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h",
+      "mlp_dropout": 0.2,
+      "mlp_hidden_dims": [
+        1024
+      ],
+      "model_num_parameters": 794631,
+      "rank": 1,
+      "run_dir": "/workspace/experiments/exp0022__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-1024__dropout-0p2"
+    },
+    {
+      "d0_test_macro_auroc": 0.8437561121367206,
+      "d0_val_loss": 0.962322382926941,
+      "d0_val_macro_auroc": 0.8513524206977101,
+      "d0_val_macro_average_precision": 0.24997897569430874,
+      "d1_transfer_macro_auroc": 0.8420822378939958,
+      "d2_transfer_macro_auroc": 0.5055662143640595,
+      "delta_vs_linear_d0_test_auroc": -0.0017414102070526516,
+      "delta_vs_linear_d1_transfer_auroc": -0.003348812796488465,
+      "delta_vs_linear_d2_transfer_auroc": 0.00485988896704781,
+      "embedding_root": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128",
+      "experiment_name": "exp0021__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-512__dropout-0p2",
+      "head_type": "mlp",
+      "linear_baseline_run_dir": "/workspace/experiments/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h",
+      "mlp_dropout": 0.2,
+      "mlp_hidden_dims": [
+        512
+      ],
+      "model_num_parameters": 397319,
+      "rank": 2,
+      "run_dir": "/workspace/experiments/exp0021__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-512__dropout-0p2"
+    },
+    {
+      "d0_test_macro_auroc": 0.8468445248890266,
+      "d0_val_loss": 0.9398492078781128,
+      "d0_val_macro_auroc": 0.8513392897789223,
+      "d0_val_macro_average_precision": 0.2593368032128551,
+      "d1_transfer_macro_auroc": 0.820078201015978,
+      "d2_transfer_macro_auroc": 0.5001385358348951,
+      "delta_vs_linear_d0_test_auroc": 0.0013470025452533285,
+      "delta_vs_linear_d1_transfer_auroc": -0.02535284967450635,
+      "delta_vs_linear_d2_transfer_auroc": -0.0005677895621165607,
+      "embedding_root": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128",
+      "experiment_name": "exp0020__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-256__dropout-0p2",
+      "head_type": "mlp",
+      "linear_baseline_run_dir": "/workspace/experiments/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h",
+      "mlp_dropout": 0.2,
+      "mlp_hidden_dims": [
+        256
+      ],
+      "model_num_parameters": 198663,
+      "rank": 3,
+      "run_dir": "/workspace/experiments/exp0020__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-256__dropout-0p2"
+    },
+    {
+      "d0_test_macro_auroc": 0.7589694103442027,
+      "d0_val_loss": 1.1648468255996705,
+      "d0_val_macro_auroc": 0.7600171274378763,
+      "d0_val_macro_average_precision": 0.1602951322179132,
+      "d1_transfer_macro_auroc": 0.7072524646401217,
+      "d2_transfer_macro_auroc": 0.5036635062008653,
+      "delta_vs_linear_d0_test_auroc": 0.028406459882638013,
+      "delta_vs_linear_d1_transfer_auroc": -0.014524899333480223,
+      "delta_vs_linear_d2_transfer_auroc": 0.00408829335025479,
+      "embedding_root": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h",
+      "experiment_name": "exp0017__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-256__dropout-0p2",
+      "head_type": "mlp",
+      "linear_baseline_run_dir": "/workspace/experiments/exp0013__domain_transfer_linear_probe__resnet50_default_avg_pilot5h",
+      "mlp_dropout": 0.2,
+      "mlp_hidden_dims": [
+        256
+      ],
+      "model_num_parameters": 526343,
+      "rank": 4,
+      "run_dir": "/workspace/experiments/exp0017__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-256__dropout-0p2"
+    },
+    {
+      "d0_test_macro_auroc": 0.7586948446346594,
+      "d0_val_loss": 1.1491508846282958,
+      "d0_val_macro_auroc": 0.7572008203634278,
+      "d0_val_macro_average_precision": 0.15902443665456992,
+      "d1_transfer_macro_auroc": 0.7159570261310524,
+      "d2_transfer_macro_auroc": 0.5062999521747062,
+      "delta_vs_linear_d0_test_auroc": 0.028131894173094696,
+      "delta_vs_linear_d1_transfer_auroc": -0.005820337842549539,
+      "delta_vs_linear_d2_transfer_auroc": 0.00672473932409573,
+      "embedding_root": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h",
+      "experiment_name": "exp0019__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-1024__dropout-0p2",
+      "head_type": "mlp",
+      "linear_baseline_run_dir": "/workspace/experiments/exp0013__domain_transfer_linear_probe__resnet50_default_avg_pilot5h",
+      "mlp_dropout": 0.2,
+      "mlp_hidden_dims": [
+        1024
+      ],
+      "model_num_parameters": 2105351,
+      "rank": 5,
+      "run_dir": "/workspace/experiments/exp0019__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-1024__dropout-0p2"
+    },
+    {
+      "d0_test_macro_auroc": 0.7559672455501195,
+      "d0_val_loss": 1.1656475458145141,
+      "d0_val_macro_auroc": 0.7570595947577063,
+      "d0_val_macro_average_precision": 0.15864332484408558,
+      "d1_transfer_macro_auroc": 0.703680973714328,
+      "d2_transfer_macro_auroc": 0.5024723209448761,
+      "delta_vs_linear_d0_test_auroc": 0.025404295088554796,
+      "delta_vs_linear_d1_transfer_auroc": -0.018096390259273898,
+      "delta_vs_linear_d2_transfer_auroc": 0.0028971080942656324,
+      "embedding_root": "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h",
+      "experiment_name": "exp0018__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-512__dropout-0p2",
+      "head_type": "mlp",
+      "linear_baseline_run_dir": "/workspace/experiments/exp0013__domain_transfer_linear_probe__resnet50_default_avg_pilot5h",
+      "mlp_dropout": 0.2,
+      "mlp_hidden_dims": [
+        512
+      ],
+      "model_num_parameters": 1052679,
+      "rank": 6,
+      "run_dir": "/workspace/experiments/exp0018__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-512__dropout-0p2"
+    }
+  ],
+  "run_date_utc": "2026-04-11T15:38:11.166967+00:00"
+}

@@ -1,0 +1,47 @@
+{
+  "argv": [
+    "/workspace/scripts/20_run_domain_transfer_mlp_sweep.py",
+    "--embedding-root",
+    "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h",
+    "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128",
+    "--hidden-dims",
+    "256",
+    "512",
+    "1024",
+    "--manifest-csv",
+    "/workspace/manifest_common_labels_pilot5h.csv",
+    "--batch-size",
+    "512",
+    "--experiment-name",
+    "pilot5h_domain_transfer_mlp_sweep"
+  ],
+  "batch_size": 512,
+  "device": "auto",
+  "embedding_roots": [
+    "/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h",
+    "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128"
+  ],
+  "epochs": 50,
+  "experiment_dir": "/workspace/experiments/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep",
+  "experiment_id": "exp0016",
+  "experiment_name": "exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep",
+  "experiment_number": 16,
+  "fp16_on_cuda": false,
+  "hidden_dims": [
+    256,
+    512,
+    1024
+  ],
+  "l2_normalize_features": false,
+  "lr": 0.001,
+  "manifest_csv": "/workspace/manifest_common_labels_pilot5h.csv",
+  "max_rows_per_split": null,
+  "mlp_dropout": 0.2,
+  "num_workers": 0,
+  "patience": 5,
+  "run_date_utc": "2026-04-11T15:36:52.053135+00:00",
+  "seed": 1337,
+  "token_pooling": "avg",
+  "trainer_script": "/workspace/scripts/15_train_domain_transfer_linear_probe.py",
+  "weight_decay": 0.0001
+}

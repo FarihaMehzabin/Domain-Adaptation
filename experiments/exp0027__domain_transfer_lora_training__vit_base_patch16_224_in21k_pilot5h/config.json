@@ -1,0 +1,87 @@
+{
+  "argv": [
+    "/workspace/scripts/21_train_image_only_lora_transfer.py",
+    "--manifest-csv",
+    "/workspace/manifest_common_labels_pilot5h.csv",
+    "--batch-size",
+    "256",
+    "--fp16-on-cuda",
+    "--epochs",
+    "12",
+    "--patience",
+    "3",
+    "--overwrite",
+    "--experiment-name",
+    "exp0027__domain_transfer_lora_training__vit_base_patch16_224_in21k_pilot5h"
+  ],
+  "batch_size": 256,
+  "cache_dir": null,
+  "classifier_dropout": 0.1,
+  "data_root": "/workspace",
+  "device_requested": "auto",
+  "device_resolved": "cuda",
+  "epochs": 12,
+  "experiment_dir": "/workspace/experiments/exp0027__domain_transfer_lora_training__vit_base_patch16_224_in21k_pilot5h",
+  "experiment_id": "exp0027",
+  "experiment_name": "exp0027__domain_transfer_lora_training__vit_base_patch16_224_in21k_pilot5h",
+  "experiment_number": 27,
+  "fp16_on_cuda": true,
+  "gradient_checkpointing": false,
+  "hidden_size": 768,
+  "label_names": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion",
+    "pneumonia",
+    "pneumothorax"
+  ],
+  "lora_alpha": 16,
+  "lora_dropout": 0.1,
+  "lora_r": 8,
+  "lora_target_modules": [
+    "query",
+    "value"
+  ],
+  "lr": 0.0002,
+  "manifest_csv": "/workspace/manifest_common_labels_pilot5h.csv",
+  "max_rows_per_split": null,
+  "model_id": "google/vit-base-patch16-224-in21k",
+  "num_workers": 4,
+  "patience": 3,
+  "pooling": "cls",
+  "revision": null,
+  "run_date_utc": "2026-04-11T16:07:05.437068+00:00",
+  "seed": 1337,
+  "split_inputs": {
+    "d0_test": {
+      "domain": "d0_nih",
+      "num_rows": 2000,
+      "split": "test"
+    },
+    "d0_train": {
+      "domain": "d0_nih",
+      "num_rows": 10000,
+      "split": "train"
+    },
+    "d0_val": {
+      "domain": "d0_nih",
+      "num_rows": 1000,
+      "split": "val"
+    },
+    "d1_transfer": {
+      "domain": "d1_chexpert",
+      "num_rows": 234,
+      "split": "val"
+    },
+    "d2_transfer": {
+      "domain": "d2_mimic",
+      "num_rows": 1455,
+      "split": "test"
+    }
+  },
+  "total_parameters": 86691079,
+  "trainable_parameters": 301831,
+  "weight_decay": 0.0001
+}

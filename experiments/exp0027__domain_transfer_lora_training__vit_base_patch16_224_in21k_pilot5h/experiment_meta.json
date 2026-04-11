@@ -1,0 +1,55 @@
+{
+  "adapter_dir": "/workspace/experiments/exp0027__domain_transfer_lora_training__vit_base_patch16_224_in21k_pilot5h/best_adapter",
+  "best_epoch": 10,
+  "checkpoint_path": "/workspace/experiments/exp0027__domain_transfer_lora_training__vit_base_patch16_224_in21k_pilot5h/best.ckpt",
+  "data_root": "/workspace",
+  "device_resolved": "cuda",
+  "experiment_dir": "/workspace/experiments/exp0027__domain_transfer_lora_training__vit_base_patch16_224_in21k_pilot5h",
+  "experiment_id": "exp0027",
+  "experiment_name": "exp0027__domain_transfer_lora_training__vit_base_patch16_224_in21k_pilot5h",
+  "experiment_number": 27,
+  "image_processor_dir": "/workspace/experiments/exp0027__domain_transfer_lora_training__vit_base_patch16_224_in21k_pilot5h/image_processor",
+  "lora_target_modules": [
+    "query",
+    "value"
+  ],
+  "macro_metrics": {
+    "d0_test": {
+      "auroc": 0.7818997000298034,
+      "average_precision": 0.1649745943154171,
+      "ece": 0.26394148854256294,
+      "f1_at_0.5": 0.20448103987596955,
+      "f1_at_tuned_thresholds": 0.21750077329337753
+    },
+    "d0_val": {
+      "auroc": 0.793841788813787,
+      "average_precision": 0.18749865928317086,
+      "ece": 0.264685387072024,
+      "f1_at_0.5": 0.22022873159153344,
+      "f1_at_tuned_thresholds": 0.2677371231970442
+    },
+    "d1_transfer": {
+      "auroc": 0.7299081275808862,
+      "average_precision": 0.3826859261186176,
+      "ece": 0.29285717400242234,
+      "f1_at_0.5": 0.3575695934529804,
+      "f1_at_tuned_thresholds": 0.2468527846710372
+    },
+    "d2_transfer": {
+      "auroc": 0.4997114098733551,
+      "average_precision": 0.12929034461856373,
+      "ece": 0.44397352538771034,
+      "f1_at_0.5": 0.19175131178142737,
+      "f1_at_tuned_thresholds": 0.1598847192949546
+    }
+  },
+  "manifest_csv": "/workspace/manifest_common_labels_pilot5h.csv",
+  "model_id": "google/vit-base-patch16-224-in21k",
+  "num_labels": 7,
+  "operation_label": "domain_transfer_lora_training",
+  "pooling": "cls",
+  "run_date_utc": "2026-04-11T16:39:00.817637+00:00",
+  "thresholds_path": "/workspace/experiments/exp0027__domain_transfer_lora_training__vit_base_patch16_224_in21k_pilot5h/d0_val_f1_thresholds.json",
+  "total_parameters": 86691079,
+  "trainable_parameters": 301831
+}
