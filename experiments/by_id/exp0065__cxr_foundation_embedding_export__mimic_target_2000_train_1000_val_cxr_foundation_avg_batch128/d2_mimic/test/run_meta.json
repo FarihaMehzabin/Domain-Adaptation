@@ -1,0 +1,26 @@
+{
+  "domain": "d2_mimic",
+  "embedding_kind": "general",
+  "embedding_shape": [
+    289,
+    768
+  ],
+  "embeddings_path": "/workspace/experiments/by_id/exp0065__cxr_foundation_embedding_export__mimic_target_2000_train_1000_val_cxr_foundation_avg_batch128/d2_mimic/test/embeddings.npy",
+  "image_paths_path": "/workspace/experiments/by_id/exp0065__cxr_foundation_embedding_export__mimic_target_2000_train_1000_val_cxr_foundation_avg_batch128/d2_mimic/test/image_paths.txt",
+  "label_names": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion",
+    "pneumonia",
+    "pneumothorax"
+  ],
+  "num_embedded_rows": 289,
+  "num_failed_rows": 1166,
+  "num_requested_rows": 1455,
+  "row_ids_path": "/workspace/experiments/by_id/exp0065__cxr_foundation_embedding_export__mimic_target_2000_train_1000_val_cxr_foundation_avg_batch128/d2_mimic/test/row_ids.json",
+  "run_date_utc": "2026-04-12T17:07:33.592080+00:00",
+  "split": "test",
+  "token_pooling": "avg"
+}

@@ -1,0 +1,1785 @@
+{
+  "batch_index": 8,
+  "embedding_shape": [
+    104,
+    768
+  ],
+  "end_row": 1000,
+  "failed_rows": [],
+  "num_embedded_rows": 104,
+  "num_failed_rows": 0,
+  "requested_rows": 104,
+  "saved_at_utc": "2026-04-12T13:35:34.496087+00:00",
+  "start_row": 897,
+  "status": "completed",
+  "successful_rows": [
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient49938/study2/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient49938__study2__view1_frontal",
+      "split": "val",
+      "study_id": "study2"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient49997/study2/view1_frontal.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient49997__study2__view1_frontal",
+      "split": "val",
+      "study_id": "study2"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient50056/study1/view1_frontal.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient50056__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient50274/study3/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "row_id": "chexpert__patient50274__study3__view1_frontal",
+      "split": "val",
+      "study_id": "study3"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient50368/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient50368__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient50436/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient50436__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient50499/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient50499__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient50552/study3/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "row_id": "chexpert__patient50552__study3__view1_frontal",
+      "split": "val",
+      "study_id": "study3"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient50566/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient50566__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient50639/study2/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient50639__study2__view1_frontal",
+      "split": "val",
+      "study_id": "study2"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient50692/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient50692__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient50824/study2/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient50824__study2__view1_frontal",
+      "split": "val",
+      "study_id": "study2"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient50965/study1/view2_lateral.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient50965__study1__view2_lateral",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient51009/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient51009__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient51130/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient51130__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient51392/study4/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient51392__study4__view1_frontal",
+      "split": "val",
+      "study_id": "study4"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient51488/study2/view1_frontal.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient51488__study2__view1_frontal",
+      "split": "val",
+      "study_id": "study2"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient51514/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient51514__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient51578/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient51578__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient51603/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient51603__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient52023/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient52023__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient52036/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient52036__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient52334/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient52334__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient52452/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient52452__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient52519/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient52519__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient52604/study2/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient52604__study2__view1_frontal",
+      "split": "val",
+      "study_id": "study2"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient52661/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient52661__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient52792/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient52792__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient52978/study2/view1_frontal.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient52978__study2__view1_frontal",
+      "split": "val",
+      "study_id": "study2"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient53183/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient53183__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient53267/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient53267__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient53450/study1/view1_frontal.jpg",
+      "label_vector": [
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient53450__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient53694/study2/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient53694__study2__view1_frontal",
+      "split": "val",
+      "study_id": "study2"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient53777/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "row_id": "chexpert__patient53777__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient53804/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "row_id": "chexpert__patient53804__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient53919/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient53919__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient53949/study1/view2_lateral.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient53949__study1__view2_lateral",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient54010/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "row_id": "chexpert__patient54010__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient54010/study2/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "row_id": "chexpert__patient54010__study2__view1_frontal",
+      "split": "val",
+      "study_id": "study2"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient54058/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient54058__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient54105/study2/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient54105__study2__view1_frontal",
+      "split": "val",
+      "study_id": "study2"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient54230/study2/view2_lateral.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient54230__study2__view2_lateral",
+      "split": "val",
+      "study_id": "study2"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient54863/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient54863__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient54988/study6/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient54988__study6__view1_frontal",
+      "split": "val",
+      "study_id": "study6"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient54998/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient54998__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient55002/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient55002__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient55016/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient55016__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient55037/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient55037__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient55185/study1/view2_frontal.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient55185__study1__view2_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient55196/study4/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient55196__study4__view1_frontal",
+      "split": "val",
+      "study_id": "study4"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient55286/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient55286__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient55717/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient55717__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient55725/study4/view1_frontal.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "row_id": "chexpert__patient55725__study4__view1_frontal",
+      "split": "val",
+      "study_id": "study4"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient56019/study3/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient56019__study3__view1_frontal",
+      "split": "val",
+      "study_id": "study3"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient56059/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient56059__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient56192/study3/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient56192__study3__view1_frontal",
+      "split": "val",
+      "study_id": "study3"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient56229/study1/view2_frontal.jpg",
+      "label_vector": [
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient56229__study1__view2_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient56547/study3/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient56547__study3__view1_frontal",
+      "split": "val",
+      "study_id": "study3"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient56681/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient56681__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient56800/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient56800__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient57062/study2/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient57062__study2__view1_frontal",
+      "split": "val",
+      "study_id": "study2"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient57131/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient57131__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient57172/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient57172__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient57174/study2/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient57174__study2__view1_frontal",
+      "split": "val",
+      "study_id": "study2"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient57184/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient57184__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient57550/study1/view1_frontal.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient57550__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient57594/study2/view1_frontal.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient57594__study2__view1_frontal",
+      "split": "val",
+      "study_id": "study2"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient57822/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient57822__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient57823/study2/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient57823__study2__view1_frontal",
+      "split": "val",
+      "study_id": "study2"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient57921/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient57921__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient57944/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "row_id": "chexpert__patient57944__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient58126/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient58126__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient58152/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient58152__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient58276/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient58276__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient58397/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient58397__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient58687/study1/view2_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient58687__study1__view2_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient58874/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient58874__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient58886/study1/view1_frontal.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient58886__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient59143/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient59143__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient59205/study3/view1_frontal.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient59205__study3__view1_frontal",
+      "split": "val",
+      "study_id": "study3"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient59594/study2/view2_lateral.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient59594__study2__view2_lateral",
+      "split": "val",
+      "study_id": "study2"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient59672/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient59672__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient59796/study2/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient59796__study2__view1_frontal",
+      "split": "val",
+      "study_id": "study2"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient59816/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient59816__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient59863/study2/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient59863__study2__view1_frontal",
+      "split": "val",
+      "study_id": "study2"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient59907/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient59907__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient60023/study1/view1_frontal.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient60023__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient60172/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient60172__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient60333/study2/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient60333__study2__view1_frontal",
+      "split": "val",
+      "study_id": "study2"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient60585/study1/view2_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient60585__study1__view2_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient61045/study1/view1_frontal.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient61045__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient61270/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient61270__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient61364/study1/view1_frontal.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient61364__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient61368/study3/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient61368__study3__view1_frontal",
+      "split": "val",
+      "study_id": "study3"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient61380/study1/view1_frontal.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient61380__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient61810/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient61810__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient61951/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient61951__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient62685/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient62685__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient63039/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "row_id": "chexpert__patient63039__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient63347/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient63347__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient63426/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient63426__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient63582/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient63582__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient63841/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient63841__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    },
+    {
+      "dataset": "chexpert",
+      "domain": "d1_chexpert",
+      "image_path": "chexpert_small/raw/train/patient64022/study1/view1_frontal.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "chexpert__patient64022__study1__view1_frontal",
+      "split": "val",
+      "study_id": "study1"
+    }
+  ]
+}

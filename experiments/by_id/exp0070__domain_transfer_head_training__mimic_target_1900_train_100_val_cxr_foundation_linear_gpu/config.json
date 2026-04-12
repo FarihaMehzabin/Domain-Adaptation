@@ -1,0 +1,96 @@
+{
+  "argv": [
+    "/workspace/scripts/15_train_domain_transfer_linear_probe.py",
+    "--embedding-root",
+    "/workspace/experiments/by_id/exp0069__cxr_foundation_embedding_export__mimic_target_1900_train_100_val_from_exp0057",
+    "--manifest-csv",
+    "/workspace/manifest/manifest_mimic_target_1900_train_100_val.csv",
+    "--split-profile",
+    "mimic_target",
+    "--head-type",
+    "linear",
+    "--device",
+    "cuda",
+    "--fp16-on-cuda",
+    "--experiment-name",
+    "mimic_target_1900_train_100_val_cxr_foundation_linear_gpu"
+  ],
+  "batch_size": 512,
+  "device_requested": "cuda",
+  "device_resolved": "cuda",
+  "embedding_layout": "domain_split",
+  "embedding_root": "/workspace/experiments/by_id/exp0069__cxr_foundation_embedding_export__mimic_target_1900_train_100_val_from_exp0057",
+  "epochs": 50,
+  "experiment_dir": "/workspace/experiments/by_id/exp0070__domain_transfer_head_training__mimic_target_1900_train_100_val_cxr_foundation_linear_gpu",
+  "experiment_id": "exp0070",
+  "experiment_name": "exp0070__domain_transfer_head_training__mimic_target_1900_train_100_val_cxr_foundation_linear_gpu",
+  "experiment_number": 70,
+  "fp16_on_cuda": true,
+  "head_description": "linear",
+  "head_type": "linear",
+  "input_dim": 768,
+  "l2_normalize_features": false,
+  "label_names": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion",
+    "pneumonia",
+    "pneumothorax"
+  ],
+  "lr": 0.001,
+  "manifest_csv": "/workspace/manifest/manifest_mimic_target_1900_train_100_val.csv",
+  "max_rows_per_split": null,
+  "mlp_dropout": 0.2,
+  "mlp_hidden_dims": [],
+  "model_num_parameters": 5383,
+  "num_workers": 0,
+  "patience": 5,
+  "primary_test_alias": "target_test",
+  "run_date_utc": "2026-04-12T17:16:36.838102+00:00",
+  "seed": 1337,
+  "selection_alias": "target_val",
+  "split_inputs": {
+    "target_test": {
+      "domain": "d2_mimic",
+      "embeddings_path": "/workspace/experiments/by_id/exp0069__cxr_foundation_embedding_export__mimic_target_1900_train_100_val_from_exp0057/d2_mimic/test/embeddings.npy",
+      "num_rows": 1455,
+      "shape": [
+        1455,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/by_id/exp0069__cxr_foundation_embedding_export__mimic_target_1900_train_100_val_from_exp0057/d2_mimic/test/row_ids.json",
+      "split": "test"
+    },
+    "target_train": {
+      "domain": "d2_mimic",
+      "embeddings_path": "/workspace/experiments/by_id/exp0069__cxr_foundation_embedding_export__mimic_target_1900_train_100_val_from_exp0057/d2_mimic/train/embeddings.npy",
+      "num_rows": 1900,
+      "shape": [
+        1900,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/by_id/exp0069__cxr_foundation_embedding_export__mimic_target_1900_train_100_val_from_exp0057/d2_mimic/train/row_ids.json",
+      "split": "train"
+    },
+    "target_val": {
+      "domain": "d2_mimic",
+      "embeddings_path": "/workspace/experiments/by_id/exp0069__cxr_foundation_embedding_export__mimic_target_1900_train_100_val_from_exp0057/d2_mimic/val/embeddings.npy",
+      "num_rows": 100,
+      "shape": [
+        100,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/by_id/exp0069__cxr_foundation_embedding_export__mimic_target_1900_train_100_val_from_exp0057/d2_mimic/val/row_ids.json",
+      "split": "val"
+    }
+  },
+  "split_profile": "mimic_target",
+  "token_pooling": "avg",
+  "train_alias": "target_train",
+  "weight_decay": 0.0001
+}

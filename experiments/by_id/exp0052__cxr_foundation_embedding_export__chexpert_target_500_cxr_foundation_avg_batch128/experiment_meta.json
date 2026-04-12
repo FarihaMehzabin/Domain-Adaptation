@@ -1,0 +1,104 @@
+{
+  "data_root": "/workspace",
+  "embedding_index_csv": "/workspace/experiments/by_id/exp0052__cxr_foundation_embedding_export__chexpert_target_500_cxr_foundation_avg_batch128/embedding_index.csv",
+  "embedding_kind": "general",
+  "experiment_dir": "/workspace/experiments/by_id/exp0052__cxr_foundation_embedding_export__chexpert_target_500_cxr_foundation_avg_batch128",
+  "experiment_id": "exp0052",
+  "experiment_name": "exp0052__cxr_foundation_embedding_export__chexpert_target_500_cxr_foundation_avg_batch128",
+  "experiment_number": 52,
+  "label_names": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion",
+    "pneumonia",
+    "pneumothorax"
+  ],
+  "label_names_json": "/workspace/experiments/by_id/exp0052__cxr_foundation_embedding_export__chexpert_target_500_cxr_foundation_avg_batch128/label_names.json",
+  "manifest_csv": "/workspace/manifest_chexpert_target_500.csv",
+  "model_dir": "/workspace/.cache/cxr_foundation",
+  "operation_label": "cxr_foundation_embedding_export",
+  "run_date_utc": "2026-04-12T13:00:35.748177+00:00",
+  "split_outputs": {
+    "d1_chexpert/test": {
+      "domain": "d1_chexpert",
+      "embedding_kind": "general",
+      "embedding_shape": [
+        234,
+        768
+      ],
+      "embeddings_path": "/workspace/experiments/by_id/exp0052__cxr_foundation_embedding_export__chexpert_target_500_cxr_foundation_avg_batch128/d1_chexpert/test/embeddings.npy",
+      "image_paths_path": "/workspace/experiments/by_id/exp0052__cxr_foundation_embedding_export__chexpert_target_500_cxr_foundation_avg_batch128/d1_chexpert/test/image_paths.txt",
+      "label_names": [
+        "atelectasis",
+        "cardiomegaly",
+        "consolidation",
+        "edema",
+        "pleural_effusion",
+        "pneumonia",
+        "pneumothorax"
+      ],
+      "num_embedded_rows": 234,
+      "num_failed_rows": 0,
+      "num_requested_rows": 234,
+      "row_ids_path": "/workspace/experiments/by_id/exp0052__cxr_foundation_embedding_export__chexpert_target_500_cxr_foundation_avg_batch128/d1_chexpert/test/row_ids.json",
+      "run_date_utc": "2026-04-12T12:45:38.583408+00:00",
+      "split": "test",
+      "token_pooling": "avg"
+    },
+    "d1_chexpert/train": {
+      "domain": "d1_chexpert",
+      "embedding_kind": "general",
+      "embedding_shape": [
+        500,
+        768
+      ],
+      "embeddings_path": "/workspace/experiments/by_id/exp0052__cxr_foundation_embedding_export__chexpert_target_500_cxr_foundation_avg_batch128/d1_chexpert/train/embeddings.npy",
+      "image_paths_path": "/workspace/experiments/by_id/exp0052__cxr_foundation_embedding_export__chexpert_target_500_cxr_foundation_avg_batch128/d1_chexpert/train/image_paths.txt",
+      "label_names": [
+        "atelectasis",
+        "cardiomegaly",
+        "consolidation",
+        "edema",
+        "pleural_effusion",
+        "pneumonia",
+        "pneumothorax"
+      ],
+      "num_embedded_rows": 500,
+      "num_failed_rows": 0,
+      "num_requested_rows": 500,
+      "row_ids_path": "/workspace/experiments/by_id/exp0052__cxr_foundation_embedding_export__chexpert_target_500_cxr_foundation_avg_batch128/d1_chexpert/train/row_ids.json",
+      "run_date_utc": "2026-04-12T12:53:06.738835+00:00",
+      "split": "train",
+      "token_pooling": "avg"
+    },
+    "d1_chexpert/val": {
+      "domain": "d1_chexpert",
+      "embedding_kind": "general",
+      "embedding_shape": [
+        500,
+        768
+      ],
+      "embeddings_path": "/workspace/experiments/by_id/exp0052__cxr_foundation_embedding_export__chexpert_target_500_cxr_foundation_avg_batch128/d1_chexpert/val/embeddings.npy",
+      "image_paths_path": "/workspace/experiments/by_id/exp0052__cxr_foundation_embedding_export__chexpert_target_500_cxr_foundation_avg_batch128/d1_chexpert/val/image_paths.txt",
+      "label_names": [
+        "atelectasis",
+        "cardiomegaly",
+        "consolidation",
+        "edema",
+        "pleural_effusion",
+        "pneumonia",
+        "pneumothorax"
+      ],
+      "num_embedded_rows": 500,
+      "num_failed_rows": 0,
+      "num_requested_rows": 500,
+      "row_ids_path": "/workspace/experiments/by_id/exp0052__cxr_foundation_embedding_export__chexpert_target_500_cxr_foundation_avg_batch128/d1_chexpert/val/row_ids.json",
+      "run_date_utc": "2026-04-12T13:00:35.716186+00:00",
+      "split": "val",
+      "token_pooling": "avg"
+    }
+  },
+  "token_pooling": "avg"
+}

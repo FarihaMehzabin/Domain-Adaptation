@@ -212,22 +212,22 @@ That is a useful outcome to report because it shows that the `MIMIC` failure mod
 ### 0E.6 Artifact locations for the missing follow-up runs
 
 - corrected reruns:
-  - `/workspace/experiments/active/exp0062__domain_transfer_head_training__mimic_target_1000_cxr_foundation_linear_gpu`
-  - `/workspace/experiments/active/exp0063__domain_transfer_head_training__mimic_target_500_cxr_foundation_linear_gpu`
-  - `/workspace/experiments/active/exp0064__domain_transfer_head_training__mimic_target_250_cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0062__domain_transfer_head_training__mimic_target_1000_cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0063__domain_transfer_head_training__mimic_target_500_cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0064__domain_transfer_head_training__mimic_target_250_cxr_foundation_linear_gpu`
 - larger-split embedding roots:
-  - `/workspace/experiments/active/exp0065__cxr_foundation_embedding_export__mimic_target_2000_train_1000_val_cxr_foundation_avg_batch128`
-  - `/workspace/experiments/active/exp0066__cxr_foundation_embedding_export__mimic_target_1500_train_500_val_from_exp0057`
-  - `/workspace/experiments/active/exp0067__cxr_foundation_embedding_export__mimic_target_1800_train_200_val_from_exp0057`
-  - `/workspace/experiments/active/exp0069__cxr_foundation_embedding_export__mimic_target_1900_train_100_val_from_exp0057`
+  - `/workspace/experiments/by_id/exp0065__cxr_foundation_embedding_export__mimic_target_2000_train_1000_val_cxr_foundation_avg_batch128`
+  - `/workspace/experiments/by_id/exp0066__cxr_foundation_embedding_export__mimic_target_1500_train_500_val_from_exp0057`
+  - `/workspace/experiments/by_id/exp0067__cxr_foundation_embedding_export__mimic_target_1800_train_200_val_from_exp0057`
+  - `/workspace/experiments/by_id/exp0069__cxr_foundation_embedding_export__mimic_target_1900_train_100_val_from_exp0057`
 - larger-split and frozen-head probe runs:
-  - `/workspace/experiments/active/exp0068__domain_transfer_head_training__mimic_target_1500_train_500_val_cxr_foundation_linear_gpu`
-  - `/workspace/experiments/active/exp0068__domain_transfer_head_training__mimic_target_1800_train_200_val_cxr_foundation_linear_gpu`
-  - `/workspace/experiments/active/exp0070__domain_transfer_head_training__mimic_target_1900_train_100_val_cxr_foundation_linear_gpu`
-  - `/workspace/experiments/active/exp0071__domain_transfer_head_training__mimic_target_1900_train_100_val_cxr_foundation_mlp256_gpu`
-  - `/workspace/experiments/active/exp0072__domain_transfer_head_training__mimic_target_1900_train_100_val_cxr_foundation_mlp512_gpu`
+  - `/workspace/experiments/by_id/exp0068__domain_transfer_head_training__mimic_target_1500_train_500_val_cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0068__domain_transfer_head_training__mimic_target_1800_train_200_val_cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0070__domain_transfer_head_training__mimic_target_1900_train_100_val_cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0071__domain_transfer_head_training__mimic_target_1900_train_100_val_cxr_foundation_mlp256_gpu`
+  - `/workspace/experiments/by_id/exp0072__domain_transfer_head_training__mimic_target_1900_train_100_val_cxr_foundation_mlp512_gpu`
 - backbone-adaptation fallback:
-  - `/workspace/experiments/active/exp0073__domain_transfer_partial_finetune_training__mimic_target_1900_train_100_val_vit_b16_lastblock_gpu`
+  - `/workspace/experiments/by_id/exp0073__domain_transfer_partial_finetune_training__mimic_target_1900_train_100_val_vit_b16_lastblock_gpu`
 - supporting manifests and feasibility artifacts:
   - `/workspace/manifest/manifest_mimic_target_1500_train_500_val.csv`
   - `/workspace/manifest/manifest_mimic_target_1800_train_200_val.csv`
@@ -355,9 +355,9 @@ The important supervisor-facing conclusion is:
   - `/workspace/manifest/manifest_mimic_target_500_nested.csv`
   - `/workspace/manifest/manifest_mimic_target_250_nested.csv`
 - target-run experiment directories:
-  - `/workspace/experiments/active/exp0060__domain_transfer_head_training__mimic_target_1000_cxr_foundation_linear_gpu`
-  - `/workspace/experiments/active/exp0061__domain_transfer_head_training__mimic_target_500_cxr_foundation_linear_gpu`
-  - `/workspace/experiments/active/exp0061__domain_transfer_head_training__mimic_target_250_cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0060__domain_transfer_head_training__mimic_target_1000_cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0061__domain_transfer_head_training__mimic_target_500_cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0061__domain_transfer_head_training__mimic_target_250_cxr_foundation_linear_gpu`
 
 ## 0C. April 12, 2026 Update: Few-Shot CheXpert Target-Only Linear Probes on CXR Foundation
 
@@ -484,9 +484,9 @@ The defensible conclusion is:
   - `/workspace/manifest/manifest_chexpert_target_500.csv`
   - `/workspace/manifest/manifest_chexpert_target_1000.csv`
 - target-run experiment directories:
-  - `/workspace/experiments/active/exp0051__domain_transfer_head_training__chexpert_target_250_cxr_foundation_linear_gpu`
-  - `/workspace/experiments/active/exp0053__domain_transfer_head_training__chexpert_target_500_cxr_foundation_linear_gpu`
-  - `/workspace/experiments/active/exp0055__domain_transfer_head_training__chexpert_target_1000_cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0051__domain_transfer_head_training__chexpert_target_250_cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0053__domain_transfer_head_training__chexpert_target_500_cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0055__domain_transfer_head_training__chexpert_target_1000_cxr_foundation_linear_gpu`
 
 ## 0B. April 12, 2026 Update: Retrieval-Augmented Domain-Transfer Comparison on CXR Foundation vs ResNet50
 
@@ -576,7 +576,7 @@ The selection rule was the same in both branches:
   - `exp0031__domain_transfer_probability_mixing_target_evaluation__domain_transfer_probability_mixing_selection__cxr_foundation_general_avg_pilot5h_d0_val__d1_transfer`
   - `exp0031__domain_transfer_probability_mixing_target_evaluation__domain_transfer_probability_mixing_selection__cxr_foundation_general_avg_pilot5h_d0_val__d2_transfer`
 - compact branch summary:
-  - `/workspace/experiments/complete/exp0039__domain_transfer_rag_summary__cxr_foundation_general_avg_pilot5h/summary.md`
+  - `/workspace/experiments/by_id/exp0039__domain_transfer_rag_summary__cxr_foundation_general_avg_pilot5h/summary.md`
 
 #### ResNet50 retrieval branch
 
@@ -595,7 +595,7 @@ The selection rule was the same in both branches:
   - `exp0045__domain_transfer_probability_mixing_target_evaluation__resnet50_default_avg_pilot5h_d1_transfer`
   - `exp0046__domain_transfer_probability_mixing_target_evaluation__resnet50_default_avg_pilot5h_d2_transfer`
 - compact cross-backbone summary:
-  - `/workspace/experiments/complete/exp0047__resnet50_vs_cxr_foundation_rag_comparison__pilot5h/summary.md`
+  - `/workspace/experiments/by_id/exp0047__resnet50_vs_cxr_foundation_rag_comparison__pilot5h/summary.md`
 
 ### Selected hyperparameters
 
@@ -723,9 +723,9 @@ One defensible presentation storyline is:
 - Primary synthesis file:
   - `/workspace/SUPERVISOR_RESULTS_SYNTHESIS.md`
 - CXR Foundation RAG branch summary:
-  - `/workspace/experiments/complete/exp0039__domain_transfer_rag_summary__cxr_foundation_general_avg_pilot5h/summary.md`
+  - `/workspace/experiments/by_id/exp0039__domain_transfer_rag_summary__cxr_foundation_general_avg_pilot5h/summary.md`
 - ResNet50 vs CXR Foundation RAG comparison:
-  - `/workspace/experiments/complete/exp0047__resnet50_vs_cxr_foundation_rag_comparison__pilot5h/summary.md`
+  - `/workspace/experiments/by_id/exp0047__resnet50_vs_cxr_foundation_rag_comparison__pilot5h/summary.md`
 
 ## 0. April 11, 2026 Update: Pilot Image-Only Domain-Transfer Comparison
 
@@ -903,13 +903,13 @@ Based on this pilot, the most defensible next move is:
 - Pilot manifest:
   - `/workspace/manifest/manifest_common_labels_pilot5h.csv`
 - ResNet50 embedding export:
-  - `/workspace/experiments/complete/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h`
+  - `/workspace/experiments/by_id/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h`
 - ResNet50 transfer evaluation:
-  - `/workspace/experiments/complete/exp0013__domain_transfer_linear_probe__resnet50_default_avg_pilot5h`
+  - `/workspace/experiments/by_id/exp0013__domain_transfer_linear_probe__resnet50_default_avg_pilot5h`
 - CXR Foundation embedding export:
-  - `/workspace/experiments/complete/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128`
+  - `/workspace/experiments/by_id/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128`
 - CXR Foundation transfer evaluation:
-  - `/workspace/experiments/complete/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h`
+  - `/workspace/experiments/by_id/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h`
 - Main logs:
   - `/workspace/logs/exp0011__torch_image_batch_sweep__pilot5h_d0_train_resnet50.log`
   - `/workspace/logs/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h.log`
@@ -942,9 +942,9 @@ The specific comparison was:
     - `/workspace/manifest/manifest_common_labels_pilot5h.csv`
 - Embedding roots:
   - ResNet50 pilot embeddings:
-    - `/workspace/experiments/complete/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h`
+    - `/workspace/experiments/by_id/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h`
   - CXR Foundation pilot embeddings:
-    - `/workspace/experiments/complete/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128`
+    - `/workspace/experiments/by_id/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128`
 - Head family:
   - one-hidden-layer MLP
   - `ReLU`
@@ -1053,19 +1053,19 @@ The MLP sweep should be kept in the write-up as a negative-but-informative contr
 ### Key artifact locations for presentation
 
 - MLP sweep orchestrator:
-  - `/workspace/experiments/complete/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep`
+  - `/workspace/experiments/by_id/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep`
 - MLP sweep leaderboard:
-  - `/workspace/experiments/complete/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep/leaderboard.json`
-  - `/workspace/experiments/complete/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep/leaderboard.csv`
-  - `/workspace/experiments/complete/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep/summary.md`
+  - `/workspace/experiments/by_id/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep/leaderboard.json`
+  - `/workspace/experiments/by_id/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep/leaderboard.csv`
+  - `/workspace/experiments/by_id/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep/summary.md`
 - ResNet50 MLP runs:
-  - `/workspace/experiments/complete/exp0017__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-256__dropout-0p2`
-  - `/workspace/experiments/complete/exp0018__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-512__dropout-0p2`
-  - `/workspace/experiments/complete/exp0019__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-1024__dropout-0p2`
+  - `/workspace/experiments/by_id/exp0017__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-256__dropout-0p2`
+  - `/workspace/experiments/by_id/exp0018__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-512__dropout-0p2`
+  - `/workspace/experiments/by_id/exp0019__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-1024__dropout-0p2`
 - CXR Foundation MLP runs:
-  - `/workspace/experiments/complete/exp0020__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-256__dropout-0p2`
-  - `/workspace/experiments/complete/exp0021__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-512__dropout-0p2`
-  - `/workspace/experiments/complete/exp0022__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-1024__dropout-0p2`
+  - `/workspace/experiments/by_id/exp0020__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-256__dropout-0p2`
+  - `/workspace/experiments/by_id/exp0021__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-512__dropout-0p2`
+  - `/workspace/experiments/by_id/exp0022__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-1024__dropout-0p2`
 - Main logs:
   - `/workspace/logs/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep.log`
   - `/workspace/logs/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep__exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__hidden-256.log`
@@ -1197,7 +1197,7 @@ The ViT LoRA branch should be kept as a useful comparison point:
 ### Key artifact locations for presentation
 
 - Full pilot LoRA run:
-  - `/workspace/experiments/complete/exp0027__domain_transfer_lora_training__vit_base_patch16_224_in21k_pilot5h`
+  - `/workspace/experiments/by_id/exp0027__domain_transfer_lora_training__vit_base_patch16_224_in21k_pilot5h`
 - Full pilot log:
   - `/workspace/logs/exp0027__domain_transfer_lora_training__vit_base_patch16_224_in21k_pilot5h.log`
 

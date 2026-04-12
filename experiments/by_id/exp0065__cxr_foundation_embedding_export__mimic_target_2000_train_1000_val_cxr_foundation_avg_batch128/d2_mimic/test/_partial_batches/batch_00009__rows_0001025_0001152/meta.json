@@ -1,0 +1,910 @@
+{
+  "batch_index": 9,
+  "embedding_shape": null,
+  "end_row": 1152,
+  "failed_rows": [
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57086484.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57086484.jpg, /workspace/data/mimic_cxr/raw/test/s57086484.jpg",
+      "image_path": "mimic_cxr/raw/test/s57086484.jpg",
+      "row_id": "mimic_cxr__s57086484",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57089146.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57089146.jpg, /workspace/data/mimic_cxr/raw/test/s57089146.jpg",
+      "image_path": "mimic_cxr/raw/test/s57089146.jpg",
+      "row_id": "mimic_cxr__s57089146",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57106816.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57106816.jpg, /workspace/data/mimic_cxr/raw/test/s57106816.jpg",
+      "image_path": "mimic_cxr/raw/test/s57106816.jpg",
+      "row_id": "mimic_cxr__s57106816",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57120453.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57120453.jpg, /workspace/data/mimic_cxr/raw/test/s57120453.jpg",
+      "image_path": "mimic_cxr/raw/test/s57120453.jpg",
+      "row_id": "mimic_cxr__s57120453",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57123927.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57123927.jpg, /workspace/data/mimic_cxr/raw/test/s57123927.jpg",
+      "image_path": "mimic_cxr/raw/test/s57123927.jpg",
+      "row_id": "mimic_cxr__s57123927",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57124801.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57124801.jpg, /workspace/data/mimic_cxr/raw/test/s57124801.jpg",
+      "image_path": "mimic_cxr/raw/test/s57124801.jpg",
+      "row_id": "mimic_cxr__s57124801",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57130836.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57130836.jpg, /workspace/data/mimic_cxr/raw/test/s57130836.jpg",
+      "image_path": "mimic_cxr/raw/test/s57130836.jpg",
+      "row_id": "mimic_cxr__s57130836",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57134673.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57134673.jpg, /workspace/data/mimic_cxr/raw/test/s57134673.jpg",
+      "image_path": "mimic_cxr/raw/test/s57134673.jpg",
+      "row_id": "mimic_cxr__s57134673",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57135264.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57135264.jpg, /workspace/data/mimic_cxr/raw/test/s57135264.jpg",
+      "image_path": "mimic_cxr/raw/test/s57135264.jpg",
+      "row_id": "mimic_cxr__s57135264",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57137730.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57137730.jpg, /workspace/data/mimic_cxr/raw/test/s57137730.jpg",
+      "image_path": "mimic_cxr/raw/test/s57137730.jpg",
+      "row_id": "mimic_cxr__s57137730",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57142742.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57142742.jpg, /workspace/data/mimic_cxr/raw/test/s57142742.jpg",
+      "image_path": "mimic_cxr/raw/test/s57142742.jpg",
+      "row_id": "mimic_cxr__s57142742",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57146595.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57146595.jpg, /workspace/data/mimic_cxr/raw/test/s57146595.jpg",
+      "image_path": "mimic_cxr/raw/test/s57146595.jpg",
+      "row_id": "mimic_cxr__s57146595",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57149976.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57149976.jpg, /workspace/data/mimic_cxr/raw/test/s57149976.jpg",
+      "image_path": "mimic_cxr/raw/test/s57149976.jpg",
+      "row_id": "mimic_cxr__s57149976",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57165304.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57165304.jpg, /workspace/data/mimic_cxr/raw/test/s57165304.jpg",
+      "image_path": "mimic_cxr/raw/test/s57165304.jpg",
+      "row_id": "mimic_cxr__s57165304",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57169558.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57169558.jpg, /workspace/data/mimic_cxr/raw/test/s57169558.jpg",
+      "image_path": "mimic_cxr/raw/test/s57169558.jpg",
+      "row_id": "mimic_cxr__s57169558",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57171514.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57171514.jpg, /workspace/data/mimic_cxr/raw/test/s57171514.jpg",
+      "image_path": "mimic_cxr/raw/test/s57171514.jpg",
+      "row_id": "mimic_cxr__s57171514",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57188350.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57188350.jpg, /workspace/data/mimic_cxr/raw/test/s57188350.jpg",
+      "image_path": "mimic_cxr/raw/test/s57188350.jpg",
+      "row_id": "mimic_cxr__s57188350",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57192814.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57192814.jpg, /workspace/data/mimic_cxr/raw/test/s57192814.jpg",
+      "image_path": "mimic_cxr/raw/test/s57192814.jpg",
+      "row_id": "mimic_cxr__s57192814",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57198058.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57198058.jpg, /workspace/data/mimic_cxr/raw/test/s57198058.jpg",
+      "image_path": "mimic_cxr/raw/test/s57198058.jpg",
+      "row_id": "mimic_cxr__s57198058",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57199757.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57199757.jpg, /workspace/data/mimic_cxr/raw/test/s57199757.jpg",
+      "image_path": "mimic_cxr/raw/test/s57199757.jpg",
+      "row_id": "mimic_cxr__s57199757",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57204056.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57204056.jpg, /workspace/data/mimic_cxr/raw/test/s57204056.jpg",
+      "image_path": "mimic_cxr/raw/test/s57204056.jpg",
+      "row_id": "mimic_cxr__s57204056",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57204814.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57204814.jpg, /workspace/data/mimic_cxr/raw/test/s57204814.jpg",
+      "image_path": "mimic_cxr/raw/test/s57204814.jpg",
+      "row_id": "mimic_cxr__s57204814",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57210258.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57210258.jpg, /workspace/data/mimic_cxr/raw/test/s57210258.jpg",
+      "image_path": "mimic_cxr/raw/test/s57210258.jpg",
+      "row_id": "mimic_cxr__s57210258",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57211901.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57211901.jpg, /workspace/data/mimic_cxr/raw/test/s57211901.jpg",
+      "image_path": "mimic_cxr/raw/test/s57211901.jpg",
+      "row_id": "mimic_cxr__s57211901",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57214202.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57214202.jpg, /workspace/data/mimic_cxr/raw/test/s57214202.jpg",
+      "image_path": "mimic_cxr/raw/test/s57214202.jpg",
+      "row_id": "mimic_cxr__s57214202",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57221524.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57221524.jpg, /workspace/data/mimic_cxr/raw/test/s57221524.jpg",
+      "image_path": "mimic_cxr/raw/test/s57221524.jpg",
+      "row_id": "mimic_cxr__s57221524",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57231469.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57231469.jpg, /workspace/data/mimic_cxr/raw/test/s57231469.jpg",
+      "image_path": "mimic_cxr/raw/test/s57231469.jpg",
+      "row_id": "mimic_cxr__s57231469",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57241942.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57241942.jpg, /workspace/data/mimic_cxr/raw/test/s57241942.jpg",
+      "image_path": "mimic_cxr/raw/test/s57241942.jpg",
+      "row_id": "mimic_cxr__s57241942",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57243655.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57243655.jpg, /workspace/data/mimic_cxr/raw/test/s57243655.jpg",
+      "image_path": "mimic_cxr/raw/test/s57243655.jpg",
+      "row_id": "mimic_cxr__s57243655",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57255382.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57255382.jpg, /workspace/data/mimic_cxr/raw/test/s57255382.jpg",
+      "image_path": "mimic_cxr/raw/test/s57255382.jpg",
+      "row_id": "mimic_cxr__s57255382",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57259586.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57259586.jpg, /workspace/data/mimic_cxr/raw/test/s57259586.jpg",
+      "image_path": "mimic_cxr/raw/test/s57259586.jpg",
+      "row_id": "mimic_cxr__s57259586",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57261102.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57261102.jpg, /workspace/data/mimic_cxr/raw/test/s57261102.jpg",
+      "image_path": "mimic_cxr/raw/test/s57261102.jpg",
+      "row_id": "mimic_cxr__s57261102",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57268374.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57268374.jpg, /workspace/data/mimic_cxr/raw/test/s57268374.jpg",
+      "image_path": "mimic_cxr/raw/test/s57268374.jpg",
+      "row_id": "mimic_cxr__s57268374",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57274207.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57274207.jpg, /workspace/data/mimic_cxr/raw/test/s57274207.jpg",
+      "image_path": "mimic_cxr/raw/test/s57274207.jpg",
+      "row_id": "mimic_cxr__s57274207",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57279525.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57279525.jpg, /workspace/data/mimic_cxr/raw/test/s57279525.jpg",
+      "image_path": "mimic_cxr/raw/test/s57279525.jpg",
+      "row_id": "mimic_cxr__s57279525",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57281227.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57281227.jpg, /workspace/data/mimic_cxr/raw/test/s57281227.jpg",
+      "image_path": "mimic_cxr/raw/test/s57281227.jpg",
+      "row_id": "mimic_cxr__s57281227",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57282583.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57282583.jpg, /workspace/data/mimic_cxr/raw/test/s57282583.jpg",
+      "image_path": "mimic_cxr/raw/test/s57282583.jpg",
+      "row_id": "mimic_cxr__s57282583",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57293911.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57293911.jpg, /workspace/data/mimic_cxr/raw/test/s57293911.jpg",
+      "image_path": "mimic_cxr/raw/test/s57293911.jpg",
+      "row_id": "mimic_cxr__s57293911",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57304510.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57304510.jpg, /workspace/data/mimic_cxr/raw/test/s57304510.jpg",
+      "image_path": "mimic_cxr/raw/test/s57304510.jpg",
+      "row_id": "mimic_cxr__s57304510",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57304735.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57304735.jpg, /workspace/data/mimic_cxr/raw/test/s57304735.jpg",
+      "image_path": "mimic_cxr/raw/test/s57304735.jpg",
+      "row_id": "mimic_cxr__s57304735",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57307723.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57307723.jpg, /workspace/data/mimic_cxr/raw/test/s57307723.jpg",
+      "image_path": "mimic_cxr/raw/test/s57307723.jpg",
+      "row_id": "mimic_cxr__s57307723",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57331547.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57331547.jpg, /workspace/data/mimic_cxr/raw/test/s57331547.jpg",
+      "image_path": "mimic_cxr/raw/test/s57331547.jpg",
+      "row_id": "mimic_cxr__s57331547",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57339166.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57339166.jpg, /workspace/data/mimic_cxr/raw/test/s57339166.jpg",
+      "image_path": "mimic_cxr/raw/test/s57339166.jpg",
+      "row_id": "mimic_cxr__s57339166",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57345846.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57345846.jpg, /workspace/data/mimic_cxr/raw/test/s57345846.jpg",
+      "image_path": "mimic_cxr/raw/test/s57345846.jpg",
+      "row_id": "mimic_cxr__s57345846",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57356552.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57356552.jpg, /workspace/data/mimic_cxr/raw/test/s57356552.jpg",
+      "image_path": "mimic_cxr/raw/test/s57356552.jpg",
+      "row_id": "mimic_cxr__s57356552",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57361288.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57361288.jpg, /workspace/data/mimic_cxr/raw/test/s57361288.jpg",
+      "image_path": "mimic_cxr/raw/test/s57361288.jpg",
+      "row_id": "mimic_cxr__s57361288",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57365217.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57365217.jpg, /workspace/data/mimic_cxr/raw/test/s57365217.jpg",
+      "image_path": "mimic_cxr/raw/test/s57365217.jpg",
+      "row_id": "mimic_cxr__s57365217",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57372388.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57372388.jpg, /workspace/data/mimic_cxr/raw/test/s57372388.jpg",
+      "image_path": "mimic_cxr/raw/test/s57372388.jpg",
+      "row_id": "mimic_cxr__s57372388",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57373953.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57373953.jpg, /workspace/data/mimic_cxr/raw/test/s57373953.jpg",
+      "image_path": "mimic_cxr/raw/test/s57373953.jpg",
+      "row_id": "mimic_cxr__s57373953",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57381701.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57381701.jpg, /workspace/data/mimic_cxr/raw/test/s57381701.jpg",
+      "image_path": "mimic_cxr/raw/test/s57381701.jpg",
+      "row_id": "mimic_cxr__s57381701",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57426287.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57426287.jpg, /workspace/data/mimic_cxr/raw/test/s57426287.jpg",
+      "image_path": "mimic_cxr/raw/test/s57426287.jpg",
+      "row_id": "mimic_cxr__s57426287",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57426879.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57426879.jpg, /workspace/data/mimic_cxr/raw/test/s57426879.jpg",
+      "image_path": "mimic_cxr/raw/test/s57426879.jpg",
+      "row_id": "mimic_cxr__s57426879",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57432047.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57432047.jpg, /workspace/data/mimic_cxr/raw/test/s57432047.jpg",
+      "image_path": "mimic_cxr/raw/test/s57432047.jpg",
+      "row_id": "mimic_cxr__s57432047",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57432088.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57432088.jpg, /workspace/data/mimic_cxr/raw/test/s57432088.jpg",
+      "image_path": "mimic_cxr/raw/test/s57432088.jpg",
+      "row_id": "mimic_cxr__s57432088",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57433211.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57433211.jpg, /workspace/data/mimic_cxr/raw/test/s57433211.jpg",
+      "image_path": "mimic_cxr/raw/test/s57433211.jpg",
+      "row_id": "mimic_cxr__s57433211",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57439770.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57439770.jpg, /workspace/data/mimic_cxr/raw/test/s57439770.jpg",
+      "image_path": "mimic_cxr/raw/test/s57439770.jpg",
+      "row_id": "mimic_cxr__s57439770",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57440750.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57440750.jpg, /workspace/data/mimic_cxr/raw/test/s57440750.jpg",
+      "image_path": "mimic_cxr/raw/test/s57440750.jpg",
+      "row_id": "mimic_cxr__s57440750",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57447816.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57447816.jpg, /workspace/data/mimic_cxr/raw/test/s57447816.jpg",
+      "image_path": "mimic_cxr/raw/test/s57447816.jpg",
+      "row_id": "mimic_cxr__s57447816",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57456610.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57456610.jpg, /workspace/data/mimic_cxr/raw/test/s57456610.jpg",
+      "image_path": "mimic_cxr/raw/test/s57456610.jpg",
+      "row_id": "mimic_cxr__s57456610",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57458228.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57458228.jpg, /workspace/data/mimic_cxr/raw/test/s57458228.jpg",
+      "image_path": "mimic_cxr/raw/test/s57458228.jpg",
+      "row_id": "mimic_cxr__s57458228",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57463116.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57463116.jpg, /workspace/data/mimic_cxr/raw/test/s57463116.jpg",
+      "image_path": "mimic_cxr/raw/test/s57463116.jpg",
+      "row_id": "mimic_cxr__s57463116",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57474951.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57474951.jpg, /workspace/data/mimic_cxr/raw/test/s57474951.jpg",
+      "image_path": "mimic_cxr/raw/test/s57474951.jpg",
+      "row_id": "mimic_cxr__s57474951",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57475408.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57475408.jpg, /workspace/data/mimic_cxr/raw/test/s57475408.jpg",
+      "image_path": "mimic_cxr/raw/test/s57475408.jpg",
+      "row_id": "mimic_cxr__s57475408",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57478725.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57478725.jpg, /workspace/data/mimic_cxr/raw/test/s57478725.jpg",
+      "image_path": "mimic_cxr/raw/test/s57478725.jpg",
+      "row_id": "mimic_cxr__s57478725",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57495351.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57495351.jpg, /workspace/data/mimic_cxr/raw/test/s57495351.jpg",
+      "image_path": "mimic_cxr/raw/test/s57495351.jpg",
+      "row_id": "mimic_cxr__s57495351",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57501180.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57501180.jpg, /workspace/data/mimic_cxr/raw/test/s57501180.jpg",
+      "image_path": "mimic_cxr/raw/test/s57501180.jpg",
+      "row_id": "mimic_cxr__s57501180",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57505283.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57505283.jpg, /workspace/data/mimic_cxr/raw/test/s57505283.jpg",
+      "image_path": "mimic_cxr/raw/test/s57505283.jpg",
+      "row_id": "mimic_cxr__s57505283",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57513198.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57513198.jpg, /workspace/data/mimic_cxr/raw/test/s57513198.jpg",
+      "image_path": "mimic_cxr/raw/test/s57513198.jpg",
+      "row_id": "mimic_cxr__s57513198",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57513742.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57513742.jpg, /workspace/data/mimic_cxr/raw/test/s57513742.jpg",
+      "image_path": "mimic_cxr/raw/test/s57513742.jpg",
+      "row_id": "mimic_cxr__s57513742",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57517941.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57517941.jpg, /workspace/data/mimic_cxr/raw/test/s57517941.jpg",
+      "image_path": "mimic_cxr/raw/test/s57517941.jpg",
+      "row_id": "mimic_cxr__s57517941",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57523636.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57523636.jpg, /workspace/data/mimic_cxr/raw/test/s57523636.jpg",
+      "image_path": "mimic_cxr/raw/test/s57523636.jpg",
+      "row_id": "mimic_cxr__s57523636",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57529728.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57529728.jpg, /workspace/data/mimic_cxr/raw/test/s57529728.jpg",
+      "image_path": "mimic_cxr/raw/test/s57529728.jpg",
+      "row_id": "mimic_cxr__s57529728",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57531802.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57531802.jpg, /workspace/data/mimic_cxr/raw/test/s57531802.jpg",
+      "image_path": "mimic_cxr/raw/test/s57531802.jpg",
+      "row_id": "mimic_cxr__s57531802",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57544155.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57544155.jpg, /workspace/data/mimic_cxr/raw/test/s57544155.jpg",
+      "image_path": "mimic_cxr/raw/test/s57544155.jpg",
+      "row_id": "mimic_cxr__s57544155",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57554917.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57554917.jpg, /workspace/data/mimic_cxr/raw/test/s57554917.jpg",
+      "image_path": "mimic_cxr/raw/test/s57554917.jpg",
+      "row_id": "mimic_cxr__s57554917",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57560204.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57560204.jpg, /workspace/data/mimic_cxr/raw/test/s57560204.jpg",
+      "image_path": "mimic_cxr/raw/test/s57560204.jpg",
+      "row_id": "mimic_cxr__s57560204",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57561035.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57561035.jpg, /workspace/data/mimic_cxr/raw/test/s57561035.jpg",
+      "image_path": "mimic_cxr/raw/test/s57561035.jpg",
+      "row_id": "mimic_cxr__s57561035",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57570449.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57570449.jpg, /workspace/data/mimic_cxr/raw/test/s57570449.jpg",
+      "image_path": "mimic_cxr/raw/test/s57570449.jpg",
+      "row_id": "mimic_cxr__s57570449",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57571408.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57571408.jpg, /workspace/data/mimic_cxr/raw/test/s57571408.jpg",
+      "image_path": "mimic_cxr/raw/test/s57571408.jpg",
+      "row_id": "mimic_cxr__s57571408",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57586513.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57586513.jpg, /workspace/data/mimic_cxr/raw/test/s57586513.jpg",
+      "image_path": "mimic_cxr/raw/test/s57586513.jpg",
+      "row_id": "mimic_cxr__s57586513",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57592473.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57592473.jpg, /workspace/data/mimic_cxr/raw/test/s57592473.jpg",
+      "image_path": "mimic_cxr/raw/test/s57592473.jpg",
+      "row_id": "mimic_cxr__s57592473",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57611237.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57611237.jpg, /workspace/data/mimic_cxr/raw/test/s57611237.jpg",
+      "image_path": "mimic_cxr/raw/test/s57611237.jpg",
+      "row_id": "mimic_cxr__s57611237",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57618911.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57618911.jpg, /workspace/data/mimic_cxr/raw/test/s57618911.jpg",
+      "image_path": "mimic_cxr/raw/test/s57618911.jpg",
+      "row_id": "mimic_cxr__s57618911",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57624554.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57624554.jpg, /workspace/data/mimic_cxr/raw/test/s57624554.jpg",
+      "image_path": "mimic_cxr/raw/test/s57624554.jpg",
+      "row_id": "mimic_cxr__s57624554",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57629170.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57629170.jpg, /workspace/data/mimic_cxr/raw/test/s57629170.jpg",
+      "image_path": "mimic_cxr/raw/test/s57629170.jpg",
+      "row_id": "mimic_cxr__s57629170",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57635079.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57635079.jpg, /workspace/data/mimic_cxr/raw/test/s57635079.jpg",
+      "image_path": "mimic_cxr/raw/test/s57635079.jpg",
+      "row_id": "mimic_cxr__s57635079",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57648356.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57648356.jpg, /workspace/data/mimic_cxr/raw/test/s57648356.jpg",
+      "image_path": "mimic_cxr/raw/test/s57648356.jpg",
+      "row_id": "mimic_cxr__s57648356",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57661627.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57661627.jpg, /workspace/data/mimic_cxr/raw/test/s57661627.jpg",
+      "image_path": "mimic_cxr/raw/test/s57661627.jpg",
+      "row_id": "mimic_cxr__s57661627",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57664750.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57664750.jpg, /workspace/data/mimic_cxr/raw/test/s57664750.jpg",
+      "image_path": "mimic_cxr/raw/test/s57664750.jpg",
+      "row_id": "mimic_cxr__s57664750",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57673768.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57673768.jpg, /workspace/data/mimic_cxr/raw/test/s57673768.jpg",
+      "image_path": "mimic_cxr/raw/test/s57673768.jpg",
+      "row_id": "mimic_cxr__s57673768",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57674353.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57674353.jpg, /workspace/data/mimic_cxr/raw/test/s57674353.jpg",
+      "image_path": "mimic_cxr/raw/test/s57674353.jpg",
+      "row_id": "mimic_cxr__s57674353",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57676222.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57676222.jpg, /workspace/data/mimic_cxr/raw/test/s57676222.jpg",
+      "image_path": "mimic_cxr/raw/test/s57676222.jpg",
+      "row_id": "mimic_cxr__s57676222",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57678258.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57678258.jpg, /workspace/data/mimic_cxr/raw/test/s57678258.jpg",
+      "image_path": "mimic_cxr/raw/test/s57678258.jpg",
+      "row_id": "mimic_cxr__s57678258",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57679936.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57679936.jpg, /workspace/data/mimic_cxr/raw/test/s57679936.jpg",
+      "image_path": "mimic_cxr/raw/test/s57679936.jpg",
+      "row_id": "mimic_cxr__s57679936",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57686985.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57686985.jpg, /workspace/data/mimic_cxr/raw/test/s57686985.jpg",
+      "image_path": "mimic_cxr/raw/test/s57686985.jpg",
+      "row_id": "mimic_cxr__s57686985",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57693388.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57693388.jpg, /workspace/data/mimic_cxr/raw/test/s57693388.jpg",
+      "image_path": "mimic_cxr/raw/test/s57693388.jpg",
+      "row_id": "mimic_cxr__s57693388",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57695180.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57695180.jpg, /workspace/data/mimic_cxr/raw/test/s57695180.jpg",
+      "image_path": "mimic_cxr/raw/test/s57695180.jpg",
+      "row_id": "mimic_cxr__s57695180",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57723077.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57723077.jpg, /workspace/data/mimic_cxr/raw/test/s57723077.jpg",
+      "image_path": "mimic_cxr/raw/test/s57723077.jpg",
+      "row_id": "mimic_cxr__s57723077",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57731696.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57731696.jpg, /workspace/data/mimic_cxr/raw/test/s57731696.jpg",
+      "image_path": "mimic_cxr/raw/test/s57731696.jpg",
+      "row_id": "mimic_cxr__s57731696",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57732352.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57732352.jpg, /workspace/data/mimic_cxr/raw/test/s57732352.jpg",
+      "image_path": "mimic_cxr/raw/test/s57732352.jpg",
+      "row_id": "mimic_cxr__s57732352",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57734204.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57734204.jpg, /workspace/data/mimic_cxr/raw/test/s57734204.jpg",
+      "image_path": "mimic_cxr/raw/test/s57734204.jpg",
+      "row_id": "mimic_cxr__s57734204",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57746739.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57746739.jpg, /workspace/data/mimic_cxr/raw/test/s57746739.jpg",
+      "image_path": "mimic_cxr/raw/test/s57746739.jpg",
+      "row_id": "mimic_cxr__s57746739",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57752575.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57752575.jpg, /workspace/data/mimic_cxr/raw/test/s57752575.jpg",
+      "image_path": "mimic_cxr/raw/test/s57752575.jpg",
+      "row_id": "mimic_cxr__s57752575",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57757467.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57757467.jpg, /workspace/data/mimic_cxr/raw/test/s57757467.jpg",
+      "image_path": "mimic_cxr/raw/test/s57757467.jpg",
+      "row_id": "mimic_cxr__s57757467",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57765703.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57765703.jpg, /workspace/data/mimic_cxr/raw/test/s57765703.jpg",
+      "image_path": "mimic_cxr/raw/test/s57765703.jpg",
+      "row_id": "mimic_cxr__s57765703",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57776801.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57776801.jpg, /workspace/data/mimic_cxr/raw/test/s57776801.jpg",
+      "image_path": "mimic_cxr/raw/test/s57776801.jpg",
+      "row_id": "mimic_cxr__s57776801",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57779343.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57779343.jpg, /workspace/data/mimic_cxr/raw/test/s57779343.jpg",
+      "image_path": "mimic_cxr/raw/test/s57779343.jpg",
+      "row_id": "mimic_cxr__s57779343",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57787040.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57787040.jpg, /workspace/data/mimic_cxr/raw/test/s57787040.jpg",
+      "image_path": "mimic_cxr/raw/test/s57787040.jpg",
+      "row_id": "mimic_cxr__s57787040",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57798512.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57798512.jpg, /workspace/data/mimic_cxr/raw/test/s57798512.jpg",
+      "image_path": "mimic_cxr/raw/test/s57798512.jpg",
+      "row_id": "mimic_cxr__s57798512",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57811906.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57811906.jpg, /workspace/data/mimic_cxr/raw/test/s57811906.jpg",
+      "image_path": "mimic_cxr/raw/test/s57811906.jpg",
+      "row_id": "mimic_cxr__s57811906",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57823021.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57823021.jpg, /workspace/data/mimic_cxr/raw/test/s57823021.jpg",
+      "image_path": "mimic_cxr/raw/test/s57823021.jpg",
+      "row_id": "mimic_cxr__s57823021",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57843717.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57843717.jpg, /workspace/data/mimic_cxr/raw/test/s57843717.jpg",
+      "image_path": "mimic_cxr/raw/test/s57843717.jpg",
+      "row_id": "mimic_cxr__s57843717",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57844625.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57844625.jpg, /workspace/data/mimic_cxr/raw/test/s57844625.jpg",
+      "image_path": "mimic_cxr/raw/test/s57844625.jpg",
+      "row_id": "mimic_cxr__s57844625",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57848354.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57848354.jpg, /workspace/data/mimic_cxr/raw/test/s57848354.jpg",
+      "image_path": "mimic_cxr/raw/test/s57848354.jpg",
+      "row_id": "mimic_cxr__s57848354",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57849643.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57849643.jpg, /workspace/data/mimic_cxr/raw/test/s57849643.jpg",
+      "image_path": "mimic_cxr/raw/test/s57849643.jpg",
+      "row_id": "mimic_cxr__s57849643",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57850217.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57850217.jpg, /workspace/data/mimic_cxr/raw/test/s57850217.jpg",
+      "image_path": "mimic_cxr/raw/test/s57850217.jpg",
+      "row_id": "mimic_cxr__s57850217",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57862102.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57862102.jpg, /workspace/data/mimic_cxr/raw/test/s57862102.jpg",
+      "image_path": "mimic_cxr/raw/test/s57862102.jpg",
+      "row_id": "mimic_cxr__s57862102",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57867628.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57867628.jpg, /workspace/data/mimic_cxr/raw/test/s57867628.jpg",
+      "image_path": "mimic_cxr/raw/test/s57867628.jpg",
+      "row_id": "mimic_cxr__s57867628",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57868625.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57868625.jpg, /workspace/data/mimic_cxr/raw/test/s57868625.jpg",
+      "image_path": "mimic_cxr/raw/test/s57868625.jpg",
+      "row_id": "mimic_cxr__s57868625",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57876776.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57876776.jpg, /workspace/data/mimic_cxr/raw/test/s57876776.jpg",
+      "image_path": "mimic_cxr/raw/test/s57876776.jpg",
+      "row_id": "mimic_cxr__s57876776",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57879373.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57879373.jpg, /workspace/data/mimic_cxr/raw/test/s57879373.jpg",
+      "image_path": "mimic_cxr/raw/test/s57879373.jpg",
+      "row_id": "mimic_cxr__s57879373",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57881979.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57881979.jpg, /workspace/data/mimic_cxr/raw/test/s57881979.jpg",
+      "image_path": "mimic_cxr/raw/test/s57881979.jpg",
+      "row_id": "mimic_cxr__s57881979",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57883497.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57883497.jpg, /workspace/data/mimic_cxr/raw/test/s57883497.jpg",
+      "image_path": "mimic_cxr/raw/test/s57883497.jpg",
+      "row_id": "mimic_cxr__s57883497",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57884279.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57884279.jpg, /workspace/data/mimic_cxr/raw/test/s57884279.jpg",
+      "image_path": "mimic_cxr/raw/test/s57884279.jpg",
+      "row_id": "mimic_cxr__s57884279",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57885384.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57885384.jpg, /workspace/data/mimic_cxr/raw/test/s57885384.jpg",
+      "image_path": "mimic_cxr/raw/test/s57885384.jpg",
+      "row_id": "mimic_cxr__s57885384",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57890092.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57890092.jpg, /workspace/data/mimic_cxr/raw/test/s57890092.jpg",
+      "image_path": "mimic_cxr/raw/test/s57890092.jpg",
+      "row_id": "mimic_cxr__s57890092",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57911714.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57911714.jpg, /workspace/data/mimic_cxr/raw/test/s57911714.jpg",
+      "image_path": "mimic_cxr/raw/test/s57911714.jpg",
+      "row_id": "mimic_cxr__s57911714",
+      "split": "test"
+    },
+    {
+      "domain": "d2_mimic",
+      "error": "mimic_cxr/raw/test/s57913072.jpg not found. Tried: /workspace/mimic_cxr/raw/test/s57913072.jpg, /workspace/data/mimic_cxr/raw/test/s57913072.jpg",
+      "image_path": "mimic_cxr/raw/test/s57913072.jpg",
+      "row_id": "mimic_cxr__s57913072",
+      "split": "test"
+    }
+  ],
+  "num_embedded_rows": 0,
+  "num_failed_rows": 128,
+  "requested_rows": 128,
+  "saved_at_utc": "2026-04-12T17:07:32.378301+00:00",
+  "start_row": 1025,
+  "status": "completed",
+  "successful_rows": []
+}

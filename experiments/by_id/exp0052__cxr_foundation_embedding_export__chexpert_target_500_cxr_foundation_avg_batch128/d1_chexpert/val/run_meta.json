@@ -1,0 +1,26 @@
+{
+  "domain": "d1_chexpert",
+  "embedding_kind": "general",
+  "embedding_shape": [
+    500,
+    768
+  ],
+  "embeddings_path": "/workspace/experiments/by_id/exp0052__cxr_foundation_embedding_export__chexpert_target_500_cxr_foundation_avg_batch128/d1_chexpert/val/embeddings.npy",
+  "image_paths_path": "/workspace/experiments/by_id/exp0052__cxr_foundation_embedding_export__chexpert_target_500_cxr_foundation_avg_batch128/d1_chexpert/val/image_paths.txt",
+  "label_names": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion",
+    "pneumonia",
+    "pneumothorax"
+  ],
+  "num_embedded_rows": 500,
+  "num_failed_rows": 0,
+  "num_requested_rows": 500,
+  "row_ids_path": "/workspace/experiments/by_id/exp0052__cxr_foundation_embedding_export__chexpert_target_500_cxr_foundation_avg_batch128/d1_chexpert/val/row_ids.json",
+  "run_date_utc": "2026-04-12T13:00:35.716186+00:00",
+  "split": "val",
+  "token_pooling": "avg"
+}

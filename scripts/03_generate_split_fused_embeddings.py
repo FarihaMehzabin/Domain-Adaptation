@@ -231,7 +231,7 @@ def parse_args() -> argparse.Namespace:
             "Embedding source spec as comma-separated key=value pairs. "
             "Required keys: name, root. Optional keys: embeddings, ids, id_column, id_parser, "
             "weight, reference. Example: "
-            "name=image,root=/workspace/experiments/complete/exp0001__...,ids=image_paths.txt,id_parser=stem"
+            "name=image,root=/workspace/experiments/by_id/exp0001__...,ids=image_paths.txt,id_parser=stem"
         ),
     )
     parser.add_argument(
