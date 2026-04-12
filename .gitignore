@@ -2,12 +2,23 @@ __pycache__/
 *.pyc
 *.log
 .DS_Store
+.cache/
+.vscode/
 .venv*/
 data/
 hf_cache/
 node_modules/
 kaggle.json
 .git-report-autopush/
+scratch/*
+!scratch/README.md
+logs/*
+!logs/README.md
+train/
+mimic_cxr
+experiments/active/**/best.ckpt
+experiments/active/**/embeddings.npy
+experiments/active/**/_partial_batches/
 
 /outputs/*
 !/outputs/nih_cxr14_frozen_fused_linear/

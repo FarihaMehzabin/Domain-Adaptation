@@ -52,7 +52,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--nih-manifest",
         type=Path,
-        default=Path("/workspace/manifest_nih_cxr14_all14.csv"),
+        default=Path("/workspace/manifest/manifest_nih_cxr14_all14.csv"),
     )
     parser.add_argument(
         "--chexpert-train-csv",
@@ -72,7 +72,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-csv",
         type=Path,
-        default=Path("/workspace/manifest_common_labels_nih_train_val_test_chexpert_mimic.csv"),
+        default=Path("/workspace/manifest/manifest_common_labels_nih_train_val_test_chexpert_mimic.csv"),
     )
     return parser.parse_args()
 
@@ -187,9 +187,9 @@ def build_mimic_rows(labeled_csv: Path) -> list[dict[str, str]]:
         reader = csv.DictReader(handle)
         for row in reader:
             source_split = (row.get("split") or "").strip().lower()
-            if source_split not in {"valid", "test"}:
+            if source_split not in {"train", "valid", "test"}:
                 continue
-            split = "val" if source_split == "valid" else "test"
+            split = {"train": "train", "valid": "val", "test": "test"}[source_split]
             filename = (row.get("filename") or "").strip()
             if not filename:
                 continue

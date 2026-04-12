@@ -1,0 +1,7 @@
+elixr_trainable_variables 0
+elixr_variables 1707
+elixr_submodules 0
+qformer_trainable_variables 0
+qformer_variables 0
+qformer_submodules 0
+gradient_check_failed LookupError No gradient defined for operation'EfficientNet/efficientnet-l2/model/blocks_87/se/IdentityN' (op type: IdentityN). In general every operation must have an associated `@tf.RegisterGradient` for correct autodiff, which this op is lacking. If you want to pretend this operation is a constant in your program, you may insert `tf.stop_gradient`. This can be useful to silence the error in cases where you know gradients are not needed, e.g. the forward pass of tf.custom_gradient. Please see more details in https://www.tensorflow.org/api_docs/python/tf/custom_gradient.

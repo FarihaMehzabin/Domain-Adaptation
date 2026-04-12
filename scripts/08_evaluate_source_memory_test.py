@@ -11,6 +11,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
+import experiment_layout
 import numpy as np
 
 
@@ -32,8 +33,9 @@ SOURCE_SELECTION_SCRIPT_PATH, source_memory_mod = load_module(
 
 DEFAULT_MANIFEST_CSV = source_memory_mod.DEFAULT_MANIFEST_CSV
 DEFAULT_MEMORY_ROOT = source_memory_mod.DEFAULT_MEMORY_ROOT
-DEFAULT_MEMORY_SELECTION_ROOT = Path(
-    "/workspace/experiments/exp0006__source_memory_only_evaluation__nih_cxr14_exp0005_val_e100_p4"
+DEFAULT_MEMORY_SELECTION_ROOT = experiment_layout.find_experiment_dir(
+    "exp0006",
+    experiments_root=source_memory_mod.DEFAULT_EXPERIMENTS_ROOT,
 )
 DEFAULT_QUERY_EMBEDDING_ROOT = source_memory_mod.DEFAULT_QUERY_EMBEDDING_ROOT
 DEFAULT_BASELINE_EXPERIMENT_DIR = source_memory_mod.DEFAULT_BASELINE_EXPERIMENT_DIR

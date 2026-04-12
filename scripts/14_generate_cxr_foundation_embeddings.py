@@ -26,7 +26,7 @@ from cxr_foundation_common import (
 )
 
 
-DEFAULT_MANIFEST_CSV = Path("/workspace/manifest_common_labels_nih_train_val_test_chexpert_mimic.csv")
+DEFAULT_MANIFEST_CSV = Path("/workspace/manifest/manifest_common_labels_nih_train_val_test_chexpert_mimic.csv")
 DEFAULT_DATA_ROOT = Path("/workspace")
 DEFAULT_EXPERIMENTS_ROOT = Path("/workspace/experiments")
 DEFAULT_MODEL_DIR = Path("/workspace/.cache/cxr_foundation")

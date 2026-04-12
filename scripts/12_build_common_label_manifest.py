@@ -42,7 +42,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--nih-manifest",
         type=Path,
-        default=Path("/workspace/manifest_nih_cxr14_all14.csv"),
+        default=Path("/workspace/manifest/manifest_nih_cxr14_all14.csv"),
     )
     parser.add_argument(
         "--chexpert-valid-csv",
@@ -57,7 +57,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-csv",
         type=Path,
-        default=Path("/workspace/manifest_common_labels_nih_train_chexpert_mimic.csv"),
+        default=Path("/workspace/manifest/manifest_common_labels_nih_train_chexpert_mimic.csv"),
     )
     return parser.parse_args()
 

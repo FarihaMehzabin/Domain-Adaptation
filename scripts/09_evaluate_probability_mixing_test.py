@@ -11,6 +11,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
+import experiment_layout
 import numpy as np
 
 
@@ -31,11 +32,13 @@ MIXING_SELECTION_SCRIPT_PATH, probability_mixing_mod = load_module(
 )
 
 DEFAULT_MANIFEST_CSV = probability_mixing_mod.DEFAULT_MANIFEST_CSV
-DEFAULT_MEMORY_TEST_ROOT = Path(
-    "/workspace/experiments/exp0008__source_memory_only_test_evaluation__nih_cxr14_exp0006_test_e100_p4"
+DEFAULT_MEMORY_TEST_ROOT = experiment_layout.find_experiment_dir(
+    "exp0008",
+    experiments_root=probability_mixing_mod.DEFAULT_EXPERIMENTS_ROOT,
 )
-DEFAULT_MIXING_SELECTION_ROOT = Path(
-    "/workspace/experiments/exp0007__source_probability_mixing_evaluation__nih_cxr14_exp0006_val_e100_p4"
+DEFAULT_MIXING_SELECTION_ROOT = experiment_layout.find_experiment_dir(
+    "exp0007",
+    experiments_root=probability_mixing_mod.DEFAULT_EXPERIMENTS_ROOT,
 )
 DEFAULT_BASELINE_EXPERIMENT_DIR = probability_mixing_mod.DEFAULT_BASELINE_EXPERIMENT_DIR
 DEFAULT_QUERY_EMBEDDING_ROOT = probability_mixing_mod.DEFAULT_QUERY_EMBEDDING_ROOT

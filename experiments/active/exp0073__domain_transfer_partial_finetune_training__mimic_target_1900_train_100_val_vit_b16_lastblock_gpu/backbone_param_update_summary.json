@@ -1,0 +1,151 @@
+{
+  "all_tracked_parameters_changed": true,
+  "per_parameter": {
+    "encoder.layers.encoder_layer_11.ln_1.bias": {
+      "changed": true,
+      "delta_l2": 0.04009713605046272,
+      "final_l2": 1.3953464031219482,
+      "initial_l2": 1.3837361335754395,
+      "max_abs_delta": 0.005963960662484169,
+      "shape": [
+        768
+      ]
+    },
+    "encoder.layers.encoder_layer_11.ln_1.weight": {
+      "changed": true,
+      "delta_l2": 0.12582747638225555,
+      "final_l2": 7.853323936462402,
+      "initial_l2": 7.767897129058838,
+      "max_abs_delta": 0.015879660844802856,
+      "shape": [
+        768
+      ]
+    },
+    "encoder.layers.encoder_layer_11.ln_2.bias": {
+      "changed": true,
+      "delta_l2": 0.056397728621959686,
+      "final_l2": 2.6949257850646973,
+      "initial_l2": 2.657121419906616,
+      "max_abs_delta": 0.006740417331457138,
+      "shape": [
+        768
+      ]
+    },
+    "encoder.layers.encoder_layer_11.ln_2.weight": {
+      "changed": true,
+      "delta_l2": 0.2062084972858429,
+      "final_l2": 15.396492004394531,
+      "initial_l2": 15.216343879699707,
+      "max_abs_delta": 0.01861971616744995,
+      "shape": [
+        768
+      ]
+    },
+    "encoder.layers.encoder_layer_11.mlp.0.bias": {
+      "changed": true,
+      "delta_l2": 0.10546372830867767,
+      "final_l2": 1.5889737606048584,
+      "initial_l2": 1.5889557600021362,
+      "max_abs_delta": 0.007450290024280548,
+      "shape": [
+        3072
+      ]
+    },
+    "encoder.layers.encoder_layer_11.mlp.0.weight": {
+      "changed": true,
+      "delta_l2": 5.005276203155518,
+      "final_l2": 53.021602630615234,
+      "initial_l2": 52.65289306640625,
+      "max_abs_delta": 0.024327170103788376,
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    "encoder.layers.encoder_layer_11.mlp.3.bias": {
+      "changed": true,
+      "delta_l2": 0.010386691428720951,
+      "final_l2": 0.24501577019691467,
+      "initial_l2": 0.24561026692390442,
+      "max_abs_delta": 0.0014637969434261322,
+      "shape": [
+        768
+      ]
+    },
+    "encoder.layers.encoder_layer_11.mlp.3.weight": {
+      "changed": true,
+      "delta_l2": 3.616903781890869,
+      "final_l2": 39.59855651855469,
+      "initial_l2": 39.287532806396484,
+      "max_abs_delta": 0.024764657020568848,
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    "encoder.layers.encoder_layer_11.self_attention.in_proj_bias": {
+      "changed": true,
+      "delta_l2": 0.10984258353710175,
+      "final_l2": 2.341404676437378,
+      "initial_l2": 2.3158986568450928,
+      "max_abs_delta": 0.012127112597227097,
+      "shape": [
+        2304
+      ]
+    },
+    "encoder.layers.encoder_layer_11.self_attention.in_proj_weight": {
+      "changed": true,
+      "delta_l2": 4.7390456199646,
+      "final_l2": 48.802223205566406,
+      "initial_l2": 48.39872360229492,
+      "max_abs_delta": 0.023953765630722046,
+      "shape": [
+        2304,
+        768
+      ]
+    },
+    "encoder.layers.encoder_layer_11.self_attention.out_proj.bias": {
+      "changed": true,
+      "delta_l2": 0.04645475000143051,
+      "final_l2": 0.52327960729599,
+      "initial_l2": 0.5167998671531677,
+      "max_abs_delta": 0.007229816634207964,
+      "shape": [
+        768
+      ]
+    },
+    "encoder.layers.encoder_layer_11.self_attention.out_proj.weight": {
+      "changed": true,
+      "delta_l2": 2.4200847148895264,
+      "final_l2": 23.67579460144043,
+      "initial_l2": 23.531896591186523,
+      "max_abs_delta": 0.018613101914525032,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    "encoder.ln.bias": {
+      "changed": true,
+      "delta_l2": 0.008507528342306614,
+      "final_l2": 0.8889064192771912,
+      "initial_l2": 0.8887438178062439,
+      "max_abs_delta": 0.0008476302027702332,
+      "shape": [
+        768
+      ]
+    },
+    "encoder.ln.weight": {
+      "changed": true,
+      "delta_l2": 0.06810290366411209,
+      "final_l2": 19.428905487060547,
+      "initial_l2": 19.41456413269043,
+      "max_abs_delta": 0.009401857852935791,
+      "shape": [
+        768
+      ]
+    }
+  },
+  "tracked_backbone_parameters": 14,
+  "updated_backbone_parameters": 14
+}

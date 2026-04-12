@@ -9,14 +9,12 @@ import json
 import os
 import shutil
 import tempfile
+import time
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
-from kaggle.api.kaggle_api_extended import KaggleApi
-
-
-DEFAULT_MANIFEST_CSV = Path("/workspace/manifest_common_labels_pilot5h.csv")
+DEFAULT_MANIFEST_CSV = Path("/workspace/manifest/manifest_common_labels_pilot5h.csv")
 DEFAULT_WORKSPACE_ROOT = Path("/workspace")
 DEFAULT_KAGGLE_CONFIG = Path("/workspace/kaggle.json")
 DEFAULT_NIH_DATASET = "nih-chest-xrays/data"
@@ -56,22 +54,48 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--summary-path", type=Path, default=None)
+    parser.add_argument(
+        "--skip-file-listing",
+        action="store_true",
+        help="Assume manifest-relative remote paths exist and skip Kaggle file enumeration.",
+    )
+    parser.add_argument(
+        "--download-delay-sec",
+        type=float,
+        default=0.25,
+        help="Delay between successful downloads to reduce Kaggle rate limiting.",
+    )
+    parser.add_argument(
+        "--max-download-retries",
+        type=int,
+        default=8,
+        help="Maximum retries for a single file download when Kaggle rate limits.",
+    )
+    parser.add_argument(
+        "--initial-backoff-sec",
+        type=float,
+        default=10.0,
+        help="Initial backoff in seconds after a failed Kaggle download attempt.",
+    )
     return parser.parse_args()
 
 
 def ensure_kaggle_env(kaggle_config: Path) -> None:
     if not kaggle_config.exists():
         raise SystemExit(f"kaggle.json not found: {kaggle_config}")
+    kaggle_config.chmod(0o600)
     os.environ["KAGGLE_CONFIG_DIR"] = str(kaggle_config.parent)
 
 
-def authenticate_api() -> KaggleApi:
+def authenticate_api() -> Any:
+    from kaggle.api.kaggle_api_extended import KaggleApi
+
     api = KaggleApi()
     api.authenticate()
     return api
 
 
-def list_dataset_files(api: KaggleApi, dataset_ref: str) -> list[str]:
+def list_dataset_files(api: Any, dataset_ref: str) -> list[str]:
     names: list[str] = []
     page_token: str | None = None
     while True:
@@ -150,24 +174,52 @@ def resolve_remote_targets(
 
 def download_one_file(
     *,
-    api: KaggleApi,
+    api: Any,
     dataset_ref: str,
     remote_name: str,
     destination: Path,
     force: bool,
     dry_run: bool,
+    download_delay_sec: float,
+    max_download_retries: int,
+    initial_backoff_sec: float,
 ) -> str:
     if destination.exists() and not force:
         return "skipped_existing"
     if dry_run:
         return "planned"
     destination.parent.mkdir(parents=True, exist_ok=True)
-    with tempfile.TemporaryDirectory(prefix="kaggle_subset_") as tmp_dir:
-        api.dataset_download_file(dataset_ref, remote_name, path=tmp_dir, force=True, quiet=True)
-        downloaded = Path(tmp_dir) / Path(remote_name).name
-        if not downloaded.exists():
-            raise SystemExit(f"Kaggle download did not produce expected file: {downloaded}")
-        shutil.move(str(downloaded), str(destination))
+    backoff_sec = max(0.0, initial_backoff_sec)
+    for attempt in range(max_download_retries + 1):
+        try:
+            with tempfile.TemporaryDirectory(prefix="kaggle_subset_") as tmp_dir:
+                api.dataset_download_file(
+                    dataset_ref,
+                    remote_name,
+                    path=tmp_dir,
+                    force=True,
+                    quiet=True,
+                )
+                downloaded = Path(tmp_dir) / Path(remote_name).name
+                if not downloaded.exists():
+                    raise SystemExit(f"Kaggle download did not produce expected file: {downloaded}")
+                shutil.move(str(downloaded), str(destination))
+            if download_delay_sec > 0.0:
+                time.sleep(download_delay_sec)
+            return "downloaded"
+        except Exception as exc:
+            message = str(exc)
+            if attempt >= max_download_retries:
+                raise
+            if "429" not in message and "Too Many Requests" not in message:
+                raise
+            print(
+                f"[retry] remote={remote_name} attempt={attempt + 1}/{max_download_retries + 1} "
+                f"sleep_sec={backoff_sec}",
+                flush=True,
+            )
+            time.sleep(backoff_sec)
+            backoff_sec = max(backoff_sec * 2.0, backoff_sec + 1.0)
     return "downloaded"
 
 
@@ -215,16 +267,26 @@ def main() -> int:
         requested = requested_files.get(dataset_name, set())
         if not requested:
             continue
-        available = list_dataset_files(api, str(config["dataset_ref"]))
-        matched, unresolved = resolve_remote_targets(
-            requested_files=requested,
-            available_files=available,
-            match_mode=str(config["match_mode"]),
-        )
+        if args.skip_file_listing:
+            available = None
+            matched = {path: path for path in sorted(requested)}
+            unresolved = []
+        else:
+            available = list_dataset_files(api, str(config["dataset_ref"]))
+            matched, unresolved = resolve_remote_targets(
+                requested_files=requested,
+                available_files=available,
+                match_mode=str(config["match_mode"]),
+            )
 
         actions: list[dict[str, str]] = []
-        for local_relative, remote_name in sorted(matched.items()):
+        total_matched = len(matched)
+        for index, (local_relative, remote_name) in enumerate(sorted(matched.items()), start=1):
             destination = workspace_root / str(config["local_prefix"]) / local_relative
+            print(
+                f"[download] dataset={dataset_name} item={index}/{total_matched} remote={remote_name}",
+                flush=True,
+            )
             status = download_one_file(
                 api=api,
                 dataset_ref=str(config["dataset_ref"]),
@@ -232,6 +294,9 @@ def main() -> int:
                 destination=destination,
                 force=bool(args.force),
                 dry_run=bool(args.dry_run),
+                download_delay_sec=float(args.download_delay_sec),
+                max_download_retries=int(args.max_download_retries),
+                initial_backoff_sec=float(args.initial_backoff_sec),
             )
             actions.append(
                 {
@@ -246,6 +311,8 @@ def main() -> int:
             "requested_count": len(requested),
             "matched_count": len(matched),
             "unresolved_count": len(unresolved),
+            "listing_skipped": bool(args.skip_file_listing),
+            "available_count": None if available is None else len(available),
             "unresolved_examples": unresolved[:20],
             "actions": actions,
         }

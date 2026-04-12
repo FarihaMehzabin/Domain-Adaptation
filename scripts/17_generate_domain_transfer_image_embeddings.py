@@ -21,7 +21,7 @@ from PIL import Image
 from torch.utils.data import DataLoader, Dataset
 
 
-DEFAULT_MANIFEST_CSV = Path("/workspace/manifest_common_labels_pilot5h.csv")
+DEFAULT_MANIFEST_CSV = Path("/workspace/manifest/manifest_common_labels_pilot5h.csv")
 DEFAULT_DATA_ROOT = Path("/workspace")
 DEFAULT_EXPERIMENTS_ROOT = Path("/workspace/experiments")
 DEFAULT_OPERATION_LABEL = "embedding_generation"

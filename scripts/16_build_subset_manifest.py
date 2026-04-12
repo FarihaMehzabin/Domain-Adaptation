@@ -12,8 +12,8 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 
-DEFAULT_INPUT_CSV = Path("/workspace/manifest_common_labels_nih_train_val_test_chexpert_mimic.csv")
-DEFAULT_OUTPUT_CSV = Path("/workspace/manifest_common_labels_pilot5h.csv")
+DEFAULT_INPUT_CSV = Path("/workspace/manifest/manifest_common_labels_nih_train_val_test_chexpert_mimic.csv")
+DEFAULT_OUTPUT_CSV = Path("/workspace/manifest/manifest_common_labels_pilot5h.csv")
 LABEL_COLUMNS = (
     "label_atelectasis",
     "label_cardiomegaly",
@@ -32,10 +32,12 @@ PROFILE_SETTINGS: dict[str, dict[str, object]] = {
             ("d0_nih", "test"): 1_000,
             ("d1_chexpert", "train"): 0,
             ("d1_chexpert", "val"): -1,
+            ("d2_mimic", "train"): 0,
             ("d2_mimic", "val"): 0,
             ("d2_mimic", "test"): -1,
         },
         "chexpert_target_counts": None,
+        "mimic_target_counts": None,
     },
     "pilot_5h": {
         "direct_counts": {
@@ -44,10 +46,12 @@ PROFILE_SETTINGS: dict[str, dict[str, object]] = {
             ("d0_nih", "test"): 2_000,
             ("d1_chexpert", "train"): 0,
             ("d1_chexpert", "val"): -1,
+            ("d2_mimic", "train"): 0,
             ("d2_mimic", "val"): 0,
             ("d2_mimic", "test"): -1,
         },
         "chexpert_target_counts": None,
+        "mimic_target_counts": None,
     },
     "pilot_4h": {
         "direct_counts": {
@@ -56,10 +60,12 @@ PROFILE_SETTINGS: dict[str, dict[str, object]] = {
             ("d0_nih", "test"): 1_500,
             ("d1_chexpert", "train"): 0,
             ("d1_chexpert", "val"): -1,
+            ("d2_mimic", "train"): 0,
             ("d2_mimic", "val"): 0,
             ("d2_mimic", "test"): -1,
         },
         "chexpert_target_counts": None,
+        "mimic_target_counts": None,
     },
     "chexpert_target_250": {
         "direct_counts": {
@@ -68,10 +74,30 @@ PROFILE_SETTINGS: dict[str, dict[str, object]] = {
             ("d0_nih", "test"): 0,
             ("d1_chexpert", "train"): 0,
             ("d1_chexpert", "val"): 0,
+            ("d2_mimic", "train"): 0,
             ("d2_mimic", "val"): 0,
             ("d2_mimic", "test"): 0,
         },
         "chexpert_target_counts": {
+            "train": 250,
+            "val": 250,
+            "test": -1,
+        },
+        "mimic_target_counts": None,
+    },
+    "mimic_target_250": {
+        "direct_counts": {
+            ("d0_nih", "train"): 0,
+            ("d0_nih", "val"): 0,
+            ("d0_nih", "test"): 0,
+            ("d1_chexpert", "train"): 0,
+            ("d1_chexpert", "val"): 0,
+            ("d2_mimic", "train"): 0,
+            ("d2_mimic", "val"): 0,
+            ("d2_mimic", "test"): 0,
+        },
+        "chexpert_target_counts": None,
+        "mimic_target_counts": {
             "train": 250,
             "val": 250,
             "test": -1,
@@ -85,7 +111,7 @@ def parse_args() -> argparse.Namespace:
         description=(
             "Create a deterministic subset manifest for fast source-to-target transfer experiments. "
             "Rows are sampled independently within each domain/split, with an optional "
-            "CheXpert target-train/val/test construction path."
+            "CheXpert or MIMIC target-train/val/test construction path."
         )
     )
     parser.add_argument("--input-csv", type=Path, default=DEFAULT_INPUT_CSV)
@@ -126,6 +152,24 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--d2-val", type=int, default=None, help="Override MIMIC val count.")
     parser.add_argument("--d2-test", type=int, default=None, help="Override MIMIC test count.")
+    parser.add_argument(
+        "--d2-train",
+        type=int,
+        default=None,
+        help="Sample MIMIC target-train rows from the MIMIC train pool.",
+    )
+    parser.add_argument(
+        "--d2-target-val",
+        type=int,
+        default=None,
+        help="Sample MIMIC target-val rows from the remaining MIMIC train pool.",
+    )
+    parser.add_argument(
+        "--d2-target-test",
+        type=int,
+        default=None,
+        help="Sample MIMIC target-test rows from the MIMIC test split. Use -1 for all rows.",
+    )
     parser.add_argument(
         "--report-json",
         type=Path,
@@ -262,13 +306,18 @@ def build_split_report(
 
 def resolve_sampling_plan(
     args: argparse.Namespace,
-) -> tuple[dict[tuple[str, str], int], dict[str, int] | None]:
+) -> tuple[dict[tuple[str, str], int], dict[str, int] | None, dict[str, int] | None]:
     profile_settings = PROFILE_SETTINGS[args.profile]
     direct_counts = dict(profile_settings["direct_counts"])
-    target_counts = (
+    chexpert_target_counts = (
         None
         if profile_settings["chexpert_target_counts"] is None
         else dict(profile_settings["chexpert_target_counts"])
+    )
+    mimic_target_counts = (
+        None
+        if profile_settings["mimic_target_counts"] is None
+        else dict(profile_settings["mimic_target_counts"])
     )
 
     direct_overrides = {
@@ -276,6 +325,7 @@ def resolve_sampling_plan(
         ("d0_nih", "val"): args.d0_val,
         ("d0_nih", "test"): args.d0_test,
         ("d1_chexpert", "val"): args.d1_val,
+        ("d2_mimic", "train"): None,
         ("d2_mimic", "val"): args.d2_val,
         ("d2_mimic", "test"): args.d2_test,
     }
@@ -283,26 +333,44 @@ def resolve_sampling_plan(
         if value is not None:
             direct_counts[key] = value
 
-    target_requested = target_counts is not None or any(
+    chexpert_target_requested = chexpert_target_counts is not None or any(
         value is not None for value in (args.d1_train, args.d1_target_val, args.d1_test)
     )
-    if target_requested:
-        counts = dict(target_counts or {"train": 0, "val": 0, "test": -1})
+    if chexpert_target_requested:
+        counts = dict(chexpert_target_counts or {"train": 0, "val": 0, "test": -1})
         if args.d1_train is not None:
             counts["train"] = args.d1_train
         if args.d1_target_val is not None:
             counts["val"] = args.d1_target_val
         if args.d1_test is not None:
             counts["test"] = args.d1_test
-        target_counts = counts
+        chexpert_target_counts = counts
         direct_counts[("d1_chexpert", "train")] = 0
         if args.d1_val is None:
             direct_counts[("d1_chexpert", "val")] = 0
 
-    return direct_counts, target_counts
+    mimic_target_requested = mimic_target_counts is not None or any(
+        value is not None for value in (args.d2_train, args.d2_target_val, args.d2_target_test)
+    )
+    if mimic_target_requested:
+        counts = dict(mimic_target_counts or {"train": 0, "val": 0, "test": -1})
+        if args.d2_train is not None:
+            counts["train"] = args.d2_train
+        if args.d2_target_val is not None:
+            counts["val"] = args.d2_target_val
+        if args.d2_target_test is not None:
+            counts["test"] = args.d2_target_test
+        mimic_target_counts = counts
+        direct_counts[("d2_mimic", "train")] = 0
+        if args.d2_val is None:
+            direct_counts[("d2_mimic", "val")] = 0
+        if args.d2_test is None:
+            direct_counts[("d2_mimic", "test")] = 0
+
+    return direct_counts, chexpert_target_counts, mimic_target_counts
 
 
-def build_disjoint_chexpert_target_splits(
+def build_disjoint_target_splits(
     *,
     train_pool_rows: list[dict[str, str]],
     test_pool_rows: list[dict[str, str]],
@@ -325,7 +393,7 @@ def build_disjoint_chexpert_target_splits(
 def main() -> int:
     args = parse_args()
     rows, fieldnames = load_rows(args.input_csv)
-    direct_counts, chexpert_target_counts = resolve_sampling_plan(args)
+    direct_counts, chexpert_target_counts, mimic_target_counts = resolve_sampling_plan(args)
     report_json = args.report_json or args.output_csv.with_suffix(".summary.json")
 
     grouped_rows: dict[tuple[str, str], list[dict[str, str]]] = defaultdict(list)
@@ -343,6 +411,7 @@ def main() -> int:
             f"{domain}/{split}": count for (domain, split), count in sorted(direct_counts.items())
         },
         "chexpert_target_counts": chexpert_target_counts,
+        "mimic_target_counts": mimic_target_counts,
         "splits": {},
     }
 
@@ -365,7 +434,7 @@ def main() -> int:
         chexpert_valid_key = ("d1_chexpert", "val")
         chexpert_train_pool = grouped_rows.get(chexpert_train_key, [])
         chexpert_test_pool = grouped_rows.get(chexpert_valid_key, [])
-        chexpert_samples = build_disjoint_chexpert_target_splits(
+        chexpert_samples = build_disjoint_target_splits(
             train_pool_rows=chexpert_train_pool,
             test_pool_rows=chexpert_test_pool,
             target_counts=chexpert_target_counts,
@@ -395,6 +464,43 @@ def main() -> int:
             requested=int(chexpert_target_counts["test"]),
             source_key=chexpert_valid_key,
             output_key=("d1_chexpert", "test"),
+        )
+
+    if mimic_target_counts is not None:
+        mimic_train_key = ("d2_mimic", "train")
+        mimic_test_key = ("d2_mimic", "test")
+        mimic_train_pool = grouped_rows.get(mimic_train_key, [])
+        mimic_test_pool = grouped_rows.get(mimic_test_key, [])
+        mimic_samples = build_disjoint_target_splits(
+            train_pool_rows=mimic_train_pool,
+            test_pool_rows=mimic_test_pool,
+            target_counts=mimic_target_counts,
+            seed=args.seed + 1000,
+        )
+        sampled_rows.extend(mimic_samples["train"])
+        sampled_rows.extend(mimic_samples["val"])
+        sampled_rows.extend(mimic_samples["test"])
+
+        report["splits"]["d2_mimic/train"] = build_split_report(
+            source_rows=mimic_train_pool,
+            sampled_rows=mimic_samples["train"],
+            requested=int(mimic_target_counts["train"]),
+            source_key=mimic_train_key,
+            output_key=("d2_mimic", "train"),
+        )
+        report["splits"]["d2_mimic/val"] = build_split_report(
+            source_rows=mimic_samples["remaining_train_pool"],
+            sampled_rows=mimic_samples["val"],
+            requested=int(mimic_target_counts["val"]),
+            source_key=mimic_train_key,
+            output_key=("d2_mimic", "val"),
+        )
+        report["splits"]["d2_mimic/test"] = build_split_report(
+            source_rows=mimic_test_pool,
+            sampled_rows=mimic_samples["test"],
+            requested=int(mimic_target_counts["test"]),
+            source_key=mimic_test_key,
+            output_key=("d2_mimic", "test"),
         )
 
     args.output_csv.parent.mkdir(parents=True, exist_ok=True)

@@ -25,7 +25,7 @@ from torch import nn
 from torch.utils.data import DataLoader, Dataset
 
 
-DEFAULT_MANIFEST_CSV = Path("/workspace/manifest_common_labels_nih_train_val_test_chexpert_mimic.csv")
+DEFAULT_MANIFEST_CSV = Path("/workspace/manifest/manifest_common_labels_nih_train_val_test_chexpert_mimic.csv")
 DEFAULT_EXPERIMENTS_ROOT = Path("/workspace/experiments")
 DEFAULT_BATCH_SIZE = 512
 DEFAULT_NUM_WORKERS = 0
@@ -891,18 +891,19 @@ def build_evaluation_plan(*, split_profile: str, embedding_layout: str) -> Evalu
             thresholds_filename="d0_val_f1_thresholds.json",
         )
 
-    if split_profile == "chexpert_target":
+    if split_profile in {"chexpert_target", "mimic_target"}:
         if embedding_layout != "domain_split":
-            raise SystemExit("--split-profile chexpert_target requires --embedding-layout domain_split.")
+            raise SystemExit(f"--split-profile {split_profile} requires --embedding-layout domain_split.")
+        target_domain = "d1_chexpert" if split_profile == "chexpert_target" else "d2_mimic"
         return EvaluationPlan(
             name=split_profile,
             train_alias="target_train",
             selection_alias="target_val",
             primary_test_alias="target_test",
             split_specs=(
-                ("target_train", "d1_chexpert", "train"),
-                ("target_val", "d1_chexpert", "val"),
-                ("target_test", "d1_chexpert", "test"),
+                ("target_train", target_domain, "train"),
+                ("target_val", target_domain, "val"),
+                ("target_test", target_domain, "test"),
             ),
             output_name_map={
                 "target_val": "target_val_metrics.json",
@@ -984,7 +985,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--experiment-name", type=str, default=None)
     parser.add_argument(
         "--split-profile",
-        choices=("source_transfer", "chexpert_target"),
+        choices=("source_transfer", "chexpert_target", "mimic_target"),
         default="source_transfer",
         help="Which manifest split layout to train and evaluate.",
     )

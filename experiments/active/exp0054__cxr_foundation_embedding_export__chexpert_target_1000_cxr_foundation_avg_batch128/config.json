@@ -1,0 +1,36 @@
+{
+  "argv": [
+    "/workspace/scripts/14_generate_cxr_foundation_embeddings.py",
+    "--manifest-csv",
+    "/workspace/manifest_chexpert_target_1000.csv",
+    "--batch-size",
+    "128",
+    "--token-pooling",
+    "avg",
+    "--experiment-name",
+    "chexpert_target_1000_cxr_foundation_avg_batch128",
+    "--overwrite"
+  ],
+  "batch_size": 128,
+  "data_root": "/workspace",
+  "embedding_kind": "general",
+  "experiment_dir": "/workspace/experiments/active/exp0054__cxr_foundation_embedding_export__chexpert_target_1000_cxr_foundation_avg_batch128",
+  "experiment_id": "exp0054",
+  "experiment_name": "exp0054__cxr_foundation_embedding_export__chexpert_target_1000_cxr_foundation_avg_batch128",
+  "experiment_number": 54,
+  "hf_token_env_var": "HF_TOKEN",
+  "label_names": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion",
+    "pneumonia",
+    "pneumothorax"
+  ],
+  "manifest_csv": "/workspace/manifest_chexpert_target_1000.csv",
+  "max_rows_per_split": null,
+  "model_dir": "/workspace/.cache/cxr_foundation",
+  "run_date_utc": "2026-04-12T13:01:43.078963+00:00",
+  "token_pooling": "avg"
+}

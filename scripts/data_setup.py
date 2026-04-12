@@ -387,8 +387,8 @@ def resolve_nih_manifest(manifest_arg: str) -> Path:
         return manifest_path
 
     candidates = [
-        Path("/workspace/manifest_nih_cxr14.csv"),
-        Path("/workspace/manifest_nih_cxr14 .csv"),
+        Path("/workspace/manifest/manifest_nih_cxr14.csv"),
+        Path("/workspace/manifest/manifest_nih_cxr14 .csv"),
     ]
     for candidate in candidates:
         if candidate.exists():

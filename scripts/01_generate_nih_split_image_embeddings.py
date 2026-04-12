@@ -14,6 +14,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
 
+import experiment_layout
+
 try:
     import numpy as np
 except Exception as exc:  # pragma: no cover
@@ -33,7 +35,7 @@ except Exception as exc:  # pragma: no cover
     raise SystemExit("Missing dependency 'pillow'.") from exc
 
 
-DEFAULT_MANIFEST_CSV = Path("/workspace/manifest_nih_cxr14 .csv")
+DEFAULT_MANIFEST_CSV = Path("/workspace/manifest/manifest_nih_cxr14 .csv")
 DEFAULT_DATA_ROOT = Path("/workspace")
 DEFAULT_EXPERIMENTS_ROOT = Path("/workspace/experiments")
 DEFAULT_SPLITS = ["train", "val", "test"]
@@ -930,18 +932,7 @@ def extract_experiment_number(name: str) -> int | None:
 
 
 def next_experiment_number(experiments_root: Path) -> int:
-    if not experiments_root.exists():
-        return 1
-
-    max_number = 0
-    for child in experiments_root.iterdir():
-        if not child.is_dir():
-            continue
-        experiment_number = extract_experiment_number(child.name)
-        if experiment_number is None:
-            continue
-        max_number = max(max_number, experiment_number)
-    return max_number + 1
+    return experiment_layout.next_experiment_number(experiments_root)
 
 
 def resolve_experiment_identity(
@@ -952,31 +943,18 @@ def resolve_experiment_identity(
     overwrite: bool,
     id_width: int = DEFAULT_EXPERIMENT_ID_WIDTH,
 ) -> tuple[int, str, str, Path]:
-    experiments_root.mkdir(parents=True, exist_ok=True)
-
     if requested_name:
         requested_name = requested_name.strip()
         if not requested_name:
             raise SystemExit("--experiment-name cannot be empty.")
     base_name = ensure_operation_prefix(requested_name or generated_slug)
-
-    explicit_number = extract_experiment_number(base_name)
-    if explicit_number is not None:
-        experiment_number = explicit_number
-        experiment_name = base_name
-    else:
-        experiment_number = next_experiment_number(experiments_root)
-        experiment_name = f"exp{experiment_number:0{id_width}d}__{base_name}"
-
-    experiment_id = f"exp{experiment_number:0{id_width}d}"
-    experiment_dir = experiments_root / experiment_name
-    if experiment_dir.exists() and not overwrite:
-        raise SystemExit(
-            f"Experiment directory already exists: {experiment_dir}\n"
-            "Pass --overwrite to reuse it or choose a different --experiment-name."
-        )
-
-    return experiment_number, experiment_id, experiment_name, experiment_dir
+    return experiment_layout.resolve_experiment_identity(
+        experiments_root=experiments_root,
+        requested_name=base_name if requested_name else None,
+        generated_slug=base_name,
+        overwrite=overwrite,
+        id_width=id_width,
+    )
 
 
 def parse_args() -> argparse.Namespace:

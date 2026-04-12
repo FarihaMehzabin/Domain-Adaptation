@@ -14,19 +14,19 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+import experiment_layout
 import faiss  # type: ignore
 import numpy as np
 import torch
 from torch import nn
 
 
-DEFAULT_MANIFEST_CSV = Path("/workspace/manifest_common_labels_pilot5h.csv")
+DEFAULT_MANIFEST_CSV = Path("/workspace/manifest/manifest_common_labels_pilot5h.csv")
 DEFAULT_EXPERIMENTS_ROOT = Path("/workspace/experiments")
-DEFAULT_EMBEDDING_ROOT = Path(
-    "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128"
-)
-DEFAULT_BASELINE_EXPERIMENT_DIR = Path(
-    "/workspace/experiments/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h"
+DEFAULT_EMBEDDING_ROOT = experiment_layout.find_experiment_dir("exp0014", experiments_root=DEFAULT_EXPERIMENTS_ROOT)
+DEFAULT_BASELINE_EXPERIMENT_DIR = experiment_layout.find_experiment_dir(
+    "exp0015",
+    experiments_root=DEFAULT_EXPERIMENTS_ROOT,
 )
 DEFAULT_SOURCE_DOMAIN = "d0_nih"
 DEFAULT_SOURCE_SPLIT = "train"
@@ -125,17 +125,7 @@ def extract_experiment_number(name: str) -> int | None:
 
 
 def next_experiment_number(experiments_root: Path) -> int:
-    if not experiments_root.exists():
-        return 1
-    max_number = 0
-    for child in experiments_root.iterdir():
-        if not child.is_dir():
-            continue
-        current = extract_experiment_number(child.name)
-        if current is None:
-            continue
-        max_number = max(max_number, current)
-    return max_number + 1
+    return experiment_layout.next_experiment_number(experiments_root)
 
 
 def resolve_experiment_identity(
@@ -147,25 +137,15 @@ def resolve_experiment_identity(
     overwrite: bool,
     id_width: int = 4,
 ) -> tuple[int, str, str, Path]:
-    experiments_root.mkdir(parents=True, exist_ok=True)
     requested = (requested_name or "").strip() or None
     base_name = ensure_operation_prefix(requested or generated_slug, operation_label)
-    explicit = extract_experiment_number(base_name)
-    if explicit is None:
-        experiment_number = next_experiment_number(experiments_root)
-        experiment_name = f"exp{experiment_number:0{id_width}d}__{base_name}"
-    else:
-        experiment_number = explicit
-        experiment_name = base_name
-    experiment_id = f"exp{experiment_number:0{id_width}d}"
-    experiment_dir = experiments_root / experiment_name
-    if experiment_dir.exists() and not overwrite:
-        raise SystemExit(
-            f"Experiment directory already exists: {experiment_dir}\n"
-            "Pass --overwrite to reuse it or choose a different --experiment-name."
-        )
-    experiment_dir.mkdir(parents=True, exist_ok=True)
-    return experiment_number, experiment_id, experiment_name, experiment_dir
+    return experiment_layout.resolve_experiment_identity(
+        experiments_root=experiments_root,
+        requested_name=base_name if requested else None,
+        generated_slug=base_name,
+        overwrite=overwrite,
+        id_width=id_width,
+    )
 
 
 def to_serializable(value: Any) -> Any:

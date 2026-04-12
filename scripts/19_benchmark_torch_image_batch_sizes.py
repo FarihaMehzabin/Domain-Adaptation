@@ -14,11 +14,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+import experiment_layout
 import torch
 import torch.nn.functional as F
 
 
-DEFAULT_MANIFEST_CSV = Path("/workspace/manifest_common_labels_pilot5h.csv")
+DEFAULT_MANIFEST_CSV = Path("/workspace/manifest/manifest_common_labels_pilot5h.csv")
 DEFAULT_DATA_ROOT = Path("/workspace")
 DEFAULT_EXPERIMENTS_ROOT = Path("/workspace/experiments")
 DEFAULT_OPERATION_LABEL = "torch_image_batch_sweep"
@@ -78,17 +79,7 @@ def extract_experiment_number(name: str) -> int | None:
 
 
 def next_experiment_number(experiments_root: Path) -> int:
-    if not experiments_root.exists():
-        return 1
-    max_number = 0
-    for child in experiments_root.iterdir():
-        if not child.is_dir():
-            continue
-        number = extract_experiment_number(child.name)
-        if number is None:
-            continue
-        max_number = max(max_number, number)
-    return max_number + 1
+    return experiment_layout.next_experiment_number(experiments_root)
 
 
 def resolve_experiment_identity(
@@ -99,24 +90,14 @@ def resolve_experiment_identity(
     overwrite: bool,
     id_width: int = DEFAULT_EXPERIMENT_ID_WIDTH,
 ) -> tuple[int, str, str, Path]:
-    experiments_root.mkdir(parents=True, exist_ok=True)
     base_name = ensure_operation_prefix((requested_name or "").strip() or generated_slug)
-    explicit_number = extract_experiment_number(base_name)
-    if explicit_number is not None:
-        experiment_number = explicit_number
-        experiment_name = base_name
-    else:
-        experiment_number = next_experiment_number(experiments_root)
-        experiment_name = f"exp{experiment_number:0{id_width}d}__{base_name}"
-    experiment_id = f"exp{experiment_number:0{id_width}d}"
-    experiment_dir = experiments_root / experiment_name
-    if experiment_dir.exists() and not overwrite:
-        raise SystemExit(
-            f"Experiment directory already exists: {experiment_dir}\n"
-            "Pass --overwrite to reuse it or choose a different --experiment-name."
-        )
-    experiment_dir.mkdir(parents=True, exist_ok=True)
-    return experiment_number, experiment_id, experiment_name, experiment_dir
+    return experiment_layout.resolve_experiment_identity(
+        experiments_root=experiments_root,
+        requested_name=base_name if requested_name else None,
+        generated_slug=base_name,
+        overwrite=overwrite,
+        id_width=id_width,
+    )
 
 
 def load_exporter_helpers() -> Any:
