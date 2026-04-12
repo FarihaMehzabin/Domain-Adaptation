@@ -1,0 +1,21 @@
+{
+  "k": 50,
+  "memory_root": "/workspace/experiments/exp0040__domain_transfer_source_retrieval_memory_building__domain_transfer_source_retrieval_memory__resnet50_default_avg_pilot5h_d0_train",
+  "query_domain": "d0_nih",
+  "query_split": "val",
+  "selection_metric": "macro_auroc",
+  "selection_trace": {
+    "max_macro_auroc": 0.6758334864493307,
+    "max_macro_average_precision": 0.12610293053332883,
+    "selected_k": 50,
+    "selected_tau": 5.0,
+    "tie_break_rule": [
+      "highest validation macro AUROC",
+      "higher validation macro average precision",
+      "smaller k",
+      "tau = 10 if present among ties, otherwise smaller tau"
+    ]
+  },
+  "split_alias": "d0_val",
+  "tau": 5.0
+}

@@ -1,0 +1,10 @@
+{
+  "k": 50,
+  "memory_root": "/workspace/experiments/exp0040__domain_transfer_source_retrieval_memory_building__domain_transfer_source_retrieval_memory__resnet50_default_avg_pilot5h_d0_train",
+  "memory_selection_root": "/workspace/experiments/exp0041__domain_transfer_source_memory_selection__resnet50_default_avg_pilot5h_d0_val",
+  "query_domain": "d1_chexpert",
+  "query_split": "val",
+  "split_alias": "d1_transfer",
+  "tau": 5.0,
+  "threshold_source": "/workspace/experiments/exp0041__domain_transfer_source_memory_selection__resnet50_default_avg_pilot5h_d0_val/best_val_metrics.json"
+}

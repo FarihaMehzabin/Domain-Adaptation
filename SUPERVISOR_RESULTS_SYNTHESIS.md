@@ -1,8 +1,247 @@
 # Supervisor-Facing Results Synthesis for the NIH CXR14 Source-Stage Experiments
 
-Prepared on April 11, 2026 (UTC).
+Prepared on April 12, 2026 (UTC).
 
-Most recent updates: the current active image-only domain-transfer pilot is summarized in Sections 0 and 0A below. If any older section later in this file conflicts with Sections 0 or 0A, treat Sections 0 and 0A as the current result for the present workspace.
+Most recent updates: the current active image-only domain-transfer pilot is summarized in Sections 0, 0A, and 0B below. If any older section later in this file conflicts with Sections 0, 0A, or 0B, treat Section 0B as the newest result for the present workspace.
+
+## 0B. April 12, 2026 Update: Retrieval-Augmented Domain-Transfer Comparison on CXR Foundation vs ResNet50
+
+### Objective
+
+After the image-only backbone comparison in Section 0 established that `CXR Foundation` was stronger than `ResNet50`, the next question was whether a retrieval-augmented pipeline could improve domain transfer when training still began from the same NIH source domain.
+
+The goal of this update was to rerun the same retrieval recipe on both embedding families and compare them directly:
+
+- `CXR Foundation` embeddings with a source-memory retrieval module
+- `ResNet50` embeddings with the same source-memory retrieval module
+
+The retrieval pipeline was designed to mimic the earlier source-memory experiments conceptually, but now under the domain-transfer pilot split and without chest X-ray reports.
+
+### Experimental protocol
+
+- Date:
+  - `April 12, 2026 (UTC)`
+- Data split protocol:
+  - source memory built from `D0 = NIH train`
+  - retrieval hyperparameters selected on `D0 = NIH val`
+  - final evaluation on:
+    - `D0 test = NIH test`
+    - `D1 transfer = CheXpert val`
+    - `D2 transfer = MIMIC test`
+- Shared label space:
+  - `atelectasis`
+  - `cardiomegaly`
+  - `consolidation`
+  - `edema`
+  - `pleural_effusion`
+  - `pneumonia`
+  - `pneumothorax`
+- Manifest:
+  - `/workspace/manifest_common_labels_pilot5h.csv`
+- Sample counts:
+  - `NIH train = 10,000`
+  - `NIH val = 1,000`
+  - `NIH test = 2,000`
+  - `CheXpert val = 234`
+  - `MIMIC test = 1,455`
+- Input modality:
+  - image embeddings only
+  - no chest X-ray report features were used
+- Data handling:
+  - no raw-image redownload was needed for the reruns
+  - the existing embedding exports were reused directly
+
+### Retrieval method
+
+For each backbone, the retrieval branch used the same three-stage procedure:
+
+1. Build a source memory bank from `NIH train` embeddings and labels.
+2. For each query image, retrieve nearest source examples from the memory bank and convert neighbor labels into a memory-derived multilabel probability vector.
+3. Evaluate two retrieval variants:
+   - `memory-only`: use only the retrieval-derived probability vector
+   - `mixed`: interpolate between the baseline classifier probabilities and the retrieval probabilities
+
+Operationally, the pipeline implemented:
+
+- FAISS nearest-neighbor retrieval over the source embedding bank
+- a temperature-style retrieval sharpness parameter `tau`
+- a neighbor count `k`
+- a probability mixing coefficient `alpha`
+
+The selection rule was the same in both branches:
+
+- choose `k` and `tau` on `NIH val` by macro AUROC
+- then choose `alpha` on `NIH val` by macro AUROC
+
+### Run lineage
+
+#### CXR Foundation retrieval branch
+
+- source memory build:
+  - `exp0028__domain_transfer_source_retrieval_memory_building__domain_transfer_source_retrieval_memory__cxr_foundation_general_avg_pilot5h_d0_train`
+- memory-only selection on NIH val:
+  - `exp0029__domain_transfer_source_memory_selection__cxr_foundation_general_avg_pilot5h_d0_val`
+- probability-mixing selection on NIH val:
+  - `exp0031__domain_transfer_probability_mixing_selection__cxr_foundation_general_avg_pilot5h_d0_val`
+- memory-only target evaluation:
+  - `exp0034__domain_transfer_source_memory_target_evaluation__cxr_foundation_general_avg_pilot5h_d0_test`
+  - `exp0035__domain_transfer_source_memory_target_evaluation__cxr_foundation_general_avg_pilot5h_d1_transfer`
+  - `exp0036__domain_transfer_source_memory_target_evaluation__cxr_foundation_general_avg_pilot5h_d2_transfer`
+- mixed target evaluation:
+  - `exp0037__domain_transfer_probability_mixing_target_evaluation__cxr_foundation_general_avg_pilot5h_d0_test`
+  - `exp0031__domain_transfer_probability_mixing_target_evaluation__domain_transfer_probability_mixing_selection__cxr_foundation_general_avg_pilot5h_d0_val__d1_transfer`
+  - `exp0031__domain_transfer_probability_mixing_target_evaluation__domain_transfer_probability_mixing_selection__cxr_foundation_general_avg_pilot5h_d0_val__d2_transfer`
+- compact branch summary:
+  - `/workspace/experiments/exp0039__domain_transfer_rag_summary__cxr_foundation_general_avg_pilot5h/summary.md`
+
+#### ResNet50 retrieval branch
+
+- source memory build:
+  - `exp0040__domain_transfer_source_retrieval_memory_building__domain_transfer_source_retrieval_memory__resnet50_default_avg_pilot5h_d0_train`
+- memory-only selection on NIH val:
+  - `exp0041__domain_transfer_source_memory_selection__resnet50_default_avg_pilot5h_d0_val`
+- probability-mixing selection on NIH val:
+  - `exp0042__domain_transfer_probability_mixing_selection__resnet50_default_avg_pilot5h_d0_val`
+- memory-only target evaluation:
+  - `exp0043__domain_transfer_source_memory_target_evaluation__resnet50_default_avg_pilot5h_d0_test`
+  - `exp0044__domain_transfer_source_memory_target_evaluation__resnet50_default_avg_pilot5h_d1_transfer`
+  - `exp0044__domain_transfer_source_memory_target_evaluation__resnet50_default_avg_pilot5h_d2_transfer`
+- mixed target evaluation:
+  - `exp0046__domain_transfer_probability_mixing_target_evaluation__resnet50_default_avg_pilot5h_d0_test`
+  - `exp0045__domain_transfer_probability_mixing_target_evaluation__resnet50_default_avg_pilot5h_d1_transfer`
+  - `exp0046__domain_transfer_probability_mixing_target_evaluation__resnet50_default_avg_pilot5h_d2_transfer`
+- compact cross-backbone summary:
+  - `/workspace/experiments/exp0047__resnet50_vs_cxr_foundation_rag_comparison__pilot5h/summary.md`
+
+### Selected hyperparameters
+
+| Backbone | Best `k` | Best `tau` | Best `alpha` | NIH val mixed macro AUROC | NIH val mixed macro AP |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| CXR Foundation | `50` | `5.0` | `1.0` | `0.8479` | `0.2643` |
+| ResNet50 | `50` | `5.0` | `0.7` | `0.7396` | `0.1373` |
+
+Interpretation:
+
+- Both backbones preferred the same retrieval depth and temperature:
+  - `k = 50`
+  - `tau = 5.0`
+- The CXR Foundation branch preferred full trust in retrieval at mixing time:
+  - `alpha = 1.0`
+- The ResNet50 branch preferred a partial blend:
+  - `alpha = 0.7`
+
+### Detailed results
+
+#### NIH source test (`D0 test`)
+
+| Backbone | Variant | AUROC | AP | ECE | F1@0.5 | F1@tuned |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| CXR Foundation | baseline | `0.8455` | `0.2541` | `0.2667` | `0.2466` | `0.2769` |
+| CXR Foundation | memory-only | `0.8052` | `0.2235` | `0.0108` | `0.0724` | `0.2775` |
+| CXR Foundation | mixed | `0.8453` | `0.2531` | `0.4359` | `0.2485` | `0.2826` |
+| ResNet50 | baseline | `0.7306` | `0.1263` | `0.4062` | `0.1720` | `0.1839` |
+| ResNet50 | memory-only | `0.6781` | `0.1259` | `0.0114` | `0.0000` | `0.1664` |
+| ResNet50 | mixed | `0.7353` | `0.1317` | `0.2821` | `0.1122` | `0.1769` |
+
+NIH interpretation:
+
+- `CXR Foundation` remained far stronger than `ResNet50` under all three variants.
+- For `CXR Foundation`, retrieval mixing did not improve ranking quality meaningfully over the baseline:
+  - AUROC stayed effectively unchanged
+  - AP stayed effectively unchanged
+  - tuned-threshold F1 increased slightly
+- For `ResNet50`, the mixed variant produced a small AUROC and AP lift over the baseline, but the absolute performance level remained much lower than the CXR Foundation branch.
+- Memory-only retrieval reduced ranking quality for both backbones on the source domain, although it sharply improved calibration.
+
+#### CheXpert transfer (`D1 transfer`)
+
+| Backbone | Variant | AUROC | AP | ECE | F1@0.5 | F1@tuned |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| CXR Foundation | baseline | `0.8454` | `0.5430` | `0.2267` | `0.4610` | `0.3492` |
+| CXR Foundation | memory-only | `0.7697` | `0.4788` | `0.1338` | `0.0667` | `0.3673` |
+| CXR Foundation | mixed | `0.8452` | `0.5434` | `0.3072` | `0.4449` | `0.3514` |
+| ResNet50 | baseline | `0.7218` | `0.3748` | `0.3091` | `0.3656` | `0.2946` |
+| ResNet50 | memory-only | `0.6172` | `0.3135` | `0.1425` | `0.0000` | `0.2822` |
+| ResNet50 | mixed | `0.7179` | `0.3670` | `0.1910` | `0.1097` | `0.3099` |
+
+CheXpert interpretation:
+
+- `CXR Foundation` remained substantially ahead of `ResNet50` on transfer to CheXpert.
+- For `CXR Foundation`, the mixed retrieval variant was essentially tied with the baseline:
+  - AUROC was flat
+  - AP was flat
+  - tuned-threshold F1 increased only slightly
+- For `ResNet50`, the mixed variant did not improve ranking over the baseline and was slightly lower in AUROC and AP, although tuned-threshold F1 improved modestly.
+- Memory-only retrieval again hurt ranking quality for both backbones.
+
+#### MIMIC transfer (`D2 transfer`)
+
+| Backbone | Variant | AUROC | AP | ECE | F1@0.5 | F1@tuned |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| CXR Foundation | baseline | `0.5007` | `0.1258` | `0.4232` | `0.1945` | `0.1357` |
+| CXR Foundation | memory-only | `0.5045` | `0.1259` | `0.0895` | `0.0275` | `0.1525` |
+| CXR Foundation | mixed | `0.5010` | `0.1258` | `0.3772` | `0.1948` | `0.1379` |
+| ResNet50 | baseline | `0.4996` | `0.1278` | `0.4289` | `0.2064` | `0.1933` |
+| ResNet50 | memory-only | `0.5215` | `0.1334` | `0.0680` | `0.0000` | `0.1505` |
+| ResNet50 | mixed | `0.5042` | `0.1284` | `0.2865` | `0.0825` | `0.1986` |
+
+MIMIC interpretation:
+
+- This remained the hardest domain by far.
+- All variants for both backbones were effectively near chance in AUROC and AP.
+- `CXR Foundation` no longer showed the large advantage it had on NIH and CheXpert.
+- `ResNet50` memory-only had the highest AUROC/AP in this table, but the absolute values remained weak and the model collapsed at a fixed `0.5` threshold.
+- The practical conclusion is that neither backbone plus simple retrieval solved the NIH-to-MIMIC domain shift.
+
+### Cross-run synthesis
+
+The main findings across the two retrieval runs are:
+
+1. The same retrieval framework runs cleanly on both embedding families.
+2. `CXR Foundation` remains the stronger representation on the NIH source domain and on CheXpert transfer.
+3. Retrieval mixing does not materially improve the already-strong `CXR Foundation` baseline on NIH or CheXpert.
+4. Retrieval mixing gives only modest, inconsistent changes on the weaker `ResNet50` branch.
+5. Memory-only retrieval improves calibration strongly in both branches, but it usually hurts ranking quality.
+6. The core unsolved problem remains `NIH -> MIMIC` transfer.
+
+### Supervisor-facing interpretation
+
+For presentation, the most coherent reading is:
+
+- The original backbone comparison already showed that `CXR Foundation` is the correct image-only backbone to carry forward.
+- The retrieval-augmented rerun confirms that this conclusion survives under a more elaborate inference setup.
+- In other words, the backbone ranking does not flip once retrieval is added:
+  - `CXR Foundation + RAG` is still much stronger than `ResNet50 + RAG` on NIH and CheXpert.
+- However, retrieval does not create a breakthrough on the hardest transfer target:
+  - `MIMIC` remains near chance for both families.
+
+This is useful supervisor-facing evidence because it narrows the search space:
+
+- switching from `ResNet50` to `CXR Foundation` was the right move
+- adding a simple source-memory RAG layer is not enough to solve the MIMIC shift
+- future adaptation work should focus on genuine domain-alignment strategies rather than expecting nearest-neighbor retrieval alone to fix transfer
+
+### Recommended presentation message
+
+One defensible presentation storyline is:
+
+1. Start with the simple source-only linear probe comparison.
+2. Show that `CXR Foundation` clearly dominates `ResNet50`.
+3. Introduce the retrieval-augmented rerun as a stronger test of whether source-memory reasoning changes the conclusion.
+4. Show that the conclusion remains the same:
+   - `CXR Foundation` is still the better backbone
+   - retrieval gives only marginal changes on NIH and CheXpert
+   - MIMIC remains the failure case
+5. Use that failure case to motivate the next stage of true domain adaptation.
+
+### Artifact locations for this update
+
+- Primary synthesis file:
+  - `/workspace/SUPERVISOR_RESULTS_SYNTHESIS.md`
+- CXR Foundation RAG branch summary:
+  - `/workspace/experiments/exp0039__domain_transfer_rag_summary__cxr_foundation_general_avg_pilot5h/summary.md`
+- ResNet50 vs CXR Foundation RAG comparison:
+  - `/workspace/experiments/exp0047__resnet50_vs_cxr_foundation_rag_comparison__pilot5h/summary.md`
 
 ## 0. April 11, 2026 Update: Pilot Image-Only Domain-Transfer Comparison
 

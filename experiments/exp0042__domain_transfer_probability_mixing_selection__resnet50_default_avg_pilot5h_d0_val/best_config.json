@@ -1,0 +1,18 @@
+{
+  "alpha": 0.7,
+  "memory_eval_root": "/workspace/experiments/exp0041__domain_transfer_source_memory_selection__resnet50_default_avg_pilot5h_d0_val",
+  "query_domain": "d0_nih",
+  "query_split": "val",
+  "selection_metric": "macro_auroc",
+  "selection_trace": {
+    "max_macro_auroc": 0.7395577680837649,
+    "max_macro_average_precision": 0.13728543454888611,
+    "selected_alpha": 0.7,
+    "tie_break_rule": [
+      "highest validation macro AUROC",
+      "higher validation macro average precision",
+      "larger alpha"
+    ]
+  },
+  "split_alias": "d0_val"
+}

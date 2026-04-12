@@ -1,0 +1,125 @@
+{
+  "label_metrics": {
+    "atelectasis": {
+      "auroc": 0.4956193047800325,
+      "average_precision": 0.18608503894969536,
+      "ece": 0.04430369849339178,
+      "f1_at_0.5": 0.0,
+      "f1_at_tuned_threshold": 0.2718271827182719,
+      "negative_count": 1189,
+      "positive_count": 266,
+      "prevalence": 0.18281786941580755,
+      "threshold_used": 0.15858283638954163
+    },
+    "cardiomegaly": {
+      "auroc": 0.5230913896151079,
+      "average_precision": 0.16417421584978553,
+      "ece": 0.13910268993977828,
+      "f1_at_0.5": 0.0,
+      "f1_at_tuned_threshold": 0.0,
+      "negative_count": 1226,
+      "positive_count": 229,
+      "prevalence": 0.15738831615120275,
+      "threshold_used": 0.09621205925941467
+    },
+    "consolidation": {
+      "auroc": 0.49092314297981965,
+      "average_precision": 0.06263542623767648,
+      "ece": 0.05719272789778988,
+      "f1_at_0.5": 0.0,
+      "f1_at_tuned_threshold": 0.10056925996204932,
+      "negative_count": 1370,
+      "positive_count": 85,
+      "prevalence": 0.058419243986254296,
+      "threshold_used": 0.04312555864453316
+    },
+    "edema": {
+      "auroc": 0.5096275803362418,
+      "average_precision": 0.13446421301590894,
+      "ece": 0.09322179094008154,
+      "f1_at_0.5": 0.0,
+      "f1_at_tuned_threshold": 0.19012797074954296,
+      "negative_count": 1270,
+      "positive_count": 185,
+      "prevalence": 0.12714776632302405,
+      "threshold_used": 0.058535002171993256
+    },
+    "pleural_effusion": {
+      "auroc": 0.5271568359803654,
+      "average_precision": 0.2493468762421746,
+      "ece": 0.07727099569623208,
+      "f1_at_0.5": 0.0,
+      "f1_at_tuned_threshold": 0.35239567233384855,
+      "negative_count": 1122,
+      "positive_count": 333,
+      "prevalence": 0.2288659793814433,
+      "threshold_used": 0.12134624272584915
+    },
+    "pneumonia": {
+      "auroc": 0.5387954146921148,
+      "average_precision": 0.07733868363630117,
+      "ece": 0.054279199735456723,
+      "f1_at_0.5": 0.0,
+      "f1_at_tuned_threshold": 0.028368794326241134,
+      "negative_count": 1353,
+      "positive_count": 102,
+      "prevalence": 0.07010309278350516,
+      "threshold_used": 0.059985481202602386
+    },
+    "pneumothorax": {
+      "auroc": 0.565201992252352,
+      "average_precision": 0.06001447171155236,
+      "ece": 0.010749410784121645,
+      "f1_at_0.5": 0.0,
+      "f1_at_tuned_threshold": 0.11014492753623188,
+      "negative_count": 1390,
+      "positive_count": 65,
+      "prevalence": 0.044673539518900345,
+      "threshold_used": 0.07857906818389893
+    }
+  },
+  "macro": {
+    "auroc": 0.5214879515194334,
+    "average_precision": 0.1334369893775849,
+    "ece": 0.06801721621240743,
+    "f1_at_0.5": 0.0,
+    "f1_at_tuned_thresholds": 0.15049054394659797
+  },
+  "thresholds": {
+    "atelectasis": {
+      "best_f1": 0.29411764705882354,
+      "prevalence": 0.104,
+      "threshold": 0.15858283638954163
+    },
+    "cardiomegaly": {
+      "best_f1": 0.1142857142857143,
+      "prevalence": 0.03,
+      "threshold": 0.09621205925941467
+    },
+    "consolidation": {
+      "best_f1": 0.1559322033898305,
+      "prevalence": 0.046,
+      "threshold": 0.04312555864453316
+    },
+    "edema": {
+      "best_f1": 0.2,
+      "prevalence": 0.025,
+      "threshold": 0.058535002171993256
+    },
+    "pleural_effusion": {
+      "best_f1": 0.3963553530751709,
+      "prevalence": 0.126,
+      "threshold": 0.12134624272584915
+    },
+    "pneumonia": {
+      "best_f1": 0.0625,
+      "prevalence": 0.014,
+      "threshold": 0.059985481202602386
+    },
+    "pneumothorax": {
+      "best_f1": 0.19999999999999998,
+      "prevalence": 0.044,
+      "threshold": 0.07857906818389893
+    }
+  }
+}

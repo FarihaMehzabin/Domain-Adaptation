@@ -1,0 +1,22 @@
+{
+  "embedding_sanity": {
+    "embedding_dim": 2048,
+    "normalized_norm_summary": {
+      "max": 1.0000000670199531,
+      "mean": 1.0000000120223402,
+      "min": 0.9999999362378587,
+      "std": 2.531627420835875e-08
+    },
+    "raw_norm_summary": {
+      "max": 1.0000000976401975,
+      "mean": 0.9999999999426317,
+      "min": 0.9999998843909335,
+      "std": 2.976578047288147e-08
+    },
+    "row_count": 10000
+  },
+  "self_retrieval": {
+    "sample_size": 512,
+    "top1_self_hit_rate": 1.0
+  }
+}
