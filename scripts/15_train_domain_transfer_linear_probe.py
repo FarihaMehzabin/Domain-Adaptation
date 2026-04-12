@@ -18,6 +18,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+import experiment_layout
 import numpy as np
 import torch
 from torch import nn
@@ -72,6 +73,17 @@ class SplitData:
     image_paths: list[str]
 
 
+@dataclass(frozen=True)
+class EvaluationPlan:
+    name: str
+    train_alias: str
+    selection_alias: str
+    primary_test_alias: str | None
+    split_specs: tuple[tuple[str, str, str], ...]
+    output_name_map: dict[str, str]
+    thresholds_filename: str
+
+
 AUTO_ID_COLUMNS = ("row_id", "sample_id", "image_id", "id")
 AUTO_PATH_COLUMNS = ("image_path", "report_path", "path")
 
@@ -120,17 +132,7 @@ def extract_experiment_number(name: str) -> int | None:
 
 
 def next_experiment_number(experiments_root: Path) -> int:
-    if not experiments_root.exists():
-        return 1
-    max_number = 0
-    for child in experiments_root.iterdir():
-        if not child.is_dir():
-            continue
-        number = extract_experiment_number(child.name)
-        if number is None:
-            continue
-        max_number = max(max_number, number)
-    return max_number + 1
+    return experiment_layout.next_experiment_number(experiments_root)
 
 
 def resolve_experiment_identity(
@@ -141,25 +143,15 @@ def resolve_experiment_identity(
     overwrite: bool,
     id_width: int = DEFAULT_EXPERIMENT_ID_WIDTH,
 ) -> tuple[int, str, str, Path]:
-    experiments_root.mkdir(parents=True, exist_ok=True)
     requested = (requested_name or "").strip() or None
     base_name = ensure_operation_prefix(requested or generated_slug)
-    explicit_number = extract_experiment_number(base_name)
-    if explicit_number is not None:
-        experiment_number = explicit_number
-        experiment_name = base_name
-    else:
-        experiment_number = next_experiment_number(experiments_root)
-        experiment_name = f"exp{experiment_number:0{id_width}d}__{base_name}"
-    experiment_id = f"exp{experiment_number:0{id_width}d}"
-    experiment_dir = experiments_root / experiment_name
-    if experiment_dir.exists() and not overwrite:
-        raise SystemExit(
-            f"Experiment directory already exists: {experiment_dir}\n"
-            "Pass --overwrite to reuse it or choose a different --experiment-name."
-        )
-    experiment_dir.mkdir(parents=True, exist_ok=True)
-    return experiment_number, experiment_id, experiment_name, experiment_dir
+    return experiment_layout.resolve_experiment_identity(
+        experiments_root=experiments_root,
+        requested_name=base_name if requested else None,
+        generated_slug=base_name,
+        overwrite=overwrite,
+        id_width=id_width,
+    )
 
 
 def resolve_device(requested: str) -> torch.device:
@@ -674,7 +666,13 @@ def mean_or_none(values: list[float | None]) -> float | None:
     return float(sum(clean) / len(clean))
 
 
-def tune_thresholds(y_true: np.ndarray, probs: np.ndarray, label_names: list[str]) -> tuple[np.ndarray, dict[str, Any]]:
+def tune_thresholds(
+    y_true: np.ndarray,
+    probs: np.ndarray,
+    label_names: list[str],
+    *,
+    selection_split: str,
+) -> tuple[np.ndarray, dict[str, Any]]:
     thresholds = np.full((len(label_names),), 0.5, dtype=np.float32)
     payload: dict[str, Any] = {}
     for idx, label_name in enumerate(label_names):
@@ -697,7 +695,7 @@ def tune_thresholds(y_true: np.ndarray, probs: np.ndarray, label_names: list[str
         thresholds[idx] = threshold
         payload[label_name] = {"threshold": threshold, "best_f1": float(f1[best_index])}
     return thresholds, {
-        "selection_split": "d0_val",
+        "selection_split": selection_split,
         "selection_metric": "per_label_f1",
         "macro_threshold": float(thresholds.mean()) if thresholds.size else None,
         "labels": payload,
@@ -859,6 +857,63 @@ def format_bash_command(argv: list[str]) -> str:
     return " \\\n  ".join(shlex.quote(part) for part in argv)
 
 
+def build_evaluation_plan(*, split_profile: str, embedding_layout: str) -> EvaluationPlan:
+    if split_profile == "source_transfer":
+        split_specs: list[tuple[str, str, str]] = [
+            ("d0_train", "d0_nih", "train"),
+            ("d0_val", "d0_nih", "val"),
+            ("d0_test", "d0_nih", "test"),
+        ]
+        output_name_map = {
+            "d0_val": "d0_val_metrics.json",
+            "d0_test": "d0_test_metrics.json",
+        }
+        if embedding_layout == "domain_split":
+            split_specs.extend(
+                [
+                    ("d1_transfer", "d1_chexpert", "val"),
+                    ("d2_transfer", "d2_mimic", "test"),
+                ]
+            )
+            output_name_map.update(
+                {
+                    "d1_transfer": "d1_transfer_metrics.json",
+                    "d2_transfer": "d2_transfer_metrics.json",
+                }
+            )
+        return EvaluationPlan(
+            name=split_profile,
+            train_alias="d0_train",
+            selection_alias="d0_val",
+            primary_test_alias="d0_test",
+            split_specs=tuple(split_specs),
+            output_name_map=output_name_map,
+            thresholds_filename="d0_val_f1_thresholds.json",
+        )
+
+    if split_profile == "chexpert_target":
+        if embedding_layout != "domain_split":
+            raise SystemExit("--split-profile chexpert_target requires --embedding-layout domain_split.")
+        return EvaluationPlan(
+            name=split_profile,
+            train_alias="target_train",
+            selection_alias="target_val",
+            primary_test_alias="target_test",
+            split_specs=(
+                ("target_train", "d1_chexpert", "train"),
+                ("target_val", "d1_chexpert", "val"),
+                ("target_test", "d1_chexpert", "test"),
+            ),
+            output_name_map={
+                "target_val": "target_val_metrics.json",
+                "target_test": "target_test_metrics.json",
+            },
+            thresholds_filename="target_val_f1_thresholds.json",
+        )
+
+    raise SystemExit(f"Unsupported --split-profile value: {split_profile}")
+
+
 def render_recreation_report(
     *,
     experiment_dir: Path,
@@ -909,9 +964,9 @@ def render_recreation_report(
             "",
             "## Notes",
             "",
-            "- Training uses only `d0_train` embeddings.",
-            "- Early stopping is driven by `d0_val` macro AUROC.",
-            "- Validation-tuned thresholds are reused unchanged for D0 test and transfer evaluations.",
+            f"- Training uses only `{config['train_alias']}` embeddings.",
+            f"- Early stopping is driven by `{config['selection_alias']}` macro AUROC.",
+            f"- `{config['selection_alias']}`-tuned thresholds are reused unchanged for later evaluation splits.",
             "",
         ]
     )
@@ -927,6 +982,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--manifest-csv", type=Path, default=DEFAULT_MANIFEST_CSV)
     parser.add_argument("--experiments-root", type=Path, default=DEFAULT_EXPERIMENTS_ROOT)
     parser.add_argument("--experiment-name", type=str, default=None)
+    parser.add_argument(
+        "--split-profile",
+        choices=("source_transfer", "chexpert_target"),
+        default="source_transfer",
+        help="Which manifest split layout to train and evaluate.",
+    )
     parser.add_argument(
         "--embedding-layout",
         choices=("domain_split", "source_only"),
@@ -992,22 +1053,13 @@ def main() -> int:
     manifest_csv = args.manifest_csv.resolve()
     embedding_root = args.embedding_root.resolve()
     label_names, manifest_by_key = load_manifest_records(manifest_csv)
-
-    eval_specs: list[tuple[str, str, str]] = [
-        ("d0_train", "d0_nih", "train"),
-        ("d0_val", "d0_nih", "val"),
-        ("d0_test", "d0_nih", "test"),
-    ]
-    if args.embedding_layout == "domain_split":
-        eval_specs.extend(
-            [
-                ("d1_transfer", "d1_chexpert", "val"),
-                ("d2_transfer", "d2_mimic", "test"),
-            ]
-        )
+    evaluation_plan = build_evaluation_plan(
+        split_profile=args.split_profile,
+        embedding_layout=args.embedding_layout,
+    )
 
     split_data: dict[str, SplitData] = {}
-    for alias, domain, split in eval_specs:
+    for alias, domain, split in evaluation_plan.split_specs:
         manifest_records = manifest_by_key.get((domain, split))
         if manifest_records is None:
             raise SystemExit(f"Manifest does not contain records for domain={domain} split={split}.")
@@ -1023,7 +1075,7 @@ def main() -> int:
         )
 
     input_dim = infer_input_dim(
-        split_data["d0_train"].embeddings_path,
+        split_data[evaluation_plan.train_alias].embeddings_path,
         token_pooling=args.token_pooling,
         l2_normalize_features=bool(args.l2_normalize_features),
     )
@@ -1031,6 +1083,7 @@ def main() -> int:
         [
             DEFAULT_OPERATION_LABEL,
             slugify(embedding_root.name, fallback="embedding-root"),
+            f"profile-{args.split_profile}",
             f"layout-{args.embedding_layout}",
             f"pool-{args.token_pooling}",
             f"head-{args.head_type}",
@@ -1047,7 +1100,7 @@ def main() -> int:
     )
 
     train_loader = build_dataloader(
-        split_data["d0_train"],
+        split_data[evaluation_plan.train_alias],
         batch_size=args.batch_size,
         num_workers=args.num_workers,
         device=device,
@@ -1066,7 +1119,7 @@ def main() -> int:
             l2_normalize_features=bool(args.l2_normalize_features),
         )
         for alias, payload in split_data.items()
-        if alias != "d0_train"
+        if alias != evaluation_plan.train_alias
     }
 
     model = build_probe_model(
@@ -1076,7 +1129,7 @@ def main() -> int:
         mlp_hidden_dims=mlp_hidden_dims,
         mlp_dropout=float(args.mlp_dropout),
     ).to(device)
-    pos_weight = compute_pos_weight(split_data["d0_train"].labels).to(device)
+    pos_weight = compute_pos_weight(split_data[evaluation_plan.train_alias].labels).to(device)
     criterion = nn.BCEWithLogitsLoss(pos_weight=pos_weight)
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
     scaler = torch.cuda.amp.GradScaler(enabled=bool(args.fp16_on_cuda and device.type == "cuda"))
@@ -1091,6 +1144,7 @@ def main() -> int:
         "experiment_dir": str(experiment_dir),
         "embedding_root": str(embedding_root),
         "manifest_csv": str(manifest_csv),
+        "split_profile": args.split_profile,
         "embedding_layout": args.embedding_layout,
         "token_pooling": args.token_pooling,
         "l2_normalize_features": bool(args.l2_normalize_features),
@@ -1116,6 +1170,9 @@ def main() -> int:
         "device_resolved": str(device),
         "fp16_on_cuda": bool(args.fp16_on_cuda),
         "max_rows_per_split": int(args.max_rows_per_split) if args.max_rows_per_split is not None else None,
+        "train_alias": evaluation_plan.train_alias,
+        "selection_alias": evaluation_plan.selection_alias,
+        "primary_test_alias": evaluation_plan.primary_test_alias,
         "split_inputs": {
             alias: {
                 "domain": payload.domain,
@@ -1155,18 +1212,18 @@ def main() -> int:
             device=device,
             fp16_on_cuda=bool(args.fp16_on_cuda),
         )
-        d0_val_loss, d0_val_logits, d0_val_targets = evaluate_model(
-            loader=eval_loaders["d0_val"],
+        selection_loss, selection_logits, selection_targets = evaluate_model(
+            loader=eval_loaders[evaluation_plan.selection_alias],
             model=model,
             criterion=criterion,
             device=device,
             fp16_on_cuda=bool(args.fp16_on_cuda),
         )
         current_summary = summarize_split_metrics(
-            split_alias="d0_val",
-            loss=d0_val_loss,
-            targets=d0_val_targets,
-            logits=d0_val_logits,
+            split_alias=evaluation_plan.selection_alias,
+            loss=selection_loss,
+            targets=selection_targets,
+            logits=selection_logits,
             label_names=label_names,
             tuned_thresholds=np.full((len(label_names),), 0.5, dtype=np.float32),
         )
@@ -1198,16 +1255,18 @@ def main() -> int:
             {
                 "epoch": int(epoch),
                 "train_loss": float(train_loss),
-                "d0_val_loss": float(d0_val_loss),
-                "d0_val_macro_auroc": current_summary["macro"]["auroc"],
-                "d0_val_macro_average_precision": current_summary["macro"]["average_precision"],
+                "selection_alias": evaluation_plan.selection_alias,
+                f"{evaluation_plan.selection_alias}_loss": float(selection_loss),
+                f"{evaluation_plan.selection_alias}_macro_auroc": current_summary["macro"]["auroc"],
+                f"{evaluation_plan.selection_alias}_macro_average_precision": current_summary["macro"]["average_precision"],
                 "improved": bool(improved),
                 "elapsed_sec": float(time.time() - epoch_started),
             },
         )
         print(
             f"[epoch {epoch:03d}] train_loss={train_loss:.6f} "
-            f"d0_val_loss={d0_val_loss:.6f} d0_val_macro_auroc={format_metric(current_summary['macro']['auroc'])} "
+            f"{evaluation_plan.selection_alias}_loss={selection_loss:.6f} "
+            f"{evaluation_plan.selection_alias}_macro_auroc={format_metric(current_summary['macro']['auroc'])} "
             f"improved={str(improved).lower()}"
         )
         if epochs_without_improvement > args.patience:
@@ -1228,17 +1287,16 @@ def main() -> int:
             fp16_on_cuda=bool(args.fp16_on_cuda),
         )
 
-    d0_val_loss, d0_val_logits, d0_val_targets = raw_eval_results["d0_val"]
-    d0_val_probs = sigmoid_np(d0_val_logits.astype(np.float64))
-    tuned_thresholds, threshold_payload = tune_thresholds(d0_val_targets, d0_val_probs, label_names)
+    selection_loss, selection_logits, selection_targets = raw_eval_results[evaluation_plan.selection_alias]
+    selection_probs = sigmoid_np(selection_logits.astype(np.float64))
+    tuned_thresholds, threshold_payload = tune_thresholds(
+        selection_targets,
+        selection_probs,
+        label_names,
+        selection_split=evaluation_plan.selection_alias,
+    )
 
     metrics_by_alias: dict[str, dict[str, Any]] = {}
-    output_name_map = {
-        "d0_val": "d0_val_metrics.json",
-        "d0_test": "d0_test_metrics.json",
-        "d1_transfer": "d1_transfer_metrics.json",
-        "d2_transfer": "d2_transfer_metrics.json",
-    }
     for alias, (loss, logits, targets) in raw_eval_results.items():
         metrics = summarize_split_metrics(
             split_alias=alias,
@@ -1249,15 +1307,15 @@ def main() -> int:
             tuned_thresholds=tuned_thresholds,
         )
         metrics_by_alias[alias] = metrics
-        output_name = output_name_map.get(alias, f"{alias}_metrics.json")
+        output_name = evaluation_plan.output_name_map.get(alias, f"{alias}_metrics.json")
         write_json(experiment_dir / output_name, metrics)
 
-    write_json(experiment_dir / "d0_val_f1_thresholds.json", threshold_payload)
+    write_json(experiment_dir / evaluation_plan.thresholds_filename, threshold_payload)
     torch.save(
         {
             "epoch": best_epoch,
             "state_dict": best_state,
-            "best_summary": metrics_by_alias["d0_val"],
+            "best_summary": metrics_by_alias[evaluation_plan.selection_alias],
             "label_names": label_names,
             "tuned_thresholds": tuned_thresholds.tolist(),
             "token_pooling": args.token_pooling,
@@ -1280,6 +1338,7 @@ def main() -> int:
         "operation_label": DEFAULT_OPERATION_LABEL,
         "embedding_root": str(embedding_root),
         "manifest_csv": str(manifest_csv),
+        "split_profile": args.split_profile,
         "embedding_layout": args.embedding_layout,
         "token_pooling": args.token_pooling,
         "l2_normalize_features": bool(args.l2_normalize_features),
@@ -1292,9 +1351,12 @@ def main() -> int:
         "input_dim": int(input_dim),
         "num_labels": len(label_names),
         "model_num_parameters": model_num_parameters,
+        "train_alias": evaluation_plan.train_alias,
+        "selection_alias": evaluation_plan.selection_alias,
+        "primary_test_alias": evaluation_plan.primary_test_alias,
         "split_inputs": config["split_inputs"],
         "macro_metrics": {alias: summary["macro"] for alias, summary in metrics_by_alias.items()},
-        "thresholds_path": str(experiment_dir / "d0_val_f1_thresholds.json"),
+        "thresholds_path": str(experiment_dir / evaluation_plan.thresholds_filename),
         "checkpoint_path": str(experiment_dir / "best.ckpt"),
     }
     write_json(experiment_dir / "experiment_meta.json", experiment_meta)
@@ -1307,12 +1369,19 @@ def main() -> int:
     )
     (experiment_dir / "recreation_report.md").write_text(recreation_report, encoding="utf-8")
 
+    primary_test_fragment = ""
+    if evaluation_plan.primary_test_alias and evaluation_plan.primary_test_alias in metrics_by_alias:
+        primary_test_fragment = (
+            f" {evaluation_plan.primary_test_alias}_macro_auroc="
+            f"{format_metric(metrics_by_alias[evaluation_plan.primary_test_alias]['macro']['auroc'])}"
+        )
     print(
         "[done] "
         f"best_epoch={best_epoch} "
         f"head={config['head_description']} "
-        f"d0_val_macro_auroc={format_metric(metrics_by_alias['d0_val']['macro']['auroc'])} "
-        f"d0_test_macro_auroc={format_metric(metrics_by_alias['d0_test']['macro']['auroc'])} "
+        f"{evaluation_plan.selection_alias}_macro_auroc="
+        f"{format_metric(metrics_by_alias[evaluation_plan.selection_alias]['macro']['auroc'])}"
+        f"{primary_test_fragment} "
         f"output_dir={experiment_dir}"
     )
     return 0

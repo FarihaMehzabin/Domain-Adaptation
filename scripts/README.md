@@ -41,10 +41,10 @@ Notes:
   Use `--disable-gated-hybrid` only if you explicitly want the older pure cross-attention export path.
 - Step `11` exports the trained cross-attention model into a standard split-aware `embeddings.npy` root so steps `04` to `09` can run unchanged on the new branch.
 - Step `12` builds the original common-label manifest used for the NIH-train to CheXpert/MIMIC transfer view.
-- Step `13` builds the new D0/D1/D2 manifest with NIH `train/val/test`, CheXpert `val`, and MIMIC `val/test`.
+- Step `13` builds the new D0/D1/D2 manifest with NIH `train/val/test`, CheXpert `train` plus `val` (from the official valid split), and MIMIC `val/test`.
 - Step `14` exports image-only CXR Foundation embeddings into domain/split-sharded `embeddings.npy` roots plus a root-level `embedding_index.csv`.
-- Step `15` trains the image-only multilabel linear or MLP head on `D0 train`, early-stops on `D0 val` macro AUROC, and evaluates `D0 test` plus direct transfer to `D1` and `D2`.
-- Step `16` builds smaller subset manifests such as the pilot NIH-source transfer slice used to compare backbones quickly before full runs.
+- Step `15` trains the image-only multilabel linear or MLP head on either the default NIH-source transfer profile or the new CheXpert target-only profile, with early stopping driven by the selected validation split.
+- Step `16` builds smaller subset manifests such as the pilot NIH-source transfer slice used to compare backbones quickly before full runs, and can now carve CheXpert `train` into disjoint target `train/val` splits while remapping CheXpert `valid` to target `test`.
 - Step `17` exports domain-aware torch image embeddings for NIH/CheXpert/MIMIC using the same basic CNN path as the original NIH-only ResNet workflow.
 - Step `18` benchmarks CXR Foundation batch sizes on a chosen subset before committing to a long export run.
 - Step `19` benchmarks torch image-encoder batch sizes on a chosen subset before the real ResNet export.

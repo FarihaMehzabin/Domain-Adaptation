@@ -2,7 +2,136 @@
 
 Prepared on April 12, 2026 (UTC).
 
-Most recent updates: the current active image-only domain-transfer pilot is summarized in Sections 0, 0A, and 0B below. If any older section later in this file conflicts with Sections 0, 0A, or 0B, treat Section 0B as the newest result for the present workspace.
+Most recent updates: the current active image-only domain-transfer pilot is summarized in Sections 0, 0A, 0B, and 0C below. If any older section later in this file conflicts with Sections 0, 0A, 0B, or 0C, treat Section 0C as the newest result for the present workspace.
+
+## 0C. April 12, 2026 Update: Few-Shot CheXpert Target-Only Linear Probes on CXR Foundation
+
+### Objective
+
+After the NIH-source image-only baseline and the retrieval reruns, the next question was whether a small amount of labeled target-domain supervision on `CheXpert` could beat the existing `NIH -> CheXpert` linear baseline when the backbone remained frozen.
+
+The specific question was:
+
+- keep the same frozen `CXR Foundation` image embeddings
+- train a new linear multilabel head on small labeled `CheXpert` target splits only
+- evaluate on the same `234`-example `CheXpert valid` holdout that was used earlier as `D1 transfer`
+
+### Experimental protocol
+
+- Date:
+  - `April 12, 2026 (UTC)`
+- Backbone:
+  - `CXR Foundation`
+  - `general` image embeddings
+  - `avg` token pooling
+  - `768`-dim features
+- Shared label space:
+  - `atelectasis`
+  - `cardiomegaly`
+  - `consolidation`
+  - `edema`
+  - `pleural_effusion`
+  - `pneumonia`
+  - `pneumothorax`
+- Target split construction:
+  - `CheXpert train.csv` was split into disjoint target `train` and target `val`
+  - `CheXpert valid.csv` was used unchanged as target `test`
+- Shot settings:
+  - `250 train / 250 val / 234 test`
+  - `500 train / 500 val / 234 test`
+  - `1000 train / 1000 val / 234 test`
+- Model head:
+  - frozen-backbone linear multilabel classifier
+- Selection rule:
+  - early stop on target `val` macro AUROC
+  - tune thresholds on target `val`
+  - report final results on target `test`
+- Comparator:
+  - the `NIH`-source `CXR Foundation` linear baseline from Section `0`
+- Split identity check:
+  - the earlier `D1 = CheXpert val` rows and the new target `test` rows were verified to have identical `row_id` sets and identical image paths
+
+### Run lineage
+
+- full manifest with CheXpert train enabled:
+  - `/workspace/manifest_common_labels_nih_train_val_test_chexpert_mimic_with_train.csv`
+- target manifests:
+  - `/workspace/manifest_chexpert_target_250.csv`
+  - `/workspace/manifest_chexpert_target_500.csv`
+  - `/workspace/manifest_chexpert_target_1000.csv`
+- `250-shot` target run:
+  - embedding export: `exp0050__cxr_foundation_embedding_export__chexpert_target_250_cxr_foundation_avg_batch128`
+  - head training: `exp0051__domain_transfer_head_training__chexpert_target_250_cxr_foundation_linear_gpu`
+- `500-shot` target run:
+  - embedding export: `exp0052__cxr_foundation_embedding_export__chexpert_target_500_cxr_foundation_avg_batch128`
+  - head training: `exp0053__domain_transfer_head_training__chexpert_target_500_cxr_foundation_linear_gpu`
+- `1000-shot` target run:
+  - embedding export: `exp0054__cxr_foundation_embedding_export__chexpert_target_1000_cxr_foundation_avg_batch128`
+  - head training: `exp0055__domain_transfer_head_training__chexpert_target_1000_cxr_foundation_linear_gpu`
+
+### Main quantitative results
+
+The earlier `NIH`-source comparator and the new target-only runs were evaluated on the same `234`-example `CheXpert` holdout.
+
+| Training rule | Train rows | Val rows | Same CheXpert test AUROC | Same CheXpert test AP | Same CheXpert test F1@0.5 | Same CheXpert test F1@tuned |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| `NIH`-source linear baseline (`exp0015`) | `10,000 NIH` | `1,000 NIH` | `0.8454` | `0.5430` | `0.4610` | `0.3492` |
+| `CheXpert` target-only linear (`250/250`) | `250` | `250` | `0.7532` | `0.4764` | `0.4521` | `0.4166` |
+| `CheXpert` target-only linear (`500/500`) | `500` | `500` | `0.7611` | `0.4522` | `0.4356` | `0.3997` |
+| `CheXpert` target-only linear (`1000/1000`) | `1000` | `1000` | `0.7702` | `0.4715` | `0.4448` | `0.4210` |
+
+Target-only progression:
+
+- AUROC improved from `0.7532` at `250` shots to `0.7702` at `1000` shots.
+- AP was not monotonic:
+  - `250`: `0.4764`
+  - `500`: `0.4522`
+  - `1000`: `0.4715`
+- The best target-only fixed-threshold result also stayed at `250`, with `F1@0.5 = 0.4521`.
+
+### Interpretation
+
+- More target-only `CheXpert` supervision helped, but the gains were moderate:
+  - `250 -> 1000` improved test macro AUROC by `+0.0170`
+  - `250 -> 1000` changed test macro AP by `-0.0049`
+  - `250 -> 1000` changed test macro `F1@0.5` by `-0.0074`
+- The main comparison did not flip:
+  - the `NIH`-source linear baseline remained ahead of the best target-only run by `+0.0752` AUROC
+  - it also remained ahead by `+0.0715` AP
+  - it remained slightly ahead on fixed-threshold `F1@0.5` by `+0.0162`
+- Therefore, within this frozen-backbone linear-head setup, up to `1000` labeled target training examples were still not enough to beat the existing `NIH`-source `CXR Foundation` head on the same `CheXpert` holdout.
+
+Thresholded interpretation:
+
+- The target-only runs showed higher `F1@tuned` than the `NIH`-source baseline.
+- However, that comparison should be treated cautiously because the target-only thresholds were tuned on a separate `CheXpert` target `val` split, whereas the original source baseline followed the earlier source-domain validation protocol.
+- The cleaner primary comparison is therefore AUROC, AP, and fixed-threshold `F1@0.5`, where the `NIH`-source baseline still leads.
+
+### Supervisor-facing message
+
+The important supervisor-facing clarification is that this is not a split-mismatch artifact:
+
+- the old source-transfer `CheXpert val` set and the new target-only `CheXpert test` set are the same `234` studies
+- the comparison is therefore directly on the same held-out target examples
+
+The defensible conclusion is:
+
+1. `CXR Foundation` transfers strongly enough from `NIH` that a source-trained linear head remains hard to beat.
+2. A fresh target-only linear head does improve as more `CheXpert` labels are added, but even `1000` target training examples do not yet surpass the `NIH`-source baseline on the main ranking metrics.
+3. The next adaptation step should therefore not be framed as “replace source training with a tiny target-only head.” The more plausible next move is to warm-start from the strong `NIH`-source head and then adapt it with target supervision.
+
+### Artifact locations for this update
+
+- synthesis file:
+  - `/workspace/SUPERVISOR_RESULTS_SYNTHESIS.md`
+- target manifests:
+  - `/workspace/manifest_chexpert_target_250.csv`
+  - `/workspace/manifest_chexpert_target_500.csv`
+  - `/workspace/manifest_chexpert_target_1000.csv`
+- target-run experiment directories:
+  - `/workspace/experiments/active/exp0051__domain_transfer_head_training__chexpert_target_250_cxr_foundation_linear_gpu`
+  - `/workspace/experiments/active/exp0053__domain_transfer_head_training__chexpert_target_500_cxr_foundation_linear_gpu`
+  - `/workspace/experiments/active/exp0055__domain_transfer_head_training__chexpert_target_1000_cxr_foundation_linear_gpu`
 
 ## 0B. April 12, 2026 Update: Retrieval-Augmented Domain-Transfer Comparison on CXR Foundation vs ResNet50
 
@@ -92,7 +221,7 @@ The selection rule was the same in both branches:
   - `exp0031__domain_transfer_probability_mixing_target_evaluation__domain_transfer_probability_mixing_selection__cxr_foundation_general_avg_pilot5h_d0_val__d1_transfer`
   - `exp0031__domain_transfer_probability_mixing_target_evaluation__domain_transfer_probability_mixing_selection__cxr_foundation_general_avg_pilot5h_d0_val__d2_transfer`
 - compact branch summary:
-  - `/workspace/experiments/exp0039__domain_transfer_rag_summary__cxr_foundation_general_avg_pilot5h/summary.md`
+  - `/workspace/experiments/complete/exp0039__domain_transfer_rag_summary__cxr_foundation_general_avg_pilot5h/summary.md`
 
 #### ResNet50 retrieval branch
 
@@ -111,7 +240,7 @@ The selection rule was the same in both branches:
   - `exp0045__domain_transfer_probability_mixing_target_evaluation__resnet50_default_avg_pilot5h_d1_transfer`
   - `exp0046__domain_transfer_probability_mixing_target_evaluation__resnet50_default_avg_pilot5h_d2_transfer`
 - compact cross-backbone summary:
-  - `/workspace/experiments/exp0047__resnet50_vs_cxr_foundation_rag_comparison__pilot5h/summary.md`
+  - `/workspace/experiments/complete/exp0047__resnet50_vs_cxr_foundation_rag_comparison__pilot5h/summary.md`
 
 ### Selected hyperparameters
 
@@ -239,9 +368,9 @@ One defensible presentation storyline is:
 - Primary synthesis file:
   - `/workspace/SUPERVISOR_RESULTS_SYNTHESIS.md`
 - CXR Foundation RAG branch summary:
-  - `/workspace/experiments/exp0039__domain_transfer_rag_summary__cxr_foundation_general_avg_pilot5h/summary.md`
+  - `/workspace/experiments/complete/exp0039__domain_transfer_rag_summary__cxr_foundation_general_avg_pilot5h/summary.md`
 - ResNet50 vs CXR Foundation RAG comparison:
-  - `/workspace/experiments/exp0047__resnet50_vs_cxr_foundation_rag_comparison__pilot5h/summary.md`
+  - `/workspace/experiments/complete/exp0047__resnet50_vs_cxr_foundation_rag_comparison__pilot5h/summary.md`
 
 ## 0. April 11, 2026 Update: Pilot Image-Only Domain-Transfer Comparison
 
@@ -419,13 +548,13 @@ Based on this pilot, the most defensible next move is:
 - Pilot manifest:
   - `/workspace/manifest_common_labels_pilot5h.csv`
 - ResNet50 embedding export:
-  - `/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h`
+  - `/workspace/experiments/complete/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h`
 - ResNet50 transfer evaluation:
-  - `/workspace/experiments/exp0013__domain_transfer_linear_probe__resnet50_default_avg_pilot5h`
+  - `/workspace/experiments/complete/exp0013__domain_transfer_linear_probe__resnet50_default_avg_pilot5h`
 - CXR Foundation embedding export:
-  - `/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128`
+  - `/workspace/experiments/complete/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128`
 - CXR Foundation transfer evaluation:
-  - `/workspace/experiments/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h`
+  - `/workspace/experiments/complete/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h`
 - Main logs:
   - `/workspace/logs/exp0011__torch_image_batch_sweep__pilot5h_d0_train_resnet50.log`
   - `/workspace/logs/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h.log`
@@ -458,9 +587,9 @@ The specific comparison was:
     - `/workspace/manifest_common_labels_pilot5h.csv`
 - Embedding roots:
   - ResNet50 pilot embeddings:
-    - `/workspace/experiments/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h`
+    - `/workspace/experiments/complete/exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h`
   - CXR Foundation pilot embeddings:
-    - `/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128`
+    - `/workspace/experiments/complete/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128`
 - Head family:
   - one-hidden-layer MLP
   - `ReLU`
@@ -569,19 +698,19 @@ The MLP sweep should be kept in the write-up as a negative-but-informative contr
 ### Key artifact locations for presentation
 
 - MLP sweep orchestrator:
-  - `/workspace/experiments/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep`
+  - `/workspace/experiments/complete/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep`
 - MLP sweep leaderboard:
-  - `/workspace/experiments/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep/leaderboard.json`
-  - `/workspace/experiments/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep/leaderboard.csv`
-  - `/workspace/experiments/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep/summary.md`
+  - `/workspace/experiments/complete/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep/leaderboard.json`
+  - `/workspace/experiments/complete/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep/leaderboard.csv`
+  - `/workspace/experiments/complete/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep/summary.md`
 - ResNet50 MLP runs:
-  - `/workspace/experiments/exp0017__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-256__dropout-0p2`
-  - `/workspace/experiments/exp0018__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-512__dropout-0p2`
-  - `/workspace/experiments/exp0019__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-1024__dropout-0p2`
+  - `/workspace/experiments/complete/exp0017__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-256__dropout-0p2`
+  - `/workspace/experiments/complete/exp0018__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-512__dropout-0p2`
+  - `/workspace/experiments/complete/exp0019__domain_transfer_head_training__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__pilot5h__head-mlp__hidden-1024__dropout-0p2`
 - CXR Foundation MLP runs:
-  - `/workspace/experiments/exp0020__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-256__dropout-0p2`
-  - `/workspace/experiments/exp0021__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-512__dropout-0p2`
-  - `/workspace/experiments/exp0022__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-1024__dropout-0p2`
+  - `/workspace/experiments/complete/exp0020__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-256__dropout-0p2`
+  - `/workspace/experiments/complete/exp0021__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-512__dropout-0p2`
+  - `/workspace/experiments/complete/exp0022__domain_transfer_head_training__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128__pilot5h__head-mlp__hidden-1024__dropout-0p2`
 - Main logs:
   - `/workspace/logs/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep.log`
   - `/workspace/logs/exp0016__domain_transfer_mlp_sweep__pilot5h_domain_transfer_mlp_sweep__exp0012__embedding_generation__domain_transfer_resnet50_default_avg_pilot5h__hidden-256.log`
@@ -713,7 +842,7 @@ The ViT LoRA branch should be kept as a useful comparison point:
 ### Key artifact locations for presentation
 
 - Full pilot LoRA run:
-  - `/workspace/experiments/exp0027__domain_transfer_lora_training__vit_base_patch16_224_in21k_pilot5h`
+  - `/workspace/experiments/complete/exp0027__domain_transfer_lora_training__vit_base_patch16_224_in21k_pilot5h`
 - Full pilot log:
   - `/workspace/logs/exp0027__domain_transfer_lora_training__vit_base_patch16_224_in21k_pilot5h.log`
 

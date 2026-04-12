@@ -1,0 +1,461 @@
+{
+  "chexpert_target_counts": {
+    "test": -1,
+    "train": 250,
+    "val": 250
+  },
+  "input_csv": "/tmp/manifest_domain_transfer_with_chexpert_train.csv",
+  "output_csv": "/workspace/manifest_chexpert_target_250.csv",
+  "profile": "chexpert_target_250",
+  "requested_counts": {
+    "d0_nih/test": 0,
+    "d0_nih/train": 0,
+    "d0_nih/val": 0,
+    "d1_chexpert/train": 0,
+    "d1_chexpert/val": 0,
+    "d2_mimic/test": 0,
+    "d2_mimic/val": 0
+  },
+  "seed": 13,
+  "splits": {
+    "d0_nih/test": {
+      "available_rows": 22330,
+      "label_positive_counts": {
+        "label_atelectasis": {
+          "available": 2305,
+          "selected": 0
+        },
+        "label_cardiomegaly": {
+          "available": 534,
+          "selected": 0
+        },
+        "label_consolidation": {
+          "available": 988,
+          "selected": 0
+        },
+        "label_edema": {
+          "available": 437,
+          "selected": 0
+        },
+        "label_pleural_effusion": {
+          "available": 2635,
+          "selected": 0
+        },
+        "label_pneumonia": {
+          "available": 277,
+          "selected": 0
+        },
+        "label_pneumothorax": {
+          "available": 1054,
+          "selected": 0
+        }
+      },
+      "label_signature_counts_selected": {},
+      "output_key": "d0_nih/test",
+      "requested_rows": 0,
+      "selected_rows": 0,
+      "selection_mode": "sampled",
+      "source_key": "d0_nih/test"
+    },
+    "d0_nih/train": {
+      "available_rows": 78571,
+      "label_positive_counts": {
+        "label_atelectasis": {
+          "available": 8102,
+          "selected": 0
+        },
+        "label_cardiomegaly": {
+          "available": 1939,
+          "selected": 0
+        },
+        "label_consolidation": {
+          "available": 3225,
+          "selected": 0
+        },
+        "label_edema": {
+          "available": 1613,
+          "selected": 0
+        },
+        "label_pleural_effusion": {
+          "available": 9292,
+          "selected": 0
+        },
+        "label_pneumonia": {
+          "available": 1008,
+          "selected": 0
+        },
+        "label_pneumothorax": {
+          "available": 3744,
+          "selected": 0
+        }
+      },
+      "label_signature_counts_selected": {},
+      "output_key": "d0_nih/train",
+      "requested_rows": 0,
+      "selected_rows": 0,
+      "selection_mode": "sampled",
+      "source_key": "d0_nih/train"
+    },
+    "d0_nih/val": {
+      "available_rows": 11219,
+      "label_positive_counts": {
+        "label_atelectasis": {
+          "available": 1152,
+          "selected": 0
+        },
+        "label_cardiomegaly": {
+          "available": 303,
+          "selected": 0
+        },
+        "label_consolidation": {
+          "available": 454,
+          "selected": 0
+        },
+        "label_edema": {
+          "available": 253,
+          "selected": 0
+        },
+        "label_pleural_effusion": {
+          "available": 1390,
+          "selected": 0
+        },
+        "label_pneumonia": {
+          "available": 146,
+          "selected": 0
+        },
+        "label_pneumothorax": {
+          "available": 504,
+          "selected": 0
+        }
+      },
+      "label_signature_counts_selected": {},
+      "output_key": "d0_nih/val",
+      "requested_rows": 0,
+      "selected_rows": 0,
+      "selection_mode": "sampled",
+      "source_key": "d0_nih/val"
+    },
+    "d1_chexpert/test": {
+      "available_rows": 234,
+      "label_positive_counts": {
+        "label_atelectasis": {
+          "available": 80,
+          "selected": 80
+        },
+        "label_cardiomegaly": {
+          "available": 68,
+          "selected": 68
+        },
+        "label_consolidation": {
+          "available": 33,
+          "selected": 33
+        },
+        "label_edema": {
+          "available": 45,
+          "selected": 45
+        },
+        "label_pleural_effusion": {
+          "available": 67,
+          "selected": 67
+        },
+        "label_pneumonia": {
+          "available": 8,
+          "selected": 8
+        },
+        "label_pneumothorax": {
+          "available": 8,
+          "selected": 8
+        }
+      },
+      "label_signature_counts_selected": {
+        "0|0|0|0|0|0|0": 91,
+        "0|0|0|0|0|0|1": 6,
+        "0|0|0|0|1|0|0": 9,
+        "0|0|0|1|0|0|0": 11,
+        "0|0|1|0|0|1|0": 1,
+        "0|0|1|0|1|0|0": 2,
+        "0|0|1|1|1|0|0": 1,
+        "0|1|0|0|0|0|0": 16,
+        "0|1|0|0|1|0|0": 3,
+        "0|1|0|0|1|0|1": 1,
+        "0|1|0|1|0|0|0": 10,
+        "0|1|0|1|1|0|0": 1,
+        "0|1|1|0|1|0|0": 1,
+        "0|1|1|1|0|0|0": 1,
+        "1|0|0|0|0|0|0": 16,
+        "1|0|0|0|1|0|0": 14,
+        "1|0|0|1|0|0|0": 3,
+        "1|0|0|1|1|0|0": 1,
+        "1|0|1|0|1|0|0": 2,
+        "1|0|1|0|1|1|0": 2,
+        "1|0|1|1|0|0|0": 1,
+        "1|0|1|1|1|0|0": 4,
+        "1|0|1|1|1|0|1": 1,
+        "1|0|1|1|1|1|0": 1,
+        "1|1|0|0|0|0|0": 6,
+        "1|1|0|0|1|0|0": 8,
+        "1|1|0|1|0|0|0": 2,
+        "1|1|0|1|1|0|0": 3,
+        "1|1|1|0|0|0|0": 2,
+        "1|1|1|0|1|0|0": 6,
+        "1|1|1|0|1|1|0": 3,
+        "1|1|1|1|0|0|0": 1,
+        "1|1|1|1|1|0|0": 3,
+        "1|1|1|1|1|1|0": 1
+      },
+      "output_key": "d1_chexpert/test",
+      "requested_rows": -1,
+      "selected_rows": 234,
+      "selection_mode": "all",
+      "source_key": "d1_chexpert/val"
+    },
+    "d1_chexpert/train": {
+      "available_rows": 223414,
+      "label_positive_counts": {
+        "label_atelectasis": {
+          "available": 33376,
+          "selected": 36
+        },
+        "label_cardiomegaly": {
+          "available": 27000,
+          "selected": 32
+        },
+        "label_consolidation": {
+          "available": 14783,
+          "selected": 21
+        },
+        "label_edema": {
+          "available": 52246,
+          "selected": 59
+        },
+        "label_pleural_effusion": {
+          "available": 86187,
+          "selected": 97
+        },
+        "label_pneumonia": {
+          "available": 6039,
+          "selected": 9
+        },
+        "label_pneumothorax": {
+          "available": 19448,
+          "selected": 22
+        }
+      },
+      "label_signature_counts_selected": {
+        "0|0|0|0|0|0|0": 81,
+        "0|0|0|0|0|0|1": 10,
+        "0|0|0|0|0|1|0": 2,
+        "0|0|0|0|1|0|0": 38,
+        "0|0|0|0|1|0|1": 4,
+        "0|0|0|0|1|1|0": 1,
+        "0|0|0|1|0|0|0": 16,
+        "0|0|0|1|0|0|1": 1,
+        "0|0|0|1|0|1|0": 1,
+        "0|0|0|1|1|0|0": 16,
+        "0|0|0|1|1|0|1": 1,
+        "0|0|0|1|1|1|0": 1,
+        "0|0|1|0|0|0|0": 4,
+        "0|0|1|0|0|0|1": 1,
+        "0|0|1|0|0|1|0": 1,
+        "0|0|1|0|1|0|0": 4,
+        "0|0|1|0|1|0|1": 1,
+        "0|0|1|0|1|1|0": 1,
+        "0|0|1|1|0|0|0": 1,
+        "0|0|1|1|1|0|0": 1,
+        "0|1|0|0|0|0|0": 8,
+        "0|1|0|0|0|0|1": 1,
+        "0|1|0|0|0|1|0": 1,
+        "0|1|0|0|1|0|0": 4,
+        "0|1|0|0|1|0|1": 1,
+        "0|1|0|1|0|0|0": 5,
+        "0|1|0|1|1|0|0": 4,
+        "0|1|1|0|0|0|0": 1,
+        "0|1|1|0|1|0|0": 1,
+        "0|1|1|1|0|0|0": 1,
+        "0|1|1|1|1|0|0": 1,
+        "1|0|0|0|0|0|0": 10,
+        "1|0|0|0|0|0|1": 1,
+        "1|0|0|0|0|1|0": 1,
+        "1|0|0|0|1|0|0": 9,
+        "1|0|0|0|1|0|1": 1,
+        "1|0|0|1|0|0|0": 3,
+        "1|0|0|1|1|0|0": 4,
+        "1|0|1|0|0|0|0": 1,
+        "1|0|1|0|1|0|0": 1,
+        "1|0|1|1|1|0|0": 1,
+        "1|1|0|0|0|0|0": 1,
+        "1|1|0|0|1|0|0": 1,
+        "1|1|0|1|0|0|0": 1,
+        "1|1|0|1|1|0|0": 1
+      },
+      "output_key": "d1_chexpert/train",
+      "requested_rows": 250,
+      "selected_rows": 250,
+      "selection_mode": "sampled",
+      "source_key": "d1_chexpert/train"
+    },
+    "d1_chexpert/val": {
+      "available_rows": 223164,
+      "label_positive_counts": {
+        "label_atelectasis": {
+          "available": 33340,
+          "selected": 36
+        },
+        "label_cardiomegaly": {
+          "available": 26968,
+          "selected": 32
+        },
+        "label_consolidation": {
+          "available": 14762,
+          "selected": 21
+        },
+        "label_edema": {
+          "available": 52187,
+          "selected": 59
+        },
+        "label_pleural_effusion": {
+          "available": 86090,
+          "selected": 97
+        },
+        "label_pneumonia": {
+          "available": 6030,
+          "selected": 9
+        },
+        "label_pneumothorax": {
+          "available": 19426,
+          "selected": 22
+        }
+      },
+      "label_signature_counts_selected": {
+        "0|0|0|0|0|0|0": 81,
+        "0|0|0|0|0|0|1": 10,
+        "0|0|0|0|0|1|0": 2,
+        "0|0|0|0|1|0|0": 38,
+        "0|0|0|0|1|0|1": 4,
+        "0|0|0|0|1|1|0": 1,
+        "0|0|0|1|0|0|0": 16,
+        "0|0|0|1|0|0|1": 1,
+        "0|0|0|1|0|1|0": 1,
+        "0|0|0|1|1|0|0": 16,
+        "0|0|0|1|1|0|1": 1,
+        "0|0|0|1|1|1|0": 1,
+        "0|0|1|0|0|0|0": 4,
+        "0|0|1|0|0|0|1": 1,
+        "0|0|1|0|0|1|0": 1,
+        "0|0|1|0|1|0|0": 4,
+        "0|0|1|0|1|0|1": 1,
+        "0|0|1|0|1|1|0": 1,
+        "0|0|1|1|0|0|0": 1,
+        "0|0|1|1|1|0|0": 1,
+        "0|1|0|0|0|0|0": 8,
+        "0|1|0|0|0|0|1": 1,
+        "0|1|0|0|0|1|0": 1,
+        "0|1|0|0|1|0|0": 4,
+        "0|1|0|0|1|0|1": 1,
+        "0|1|0|1|0|0|0": 5,
+        "0|1|0|1|1|0|0": 4,
+        "0|1|1|0|0|0|0": 1,
+        "0|1|1|0|1|0|0": 1,
+        "0|1|1|1|0|0|0": 1,
+        "0|1|1|1|1|0|0": 1,
+        "1|0|0|0|0|0|0": 10,
+        "1|0|0|0|0|0|1": 1,
+        "1|0|0|0|0|1|0": 1,
+        "1|0|0|0|1|0|0": 9,
+        "1|0|0|0|1|0|1": 1,
+        "1|0|0|1|0|0|0": 3,
+        "1|0|0|1|1|0|0": 4,
+        "1|0|1|0|0|0|0": 1,
+        "1|0|1|0|1|0|0": 1,
+        "1|0|1|1|1|0|0": 1,
+        "1|1|0|0|0|0|0": 1,
+        "1|1|0|0|1|0|0": 1,
+        "1|1|0|1|0|0|0": 1,
+        "1|1|0|1|1|0|0": 1
+      },
+      "output_key": "d1_chexpert/val",
+      "requested_rows": 250,
+      "selected_rows": 250,
+      "selection_mode": "sampled",
+      "source_key": "d1_chexpert/train"
+    },
+    "d2_mimic/test": {
+      "available_rows": 1455,
+      "label_positive_counts": {
+        "label_atelectasis": {
+          "available": 266,
+          "selected": 0
+        },
+        "label_cardiomegaly": {
+          "available": 229,
+          "selected": 0
+        },
+        "label_consolidation": {
+          "available": 85,
+          "selected": 0
+        },
+        "label_edema": {
+          "available": 185,
+          "selected": 0
+        },
+        "label_pleural_effusion": {
+          "available": 333,
+          "selected": 0
+        },
+        "label_pneumonia": {
+          "available": 102,
+          "selected": 0
+        },
+        "label_pneumothorax": {
+          "available": 65,
+          "selected": 0
+        }
+      },
+      "label_signature_counts_selected": {},
+      "output_key": "d2_mimic/test",
+      "requested_rows": 0,
+      "selected_rows": 0,
+      "selection_mode": "sampled",
+      "source_key": "d2_mimic/test"
+    },
+    "d2_mimic/val": {
+      "available_rows": 711,
+      "label_positive_counts": {
+        "label_atelectasis": {
+          "available": 164,
+          "selected": 0
+        },
+        "label_cardiomegaly": {
+          "available": 128,
+          "selected": 0
+        },
+        "label_consolidation": {
+          "available": 22,
+          "selected": 0
+        },
+        "label_edema": {
+          "available": 98,
+          "selected": 0
+        },
+        "label_pleural_effusion": {
+          "available": 166,
+          "selected": 0
+        },
+        "label_pneumonia": {
+          "available": 46,
+          "selected": 0
+        },
+        "label_pneumothorax": {
+          "available": 30,
+          "selected": 0
+        }
+      },
+      "label_signature_counts_selected": {},
+      "output_key": "d2_mimic/val",
+      "requested_rows": 0,
+      "selected_rows": 0,
+      "selection_mode": "sampled",
+      "source_key": "d2_mimic/val"
+    }
+  }
+}

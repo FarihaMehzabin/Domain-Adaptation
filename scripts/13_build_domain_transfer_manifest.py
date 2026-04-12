@@ -55,6 +55,11 @@ def parse_args() -> argparse.Namespace:
         default=Path("/workspace/manifest_nih_cxr14_all14.csv"),
     )
     parser.add_argument(
+        "--chexpert-train-csv",
+        type=Path,
+        default=Path("/workspace/data/chexpert_small/raw/train.csv"),
+    )
+    parser.add_argument(
         "--chexpert-valid-csv",
         type=Path,
         default=Path("/workspace/data/chexpert_small/raw/valid.csv"),
@@ -134,9 +139,14 @@ def normalize_chexpert_image_path(source_image_path: str) -> Path:
     return Path("chexpert_small/raw") / source_path
 
 
-def build_chexpert_rows(valid_csv: Path) -> list[dict[str, str]]:
+def build_chexpert_rows(
+    csv_path: Path,
+    *,
+    split: str,
+    source_split: str,
+) -> list[dict[str, str]]:
     rows: list[dict[str, str]] = []
-    with valid_csv.open(newline="", encoding="utf-8") as handle:
+    with csv_path.open(newline="", encoding="utf-8") as handle:
         reader = csv.DictReader(handle)
         for row in reader:
             source_image_path = (row.get("Path") or "").strip()
@@ -152,8 +162,8 @@ def build_chexpert_rows(valid_csv: Path) -> list[dict[str, str]]:
             output_row = {
                 "domain": DOMAIN_MAP["chexpert"],
                 "dataset": "chexpert",
-                "split": "val",
-                "source_split": "valid",
+                "split": split,
+                "source_split": source_split,
                 "row_id": row_id,
                 "image_path": image_path,
                 "patient_id": patient_id,
@@ -218,12 +228,26 @@ def write_manifest(path: Path, rows: list[dict[str, str]]) -> None:
 def main() -> None:
     args = parse_args()
     require_exists(args.nih_manifest, "NIH manifest")
+    require_exists(args.chexpert_train_csv, "CheXpert train CSV")
     require_exists(args.chexpert_valid_csv, "CheXpert valid CSV")
     require_exists(args.mimic_labeled_csv, "Labeled MIMIC CSV")
 
     rows: list[dict[str, str]] = []
     rows.extend(build_nih_rows(args.nih_manifest))
-    rows.extend(build_chexpert_rows(args.chexpert_valid_csv))
+    rows.extend(
+        build_chexpert_rows(
+            args.chexpert_train_csv,
+            split="train",
+            source_split="train",
+        )
+    )
+    rows.extend(
+        build_chexpert_rows(
+            args.chexpert_valid_csv,
+            split="val",
+            source_split="valid",
+        )
+    )
     rows.extend(build_mimic_rows(args.mimic_labeled_csv))
     write_manifest(args.output_csv, rows)
 
