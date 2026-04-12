@@ -1,0 +1,290 @@
+{
+  "argv": [
+    "/workspace/scripts/23_evaluate_domain_transfer_source_memory.py",
+    "--memory-root",
+    "/workspace/experiments/exp0028__domain_transfer_source_retrieval_memory_building__domain_transfer_source_retrieval_memory__cxr_foundation_general_avg_pilot5h_d0_train",
+    "--baseline-experiment-dir",
+    "/workspace/experiments/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h",
+    "--query-embedding-root",
+    "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128",
+    "--manifest-csv",
+    "/workspace/manifest_common_labels_pilot5h.csv",
+    "--query-domain",
+    "d0_nih",
+    "--query-split",
+    "val",
+    "--split-alias",
+    "d0_val",
+    "--experiment-name",
+    "domain_transfer_source_memory_selection__cxr_foundation_general_avg_pilot5h_d0_val"
+  ],
+  "baseline_comparison": {
+    "macro": {
+      "auroc": {
+        "archived": 0.8481784483407129,
+        "delta": -0.00024407850039953605,
+        "reconstructed": 0.8479343698403133
+      },
+      "average_precision": {
+        "archived": 0.2666272617953553,
+        "delta": -0.0023417753085903104,
+        "reconstructed": 0.264285486486765
+      },
+      "ece": {
+        "archived": 0.26914038434256116,
+        "delta": 0.16504116746726066,
+        "reconstructed": 0.4341815518098218
+      },
+      "f1_at_0.5": {
+        "archived": 0.26226444272207006,
+        "delta": 0.003451427666535445,
+        "reconstructed": 0.2657158703886055
+      },
+      "f1_at_tuned_thresholds": {
+        "archived": 0.34541705361753383,
+        "delta": 0.01876904803338314,
+        "reconstructed": 0.36418610165091697
+      }
+    },
+    "matches_archived_metrics_within_5e-4": false,
+    "max_abs_delta": 0.23266256430255494,
+    "per_label": {
+      "atelectasis": {
+        "auroc": {
+          "archived": 0.8328468406593407,
+          "delta": 0.0006331559065934078,
+          "reconstructed": 0.8334799965659341
+        },
+        "average_precision": {
+          "archived": 0.3868725860519694,
+          "delta": -0.002435008648107695,
+          "reconstructed": 0.3844375774038617
+        },
+        "ece": {
+          "archived": 0.28379996883232933,
+          "delta": 0.10510975808541434,
+          "reconstructed": 0.38890972691774367
+        },
+        "f1_at_0.5": {
+          "archived": 0.37442922374429227,
+          "delta": 0.011112944930406488,
+          "reconstructed": 0.38554216867469876
+        },
+        "f1_at_tuned_threshold": {
+          "archived": 0.4426877470355731,
+          "delta": 0.009693205345379263,
+          "reconstructed": 0.4523809523809524
+        }
+      },
+      "cardiomegaly": {
+        "auroc": {
+          "archived": 0.8869759450171821,
+          "delta": -0.0008247422680411898,
+          "reconstructed": 0.8861512027491409
+        },
+        "average_precision": {
+          "archived": 0.20866006306941343,
+          "delta": -0.0028031997938566533,
+          "reconstructed": 0.20585686327555677
+        },
+        "ece": {
+          "archived": 0.29839649337560814,
+          "delta": 0.16382641288607436,
+          "reconstructed": 0.4622229062616825
+        },
+        "f1_at_0.5": {
+          "archived": 0.19475655430711614,
+          "delta": -0.007030922538163092,
+          "reconstructed": 0.18772563176895304
+        },
+        "f1_at_tuned_threshold": {
+          "archived": 0.37209302325581395,
+          "delta": -0.01254246145806115,
+          "reconstructed": 0.3595505617977528
+        }
+      },
+      "consolidation": {
+        "auroc": {
+          "archived": 0.8390073831009024,
+          "delta": -0.0001595114392489716,
+          "reconstructed": 0.8388478716616534
+        },
+        "average_precision": {
+          "archived": 0.2067757810109139,
+          "delta": -0.0054481363735841,
+          "reconstructed": 0.2013276446373298
+        },
+        "ece": {
+          "archived": 0.2859348569020037,
+          "delta": 0.15776819853937585,
+          "reconstructed": 0.44370305544137956
+        },
+        "f1_at_0.5": {
+          "archived": 0.2116991643454039,
+          "delta": 0.0029901011913192888,
+          "reconstructed": 0.21468926553672318
+        },
+        "f1_at_tuned_threshold": {
+          "archived": 0.32432432432432434,
+          "delta": -0.011824324324324342,
+          "reconstructed": 0.3125
+        }
+      },
+      "edema": {
+        "auroc": {
+          "archived": 0.8959179487179487,
+          "delta": -0.0010256410256410664,
+          "reconstructed": 0.8948923076923077
+        },
+        "average_precision": {
+          "archived": 0.26305728784683935,
+          "delta": -0.00537338458245229,
+          "reconstructed": 0.25768390326438706
+        },
+        "ece": {
+          "archived": 0.22400015786779803,
+          "delta": 0.23266256430255494,
+          "reconstructed": 0.456662722170353
+        },
+        "f1_at_0.5": {
+          "archived": 0.17040358744394618,
+          "delta": 0.02248981357128227,
+          "reconstructed": 0.19289340101522845
+        },
+        "f1_at_tuned_threshold": {
+          "archived": 0.38095238095238104,
+          "delta": -0.008859357696567094,
+          "reconstructed": 0.37209302325581395
+        }
+      },
+      "pleural_effusion": {
+        "auroc": {
+          "archived": 0.8828774835639824,
+          "delta": -8.172605426615132e-05,
+          "reconstructed": 0.8827957575097163
+        },
+        "average_precision": {
+          "archived": 0.5198545523232144,
+          "delta": -0.0020162581484685083,
+          "reconstructed": 0.5178382941747459
+        },
+        "ece": {
+          "archived": 0.2035103669015078,
+          "delta": 0.16099817399705363,
+          "reconstructed": 0.36450854089856144
+        },
+        "f1_at_0.5": {
+          "archived": 0.52,
+          "delta": -0.0012967581047381715,
+          "reconstructed": 0.5187032418952618
+        },
+        "f1_at_tuned_threshold": {
+          "archived": 0.5867507886435331,
+          "delta": 0.005149522882946567,
+          "reconstructed": 0.5919003115264797
+        }
+      },
+      "pneumonia": {
+        "auroc": {
+          "archived": 0.7155896841495218,
+          "delta": -0.0007968704723267939,
+          "reconstructed": 0.714792813677195
+        },
+        "average_precision": {
+          "archived": 0.06794573367575482,
+          "delta": 0.0002944176955335248,
+          "reconstructed": 0.06824015137128835
+        },
+        "ece": {
+          "archived": 0.3578095251870532,
+          "delta": 0.12166466126318976,
+          "reconstructed": 0.479474186450243
+        },
+        "f1_at_0.5": {
+          "archived": 0.059800664451827246,
+          "delta": -0.005563376316234034,
+          "reconstructed": 0.05423728813559321
+        },
+        "f1_at_tuned_threshold": {
+          "archived": 0.0,
+          "delta": 0.125,
+          "reconstructed": 0.125
+        }
+      },
+      "pneumothorax": {
+        "auroc": {
+          "archived": 0.8840338531761126,
+          "delta": 0.0005467858501331246,
+          "reconstructed": 0.8845806390262457
+        },
+        "average_precision": {
+          "archived": 0.21322482858938205,
+          "delta": 0.0013891426908032578,
+          "reconstructed": 0.2146139712801853
+        },
+        "ece": {
+          "archived": 0.23053132133162768,
+          "delta": 0.21325840319716177,
+          "reconstructed": 0.44378972452878945
+        },
+        "f1_at_0.5": {
+          "archived": 0.30476190476190484,
+          "delta": 0.001458190931875103,
+          "reconstructed": 0.30622009569377995
+        },
+        "f1_at_tuned_threshold": {
+          "archived": 0.3111111111111111,
+          "delta": 0.024766751484308736,
+          "reconstructed": 0.33587786259541985
+        }
+      }
+    }
+  },
+  "baseline_experiment_dir": "/workspace/experiments/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h",
+  "baseline_reconstruction": {
+    "batch_size": 2048,
+    "checkpoint_epoch": 49,
+    "checkpoint_label_names": [
+      "atelectasis",
+      "cardiomegaly",
+      "consolidation",
+      "edema",
+      "pleural_effusion",
+      "pneumonia",
+      "pneumothorax"
+    ],
+    "input_dim": 768,
+    "output_dim": 7
+  },
+  "experiment_dir": "/workspace/experiments/exp0029__domain_transfer_source_memory_selection__cxr_foundation_general_avg_pilot5h_d0_val",
+  "experiment_id": "exp0029",
+  "experiment_name": "exp0029__domain_transfer_source_memory_selection__cxr_foundation_general_avg_pilot5h_d0_val",
+  "label_names": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion",
+    "pneumonia",
+    "pneumothorax"
+  ],
+  "manifest_csv": "/workspace/manifest_common_labels_pilot5h.csv",
+  "memory_root": "/workspace/experiments/exp0028__domain_transfer_source_retrieval_memory_building__domain_transfer_source_retrieval_memory__cxr_foundation_general_avg_pilot5h_d0_train",
+  "operation_label": "domain_transfer_source_memory_selection",
+  "query_domain": "d0_nih",
+  "query_norm_summary_after": {
+    "max": 1.0000000410243188,
+    "mean": 0.9999999999971341,
+    "min": 0.9999999591167076,
+    "std": 2.088161418224034e-08
+  },
+  "query_norm_summary_before": {
+    "max": 29.399023703367057,
+    "mean": 26.434697583901993,
+    "min": 24.335368824119616,
+    "std": 0.9827188238975378
+  },
+  "query_split": "val",
+  "run_date_utc": "2026-04-12T06:21:10.316716+00:00",
+  "split_alias": "d0_val"
+}

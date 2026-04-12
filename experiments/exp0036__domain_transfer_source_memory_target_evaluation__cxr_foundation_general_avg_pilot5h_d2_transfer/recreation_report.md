@@ -1,0 +1,20 @@
+# Recreation Report
+
+- Experiment directory: `/workspace/experiments/exp0036__domain_transfer_source_memory_target_evaluation__cxr_foundation_general_avg_pilot5h_d2_transfer`
+- Script: `/workspace/scripts/25_evaluate_domain_transfer_source_memory_target.py`
+- Script SHA-256: `51cdc657a576b8fe9f96070b18cda146a1fd683e6ae0d8860b6e925e7cf62941`
+- Run date UTC: `2026-04-12T06:22:56.540612+00:00`
+
+## Command
+
+```bash
+/workspace/scripts/25_evaluate_domain_transfer_source_memory_target.py --memory-root /workspace/experiments/exp0028__domain_transfer_source_retrieval_memory_building__domain_transfer_source_retrieval_memory__cxr_foundation_general_avg_pilot5h_d0_train --memory-selection-root /workspace/experiments/exp0029__domain_transfer_source_memory_selection__cxr_foundation_general_avg_pilot5h_d0_val --baseline-experiment-dir /workspace/experiments/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h --query-embedding-root /workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128 --manifest-csv /workspace/manifest_common_labels_pilot5h.csv --query-domain d2_mimic --query-split test --split-alias d2_transfer --experiment-name domain_transfer_source_memory_target_evaluation__cxr_foundation_general_avg_pilot5h_d2_transfer --overwrite
+```
+
+## Summary
+
+- Memory selection root: `/workspace/experiments/exp0029__domain_transfer_source_memory_selection__cxr_foundation_general_avg_pilot5h_d0_val`
+- Query split: `d2_mimic/test`
+- Split alias: `d2_transfer`
+- Frozen k/tau: `50` / `5.0`
+- Memory macro AUROC: `0.504451`

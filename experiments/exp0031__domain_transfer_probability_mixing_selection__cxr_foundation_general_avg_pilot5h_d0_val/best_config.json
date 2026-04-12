@@ -1,0 +1,18 @@
+{
+  "alpha": 1.0,
+  "memory_eval_root": "/workspace/experiments/exp0029__domain_transfer_source_memory_selection__cxr_foundation_general_avg_pilot5h_d0_val",
+  "query_domain": "d0_nih",
+  "query_split": "val",
+  "selection_metric": "macro_auroc",
+  "selection_trace": {
+    "max_macro_auroc": 0.8479343698403133,
+    "max_macro_average_precision": 0.264285486486765,
+    "selected_alpha": 1.0,
+    "tie_break_rule": [
+      "highest validation macro AUROC",
+      "higher validation macro average precision",
+      "larger alpha"
+    ]
+  },
+  "split_alias": "d0_val"
+}

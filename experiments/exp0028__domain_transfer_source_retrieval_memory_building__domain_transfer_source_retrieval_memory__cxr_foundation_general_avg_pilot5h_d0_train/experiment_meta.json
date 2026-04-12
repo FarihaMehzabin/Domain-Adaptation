@@ -1,0 +1,155 @@
+{
+  "argv": [
+    "/workspace/scripts/22_build_domain_transfer_source_memory.py",
+    "--embedding-root",
+    "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128",
+    "--baseline-experiment-dir",
+    "/workspace/experiments/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h",
+    "--manifest-csv",
+    "/workspace/manifest_common_labels_pilot5h.csv",
+    "--experiment-name",
+    "domain_transfer_source_retrieval_memory__cxr_foundation_general_avg_pilot5h_d0_train"
+  ],
+  "artifacts": {
+    "embeddings": "/workspace/experiments/exp0028__domain_transfer_source_retrieval_memory_building__domain_transfer_source_retrieval_memory__cxr_foundation_general_avg_pilot5h_d0_train/embeddings.npy",
+    "image_paths": "/workspace/experiments/exp0028__domain_transfer_source_retrieval_memory_building__domain_transfer_source_retrieval_memory__cxr_foundation_general_avg_pilot5h_d0_train/image_paths.txt",
+    "index": "/workspace/experiments/exp0028__domain_transfer_source_retrieval_memory_building__domain_transfer_source_retrieval_memory__cxr_foundation_general_avg_pilot5h_d0_train/index.faiss",
+    "items_jsonl": "/workspace/experiments/exp0028__domain_transfer_source_retrieval_memory_building__domain_transfer_source_retrieval_memory__cxr_foundation_general_avg_pilot5h_d0_train/items.jsonl",
+    "labels": "/workspace/experiments/exp0028__domain_transfer_source_retrieval_memory_building__domain_transfer_source_retrieval_memory__cxr_foundation_general_avg_pilot5h_d0_train/labels.npy",
+    "qualitative_neighbors": "/workspace/experiments/exp0028__domain_transfer_source_retrieval_memory_building__domain_transfer_source_retrieval_memory__cxr_foundation_general_avg_pilot5h_d0_train/qualitative_neighbors.json",
+    "row_ids": "/workspace/experiments/exp0028__domain_transfer_source_retrieval_memory_building__domain_transfer_source_retrieval_memory__cxr_foundation_general_avg_pilot5h_d0_train/row_ids.json",
+    "sanity_report": "/workspace/experiments/exp0028__domain_transfer_source_retrieval_memory_building__domain_transfer_source_retrieval_memory__cxr_foundation_general_avg_pilot5h_d0_train/sanity_report.json"
+  },
+  "baseline_experiment_dir": "/workspace/experiments/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h",
+  "baseline_reference": {
+    "best_epoch": 49,
+    "checkpoint_path": "/workspace/experiments/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h/best.ckpt",
+    "device_resolved": "cuda",
+    "embedding_layout": "domain_split",
+    "embedding_root": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128",
+    "experiment_dir": "/workspace/experiments/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h",
+    "experiment_id": "exp0015",
+    "experiment_name": "exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h",
+    "experiment_number": 15,
+    "input_dim": 768,
+    "l2_normalize_features": false,
+    "macro_metrics": {
+      "d0_test": {
+        "auroc": 0.8454975223437733,
+        "average_precision": 0.2541044119571604,
+        "ece": 0.26666910478147593,
+        "f1_at_0.5": 0.24657036334796714,
+        "f1_at_tuned_thresholds": 0.2768716669622713
+      },
+      "d0_val": {
+        "auroc": 0.8481784483407129,
+        "average_precision": 0.2666272617953553,
+        "ece": 0.26914038434256116,
+        "f1_at_0.5": 0.26226444272207006,
+        "f1_at_tuned_thresholds": 0.34541705361753383
+      },
+      "d1_transfer": {
+        "auroc": 0.8454310506904843,
+        "average_precision": 0.5430473374492923,
+        "ece": 0.2267498290552214,
+        "f1_at_0.5": 0.4610070705032857,
+        "f1_at_tuned_thresholds": 0.34917597022860175
+      },
+      "d2_transfer": {
+        "auroc": 0.5007063253970117,
+        "average_precision": 0.1258119157319716,
+        "ece": 0.42316228413429924,
+        "f1_at_0.5": 0.1945011358472132,
+        "f1_at_tuned_thresholds": 0.13567672779833903
+      }
+    },
+    "manifest_csv": "/workspace/manifest_common_labels_pilot5h.csv",
+    "num_labels": 7,
+    "operation_label": "domain_transfer_linear_probe",
+    "run_date_utc": "2026-04-11T14:08:01.880353+00:00",
+    "split_inputs": {
+      "d0_test": {
+        "domain": "d0_nih",
+        "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/test/embeddings.npy",
+        "num_rows": 2000,
+        "shape": [
+          2000,
+          768
+        ],
+        "sidecar_parser": "identity",
+        "sidecar_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/test/row_ids.json",
+        "split": "test"
+      },
+      "d0_train": {
+        "domain": "d0_nih",
+        "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/train/embeddings.npy",
+        "num_rows": 10000,
+        "shape": [
+          10000,
+          768
+        ],
+        "sidecar_parser": "identity",
+        "sidecar_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/train/row_ids.json",
+        "split": "train"
+      },
+      "d0_val": {
+        "domain": "d0_nih",
+        "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/val/embeddings.npy",
+        "num_rows": 1000,
+        "shape": [
+          1000,
+          768
+        ],
+        "sidecar_parser": "identity",
+        "sidecar_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d0_nih/val/row_ids.json",
+        "split": "val"
+      },
+      "d1_transfer": {
+        "domain": "d1_chexpert",
+        "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d1_chexpert/val/embeddings.npy",
+        "num_rows": 234,
+        "shape": [
+          234,
+          768
+        ],
+        "sidecar_parser": "identity",
+        "sidecar_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d1_chexpert/val/row_ids.json",
+        "split": "val"
+      },
+      "d2_transfer": {
+        "domain": "d2_mimic",
+        "embeddings_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d2_mimic/test/embeddings.npy",
+        "num_rows": 1455,
+        "shape": [
+          1455,
+          768
+        ],
+        "sidecar_parser": "identity",
+        "sidecar_path": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/d2_mimic/test/row_ids.json",
+        "split": "test"
+      }
+    },
+    "thresholds_path": "/workspace/experiments/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h/d0_val_f1_thresholds.json",
+    "token_pooling": "avg"
+  },
+  "embedding_root": "/workspace/experiments/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128",
+  "experiment_dir": "/workspace/experiments/exp0028__domain_transfer_source_retrieval_memory_building__domain_transfer_source_retrieval_memory__cxr_foundation_general_avg_pilot5h_d0_train",
+  "experiment_id": "exp0028",
+  "experiment_name": "exp0028__domain_transfer_source_retrieval_memory_building__domain_transfer_source_retrieval_memory__cxr_foundation_general_avg_pilot5h_d0_train",
+  "label_names": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion",
+    "pneumonia",
+    "pneumothorax"
+  ],
+  "manifest_csv": "/workspace/manifest_common_labels_pilot5h.csv",
+  "operation_label": "domain_transfer_source_retrieval_memory_building",
+  "run_date_utc": "2026-04-12T06:20:51.258853+00:00",
+  "source_alias": "d0_train",
+  "source_domain": "d0_nih",
+  "source_split": "train",
+  "top_k": 5
+}
