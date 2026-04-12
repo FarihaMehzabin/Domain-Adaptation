@@ -15,7 +15,9 @@ https://github.com/Google-Health/cxr-foundation
 from __future__ import annotations
 
 import io
+import importlib.metadata
 import os
+import sysconfig
 from pathlib import Path
 from typing import Any
 
@@ -27,6 +29,108 @@ HF_REPO_ID = "google/cxr-foundation"
 ELIXR_C_SUBDIR = "elixr-c-v2-pooled"
 QFORMER_SUBDIR = "pax-elixr-b-text"
 TEXT_INPUT_SHAPE = (1, 128)
+CXR_FOUNDATION_ALLOW_CPU_ENV_VAR = "CXR_FOUNDATION_ALLOW_CPU"
+TF_2_17_GPU_REQUIREMENTS = {
+    "nvidia-cublas-cu12": "12.3.4.1",
+    "nvidia-cuda-cupti-cu12": "12.3.101",
+    "nvidia-cuda-nvcc-cu12": "12.3.107",
+    "nvidia-cuda-nvrtc-cu12": "12.3.107",
+    "nvidia-cuda-runtime-cu12": "12.3.101",
+    "nvidia-cudnn-cu12": "8.9.7.29",
+    "nvidia-cufft-cu12": "11.0.12.1",
+    "nvidia-curand-cu12": "10.3.4.107",
+    "nvidia-cusolver-cu12": "11.5.4.101",
+    "nvidia-cusparse-cu12": "12.2.0.103",
+    "nvidia-nccl-cu12": "2.19.3",
+    "nvidia-nvjitlink-cu12": "12.3.101",
+}
+
+
+def _python_nvidia_library_dirs() -> list[Path]:
+    purelib = Path(sysconfig.get_paths()["purelib"])
+    nvidia_root = purelib / "nvidia"
+    if not nvidia_root.exists():
+        return []
+    return sorted(path for path in nvidia_root.glob("*/lib") if path.is_dir())
+
+
+def configure_tensorflow_runtime_environment() -> None:
+    """Expose pip-installed CUDA/cuDNN libs to TensorFlow before import."""
+
+    lib_dirs = [str(path) for path in _python_nvidia_library_dirs()]
+    if not lib_dirs:
+        return
+    current = os.environ.get("LD_LIBRARY_PATH", "")
+    existing = [entry for entry in current.split(":") if entry]
+    merged = lib_dirs + [entry for entry in existing if entry not in lib_dirs]
+    os.environ["LD_LIBRARY_PATH"] = ":".join(merged)
+
+
+def installed_package_version(package_name: str) -> str | None:
+    try:
+        return importlib.metadata.version(package_name)
+    except importlib.metadata.PackageNotFoundError:
+        return None
+
+
+def _format_gpu_runtime_guidance(tf: Any) -> str:
+    build_info = {}
+    try:
+        build_info = dict(tf.sysconfig.get_build_info())
+    except Exception:
+        build_info = {}
+    lines = [
+        "TensorFlow did not detect a GPU, so CXR Foundation would run on CPU.",
+        "",
+        "What happened:",
+        "- The exporter imports TensorFlow from the current Python environment.",
+        "- If that environment is missing the TensorFlow GPU runtime libraries, or has incompatible versions, TensorFlow falls back to CPU.",
+    ]
+    cuda_version = build_info.get("cuda_version")
+    cudnn_version = build_info.get("cudnn_version")
+    if cuda_version or cudnn_version:
+        lines.extend(
+            [
+                "",
+                "TensorFlow build expectations:",
+                f"- CUDA version: {cuda_version or 'unknown'}",
+                f"- cuDNN major version: {cudnn_version or 'unknown'}",
+            ]
+        )
+    installed = {
+        package: installed_package_version(package)
+        for package in TF_2_17_GPU_REQUIREMENTS
+    }
+    mismatches = [
+        (package, installed_version, expected_version)
+        for package, expected_version in TF_2_17_GPU_REQUIREMENTS.items()
+        if (installed_version := installed.get(package)) is not None
+        and installed_version != expected_version
+    ]
+    if mismatches:
+        lines.extend(
+            [
+                "",
+                "Detected incompatible runtime packages in this environment:",
+            ]
+        )
+        for package, installed_version, expected_version in mismatches:
+            lines.append(
+                f"- {package}: installed {installed_version}, expected {expected_version}"
+            )
+    lines.extend(
+        [
+            "",
+            "How this repo now avoids the problem:",
+            "- Install the CXR Foundation branch in its own virtualenv with `/workspace/scripts/requirements_cxr_foundation.txt`.",
+            "- Source `/workspace/scripts/activate_cxr_foundation_env.sh` before running the CXR Foundation exporter or batch benchmark.",
+            "- That script prepends the virtualenv's `site-packages/nvidia/*/lib` directories to `LD_LIBRARY_PATH`.",
+            "",
+            "If you intentionally want CPU mode, set:",
+            f"  export {CXR_FOUNDATION_ALLOW_CPU_ENV_VAR}=1",
+        ]
+    )
+    return "\n".join(lines)
 
 
 def import_runtime_dependencies() -> tuple[Any, Any]:
@@ -53,6 +157,7 @@ def import_runtime_dependencies() -> tuple[Any, Any]:
         ) from exc
 
     try:
+        configure_tensorflow_runtime_environment()
         import tensorflow as tf
         import tensorflow_text  # noqa: F401  # pylint: disable=unused-import
     except Exception as exc:  # pragma: no cover
@@ -160,6 +265,18 @@ def configure_tensorflow_memory_growth(tf: Any) -> None:
             continue
 
 
+def ensure_tensorflow_gpu_or_raise(tf: Any) -> None:
+    if os.environ.get(CXR_FOUNDATION_ALLOW_CPU_ENV_VAR, "").strip() in {"1", "true", "TRUE", "yes", "YES"}:
+        return
+    try:
+        gpus = tf.config.list_physical_devices("GPU")
+    except Exception:
+        gpus = []
+    if gpus:
+        return
+    raise SystemExit(_format_gpu_runtime_guidance(tf))
+
+
 def pool_token_embeddings(embeddings: np.ndarray, pooling: str) -> np.ndarray:
     if embeddings.ndim == 2:
         return embeddings.astype(np.float32, copy=False)
@@ -189,6 +306,7 @@ class CxrFoundationImageEmbedder:
     ) -> None:
         tf, huggingface_hub = import_runtime_dependencies()
         configure_tensorflow_memory_growth(tf)
+        ensure_tensorflow_gpu_or_raise(tf)
         model_dir.mkdir(parents=True, exist_ok=True)
 
         try:

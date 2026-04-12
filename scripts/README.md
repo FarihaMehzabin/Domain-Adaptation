@@ -58,6 +58,9 @@ Notes:
 - The CXR Foundation path has separate Python requirements:
   - install with `python -m pip install -r /workspace/scripts/requirements_cxr_foundation.txt`
   - accept the model terms for `google/cxr-foundation` on Hugging Face and provide `HF_TOKEN` when required
+  - use a dedicated virtualenv for this branch and activate it with:
+    - `source /workspace/scripts/activate_cxr_foundation_env.sh`
+  - see [CXR_FOUNDATION_GPU_NOTE.md](/workspace/scripts/CXR_FOUNDATION_GPU_NOTE.md) for the CPU fallback root cause and the TensorFlow GPU fix
 - The image-only LoRA ViT path has separate Python requirements:
   - install with `python -m pip install -r /workspace/scripts/requirements_vision_lora.txt`
 
