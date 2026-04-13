@@ -1,0 +1,140 @@
+{
+  "auxiliary_train_aliases": [
+    "lwf_source_train"
+  ],
+  "best_epoch": 50,
+  "checkpoint_path": "/workspace/experiments/by_id/exp0076__domain_transfer_head_training__nih_warmstart_lwf__chexpert_target_1000__alpha-0p25__temp-2__cxr_foundation_linear_gpu/best.ckpt",
+  "device_resolved": "cuda",
+  "embedding_layout": "domain_split",
+  "embedding_root": "/workspace/experiments/by_id/exp0074__domain_split_embedding_view__nih_pilot5h_plus_chexpert_target_1000_cxr_foundation",
+  "enable_lwf": true,
+  "experiment_dir": "/workspace/experiments/by_id/exp0076__domain_transfer_head_training__nih_warmstart_lwf__chexpert_target_1000__alpha-0p25__temp-2__cxr_foundation_linear_gpu",
+  "experiment_id": "exp0076",
+  "experiment_name": "exp0076__domain_transfer_head_training__nih_warmstart_lwf__chexpert_target_1000__alpha-0p25__temp-2__cxr_foundation_linear_gpu",
+  "experiment_number": 76,
+  "head_description": "linear",
+  "head_type": "linear",
+  "init_checkpoint_metadata": {
+    "checkpoint_epoch": 49,
+    "checkpoint_head_type": "linear",
+    "checkpoint_input_dim": 768,
+    "checkpoint_num_labels": 7,
+    "checkpoint_path": "/workspace/experiments/by_id/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h/best.ckpt",
+    "l2_normalize_features": false,
+    "token_pooling": "avg"
+  },
+  "init_checkpoint_path": "/workspace/experiments/by_id/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h/best.ckpt",
+  "input_dim": 768,
+  "l2_normalize_features": false,
+  "lwf_alpha": 0.25,
+  "lwf_source_alias": "lwf_source_train",
+  "lwf_teacher_checkpoint_metadata": {
+    "checkpoint_epoch": 49,
+    "checkpoint_head_type": "linear",
+    "checkpoint_input_dim": 768,
+    "checkpoint_num_labels": 7,
+    "checkpoint_path": "/workspace/experiments/by_id/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h/best.ckpt",
+    "l2_normalize_features": false,
+    "token_pooling": "avg"
+  },
+  "lwf_teacher_checkpoint_path": "/workspace/experiments/by_id/exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h/best.ckpt",
+  "lwf_temperature": 2.0,
+  "macro_metrics": {
+    "d0_test": {
+      "auroc": 0.8290564926405624,
+      "average_precision": 0.23340393730360537,
+      "ece": 0.25956303438559375,
+      "f1_at_0.5": 0.2392071577842316,
+      "f1_at_tuned_thresholds": 0.2507226998410547
+    },
+    "target_test": {
+      "auroc": 0.7857562757210269,
+      "average_precision": 0.47614654830375924,
+      "ece": 0.18302955533495477,
+      "f1_at_0.5": 0.46074283910797764,
+      "f1_at_tuned_thresholds": 0.44575777314512116
+    },
+    "target_val": {
+      "auroc": 0.7373736745087938,
+      "average_precision": 0.3648548823868789,
+      "ece": 0.25442551560375964,
+      "f1_at_0.5": 0.3664119755999829,
+      "f1_at_tuned_thresholds": 0.40947646624910455
+    }
+  },
+  "manifest_csv": "/workspace/manifest/manifest_nih_pilot5h_chexpert_target_1000_adapt.csv",
+  "mlp_dropout": 0.2,
+  "mlp_hidden_dims": [],
+  "model_num_parameters": 5383,
+  "num_labels": 7,
+  "operation_label": "domain_transfer_head_training",
+  "primary_test_alias": "target_test",
+  "run_date_utc": "2026-04-13T06:54:48.896994+00:00",
+  "selection_alias": "target_val",
+  "split_inputs": {
+    "d0_test": {
+      "domain": "d0_nih",
+      "embeddings_path": "/workspace/experiments/by_id/exp0074__domain_split_embedding_view__nih_pilot5h_plus_chexpert_target_1000_cxr_foundation/d0_nih/test/embeddings.npy",
+      "num_rows": 2000,
+      "shape": [
+        2000,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/by_id/exp0074__domain_split_embedding_view__nih_pilot5h_plus_chexpert_target_1000_cxr_foundation/d0_nih/test/row_ids.json",
+      "split": "test"
+    },
+    "lwf_source_train": {
+      "domain": "d0_nih",
+      "embeddings_path": "/workspace/experiments/by_id/exp0074__domain_split_embedding_view__nih_pilot5h_plus_chexpert_target_1000_cxr_foundation/d0_nih/train/embeddings.npy",
+      "num_rows": 10000,
+      "shape": [
+        10000,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/by_id/exp0074__domain_split_embedding_view__nih_pilot5h_plus_chexpert_target_1000_cxr_foundation/d0_nih/train/row_ids.json",
+      "split": "train"
+    },
+    "target_test": {
+      "domain": "d1_chexpert",
+      "embeddings_path": "/workspace/experiments/by_id/exp0074__domain_split_embedding_view__nih_pilot5h_plus_chexpert_target_1000_cxr_foundation/d1_chexpert/test/embeddings.npy",
+      "num_rows": 234,
+      "shape": [
+        234,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/by_id/exp0074__domain_split_embedding_view__nih_pilot5h_plus_chexpert_target_1000_cxr_foundation/d1_chexpert/test/row_ids.json",
+      "split": "test"
+    },
+    "target_train": {
+      "domain": "d1_chexpert",
+      "embeddings_path": "/workspace/experiments/by_id/exp0074__domain_split_embedding_view__nih_pilot5h_plus_chexpert_target_1000_cxr_foundation/d1_chexpert/train/embeddings.npy",
+      "num_rows": 1000,
+      "shape": [
+        1000,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/by_id/exp0074__domain_split_embedding_view__nih_pilot5h_plus_chexpert_target_1000_cxr_foundation/d1_chexpert/train/row_ids.json",
+      "split": "train"
+    },
+    "target_val": {
+      "domain": "d1_chexpert",
+      "embeddings_path": "/workspace/experiments/by_id/exp0074__domain_split_embedding_view__nih_pilot5h_plus_chexpert_target_1000_cxr_foundation/d1_chexpert/val/embeddings.npy",
+      "num_rows": 1000,
+      "shape": [
+        1000,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/workspace/experiments/by_id/exp0074__domain_split_embedding_view__nih_pilot5h_plus_chexpert_target_1000_cxr_foundation/d1_chexpert/val/row_ids.json",
+      "split": "val"
+    }
+  },
+  "split_profile": "chexpert_adapt_from_nih",
+  "thresholds_path": "/workspace/experiments/by_id/exp0076__domain_transfer_head_training__nih_warmstart_lwf__chexpert_target_1000__alpha-0p25__temp-2__cxr_foundation_linear_gpu/target_val_f1_thresholds.json",
+  "token_pooling": "avg",
+  "train_alias": "target_train"
+}

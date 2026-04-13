@@ -2,7 +2,147 @@
 
 Prepared on April 13, 2026 (UTC).
 
-Most recent updates: the current active image-only domain-transfer pilot is summarized in Sections 0, 0A, 0B, 0C, 0D, 0E, and 0F below. If any older section later in this file conflicts with Sections 0, 0A, 0B, 0C, 0D, 0E, or 0F, treat Section 0F as the newest result for the present workspace.
+Most recent updates: the current active image-only domain-transfer pilot is summarized in Sections 0, 0A, 0B, 0C, 0D, 0E, 0F, and 0G below. If any older section later in this file conflicts with Sections 0, 0A, 0B, 0C, 0D, 0E, 0F, or 0G, treat Section 0G as the newest result for the present workspace.
+
+## 0G. April 13, 2026 Update: NIH-to-CheXpert LwF Sweep on the Warm-Started Head (`exp0076`-`exp0084`)
+
+### Objective
+
+The next planned step after the first warm-start adaptation run in Section `0F` was to keep the same frozen `CXR Foundation` embeddings, keep the same `NIH`-trained source head, keep the same `CheXpert 1000/1000/test` adaptation split, and add `Learning without Forgetting (LwF)` during target adaptation.
+
+The concrete question was whether a source-preservation loss could reduce the `NIH` forgetting seen in `exp0075` while also improving the `CheXpert` target result.
+
+### Experimental protocol
+
+- Date:
+  - `April 13, 2026 (UTC)`
+- Campaign:
+  - `08_chexpert_incremental_adaptation_from_nih_lwf`
+- Backbone and features:
+  - frozen `CXR Foundation`
+  - `general` embeddings
+  - `avg` token pooling
+  - `768`-dimensional features
+- Student initialization:
+  - same `NIH` head checkpoint as Section `0F`
+  - `exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h/best.ckpt`
+- Teacher for LwF:
+  - same frozen `exp0015` checkpoint
+- Data usage:
+  - supervised target batches from `CheXpert 1000 train`
+  - LwF source batches from `NIH train`
+  - early stopping and threshold tuning on `CheXpert target-val`
+  - final reporting on `CheXpert test` and `NIH test`
+- Objective:
+  - total loss = `CheXpert BCE + alpha * LwF`
+  - multilabel distillation used teacher probabilities from temperature-scaled source logits
+  - the distillation term used the standard `T^2` rescaling
+- Sweep grid:
+  - `alpha in {0.25, 0.5, 1.0}`
+  - `temperature in {2, 4, 8}`
+- Shared optimization settings:
+  - linear head only
+  - `AdamW`, learning rate `1e-3`, weight decay `1e-4`
+  - batch size `512`
+  - all runs used the same merged embedding root from `exp0074`
+
+### Run family
+
+The LwF sweep produced nine target-adaptation runs:
+
+- `exp0076` to `exp0078`: `alpha=0.25` with temperatures `2`, `4`, `8`
+- `exp0079` to `exp0081`: `alpha=0.5` with temperatures `2`, `4`, `8`
+- `exp0082` to `exp0084`: `alpha=1.0` with temperatures `2`, `4`, `8`
+
+All nine runs reached the final epoch budget and selected the final checkpoint at epoch `50`.
+
+### Main results
+
+#### Full LwF sweep
+
+| Run | Alpha | Temp | Best epoch | CheXpert test AUROC | CheXpert test AP | NIH test AUROC | NIH test AP |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| `exp0076` | `0.25` | `2` | `50` | `0.7858` | `0.4761` | `0.8291` | `0.2334` |
+| `exp0077` | `0.25` | `4` | `50` | `0.7856` | `0.4762` | `0.8298` | `0.2340` |
+| `exp0078` | `0.25` | `8` | `50` | `0.7857` | `0.4763` | `0.8300` | `0.2344` |
+| `exp0079` | `0.5` | `2` | `50` | `0.7909` | `0.4789` | `0.8345` | `0.2403` |
+| `exp0080` | `0.5` | `4` | `50` | `0.7914` | `0.4793` | `0.8350` | `0.2406` |
+| `exp0081` | `0.5` | `8` | `50` | `0.7915` | `0.4794` | `0.8352` | `0.2406` |
+| `exp0082` | `1.0` | `2` | `50` | `0.7983` | `0.4814` | `0.8389` | `0.2442` |
+| `exp0083` | `1.0` | `4` | `50` | `0.7991` | `0.4810` | `0.8394` | `0.2445` |
+| `exp0084` | `1.0` | `8` | `50` | `0.7991` | `0.4810` | `0.8394` | `0.2447` |
+
+#### Baseline comparison
+
+| Training rule | CheXpert test AUROC | CheXpert test AP | NIH test AUROC | NIH test AP |
+| --- | ---: | ---: | ---: | ---: |
+| `NIH`-source direct-transfer baseline (`exp0015`) | `0.8454` | `0.5430` | `0.8455` | `0.2541` |
+| `CheXpert` target-only linear (`exp0055`) | `0.7702` | `0.4715` | not evaluated | not evaluated |
+| `NIH -> CheXpert` warm-start, no LwF (`exp0075`) | `0.7757` | `0.4770` | `0.8112` | `0.2188` |
+| best target-AUROC LwF run (`exp0083`) | `0.7991` | `0.4810` | `0.8394` | `0.2445` |
+| best retention / near-tied target run (`exp0084`) | `0.7991` | `0.4810` | `0.8394` | `0.2447` |
+
+Additional bookkeeping:
+
+- `exp0083` had the best `CheXpert test` AUROC in the sweep: `0.7991`
+- `exp0082` had the best `CheXpert test` AP in the sweep: `0.4814`
+- `exp0084` had the best `NIH test` AUROC/AP in the sweep: `0.8394 / 0.2447`
+- every LwF run outperformed the no-LwF warm-start baseline `exp0075` on both `CheXpert test` AUROC and `NIH test` AUROC
+
+### Interpretation
+
+The LwF branch worked clearly better than the first plain warm-start adaptation run.
+
+Relative to `exp0075`, the strongest LwF settings improved both the target-domain result and source retention at the same time:
+
+- `CheXpert test` AUROC improved from `0.7757` to `0.7991` (`+0.0233`)
+- `CheXpert test` AP improved from `0.4770` to `0.4814` at best (`+0.0044`)
+- `NIH test` AUROC improved from `0.8112` to `0.8394` (`+0.0282`)
+- `NIH test` AP improved from `0.2188` to `0.2447` (`+0.0259`)
+
+This means the main weakness of `exp0075` was not an unavoidable tradeoff between target improvement and source retention. In this sweep, adding LwF moved both in the right direction simultaneously.
+
+The sweep pattern is also fairly clean:
+
+- increasing `alpha` helped both `CheXpert` and `NIH` metrics across the tested range
+- temperature had only a small effect once `alpha` was fixed
+- `alpha=1.0` dominated `alpha=0.25` and `alpha=0.5` on the main ranking metrics
+
+Even so, the best LwF runs still remained below the original `NIH`-source direct-transfer baseline `exp0015`:
+
+- best `CheXpert test` AUROC was still lower than `exp0015` by about `-0.0463`
+- best `NIH test` AUROC was still lower than `exp0015` by about `-0.0060`
+
+So the correct reading is not that LwF fully closed the gap to the source model. The defensible reading is that `LwF` substantially improved the incremental-adaptation recipe and largely removed the major forgetting penalty seen in the first no-LwF adaptation run.
+
+### Supervisor-facing message
+
+The supervisor-facing conclusion is:
+
+1. Adding `LwF` is a real improvement over the first warm-start adaptation baseline.
+2. In this sweep, `LwF` improved `CheXpert` target performance and `NIH` retention simultaneously rather than trading one off against the other.
+3. The best working region in the tested grid is the higher-distillation regime, especially `alpha=1.0`.
+4. However, even the best LwF run still does not surpass the original `NIH`-source direct-transfer baseline on the main `CheXpert` ranking metrics.
+5. The next experimental question should therefore be whether a stronger adaptation recipe can preserve the LwF benefit while closing the remaining `CheXpert` gap to `exp0015`.
+
+### Artifact locations for this update
+
+- campaign directory:
+  - `/workspace/experiments/campaigns/08_chexpert_incremental_adaptation_from_nih_lwf`
+- shared merged embedding-root view:
+  - `/workspace/experiments/by_id/exp0074__domain_split_embedding_view__nih_pilot5h_plus_chexpert_target_1000_cxr_foundation`
+- warm-start no-LwF baseline:
+  - `/workspace/experiments/by_id/exp0075__domain_transfer_head_training__nih_warmstart_adaptation__chexpert_target_1000__cxr_foundation_linear_gpu`
+- LwF sweep runs:
+  - `/workspace/experiments/by_id/exp0076__domain_transfer_head_training__nih_warmstart_lwf__chexpert_target_1000__alpha-0p25__temp-2__cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0077__domain_transfer_head_training__nih_warmstart_lwf__chexpert_target_1000__alpha-0p25__temp-4__cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0078__domain_transfer_head_training__nih_warmstart_lwf__chexpert_target_1000__alpha-0p25__temp-8__cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0079__domain_transfer_head_training__nih_warmstart_lwf__chexpert_target_1000__alpha-0p5__temp-2__cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0080__domain_transfer_head_training__nih_warmstart_lwf__chexpert_target_1000__alpha-0p5__temp-4__cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0081__domain_transfer_head_training__nih_warmstart_lwf__chexpert_target_1000__alpha-0p5__temp-8__cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0082__domain_transfer_head_training__nih_warmstart_lwf__chexpert_target_1000__alpha-1p0__temp-2__cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0083__domain_transfer_head_training__nih_warmstart_lwf__chexpert_target_1000__alpha-1p0__temp-4__cxr_foundation_linear_gpu`
+  - `/workspace/experiments/by_id/exp0084__domain_transfer_head_training__nih_warmstart_lwf__chexpert_target_1000__alpha-1p0__temp-8__cxr_foundation_linear_gpu`
 
 ## 0F. April 13, 2026 Update: Incremental NIH-to-CheXpert Head Adaptation (`exp0074`-`exp0075`)
 

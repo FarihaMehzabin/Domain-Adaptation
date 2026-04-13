@@ -22,6 +22,7 @@ import experiment_layout
 import numpy as np
 import torch
 from torch import nn
+from torch.nn import functional as F
 from torch.utils.data import DataLoader, Dataset
 
 
@@ -79,6 +80,7 @@ class EvaluationPlan:
     train_alias: str
     selection_alias: str
     primary_test_alias: str | None
+    auxiliary_train_aliases: tuple[str, ...]
     split_specs: tuple[tuple[str, str, str], ...]
     output_name_map: dict[str, str]
     thresholds_filename: str
@@ -93,6 +95,22 @@ class InitializationMetadata:
     checkpoint_num_labels: int
     token_pooling: str | None
     l2_normalize_features: bool | None
+
+
+@dataclass(frozen=True)
+class LwFConfig:
+    source_alias: str
+    alpha: float
+    temperature: float
+    teacher_checkpoint_path: str
+    teacher_checkpoint_epoch: int | None
+
+
+@dataclass(frozen=True)
+class TrainEpochSummary:
+    total_loss: float
+    supervised_loss: float
+    lwf_loss: float | None
 
 
 AUTO_ID_COLUMNS = ("row_id", "sample_id", "image_id", "id")
@@ -803,26 +821,68 @@ def train_one_epoch(
     scaler: torch.cuda.amp.GradScaler,
     device: torch.device,
     fp16_on_cuda: bool,
-) -> float:
+    lwf_loader: DataLoader | None = None,
+    teacher_model: nn.Module | None = None,
+    lwf_config: LwFConfig | None = None,
+) -> TrainEpochSummary:
     model.train()
     total_loss = 0.0
     total_examples = 0
+    total_supervised_loss = 0.0
+    total_lwf_loss = 0.0
+    total_lwf_examples = 0
+    lwf_iterator: Any = iter(lwf_loader) if lwf_loader is not None else None
+    if teacher_model is not None:
+        teacher_model.eval()
     for batch in loader:
         features = batch["features"].to(device, non_blocking=True)
         targets = batch["targets"].to(device, non_blocking=True)
         optimizer.zero_grad(set_to_none=True)
         with get_autocast_context(device, fp16_on_cuda):
             logits = model(features)
-            loss = criterion(logits, targets)
+            supervised_loss = criterion(logits, targets)
+            loss = supervised_loss
+            current_lwf_loss: torch.Tensor | None = None
+            source_batch_size = 0
+            if lwf_config is not None:
+                if teacher_model is None or lwf_loader is None:
+                    raise SystemExit("LwF training requested without teacher_model and lwf_loader.")
+                assert lwf_iterator is not None
+                try:
+                    source_batch = next(lwf_iterator)
+                except StopIteration:
+                    lwf_iterator = iter(lwf_loader)
+                    source_batch = next(lwf_iterator)
+                source_features = source_batch["features"].to(device, non_blocking=True)
+                source_batch_size = int(source_features.shape[0])
+                with torch.no_grad():
+                    teacher_logits = teacher_model(source_features)
+                student_source_logits = model(source_features)
+                temperature = float(lwf_config.temperature)
+                teacher_probs = torch.sigmoid(teacher_logits.float() / temperature)
+                current_lwf_loss = F.binary_cross_entropy_with_logits(
+                    student_source_logits.float() / temperature,
+                    teacher_probs,
+                    reduction="mean",
+                ) * (temperature * temperature)
+                loss = supervised_loss + (float(lwf_config.alpha) * current_lwf_loss)
         scaler.scale(loss).backward()
         scaler.step(optimizer)
         scaler.update()
         batch_size = int(targets.shape[0])
         total_loss += float(loss.detach().item()) * batch_size
+        total_supervised_loss += float(supervised_loss.detach().item()) * batch_size
         total_examples += batch_size
+        if current_lwf_loss is not None and source_batch_size > 0:
+            total_lwf_loss += float(current_lwf_loss.detach().item()) * source_batch_size
+            total_lwf_examples += source_batch_size
     if total_examples == 0:
         raise SystemExit("Training loader produced zero examples.")
-    return total_loss / total_examples
+    return TrainEpochSummary(
+        total_loss=(total_loss / total_examples),
+        supervised_loss=(total_supervised_loss / total_examples),
+        lwf_loss=((total_lwf_loss / total_lwf_examples) if total_lwf_examples > 0 else None),
+    )
 
 
 @torch.no_grad()
@@ -886,7 +946,12 @@ def format_bash_command(argv: list[str]) -> str:
     return " \\\n  ".join(shlex.quote(part) for part in argv)
 
 
-def build_evaluation_plan(*, split_profile: str, embedding_layout: str) -> EvaluationPlan:
+def build_evaluation_plan(
+    *,
+    split_profile: str,
+    embedding_layout: str,
+    include_lwf_source: bool,
+) -> EvaluationPlan:
     if split_profile == "source_transfer":
         split_specs: list[tuple[str, str, str]] = [
             ("d0_train", "d0_nih", "train"),
@@ -915,6 +980,7 @@ def build_evaluation_plan(*, split_profile: str, embedding_layout: str) -> Evalu
             train_alias="d0_train",
             selection_alias="d0_val",
             primary_test_alias="d0_test",
+            auxiliary_train_aliases=tuple(),
             split_specs=tuple(split_specs),
             output_name_map=output_name_map,
             thresholds_filename="d0_val_f1_thresholds.json",
@@ -929,6 +995,7 @@ def build_evaluation_plan(*, split_profile: str, embedding_layout: str) -> Evalu
             train_alias="target_train",
             selection_alias="target_val",
             primary_test_alias="target_test",
+            auxiliary_train_aliases=tuple(),
             split_specs=(
                 ("target_train", target_domain, "train"),
                 ("target_val", target_domain, "val"),
@@ -944,17 +1011,23 @@ def build_evaluation_plan(*, split_profile: str, embedding_layout: str) -> Evalu
     if split_profile == "chexpert_adapt_from_nih":
         if embedding_layout != "domain_split":
             raise SystemExit("--split-profile chexpert_adapt_from_nih requires --embedding-layout domain_split.")
+        split_specs: list[tuple[str, str, str]] = [
+            ("target_train", "d1_chexpert", "train"),
+            ("target_val", "d1_chexpert", "val"),
+            ("target_test", "d1_chexpert", "test"),
+            ("d0_test", "d0_nih", "test"),
+        ]
+        auxiliary_train_aliases: tuple[str, ...] = tuple()
+        if include_lwf_source:
+            split_specs.append(("lwf_source_train", "d0_nih", "train"))
+            auxiliary_train_aliases = ("lwf_source_train",)
         return EvaluationPlan(
             name=split_profile,
             train_alias="target_train",
             selection_alias="target_val",
             primary_test_alias="target_test",
-            split_specs=(
-                ("target_train", "d1_chexpert", "train"),
-                ("target_val", "d1_chexpert", "val"),
-                ("target_test", "d1_chexpert", "test"),
-                ("d0_test", "d0_nih", "test"),
-            ),
+            auxiliary_train_aliases=auxiliary_train_aliases,
+            split_specs=tuple(split_specs),
             output_name_map={
                 "target_val": "target_val_metrics.json",
                 "target_test": "target_test_metrics.json",
@@ -1115,6 +1188,11 @@ def render_recreation_report(
             f"- Token pooling: `{config['token_pooling']}`",
             f"- Head type: `{config['head_type']}`",
             f"- Init checkpoint: `{config['init_checkpoint_path']}`",
+            f"- LwF enabled: `{config['enable_lwf']}`",
+            f"- LwF teacher checkpoint: `{config['lwf_teacher_checkpoint_path']}`",
+            f"- LwF source alias: `{config['lwf_source_alias']}`",
+            f"- LwF alpha: `{config['lwf_alpha']}`",
+            f"- LwF temperature: `{config['lwf_temperature']}`",
             f"- MLP hidden dims: `{config['mlp_hidden_dims']}`",
             f"- MLP dropout: `{config['mlp_dropout']}`",
             "",
@@ -1135,7 +1213,9 @@ def render_recreation_report(
             "## Notes",
             "",
             f"- Training uses only `{config['train_alias']}` embeddings.",
+            f"- Auxiliary training aliases: `{config['auxiliary_train_aliases']}`.",
             f"- Initialization checkpoint: `{config['init_checkpoint_path']}`.",
+            f"- LwF teacher checkpoint: `{config['lwf_teacher_checkpoint_path']}`.",
             f"- Early stopping is driven by `{config['selection_alias']}` macro AUROC.",
             f"- `{config['selection_alias']}`-tuned thresholds are reused unchanged for later evaluation splits.",
             "",
@@ -1154,6 +1234,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--experiments-root", type=Path, default=DEFAULT_EXPERIMENTS_ROOT)
     parser.add_argument("--experiment-name", type=str, default=None)
     parser.add_argument("--init-checkpoint", type=Path, default=None)
+    parser.add_argument("--enable-lwf", action="store_true")
+    parser.add_argument("--lwf-teacher-checkpoint", type=Path, default=None)
+    parser.add_argument("--lwf-source-alias", type=str, default="lwf_source_train")
+    parser.add_argument("--lwf-alpha", type=float, default=None)
+    parser.add_argument("--lwf-temperature", type=float, default=None)
     parser.add_argument(
         "--split-profile",
         choices=("source_transfer", "chexpert_target", "mimic_target", "chexpert_adapt_from_nih"),
@@ -1221,6 +1306,19 @@ def main() -> int:
         raise SystemExit("--head-type mlp requires at least one --mlp-hidden-dims value.")
     if args.split_profile == "chexpert_adapt_from_nih" and args.init_checkpoint is None:
         raise SystemExit("--split-profile chexpert_adapt_from_nih requires --init-checkpoint.")
+    if args.enable_lwf:
+        if args.split_profile != "chexpert_adapt_from_nih":
+            raise SystemExit("--enable-lwf currently only supports --split-profile chexpert_adapt_from_nih.")
+        if args.head_type != "linear":
+            raise SystemExit("--enable-lwf currently only supports --head-type linear.")
+        if args.lwf_teacher_checkpoint is None:
+            raise SystemExit("--enable-lwf requires --lwf-teacher-checkpoint.")
+        if args.lwf_alpha is None or float(args.lwf_alpha) <= 0.0:
+            raise SystemExit("--enable-lwf requires --lwf-alpha > 0.")
+        if args.lwf_temperature is None or float(args.lwf_temperature) <= 0.0:
+            raise SystemExit("--enable-lwf requires --lwf-temperature > 0.")
+    elif args.lwf_teacher_checkpoint is not None or args.lwf_alpha is not None or args.lwf_temperature is not None:
+        raise SystemExit("LwF-specific arguments require --enable-lwf.")
 
     seed_everything(int(args.seed))
     device = resolve_device(args.device)
@@ -1230,6 +1328,7 @@ def main() -> int:
     evaluation_plan = build_evaluation_plan(
         split_profile=args.split_profile,
         embedding_layout=args.embedding_layout,
+        include_lwf_source=bool(args.enable_lwf),
     )
 
     split_data: dict[str, SplitData] = {}
@@ -1293,7 +1392,7 @@ def main() -> int:
             l2_normalize_features=bool(args.l2_normalize_features),
         )
         for alias, payload in split_data.items()
-        if alias != evaluation_plan.train_alias
+        if alias != evaluation_plan.train_alias and alias not in evaluation_plan.auxiliary_train_aliases
     }
 
     model = build_probe_model(
@@ -1314,6 +1413,49 @@ def main() -> int:
             num_labels=len(label_names),
             token_pooling=args.token_pooling,
             l2_normalize_features=bool(args.l2_normalize_features),
+        )
+    teacher_model: nn.Module | None = None
+    teacher_metadata: InitializationMetadata | None = None
+    lwf_loader: DataLoader | None = None
+    lwf_config: LwFConfig | None = None
+    if args.enable_lwf:
+        if args.lwf_source_alias not in split_data:
+            raise SystemExit(f"--lwf-source-alias '{args.lwf_source_alias}' was not loaded from the evaluation plan.")
+        teacher_model = build_probe_model(
+            head_type=args.head_type,
+            input_dim=input_dim,
+            num_labels=len(label_names),
+            mlp_hidden_dims=mlp_hidden_dims,
+            mlp_dropout=float(args.mlp_dropout),
+        ).to(device)
+        teacher_metadata = load_initial_checkpoint(
+            init_checkpoint_path=args.lwf_teacher_checkpoint.resolve(),
+            model=teacher_model,
+            label_names=label_names,
+            requested_head_type=args.head_type,
+            input_dim=input_dim,
+            num_labels=len(label_names),
+            token_pooling=args.token_pooling,
+            l2_normalize_features=bool(args.l2_normalize_features),
+        )
+        for parameter in teacher_model.parameters():
+            parameter.requires_grad = False
+        teacher_model.eval()
+        lwf_loader = build_dataloader(
+            split_data[args.lwf_source_alias],
+            batch_size=args.batch_size,
+            num_workers=args.num_workers,
+            device=device,
+            shuffle=True,
+            token_pooling=args.token_pooling,
+            l2_normalize_features=bool(args.l2_normalize_features),
+        )
+        lwf_config = LwFConfig(
+            source_alias=str(args.lwf_source_alias),
+            alpha=float(args.lwf_alpha),
+            temperature=float(args.lwf_temperature),
+            teacher_checkpoint_path=teacher_metadata.checkpoint_path,
+            teacher_checkpoint_epoch=teacher_metadata.checkpoint_epoch,
         )
     pos_weight = compute_pos_weight(split_data[evaluation_plan.train_alias].labels).to(device)
     criterion = nn.BCEWithLogitsLoss(pos_weight=pos_weight)
@@ -1344,6 +1486,26 @@ def main() -> int:
             if init_metadata is not None
             else None
         ),
+        "enable_lwf": bool(args.enable_lwf),
+        "lwf_teacher_checkpoint_path": (
+            str(args.lwf_teacher_checkpoint.resolve()) if args.lwf_teacher_checkpoint is not None else None
+        ),
+        "lwf_teacher_checkpoint_metadata": (
+            {
+                "checkpoint_path": teacher_metadata.checkpoint_path,
+                "checkpoint_epoch": teacher_metadata.checkpoint_epoch,
+                "checkpoint_head_type": teacher_metadata.checkpoint_head_type,
+                "checkpoint_input_dim": teacher_metadata.checkpoint_input_dim,
+                "checkpoint_num_labels": teacher_metadata.checkpoint_num_labels,
+                "token_pooling": teacher_metadata.token_pooling,
+                "l2_normalize_features": teacher_metadata.l2_normalize_features,
+            }
+            if teacher_metadata is not None
+            else None
+        ),
+        "lwf_source_alias": (str(args.lwf_source_alias) if args.enable_lwf else None),
+        "lwf_alpha": (float(args.lwf_alpha) if args.enable_lwf else None),
+        "lwf_temperature": (float(args.lwf_temperature) if args.enable_lwf else None),
         "split_profile": args.split_profile,
         "embedding_layout": args.embedding_layout,
         "token_pooling": args.token_pooling,
@@ -1371,6 +1533,7 @@ def main() -> int:
         "fp16_on_cuda": bool(args.fp16_on_cuda),
         "max_rows_per_split": int(args.max_rows_per_split) if args.max_rows_per_split is not None else None,
         "train_alias": evaluation_plan.train_alias,
+        "auxiliary_train_aliases": list(evaluation_plan.auxiliary_train_aliases),
         "selection_alias": evaluation_plan.selection_alias,
         "primary_test_alias": evaluation_plan.primary_test_alias,
         "split_inputs": {
@@ -1396,6 +1559,12 @@ def main() -> int:
             f"[info] init_checkpoint={init_metadata.checkpoint_path} "
             f"epoch={init_metadata.checkpoint_epoch} head={init_metadata.checkpoint_head_type}"
         )
+    if lwf_config is not None:
+        print(
+            f"[info] lwf_teacher_checkpoint={lwf_config.teacher_checkpoint_path} "
+            f"source_alias={lwf_config.source_alias} alpha={lwf_config.alpha} "
+            f"temperature={lwf_config.temperature}"
+        )
     print(
         f"[info] input_dim={input_dim} labels={len(label_names)} device={device} "
         f"head={config['head_description']} params={model_num_parameters}"
@@ -1408,7 +1577,7 @@ def main() -> int:
 
     for epoch in range(1, args.epochs + 1):
         epoch_started = time.time()
-        train_loss = train_one_epoch(
+        train_summary = train_one_epoch(
             loader=train_loader,
             model=model,
             criterion=criterion,
@@ -1416,6 +1585,9 @@ def main() -> int:
             scaler=scaler,
             device=device,
             fp16_on_cuda=bool(args.fp16_on_cuda),
+            lwf_loader=lwf_loader,
+            teacher_model=teacher_model,
+            lwf_config=lwf_config,
         )
         selection_loss, selection_logits, selection_targets = evaluate_model(
             loader=eval_loaders[evaluation_plan.selection_alias],
@@ -1450,6 +1622,12 @@ def main() -> int:
                     "num_labels": len(label_names),
                     "init_checkpoint_path": config["init_checkpoint_path"],
                     "init_checkpoint_metadata": config["init_checkpoint_metadata"],
+                    "enable_lwf": config["enable_lwf"],
+                    "lwf_teacher_checkpoint_path": config["lwf_teacher_checkpoint_path"],
+                    "lwf_teacher_checkpoint_metadata": config["lwf_teacher_checkpoint_metadata"],
+                    "lwf_source_alias": config["lwf_source_alias"],
+                    "lwf_alpha": config["lwf_alpha"],
+                    "lwf_temperature": config["lwf_temperature"],
                 },
                 experiment_dir / "best.ckpt",
             )
@@ -1461,17 +1639,24 @@ def main() -> int:
             experiment_dir / "train_log.jsonl",
             {
                 "epoch": int(epoch),
-                "train_loss": float(train_loss),
+                "train_loss": float(train_summary.total_loss),
+                "train_supervised_loss": float(train_summary.supervised_loss),
+                "train_lwf_loss": train_summary.lwf_loss,
                 "selection_alias": evaluation_plan.selection_alias,
                 f"{evaluation_plan.selection_alias}_loss": float(selection_loss),
                 f"{evaluation_plan.selection_alias}_macro_auroc": current_summary["macro"]["auroc"],
                 f"{evaluation_plan.selection_alias}_macro_average_precision": current_summary["macro"]["average_precision"],
+                "lwf_enabled": bool(args.enable_lwf),
+                "lwf_alpha": config["lwf_alpha"],
+                "lwf_temperature": config["lwf_temperature"],
                 "improved": bool(improved),
                 "elapsed_sec": float(time.time() - epoch_started),
             },
         )
         print(
-            f"[epoch {epoch:03d}] train_loss={train_loss:.6f} "
+            f"[epoch {epoch:03d}] train_loss={train_summary.total_loss:.6f} "
+            f"train_supervised_loss={train_summary.supervised_loss:.6f} "
+            f"train_lwf_loss={format_metric(train_summary.lwf_loss)} "
             f"{evaluation_plan.selection_alias}_loss={selection_loss:.6f} "
             f"{evaluation_plan.selection_alias}_macro_auroc={format_metric(current_summary['macro']['auroc'])} "
             f"improved={str(improved).lower()}"
@@ -1534,6 +1719,12 @@ def main() -> int:
             "num_labels": len(label_names),
             "init_checkpoint_path": config["init_checkpoint_path"],
             "init_checkpoint_metadata": config["init_checkpoint_metadata"],
+            "enable_lwf": config["enable_lwf"],
+            "lwf_teacher_checkpoint_path": config["lwf_teacher_checkpoint_path"],
+            "lwf_teacher_checkpoint_metadata": config["lwf_teacher_checkpoint_metadata"],
+            "lwf_source_alias": config["lwf_source_alias"],
+            "lwf_alpha": config["lwf_alpha"],
+            "lwf_temperature": config["lwf_temperature"],
         },
         experiment_dir / "best.ckpt",
     )
@@ -1549,6 +1740,12 @@ def main() -> int:
         "manifest_csv": str(manifest_csv),
         "init_checkpoint_path": config["init_checkpoint_path"],
         "init_checkpoint_metadata": config["init_checkpoint_metadata"],
+        "enable_lwf": config["enable_lwf"],
+        "lwf_teacher_checkpoint_path": config["lwf_teacher_checkpoint_path"],
+        "lwf_teacher_checkpoint_metadata": config["lwf_teacher_checkpoint_metadata"],
+        "lwf_source_alias": config["lwf_source_alias"],
+        "lwf_alpha": config["lwf_alpha"],
+        "lwf_temperature": config["lwf_temperature"],
         "split_profile": args.split_profile,
         "embedding_layout": args.embedding_layout,
         "token_pooling": args.token_pooling,
@@ -1563,6 +1760,7 @@ def main() -> int:
         "num_labels": len(label_names),
         "model_num_parameters": model_num_parameters,
         "train_alias": evaluation_plan.train_alias,
+        "auxiliary_train_aliases": list(evaluation_plan.auxiliary_train_aliases),
         "selection_alias": evaluation_plan.selection_alias,
         "primary_test_alias": evaluation_plan.primary_test_alias,
         "split_inputs": config["split_inputs"],
