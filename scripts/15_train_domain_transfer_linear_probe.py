@@ -84,6 +84,17 @@ class EvaluationPlan:
     thresholds_filename: str
 
 
+@dataclass(frozen=True)
+class InitializationMetadata:
+    checkpoint_path: str
+    checkpoint_epoch: int | None
+    checkpoint_head_type: str
+    checkpoint_input_dim: int
+    checkpoint_num_labels: int
+    token_pooling: str | None
+    l2_normalize_features: bool | None
+
+
 AUTO_ID_COLUMNS = ("row_id", "sample_id", "image_id", "id")
 AUTO_PATH_COLUMNS = ("image_path", "report_path", "path")
 
@@ -145,6 +156,24 @@ def resolve_experiment_identity(
 ) -> tuple[int, str, str, Path]:
     requested = (requested_name or "").strip() or None
     base_name = ensure_operation_prefix(requested or generated_slug)
+    if experiments_root.name == "by_id":
+        experiments_root.mkdir(parents=True, exist_ok=True)
+        explicit_number = extract_experiment_number(base_name)
+        if explicit_number is None:
+            experiment_number = next_experiment_number(experiments_root)
+            experiment_name = f"exp{experiment_number:0{id_width}d}__{base_name}"
+        else:
+            experiment_number = explicit_number
+            experiment_name = base_name
+        experiment_id = f"exp{experiment_number:0{id_width}d}"
+        experiment_dir = experiments_root / experiment_name
+        if experiment_dir.exists() and not overwrite:
+            raise SystemExit(
+                f"Experiment directory already exists: {experiment_dir}\n"
+                "Pass --overwrite to reuse it or choose a different --experiment-name."
+            )
+        experiment_dir.mkdir(parents=True, exist_ok=True)
+        return experiment_number, experiment_id, experiment_name, experiment_dir
     return experiment_layout.resolve_experiment_identity(
         experiments_root=experiments_root,
         requested_name=base_name if requested else None,
@@ -912,7 +941,146 @@ def build_evaluation_plan(*, split_profile: str, embedding_layout: str) -> Evalu
             thresholds_filename="target_val_f1_thresholds.json",
         )
 
+    if split_profile == "chexpert_adapt_from_nih":
+        if embedding_layout != "domain_split":
+            raise SystemExit("--split-profile chexpert_adapt_from_nih requires --embedding-layout domain_split.")
+        return EvaluationPlan(
+            name=split_profile,
+            train_alias="target_train",
+            selection_alias="target_val",
+            primary_test_alias="target_test",
+            split_specs=(
+                ("target_train", "d1_chexpert", "train"),
+                ("target_val", "d1_chexpert", "val"),
+                ("target_test", "d1_chexpert", "test"),
+                ("d0_test", "d0_nih", "test"),
+            ),
+            output_name_map={
+                "target_val": "target_val_metrics.json",
+                "target_test": "target_test_metrics.json",
+                "d0_test": "d0_test_metrics.json",
+            },
+            thresholds_filename="target_val_f1_thresholds.json",
+        )
+
     raise SystemExit(f"Unsupported --split-profile value: {split_profile}")
+
+
+def infer_checkpoint_head_type(state_dict: dict[str, Any]) -> str:
+    keys = set(state_dict.keys())
+    if keys == {"classifier.weight", "classifier.bias"}:
+        return "linear"
+    if "classifier.0.weight" in keys and "classifier.0.bias" in keys:
+        return "mlp"
+    raise SystemExit(
+        "Could not infer checkpoint head type from state_dict keys. "
+        f"Found keys: {sorted(keys)[:10]}"
+    )
+
+
+def infer_checkpoint_dimensions(
+    *,
+    checkpoint_head_type: str,
+    state_dict: dict[str, Any],
+) -> tuple[int, int]:
+    if checkpoint_head_type == "linear":
+        weight = state_dict.get("classifier.weight")
+        if not isinstance(weight, torch.Tensor) or weight.ndim != 2:
+            raise SystemExit("Linear checkpoint is missing a 2D classifier.weight tensor.")
+        return int(weight.shape[1]), int(weight.shape[0])
+    output_weight = state_dict.get("classifier.-1.weight")
+    if output_weight is None:
+        sequential_keys = sorted(key for key in state_dict if key.endswith(".weight"))
+        if not sequential_keys:
+            raise SystemExit("MLP checkpoint does not contain any layer weight tensors.")
+        output_weight = state_dict[sequential_keys[-1]]
+    if not isinstance(output_weight, torch.Tensor) or output_weight.ndim != 2:
+        raise SystemExit("MLP checkpoint output layer weight is not a 2D tensor.")
+    first_weight = state_dict.get("classifier.0.weight")
+    if not isinstance(first_weight, torch.Tensor) or first_weight.ndim != 2:
+        raise SystemExit("MLP checkpoint is missing classifier.0.weight.")
+    return int(first_weight.shape[1]), int(output_weight.shape[0])
+
+
+def load_initial_checkpoint(
+    *,
+    init_checkpoint_path: Path,
+    model: nn.Module,
+    label_names: list[str],
+    requested_head_type: str,
+    input_dim: int,
+    num_labels: int,
+    token_pooling: str,
+    l2_normalize_features: bool,
+) -> InitializationMetadata:
+    checkpoint = torch.load(init_checkpoint_path, map_location="cpu")
+    if not isinstance(checkpoint, dict):
+        raise SystemExit(f"Initialization checkpoint is not a dict: {init_checkpoint_path}")
+    state_dict = checkpoint.get("state_dict")
+    if not isinstance(state_dict, dict):
+        raise SystemExit(f"Initialization checkpoint missing state_dict: {init_checkpoint_path}")
+
+    checkpoint_label_names = checkpoint.get("label_names")
+    if checkpoint_label_names is not None and list(checkpoint_label_names) != label_names:
+        raise SystemExit(
+            "Initialization checkpoint label_names do not match the requested run.\n"
+            f"checkpoint={list(checkpoint_label_names)}\n"
+            f"requested={label_names}"
+        )
+
+    checkpoint_head_type = str(checkpoint.get("head_type") or infer_checkpoint_head_type(state_dict))
+    if checkpoint_head_type != requested_head_type:
+        raise SystemExit(
+            f"Initialization checkpoint head_type={checkpoint_head_type} does not match "
+            f"requested head_type={requested_head_type}."
+        )
+
+    checkpoint_input_dim = checkpoint.get("input_dim")
+    checkpoint_num_labels = checkpoint.get("num_labels")
+    if checkpoint_input_dim is None or checkpoint_num_labels is None:
+        inferred_input_dim, inferred_num_labels = infer_checkpoint_dimensions(
+            checkpoint_head_type=checkpoint_head_type,
+            state_dict=state_dict,
+        )
+        checkpoint_input_dim = inferred_input_dim if checkpoint_input_dim is None else checkpoint_input_dim
+        checkpoint_num_labels = inferred_num_labels if checkpoint_num_labels is None else checkpoint_num_labels
+
+    if int(checkpoint_input_dim) != int(input_dim):
+        raise SystemExit(
+            f"Initialization checkpoint input_dim={checkpoint_input_dim} does not match requested input_dim={input_dim}."
+        )
+    if int(checkpoint_num_labels) != int(num_labels):
+        raise SystemExit(
+            f"Initialization checkpoint num_labels={checkpoint_num_labels} does not match requested num_labels={num_labels}."
+        )
+
+    checkpoint_token_pooling = checkpoint.get("token_pooling")
+    if checkpoint_token_pooling is not None and str(checkpoint_token_pooling) != token_pooling:
+        raise SystemExit(
+            f"Initialization checkpoint token_pooling={checkpoint_token_pooling} does not match "
+            f"requested token_pooling={token_pooling}."
+        )
+    checkpoint_l2_normalize = checkpoint.get("l2_normalize_features")
+    if checkpoint_l2_normalize is not None and bool(checkpoint_l2_normalize) != bool(l2_normalize_features):
+        raise SystemExit(
+            "Initialization checkpoint l2_normalize_features does not match the requested run.\n"
+            f"checkpoint={bool(checkpoint_l2_normalize)} requested={bool(l2_normalize_features)}"
+        )
+
+    model.load_state_dict(state_dict, strict=True)
+    checkpoint_epoch = checkpoint.get("epoch")
+    checkpoint_epoch_int = int(checkpoint_epoch) if checkpoint_epoch is not None else None
+    return InitializationMetadata(
+        checkpoint_path=str(init_checkpoint_path),
+        checkpoint_epoch=checkpoint_epoch_int,
+        checkpoint_head_type=checkpoint_head_type,
+        checkpoint_input_dim=int(checkpoint_input_dim),
+        checkpoint_num_labels=int(checkpoint_num_labels),
+        token_pooling=(str(checkpoint_token_pooling) if checkpoint_token_pooling is not None else None),
+        l2_normalize_features=(
+            bool(checkpoint_l2_normalize) if checkpoint_l2_normalize is not None else None
+        ),
+    )
 
 
 def render_recreation_report(
@@ -946,6 +1114,7 @@ def render_recreation_report(
             f"- Embedding layout: `{config['embedding_layout']}`",
             f"- Token pooling: `{config['token_pooling']}`",
             f"- Head type: `{config['head_type']}`",
+            f"- Init checkpoint: `{config['init_checkpoint_path']}`",
             f"- MLP hidden dims: `{config['mlp_hidden_dims']}`",
             f"- MLP dropout: `{config['mlp_dropout']}`",
             "",
@@ -966,6 +1135,7 @@ def render_recreation_report(
             "## Notes",
             "",
             f"- Training uses only `{config['train_alias']}` embeddings.",
+            f"- Initialization checkpoint: `{config['init_checkpoint_path']}`.",
             f"- Early stopping is driven by `{config['selection_alias']}` macro AUROC.",
             f"- `{config['selection_alias']}`-tuned thresholds are reused unchanged for later evaluation splits.",
             "",
@@ -983,9 +1153,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--manifest-csv", type=Path, default=DEFAULT_MANIFEST_CSV)
     parser.add_argument("--experiments-root", type=Path, default=DEFAULT_EXPERIMENTS_ROOT)
     parser.add_argument("--experiment-name", type=str, default=None)
+    parser.add_argument("--init-checkpoint", type=Path, default=None)
     parser.add_argument(
         "--split-profile",
-        choices=("source_transfer", "chexpert_target", "mimic_target"),
+        choices=("source_transfer", "chexpert_target", "mimic_target", "chexpert_adapt_from_nih"),
         default="source_transfer",
         help="Which manifest split layout to train and evaluate.",
     )
@@ -1048,6 +1219,8 @@ def main() -> int:
         raise SystemExit("--mlp-hidden-dims is only valid with --head-type mlp.")
     if args.head_type == "mlp" and not mlp_hidden_dims:
         raise SystemExit("--head-type mlp requires at least one --mlp-hidden-dims value.")
+    if args.split_profile == "chexpert_adapt_from_nih" and args.init_checkpoint is None:
+        raise SystemExit("--split-profile chexpert_adapt_from_nih requires --init-checkpoint.")
 
     seed_everything(int(args.seed))
     device = resolve_device(args.device)
@@ -1130,6 +1303,18 @@ def main() -> int:
         mlp_hidden_dims=mlp_hidden_dims,
         mlp_dropout=float(args.mlp_dropout),
     ).to(device)
+    init_metadata: InitializationMetadata | None = None
+    if args.init_checkpoint is not None:
+        init_metadata = load_initial_checkpoint(
+            init_checkpoint_path=args.init_checkpoint.resolve(),
+            model=model,
+            label_names=label_names,
+            requested_head_type=args.head_type,
+            input_dim=input_dim,
+            num_labels=len(label_names),
+            token_pooling=args.token_pooling,
+            l2_normalize_features=bool(args.l2_normalize_features),
+        )
     pos_weight = compute_pos_weight(split_data[evaluation_plan.train_alias].labels).to(device)
     criterion = nn.BCEWithLogitsLoss(pos_weight=pos_weight)
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
@@ -1145,6 +1330,20 @@ def main() -> int:
         "experiment_dir": str(experiment_dir),
         "embedding_root": str(embedding_root),
         "manifest_csv": str(manifest_csv),
+        "init_checkpoint_path": str(args.init_checkpoint.resolve()) if args.init_checkpoint is not None else None,
+        "init_checkpoint_metadata": (
+            {
+                "checkpoint_path": init_metadata.checkpoint_path,
+                "checkpoint_epoch": init_metadata.checkpoint_epoch,
+                "checkpoint_head_type": init_metadata.checkpoint_head_type,
+                "checkpoint_input_dim": init_metadata.checkpoint_input_dim,
+                "checkpoint_num_labels": init_metadata.checkpoint_num_labels,
+                "token_pooling": init_metadata.token_pooling,
+                "l2_normalize_features": init_metadata.l2_normalize_features,
+            }
+            if init_metadata is not None
+            else None
+        ),
         "split_profile": args.split_profile,
         "embedding_layout": args.embedding_layout,
         "token_pooling": args.token_pooling,
@@ -1192,6 +1391,11 @@ def main() -> int:
 
     print(f"[info] experiment_dir={experiment_dir}")
     print(f"[info] embedding_root={embedding_root}")
+    if init_metadata is not None:
+        print(
+            f"[info] init_checkpoint={init_metadata.checkpoint_path} "
+            f"epoch={init_metadata.checkpoint_epoch} head={init_metadata.checkpoint_head_type}"
+        )
     print(
         f"[info] input_dim={input_dim} labels={len(label_names)} device={device} "
         f"head={config['head_description']} params={model_num_parameters}"
@@ -1244,6 +1448,8 @@ def main() -> int:
                     "mlp_dropout": float(args.mlp_dropout),
                     "input_dim": input_dim,
                     "num_labels": len(label_names),
+                    "init_checkpoint_path": config["init_checkpoint_path"],
+                    "init_checkpoint_metadata": config["init_checkpoint_metadata"],
                 },
                 experiment_dir / "best.ckpt",
             )
@@ -1326,6 +1532,8 @@ def main() -> int:
             "mlp_dropout": float(args.mlp_dropout),
             "input_dim": input_dim,
             "num_labels": len(label_names),
+            "init_checkpoint_path": config["init_checkpoint_path"],
+            "init_checkpoint_metadata": config["init_checkpoint_metadata"],
         },
         experiment_dir / "best.ckpt",
     )
@@ -1339,6 +1547,8 @@ def main() -> int:
         "operation_label": DEFAULT_OPERATION_LABEL,
         "embedding_root": str(embedding_root),
         "manifest_csv": str(manifest_csv),
+        "init_checkpoint_path": config["init_checkpoint_path"],
+        "init_checkpoint_metadata": config["init_checkpoint_metadata"],
         "split_profile": args.split_profile,
         "embedding_layout": args.embedding_layout,
         "token_pooling": args.token_pooling,

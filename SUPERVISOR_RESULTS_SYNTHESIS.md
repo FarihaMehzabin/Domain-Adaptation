@@ -1,8 +1,129 @@
 # Supervisor-Facing Results Synthesis for the NIH CXR14 Source-Stage Experiments
 
-Prepared on April 12, 2026 (UTC).
+Prepared on April 13, 2026 (UTC).
 
-Most recent updates: the current active image-only domain-transfer pilot is summarized in Sections 0, 0A, 0B, 0C, 0D, and 0E below. If any older section later in this file conflicts with Sections 0, 0A, 0B, 0C, 0D, or 0E, treat Section 0E as the newest result for the present workspace.
+Most recent updates: the current active image-only domain-transfer pilot is summarized in Sections 0, 0A, 0B, 0C, 0D, 0E, and 0F below. If any older section later in this file conflicts with Sections 0, 0A, 0B, 0C, 0D, 0E, or 0F, treat Section 0F as the newest result for the present workspace.
+
+## 0F. April 13, 2026 Update: Incremental NIH-to-CheXpert Head Adaptation (`exp0074`-`exp0075`)
+
+### Objective
+
+After the `CheXpert` target-only few-shot sweep in Section `0C`, the next concrete question was whether adaptation should begin from the strong `NIH` source head rather than from a fresh random linear probe.
+
+The specific test was:
+
+- keep the same frozen `CXR Foundation` image embeddings
+- start from the existing `NIH`-trained linear head from `exp0015`
+- continue training that head on the `CheXpert 1000 train / 1000 val` target split
+- evaluate the adapted checkpoint on both `CheXpert test` and `NIH test`
+
+This is the first workspace run that directly tests incremental adaptation from the existing `NIH` model under the same common 7-label setup.
+
+### Experimental protocol
+
+- Date:
+  - `April 13, 2026 (UTC)`
+- Campaign:
+  - `07_chexpert_incremental_adaptation_from_nih`
+- Backbone and features:
+  - frozen `CXR Foundation`
+  - `general` embeddings
+  - `avg` token pooling
+  - `768`-dimensional features
+- Initialization checkpoint:
+  - `exp0015__domain_transfer_linear_probe__cxr_foundation_general_avg_pilot5h/best.ckpt`
+  - best source epoch `49`
+- Target split:
+  - `1000` `CheXpert` target-train rows
+  - `1000` `CheXpert` target-val rows
+  - same `234`-example `CheXpert valid` holdout reused as target `test`
+- Optimization rule:
+  - same linear-head recipe used in the earlier target-only runs
+  - `AdamW`, learning rate `1e-3`, weight decay `1e-4`
+  - batch size `512`
+  - early stopping on `CheXpert target-val` macro AUROC
+  - thresholds tuned on `CheXpert target-val`
+- Extra evaluation:
+  - the final adapted checkpoint was also evaluated on the same `2000`-example `NIH test` split used by `exp0015`
+
+### Run lineage
+
+This run family required one small infrastructure step before the adaptation run itself:
+
+- `exp0074__domain_split_embedding_view__nih_pilot5h_plus_chexpert_target_1000_cxr_foundation`
+  - lightweight merged embedding-root view
+  - reuses `NIH` embeddings from `exp0014`
+  - reuses `CheXpert 1000-shot` target embeddings from `exp0054`
+- `exp0075__domain_transfer_head_training__nih_warmstart_adaptation__chexpert_target_1000__cxr_foundation_linear_gpu`
+  - actual warm-start adaptation run from the `exp0015` checkpoint
+
+The merged adaptation manifest was:
+
+- `/workspace/manifest/manifest_nih_pilot5h_chexpert_target_1000_adapt.csv`
+
+### Main results
+
+#### CheXpert holdout comparison
+
+| Training rule | Init checkpoint | Train rows | Val rows | Same CheXpert test AUROC | Same CheXpert test AP | Same CheXpert test F1@0.5 | Same CheXpert test F1@tuned |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| `NIH`-source linear baseline (`exp0015`) | none | `10,000 NIH` | `1,000 NIH` | `0.8454` | `0.5430` | `0.4610` | `0.3492` |
+| `CheXpert` target-only linear (`exp0055`) | none | `1000` | `1000` | `0.7702` | `0.4715` | `0.4448` | `0.4210` |
+| `NIH -> CheXpert` warm-start adaptation (`exp0075`) | `exp0015` | `1000` | `1000` | `0.7757` | `0.4770` | `0.4366` | `0.4625` |
+
+#### NIH source test comparison
+
+| Training rule | Same NIH test AUROC | Same NIH test AP | Same NIH test F1@0.5 | Same NIH test F1@tuned |
+| --- | ---: | ---: | ---: | ---: |
+| `NIH`-source linear baseline (`exp0015`) | `0.8455` | `0.2541` | `0.2466` | `0.2769` |
+| `NIH -> CheXpert` warm-start adaptation (`exp0075`) | `0.8112` | `0.2188` | `0.2449` | `0.2377` |
+
+Additional adaptation-run bookkeeping:
+
+- `exp0075` selected the final checkpoint at epoch `50`
+- `CheXpert target-val` macro AUROC reached `0.7350`
+- unlike the earlier few-shot `MIMIC` runs, this adaptation curve improved gradually through the full budget rather than peaking at epoch `1`
+
+### Interpretation
+
+The main result is that warm-start adaptation from the strong `NIH` head did help on `CheXpert`, but only modestly.
+
+Relative to the strongest prior `CheXpert` target-only `1000-shot` linear run in `exp0055`:
+
+- `CheXpert test` AUROC improved from `0.7702` to `0.7757` (`+0.0055`)
+- `CheXpert test` AP improved from `0.4715` to `0.4770` (`+0.0055`)
+- tuned-threshold `F1` improved from `0.4210` to `0.4625`
+- fixed-threshold `F1@0.5` decreased from `0.4448` to `0.4366`
+
+Relative to the original `NIH`-source direct-transfer baseline in `exp0015`, the adapted model still remained clearly behind on the main ranking metrics:
+
+- `CheXpert test` AUROC stayed lower by `-0.0697`
+- `CheXpert test` AP stayed lower by `-0.0660`
+- fixed-threshold `F1@0.5` stayed lower by `-0.0244`
+
+The extra `NIH test` evaluation also shows measurable source forgetting after adaptation:
+
+- `NIH test` AUROC fell from `0.8455` to `0.8112` (`-0.0343`)
+- `NIH test` AP fell from `0.2541` to `0.2188` (`-0.0353`)
+- fixed-threshold `F1@0.5` changed only slightly, from `0.2466` to `0.2449`
+
+### Supervisor-facing message
+
+The supervisor-facing conclusion is:
+
+1. Warm-starting from the strong `NIH` source head is better than training a fresh `CheXpert`-only head from scratch.
+2. However, this first incremental adaptation run still does **not** beat the original `NIH`-source direct-transfer baseline on the main `CheXpert` ranking metrics.
+3. The adaptation step also weakens source-domain `NIH` performance, so the gain is not free.
+4. The correct interpretation is therefore not “adaptation solved `CheXpert`.” The defensible reading is “warm-start adaptation is directionally better than target-only replacement, but the present head-only recipe still underperforms the original source model on `CheXpert` while introducing source forgetting.”
+
+### Artifact locations for this update
+
+- merged embedding-root view:
+  - `/workspace/experiments/by_id/exp0074__domain_split_embedding_view__nih_pilot5h_plus_chexpert_target_1000_cxr_foundation`
+- adaptation run:
+  - `/workspace/experiments/by_id/exp0075__domain_transfer_head_training__nih_warmstart_adaptation__chexpert_target_1000__cxr_foundation_linear_gpu`
+- supporting manifest:
+  - `/workspace/manifest/manifest_nih_pilot5h_chexpert_target_1000_adapt.csv`
 
 ## 0E. April 12, 2026 Update: Missing MIMIC Follow-Up Runs After Section 0D (`exp0062`-`exp0073`)
 
