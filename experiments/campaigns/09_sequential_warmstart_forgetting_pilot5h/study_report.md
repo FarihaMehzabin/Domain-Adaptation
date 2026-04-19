@@ -3,6 +3,12 @@
 - Manifest: `/tmp/cxr_sequential_forgetting_study/manifest/manifest_pilot5h_binary_mimic.csv`
 - Embedding view: `/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation`
 
+## Model Size And Compute
+
+- Trainable linear head only: `5.4k` params
+- Trainable linear head only: about `10.8k` FLOPs per image
+- Frozen `CXR Foundation` backbone FLOPs were not logged in this head-only run family because embeddings were pre-exported
+
 ## Stage AUROC
 
 - NIH source: NIH `0.8461346978442619`, CheXpert `0.8485879868021924`, MIMIC `0.737037083174961`
