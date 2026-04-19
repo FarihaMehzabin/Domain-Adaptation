@@ -3,7 +3,7 @@
 ## Scope
 
 - Experiment directory: `/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/experiments/by_id/exp0002__domain_transfer_head_training__chexpert_adapt_from_nih__pilot5h_warmstart_chain__cxr_foundation_linear`
-- Embedding root: `/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation`
+- Embedding root: `/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation`
 - Manifest: `/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/manifest/manifest_pilot5h_binary_mimic.csv`
 - Embedding layout: `domain_split`
 - Token pooling: `avg`
@@ -32,7 +32,7 @@ python \
   --init-checkpoint \
   /tmp/cxr_sequential_forgetting_study/experiments/by_id/exp0001__domain_transfer_head_training__nih_source_all_test__pilot5h_warmstart_chain__cxr_foundation_linear/best.ckpt \
   --embedding-root \
-  /tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation \
+  /workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation \
   --manifest-csv \
   /tmp/cxr_sequential_forgetting_study/manifest/manifest_pilot5h_binary_mimic.csv \
   --experiments-root \
@@ -64,13 +64,13 @@ python \
 
 ## Split Inputs
 
-- `target_train` -> `/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/train` with `1000` rows and shape `[1000, 768]`
-- `target_val` -> `/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/val` with `1000` rows and shape `[1000, 768]`
-- `target_test` -> `/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/test` with `234` rows and shape `[234, 768]`
-- `d0_val` -> `/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d0_nih/val` with `1000` rows and shape `[1000, 768]`
-- `d0_test` -> `/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d0_nih/test` with `2000` rows and shape `[2000, 768]`
-- `d2_val` -> `/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d2_mimic/val` with `1000` rows and shape `[1000, 768]`
-- `d2_test` -> `/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d2_mimic/test` with `676` rows and shape `[676, 768]`
+- `target_train` -> `/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/train` with `1000` rows and shape `[1000, 768]`
+- `target_val` -> `/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/val` with `1000` rows and shape `[1000, 768]`
+- `target_test` -> `/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/test` with `234` rows and shape `[234, 768]`
+- `d0_val` -> `/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d0_nih/val` with `1000` rows and shape `[1000, 768]`
+- `d0_test` -> `/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d0_nih/test` with `2000` rows and shape `[2000, 768]`
+- `d2_val` -> `/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d2_mimic/val` with `1000` rows and shape `[1000, 768]`
+- `d2_test` -> `/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d2_mimic/test` with `676` rows and shape `[676, 768]`
 
 ## Final Metrics
 

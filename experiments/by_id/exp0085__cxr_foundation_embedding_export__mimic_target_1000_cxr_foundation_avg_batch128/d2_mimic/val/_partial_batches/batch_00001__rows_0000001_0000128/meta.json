@@ -1,0 +1,2193 @@
+{
+  "batch_index": 1,
+  "embedding_shape": [
+    128,
+    768
+  ],
+  "end_row": 128,
+  "failed_rows": [],
+  "num_embedded_rows": 128,
+  "num_failed_rows": 0,
+  "requested_rows": 128,
+  "saved_at_utc": "2026-04-19T13:08:27.433342+00:00",
+  "start_row": 1,
+  "status": "completed",
+  "successful_rows": [
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10003502/s50084553/70d7e600-373c1311-929f5ff9-23ee3621-ff551ff9.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10003502__s50084553__70d7e600-373c1311-929f5ff9-23ee3621-ff551ff9",
+      "split": "val",
+      "study_id": "s50084553"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10003502/s52139270/550e6f3b-f008c1d0-8d2dee2a-649b30f4-101a98cc.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10003502__s52139270__550e6f3b-f008c1d0-8d2dee2a-649b30f4-101a98cc",
+      "split": "val",
+      "study_id": "s52139270"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10003502/s52309364/e0275ad1-1e6a7451-c3960f5f-1267a188-547b73a1.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10003502__s52309364__e0275ad1-1e6a7451-c3960f5f-1267a188-547b73a1",
+      "split": "val",
+      "study_id": "s52309364"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10003502/s57641661/b410634d-0e4278d7-9c9b3561-8f5e5fc4-34a6aac8.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10003502__s57641661__b410634d-0e4278d7-9c9b3561-8f5e5fc4-34a6aac8",
+      "split": "val",
+      "study_id": "s57641661"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10003502/s57812613/1efa55e3-0a3856d9-421024b8-408fa7e5-81d83c1e.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10003502__s57812613__1efa55e3-0a3856d9-421024b8-408fa7e5-81d83c1e",
+      "split": "val",
+      "study_id": "s57812613"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10013502/s54857277/5c531aa1-a70cc60a-7cc96a81-931ae3dd-f13b5158.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10013502__s54857277__5c531aa1-a70cc60a-7cc96a81-931ae3dd-f13b5158",
+      "split": "val",
+      "study_id": "s54857277"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10013502/s59527128/bb160b54-83b69413-d51367dd-c267210b-fbad7ccd.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10013502__s59527128__bb160b54-83b69413-d51367dd-c267210b-fbad7ccd",
+      "split": "val",
+      "study_id": "s59527128"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10057482/s52168780/5799175e-c125dfdb-3bd28e88-4f9ad41b-37bdd2ed.jpg",
+      "label_vector": [
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10057482__s52168780__5799175e-c125dfdb-3bd28e88-4f9ad41b-37bdd2ed",
+      "split": "val",
+      "study_id": "s52168780"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10072167/s53950117/0f3224d0-b72c37a0-b9d8b5e4-ec922787-44f841ac.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10072167__s53950117__0f3224d0-b72c37a0-b9d8b5e4-ec922787-44f841ac",
+      "split": "val",
+      "study_id": "s53950117"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10072167/s55283974/250a78d4-af5baabd-28ba3b84-13941316-dc3f1d7d.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10072167__s55283974__250a78d4-af5baabd-28ba3b84-13941316-dc3f1d7d",
+      "split": "val",
+      "study_id": "s55283974"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10198310/s52908323/ff7d1ad3-f6e1cd09-288ac039-d69f45d4-8ebbacf3.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10198310__s52908323__ff7d1ad3-f6e1cd09-288ac039-d69f45d4-8ebbacf3",
+      "split": "val",
+      "study_id": "s52908323"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10198310/s53321855/52051de6-12f425a6-7e6e8a6e-8b8c4176-b5d56a2b.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10198310__s53321855__52051de6-12f425a6-7e6e8a6e-8b8c4176-b5d56a2b",
+      "split": "val",
+      "study_id": "s53321855"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10198310/s57420501/a94f823a-d1f6f5aa-de10d9b8-37f6c6c1-e9631495.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10198310__s57420501__a94f823a-d1f6f5aa-de10d9b8-37f6c6c1-e9631495",
+      "split": "val",
+      "study_id": "s57420501"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10199765/s51438218/121773ed-56eae249-ca58c72b-26c66aae-88b837e5.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10199765__s51438218__121773ed-56eae249-ca58c72b-26c66aae-88b837e5",
+      "split": "val",
+      "study_id": "s51438218"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10199765/s56226668/53875428-43e38b4f-4474877c-8f58e8c1-9a189004.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10199765__s56226668__53875428-43e38b4f-4474877c-8f58e8c1-9a189004",
+      "split": "val",
+      "study_id": "s56226668"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10244947/s58927269/d98a4431-acba5ef8-f0c5fe0c-b1b0900e-13276d61.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10244947__s58927269__d98a4431-acba5ef8-f0c5fe0c-b1b0900e-13276d61",
+      "split": "val",
+      "study_id": "s58927269"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10248673/s51023457/1f199273-2f4b7e8c-9041b5c2-18e7ca21-26142e3c.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10248673__s51023457__1f199273-2f4b7e8c-9041b5c2-18e7ca21-26142e3c",
+      "split": "val",
+      "study_id": "s51023457"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10248673/s57975666/30b681db-78293b4e-edd1a3e2-eece4dc4-5ff2d9ab.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10248673__s57975666__30b681db-78293b4e-edd1a3e2-eece4dc4-5ff2d9ab",
+      "split": "val",
+      "study_id": "s57975666"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10253119/s57118642/24386f31-41e447f6-dd0abcfa-ac74f2fe-431699ec.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10253119__s57118642__24386f31-41e447f6-dd0abcfa-ac74f2fe-431699ec",
+      "split": "val",
+      "study_id": "s57118642"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10269181/s53799929/51051faa-2f20e284-0d88407b-8415e95b-9767e74e.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10269181__s53799929__51051faa-2f20e284-0d88407b-8415e95b-9767e74e",
+      "split": "val",
+      "study_id": "s53799929"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10287742/s58092224/f2c7b3a4-c8299236-db971a34-5b06646b-233f91ae.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "row_id": "mimic_cxr__p10287742__s58092224__f2c7b3a4-c8299236-db971a34-5b06646b-233f91ae",
+      "split": "val",
+      "study_id": "s58092224"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10295064/s59266404/902eff2e-fa561f7b-5fa0f94e-e783fda8-9929d74a.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10295064__s59266404__902eff2e-fa561f7b-5fa0f94e-e783fda8-9929d74a",
+      "split": "val",
+      "study_id": "s59266404"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10308375/s52139824/53f5b331-b246e0f1-f7e1d461-eb3139a0-caf707e0.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10308375__s52139824__53f5b331-b246e0f1-f7e1d461-eb3139a0-caf707e0",
+      "split": "val",
+      "study_id": "s52139824"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10308375/s57023953/aa29a8f7-ec260779-8cb37967-7d5bb1e6-a623e93f.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10308375__s57023953__aa29a8f7-ec260779-8cb37967-7d5bb1e6-a623e93f",
+      "split": "val",
+      "study_id": "s57023953"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10337896/s50880103/e5cd4468-946415a5-4559575d-56536274-59b03c5d.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10337896__s50880103__e5cd4468-946415a5-4559575d-56536274-59b03c5d",
+      "split": "val",
+      "study_id": "s50880103"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10337896/s53275640/ac8d6143-a581f133-eafa59da-4f66bc75-4693997c.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10337896__s53275640__ac8d6143-a581f133-eafa59da-4f66bc75-4693997c",
+      "split": "val",
+      "study_id": "s53275640"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10337896/s53778461/58ac68b5-24c8cb7d-62f38524-4c03808a-0329f3c6.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10337896__s53778461__58ac68b5-24c8cb7d-62f38524-4c03808a-0329f3c6",
+      "split": "val",
+      "study_id": "s53778461"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10337896/s53799148/c13cd8dd-8b083466-64564d12-69441e5d-7b8a2515.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10337896__s53799148__c13cd8dd-8b083466-64564d12-69441e5d-7b8a2515",
+      "split": "val",
+      "study_id": "s53799148"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10337896/s54031658/ffde91fb-1eb2b3c1-48e6008b-c16bd376-8a771f1b.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10337896__s54031658__ffde91fb-1eb2b3c1-48e6008b-c16bd376-8a771f1b",
+      "split": "val",
+      "study_id": "s54031658"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10337896/s54346165/ad80e2eb-b3f466b2-05747a4a-6bceb507-5d3748ba.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10337896__s54346165__ad80e2eb-b3f466b2-05747a4a-6bceb507-5d3748ba",
+      "split": "val",
+      "study_id": "s54346165"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10337896/s54785280/1cf4fc4f-428e8580-055a5630-45455deb-5c72df9c.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10337896__s54785280__1cf4fc4f-428e8580-055a5630-45455deb-5c72df9c",
+      "split": "val",
+      "study_id": "s54785280"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10337896/s54966187/aa75e710-aee0e27e-b996e245-8bb737da-caa4ea7a.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10337896__s54966187__aa75e710-aee0e27e-b996e245-8bb737da-caa4ea7a",
+      "split": "val",
+      "study_id": "s54966187"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10337896/s55022783/8c563705-ea74b74f-c379e0f7-91cd0b0e-b7ed81d8.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10337896__s55022783__8c563705-ea74b74f-c379e0f7-91cd0b0e-b7ed81d8",
+      "split": "val",
+      "study_id": "s55022783"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10337896/s55070875/3eb3bf96-c5401aea-07178eee-c43e5e80-600f6a33.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10337896__s55070875__3eb3bf96-c5401aea-07178eee-c43e5e80-600f6a33",
+      "split": "val",
+      "study_id": "s55070875"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10337896/s55929666/69edea97-d76e1e86-638a39dc-13ee8420-6f3385ef.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10337896__s55929666__69edea97-d76e1e86-638a39dc-13ee8420-6f3385ef",
+      "split": "val",
+      "study_id": "s55929666"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10337896/s56437767/b6a12938-a1f0ed52-bca8e3f0-728b69ec-d2bc0a92.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10337896__s56437767__b6a12938-a1f0ed52-bca8e3f0-728b69ec-d2bc0a92",
+      "split": "val",
+      "study_id": "s56437767"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10337896/s56623034/f06a566d-44137a23-0a4acf0e-15f9c10d-4fcffff2.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10337896__s56623034__f06a566d-44137a23-0a4acf0e-15f9c10d-4fcffff2",
+      "split": "val",
+      "study_id": "s56623034"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10337896/s57080785/11835a49-689d7896-d692a675-ea26b04a-9b11c20f.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10337896__s57080785__11835a49-689d7896-d692a675-ea26b04a-9b11c20f",
+      "split": "val",
+      "study_id": "s57080785"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10337896/s57814257/f65f9193-62ebcf82-99968803-f13a04d1-f2c529b5.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10337896__s57814257__f65f9193-62ebcf82-99968803-f13a04d1-f2c529b5",
+      "split": "val",
+      "study_id": "s57814257"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10401591/s58549367/e049f18a-e4f9351c-fec6cad4-a19211f7-0c534a5c.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10401591__s58549367__e049f18a-e4f9351c-fec6cad4-a19211f7-0c534a5c",
+      "split": "val",
+      "study_id": "s58549367"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10401700/s57541861/cf1dab72-e09f8f17-73f1e925-ffb70fe0-e8b878fa.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10401700__s57541861__cf1dab72-e09f8f17-73f1e925-ffb70fe0-e8b878fa",
+      "split": "val",
+      "study_id": "s57541861"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10425463/s53709854/6887e2d1-fbfd6066-7306286f-87e5d3bc-3ded14e7.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10425463__s53709854__6887e2d1-fbfd6066-7306286f-87e5d3bc-3ded14e7",
+      "split": "val",
+      "study_id": "s53709854"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10462870/s52339870/aa81a761-dbc13def-538949eb-6aefd90c-12a85e54.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10462870__s52339870__aa81a761-dbc13def-538949eb-6aefd90c-12a85e54",
+      "split": "val",
+      "study_id": "s52339870"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10522265/s52497746/17077b64-972ced4d-1dd026ac-595f3151-121e9520.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10522265__s52497746__17077b64-972ced4d-1dd026ac-595f3151-121e9520",
+      "split": "val",
+      "study_id": "s52497746"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10522265/s55120315/a8326c4c-0f639e00-ca24c7c1-95d336f2-d9de521f.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10522265__s55120315__a8326c4c-0f639e00-ca24c7c1-95d336f2-d9de521f",
+      "split": "val",
+      "study_id": "s55120315"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10522265/s58007779/5112f0c8-88daad36-4b8ec976-5df44b65-9b6b621b.jpg",
+      "label_vector": [
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10522265__s58007779__5112f0c8-88daad36-4b8ec976-5df44b65-9b6b621b",
+      "split": "val",
+      "study_id": "s58007779"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10522265/s58814809/4f448157-5d85f1e3-0eb6b849-f1fbf95f-0e6d1f6b.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10522265__s58814809__4f448157-5d85f1e3-0eb6b849-f1fbf95f-0e6d1f6b",
+      "split": "val",
+      "study_id": "s58814809"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10526217/s55733884/de3b15c4-8ccd2746-09cb6b58-2c546177-5c7cc9f8.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10526217__s55733884__de3b15c4-8ccd2746-09cb6b58-2c546177-5c7cc9f8",
+      "split": "val",
+      "study_id": "s55733884"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10543994/s52321866/6227f675-2c12a350-9948a0bc-be0b2666-b1ba8954.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10543994__s52321866__6227f675-2c12a350-9948a0bc-be0b2666-b1ba8954",
+      "split": "val",
+      "study_id": "s52321866"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10543994/s52330535/b3d6304a-bf9f636f-6eba19df-d0e27e8d-4d62934b.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10543994__s52330535__b3d6304a-bf9f636f-6eba19df-d0e27e8d-4d62934b",
+      "split": "val",
+      "study_id": "s52330535"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10543994/s53186992/cd184740-11930719-2a8fc04b-c1076a05-9009709a.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10543994__s53186992__cd184740-11930719-2a8fc04b-c1076a05-9009709a",
+      "split": "val",
+      "study_id": "s53186992"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10543994/s53418566/78383c35-b9b27e1d-2f9fa023-af32c4bc-0e8f6a90.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10543994__s53418566__78383c35-b9b27e1d-2f9fa023-af32c4bc-0e8f6a90",
+      "split": "val",
+      "study_id": "s53418566"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10543994/s54489908/7abd173d-1d1b5df7-ff08e42a-7d346b58-6e49dcec.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10543994__s54489908__7abd173d-1d1b5df7-ff08e42a-7d346b58-6e49dcec",
+      "split": "val",
+      "study_id": "s54489908"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10543994/s57237894/95a1bd4e-c011b21e-36ba6f97-6683c294-5b0dd26d.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10543994__s57237894__95a1bd4e-c011b21e-36ba6f97-6683c294-5b0dd26d",
+      "split": "val",
+      "study_id": "s57237894"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10543994/s58473321/1216f943-00196c3a-c41ea739-788f8d83-9571731c.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10543994__s58473321__1216f943-00196c3a-c41ea739-788f8d83-9571731c",
+      "split": "val",
+      "study_id": "s58473321"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10543994/s58967663/e666163a-857953ec-9b3034d3-6020c1aa-12c0c11a.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10543994__s58967663__e666163a-857953ec-9b3034d3-6020c1aa-12c0c11a",
+      "split": "val",
+      "study_id": "s58967663"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10543994/s59383182/b2093612-0ee94341-26838e2f-d6912ecd-14c5aa64.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10543994__s59383182__b2093612-0ee94341-26838e2f-d6912ecd-14c5aa64",
+      "split": "val",
+      "study_id": "s59383182"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10569231/s51507599/3ef83336-7f67850f-4c481312-ec7c99d2-a874836a.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10569231__s51507599__3ef83336-7f67850f-4c481312-ec7c99d2-a874836a",
+      "split": "val",
+      "study_id": "s51507599"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10569231/s53678530/f81a519e-734afad4-3d6c87f8-6434f949-a7676b82.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10569231__s53678530__f81a519e-734afad4-3d6c87f8-6434f949-a7676b82",
+      "split": "val",
+      "study_id": "s53678530"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10569231/s54463242/781476c8-b3ceae84-5bca3f05-15064709-53236d2f.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10569231__s54463242__781476c8-b3ceae84-5bca3f05-15064709-53236d2f",
+      "split": "val",
+      "study_id": "s54463242"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10569231/s55488757/8bd08c70-fbb6e2dc-4a5730ee-8a7a80b5-c496867e.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10569231__s55488757__8bd08c70-fbb6e2dc-4a5730ee-8a7a80b5-c496867e",
+      "split": "val",
+      "study_id": "s55488757"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10575262/s54255491/16e57afa-63382843-a3a5c024-e1af2c42-96184334.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10575262__s54255491__16e57afa-63382843-a3a5c024-e1af2c42-96184334",
+      "split": "val",
+      "study_id": "s54255491"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10575262/s55987322/e283e6ee-1e78a429-c05396b5-19ed705f-5de5210a.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10575262__s55987322__e283e6ee-1e78a429-c05396b5-19ed705f-5de5210a",
+      "split": "val",
+      "study_id": "s55987322"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10592002/s51728482/20907810-b1ab5c94-cb4fbcf4-09c10590-05321eb1.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10592002__s51728482__20907810-b1ab5c94-cb4fbcf4-09c10590-05321eb1",
+      "split": "val",
+      "study_id": "s51728482"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10592002/s58910893/2a4ad985-4a6d5b92-11a8cc7b-046220f5-188ce7c8.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10592002__s58910893__2a4ad985-4a6d5b92-11a8cc7b-046220f5-188ce7c8",
+      "split": "val",
+      "study_id": "s58910893"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10595724/s56038252/3e690aea-3a937250-0a43c974-010eeb6a-f84953b2.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10595724__s56038252__3e690aea-3a937250-0a43c974-010eeb6a-f84953b2",
+      "split": "val",
+      "study_id": "s56038252"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10617538/s52366630/5e4ec3e6-eff5ccaf-92e6f524-90e868e2-3d2c2772.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10617538__s52366630__5e4ec3e6-eff5ccaf-92e6f524-90e868e2-3d2c2772",
+      "split": "val",
+      "study_id": "s52366630"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10617538/s59001230/cb19438f-641f1bf4-e5b7d045-351ae8c3-892e9013.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10617538__s59001230__cb19438f-641f1bf4-e5b7d045-351ae8c3-892e9013",
+      "split": "val",
+      "study_id": "s59001230"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10625954/s52666674/e4b6639a-addc6e70-3931f176-25766a17-95a40103.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10625954__s52666674__e4b6639a-addc6e70-3931f176-25766a17-95a40103",
+      "split": "val",
+      "study_id": "s52666674"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10649970/s50701407/a1c8c7ce-7da30482-9513e5d6-e9c94ca0-4ce8696a.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10649970__s50701407__a1c8c7ce-7da30482-9513e5d6-e9c94ca0-4ce8696a",
+      "split": "val",
+      "study_id": "s50701407"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10649970/s53773715/93e45934-78292c37-0ce37e9f-7ca4c2c4-e83c5212.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10649970__s53773715__93e45934-78292c37-0ce37e9f-7ca4c2c4-e83c5212",
+      "split": "val",
+      "study_id": "s53773715"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10738077/s52247104/df51559d-507712fb-fa6e2962-7da4f76b-a209ffe9.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10738077__s52247104__df51559d-507712fb-fa6e2962-7da4f76b-a209ffe9",
+      "split": "val",
+      "study_id": "s52247104"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10750092/s51178141/6a83b24c-67c3269a-c2c1b295-6bde13b8-b9bab43c.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10750092__s51178141__6a83b24c-67c3269a-c2c1b295-6bde13b8-b9bab43c",
+      "split": "val",
+      "study_id": "s51178141"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10750092/s54397816/0467c521-bdba9798-87b7c0cf-b1e76b40-5fcd1444.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10750092__s54397816__0467c521-bdba9798-87b7c0cf-b1e76b40-5fcd1444",
+      "split": "val",
+      "study_id": "s54397816"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10750092/s55148571/28bcbc77-70736463-dc95285f-40b115a7-5d7b7f15.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10750092__s55148571__28bcbc77-70736463-dc95285f-40b115a7-5d7b7f15",
+      "split": "val",
+      "study_id": "s55148571"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10750092/s59472868/632aa920-047fa58d-57bb9ec3-53497e57-ab6df53a.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10750092__s59472868__632aa920-047fa58d-57bb9ec3-53497e57-ab6df53a",
+      "split": "val",
+      "study_id": "s59472868"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10767172/s59509278/e6a7f3ac-fb2965d9-da384ee3-023cf138-7b74ab23.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10767172__s59509278__e6a7f3ac-fb2965d9-da384ee3-023cf138-7b74ab23",
+      "split": "val",
+      "study_id": "s59509278"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10773739/s50392431/12c35222-67523ce4-b206cd0f-7ae4b5c5-cffd8b0f.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10773739__s50392431__12c35222-67523ce4-b206cd0f-7ae4b5c5-cffd8b0f",
+      "split": "val",
+      "study_id": "s50392431"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10773739/s52243706/03a0e671-6ed112db-cd729147-e75e4c14-8b10b571.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10773739__s52243706__03a0e671-6ed112db-cd729147-e75e4c14-8b10b571",
+      "split": "val",
+      "study_id": "s52243706"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10773739/s53225875/7ce067b7-43b86b45-28974414-6f1c4688-b7f94e66.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10773739__s53225875__7ce067b7-43b86b45-28974414-6f1c4688-b7f94e66",
+      "split": "val",
+      "study_id": "s53225875"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10773739/s54534488/e6f661d0-3ef9f93a-c00603f2-8e7d049d-6a3a0581.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10773739__s54534488__e6f661d0-3ef9f93a-c00603f2-8e7d049d-6a3a0581",
+      "split": "val",
+      "study_id": "s54534488"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10773739/s57343946/203fcaff-aaa7aa30-f1eeb9d0-d903b93f-b2bc1a10.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10773739__s57343946__203fcaff-aaa7aa30-f1eeb9d0-d903b93f-b2bc1a10",
+      "split": "val",
+      "study_id": "s57343946"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10773739/s58663163/4f3d57de-827269dc-785ac7cd-9b9c4f86-8366d5da.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10773739__s58663163__4f3d57de-827269dc-785ac7cd-9b9c4f86-8366d5da",
+      "split": "val",
+      "study_id": "s58663163"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10803114/s53287973/24dcc6bd-268da180-8371ae76-64cd7bcd-550a8701.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "row_id": "mimic_cxr__p10803114__s53287973__24dcc6bd-268da180-8371ae76-64cd7bcd-550a8701",
+      "split": "val",
+      "study_id": "s53287973"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10803114/s53790841/3bcd0d92-81373a0a-8fb28e74-2cac5886-c8fd319b.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10803114__s53790841__3bcd0d92-81373a0a-8fb28e74-2cac5886-c8fd319b",
+      "split": "val",
+      "study_id": "s53790841"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10803114/s54240463/583ddbd2-50f85c61-b2d63c29-0c4cc293-77060208.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10803114__s54240463__583ddbd2-50f85c61-b2d63c29-0c4cc293-77060208",
+      "split": "val",
+      "study_id": "s54240463"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10803114/s56199877/ffc73da5-5e52ccfd-028a2711-ae2702af-ad87c455.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10803114__s56199877__ffc73da5-5e52ccfd-028a2711-ae2702af-ad87c455",
+      "split": "val",
+      "study_id": "s56199877"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10803114/s56814699/44a77474-9433858c-b46ea842-b78cbd76-b08fc180.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10803114__s56814699__44a77474-9433858c-b46ea842-b78cbd76-b08fc180",
+      "split": "val",
+      "study_id": "s56814699"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10803114/s58469461/e29f99dd-1ecf184b-8a7a3240-781f606a-b37061da.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "row_id": "mimic_cxr__p10803114__s58469461__e29f99dd-1ecf184b-8a7a3240-781f606a-b37061da",
+      "split": "val",
+      "study_id": "s58469461"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10862054/s50702835/bb1e3b63-37b0c06b-9ee2551f-b2d7cf01-ed2f7d8b.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10862054__s50702835__bb1e3b63-37b0c06b-9ee2551f-b2d7cf01-ed2f7d8b",
+      "split": "val",
+      "study_id": "s50702835"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10924949/s53623762/d1552af1-5b159d3e-4058cc59-8af87caf-375f46e7.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10924949__s53623762__d1552af1-5b159d3e-4058cc59-8af87caf-375f46e7",
+      "split": "val",
+      "study_id": "s53623762"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10924949/s58001725/f4ec1ae5-a9b3e696-9647c6e3-2518312e-e435cf0a.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10924949__s58001725__f4ec1ae5-a9b3e696-9647c6e3-2518312e-e435cf0a",
+      "split": "val",
+      "study_id": "s58001725"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p10/p10986871/s53302173/171a4674-65e7ed96-c63bae1f-faa3fd7d-07ac9309.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p10986871__s53302173__171a4674-65e7ed96-c63bae1f-faa3fd7d-07ac9309",
+      "split": "val",
+      "study_id": "s53302173"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11068484/s50986892/5baac073-ce7e3f3a-9ba21c8f-9237a435-845c26f6.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11068484__s50986892__5baac073-ce7e3f3a-9ba21c8f-9237a435-845c26f6",
+      "split": "val",
+      "study_id": "s50986892"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11068484/s52314386/9613d784-ef4fadd2-8b33b9c3-3db90fd4-6730c5d6.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11068484__s52314386__9613d784-ef4fadd2-8b33b9c3-3db90fd4-6730c5d6",
+      "split": "val",
+      "study_id": "s52314386"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11068484/s53544633/2c072c9e-42b8fab0-a0fd256c-780bc612-53941594.jpg",
+      "label_vector": [
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11068484__s53544633__2c072c9e-42b8fab0-a0fd256c-780bc612-53941594",
+      "split": "val",
+      "study_id": "s53544633"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11068484/s54047608/5a686ceb-f01792db-cdba870c-da79a22f-f34265ea.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11068484__s54047608__5a686ceb-f01792db-cdba870c-da79a22f-f34265ea",
+      "split": "val",
+      "study_id": "s54047608"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11068484/s55984935/4cac02f5-71a07948-2e40edb0-d546dcad-b3683965.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11068484__s55984935__4cac02f5-71a07948-2e40edb0-d546dcad-b3683965",
+      "split": "val",
+      "study_id": "s55984935"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11068484/s57395441/06e2fd1d-35c95f84-e6021f4a-4611a14e-a4b9a693.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11068484__s57395441__06e2fd1d-35c95f84-e6021f4a-4611a14e-a4b9a693",
+      "split": "val",
+      "study_id": "s57395441"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11128012/s57451515/b4a9606f-2d62a1a5-c7d2c5e1-7ca25c12-e1d2f15f.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11128012__s57451515__b4a9606f-2d62a1a5-c7d2c5e1-7ca25c12-e1d2f15f",
+      "split": "val",
+      "study_id": "s57451515"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11134683/s55846843/0d7f28dc-1de4e7ed-fbc0c70f-e099382a-e5dfb332.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11134683__s55846843__0d7f28dc-1de4e7ed-fbc0c70f-e099382a-e5dfb332",
+      "split": "val",
+      "study_id": "s55846843"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11135350/s53036339/a49ebd3a-d86b070c-87256a4b-f5bb2b7e-f8ebaa00.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11135350__s53036339__a49ebd3a-d86b070c-87256a4b-f5bb2b7e-f8ebaa00",
+      "split": "val",
+      "study_id": "s53036339"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11135350/s53277637/f3a27e2d-1d0d73bc-b7394f0c-7ed82c79-189ddee5.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11135350__s53277637__f3a27e2d-1d0d73bc-b7394f0c-7ed82c79-189ddee5",
+      "split": "val",
+      "study_id": "s53277637"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11135350/s53452058/317f2687-c3bf422b-70bb63ef-c094a677-6c81f799.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11135350__s53452058__317f2687-c3bf422b-70bb63ef-c094a677-6c81f799",
+      "split": "val",
+      "study_id": "s53452058"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11135350/s53772313/cd3281a8-6fdf014d-d38263aa-913e7ac6-50920fae.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11135350__s53772313__cd3281a8-6fdf014d-d38263aa-913e7ac6-50920fae",
+      "split": "val",
+      "study_id": "s53772313"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11135350/s58052703/532c6ecd-2488a763-5bd16f91-8214f9de-8fb8c49d.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11135350__s58052703__532c6ecd-2488a763-5bd16f91-8214f9de-8fb8c49d",
+      "split": "val",
+      "study_id": "s58052703"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11164575/s56430288/1d6f62f9-adc5107d-e66dba67-28c879ec-bcf9e17a.jpg",
+      "label_vector": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11164575__s56430288__1d6f62f9-adc5107d-e66dba67-28c879ec-bcf9e17a",
+      "split": "val",
+      "study_id": "s56430288"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11177224/s54099371/f9624358-214a129c-dc05b026-e49885ed-66224bdb.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11177224__s54099371__f9624358-214a129c-dc05b026-e49885ed-66224bdb",
+      "split": "val",
+      "study_id": "s54099371"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11181748/s53038461/a9f45db3-3320935c-32abfa1d-70c84639-f9d19d75.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11181748__s53038461__a9f45db3-3320935c-32abfa1d-70c84639-f9d19d75",
+      "split": "val",
+      "study_id": "s53038461"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11181748/s53610077/c75317be-225faf00-b7bccd06-b199a930-a4ef45ff.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11181748__s53610077__c75317be-225faf00-b7bccd06-b199a930-a4ef45ff",
+      "split": "val",
+      "study_id": "s53610077"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11181748/s54592417/589ad56b-158c86eb-cb95283c-8452b1ed-44503295.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11181748__s54592417__589ad56b-158c86eb-cb95283c-8452b1ed-44503295",
+      "split": "val",
+      "study_id": "s54592417"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11181748/s55851177/648179a6-4fa29136-911690e6-f934aaa8-bcd92eef.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11181748__s55851177__648179a6-4fa29136-911690e6-f934aaa8-bcd92eef",
+      "split": "val",
+      "study_id": "s55851177"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11181748/s58227020/20a8146b-74dd756c-382fd16f-2248a7d2-a74b9bbd.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11181748__s58227020__20a8146b-74dd756c-382fd16f-2248a7d2-a74b9bbd",
+      "split": "val",
+      "study_id": "s58227020"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11197890/s54514716/f2ed03fa-b7c00d7d-985f0cb3-dc9fb555-01c54c25.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11197890__s54514716__f2ed03fa-b7c00d7d-985f0cb3-dc9fb555-01c54c25",
+      "split": "val",
+      "study_id": "s54514716"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11226572/s51860612/da9de99a-88589600-954a7bf7-b947b366-25d4cf16.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11226572__s51860612__da9de99a-88589600-954a7bf7-b947b366-25d4cf16",
+      "split": "val",
+      "study_id": "s51860612"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11226572/s53521127/48f65bd6-fd930f65-27b3123b-39cb33cc-049a89be.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11226572__s53521127__48f65bd6-fd930f65-27b3123b-39cb33cc-049a89be",
+      "split": "val",
+      "study_id": "s53521127"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11226572/s54348250/efa7ce32-9434194a-c88b2633-833bc1e5-4b39a4fc.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11226572__s54348250__efa7ce32-9434194a-c88b2633-833bc1e5-4b39a4fc",
+      "split": "val",
+      "study_id": "s54348250"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11226572/s56558940/80ebdd2c-d387828d-89e90960-df690604-91bd8696.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11226572__s56558940__80ebdd2c-d387828d-89e90960-df690604-91bd8696",
+      "split": "val",
+      "study_id": "s56558940"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11260884/s59535336/55ba8d4b-a90e56a6-4209b8bf-e6950992-a13cab93.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11260884__s59535336__55ba8d4b-a90e56a6-4209b8bf-e6950992-a13cab93",
+      "split": "val",
+      "study_id": "s59535336"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11285398/s54116119/7b305795-f3816546-a9a8227a-013d0d53-47dec574.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11285398__s54116119__7b305795-f3816546-a9a8227a-013d0d53-47dec574",
+      "split": "val",
+      "study_id": "s54116119"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11287042/s50391562/2cd661d7-82b0c37e-0db4c82f-d0b33edb-842bf86c.jpg",
+      "label_vector": [
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11287042__s50391562__2cd661d7-82b0c37e-0db4c82f-d0b33edb-842bf86c",
+      "split": "val",
+      "study_id": "s50391562"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11287042/s53208211/d3e2e4d5-85f72646-4f703a66-df6941af-3344c515.jpg",
+      "label_vector": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11287042__s53208211__d3e2e4d5-85f72646-4f703a66-df6941af-3344c515",
+      "split": "val",
+      "study_id": "s53208211"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11287042/s54197597/b8084cc6-129daa21-5e7278cf-1038961e-a964e354.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11287042__s54197597__b8084cc6-129daa21-5e7278cf-1038961e-a964e354",
+      "split": "val",
+      "study_id": "s54197597"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11287042/s56969632/a19d711b-6c29af26-11883860-c9e6a00a-dd8b349c.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11287042__s56969632__a19d711b-6c29af26-11883860-c9e6a00a-dd8b349c",
+      "split": "val",
+      "study_id": "s56969632"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11287042/s58000103/ebff6ece-1b6243e8-1f3cd0af-af4824b5-3f629000.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11287042__s58000103__ebff6ece-1b6243e8-1f3cd0af-af4824b5-3f629000",
+      "split": "val",
+      "study_id": "s58000103"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11307058/s50677909/9f2507a2-f8ed6c9f-657277ba-664fb54d-c23684b6.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11307058__s50677909__9f2507a2-f8ed6c9f-657277ba-664fb54d-c23684b6",
+      "split": "val",
+      "study_id": "s50677909"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11307058/s51634516/cd8b3583-06cd4871-e09025fe-a2a60b90-348e7521.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11307058__s51634516__cd8b3583-06cd4871-e09025fe-a2a60b90-348e7521",
+      "split": "val",
+      "study_id": "s51634516"
+    },
+    {
+      "dataset": "mimic_cxr",
+      "domain": "d2_mimic",
+      "image_path": "mimic_cxr/raw/val/p11/p11307058/s51697632/3f5dec1b-45644e70-ed34cbb0-1a80da55-77581541.jpg",
+      "label_vector": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "row_id": "mimic_cxr__p11307058__s51697632__3f5dec1b-45644e70-ed34cbb0-1a80da55-77581541",
+      "split": "val",
+      "study_id": "s51697632"
+    }
+  ]
+}

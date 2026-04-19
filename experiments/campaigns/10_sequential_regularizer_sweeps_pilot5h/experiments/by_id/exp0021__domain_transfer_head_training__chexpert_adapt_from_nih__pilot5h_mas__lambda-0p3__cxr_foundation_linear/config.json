@@ -13,7 +13,7 @@
     "--mas-lambda",
     "0.3",
     "--embedding-root",
-    "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation",
+    "/workspace/experiments/campaigns/10_sequential_regularizer_sweeps_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation",
     "--manifest-csv",
     "/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/manifest/manifest_pilot5h_binary_mimic.csv",
     "--experiments-root",
@@ -47,7 +47,7 @@
   "device_requested": "auto",
   "device_resolved": "cuda",
   "embedding_layout": "domain_split",
-  "embedding_root": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation",
+  "embedding_root": "/workspace/experiments/campaigns/10_sequential_regularizer_sweeps_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation",
   "enable_lwf": false,
   "enable_mas": true,
   "epochs": 50,
@@ -102,86 +102,86 @@
   "split_inputs": {
     "d0_test": {
       "domain": "d0_nih",
-      "embeddings_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d0_nih/test/embeddings.npy",
+      "embeddings_path": "/workspace/experiments/campaigns/10_sequential_regularizer_sweeps_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d0_nih/test/embeddings.npy",
       "num_rows": 2000,
       "shape": [
         2000,
         768
       ],
       "sidecar_parser": "identity",
-      "sidecar_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d0_nih/test/row_ids.json",
+      "sidecar_path": "/workspace/experiments/campaigns/10_sequential_regularizer_sweeps_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d0_nih/test/row_ids.json",
       "split": "test"
     },
     "d0_val": {
       "domain": "d0_nih",
-      "embeddings_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d0_nih/val/embeddings.npy",
+      "embeddings_path": "/workspace/experiments/campaigns/10_sequential_regularizer_sweeps_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d0_nih/val/embeddings.npy",
       "num_rows": 1000,
       "shape": [
         1000,
         768
       ],
       "sidecar_parser": "identity",
-      "sidecar_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d0_nih/val/row_ids.json",
+      "sidecar_path": "/workspace/experiments/campaigns/10_sequential_regularizer_sweeps_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d0_nih/val/row_ids.json",
       "split": "val"
     },
     "d2_test": {
       "domain": "d2_mimic",
-      "embeddings_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d2_mimic/test/embeddings.npy",
+      "embeddings_path": "/workspace/experiments/campaigns/10_sequential_regularizer_sweeps_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d2_mimic/test/embeddings.npy",
       "num_rows": 676,
       "shape": [
         676,
         768
       ],
       "sidecar_parser": "identity",
-      "sidecar_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d2_mimic/test/row_ids.json",
+      "sidecar_path": "/workspace/experiments/campaigns/10_sequential_regularizer_sweeps_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d2_mimic/test/row_ids.json",
       "split": "test"
     },
     "d2_val": {
       "domain": "d2_mimic",
-      "embeddings_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d2_mimic/val/embeddings.npy",
+      "embeddings_path": "/workspace/experiments/campaigns/10_sequential_regularizer_sweeps_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d2_mimic/val/embeddings.npy",
       "num_rows": 1000,
       "shape": [
         1000,
         768
       ],
       "sidecar_parser": "identity",
-      "sidecar_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d2_mimic/val/row_ids.json",
+      "sidecar_path": "/workspace/experiments/campaigns/10_sequential_regularizer_sweeps_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d2_mimic/val/row_ids.json",
       "split": "val"
     },
     "target_test": {
       "domain": "d1_chexpert",
-      "embeddings_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/test/embeddings.npy",
+      "embeddings_path": "/workspace/experiments/campaigns/10_sequential_regularizer_sweeps_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/test/embeddings.npy",
       "num_rows": 234,
       "shape": [
         234,
         768
       ],
       "sidecar_parser": "identity",
-      "sidecar_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/test/row_ids.json",
+      "sidecar_path": "/workspace/experiments/campaigns/10_sequential_regularizer_sweeps_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/test/row_ids.json",
       "split": "test"
     },
     "target_train": {
       "domain": "d1_chexpert",
-      "embeddings_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/train/embeddings.npy",
+      "embeddings_path": "/workspace/experiments/campaigns/10_sequential_regularizer_sweeps_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/train/embeddings.npy",
       "num_rows": 1000,
       "shape": [
         1000,
         768
       ],
       "sidecar_parser": "identity",
-      "sidecar_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/train/row_ids.json",
+      "sidecar_path": "/workspace/experiments/campaigns/10_sequential_regularizer_sweeps_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/train/row_ids.json",
       "split": "train"
     },
     "target_val": {
       "domain": "d1_chexpert",
-      "embeddings_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/val/embeddings.npy",
+      "embeddings_path": "/workspace/experiments/campaigns/10_sequential_regularizer_sweeps_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/val/embeddings.npy",
       "num_rows": 1000,
       "shape": [
         1000,
         768
       ],
       "sidecar_parser": "identity",
-      "sidecar_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/val/row_ids.json",
+      "sidecar_path": "/workspace/experiments/campaigns/10_sequential_regularizer_sweeps_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/val/row_ids.json",
       "split": "val"
     }
   },

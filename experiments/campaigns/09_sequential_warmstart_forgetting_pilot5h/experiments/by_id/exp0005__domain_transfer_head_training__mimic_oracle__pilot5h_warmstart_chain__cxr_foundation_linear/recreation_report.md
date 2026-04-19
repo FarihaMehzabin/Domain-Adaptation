@@ -3,7 +3,7 @@
 ## Scope
 
 - Experiment directory: `/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/experiments/by_id/exp0005__domain_transfer_head_training__mimic_oracle__pilot5h_warmstart_chain__cxr_foundation_linear`
-- Embedding root: `/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation`
+- Embedding root: `/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation`
 - Manifest: `/tmp/cxr_sequential_forgetting_study/manifest/manifest_pilot5h_binary_mimic.csv`
 - Embedding layout: `domain_split`
 - Token pooling: `avg`
@@ -27,7 +27,7 @@ python \
   --split-profile \
   mimic_target \
   --embedding-root \
-  /tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation \
+  /workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation \
   --manifest-csv \
   /tmp/cxr_sequential_forgetting_study/manifest/manifest_pilot5h_binary_mimic.csv \
   --experiments-root \
@@ -59,9 +59,9 @@ python \
 
 ## Split Inputs
 
-- `target_train` -> `/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d2_mimic/train` with `998` rows and shape `[998, 768]`
-- `target_val` -> `/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d2_mimic/val` with `1000` rows and shape `[1000, 768]`
-- `target_test` -> `/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d2_mimic/test` with `676` rows and shape `[676, 768]`
+- `target_train` -> `/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d2_mimic/train` with `998` rows and shape `[998, 768]`
+- `target_val` -> `/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d2_mimic/val` with `1000` rows and shape `[1000, 768]`
+- `target_test` -> `/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d2_mimic/test` with `676` rows and shape `[676, 768]`
 
 ## Final Metrics
 

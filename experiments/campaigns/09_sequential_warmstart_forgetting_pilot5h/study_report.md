@@ -1,7 +1,7 @@
 # Sequential Warm-Start Forgetting Study
 
 - Manifest: `/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/manifest/manifest_pilot5h_binary_mimic.csv`
-- Embedding view: `/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation`
+- Embedding view: `/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation`
 
 ## Stage AUROC
 
