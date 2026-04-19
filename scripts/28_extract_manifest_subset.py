@@ -11,7 +11,7 @@ import zipfile
 from pathlib import Path
 
 
-DEFAULT_MANIFEST_CSV = Path("/workspace/manifest/manifest_mimic_target_1000.csv")
+DEFAULT_MANIFEST_CSV = Path("/workspace/manifest/manifest_mimic_target.csv")
 DEFAULT_OUTPUT_ROOT = Path("./subset_export")
 DEFAULT_DATASET = "mimic_cxr"
 DEFAULT_IMAGE_PREFIX = "mimic_cxr/raw/"
