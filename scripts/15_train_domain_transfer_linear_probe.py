@@ -99,7 +99,6 @@ class InitializationMetadata:
 
 @dataclass(frozen=True)
 class LwFConfig:
-    source_alias: str
     alpha: float
     temperature: float
     teacher_checkpoint_path: str
@@ -107,10 +106,19 @@ class LwFConfig:
 
 
 @dataclass(frozen=True)
+class MASConfig:
+    mas_state_path: str
+    mas_lambda: float
+    anchor_state: dict[str, torch.Tensor]
+    omega_state: dict[str, torch.Tensor]
+
+
+@dataclass(frozen=True)
 class TrainEpochSummary:
     total_loss: float
     supervised_loss: float
-    lwf_loss: float | None
+    preservation_loss: float | None
+    preservation_ratio: float | None
 
 
 AUTO_ID_COLUMNS = ("row_id", "sample_id", "image_id", "id")
@@ -632,6 +640,33 @@ def sigmoid_np(logits: np.ndarray) -> np.ndarray:
     return 1.0 / (1.0 + np.exp(-logits))
 
 
+def compute_multilabel_kd_loss(
+    *,
+    student_logits: torch.Tensor,
+    teacher_logits: torch.Tensor,
+    temperature: float,
+) -> torch.Tensor:
+    teacher_probs = torch.sigmoid(teacher_logits.float() / float(temperature))
+    return F.binary_cross_entropy_with_logits(
+        student_logits.float() / float(temperature),
+        teacher_probs,
+        reduction="mean",
+    ) * (float(temperature) * float(temperature))
+
+
+def compute_mas_penalty(*, model: nn.Module, mas_config: MASConfig) -> torch.Tensor:
+    penalty = torch.zeros((), device=next(model.parameters()).device, dtype=torch.float32)
+    for name, parameter in model.named_parameters():
+        if not parameter.requires_grad:
+            continue
+        anchor = mas_config.anchor_state.get(name)
+        omega = mas_config.omega_state.get(name)
+        if anchor is None or omega is None:
+            raise SystemExit(f"MAS state is missing parameter '{name}'.")
+        penalty = penalty + torch.sum(omega * torch.square(parameter.float() - anchor))
+    return penalty
+
+
 def binary_auroc(y_true: np.ndarray, scores: np.ndarray) -> float | None:
     y = np.asarray(y_true, dtype=np.int64)
     s = np.asarray(scores, dtype=np.float64)
@@ -821,17 +856,16 @@ def train_one_epoch(
     scaler: torch.cuda.amp.GradScaler,
     device: torch.device,
     fp16_on_cuda: bool,
-    lwf_loader: DataLoader | None = None,
     teacher_model: nn.Module | None = None,
     lwf_config: LwFConfig | None = None,
+    mas_config: MASConfig | None = None,
 ) -> TrainEpochSummary:
     model.train()
     total_loss = 0.0
     total_examples = 0
     total_supervised_loss = 0.0
-    total_lwf_loss = 0.0
-    total_lwf_examples = 0
-    lwf_iterator: Any = iter(lwf_loader) if lwf_loader is not None else None
+    total_preservation_loss = 0.0
+    total_preservation_examples = 0
     if teacher_model is not None:
         teacher_model.eval()
     for batch in loader:
@@ -842,30 +876,24 @@ def train_one_epoch(
             logits = model(features)
             supervised_loss = criterion(logits, targets)
             loss = supervised_loss
-            current_lwf_loss: torch.Tensor | None = None
-            source_batch_size = 0
+            current_preservation_loss: torch.Tensor | None = None
             if lwf_config is not None:
-                if teacher_model is None or lwf_loader is None:
-                    raise SystemExit("LwF training requested without teacher_model and lwf_loader.")
-                assert lwf_iterator is not None
-                try:
-                    source_batch = next(lwf_iterator)
-                except StopIteration:
-                    lwf_iterator = iter(lwf_loader)
-                    source_batch = next(lwf_iterator)
-                source_features = source_batch["features"].to(device, non_blocking=True)
-                source_batch_size = int(source_features.shape[0])
+                if teacher_model is None:
+                    raise SystemExit("LwF training requested without teacher_model.")
                 with torch.no_grad():
-                    teacher_logits = teacher_model(source_features)
-                student_source_logits = model(source_features)
-                temperature = float(lwf_config.temperature)
-                teacher_probs = torch.sigmoid(teacher_logits.float() / temperature)
-                current_lwf_loss = F.binary_cross_entropy_with_logits(
-                    student_source_logits.float() / temperature,
-                    teacher_probs,
-                    reduction="mean",
-                ) * (temperature * temperature)
-                loss = supervised_loss + (float(lwf_config.alpha) * current_lwf_loss)
+                    teacher_logits = teacher_model(features)
+                current_preservation_loss = float(lwf_config.alpha) * compute_multilabel_kd_loss(
+                    student_logits=logits,
+                    teacher_logits=teacher_logits,
+                    temperature=float(lwf_config.temperature),
+                )
+                loss = supervised_loss + current_preservation_loss
+            elif mas_config is not None:
+                current_preservation_loss = float(mas_config.mas_lambda) * compute_mas_penalty(
+                    model=model,
+                    mas_config=mas_config,
+                )
+                loss = supervised_loss + current_preservation_loss
         scaler.scale(loss).backward()
         scaler.step(optimizer)
         scaler.update()
@@ -873,15 +901,22 @@ def train_one_epoch(
         total_loss += float(loss.detach().item()) * batch_size
         total_supervised_loss += float(supervised_loss.detach().item()) * batch_size
         total_examples += batch_size
-        if current_lwf_loss is not None and source_batch_size > 0:
-            total_lwf_loss += float(current_lwf_loss.detach().item()) * source_batch_size
-            total_lwf_examples += source_batch_size
+        if current_preservation_loss is not None:
+            total_preservation_loss += float(current_preservation_loss.detach().item()) * batch_size
+            total_preservation_examples += batch_size
     if total_examples == 0:
         raise SystemExit("Training loader produced zero examples.")
+    preservation_loss = (total_preservation_loss / total_preservation_examples) if total_preservation_examples > 0 else None
+    supervised_loss = total_supervised_loss / total_examples
     return TrainEpochSummary(
         total_loss=(total_loss / total_examples),
-        supervised_loss=(total_supervised_loss / total_examples),
-        lwf_loss=((total_lwf_loss / total_lwf_examples) if total_lwf_examples > 0 else None),
+        supervised_loss=supervised_loss,
+        preservation_loss=preservation_loss,
+        preservation_ratio=(
+            float(preservation_loss / supervised_loss)
+            if preservation_loss is not None and supervised_loss > 0.0
+            else None
+        ),
     )
 
 
@@ -950,7 +985,6 @@ def build_evaluation_plan(
     *,
     split_profile: str,
     embedding_layout: str,
-    include_lwf_source: bool,
 ) -> EvaluationPlan:
     if split_profile == "nih_source_all_test":
         if embedding_layout != "domain_split":
@@ -965,13 +999,17 @@ def build_evaluation_plan(
                 ("d0_train", "d0_nih", "train"),
                 ("d0_val", "d0_nih", "val"),
                 ("d0_test", "d0_nih", "test"),
+                ("d1_val", "d1_chexpert", "val"),
                 ("d1_test", "d1_chexpert", "test"),
+                ("d2_val", "d2_mimic", "val"),
                 ("d2_test", "d2_mimic", "test"),
             ),
             output_name_map={
                 "d0_val": "d0_val_metrics.json",
                 "d0_test": "d0_test_metrics.json",
+                "d1_val": "d1_val_metrics.json",
                 "d1_test": "d1_test_metrics.json",
+                "d2_val": "d2_val_metrics.json",
                 "d2_test": "d2_test_metrics.json",
             },
             thresholds_filename="d0_val_f1_thresholds.json",
@@ -1036,27 +1074,28 @@ def build_evaluation_plan(
     if split_profile == "chexpert_adapt_from_nih":
         if embedding_layout != "domain_split":
             raise SystemExit("--split-profile chexpert_adapt_from_nih requires --embedding-layout domain_split.")
-        split_specs: list[tuple[str, str, str]] = [
-            ("target_train", "d1_chexpert", "train"),
-            ("target_val", "d1_chexpert", "val"),
-            ("target_test", "d1_chexpert", "test"),
-            ("d0_test", "d0_nih", "test"),
-        ]
-        auxiliary_train_aliases: tuple[str, ...] = tuple()
-        if include_lwf_source:
-            split_specs.append(("lwf_source_train", "d0_nih", "train"))
-            auxiliary_train_aliases = ("lwf_source_train",)
         return EvaluationPlan(
             name=split_profile,
             train_alias="target_train",
             selection_alias="target_val",
             primary_test_alias="target_test",
-            auxiliary_train_aliases=auxiliary_train_aliases,
-            split_specs=tuple(split_specs),
+            auxiliary_train_aliases=tuple(),
+            split_specs=(
+                ("target_train", "d1_chexpert", "train"),
+                ("target_val", "d1_chexpert", "val"),
+                ("target_test", "d1_chexpert", "test"),
+                ("d0_val", "d0_nih", "val"),
+                ("d0_test", "d0_nih", "test"),
+                ("d2_val", "d2_mimic", "val"),
+                ("d2_test", "d2_mimic", "test"),
+            ),
             output_name_map={
                 "target_val": "target_val_metrics.json",
                 "target_test": "target_test_metrics.json",
+                "d0_val": "d0_val_metrics.json",
                 "d0_test": "d0_test_metrics.json",
+                "d2_val": "d2_val_metrics.json",
+                "d2_test": "d2_test_metrics.json",
             },
             thresholds_filename="target_val_f1_thresholds.json",
         )
@@ -1074,13 +1113,17 @@ def build_evaluation_plan(
                 ("target_train", "d2_mimic", "train"),
                 ("target_val", "d2_mimic", "val"),
                 ("target_test", "d2_mimic", "test"),
+                ("d0_val", "d0_nih", "val"),
                 ("d0_test", "d0_nih", "test"),
+                ("d1_val", "d1_chexpert", "val"),
                 ("d1_test", "d1_chexpert", "test"),
             ),
             output_name_map={
                 "target_val": "target_val_metrics.json",
                 "target_test": "target_test_metrics.json",
+                "d0_val": "d0_val_metrics.json",
                 "d0_test": "d0_test_metrics.json",
+                "d1_val": "d1_val_metrics.json",
                 "d1_test": "d1_test_metrics.json",
             },
             thresholds_filename="target_val_f1_thresholds.json",
@@ -1206,6 +1249,81 @@ def load_initial_checkpoint(
     )
 
 
+def load_mas_state(
+    *,
+    mas_state_path: Path,
+    model: nn.Module,
+    label_names: list[str],
+    requested_head_type: str,
+    input_dim: int,
+    num_labels: int,
+    token_pooling: str,
+    l2_normalize_features: bool,
+    device: torch.device,
+    mas_lambda: float,
+) -> MASConfig:
+    payload = torch.load(mas_state_path, map_location="cpu")
+    if not isinstance(payload, dict):
+        raise SystemExit(f"MAS state is not a dict: {mas_state_path}")
+    anchor_state = payload.get("anchor_state_dict")
+    omega_state = payload.get("omega_state_dict")
+    if not isinstance(anchor_state, dict) or not isinstance(omega_state, dict):
+        raise SystemExit(f"MAS state must contain anchor_state_dict and omega_state_dict: {mas_state_path}")
+
+    if payload.get("label_names") is not None and list(payload["label_names"]) != label_names:
+        raise SystemExit(
+            "MAS state label_names do not match the requested run.\n"
+            f"state={list(payload['label_names'])}\nrequested={label_names}"
+        )
+    if payload.get("head_type") is not None and str(payload["head_type"]) != requested_head_type:
+        raise SystemExit(
+            f"MAS state head_type={payload['head_type']} does not match requested head_type={requested_head_type}."
+        )
+    if payload.get("input_dim") is not None and int(payload["input_dim"]) != int(input_dim):
+        raise SystemExit(
+            f"MAS state input_dim={payload['input_dim']} does not match requested input_dim={input_dim}."
+        )
+    if payload.get("num_labels") is not None and int(payload["num_labels"]) != int(num_labels):
+        raise SystemExit(
+            f"MAS state num_labels={payload['num_labels']} does not match requested num_labels={num_labels}."
+        )
+    if payload.get("token_pooling") is not None and str(payload["token_pooling"]) != token_pooling:
+        raise SystemExit(
+            f"MAS state token_pooling={payload['token_pooling']} does not match requested token_pooling={token_pooling}."
+        )
+    if payload.get("l2_normalize_features") is not None and bool(payload["l2_normalize_features"]) != bool(
+        l2_normalize_features
+    ):
+        raise SystemExit(
+            "MAS state l2_normalize_features does not match the requested run.\n"
+            f"state={bool(payload['l2_normalize_features'])} requested={bool(l2_normalize_features)}"
+        )
+
+    expected_names = {name for name, parameter in model.named_parameters() if parameter.requires_grad}
+    if set(anchor_state.keys()) != expected_names or set(omega_state.keys()) != expected_names:
+        raise SystemExit(
+            "MAS state parameter keys do not match the current model.\n"
+            f"expected={sorted(expected_names)}\n"
+            f"anchor={sorted(anchor_state.keys())}\n"
+            f"omega={sorted(omega_state.keys())}"
+        )
+
+    loaded_anchor = {
+        name: tensor.detach().to(device=device, dtype=torch.float32)
+        for name, tensor in anchor_state.items()
+    }
+    loaded_omega = {
+        name: tensor.detach().to(device=device, dtype=torch.float32)
+        for name, tensor in omega_state.items()
+    }
+    return MASConfig(
+        mas_state_path=str(mas_state_path),
+        mas_lambda=float(mas_lambda),
+        anchor_state=loaded_anchor,
+        omega_state=loaded_omega,
+    )
+
+
 def render_recreation_report(
     *,
     experiment_dir: Path,
@@ -1238,11 +1356,14 @@ def render_recreation_report(
             f"- Token pooling: `{config['token_pooling']}`",
             f"- Head type: `{config['head_type']}`",
             f"- Init checkpoint: `{config['init_checkpoint_path']}`",
+            f"- Preservation method: `{config['preservation_method']}`",
             f"- LwF enabled: `{config['enable_lwf']}`",
             f"- LwF teacher checkpoint: `{config['lwf_teacher_checkpoint_path']}`",
-            f"- LwF source alias: `{config['lwf_source_alias']}`",
             f"- LwF alpha: `{config['lwf_alpha']}`",
             f"- LwF temperature: `{config['lwf_temperature']}`",
+            f"- MAS enabled: `{config['enable_mas']}`",
+            f"- MAS state path: `{config['mas_state_path']}`",
+            f"- MAS lambda: `{config['mas_lambda']}`",
             f"- MLP hidden dims: `{config['mlp_hidden_dims']}`",
             f"- MLP dropout: `{config['mlp_dropout']}`",
             "",
@@ -1266,6 +1387,7 @@ def render_recreation_report(
             f"- Auxiliary training aliases: `{config['auxiliary_train_aliases']}`.",
             f"- Initialization checkpoint: `{config['init_checkpoint_path']}`.",
             f"- LwF teacher checkpoint: `{config['lwf_teacher_checkpoint_path']}`.",
+            f"- MAS state path: `{config['mas_state_path']}`.",
             f"- Early stopping is driven by `{config['selection_alias']}` macro AUROC.",
             f"- `{config['selection_alias']}`-tuned thresholds are reused unchanged for later evaluation splits.",
             "",
@@ -1289,6 +1411,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--lwf-source-alias", type=str, default="lwf_source_train")
     parser.add_argument("--lwf-alpha", type=float, default=None)
     parser.add_argument("--lwf-temperature", type=float, default=None)
+    parser.add_argument("--enable-mas", action="store_true")
+    parser.add_argument("--mas-state-path", type=Path, default=None)
+    parser.add_argument("--mas-lambda", type=float, default=None)
     parser.add_argument(
         "--split-profile",
         choices=(
@@ -1365,9 +1490,13 @@ def main() -> int:
         raise SystemExit(
             f"--split-profile {args.split_profile} requires --init-checkpoint."
         )
+    if args.enable_lwf and args.enable_mas:
+        raise SystemExit("--enable-lwf and --enable-mas are mutually exclusive.")
     if args.enable_lwf:
-        if args.split_profile != "chexpert_adapt_from_nih":
-            raise SystemExit("--enable-lwf currently only supports --split-profile chexpert_adapt_from_nih.")
+        if args.split_profile not in {"chexpert_adapt_from_nih", "mimic_adapt_from_chexpert"}:
+            raise SystemExit(
+                "--enable-lwf only supports --split-profile chexpert_adapt_from_nih or mimic_adapt_from_chexpert."
+            )
         if args.head_type != "linear":
             raise SystemExit("--enable-lwf currently only supports --head-type linear.")
         if args.lwf_teacher_checkpoint is None:
@@ -1378,6 +1507,19 @@ def main() -> int:
             raise SystemExit("--enable-lwf requires --lwf-temperature > 0.")
     elif args.lwf_teacher_checkpoint is not None or args.lwf_alpha is not None or args.lwf_temperature is not None:
         raise SystemExit("LwF-specific arguments require --enable-lwf.")
+    if args.enable_mas:
+        if args.split_profile not in {"chexpert_adapt_from_nih", "mimic_adapt_from_chexpert"}:
+            raise SystemExit(
+                "--enable-mas only supports --split-profile chexpert_adapt_from_nih or mimic_adapt_from_chexpert."
+            )
+        if args.head_type != "linear":
+            raise SystemExit("--enable-mas currently only supports --head-type linear.")
+        if args.mas_state_path is None:
+            raise SystemExit("--enable-mas requires --mas-state-path.")
+        if args.mas_lambda is None or float(args.mas_lambda) <= 0.0:
+            raise SystemExit("--enable-mas requires --mas-lambda > 0.")
+    elif args.mas_state_path is not None or args.mas_lambda is not None:
+        raise SystemExit("MAS-specific arguments require --enable-mas.")
 
     seed_everything(int(args.seed))
     device = resolve_device(args.device)
@@ -1387,7 +1529,6 @@ def main() -> int:
     evaluation_plan = build_evaluation_plan(
         split_profile=args.split_profile,
         embedding_layout=args.embedding_layout,
-        include_lwf_source=bool(args.enable_lwf),
     )
 
     split_data: dict[str, SplitData] = {}
@@ -1475,11 +1616,9 @@ def main() -> int:
         )
     teacher_model: nn.Module | None = None
     teacher_metadata: InitializationMetadata | None = None
-    lwf_loader: DataLoader | None = None
     lwf_config: LwFConfig | None = None
+    mas_config: MASConfig | None = None
     if args.enable_lwf:
-        if args.lwf_source_alias not in split_data:
-            raise SystemExit(f"--lwf-source-alias '{args.lwf_source_alias}' was not loaded from the evaluation plan.")
         teacher_model = build_probe_model(
             head_type=args.head_type,
             input_dim=input_dim,
@@ -1500,21 +1639,24 @@ def main() -> int:
         for parameter in teacher_model.parameters():
             parameter.requires_grad = False
         teacher_model.eval()
-        lwf_loader = build_dataloader(
-            split_data[args.lwf_source_alias],
-            batch_size=args.batch_size,
-            num_workers=args.num_workers,
-            device=device,
-            shuffle=True,
-            token_pooling=args.token_pooling,
-            l2_normalize_features=bool(args.l2_normalize_features),
-        )
         lwf_config = LwFConfig(
-            source_alias=str(args.lwf_source_alias),
             alpha=float(args.lwf_alpha),
             temperature=float(args.lwf_temperature),
             teacher_checkpoint_path=teacher_metadata.checkpoint_path,
             teacher_checkpoint_epoch=teacher_metadata.checkpoint_epoch,
+        )
+    if args.enable_mas:
+        mas_config = load_mas_state(
+            mas_state_path=args.mas_state_path.resolve(),
+            model=model,
+            label_names=label_names,
+            requested_head_type=args.head_type,
+            input_dim=input_dim,
+            num_labels=len(label_names),
+            token_pooling=args.token_pooling,
+            l2_normalize_features=bool(args.l2_normalize_features),
+            device=device,
+            mas_lambda=float(args.mas_lambda),
         )
     pos_weight = compute_pos_weight(split_data[evaluation_plan.train_alias].labels).to(device)
     criterion = nn.BCEWithLogitsLoss(pos_weight=pos_weight)
@@ -1545,6 +1687,7 @@ def main() -> int:
             if init_metadata is not None
             else None
         ),
+        "preservation_method": ("lwf" if args.enable_lwf else ("mas" if args.enable_mas else "none")),
         "enable_lwf": bool(args.enable_lwf),
         "lwf_teacher_checkpoint_path": (
             str(args.lwf_teacher_checkpoint.resolve()) if args.lwf_teacher_checkpoint is not None else None
@@ -1562,9 +1705,12 @@ def main() -> int:
             if teacher_metadata is not None
             else None
         ),
-        "lwf_source_alias": (str(args.lwf_source_alias) if args.enable_lwf else None),
+        "lwf_source_alias": None,
         "lwf_alpha": (float(args.lwf_alpha) if args.enable_lwf else None),
         "lwf_temperature": (float(args.lwf_temperature) if args.enable_lwf else None),
+        "enable_mas": bool(args.enable_mas),
+        "mas_state_path": (str(args.mas_state_path.resolve()) if args.mas_state_path is not None else None),
+        "mas_lambda": (float(args.mas_lambda) if args.enable_mas else None),
         "split_profile": args.split_profile,
         "embedding_layout": args.embedding_layout,
         "token_pooling": args.token_pooling,
@@ -1621,9 +1767,10 @@ def main() -> int:
     if lwf_config is not None:
         print(
             f"[info] lwf_teacher_checkpoint={lwf_config.teacher_checkpoint_path} "
-            f"source_alias={lwf_config.source_alias} alpha={lwf_config.alpha} "
-            f"temperature={lwf_config.temperature}"
+            f"alpha={lwf_config.alpha} temperature={lwf_config.temperature}"
         )
+    if mas_config is not None:
+        print(f"[info] mas_state_path={mas_config.mas_state_path} lambda={mas_config.mas_lambda}")
     print(
         f"[info] input_dim={input_dim} labels={len(label_names)} device={device} "
         f"head={config['head_description']} params={model_num_parameters}"
@@ -1644,9 +1791,9 @@ def main() -> int:
             scaler=scaler,
             device=device,
             fp16_on_cuda=bool(args.fp16_on_cuda),
-            lwf_loader=lwf_loader,
             teacher_model=teacher_model,
             lwf_config=lwf_config,
+            mas_config=mas_config,
         )
         selection_loss, selection_logits, selection_targets = evaluate_model(
             loader=eval_loaders[evaluation_plan.selection_alias],
@@ -1681,12 +1828,15 @@ def main() -> int:
                     "num_labels": len(label_names),
                     "init_checkpoint_path": config["init_checkpoint_path"],
                     "init_checkpoint_metadata": config["init_checkpoint_metadata"],
+                    "preservation_method": config["preservation_method"],
                     "enable_lwf": config["enable_lwf"],
                     "lwf_teacher_checkpoint_path": config["lwf_teacher_checkpoint_path"],
                     "lwf_teacher_checkpoint_metadata": config["lwf_teacher_checkpoint_metadata"],
-                    "lwf_source_alias": config["lwf_source_alias"],
                     "lwf_alpha": config["lwf_alpha"],
                     "lwf_temperature": config["lwf_temperature"],
+                    "enable_mas": config["enable_mas"],
+                    "mas_state_path": config["mas_state_path"],
+                    "mas_lambda": config["mas_lambda"],
                 },
                 experiment_dir / "best.ckpt",
             )
@@ -1700,14 +1850,18 @@ def main() -> int:
                 "epoch": int(epoch),
                 "train_loss": float(train_summary.total_loss),
                 "train_supervised_loss": float(train_summary.supervised_loss),
-                "train_lwf_loss": train_summary.lwf_loss,
+                "train_preservation_loss": train_summary.preservation_loss,
+                "train_preservation_ratio": train_summary.preservation_ratio,
                 "selection_alias": evaluation_plan.selection_alias,
                 f"{evaluation_plan.selection_alias}_loss": float(selection_loss),
                 f"{evaluation_plan.selection_alias}_macro_auroc": current_summary["macro"]["auroc"],
                 f"{evaluation_plan.selection_alias}_macro_average_precision": current_summary["macro"]["average_precision"],
+                "preservation_method": config["preservation_method"],
                 "lwf_enabled": bool(args.enable_lwf),
                 "lwf_alpha": config["lwf_alpha"],
                 "lwf_temperature": config["lwf_temperature"],
+                "mas_enabled": bool(args.enable_mas),
+                "mas_lambda": config["mas_lambda"],
                 "improved": bool(improved),
                 "elapsed_sec": float(time.time() - epoch_started),
             },
@@ -1715,7 +1869,8 @@ def main() -> int:
         print(
             f"[epoch {epoch:03d}] train_loss={train_summary.total_loss:.6f} "
             f"train_supervised_loss={train_summary.supervised_loss:.6f} "
-            f"train_lwf_loss={format_metric(train_summary.lwf_loss)} "
+            f"train_preservation_loss={format_metric(train_summary.preservation_loss)} "
+            f"train_preservation_ratio={format_metric(train_summary.preservation_ratio)} "
             f"{evaluation_plan.selection_alias}_loss={selection_loss:.6f} "
             f"{evaluation_plan.selection_alias}_macro_auroc={format_metric(current_summary['macro']['auroc'])} "
             f"improved={str(improved).lower()}"
@@ -1778,12 +1933,15 @@ def main() -> int:
             "num_labels": len(label_names),
             "init_checkpoint_path": config["init_checkpoint_path"],
             "init_checkpoint_metadata": config["init_checkpoint_metadata"],
+            "preservation_method": config["preservation_method"],
             "enable_lwf": config["enable_lwf"],
             "lwf_teacher_checkpoint_path": config["lwf_teacher_checkpoint_path"],
             "lwf_teacher_checkpoint_metadata": config["lwf_teacher_checkpoint_metadata"],
-            "lwf_source_alias": config["lwf_source_alias"],
             "lwf_alpha": config["lwf_alpha"],
             "lwf_temperature": config["lwf_temperature"],
+            "enable_mas": config["enable_mas"],
+            "mas_state_path": config["mas_state_path"],
+            "mas_lambda": config["mas_lambda"],
         },
         experiment_dir / "best.ckpt",
     )
@@ -1799,12 +1957,15 @@ def main() -> int:
         "manifest_csv": str(manifest_csv),
         "init_checkpoint_path": config["init_checkpoint_path"],
         "init_checkpoint_metadata": config["init_checkpoint_metadata"],
+        "preservation_method": config["preservation_method"],
         "enable_lwf": config["enable_lwf"],
         "lwf_teacher_checkpoint_path": config["lwf_teacher_checkpoint_path"],
         "lwf_teacher_checkpoint_metadata": config["lwf_teacher_checkpoint_metadata"],
-        "lwf_source_alias": config["lwf_source_alias"],
         "lwf_alpha": config["lwf_alpha"],
         "lwf_temperature": config["lwf_temperature"],
+        "enable_mas": config["enable_mas"],
+        "mas_state_path": config["mas_state_path"],
+        "mas_lambda": config["mas_lambda"],
         "split_profile": args.split_profile,
         "embedding_layout": args.embedding_layout,
         "token_pooling": args.token_pooling,

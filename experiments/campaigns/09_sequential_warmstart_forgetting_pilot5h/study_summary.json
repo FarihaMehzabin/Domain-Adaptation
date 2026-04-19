@@ -6,16 +6,16 @@
     "nih_after_mimic_delta_vs_chexpert_stage": 0.0010817919940612208,
     "nih_after_mimic_delta_vs_nih_source": -0.024040120622778605
   },
-  "manifest_csv": "/tmp/cxr_sequential_forgetting_study/manifest/manifest_pilot5h_binary_mimic.csv",
-  "run_date_utc": "2026-04-19T14:30:07.965520+00:00",
+  "manifest_csv": "/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/manifest/manifest_pilot5h_binary_mimic.csv",
+  "run_date_utc": "2026-04-19T15:58:11.342645+00:00",
   "stages": {
     "chexpert_adapt": {
       "best_epoch": 24,
-      "checkpoint_path": "/tmp/cxr_sequential_forgetting_study/experiments/by_id/exp0002__domain_transfer_head_training__chexpert_adapt_from_nih__pilot5h_warmstart_chain__cxr_foundation_linear/best.ckpt",
-      "experiment_dir": "/tmp/cxr_sequential_forgetting_study/experiments/by_id/exp0002__domain_transfer_head_training__chexpert_adapt_from_nih__pilot5h_warmstart_chain__cxr_foundation_linear",
+      "checkpoint_path": "/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/experiments/by_id/exp0002__domain_transfer_head_training__chexpert_adapt_from_nih__pilot5h_warmstart_chain__cxr_foundation_linear/best.ckpt",
+      "experiment_dir": "/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/experiments/by_id/exp0002__domain_transfer_head_training__chexpert_adapt_from_nih__pilot5h_warmstart_chain__cxr_foundation_linear",
       "metrics": {
         "chexpert": 0.788215306650718,
-        "mimic": null,
+        "mimic": 0.7638197470260162,
         "nih": 0.821012785227422
       },
       "split_profile": "chexpert_adapt_from_nih",
@@ -23,8 +23,8 @@
     },
     "mimic_adapt": {
       "best_epoch": 6,
-      "checkpoint_path": "/tmp/cxr_sequential_forgetting_study/experiments/by_id/exp0003__domain_transfer_head_training__mimic_adapt_from_chexpert__pilot5h_warmstart_chain__cxr_foundation_linear/best.ckpt",
-      "experiment_dir": "/tmp/cxr_sequential_forgetting_study/experiments/by_id/exp0003__domain_transfer_head_training__mimic_adapt_from_chexpert__pilot5h_warmstart_chain__cxr_foundation_linear",
+      "checkpoint_path": "/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/experiments/by_id/exp0003__domain_transfer_head_training__mimic_adapt_from_chexpert__pilot5h_warmstart_chain__cxr_foundation_linear/best.ckpt",
+      "experiment_dir": "/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/experiments/by_id/exp0003__domain_transfer_head_training__mimic_adapt_from_chexpert__pilot5h_warmstart_chain__cxr_foundation_linear",
       "metrics": {
         "chexpert": 0.8134939813280871,
         "mimic": 0.7770320135451925,
@@ -35,8 +35,8 @@
     },
     "nih_source": {
       "best_epoch": 24,
-      "checkpoint_path": "/tmp/cxr_sequential_forgetting_study/experiments/by_id/exp0001__domain_transfer_head_training__nih_source_all_test__pilot5h_warmstart_chain__cxr_foundation_linear/best.ckpt",
-      "experiment_dir": "/tmp/cxr_sequential_forgetting_study/experiments/by_id/exp0001__domain_transfer_head_training__nih_source_all_test__pilot5h_warmstart_chain__cxr_foundation_linear",
+      "checkpoint_path": "/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/experiments/by_id/exp0001__domain_transfer_head_training__nih_source_all_test__pilot5h_warmstart_chain__cxr_foundation_linear/best.ckpt",
+      "experiment_dir": "/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/experiments/by_id/exp0001__domain_transfer_head_training__nih_source_all_test__pilot5h_warmstart_chain__cxr_foundation_linear",
       "metrics": {
         "chexpert": 0.8485879868021924,
         "mimic": 0.737037083174961,

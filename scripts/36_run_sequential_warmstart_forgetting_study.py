@@ -106,7 +106,7 @@ def load_stage_summary(stage_dir: Path, *, stage_name: str) -> dict[str, Any]:
         domain_paths = {
             "nih": stage_dir / "d0_test_metrics.json",
             "chexpert": stage_dir / "target_test_metrics.json",
-            "mimic": None,
+            "mimic": stage_dir / "d2_test_metrics.json",
         }
     elif stage_name == "mimic_adapt":
         domain_paths = {
@@ -176,6 +176,7 @@ def write_summary_csv(path: Path, *, summary: dict[str, Any]) -> None:
         ("nih_source", "mimic", summary["stages"]["nih_source"]["metrics"]["mimic"]),
         ("chexpert_adapt", "nih", summary["stages"]["chexpert_adapt"]["metrics"]["nih"]),
         ("chexpert_adapt", "chexpert", summary["stages"]["chexpert_adapt"]["metrics"]["chexpert"]),
+        ("chexpert_adapt", "mimic", summary["stages"]["chexpert_adapt"]["metrics"]["mimic"]),
         ("mimic_adapt", "nih", summary["stages"]["mimic_adapt"]["metrics"]["nih"]),
         ("mimic_adapt", "chexpert", summary["stages"]["mimic_adapt"]["metrics"]["chexpert"]),
         ("mimic_adapt", "mimic", summary["stages"]["mimic_adapt"]["metrics"]["mimic"]),
@@ -200,7 +201,7 @@ def write_summary_report(path: Path, *, summary: dict[str, Any]) -> None:
         "## Stage AUROC",
         "",
         f"- NIH source: NIH `{stages['nih_source']['metrics']['nih']}`, CheXpert `{stages['nih_source']['metrics']['chexpert']}`, MIMIC `{stages['nih_source']['metrics']['mimic']}`",
-        f"- After CheXpert train: NIH `{stages['chexpert_adapt']['metrics']['nih']}`, CheXpert `{stages['chexpert_adapt']['metrics']['chexpert']}`",
+        f"- After CheXpert train: NIH `{stages['chexpert_adapt']['metrics']['nih']}`, CheXpert `{stages['chexpert_adapt']['metrics']['chexpert']}`, MIMIC `{stages['chexpert_adapt']['metrics']['mimic']}`",
         f"- After MIMIC train: NIH `{stages['mimic_adapt']['metrics']['nih']}`, CheXpert `{stages['mimic_adapt']['metrics']['chexpert']}`, MIMIC `{stages['mimic_adapt']['metrics']['mimic']}`",
         "",
         "## Forgetting",

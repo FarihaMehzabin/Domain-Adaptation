@@ -1,11 +1,13 @@
 {
   "auxiliary_train_aliases": [],
+  "backfilled_evaluation_utc": "2026-04-19T15:57:04.996044+00:00",
   "best_epoch": 6,
   "checkpoint_path": "/tmp/cxr_sequential_forgetting_study/experiments/by_id/exp0003__domain_transfer_head_training__mimic_adapt_from_chexpert__pilot5h_warmstart_chain__cxr_foundation_linear/best.ckpt",
-  "device_resolved": "cuda",
+  "device_resolved": "cpu",
   "embedding_layout": "domain_split",
   "embedding_root": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation",
   "enable_lwf": false,
+  "enable_mas": false,
   "experiment_dir": "/tmp/cxr_sequential_forgetting_study/experiments/by_id/exp0003__domain_transfer_head_training__mimic_adapt_from_chexpert__pilot5h_warmstart_chain__cxr_foundation_linear",
   "experiment_id": "exp0003",
   "experiment_name": "exp0003__domain_transfer_head_training__mimic_adapt_from_chexpert__pilot5h_warmstart_chain__cxr_foundation_linear",
@@ -33,38 +35,55 @@
     "d0_test": {
       "auroc": 0.8220945772214833,
       "average_precision": 0.22248407044015803,
-      "ece": 0.2416647190713852,
+      "ece": 0.24166471882656865,
       "f1_at_0.5": 0.24509390058447478,
       "f1_at_tuned_thresholds": 0.23515297931222803
+    },
+    "d0_val": {
+      "auroc": 0.8237999093009688,
+      "average_precision": 0.24439394174547222,
+      "ece": 0.2444220114104849,
+      "f1_at_0.5": 0.2519451230154803,
+      "f1_at_tuned_thresholds": 0.22721078579851534
     },
     "d1_test": {
       "auroc": 0.8134939813280871,
       "average_precision": 0.5235562120738437,
-      "ece": 0.19513026252415505,
+      "ece": 0.19513025961344935,
       "f1_at_0.5": 0.4935255341865595,
       "f1_at_tuned_thresholds": 0.4005978520083269
+    },
+    "d1_val": {
+      "auroc": 0.720412079036307,
+      "average_precision": 0.33401691847520515,
+      "ece": 0.290145795091404,
+      "f1_at_0.5": 0.35174062282586654,
+      "f1_at_tuned_thresholds": 0.31024020264453683
     },
     "target_test": {
       "auroc": 0.7770320135451925,
       "average_precision": 0.3999985812491468,
-      "ece": 0.28462824233069645,
+      "ece": 0.28462824492716465,
       "f1_at_0.5": 0.42347669835564944,
       "f1_at_tuned_thresholds": 0.41318952144112514
     },
     "target_val": {
       "auroc": 0.7963134406821267,
       "average_precision": 0.37871011206256,
-      "ece": 0.2435022005539535,
+      "ece": 0.24350220057735197,
       "f1_at_0.5": 0.38697065309966383,
-      "f1_at_tuned_thresholds": 0.4441849568257066
+      "f1_at_tuned_thresholds": 0.45000668724094206
     }
   },
-  "manifest_csv": "/tmp/cxr_sequential_forgetting_study/manifest/manifest_pilot5h_binary_mimic.csv",
+  "manifest_csv": "/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/manifest/manifest_pilot5h_binary_mimic.csv",
+  "mas_lambda": null,
+  "mas_state_path": null,
   "mlp_dropout": 0.2,
   "mlp_hidden_dims": [],
   "model_num_parameters": 5383,
   "num_labels": 7,
   "operation_label": "domain_transfer_head_training",
+  "preservation_method": "none",
   "primary_test_alias": "target_test",
   "run_date_utc": "2026-04-19T14:30:07.375337+00:00",
   "selection_alias": "target_val",
@@ -81,6 +100,18 @@
       "sidecar_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d0_nih/test/row_ids.json",
       "split": "test"
     },
+    "d0_val": {
+      "domain": "d0_nih",
+      "embeddings_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d0_nih/val/embeddings.npy",
+      "num_rows": 1000,
+      "shape": [
+        1000,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d0_nih/val/row_ids.json",
+      "split": "val"
+    },
     "d1_test": {
       "domain": "d1_chexpert",
       "embeddings_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/test/embeddings.npy",
@@ -92,6 +123,18 @@
       "sidecar_parser": "identity",
       "sidecar_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/test/row_ids.json",
       "split": "test"
+    },
+    "d1_val": {
+      "domain": "d1_chexpert",
+      "embeddings_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/val/embeddings.npy",
+      "num_rows": 1000,
+      "shape": [
+        1000,
+        768
+      ],
+      "sidecar_parser": "identity",
+      "sidecar_path": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation/d1_chexpert/val/row_ids.json",
+      "split": "val"
     },
     "target_test": {
       "domain": "d2_mimic",

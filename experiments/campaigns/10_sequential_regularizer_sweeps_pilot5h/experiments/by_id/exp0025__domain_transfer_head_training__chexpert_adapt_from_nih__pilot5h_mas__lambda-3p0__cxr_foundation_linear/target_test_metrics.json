@@ -1,0 +1,123 @@
+{
+  "label_metrics": {
+    "atelectasis": {
+      "auroc": 0.8382305194805195,
+      "average_precision": 0.6951136632261362,
+      "ece": 0.12111629192263897,
+      "f1_at_0.5": 0.6582278481012659,
+      "f1_at_tuned_threshold": 0.6927374301675978,
+      "negative_count": 154,
+      "positive_count": 80,
+      "precision_at_0.5": 0.6666666666666666,
+      "precision_at_tuned_threshold": 0.6262626262626263,
+      "prevalence": 0.3418803418803419,
+      "recall_at_0.5": 0.65,
+      "recall_at_tuned_threshold": 0.775,
+      "threshold_used": 0.4182107150554657
+    },
+    "cardiomegaly": {
+      "auroc": 0.7510630758327428,
+      "average_precision": 0.6061066355243241,
+      "ece": 0.20792333331160315,
+      "f1_at_0.5": 0.5405405405405405,
+      "f1_at_tuned_threshold": 0.5641025641025641,
+      "negative_count": 166,
+      "positive_count": 68,
+      "precision_at_0.5": 0.42735042735042733,
+      "precision_at_tuned_threshold": 0.673469387755102,
+      "prevalence": 0.2905982905982906,
+      "recall_at_0.5": 0.7352941176470589,
+      "recall_at_tuned_threshold": 0.4852941176470588,
+      "threshold_used": 0.7353391051292419
+    },
+    "consolidation": {
+      "auroc": 0.9107492838836122,
+      "average_precision": 0.5604390102113352,
+      "ece": 0.2967951877768902,
+      "f1_at_0.5": 0.5166666666666667,
+      "f1_at_tuned_threshold": 0.5333333333333333,
+      "negative_count": 201,
+      "positive_count": 33,
+      "precision_at_0.5": 0.3563218390804598,
+      "precision_at_tuned_threshold": 0.5925925925925926,
+      "prevalence": 0.14102564102564102,
+      "recall_at_0.5": 0.9393939393939394,
+      "recall_at_tuned_threshold": 0.48484848484848486,
+      "threshold_used": 0.6950058341026306
+    },
+    "edema": {
+      "auroc": 0.8359788359788359,
+      "average_precision": 0.5980684886259006,
+      "ece": 0.09219276439091094,
+      "f1_at_0.5": 0.5681818181818183,
+      "f1_at_tuned_threshold": 0.5714285714285715,
+      "negative_count": 189,
+      "positive_count": 45,
+      "precision_at_0.5": 0.5813953488372093,
+      "precision_at_tuned_threshold": 0.5283018867924528,
+      "prevalence": 0.19230769230769232,
+      "recall_at_0.5": 0.5555555555555556,
+      "recall_at_tuned_threshold": 0.6222222222222222,
+      "threshold_used": 0.41952547430992126
+    },
+    "pleural_effusion": {
+      "auroc": 0.9096433997676289,
+      "average_precision": 0.8215818649512124,
+      "ece": 0.11561905828773629,
+      "f1_at_0.5": 0.7397260273972602,
+      "f1_at_tuned_threshold": 0.7175572519083969,
+      "negative_count": 167,
+      "positive_count": 67,
+      "precision_at_0.5": 0.6835443037974683,
+      "precision_at_tuned_threshold": 0.734375,
+      "prevalence": 0.2863247863247863,
+      "recall_at_0.5": 0.8059701492537313,
+      "recall_at_tuned_threshold": 0.7014925373134329,
+      "threshold_used": 0.5693159103393555
+    },
+    "pneumonia": {
+      "auroc": 0.8550884955752213,
+      "average_precision": 0.24288738754851286,
+      "ece": 0.36902901120644177,
+      "f1_at_0.5": 0.19999999999999998,
+      "f1_at_tuned_threshold": 0.16666666666666666,
+      "negative_count": 226,
+      "positive_count": 8,
+      "precision_at_0.5": 0.11538461538461539,
+      "precision_at_tuned_threshold": 0.25,
+      "prevalence": 0.03418803418803419,
+      "recall_at_0.5": 0.75,
+      "recall_at_tuned_threshold": 0.125,
+      "threshold_used": 0.714971661567688
+    },
+    "pneumothorax": {
+      "auroc": 0.7820796460176991,
+      "average_precision": 0.12947249998104035,
+      "ece": 0.334800642195707,
+      "f1_at_0.5": 0.14492753623188404,
+      "f1_at_tuned_threshold": 0.18181818181818182,
+      "negative_count": 226,
+      "positive_count": 8,
+      "precision_at_0.5": 0.08196721311475409,
+      "precision_at_tuned_threshold": 0.14285714285714285,
+      "prevalence": 0.03418803418803419,
+      "recall_at_0.5": 0.625,
+      "recall_at_tuned_threshold": 0.25,
+      "threshold_used": 0.7373591661453247
+    }
+  },
+  "loss": 1.036984920501709,
+  "macro": {
+    "auroc": 0.8404047509337513,
+    "average_precision": 0.5219527928669231,
+    "ece": 0.2196394698702755,
+    "f1_at_0.5": 0.48118149101706226,
+    "f1_at_tuned_thresholds": 0.4896634284893303
+  },
+  "num_examples": 234,
+  "split_alias": "target_test",
+  "valid_label_counts": {
+    "macro_auroc": 7,
+    "macro_average_precision": 7
+  }
+}

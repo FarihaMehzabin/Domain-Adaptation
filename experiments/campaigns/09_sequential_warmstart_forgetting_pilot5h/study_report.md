@@ -1,46 +1,24 @@
-# Oracle, Transfer, and Naive Continual Baselines
+# Sequential Warm-Start Forgetting Study
 
-- Manifest: `/workspace/manifest/manifest_pilot5h_binary_mimic.csv`
-- Campaign: `/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h`
+- Manifest: `/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/manifest/manifest_pilot5h_binary_mimic.csv`
+- Embedding view: `/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation`
 
-## Model Size And Compute
+## Stage AUROC
 
-- Trainable linear head only: `5.4k` params
-- Trainable linear head only: about `10.8k` FLOPs per image
-- Frozen `CXR Foundation` backbone FLOPs were not logged because these runs used pre-exported embeddings
+- NIH source: NIH `0.8461346978442619`, CheXpert `0.8485879868021924`, MIMIC `0.737037083174961`
+- After CheXpert train: NIH `0.821012785227422`, CheXpert `0.788215306650718`, MIMIC `0.7638197470260162`
+- After MIMIC train: NIH `0.8220945772214833`, CheXpert `0.8134939813280871`, MIMIC `0.7770320135451925`
 
-## 1. Independent Single-Domain Oracle Baselines
+## Forgetting
 
-- `NIH` only (`exp0001`): `NIH test` AUROC `0.8461`
-- `CheXpert` only (`exp0004`): `CheXpert test` AUROC `0.7703`
-- `MIMIC` only (`exp0005`): `MIMIC test` AUROC `0.7619`
+- NIH after CheXpert delta: `-0.025121912616839825`
+- NIH after MIMIC delta vs NIH source: `-0.024040120622778605`
+- NIH after MIMIC delta vs CheXpert stage: `0.0010817919940612208`
+- CheXpert after MIMIC delta vs CheXpert stage: `0.025278674677369106`
 
-## 2. Cross-Domain Transfer Baseline
+## Transfer
 
-- Train on `NIH`, test directly with no adaptation:
-- `CheXpert test` AUROC `0.8486`
-- `MIMIC test` AUROC `0.7370`
-- Relative to oracle:
-- `NIH -> CheXpert` vs `CheXpert` oracle: `+0.0783`
-- `NIH -> MIMIC` vs `MIMIC` oracle: `-0.0249`
-
-## 3. Naive Continual Baseline
-
-- Stage A `NIH` source (`exp0001`): `NIH 0.8461`, `CheXpert 0.8486`, `MIMIC 0.7370`
-- Stage B after `CheXpert` fine-tune (`exp0002`): `NIH 0.8210`, `CheXpert 0.7882`
-- Stage C after `MIMIC` fine-tune (`exp0003`): `NIH 0.8221`, `CheXpert 0.8135`, `MIMIC 0.7770`
-
-## Main Deltas
-
-- `NIH` forgetting after `CheXpert` fine-tune: `-0.0251`
-- final `NIH` vs original `NIH` source: `-0.0240`
-- `CheXpert` after Stage B vs original `NIH -> CheXpert` zero-shot: `-0.0604`
-- `CheXpert` after Stage C vs Stage B: `+0.0253`
-- `MIMIC` after Stage C vs original `NIH -> MIMIC` zero-shot: `+0.0400`
-
-## Readout
-
-- The current embedding space is strongest on `NIH`.
-- Raw `NIH -> CheXpert` transfer is already stronger than the `CheXpert`-only oracle on this pilot holdout.
-- The main measurable forgetting happens at the `NIH -> CheXpert` step.
-- `MIMIC` adaptation is still useful because it improves `MIMIC` while adding little extra `NIH` damage.
+- NIH to CheXpert zero-shot: `0.8485879868021924`
+- NIH to MIMIC zero-shot: `0.737037083174961`
+- CheXpert finetune gain vs NIH zero-shot: `-0.060372680151474345`
+- MIMIC finetune gain vs NIH zero-shot: `0.039994930370231496`

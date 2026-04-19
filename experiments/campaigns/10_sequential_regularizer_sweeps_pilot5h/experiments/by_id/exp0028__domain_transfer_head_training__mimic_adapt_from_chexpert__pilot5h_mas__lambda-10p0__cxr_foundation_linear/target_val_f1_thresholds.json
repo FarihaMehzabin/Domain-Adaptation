@@ -1,0 +1,35 @@
+{
+  "labels": {
+    "atelectasis": {
+      "best_f1": 0.47489823609226595,
+      "threshold": 0.4438050313522473
+    },
+    "cardiomegaly": {
+      "best_f1": 0.4659270998415214,
+      "threshold": 0.5162750020780926
+    },
+    "consolidation": {
+      "best_f1": 0.2608695652173913,
+      "threshold": 0.7254524827561027
+    },
+    "edema": {
+      "best_f1": 0.5089974293059126,
+      "threshold": 0.6482368285706339
+    },
+    "pleural_effusion": {
+      "best_f1": 0.6886326194398682,
+      "threshold": 0.6161719695990312
+    },
+    "pneumonia": {
+      "best_f1": 0.22631578947368422,
+      "threshold": 0.6180760069084948
+    },
+    "pneumothorax": {
+      "best_f1": 0.36363636363636365,
+      "threshold": 0.7902933782849515
+    }
+  },
+  "macro_threshold": 0.6226158142089844,
+  "selection_metric": "per_label_f1",
+  "selection_split": "target_val"
+}

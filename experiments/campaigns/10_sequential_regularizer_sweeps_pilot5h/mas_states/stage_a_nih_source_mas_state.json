@@ -1,0 +1,33 @@
+{
+  "checkpoint_epoch": 24,
+  "checkpoint_path": "/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/experiments/by_id/exp0001__domain_transfer_head_training__nih_source_all_test__pilot5h_warmstart_chain__cxr_foundation_linear/best.ckpt",
+  "embedding_layout": "domain_split",
+  "embedding_root": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation",
+  "head_type": "linear",
+  "input_dim": 768,
+  "l2_normalize_features": false,
+  "label_names": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion",
+    "pneumonia",
+    "pneumothorax"
+  ],
+  "manifest_csv": "/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/manifest/manifest_pilot5h_binary_mimic.csv",
+  "new_omega_mean_before_normalization": 0.07981268290624773,
+  "num_examples": 10000,
+  "num_labels": 7,
+  "omega_alias": "d0_nih_train",
+  "omega_domain": "d0_nih",
+  "omega_split": "train",
+  "parameter_names": [
+    "classifier.bias",
+    "classifier.weight"
+  ],
+  "previous_state_path": null,
+  "previous_state_provenance": null,
+  "run_date_utc": "2026-04-19T15:47:12.040437+00:00",
+  "token_pooling": "avg"
+}

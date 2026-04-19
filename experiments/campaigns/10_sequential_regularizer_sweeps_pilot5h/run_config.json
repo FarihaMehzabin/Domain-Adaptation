@@ -1,0 +1,42 @@
+{
+  "baseline_campaign_root": "/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h",
+  "batch_size": 512,
+  "device": "auto",
+  "embedding_view_root": "/tmp/cxr_sequential_forgetting_study/embedding_views/pilot5h_nih_chexpert_mimic_cxr_foundation",
+  "epochs": 50,
+  "fp16_on_cuda": false,
+  "lr": 0.001,
+  "lwf_alpha_grid": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "lwf_temperature_grid": [
+    2.0,
+    4.0,
+    8.0
+  ],
+  "manifest_csv": "/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/manifest/manifest_pilot5h_binary_mimic.csv",
+  "mas_lambda_grid": [
+    0.1,
+    0.3,
+    1.0,
+    3.0,
+    10.0,
+    30.0
+  ],
+  "mas_script": "/workspace/scripts/38_compute_online_mas_state.py",
+  "max_rows_per_split": null,
+  "methods": [
+    "lwf",
+    "mas"
+  ],
+  "num_workers": 0,
+  "output_root": "/tmp/cxr_sequential_regularizer_sweeps",
+  "patience": 5,
+  "run_date_utc": "2026-04-19T15:45:13.263078+00:00",
+  "seed": 1337,
+  "source_checkpoint": "/workspace/experiments/campaigns/09_sequential_warmstart_forgetting_pilot5h/experiments/by_id/exp0001__domain_transfer_head_training__nih_source_all_test__pilot5h_warmstart_chain__cxr_foundation_linear/best.ckpt",
+  "trainer_script": "/workspace/scripts/15_train_domain_transfer_linear_probe.py",
+  "weight_decay": 0.0001
+}
