@@ -952,6 +952,31 @@ def build_evaluation_plan(
     embedding_layout: str,
     include_lwf_source: bool,
 ) -> EvaluationPlan:
+    if split_profile == "nih_source_all_test":
+        if embedding_layout != "domain_split":
+            raise SystemExit("--split-profile nih_source_all_test requires --embedding-layout domain_split.")
+        return EvaluationPlan(
+            name=split_profile,
+            train_alias="d0_train",
+            selection_alias="d0_val",
+            primary_test_alias="d0_test",
+            auxiliary_train_aliases=tuple(),
+            split_specs=(
+                ("d0_train", "d0_nih", "train"),
+                ("d0_val", "d0_nih", "val"),
+                ("d0_test", "d0_nih", "test"),
+                ("d1_test", "d1_chexpert", "test"),
+                ("d2_test", "d2_mimic", "test"),
+            ),
+            output_name_map={
+                "d0_val": "d0_val_metrics.json",
+                "d0_test": "d0_test_metrics.json",
+                "d1_test": "d1_test_metrics.json",
+                "d2_test": "d2_test_metrics.json",
+            },
+            thresholds_filename="d0_val_f1_thresholds.json",
+        )
+
     if split_profile == "source_transfer":
         split_specs: list[tuple[str, str, str]] = [
             ("d0_train", "d0_nih", "train"),
@@ -1032,6 +1057,31 @@ def build_evaluation_plan(
                 "target_val": "target_val_metrics.json",
                 "target_test": "target_test_metrics.json",
                 "d0_test": "d0_test_metrics.json",
+            },
+            thresholds_filename="target_val_f1_thresholds.json",
+        )
+
+    if split_profile == "mimic_adapt_from_chexpert":
+        if embedding_layout != "domain_split":
+            raise SystemExit("--split-profile mimic_adapt_from_chexpert requires --embedding-layout domain_split.")
+        return EvaluationPlan(
+            name=split_profile,
+            train_alias="target_train",
+            selection_alias="target_val",
+            primary_test_alias="target_test",
+            auxiliary_train_aliases=tuple(),
+            split_specs=(
+                ("target_train", "d2_mimic", "train"),
+                ("target_val", "d2_mimic", "val"),
+                ("target_test", "d2_mimic", "test"),
+                ("d0_test", "d0_nih", "test"),
+                ("d1_test", "d1_chexpert", "test"),
+            ),
+            output_name_map={
+                "target_val": "target_val_metrics.json",
+                "target_test": "target_test_metrics.json",
+                "d0_test": "d0_test_metrics.json",
+                "d1_test": "d1_test_metrics.json",
             },
             thresholds_filename="target_val_f1_thresholds.json",
         )
@@ -1241,7 +1291,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--lwf-temperature", type=float, default=None)
     parser.add_argument(
         "--split-profile",
-        choices=("source_transfer", "chexpert_target", "mimic_target", "chexpert_adapt_from_nih"),
+        choices=(
+            "source_transfer",
+            "nih_source_all_test",
+            "chexpert_target",
+            "mimic_target",
+            "chexpert_adapt_from_nih",
+            "mimic_adapt_from_chexpert",
+        ),
         default="source_transfer",
         help="Which manifest split layout to train and evaluate.",
     )
@@ -1304,8 +1361,10 @@ def main() -> int:
         raise SystemExit("--mlp-hidden-dims is only valid with --head-type mlp.")
     if args.head_type == "mlp" and not mlp_hidden_dims:
         raise SystemExit("--head-type mlp requires at least one --mlp-hidden-dims value.")
-    if args.split_profile == "chexpert_adapt_from_nih" and args.init_checkpoint is None:
-        raise SystemExit("--split-profile chexpert_adapt_from_nih requires --init-checkpoint.")
+    if args.split_profile in {"chexpert_adapt_from_nih", "mimic_adapt_from_chexpert"} and args.init_checkpoint is None:
+        raise SystemExit(
+            f"--split-profile {args.split_profile} requires --init-checkpoint."
+        )
     if args.enable_lwf:
         if args.split_profile != "chexpert_adapt_from_nih":
             raise SystemExit("--enable-lwf currently only supports --split-profile chexpert_adapt_from_nih.")

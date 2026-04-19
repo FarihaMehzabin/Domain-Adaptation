@@ -1,0 +1,22 @@
+{
+  "batch_size": 512,
+  "binary_mimic_manifest_csv": "/tmp/cxr_mimic_run/manifest/manifest_mimic_target_1000_binary.csv",
+  "chexpert_embedding_root": "/workspace/experiments/by_id/exp0054__cxr_foundation_embedding_export__chexpert_target_1000_cxr_foundation_avg_batch128",
+  "device": "auto",
+  "epochs": 50,
+  "lr": 0.001,
+  "mimic_embedding_root": "/tmp/cxr_mimic_run/experiments/by_id/exp0001__cxr_foundation_embedding_export__mimic_target_1000_cxr_foundation_avg_batch128",
+  "nih_embedding_root": "/workspace/experiments/by_id/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128",
+  "num_workers": 0,
+  "output_root": "/tmp/cxr_sequential_forgetting_study",
+  "patience": 5,
+  "pilot_manifest_csv": "/workspace/manifest/manifest_common_labels_pilot5h.csv",
+  "reserved_names": {
+    "chexpert_adapt": "exp0002__domain_transfer_head_training__chexpert_adapt_from_nih__pilot5h_warmstart_chain__cxr_foundation_linear",
+    "mimic_adapt": "exp0003__domain_transfer_head_training__mimic_adapt_from_chexpert__pilot5h_warmstart_chain__cxr_foundation_linear",
+    "nih_source": "exp0001__domain_transfer_head_training__nih_source_all_test__pilot5h_warmstart_chain__cxr_foundation_linear"
+  },
+  "run_date_utc": "2026-04-19T14:29:43.443234+00:00",
+  "seed": 1337,
+  "weight_decay": 0.0001
+}
