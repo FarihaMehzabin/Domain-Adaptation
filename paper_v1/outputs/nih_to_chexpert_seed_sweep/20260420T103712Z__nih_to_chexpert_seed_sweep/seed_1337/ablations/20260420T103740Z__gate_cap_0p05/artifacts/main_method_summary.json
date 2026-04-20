@@ -1,0 +1,74 @@
+{
+  "best_val_macro_auroc": 0.7196948239800124,
+  "checkpoint_path": "/workspace/paper_v1/outputs/nih_to_chexpert_seed_sweep/20260420T103712Z__nih_to_chexpert_seed_sweep/seed_1337/ablations/20260420T103740Z__gate_cap_0p05/checkpoints/main_method_best.pt",
+  "flops": {
+    "gate_flops": 100545,
+    "residual_adapter_flops": 202119,
+    "retrieval": {
+      "aggregation_flops": 6144,
+      "cosine_similarity_flops": 64512,
+      "topk_selection_flops": 42,
+      "total_retrieval_flops": 70698
+    }
+  },
+  "history_path": "/workspace/paper_v1/outputs/nih_to_chexpert_seed_sweep/20260420T103712Z__nih_to_chexpert_seed_sweep/seed_1337/ablations/20260420T103740Z__gate_cap_0p05/artifacts/main_method_history.csv",
+  "memory_size_bytes": 131460,
+  "memory_size_mb": 0.12537002563476562,
+  "parameter_counts": {
+    "by_parameter": [
+      {
+        "count": 5376,
+        "name": "previous_model.linear.weight",
+        "trainable": false
+      },
+      {
+        "count": 7,
+        "name": "previous_model.linear.bias",
+        "trainable": false
+      },
+      {
+        "count": 50176,
+        "name": "gate.net.0.weight",
+        "trainable": true
+      },
+      {
+        "count": 64,
+        "name": "gate.net.0.bias",
+        "trainable": true
+      },
+      {
+        "count": 64,
+        "name": "gate.net.2.weight",
+        "trainable": true
+      },
+      {
+        "count": 1,
+        "name": "gate.net.2.bias",
+        "trainable": true
+      },
+      {
+        "count": 100096,
+        "name": "adapter.net.0.weight",
+        "trainable": true
+      },
+      {
+        "count": 128,
+        "name": "adapter.net.0.bias",
+        "trainable": true
+      },
+      {
+        "count": 896,
+        "name": "adapter.net.3.weight",
+        "trainable": true
+      },
+      {
+        "count": 7,
+        "name": "adapter.net.3.bias",
+        "trainable": true
+      }
+    ],
+    "frozen_parameters": 5383,
+    "total_parameters": 156815,
+    "trainable_parameters": 151432
+  }
+}

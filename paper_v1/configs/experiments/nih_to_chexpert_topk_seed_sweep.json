@@ -1,0 +1,63 @@
+{
+  "experiment_name": "nih_to_chexpert_topk_seed_sweep",
+  "output_root": "/workspace/paper_v1/outputs/nih_to_chexpert_topk_seed_sweep",
+  "stage1_config_path": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/configs/nih_to_chexpert_refresh_ready.json",
+  "seeds": [
+    1337,
+    2027,
+    31415
+  ],
+  "diagnostic_seed": 1337,
+  "harder_gate_clipping": {
+    "old_like_similarity_threshold": 0.7,
+    "old_like_gate_cap": 0.1
+  },
+  "topk_labelwise_trust_region_k1": {
+    "bottleneck_dim": 128,
+    "dropout": 0.1,
+    "epochs": 20,
+    "batch_size": 256,
+    "lr": 0.0005,
+    "weight_decay": 0.0001,
+    "patience": 5,
+    "prototype_replay_weight": 1.0,
+    "margin_preservation_weight": 1.0,
+    "margin_preservation_slack": 0.25,
+    "trust_region_weight": 0.5,
+    "trust_region_support_threshold": 0.7,
+    "correction_top_k": 1,
+    "gate_active_threshold": 0.5
+  },
+  "topk_labelwise_trust_region_k2": {
+    "bottleneck_dim": 128,
+    "dropout": 0.1,
+    "epochs": 20,
+    "batch_size": 256,
+    "lr": 0.0005,
+    "weight_decay": 0.0001,
+    "patience": 5,
+    "prototype_replay_weight": 1.0,
+    "margin_preservation_weight": 1.0,
+    "margin_preservation_slack": 0.25,
+    "trust_region_weight": 0.5,
+    "trust_region_support_threshold": 0.7,
+    "correction_top_k": 2,
+    "gate_active_threshold": 0.5
+  },
+  "tiny_logit_correction": {
+    "epochs": 20,
+    "batch_size": 256,
+    "lr": 0.005,
+    "weight_decay": 0.00001,
+    "patience": 5,
+    "distill_weight": 1.0,
+    "distill_temperature": 2.0,
+    "identity_weight": 0.5
+  },
+  "promotion": {
+    "max_mean_forgetting_delta_vs_reference": 0.002,
+    "max_seen_average_std": 0.005,
+    "max_chexpert_std": 0.01
+  },
+  "diagnostic_active_threshold": 0.5
+}

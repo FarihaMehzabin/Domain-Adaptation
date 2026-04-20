@@ -1,0 +1,32 @@
+{
+  "current_domain_prototype_count": 0,
+  "forgetting_metric_correct": true,
+  "memory_trainable_parameter_count": 0,
+  "old_bank_num_prototypes": 42,
+  "previous_grad_abs_sum_after_backward": 0.0,
+  "previous_logits_frozen": true,
+  "previous_requires_grad_false": true,
+  "prototype_domain_counts": {
+    "d0_nih": 42
+  },
+  "replay_active_each_epoch": true,
+  "retrieval_uses_current_domain_memory": false,
+  "toy_forgetting": {
+    "final_average_forgetting": 0.10000000000000009,
+    "stages": [
+      {
+        "per_domain_forgetting": {},
+        "stage_index": 0,
+        "stage_name": "stage0"
+      },
+      {
+        "per_domain_forgetting": {
+          "d0_nih": 0.10000000000000009
+        },
+        "stage_index": 1,
+        "stage_name": "stage1"
+      }
+    ]
+  },
+  "zero_penalty_active_each_epoch": true
+}

@@ -1,0 +1,24 @@
+{
+  "best_val_macro_auroc": 0.731384840094136,
+  "checkpoint_path": "/workspace/paper_v1/outputs/nih_to_chexpert_seed_sweep/20260420T122137Z__nih_to_chexpert_seed_sweep/seed_31415/20260420T122203Z__vq_summary_replay/checkpoints/vq_summary_replay_best.pt",
+  "flops": {
+    "linear_forward_flops": 10759
+  },
+  "parameter_counts": {
+    "by_parameter": [
+      {
+        "count": 5376,
+        "name": "linear.weight",
+        "trainable": true
+      },
+      {
+        "count": 7,
+        "name": "linear.bias",
+        "trainable": true
+      }
+    ],
+    "frozen_parameters": 0,
+    "total_parameters": 5383,
+    "trainable_parameters": 5383
+  }
+}

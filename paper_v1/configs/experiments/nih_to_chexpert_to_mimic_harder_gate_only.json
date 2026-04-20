@@ -1,0 +1,61 @@
+{
+  "experiment_name": "nih_to_chexpert_to_mimic_harder_gate_only",
+  "output_root": "/workspace/paper_v1/outputs/nih_to_chexpert_to_mimic",
+  "data_config": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/configs/data_config_refreshed_chexpert.json",
+  "stage1_seed_sweep_root": "/workspace/paper_v1/outputs/nih_to_chexpert_seed_sweep/20260420T103712Z__nih_to_chexpert_seed_sweep",
+  "stage1_seed": 1337,
+  "seed": 1337,
+  "source_only_checkpoint": "/workspace/paper_v1/outputs/stage0_nih_current/20260420T072208Z__stage0_nih_current/checkpoints/stage0_best.pt",
+  "training": {
+    "epochs": 20,
+    "batch_size": 256,
+    "lr": 0.0005,
+    "weight_decay": 0.0001,
+    "patience": 5,
+    "distill_weight": 1.0,
+    "temperature": 2.0,
+    "replay_weight": 1.0
+  },
+  "harder_gate_clipping": {
+    "epochs": 20,
+    "batch_size": 256,
+    "lr": 0.0005,
+    "weight_decay": 0.0001,
+    "patience": 5,
+    "distill_weight": 1.0,
+    "distill_temperature": 2.0,
+    "prototype_replay_weight": 1.0,
+    "residual_zero_weight": 0.1,
+    "top_k": 8,
+    "temperature": 0.1,
+    "gate_hidden_dim": 64,
+    "bottleneck_dim": 128,
+    "dropout": 0.1,
+    "old_like_similarity_threshold": 0.7,
+    "old_like_gate_cap": 0.1
+  },
+  "tiny_logit_correction": {
+    "epochs": 20,
+    "batch_size": 256,
+    "lr": 0.005,
+    "weight_decay": 0.00001,
+    "patience": 5,
+    "distill_weight": 1.0,
+    "distill_temperature": 2.0,
+    "identity_weight": 0.5
+  },
+  "run_tiny_logit_correction": false,
+  "memory": {
+    "positive_k": 4,
+    "negative_k": 2
+  },
+  "validation": {
+    "require_patient_disjoint": true,
+    "missing_embedding_policy": "drop",
+    "allowed_issue_codes": []
+  },
+  "expected_dropped_row_ids": [
+    "mimic_cxr__p10855616__s55442288__acc6c734-64303ed5-4d69ca7d-1d75440d-6da5c2dc",
+    "mimic_cxr__p10862862__s57816531__e07b2ae9-8f5ac6ac-a6fe93af-b5fe92ca-53b20a75"
+  ]
+}

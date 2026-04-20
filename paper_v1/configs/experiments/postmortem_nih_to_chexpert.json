@@ -1,0 +1,60 @@
+{
+  "experiment_name": "nih_to_chexpert_postmortem",
+  "output_root": "/workspace/paper_v1/outputs/nih_to_chexpert_postmortem",
+  "stage1_config_path": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/configs/nih_to_chexpert_refresh_ready.json",
+  "seed": 1337,
+  "training": {
+    "epochs": 20,
+    "batch_size": 256,
+    "lr": 0.0005,
+    "weight_decay": 0.0001,
+    "patience": 5,
+    "distill_weight": 1.0,
+    "temperature": 2.0,
+    "replay_weight": 1.0
+  },
+  "main_method": {
+    "epochs": 20,
+    "batch_size": 256,
+    "lr": 0.0005,
+    "weight_decay": 0.0001,
+    "patience": 5,
+    "distill_weight": 1.0,
+    "distill_temperature": 2.0,
+    "prototype_replay_weight": 1.0,
+    "residual_zero_weight": 0.1,
+    "top_k": 8,
+    "temperature": 0.1,
+    "gate_hidden_dim": 64,
+    "bottleneck_dim": 128,
+    "dropout": 0.1
+  },
+  "rescue_variants": {
+    "smaller_bottleneck": {
+      "bottleneck_dim": 32
+    },
+    "stronger_replay_zero": {
+      "prototype_replay_weight": 4.0,
+      "residual_zero_weight": 1.0
+    },
+    "harder_gate_clipping": {
+      "old_like_similarity_threshold": 0.7,
+      "old_like_gate_cap": 0.1
+    },
+    "lwf_prototype_replay": {
+      "distill_weight": 1.0,
+      "temperature": 2.0,
+      "replay_weight": 1.0
+    }
+  },
+  "tiny_logit_correction": {
+    "epochs": 20,
+    "batch_size": 256,
+    "lr": 0.005,
+    "weight_decay": 0.0,
+    "patience": 5,
+    "distill_weight": 1.0,
+    "distill_temperature": 2.0,
+    "identity_weight": 0.5
+  }
+}

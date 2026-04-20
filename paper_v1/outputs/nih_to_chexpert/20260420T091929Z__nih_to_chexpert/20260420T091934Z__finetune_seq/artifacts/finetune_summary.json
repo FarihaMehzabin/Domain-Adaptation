@@ -1,0 +1,24 @@
+{
+  "best_val_macro_auroc": 0.7372674401722286,
+  "checkpoint_path": "/workspace/paper_v1/outputs/nih_to_chexpert/20260420T091929Z__nih_to_chexpert/20260420T091934Z__finetune_seq/checkpoints/finetune_best.pt",
+  "flops": {
+    "linear_forward_flops": 10759
+  },
+  "parameter_counts": {
+    "by_parameter": [
+      {
+        "count": 5376,
+        "name": "linear.weight",
+        "trainable": true
+      },
+      {
+        "count": 7,
+        "name": "linear.bias",
+        "trainable": true
+      }
+    ],
+    "frozen_parameters": 0,
+    "total_parameters": 5383,
+    "trainable_parameters": 5383
+  }
+}

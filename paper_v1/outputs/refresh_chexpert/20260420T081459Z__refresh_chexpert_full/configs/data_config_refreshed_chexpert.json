@@ -1,0 +1,45 @@
+{
+  "_config_dir": "/workspace/paper_v1/configs/data",
+  "_config_path": "/workspace/paper_v1/configs/data/current_assets.json",
+  "domain_assets": {
+    "d0_nih": {
+      "index_csv": "/workspace/experiments/by_id/exp0014__cxr_foundation_embedding_export__pilot5h_common7_general_avg_batch128/embedding_index.csv",
+      "name": "nih_cxr_foundation_pilot5h"
+    },
+    "d1_chexpert": {
+      "index_csv": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/embeddings/by_id/exp0001__cxr_foundation_embedding_export__paper_v1_chexpert_refresh/embedding_index.csv",
+      "name": "chexpert_refreshed_cxr_foundation"
+    },
+    "d2_mimic": {
+      "index_csv": "/workspace/experiments/by_id/exp0085__cxr_foundation_embedding_export__mimic_target_1000_cxr_foundation_avg_batch128/embedding_index.csv",
+      "name": "mimic_target_1000_cxr_foundation"
+    }
+  },
+  "expected_embedding_dim": 768,
+  "known_issues": {
+    "chexpert_patient_overlap_expected": false,
+    "chexpert_refresh_hint": {
+      "kaggle_config": "/workspace/kaggle.json",
+      "reference_scripts": [
+        "/workspace/scripts/27_download_manifest_subset_from_kaggle.py",
+        "/workspace/scripts/14_generate_cxr_foundation_embeddings.py",
+        "/workspace/scripts/31_build_domain_split_embedding_view.py"
+      ]
+    },
+    "mimic_missing_embeddings": [
+      "mimic_cxr__p10855616__s55442288__acc6c734-64303ed5-4d69ca7d-1d75440d-6da5c2dc",
+      "mimic_cxr__p10862862__s57816531__e07b2ae9-8f5ac6ac-a6fe93af-b5fe92ca-53b20a75"
+    ]
+  },
+  "label_names": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion",
+    "pneumonia",
+    "pneumothorax"
+  ],
+  "manifest_path": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/manifest/manifest_current_plus_refreshed_chexpert.csv",
+  "negative_one_policy": "zero"
+}

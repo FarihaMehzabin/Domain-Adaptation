@@ -1,0 +1,36 @@
+{
+  "chexpert_manifest_path": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T074613Z__refresh_chexpert/manifest/manifest_chexpert_refreshed.csv",
+  "combined_manifest_path": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T074613Z__refresh_chexpert/manifest/manifest_current_plus_refreshed_chexpert.csv",
+  "downloaded_images": false,
+  "exported_embeddings": false,
+  "patient_overlap": {
+    "train_test": 0,
+    "train_val": 0,
+    "train_valid_source": 0,
+    "val_test": 0
+  },
+  "pool_counts": {
+    "dropped_train_rows": 221318,
+    "official_valid_rows": 234,
+    "train_pool_rows": 1032,
+    "val_pool_rows": 1064
+  },
+  "seed": 1337,
+  "selected_counts": {
+    "test": 234,
+    "train": 1000,
+    "val": 1000
+  },
+  "selected_patients": {
+    "test": 200,
+    "train": 807,
+    "val": 739
+  },
+  "target_counts": {
+    "test": -1,
+    "train": 1000,
+    "val": 1000
+  },
+  "train_csv": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T074613Z__refresh_chexpert/data/chexpert_small/raw/train.csv",
+  "valid_csv": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T074613Z__refresh_chexpert/data/chexpert_small/raw/valid.csv"
+}

@@ -1,0 +1,70 @@
+{
+  "experiment_name": "nih_to_chexpert",
+  "output_root": "/workspace/paper_v1/outputs/nih_to_chexpert",
+  "data_config": "/workspace/paper_v1/configs/data/current_assets.json",
+  "seed": 1337,
+  "stage0_checkpoint": "",
+  "stage0_fisher_path": "",
+  "baselines": [
+    "source_only",
+    "finetune_seq",
+    "lwf",
+    "l2_anchor",
+    "ewc",
+    "fixed_alpha_mix",
+    "vq_summary_replay",
+    "main_method"
+  ],
+  "training": {
+    "epochs": 20,
+    "batch_size": 256,
+    "lr": 0.0005,
+    "weight_decay": 0.0001,
+    "patience": 5,
+    "distill_weight": 1.0,
+    "temperature": 2.0,
+    "l2_anchor_weight": 0.0001,
+    "ewc_weight": 1.0,
+    "replay_weight": 1.0
+  },
+  "main_method": {
+    "epochs": 20,
+    "batch_size": 256,
+    "lr": 0.0005,
+    "weight_decay": 0.0001,
+    "patience": 5,
+    "distill_weight": 1.0,
+    "distill_temperature": 2.0,
+    "prototype_replay_weight": 1.0,
+    "residual_zero_weight": 0.1,
+    "top_k": 8,
+    "temperature": 0.1,
+    "gate_hidden_dim": 64,
+    "bottleneck_dim": 128,
+    "dropout": 0.1
+  },
+  "memory": {
+    "positive_k": 4,
+    "negative_k": 2,
+    "top_k": 8,
+    "temperature": 0.1,
+    "alpha_grid": [
+      0.1,
+      0.25,
+      0.5
+    ]
+  },
+  "validation": {
+    "require_patient_disjoint": true,
+    "missing_embedding_policy": "error",
+    "allowed_issue_codes": []
+  },
+  "refresh_prerequisites": {
+    "kaggle_config": "/workspace/kaggle.json",
+    "reference_scripts": [
+      "/workspace/scripts/27_download_manifest_subset_from_kaggle.py",
+      "/workspace/scripts/14_generate_cxr_foundation_embeddings.py",
+      "/workspace/scripts/31_build_domain_split_embedding_view.py"
+    ]
+  }
+}

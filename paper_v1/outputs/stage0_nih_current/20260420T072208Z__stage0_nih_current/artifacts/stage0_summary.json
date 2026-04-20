@@ -1,0 +1,25 @@
+{
+  "best_val_macro_auroc": 0.8474845619564805,
+  "checkpoint_path": "/workspace/paper_v1/outputs/stage0_nih_current/20260420T072208Z__stage0_nih_current/checkpoints/stage0_best.pt",
+  "fisher_path": "/workspace/paper_v1/outputs/stage0_nih_current/20260420T072208Z__stage0_nih_current/checkpoints/stage0_fisher.pt",
+  "flops": {
+    "stage0_linear_head_forward_flops": 10759
+  },
+  "parameter_counts": {
+    "by_parameter": [
+      {
+        "count": 5376,
+        "name": "linear.weight",
+        "trainable": true
+      },
+      {
+        "count": 7,
+        "name": "linear.bias",
+        "trainable": true
+      }
+    ],
+    "frozen_parameters": 0,
+    "total_parameters": 5383,
+    "trainable_parameters": 5383
+  }
+}

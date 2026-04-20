@@ -1,0 +1,35 @@
+{
+  "best_val_macro_auroc": 0.7187372600671603,
+  "checkpoint_path": "/workspace/paper_v1/outputs/nih_to_chexpert_seed_sweep/20260420T122137Z__nih_to_chexpert_seed_sweep/seed_1337/20260420T122148Z__tiny_logit_correction/checkpoints/tiny_logit_correction_best.pt",
+  "flops": {
+    "affine_logit_correction_flops": 21
+  },
+  "history_path": "/workspace/paper_v1/outputs/nih_to_chexpert_seed_sweep/20260420T122137Z__nih_to_chexpert_seed_sweep/seed_1337/20260420T122148Z__tiny_logit_correction/artifacts/tiny_logit_correction_history.csv",
+  "parameter_counts": {
+    "by_parameter": [
+      {
+        "count": 7,
+        "name": "logit_scale",
+        "trainable": true
+      },
+      {
+        "count": 7,
+        "name": "logit_bias",
+        "trainable": true
+      },
+      {
+        "count": 5376,
+        "name": "previous_model.linear.weight",
+        "trainable": false
+      },
+      {
+        "count": 7,
+        "name": "previous_model.linear.bias",
+        "trainable": false
+      }
+    ],
+    "frozen_parameters": 5383,
+    "total_parameters": 5397,
+    "trainable_parameters": 14
+  }
+}

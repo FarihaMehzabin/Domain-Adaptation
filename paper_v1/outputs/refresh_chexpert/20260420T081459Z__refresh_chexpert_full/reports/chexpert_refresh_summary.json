@@ -1,0 +1,40 @@
+{
+  "chexpert_manifest_path": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/manifest/manifest_chexpert_refreshed.csv",
+  "combined_manifest_path": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/manifest/manifest_current_plus_refreshed_chexpert.csv",
+  "downloaded_images": true,
+  "exported_embeddings": true,
+  "image_download_summary_path": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/downloads/image_download_summary.json",
+  "patient_overlap": {
+    "train_test": 0,
+    "train_val": 0,
+    "train_valid_source": 0,
+    "val_test": 0
+  },
+  "pool_counts": {
+    "dropped_train_rows": 221318,
+    "official_valid_rows": 234,
+    "train_pool_rows": 1032,
+    "val_pool_rows": 1064
+  },
+  "ready_stage1_config_path": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/configs/nih_to_chexpert_refresh_ready.json",
+  "refreshed_data_config_path": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/configs/data_config_refreshed_chexpert.json",
+  "refreshed_embedding_index_csv": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/embeddings/by_id/exp0001__cxr_foundation_embedding_export__paper_v1_chexpert_refresh/embedding_index.csv",
+  "seed": 1337,
+  "selected_counts": {
+    "test": 234,
+    "train": 1000,
+    "val": 1000
+  },
+  "selected_patients": {
+    "test": 200,
+    "train": 807,
+    "val": 739
+  },
+  "target_counts": {
+    "test": -1,
+    "train": 1000,
+    "val": 1000
+  },
+  "train_csv": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/data/chexpert_small/raw/train.csv",
+  "valid_csv": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/data/chexpert_small/raw/valid.csv"
+}

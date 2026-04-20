@@ -1,0 +1,104 @@
+{
+  "data_root": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/data",
+  "embedding_index_csv": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/embeddings/by_id/exp0001__cxr_foundation_embedding_export__paper_v1_chexpert_refresh/embedding_index.csv",
+  "embedding_kind": "general",
+  "experiment_dir": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/embeddings/by_id/exp0001__cxr_foundation_embedding_export__paper_v1_chexpert_refresh",
+  "experiment_id": "exp0001",
+  "experiment_name": "exp0001__cxr_foundation_embedding_export__paper_v1_chexpert_refresh",
+  "experiment_number": 1,
+  "label_names": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion",
+    "pneumonia",
+    "pneumothorax"
+  ],
+  "label_names_json": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/embeddings/by_id/exp0001__cxr_foundation_embedding_export__paper_v1_chexpert_refresh/label_names.json",
+  "manifest_csv": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/manifest/manifest_chexpert_refreshed.csv",
+  "model_dir": "/workspace/.cache/cxr_foundation",
+  "operation_label": "cxr_foundation_embedding_export",
+  "run_date_utc": "2026-04-20T09:14:35.778244+00:00",
+  "split_outputs": {
+    "d1_chexpert/test": {
+      "domain": "d1_chexpert",
+      "embedding_kind": "general",
+      "embedding_shape": [
+        234,
+        768
+      ],
+      "embeddings_path": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/embeddings/by_id/exp0001__cxr_foundation_embedding_export__paper_v1_chexpert_refresh/d1_chexpert/test/embeddings.npy",
+      "image_paths_path": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/embeddings/by_id/exp0001__cxr_foundation_embedding_export__paper_v1_chexpert_refresh/d1_chexpert/test/image_paths.txt",
+      "label_names": [
+        "atelectasis",
+        "cardiomegaly",
+        "consolidation",
+        "edema",
+        "pleural_effusion",
+        "pneumonia",
+        "pneumothorax"
+      ],
+      "num_embedded_rows": 234,
+      "num_failed_rows": 0,
+      "num_requested_rows": 234,
+      "row_ids_path": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/embeddings/by_id/exp0001__cxr_foundation_embedding_export__paper_v1_chexpert_refresh/d1_chexpert/test/row_ids.json",
+      "run_date_utc": "2026-04-20T08:27:41.872407+00:00",
+      "split": "test",
+      "token_pooling": "avg"
+    },
+    "d1_chexpert/train": {
+      "domain": "d1_chexpert",
+      "embedding_kind": "general",
+      "embedding_shape": [
+        1000,
+        768
+      ],
+      "embeddings_path": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/embeddings/by_id/exp0001__cxr_foundation_embedding_export__paper_v1_chexpert_refresh/d1_chexpert/train/embeddings.npy",
+      "image_paths_path": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/embeddings/by_id/exp0001__cxr_foundation_embedding_export__paper_v1_chexpert_refresh/d1_chexpert/train/image_paths.txt",
+      "label_names": [
+        "atelectasis",
+        "cardiomegaly",
+        "consolidation",
+        "edema",
+        "pleural_effusion",
+        "pneumonia",
+        "pneumothorax"
+      ],
+      "num_embedded_rows": 1000,
+      "num_failed_rows": 0,
+      "num_requested_rows": 1000,
+      "row_ids_path": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/embeddings/by_id/exp0001__cxr_foundation_embedding_export__paper_v1_chexpert_refresh/d1_chexpert/train/row_ids.json",
+      "run_date_utc": "2026-04-20T08:51:08.968003+00:00",
+      "split": "train",
+      "token_pooling": "avg"
+    },
+    "d1_chexpert/val": {
+      "domain": "d1_chexpert",
+      "embedding_kind": "general",
+      "embedding_shape": [
+        1000,
+        768
+      ],
+      "embeddings_path": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/embeddings/by_id/exp0001__cxr_foundation_embedding_export__paper_v1_chexpert_refresh/d1_chexpert/val/embeddings.npy",
+      "image_paths_path": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/embeddings/by_id/exp0001__cxr_foundation_embedding_export__paper_v1_chexpert_refresh/d1_chexpert/val/image_paths.txt",
+      "label_names": [
+        "atelectasis",
+        "cardiomegaly",
+        "consolidation",
+        "edema",
+        "pleural_effusion",
+        "pneumonia",
+        "pneumothorax"
+      ],
+      "num_embedded_rows": 1000,
+      "num_failed_rows": 0,
+      "num_requested_rows": 1000,
+      "row_ids_path": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/embeddings/by_id/exp0001__cxr_foundation_embedding_export__paper_v1_chexpert_refresh/d1_chexpert/val/row_ids.json",
+      "run_date_utc": "2026-04-20T09:14:35.717889+00:00",
+      "split": "val",
+      "token_pooling": "avg"
+    }
+  },
+  "token_pooling": "avg"
+}

@@ -1,0 +1,24 @@
+{
+  "experiment_name": "refresh_chexpert",
+  "output_root": "/workspace/paper_v1/outputs/refresh_chexpert",
+  "current_data_config": "/workspace/paper_v1/configs/data/current_assets.json",
+  "kaggle_config": "/workspace/kaggle.json",
+  "dataset_ref": "ashery/chexpert",
+  "seed": 1337,
+  "target_counts": {
+    "train": 1000,
+    "val": 1000,
+    "test": -1
+  },
+  "download_images": false,
+  "force_metadata_download": false,
+  "force_image_download": false,
+  "export_embeddings": false,
+  "embedding_experiment_name": "paper_v1_chexpert_refresh",
+  "embedding_batch_size": 64,
+  "embedding_kind": "general",
+  "token_pooling": "avg",
+  "download_delay_sec": 0.25,
+  "max_download_retries": 5,
+  "initial_backoff_sec": 8.0
+}

@@ -1,0 +1,72 @@
+{
+  "_config_dir": "/workspace/paper_v1/configs/experiments",
+  "_config_path": "/workspace/paper_v1/configs/experiments/nih_to_chexpert_refresh_required.json",
+  "baselines": [
+    "source_only",
+    "finetune_seq",
+    "lwf",
+    "l2_anchor",
+    "ewc",
+    "fixed_alpha_mix",
+    "vq_summary_replay",
+    "main_method"
+  ],
+  "data_config": "/workspace/paper_v1/outputs/refresh_chexpert/20260420T081459Z__refresh_chexpert_full/configs/data_config_refreshed_chexpert.json",
+  "experiment_name": "nih_to_chexpert",
+  "main_method": {
+    "batch_size": 256,
+    "bottleneck_dim": 128,
+    "distill_temperature": 2.0,
+    "distill_weight": 1.0,
+    "dropout": 0.1,
+    "epochs": 20,
+    "gate_hidden_dim": 64,
+    "lr": 0.0005,
+    "patience": 5,
+    "prototype_replay_weight": 1.0,
+    "residual_zero_weight": 0.1,
+    "temperature": 0.1,
+    "top_k": 8,
+    "weight_decay": 0.0001
+  },
+  "memory": {
+    "alpha_grid": [
+      0.1,
+      0.25,
+      0.5
+    ],
+    "negative_k": 2,
+    "positive_k": 4,
+    "temperature": 0.1,
+    "top_k": 8
+  },
+  "output_root": "/workspace/paper_v1/outputs/nih_to_chexpert",
+  "refresh_prerequisites": {
+    "kaggle_config": "/workspace/kaggle.json",
+    "reference_scripts": [
+      "/workspace/scripts/27_download_manifest_subset_from_kaggle.py",
+      "/workspace/scripts/14_generate_cxr_foundation_embeddings.py",
+      "/workspace/scripts/31_build_domain_split_embedding_view.py"
+    ]
+  },
+  "seed": 1337,
+  "stage0_checkpoint": "/workspace/paper_v1/outputs/stage0_nih_current/20260420T072208Z__stage0_nih_current/checkpoints/stage0_best.pt",
+  "stage0_fisher_path": "/workspace/paper_v1/outputs/stage0_nih_current/20260420T072208Z__stage0_nih_current/checkpoints/stage0_fisher.pt",
+  "training": {
+    "batch_size": 256,
+    "distill_weight": 1.0,
+    "epochs": 20,
+    "ewc_weight": 1.0,
+    "l2_anchor_weight": 0.0001,
+    "lr": 0.0005,
+    "patience": 5,
+    "replay_weight": 1.0,
+    "temperature": 2.0,
+    "weight_decay": 0.0001
+  },
+  "validation": {
+    "allowed_issue_codes": [],
+    "missing_embedding_policy": "error",
+    "require_patient_disjoint": true
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "best_val_macro_auroc": 0.955030155030155,
+  "checkpoint_path": "/workspace/paper_v1/outputs/smoke/20260420T071854Z__smoke__finetune/checkpoints/finetune_best.pt",
+  "flops": {
+    "linear_forward_flops": 231
+  },
+  "parameter_counts": {
+    "by_parameter": [
+      {
+        "count": 112,
+        "name": "linear.weight",
+        "trainable": true
+      },
+      {
+        "count": 7,
+        "name": "linear.bias",
+        "trainable": true
+      }
+    ],
+    "frozen_parameters": 0,
+    "total_parameters": 119,
+    "trainable_parameters": 119
+  }
+}

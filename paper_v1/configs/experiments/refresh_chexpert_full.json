@@ -1,0 +1,28 @@
+{
+  "experiment_name": "refresh_chexpert_full",
+  "output_root": "/workspace/paper_v1/outputs/refresh_chexpert",
+  "current_data_config": "/workspace/paper_v1/configs/data/current_assets.json",
+  "kaggle_config": "/workspace/kaggle.json",
+  "dataset_ref": "ashery/chexpert",
+  "seed": 1337,
+  "target_counts": {
+    "train": 1000,
+    "val": 1000,
+    "test": -1
+  },
+  "download_images": true,
+  "bulk_image_download": true,
+  "force_metadata_download": false,
+  "force_image_download": false,
+  "export_embeddings": true,
+  "embedding_experiment_name": "paper_v1_chexpert_refresh",
+  "embedding_batch_size": 64,
+  "embedding_kind": "general",
+  "token_pooling": "avg",
+  "embedding_model_dir": "/workspace/.cache/cxr_foundation",
+  "export_python": "/workspace/.venv_cxr_foundation/bin/python",
+  "hf_token_env_var": "HF_TOKEN",
+  "download_delay_sec": 0.25,
+  "max_download_retries": 5,
+  "initial_backoff_sec": 8.0
+}

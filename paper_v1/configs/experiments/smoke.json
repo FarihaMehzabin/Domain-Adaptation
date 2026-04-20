@@ -1,0 +1,40 @@
+{
+  "experiment_name": "smoke",
+  "output_root": "/workspace/paper_v1/outputs/smoke",
+  "seed": 1337,
+  "feature_dim": 16,
+  "num_labels": 7,
+  "training": {
+    "epochs": 10,
+    "batch_size": 32,
+    "lr": 0.01,
+    "weight_decay": 0.0001,
+    "patience": 4,
+    "distill_weight": 1.0,
+    "temperature": 2.0,
+    "l2_anchor_weight": 0.0001,
+    "ewc_weight": 1.0,
+    "replay_weight": 1.0,
+    "fisher_max_batches": 8
+  },
+  "memory": {
+    "positive_k": 2,
+    "negative_k": 1
+  },
+  "main_method": {
+    "epochs": 8,
+    "batch_size": 32,
+    "lr": 0.005,
+    "weight_decay": 0.0001,
+    "patience": 4,
+    "distill_weight": 0.5,
+    "distill_temperature": 2.0,
+    "prototype_replay_weight": 1.0,
+    "residual_zero_weight": 0.1,
+    "top_k": 4,
+    "temperature": 0.2,
+    "gate_hidden_dim": 32,
+    "bottleneck_dim": 64,
+    "dropout": 0.0
+  }
+}

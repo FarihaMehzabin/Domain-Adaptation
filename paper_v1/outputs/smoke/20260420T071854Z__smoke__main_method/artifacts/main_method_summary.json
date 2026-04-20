@@ -1,0 +1,73 @@
+{
+  "best_val_macro_auroc": 0.9502518645375788,
+  "checkpoint_path": "/workspace/paper_v1/outputs/smoke/20260420T071854Z__smoke__main_method/checkpoints/main_method_best.pt",
+  "flops": {
+    "gate_flops": 2145,
+    "residual_adapter_flops": 4807,
+    "retrieval": {
+      "aggregation_flops": 64,
+      "cosine_similarity_flops": 672,
+      "topk_selection_flops": 21,
+      "total_retrieval_flops": 757
+    }
+  },
+  "memory_size_bytes": 2562,
+  "memory_size_mb": 0.0024433135986328125,
+  "parameter_counts": {
+    "by_parameter": [
+      {
+        "count": 112,
+        "name": "previous_model.linear.weight",
+        "trainable": false
+      },
+      {
+        "count": 7,
+        "name": "previous_model.linear.bias",
+        "trainable": false
+      },
+      {
+        "count": 1024,
+        "name": "gate.net.0.weight",
+        "trainable": true
+      },
+      {
+        "count": 32,
+        "name": "gate.net.0.bias",
+        "trainable": true
+      },
+      {
+        "count": 32,
+        "name": "gate.net.2.weight",
+        "trainable": true
+      },
+      {
+        "count": 1,
+        "name": "gate.net.2.bias",
+        "trainable": true
+      },
+      {
+        "count": 1920,
+        "name": "adapter.net.0.weight",
+        "trainable": true
+      },
+      {
+        "count": 64,
+        "name": "adapter.net.0.bias",
+        "trainable": true
+      },
+      {
+        "count": 448,
+        "name": "adapter.net.3.weight",
+        "trainable": true
+      },
+      {
+        "count": 7,
+        "name": "adapter.net.3.bias",
+        "trainable": true
+      }
+    ],
+    "frozen_parameters": 119,
+    "total_parameters": 3647,
+    "trainable_parameters": 3528
+  }
+}
