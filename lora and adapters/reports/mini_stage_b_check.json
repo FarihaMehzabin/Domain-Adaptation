@@ -1,0 +1,87 @@
+{
+  "mode": "check",
+  "image_tensor_shape": [
+    8,
+    3,
+    224,
+    224
+  ],
+  "label_tensor_shape": [
+    8,
+    5
+  ],
+  "batch_visualization": "/workspace/reports/mini_stage_b_batch.png",
+  "manifest_check": {
+    "splits": {
+      "train": {
+        "manifest_path": "manifests/nih_dev_2k_train.csv",
+        "split_name": "train",
+        "path_column": "abs_path",
+        "patient_column": "Patient ID",
+        "image_id_column": "image_id",
+        "num_images": 1400,
+        "num_patients": 395,
+        "label_counts": {
+          "Atelectasis": 129,
+          "Cardiomegaly": 25,
+          "Consolidation": 75,
+          "Edema": 30,
+          "Effusion": 174
+        }
+      },
+      "val": {
+        "manifest_path": "manifests/nih_dev_2k_val.csv",
+        "split_name": "val",
+        "path_column": "abs_path",
+        "patient_column": "Patient ID",
+        "image_id_column": "image_id",
+        "num_images": 200,
+        "num_patients": 66,
+        "label_counts": {
+          "Atelectasis": 29,
+          "Cardiomegaly": 13,
+          "Consolidation": 4,
+          "Edema": 7,
+          "Effusion": 29
+        }
+      },
+      "test": {
+        "manifest_path": "manifests/nih_dev_2k_test.csv",
+        "split_name": "test",
+        "path_column": "abs_path",
+        "patient_column": "Patient ID",
+        "image_id_column": "image_id",
+        "num_images": 400,
+        "num_patients": 82,
+        "label_counts": {
+          "Atelectasis": 31,
+          "Cardiomegaly": 7,
+          "Consolidation": 30,
+          "Edema": 14,
+          "Effusion": 86
+        }
+      }
+    },
+    "overlap": {
+      "train_vs_val": {
+        "patient_overlap": 0,
+        "image_overlap": 0
+      },
+      "train_vs_test": {
+        "patient_overlap": 0,
+        "image_overlap": 0
+      },
+      "val_vs_test": {
+        "patient_overlap": 0,
+        "image_overlap": 0
+      }
+    }
+  },
+  "pos_weight": [
+    9.852713584899902,
+    55.0,
+    17.66666603088379,
+    45.66666793823242,
+    7.0459771156311035
+  ]
+}

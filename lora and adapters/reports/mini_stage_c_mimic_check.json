@@ -1,0 +1,363 @@
+{
+  "counts": {
+    "excluded_non_frontal": 159,
+    "frontal_candidate_rows": 2517,
+    "join": {
+      "joined_image_rows": 2676,
+      "label_join_rate": 1.0,
+      "metadata_join_rate": 1.0,
+      "rows_all_target_labels_missing": 928,
+      "rows_missing_label_row": 0,
+      "rows_missing_metadata": 0,
+      "rows_missing_split": 0,
+      "split_join_rate": 1.0,
+      "unique_studies": 2676,
+      "unique_subjects": 1639
+    },
+    "labels_rows": 227827,
+    "local_images": {
+      "duplicate_local_dicom_ids": 0,
+      "duplicate_local_examples": {},
+      "image_extensions": [
+        ".jpg"
+      ],
+      "local_image_files_found": 2676,
+      "unique_local_dicoms": 2676
+    },
+    "manifest_rows": {
+      "test": 596,
+      "train_pool": 963,
+      "val": 958
+    },
+    "metadata": {
+      "duplicate_dicom_id_count": 0,
+      "rows": 377110,
+      "unique_dicom_id": 377110,
+      "view_position_counts": {
+        "AP": 147173,
+        "AP AXIAL": 2,
+        "AP LLD": 2,
+        "AP RLD": 2,
+        "LAO": 3,
+        "LATERAL": 82853,
+        "LL": 35133,
+        "LPO": 1,
+        "MISSING": 15769,
+        "PA": 96161,
+        "PA LLD": 4,
+        "PA RLD": 1,
+        "RAO": 3,
+        "SWIMMERS": 1,
+        "XTABLE LATERAL": 2
+      }
+    },
+    "split": {
+      "rows_per_split": {
+        "test": 5159,
+        "train": 368960,
+        "validate": 2991
+      },
+      "studies_per_split": {
+        "test": 3269,
+        "train": 222758,
+        "validate": 1808
+      },
+      "subjects_per_split": {
+        "test": 293,
+        "train": 64586,
+        "validate": 500
+      }
+    }
+  },
+  "failure_reasons": [],
+  "files_used": {
+    "labels_csv": "/workspace/data/mimic_cxr/metadata/mimic-cxr-2.0.0-chexpert.csv.gz",
+    "metadata_csv": "/workspace/data/mimic_cxr/metadata/mimic-cxr-2.0.0-metadata.csv.gz",
+    "mimic_root": "/workspace/data/mimic_cxr",
+    "split_csv": "/workspace/data/mimic_cxr/metadata/mimic-cxr-2.0.0-split.csv.gz",
+    "test_manifest": "/workspace/manifests/mimic_common5_test.csv",
+    "train_manifest": "/workspace/manifests/mimic_common5_train_pool.csv",
+    "val_manifest": "/workspace/manifests/mimic_common5_val.csv"
+  },
+  "label_counts_by_split": {
+    "test": {
+      "image_count": 596,
+      "labels": {
+        "Atelectasis": {
+          "negative_count": 426,
+          "positive_count": 170,
+          "prevalence": 0.285235
+        },
+        "Cardiomegaly": {
+          "negative_count": 437,
+          "positive_count": 159,
+          "prevalence": 0.266779
+        },
+        "Consolidation": {
+          "negative_count": 540,
+          "positive_count": 56,
+          "prevalence": 0.09396
+        },
+        "Edema": {
+          "negative_count": 468,
+          "positive_count": 128,
+          "prevalence": 0.214765
+        },
+        "Effusion": {
+          "negative_count": 377,
+          "positive_count": 219,
+          "prevalence": 0.36745
+        }
+      },
+      "study_count": 596,
+      "subject_count": 268
+    },
+    "train_pool": {
+      "image_count": 963,
+      "labels": {
+        "Atelectasis": {
+          "negative_count": 770,
+          "positive_count": 193,
+          "prevalence": 0.200415
+        },
+        "Cardiomegaly": {
+          "negative_count": 768,
+          "positive_count": 195,
+          "prevalence": 0.202492
+        },
+        "Consolidation": {
+          "negative_count": 908,
+          "positive_count": 55,
+          "prevalence": 0.057113
+        },
+        "Edema": {
+          "negative_count": 843,
+          "positive_count": 120,
+          "prevalence": 0.124611
+        },
+        "Effusion": {
+          "negative_count": 731,
+          "positive_count": 232,
+          "prevalence": 0.240914
+        }
+      },
+      "study_count": 963,
+      "subject_count": 942
+    },
+    "val": {
+      "image_count": 958,
+      "labels": {
+        "Atelectasis": {
+          "negative_count": 764,
+          "positive_count": 194,
+          "prevalence": 0.202505
+        },
+        "Cardiomegaly": {
+          "negative_count": 753,
+          "positive_count": 205,
+          "prevalence": 0.213987
+        },
+        "Consolidation": {
+          "negative_count": 906,
+          "positive_count": 52,
+          "prevalence": 0.05428
+        },
+        "Edema": {
+          "negative_count": 827,
+          "positive_count": 131,
+          "prevalence": 0.136743
+        },
+        "Effusion": {
+          "negative_count": 709,
+          "positive_count": 249,
+          "prevalence": 0.259916
+        }
+      },
+      "study_count": 958,
+      "subject_count": 358
+    }
+  },
+  "leakage_checks": {
+    "dicom_overlap": {
+      "train_pool_vs_test": {
+        "count": 0,
+        "examples": []
+      },
+      "train_pool_vs_val": {
+        "count": 0,
+        "examples": []
+      },
+      "val_vs_test": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "label_binary": {
+      "test": {
+        "Atelectasis": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Cardiomegaly": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Consolidation": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Edema": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Effusion": {
+          "invalid_count": 0,
+          "invalid_values": []
+        }
+      },
+      "train_pool": {
+        "Atelectasis": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Cardiomegaly": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Consolidation": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Edema": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Effusion": {
+          "invalid_count": 0,
+          "invalid_values": []
+        }
+      },
+      "val": {
+        "Atelectasis": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Cardiomegaly": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Consolidation": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Edema": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Effusion": {
+          "invalid_count": 0,
+          "invalid_values": []
+        }
+      }
+    },
+    "path_exists": {
+      "test": {
+        "examples": [],
+        "missing_count": 0
+      },
+      "train_pool": {
+        "examples": [],
+        "missing_count": 0
+      },
+      "val": {
+        "examples": [],
+        "missing_count": 0
+      }
+    },
+    "study_overlap": {
+      "train_pool_vs_test": {
+        "count": 0,
+        "examples": []
+      },
+      "train_pool_vs_val": {
+        "count": 0,
+        "examples": []
+      },
+      "val_vs_test": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "subject_overlap": {
+      "train_pool_vs_test": {
+        "count": 0,
+        "examples": []
+      },
+      "train_pool_vs_val": {
+        "count": 0,
+        "examples": []
+      },
+      "val_vs_test": {
+        "count": 0,
+        "examples": []
+      }
+    }
+  },
+  "path_resolution": {
+    "candidate_rows": 2676,
+    "metadata_path_column": null,
+    "missing_paths": 0,
+    "path_method_counts": {
+      "recursive_search": 2676
+    },
+    "percent_resolved": 100.0,
+    "resolved_paths": 2676,
+    "split_path_column": null
+  },
+  "raw_label_value_counts": {
+    "Atelectasis": {
+      "-1": 10327,
+      "0": 1531,
+      "1": 45808,
+      "missing": 170161
+    },
+    "Cardiomegaly": {
+      "-1": 6043,
+      "0": 15911,
+      "1": 44845,
+      "missing": 161028
+    },
+    "Consolidation": {
+      "-1": 4331,
+      "0": 7967,
+      "1": 10778,
+      "missing": 204751
+    },
+    "Edema": {
+      "-1": 13174,
+      "0": 25641,
+      "1": 27018,
+      "missing": 161994
+    },
+    "Pleural Effusion": {
+      "-1": 5814,
+      "0": 27158,
+      "1": 54300,
+      "missing": 140555
+    }
+  },
+  "safe_to_continue": true,
+  "status": "DONE",
+  "view_counts": {
+    "AP": 1624,
+    "LATERAL": 2,
+    "LL": 36,
+    "MISSING": 121,
+    "PA": 893
+  },
+  "warnings": [
+    "Inferred mimic_root from verified local path: /workspace/data/mimic_cxr",
+    "Rows with all 5 raw target labels missing before U-zero: 928",
+    "Excluded non-frontal or missing-view images from primary manifests: 159"
+  ]
+}

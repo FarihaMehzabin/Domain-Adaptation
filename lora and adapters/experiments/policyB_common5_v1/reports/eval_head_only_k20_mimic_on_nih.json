@@ -1,0 +1,111 @@
+{
+  "status": "FAILED",
+  "safe_to_continue": false,
+  "run_name": "eval_head_only_k20_mimic_on_nih",
+  "checkpoint": "/workspace/experiments/policyB_common5_v1/checkpoints/policyB_head_only_k20_seed2027_best.pt",
+  "val_manifest": "/workspace/experiments/policyB_common5_v1/manifests/nih_dev_2k_val.csv",
+  "test_manifest": "/workspace/experiments/policyB_common5_v1/manifests/nih_dev_2k_test.csv",
+  "label_policy": "uignore_blankzero",
+  "base_dir": "/workspace/experiments/policyB_common5_v1",
+  "label_order": [
+    "Atelectasis",
+    "Cardiomegaly",
+    "Consolidation",
+    "Edema",
+    "Effusion"
+  ],
+  "checkpoint_metadata": {},
+  "val_counts": {
+    "manifest_path": null,
+    "split_name": "val",
+    "path_column": null,
+    "label_policy": null,
+    "dicom_id_available": false,
+    "num_images": 0,
+    "num_subjects": 0,
+    "num_studies": 0,
+    "num_dicoms": null,
+    "label_counts": {
+      "Atelectasis": {
+        "positives": 0,
+        "negatives": 0,
+        "masked": 0,
+        "n_valid": 0
+      },
+      "Cardiomegaly": {
+        "positives": 0,
+        "negatives": 0,
+        "masked": 0,
+        "n_valid": 0
+      },
+      "Consolidation": {
+        "positives": 0,
+        "negatives": 0,
+        "masked": 0,
+        "n_valid": 0
+      },
+      "Edema": {
+        "positives": 0,
+        "negatives": 0,
+        "masked": 0,
+        "n_valid": 0
+      },
+      "Effusion": {
+        "positives": 0,
+        "negatives": 0,
+        "masked": 0,
+        "n_valid": 0
+      }
+    }
+  },
+  "test_counts": {
+    "manifest_path": null,
+    "split_name": "test",
+    "path_column": null,
+    "label_policy": null,
+    "dicom_id_available": false,
+    "num_images": 0,
+    "num_subjects": 0,
+    "num_studies": 0,
+    "num_dicoms": null,
+    "label_counts": {
+      "Atelectasis": {
+        "positives": 0,
+        "negatives": 0,
+        "masked": 0,
+        "n_valid": 0
+      },
+      "Cardiomegaly": {
+        "positives": 0,
+        "negatives": 0,
+        "masked": 0,
+        "n_valid": 0
+      },
+      "Consolidation": {
+        "positives": 0,
+        "negatives": 0,
+        "masked": 0,
+        "n_valid": 0
+      },
+      "Edema": {
+        "positives": 0,
+        "negatives": 0,
+        "masked": 0,
+        "n_valid": 0
+      },
+      "Effusion": {
+        "positives": 0,
+        "negatives": 0,
+        "masked": 0,
+        "n_valid": 0
+      }
+    }
+  },
+  "val_metrics": {},
+  "test_metrics": {},
+  "prediction_files": {},
+  "warnings": [],
+  "failure_reasons": [
+    "/workspace/experiments/policyB_common5_v1/manifests/nih_dev_2k_val.csv is missing required column: subject_id"
+  ]
+}

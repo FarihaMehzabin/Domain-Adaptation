@@ -1,0 +1,505 @@
+{
+  "status": "DONE",
+  "safe_to_continue": true,
+  "goal": "Adapt the NIH-trained DenseNet-121 model to MIMIC using head-only few-shot learning.",
+  "run_name": "policyB_head_only_k20_seed2027",
+  "adaptation_method": "head_only",
+  "checkpoint": "/workspace/checkpoints/nih_2k_densenet121_best.pt",
+  "support_manifest": "/workspace/experiments/policyB_common5_v1/manifests/mimic_common5_policyB_support_k20_seed2027.csv",
+  "val_manifest": "/workspace/experiments/policyB_common5_v1/manifests/mimic_common5_policyB_val.csv",
+  "test_manifest": "/workspace/experiments/policyB_common5_v1/manifests/mimic_common5_policyB_test.csv",
+  "source_only_report": "/workspace/experiments/policyB_common5_v1/reports/policyB_no_adaptation_eval_seed2027.json",
+  "label_policy": "uignore_blankzero",
+  "base_dir": "/workspace/experiments/policyB_common5_v1",
+  "label_order": [
+    "Atelectasis",
+    "Cardiomegaly",
+    "Consolidation",
+    "Edema",
+    "Effusion"
+  ],
+  "training_config": {
+    "epochs": 50,
+    "batch_size": 8,
+    "lr": 0.0001,
+    "image_size": 224,
+    "patience": 10,
+    "seed": 2027
+  },
+  "checkpoint_metadata": {
+    "label_names": [
+      "Atelectasis",
+      "Cardiomegaly",
+      "Consolidation",
+      "Edema",
+      "Effusion"
+    ],
+    "model_info": {
+      "pretrained_requested": true,
+      "pretrained_used": true,
+      "pretrained_error": null
+    },
+    "epoch": 1,
+    "val_loss": 1.7558441400527953
+  },
+  "support_counts": {
+    "manifest_path": "/workspace/experiments/policyB_common5_v1/manifests/mimic_common5_policyB_support_k20_seed2027.csv",
+    "split_name": "support",
+    "label_policy": "uignore_blankzero",
+    "path_column": "abs_path",
+    "dicom_id_available": true,
+    "num_images": 30,
+    "num_subjects": 29,
+    "num_studies": 30,
+    "num_dicoms": 30,
+    "label_counts": {
+      "Atelectasis": {
+        "positives": 20,
+        "negatives": 8,
+        "masked": 2,
+        "n_valid": 28
+      },
+      "Cardiomegaly": {
+        "positives": 21,
+        "negatives": 9,
+        "masked": 0,
+        "n_valid": 30
+      },
+      "Consolidation": {
+        "positives": 20,
+        "negatives": 10,
+        "masked": 0,
+        "n_valid": 30
+      },
+      "Edema": {
+        "positives": 21,
+        "negatives": 8,
+        "masked": 1,
+        "n_valid": 29
+      },
+      "Effusion": {
+        "positives": 26,
+        "negatives": 4,
+        "masked": 0,
+        "n_valid": 30
+      }
+    }
+  },
+  "val_counts": {
+    "manifest_path": "/workspace/experiments/policyB_common5_v1/manifests/mimic_common5_policyB_val.csv",
+    "split_name": "val",
+    "label_policy": "uignore_blankzero",
+    "path_column": "abs_path",
+    "dicom_id_available": true,
+    "num_images": 958,
+    "num_subjects": 358,
+    "num_studies": 958,
+    "num_dicoms": 958,
+    "label_counts": {
+      "Atelectasis": {
+        "positives": 194,
+        "negatives": 712,
+        "masked": 52,
+        "n_valid": 906
+      },
+      "Cardiomegaly": {
+        "positives": 205,
+        "negatives": 724,
+        "masked": 29,
+        "n_valid": 929
+      },
+      "Consolidation": {
+        "positives": 52,
+        "negatives": 882,
+        "masked": 24,
+        "n_valid": 934
+      },
+      "Edema": {
+        "positives": 131,
+        "negatives": 767,
+        "masked": 60,
+        "n_valid": 898
+      },
+      "Effusion": {
+        "positives": 249,
+        "negatives": 682,
+        "masked": 27,
+        "n_valid": 931
+      }
+    }
+  },
+  "test_counts": {
+    "manifest_path": "/workspace/experiments/policyB_common5_v1/manifests/mimic_common5_policyB_test.csv",
+    "split_name": "test",
+    "label_policy": "uignore_blankzero",
+    "path_column": "abs_path",
+    "dicom_id_available": true,
+    "num_images": 596,
+    "num_subjects": 268,
+    "num_studies": 596,
+    "num_dicoms": 596,
+    "label_counts": {
+      "Atelectasis": {
+        "positives": 170,
+        "negatives": 394,
+        "masked": 32,
+        "n_valid": 564
+      },
+      "Cardiomegaly": {
+        "positives": 159,
+        "negatives": 424,
+        "masked": 13,
+        "n_valid": 583
+      },
+      "Consolidation": {
+        "positives": 56,
+        "negatives": 530,
+        "masked": 10,
+        "n_valid": 586
+      },
+      "Edema": {
+        "positives": 128,
+        "negatives": 424,
+        "masked": 44,
+        "n_valid": 552
+      },
+      "Effusion": {
+        "positives": 219,
+        "negatives": 350,
+        "masked": 27,
+        "n_valid": 569
+      }
+    }
+  },
+  "leakage_checks": {
+    "subject_overlap": {
+      "support_vs_val": {
+        "count": 0,
+        "examples": []
+      },
+      "support_vs_test": {
+        "count": 0,
+        "examples": []
+      },
+      "val_vs_test": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "study_overlap": {
+      "support_vs_val": {
+        "count": 0,
+        "examples": []
+      },
+      "support_vs_test": {
+        "count": 0,
+        "examples": []
+      },
+      "val_vs_test": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "dicom_overlap": {
+      "support_vs_val": {
+        "count": 0,
+        "examples": []
+      },
+      "support_vs_test": {
+        "count": 0,
+        "examples": []
+      },
+      "val_vs_test": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "path_overlap": {
+      "support_vs_val": {
+        "count": 0,
+        "examples": []
+      },
+      "support_vs_test": {
+        "count": 0,
+        "examples": []
+      },
+      "val_vs_test": {
+        "count": 0,
+        "examples": []
+      }
+    }
+  },
+  "parameter_summary": {
+    "total_parameters": 6958981,
+    "trainable_parameters": 5125,
+    "trainable_parameter_names": [
+      "classifier.weight",
+      "classifier.bias"
+    ],
+    "backbone_trainable_names": [],
+    "classifier_frozen_names": []
+  },
+  "training_history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6539396428737511,
+      "val_loss": 0.7029435484240293,
+      "val_macro_auroc": 0.6843549452569289,
+      "val_macro_auprc": 0.2761679277978215
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.6329403377714611,
+      "val_loss": 0.7280920003680573,
+      "val_macro_auroc": 0.6830432938834041,
+      "val_macro_auprc": 0.2753922789151831
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.6153459727358656,
+      "val_loss": 0.7509457151259272,
+      "val_macro_auroc": 0.6817854400292429,
+      "val_macro_auprc": 0.2745238385521557
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.6037981084414891,
+      "val_loss": 0.7771319881139915,
+      "val_macro_auroc": 0.6803447995529892,
+      "val_macro_auprc": 0.27349587532695313
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.5918241568974086,
+      "val_loss": 0.8003572449444584,
+      "val_macro_auroc": 0.6791107367079857,
+      "val_macro_auprc": 0.2725167971422896
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.5819109118714625,
+      "val_loss": 0.8237093821355912,
+      "val_macro_auroc": 0.6778503856177884,
+      "val_macro_auprc": 0.2714193789992746
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.5738729854830268,
+      "val_loss": 0.8429477286758813,
+      "val_macro_auroc": 0.6770035156192331,
+      "val_macro_auprc": 0.27086935367232523
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.5687806144052622,
+      "val_loss": 0.8607705751285702,
+      "val_macro_auroc": 0.6762289554346459,
+      "val_macro_auprc": 0.27028939440719546
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.5640188187968974,
+      "val_loss": 0.8777515040682211,
+      "val_macro_auroc": 0.6755219618606942,
+      "val_macro_auprc": 0.2699170186488981
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.5601744590973368,
+      "val_loss": 0.8924255063088887,
+      "val_macro_auroc": 0.6747787798446178,
+      "val_macro_auprc": 0.2694229130239503
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.5556160722460065,
+      "val_loss": 0.9043186960945238,
+      "val_macro_auroc": 0.6742389867404684,
+      "val_macro_auprc": 0.2687126981753816
+    }
+  ],
+  "best_epoch": 1,
+  "stopped_early": true,
+  "best_checkpoint": "/workspace/experiments/policyB_common5_v1/checkpoints/policyB_head_only_k20_seed2027_best.pt",
+  "last_checkpoint": "/workspace/experiments/policyB_common5_v1/checkpoints/policyB_head_only_k20_seed2027_last.pt",
+  "prediction_files": {
+    "val": "/workspace/experiments/policyB_common5_v1/outputs/policyB_head_only_k20_seed2027_val_predictions.csv",
+    "test": "/workspace/experiments/policyB_common5_v1/outputs/policyB_head_only_k20_seed2027_test_predictions.csv"
+  },
+  "plot_files": {
+    "loss_curve": "/workspace/experiments/policyB_common5_v1/reports/policyB_head_only_k20_seed2027_loss_curve.png"
+  },
+  "source_only_metrics": {
+    "val": {
+      "macro_auroc": 0.6855828905894089,
+      "macro_auprc": 0.2770682323624096
+    },
+    "test": {
+      "macro_auroc": 0.6183347016415374,
+      "macro_auprc": 0.35409527167647575
+    }
+  },
+  "metric_deltas": {
+    "val_macro_auroc_delta": -0.0012279453324800516,
+    "val_macro_auprc_delta": -0.0009003045645881169,
+    "test_macro_auroc_delta": -0.00036717615464432196,
+    "test_macro_auprc_delta": 0.00033235130512465627
+  },
+  "val_metrics": {
+    "loss": 0.7029435484240293,
+    "macro_auroc": 0.6843549452569289,
+    "macro_auprc": 0.2761679277978215,
+    "micro_auroc": null,
+    "micro_auprc": null,
+    "defined_auroc_labels": 5,
+    "defined_auprc_labels": 5,
+    "valid_label_count": 5,
+    "per_label": {
+      "Atelectasis": {
+        "positives": 194,
+        "negatives": 712,
+        "masked": 52,
+        "n_valid": 906,
+        "valid": true,
+        "auroc": 0.6295682265724545,
+        "auprc": 0.2790342790907726,
+        "auroc_defined": true,
+        "auprc_defined": true,
+        "probability_mean": 0.6404016017913818,
+        "probability_std": 0.09340035915374756
+      },
+      "Cardiomegaly": {
+        "positives": 205,
+        "negatives": 724,
+        "masked": 29,
+        "n_valid": 929,
+        "valid": true,
+        "auroc": 0.6465705430534968,
+        "auprc": 0.2901100851118641,
+        "auroc_defined": true,
+        "auprc_defined": true,
+        "probability_mean": 0.37339454889297485,
+        "probability_std": 0.1462419033050537
+      },
+      "Consolidation": {
+        "positives": 52,
+        "negatives": 882,
+        "masked": 24,
+        "n_valid": 934,
+        "valid": true,
+        "auroc": 0.6769579626722484,
+        "auprc": 0.09297220210993049,
+        "auroc_defined": true,
+        "auprc_defined": true,
+        "probability_mean": 0.5142990946769714,
+        "probability_std": 0.1714773178100586
+      },
+      "Edema": {
+        "positives": 131,
+        "negatives": 767,
+        "masked": 60,
+        "n_valid": 898,
+        "valid": true,
+        "auroc": 0.7522816166883963,
+        "auprc": 0.2985242695179114,
+        "auroc_defined": true,
+        "auprc_defined": true,
+        "probability_mean": 0.4438585638999939,
+        "probability_std": 0.2167927622795105
+      },
+      "Effusion": {
+        "positives": 249,
+        "negatives": 682,
+        "masked": 27,
+        "n_valid": 931,
+        "valid": true,
+        "auroc": 0.7163963772980485,
+        "auprc": 0.42019880315862906,
+        "auroc_defined": true,
+        "auprc_defined": true,
+        "probability_mean": 0.5346176624298096,
+        "probability_std": 0.14174798130989075
+      }
+    }
+  },
+  "test_metrics": {
+    "loss": 0.7329117231796736,
+    "macro_auroc": 0.617967525486893,
+    "macro_auprc": 0.3544276229816004,
+    "micro_auroc": null,
+    "micro_auprc": null,
+    "defined_auroc_labels": 5,
+    "defined_auprc_labels": 5,
+    "valid_label_count": 5,
+    "per_label": {
+      "Atelectasis": {
+        "positives": 170,
+        "negatives": 394,
+        "masked": 32,
+        "n_valid": 564,
+        "valid": true,
+        "auroc": 0.5763810092564945,
+        "auprc": 0.35068832716796633,
+        "auroc_defined": true,
+        "auprc_defined": true,
+        "probability_mean": 0.672256350517273,
+        "probability_std": 0.07885578274726868
+      },
+      "Cardiomegaly": {
+        "positives": 159,
+        "negatives": 424,
+        "masked": 13,
+        "n_valid": 583,
+        "valid": true,
+        "auroc": 0.565310905423045,
+        "auprc": 0.31985839908312685,
+        "auroc_defined": true,
+        "auprc_defined": true,
+        "probability_mean": 0.3759111762046814,
+        "probability_std": 0.13092635571956635
+      },
+      "Consolidation": {
+        "positives": 56,
+        "negatives": 530,
+        "masked": 10,
+        "n_valid": 586,
+        "valid": true,
+        "auroc": 0.5116913746630727,
+        "auprc": 0.11621621372100958,
+        "auroc_defined": true,
+        "auprc_defined": true,
+        "probability_mean": 0.5421294569969177,
+        "probability_std": 0.14617225527763367
+      },
+      "Edema": {
+        "positives": 128,
+        "negatives": 424,
+        "masked": 44,
+        "n_valid": 552,
+        "valid": true,
+        "auroc": 0.7391288325471699,
+        "auprc": 0.42964995781934046,
+        "auroc_defined": true,
+        "auprc_defined": true,
+        "probability_mean": 0.47714167833328247,
+        "probability_std": 0.1937391757965088
+      },
+      "Effusion": {
+        "positives": 219,
+        "negatives": 350,
+        "masked": 27,
+        "n_valid": 569,
+        "valid": true,
+        "auroc": 0.6973255055446836,
+        "auprc": 0.555725217116559,
+        "auroc_defined": true,
+        "auprc_defined": true,
+        "probability_mean": 0.5976701974868774,
+        "probability_std": 0.11800211668014526
+      }
+    }
+  },
+  "device": "cuda",
+  "warnings": [],
+  "failure_reasons": []
+}

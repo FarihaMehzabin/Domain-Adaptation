@@ -1,0 +1,1220 @@
+{
+  "canonical_label_order": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion",
+    "pneumonia",
+    "pneumothorax"
+  ],
+  "created_at_utc": "2026-04-27T06:16:15.676161+00:00",
+  "debug": true,
+  "dry_run": false,
+  "excluded_mimic_labels": [
+    "Enlarged Cardiomediastinum",
+    "Fracture",
+    "Lung Lesion",
+    "Lung Opacity",
+    "Pleural Other",
+    "Support Devices"
+  ],
+  "excluded_nih_labels": [
+    "Infiltration",
+    "Mass",
+    "Nodule",
+    "Emphysema",
+    "Fibrosis",
+    "Pleural_Thickening",
+    "Hernia"
+  ],
+  "failure_reasons": [],
+  "kshot_feasibility": {
+    "k1": {
+      "achieved_positives": {
+        "u_ignore": {
+          "atelectasis": 2,
+          "cardiomegaly": 3,
+          "consolidation": 1,
+          "edema": 1,
+          "pleural_effusion": 2,
+          "pneumonia": 3,
+          "pneumothorax": 1
+        },
+        "u_one": {
+          "atelectasis": 2,
+          "cardiomegaly": 3,
+          "consolidation": 1,
+          "edema": 2,
+          "pleural_effusion": 2,
+          "pneumonia": 4,
+          "pneumothorax": 1
+        },
+        "u_zero": {
+          "atelectasis": 2,
+          "cardiomegaly": 3,
+          "consolidation": 1,
+          "edema": 1,
+          "pleural_effusion": 2,
+          "pneumonia": 3,
+          "pneumothorax": 1
+        }
+      },
+      "infeasible": {
+        "u_ignore": [],
+        "u_one": [],
+        "u_zero": []
+      },
+      "unique_studies": 7,
+      "unique_subjects": 7
+    },
+    "k10": {
+      "achieved_positives": {
+        "u_ignore": {
+          "atelectasis": 23,
+          "cardiomegaly": 26,
+          "consolidation": 17,
+          "edema": 20,
+          "pleural_effusion": 37,
+          "pneumonia": 14,
+          "pneumothorax": 12
+        },
+        "u_one": {
+          "atelectasis": 33,
+          "cardiomegaly": 28,
+          "consolidation": 20,
+          "edema": 24,
+          "pleural_effusion": 40,
+          "pneumonia": 25,
+          "pneumothorax": 12
+        },
+        "u_zero": {
+          "atelectasis": 23,
+          "cardiomegaly": 26,
+          "consolidation": 17,
+          "edema": 20,
+          "pleural_effusion": 37,
+          "pneumonia": 14,
+          "pneumothorax": 12
+        }
+      },
+      "infeasible": {
+        "u_ignore": [],
+        "u_one": [],
+        "u_zero": []
+      },
+      "unique_studies": 66,
+      "unique_subjects": 65
+    },
+    "k20": {
+      "achieved_positives": {
+        "u_ignore": {
+          "atelectasis": 52,
+          "cardiomegaly": 51,
+          "consolidation": 26,
+          "edema": 33,
+          "pleural_effusion": 67,
+          "pneumonia": 31,
+          "pneumothorax": 21
+        },
+        "u_one": {
+          "atelectasis": 61,
+          "cardiomegaly": 55,
+          "consolidation": 28,
+          "edema": 40,
+          "pleural_effusion": 70,
+          "pneumonia": 42,
+          "pneumothorax": 21
+        },
+        "u_zero": {
+          "atelectasis": 52,
+          "cardiomegaly": 51,
+          "consolidation": 26,
+          "edema": 33,
+          "pleural_effusion": 67,
+          "pneumonia": 31,
+          "pneumothorax": 21
+        }
+      },
+      "infeasible": {
+        "u_ignore": [],
+        "u_one": [],
+        "u_zero": []
+      },
+      "unique_studies": 129,
+      "unique_subjects": 127
+    },
+    "k5": {
+      "achieved_positives": {
+        "u_ignore": {
+          "atelectasis": 13,
+          "cardiomegaly": 14,
+          "consolidation": 5,
+          "edema": 13,
+          "pleural_effusion": 20,
+          "pneumonia": 7,
+          "pneumothorax": 6
+        },
+        "u_one": {
+          "atelectasis": 15,
+          "cardiomegaly": 15,
+          "consolidation": 5,
+          "edema": 16,
+          "pleural_effusion": 20,
+          "pneumonia": 11,
+          "pneumothorax": 6
+        },
+        "u_zero": {
+          "atelectasis": 13,
+          "cardiomegaly": 14,
+          "consolidation": 5,
+          "edema": 13,
+          "pleural_effusion": 20,
+          "pneumonia": 7,
+          "pneumothorax": 6
+        }
+      },
+      "infeasible": {
+        "u_ignore": [],
+        "u_one": [],
+        "u_zero": []
+      },
+      "unique_studies": 35,
+      "unique_subjects": 35
+    },
+    "k50": {
+      "achieved_positives": {
+        "u_ignore": {
+          "atelectasis": 99,
+          "cardiomegaly": 97,
+          "consolidation": 50,
+          "edema": 72,
+          "pleural_effusion": 131,
+          "pneumonia": 57,
+          "pneumothorax": 39
+        },
+        "u_one": {
+          "atelectasis": 116,
+          "cardiomegaly": 104,
+          "consolidation": 54,
+          "edema": 93,
+          "pleural_effusion": 144,
+          "pneumonia": 82,
+          "pneumothorax": 41
+        },
+        "u_zero": {
+          "atelectasis": 99,
+          "cardiomegaly": 97,
+          "consolidation": 50,
+          "edema": 72,
+          "pleural_effusion": 131,
+          "pneumonia": 57,
+          "pneumothorax": 39
+        }
+      },
+      "infeasible": {
+        "u_ignore": [
+          "pneumothorax"
+        ],
+        "u_one": [
+          "pneumothorax"
+        ],
+        "u_zero": [
+          "pneumothorax"
+        ]
+      },
+      "unique_studies": 265,
+      "unique_subjects": 259
+    }
+  },
+  "manifest_outputs": {
+    "mimic_query_raw": "manifests/mimic_target_query_common7_raw.csv",
+    "mimic_query_u_ignore": "manifests/mimic_target_query_common7_uignore.csv",
+    "mimic_query_u_one": "manifests/mimic_target_query_common7_uone.csv",
+    "mimic_query_u_zero": "manifests/mimic_target_query_common7_uzero.csv",
+    "mimic_support_k10_seed2027_raw": "manifests/mimic_target_support_k10_seed2027_common7_raw.csv",
+    "mimic_support_k10_seed2027_u_ignore": "manifests/mimic_target_support_k10_seed2027_common7_uignore.csv",
+    "mimic_support_k10_seed2027_u_one": "manifests/mimic_target_support_k10_seed2027_common7_uone.csv",
+    "mimic_support_k10_seed2027_u_zero": "manifests/mimic_target_support_k10_seed2027_common7_uzero.csv",
+    "mimic_support_k1_seed2027_raw": "manifests/mimic_target_support_k1_seed2027_common7_raw.csv",
+    "mimic_support_k1_seed2027_u_ignore": "manifests/mimic_target_support_k1_seed2027_common7_uignore.csv",
+    "mimic_support_k1_seed2027_u_one": "manifests/mimic_target_support_k1_seed2027_common7_uone.csv",
+    "mimic_support_k1_seed2027_u_zero": "manifests/mimic_target_support_k1_seed2027_common7_uzero.csv",
+    "mimic_support_k20_seed2027_raw": "manifests/mimic_target_support_k20_seed2027_common7_raw.csv",
+    "mimic_support_k20_seed2027_u_ignore": "manifests/mimic_target_support_k20_seed2027_common7_uignore.csv",
+    "mimic_support_k20_seed2027_u_one": "manifests/mimic_target_support_k20_seed2027_common7_uone.csv",
+    "mimic_support_k20_seed2027_u_zero": "manifests/mimic_target_support_k20_seed2027_common7_uzero.csv",
+    "mimic_support_k50_seed2027_raw": "manifests/mimic_target_support_k50_seed2027_common7_raw.csv",
+    "mimic_support_k50_seed2027_u_ignore": "manifests/mimic_target_support_k50_seed2027_common7_uignore.csv",
+    "mimic_support_k50_seed2027_u_one": "manifests/mimic_target_support_k50_seed2027_common7_uone.csv",
+    "mimic_support_k50_seed2027_u_zero": "manifests/mimic_target_support_k50_seed2027_common7_uzero.csv",
+    "mimic_support_k5_seed2027_raw": "manifests/mimic_target_support_k5_seed2027_common7_raw.csv",
+    "mimic_support_k5_seed2027_u_ignore": "manifests/mimic_target_support_k5_seed2027_common7_uignore.csv",
+    "mimic_support_k5_seed2027_u_one": "manifests/mimic_target_support_k5_seed2027_common7_uone.csv",
+    "mimic_support_k5_seed2027_u_zero": "manifests/mimic_target_support_k5_seed2027_common7_uzero.csv",
+    "mimic_test_raw": "manifests/mimic_target_test_common7_raw.csv",
+    "mimic_test_u_ignore": "manifests/mimic_target_test_common7_uignore.csv",
+    "mimic_test_u_one": "manifests/mimic_target_test_common7_uone.csv",
+    "mimic_test_u_zero": "manifests/mimic_target_test_common7_uzero.csv",
+    "mimic_train_pool_raw": "manifests/mimic_target_train_pool_common7_raw.csv",
+    "mimic_train_pool_u_ignore": "manifests/mimic_target_train_pool_common7_uignore.csv",
+    "mimic_train_pool_u_one": "manifests/mimic_target_train_pool_common7_uone.csv",
+    "mimic_train_pool_u_zero": "manifests/mimic_target_train_pool_common7_uzero.csv",
+    "nih_dev_10k_test": "manifests/nih_dev_10k_common7_test.csv",
+    "nih_dev_10k_train": "manifests/nih_dev_10k_common7_train.csv",
+    "nih_dev_10k_val": "manifests/nih_dev_10k_common7_val.csv",
+    "nih_dev_2k_test": "manifests/nih_dev_2k_common7_test.csv",
+    "nih_dev_2k_train": "manifests/nih_dev_2k_common7_train.csv",
+    "nih_dev_2k_val": "manifests/nih_dev_2k_common7_val.csv"
+  },
+  "metric_feasibility": {
+    "mimic_test": {
+      "atelectasis": {
+        "auroc_defined": true,
+        "negatives": 7,
+        "positives": 170,
+        "warning": false
+      },
+      "cardiomegaly": {
+        "auroc_defined": true,
+        "negatives": 54,
+        "positives": 159,
+        "warning": false
+      },
+      "consolidation": {
+        "auroc_defined": true,
+        "negatives": 21,
+        "positives": 56,
+        "warning": false
+      },
+      "edema": {
+        "auroc_defined": true,
+        "negatives": 79,
+        "positives": 128,
+        "warning": false
+      },
+      "pleural_effusion": {
+        "auroc_defined": true,
+        "negatives": 70,
+        "positives": 219,
+        "warning": false
+      },
+      "pneumonia": {
+        "auroc_defined": true,
+        "negatives": 59,
+        "positives": 68,
+        "warning": false
+      },
+      "pneumothorax": {
+        "auroc_defined": true,
+        "negatives": 145,
+        "positives": 42,
+        "warning": true
+      }
+    }
+  },
+  "mimic_to_canonical": {
+    "Atelectasis": "atelectasis",
+    "Cardiomegaly": "cardiomegaly",
+    "Consolidation": "consolidation",
+    "Edema": "edema",
+    "Pleural Effusion": "pleural_effusion",
+    "Pneumonia": "pneumonia",
+    "Pneumothorax": "pneumothorax"
+  },
+  "mimic_uncertainty_policies": {
+    "u_ignore": {
+      "missing": 0,
+      "uncertain": "masked"
+    },
+    "u_one": {
+      "missing": 0,
+      "uncertain": 1
+    },
+    "u_zero": {
+      "missing": 0,
+      "uncertain": 0
+    }
+  },
+  "nih_to_canonical": {
+    "Atelectasis": "atelectasis",
+    "Cardiomegaly": "cardiomegaly",
+    "Consolidation": "consolidation",
+    "Edema": "edema",
+    "Effusion": "pleural_effusion",
+    "Pneumonia": "pneumonia",
+    "Pneumothorax": "pneumothorax"
+  },
+  "no_finding_policy": "reporting_only",
+  "prevalence": {
+    "mimic_query": {
+      "image_count": 958,
+      "no_finding_count": 314,
+      "policy_prevalence": {
+        "u_ignore": {
+          "atelectasis": 0.2141280353200883,
+          "cardiomegaly": 0.22066738428417654,
+          "consolidation": 0.055674518201284794,
+          "edema": 0.14587973273942093,
+          "pleural_effusion": 0.26745435016111707,
+          "pneumonia": 0.07825086306098965,
+          "pneumothorax": 0.04206098843322818
+        },
+        "u_one": {
+          "atelectasis": 0.2567849686847599,
+          "cardiomegaly": 0.24425887265135698,
+          "consolidation": 0.07933194154488518,
+          "edema": 0.19937369519832984,
+          "pleural_effusion": 0.2881002087682672,
+          "pneumonia": 0.1638830897703549,
+          "pneumothorax": 0.049060542797494784
+        },
+        "u_zero": {
+          "atelectasis": 0.20250521920668058,
+          "cardiomegaly": 0.2139874739039666,
+          "consolidation": 0.054279749478079335,
+          "edema": 0.13674321503131523,
+          "pleural_effusion": 0.2599164926931106,
+          "pneumonia": 0.0709812108559499,
+          "pneumothorax": 0.04175365344467641
+        }
+      },
+      "raw_value_counts": {
+        "atelectasis": {
+          "missing": 708,
+          "negative": 4,
+          "positive": 194,
+          "uncertain": 52
+        },
+        "cardiomegaly": {
+          "missing": 661,
+          "negative": 63,
+          "positive": 205,
+          "uncertain": 29
+        },
+        "consolidation": {
+          "missing": 855,
+          "negative": 27,
+          "positive": 52,
+          "uncertain": 24
+        },
+        "edema": {
+          "missing": 669,
+          "negative": 98,
+          "positive": 131,
+          "uncertain": 60
+        },
+        "pleural_effusion": {
+          "missing": 588,
+          "negative": 94,
+          "positive": 249,
+          "uncertain": 27
+        },
+        "pneumonia": {
+          "missing": 710,
+          "negative": 91,
+          "positive": 68,
+          "uncertain": 89
+        },
+        "pneumothorax": {
+          "missing": 732,
+          "negative": 179,
+          "positive": 40,
+          "uncertain": 7
+        }
+      },
+      "study_count": 958,
+      "subject_count": 358,
+      "u_ignore_mask_coverage": {
+        "atelectasis": 0.9457202505219207,
+        "cardiomegaly": 0.9697286012526096,
+        "consolidation": 0.9749478079331941,
+        "edema": 0.9373695198329853,
+        "pleural_effusion": 0.9718162839248434,
+        "pneumonia": 0.907098121085595,
+        "pneumothorax": 0.9926931106471816
+      }
+    },
+    "mimic_support_by_K": {
+      "mimic_support_k10_seed2027": {
+        "image_count": 66,
+        "no_finding_count": 0,
+        "policy_prevalence": {
+          "u_ignore": {
+            "atelectasis": 0.4107142857142857,
+            "cardiomegaly": 0.40625,
+            "consolidation": 0.2698412698412698,
+            "edema": 0.3225806451612903,
+            "pleural_effusion": 0.5873015873015873,
+            "pneumonia": 0.2545454545454545,
+            "pneumothorax": 0.18181818181818182
+          },
+          "u_one": {
+            "atelectasis": 0.5,
+            "cardiomegaly": 0.42424242424242425,
+            "consolidation": 0.30303030303030304,
+            "edema": 0.36363636363636365,
+            "pleural_effusion": 0.6060606060606061,
+            "pneumonia": 0.3787878787878788,
+            "pneumothorax": 0.18181818181818182
+          },
+          "u_zero": {
+            "atelectasis": 0.3484848484848485,
+            "cardiomegaly": 0.3939393939393939,
+            "consolidation": 0.25757575757575757,
+            "edema": 0.30303030303030304,
+            "pleural_effusion": 0.5606060606060606,
+            "pneumonia": 0.21212121212121213,
+            "pneumothorax": 0.18181818181818182
+          }
+        },
+        "raw_value_counts": {
+          "atelectasis": {
+            "missing": 31,
+            "negative": 2,
+            "positive": 23,
+            "uncertain": 10
+          },
+          "cardiomegaly": {
+            "missing": 35,
+            "negative": 3,
+            "positive": 26,
+            "uncertain": 2
+          },
+          "consolidation": {
+            "missing": 43,
+            "negative": 3,
+            "positive": 17,
+            "uncertain": 3
+          },
+          "edema": {
+            "missing": 36,
+            "negative": 6,
+            "positive": 20,
+            "uncertain": 4
+          },
+          "pleural_effusion": {
+            "missing": 22,
+            "negative": 4,
+            "positive": 37,
+            "uncertain": 3
+          },
+          "pneumonia": {
+            "missing": 40,
+            "negative": 1,
+            "positive": 14,
+            "uncertain": 11
+          },
+          "pneumothorax": {
+            "missing": 33,
+            "negative": 21,
+            "positive": 12,
+            "uncertain": 0
+          }
+        },
+        "study_count": 66,
+        "subject_count": 65,
+        "u_ignore_mask_coverage": {
+          "atelectasis": 0.8484848484848485,
+          "cardiomegaly": 0.9696969696969697,
+          "consolidation": 0.9545454545454546,
+          "edema": 0.9393939393939394,
+          "pleural_effusion": 0.9545454545454546,
+          "pneumonia": 0.8333333333333334,
+          "pneumothorax": 1.0
+        }
+      },
+      "mimic_support_k1_seed2027": {
+        "image_count": 7,
+        "no_finding_count": 0,
+        "policy_prevalence": {
+          "u_ignore": {
+            "atelectasis": 0.2857142857142857,
+            "cardiomegaly": 0.42857142857142855,
+            "consolidation": 0.14285714285714285,
+            "edema": 0.16666666666666666,
+            "pleural_effusion": 0.2857142857142857,
+            "pneumonia": 0.5,
+            "pneumothorax": 0.14285714285714285
+          },
+          "u_one": {
+            "atelectasis": 0.2857142857142857,
+            "cardiomegaly": 0.42857142857142855,
+            "consolidation": 0.14285714285714285,
+            "edema": 0.2857142857142857,
+            "pleural_effusion": 0.2857142857142857,
+            "pneumonia": 0.5714285714285714,
+            "pneumothorax": 0.14285714285714285
+          },
+          "u_zero": {
+            "atelectasis": 0.2857142857142857,
+            "cardiomegaly": 0.42857142857142855,
+            "consolidation": 0.14285714285714285,
+            "edema": 0.14285714285714285,
+            "pleural_effusion": 0.2857142857142857,
+            "pneumonia": 0.42857142857142855,
+            "pneumothorax": 0.14285714285714285
+          }
+        },
+        "raw_value_counts": {
+          "atelectasis": {
+            "missing": 4,
+            "negative": 1,
+            "positive": 2,
+            "uncertain": 0
+          },
+          "cardiomegaly": {
+            "missing": 3,
+            "negative": 1,
+            "positive": 3,
+            "uncertain": 0
+          },
+          "consolidation": {
+            "missing": 6,
+            "negative": 0,
+            "positive": 1,
+            "uncertain": 0
+          },
+          "edema": {
+            "missing": 5,
+            "negative": 0,
+            "positive": 1,
+            "uncertain": 1
+          },
+          "pleural_effusion": {
+            "missing": 4,
+            "negative": 1,
+            "positive": 2,
+            "uncertain": 0
+          },
+          "pneumonia": {
+            "missing": 3,
+            "negative": 0,
+            "positive": 3,
+            "uncertain": 1
+          },
+          "pneumothorax": {
+            "missing": 3,
+            "negative": 3,
+            "positive": 1,
+            "uncertain": 0
+          }
+        },
+        "study_count": 7,
+        "subject_count": 7,
+        "u_ignore_mask_coverage": {
+          "atelectasis": 1.0,
+          "cardiomegaly": 1.0,
+          "consolidation": 1.0,
+          "edema": 0.8571428571428571,
+          "pleural_effusion": 1.0,
+          "pneumonia": 0.8571428571428571,
+          "pneumothorax": 1.0
+        }
+      },
+      "mimic_support_k20_seed2027": {
+        "image_count": 129,
+        "no_finding_count": 0,
+        "policy_prevalence": {
+          "u_ignore": {
+            "atelectasis": 0.43333333333333335,
+            "cardiomegaly": 0.408,
+            "consolidation": 0.2047244094488189,
+            "edema": 0.27049180327868855,
+            "pleural_effusion": 0.5317460317460317,
+            "pneumonia": 0.2627118644067797,
+            "pneumothorax": 0.16279069767441862
+          },
+          "u_one": {
+            "atelectasis": 0.4728682170542636,
+            "cardiomegaly": 0.4263565891472868,
+            "consolidation": 0.21705426356589147,
+            "edema": 0.31007751937984496,
+            "pleural_effusion": 0.5426356589147286,
+            "pneumonia": 0.32558139534883723,
+            "pneumothorax": 0.16279069767441862
+          },
+          "u_zero": {
+            "atelectasis": 0.40310077519379844,
+            "cardiomegaly": 0.3953488372093023,
+            "consolidation": 0.20155038759689922,
+            "edema": 0.2558139534883721,
+            "pleural_effusion": 0.5193798449612403,
+            "pneumonia": 0.24031007751937986,
+            "pneumothorax": 0.16279069767441862
+          }
+        },
+        "raw_value_counts": {
+          "atelectasis": {
+            "missing": 68,
+            "negative": 0,
+            "positive": 52,
+            "uncertain": 9
+          },
+          "cardiomegaly": {
+            "missing": 64,
+            "negative": 10,
+            "positive": 51,
+            "uncertain": 4
+          },
+          "consolidation": {
+            "missing": 98,
+            "negative": 3,
+            "positive": 26,
+            "uncertain": 2
+          },
+          "edema": {
+            "missing": 76,
+            "negative": 13,
+            "positive": 33,
+            "uncertain": 7
+          },
+          "pleural_effusion": {
+            "missing": 46,
+            "negative": 13,
+            "positive": 67,
+            "uncertain": 3
+          },
+          "pneumonia": {
+            "missing": 80,
+            "negative": 7,
+            "positive": 31,
+            "uncertain": 11
+          },
+          "pneumothorax": {
+            "missing": 66,
+            "negative": 42,
+            "positive": 21,
+            "uncertain": 0
+          }
+        },
+        "study_count": 129,
+        "subject_count": 127,
+        "u_ignore_mask_coverage": {
+          "atelectasis": 0.9302325581395349,
+          "cardiomegaly": 0.9689922480620154,
+          "consolidation": 0.9844961240310077,
+          "edema": 0.9457364341085271,
+          "pleural_effusion": 0.9767441860465116,
+          "pneumonia": 0.9147286821705426,
+          "pneumothorax": 1.0
+        }
+      },
+      "mimic_support_k50_seed2027": {
+        "image_count": 265,
+        "no_finding_count": 0,
+        "policy_prevalence": {
+          "u_ignore": {
+            "atelectasis": 0.39919354838709675,
+            "cardiomegaly": 0.375968992248062,
+            "consolidation": 0.19157088122605365,
+            "edema": 0.29508196721311475,
+            "pleural_effusion": 0.5198412698412699,
+            "pneumonia": 0.2375,
+            "pneumothorax": 0.1482889733840304
+          },
+          "u_one": {
+            "atelectasis": 0.4377358490566038,
+            "cardiomegaly": 0.39245283018867927,
+            "consolidation": 0.2037735849056604,
+            "edema": 0.35094339622641507,
+            "pleural_effusion": 0.5433962264150943,
+            "pneumonia": 0.30943396226415093,
+            "pneumothorax": 0.15471698113207547
+          },
+          "u_zero": {
+            "atelectasis": 0.37358490566037733,
+            "cardiomegaly": 0.3660377358490566,
+            "consolidation": 0.18867924528301888,
+            "edema": 0.27169811320754716,
+            "pleural_effusion": 0.49433962264150944,
+            "pneumonia": 0.21509433962264152,
+            "pneumothorax": 0.1471698113207547
+          }
+        },
+        "raw_value_counts": {
+          "atelectasis": {
+            "missing": 146,
+            "negative": 3,
+            "positive": 99,
+            "uncertain": 17
+          },
+          "cardiomegaly": {
+            "missing": 146,
+            "negative": 15,
+            "positive": 97,
+            "uncertain": 7
+          },
+          "consolidation": {
+            "missing": 204,
+            "negative": 7,
+            "positive": 50,
+            "uncertain": 4
+          },
+          "edema": {
+            "missing": 147,
+            "negative": 25,
+            "positive": 72,
+            "uncertain": 21
+          },
+          "pleural_effusion": {
+            "missing": 100,
+            "negative": 21,
+            "positive": 131,
+            "uncertain": 13
+          },
+          "pneumonia": {
+            "missing": 168,
+            "negative": 15,
+            "positive": 57,
+            "uncertain": 25
+          },
+          "pneumothorax": {
+            "missing": 146,
+            "negative": 78,
+            "positive": 39,
+            "uncertain": 2
+          }
+        },
+        "study_count": 265,
+        "subject_count": 259,
+        "u_ignore_mask_coverage": {
+          "atelectasis": 0.9358490566037736,
+          "cardiomegaly": 0.9735849056603774,
+          "consolidation": 0.9849056603773585,
+          "edema": 0.9207547169811321,
+          "pleural_effusion": 0.9509433962264151,
+          "pneumonia": 0.9056603773584906,
+          "pneumothorax": 0.9924528301886792
+        }
+      },
+      "mimic_support_k5_seed2027": {
+        "image_count": 35,
+        "no_finding_count": 0,
+        "policy_prevalence": {
+          "u_ignore": {
+            "atelectasis": 0.3939393939393939,
+            "cardiomegaly": 0.4117647058823529,
+            "consolidation": 0.14285714285714285,
+            "edema": 0.40625,
+            "pleural_effusion": 0.5714285714285714,
+            "pneumonia": 0.22580645161290322,
+            "pneumothorax": 0.17142857142857143
+          },
+          "u_one": {
+            "atelectasis": 0.42857142857142855,
+            "cardiomegaly": 0.42857142857142855,
+            "consolidation": 0.14285714285714285,
+            "edema": 0.45714285714285713,
+            "pleural_effusion": 0.5714285714285714,
+            "pneumonia": 0.3142857142857143,
+            "pneumothorax": 0.17142857142857143
+          },
+          "u_zero": {
+            "atelectasis": 0.37142857142857144,
+            "cardiomegaly": 0.4,
+            "consolidation": 0.14285714285714285,
+            "edema": 0.37142857142857144,
+            "pleural_effusion": 0.5714285714285714,
+            "pneumonia": 0.2,
+            "pneumothorax": 0.17142857142857143
+          }
+        },
+        "raw_value_counts": {
+          "atelectasis": {
+            "missing": 20,
+            "negative": 0,
+            "positive": 13,
+            "uncertain": 2
+          },
+          "cardiomegaly": {
+            "missing": 16,
+            "negative": 4,
+            "positive": 14,
+            "uncertain": 1
+          },
+          "consolidation": {
+            "missing": 28,
+            "negative": 2,
+            "positive": 5,
+            "uncertain": 0
+          },
+          "edema": {
+            "missing": 19,
+            "negative": 0,
+            "positive": 13,
+            "uncertain": 3
+          },
+          "pleural_effusion": {
+            "missing": 15,
+            "negative": 0,
+            "positive": 20,
+            "uncertain": 0
+          },
+          "pneumonia": {
+            "missing": 23,
+            "negative": 1,
+            "positive": 7,
+            "uncertain": 4
+          },
+          "pneumothorax": {
+            "missing": 18,
+            "negative": 11,
+            "positive": 6,
+            "uncertain": 0
+          }
+        },
+        "study_count": 35,
+        "subject_count": 35,
+        "u_ignore_mask_coverage": {
+          "atelectasis": 0.9428571428571428,
+          "cardiomegaly": 0.9714285714285714,
+          "consolidation": 1.0,
+          "edema": 0.9142857142857143,
+          "pleural_effusion": 1.0,
+          "pneumonia": 0.8857142857142857,
+          "pneumothorax": 1.0
+        }
+      }
+    },
+    "mimic_test": {
+      "image_count": 596,
+      "no_finding_count": 57,
+      "policy_prevalence": {
+        "u_ignore": {
+          "atelectasis": 0.30141843971631205,
+          "cardiomegaly": 0.2727272727272727,
+          "consolidation": 0.09556313993174062,
+          "edema": 0.2318840579710145,
+          "pleural_effusion": 0.38488576449912126,
+          "pneumonia": 0.13026819923371646,
+          "pneumothorax": 0.07094594594594594
+        },
+        "u_one": {
+          "atelectasis": 0.3389261744966443,
+          "cardiomegaly": 0.28859060402684567,
+          "consolidation": 0.11073825503355705,
+          "edema": 0.28859060402684567,
+          "pleural_effusion": 0.412751677852349,
+          "pneumonia": 0.23825503355704697,
+          "pneumothorax": 0.07718120805369127
+        },
+        "u_zero": {
+          "atelectasis": 0.28523489932885904,
+          "cardiomegaly": 0.26677852348993286,
+          "consolidation": 0.09395973154362416,
+          "edema": 0.21476510067114093,
+          "pleural_effusion": 0.3674496644295302,
+          "pneumonia": 0.11409395973154363,
+          "pneumothorax": 0.07046979865771812
+        }
+      },
+      "raw_value_counts": {
+        "atelectasis": {
+          "missing": 387,
+          "negative": 7,
+          "positive": 170,
+          "uncertain": 32
+        },
+        "cardiomegaly": {
+          "missing": 370,
+          "negative": 54,
+          "positive": 159,
+          "uncertain": 13
+        },
+        "consolidation": {
+          "missing": 509,
+          "negative": 21,
+          "positive": 56,
+          "uncertain": 10
+        },
+        "edema": {
+          "missing": 345,
+          "negative": 79,
+          "positive": 128,
+          "uncertain": 44
+        },
+        "pleural_effusion": {
+          "missing": 280,
+          "negative": 70,
+          "positive": 219,
+          "uncertain": 27
+        },
+        "pneumonia": {
+          "missing": 395,
+          "negative": 59,
+          "positive": 68,
+          "uncertain": 74
+        },
+        "pneumothorax": {
+          "missing": 405,
+          "negative": 145,
+          "positive": 42,
+          "uncertain": 4
+        }
+      },
+      "study_count": 596,
+      "subject_count": 268,
+      "u_ignore_mask_coverage": {
+        "atelectasis": 0.9463087248322147,
+        "cardiomegaly": 0.9781879194630873,
+        "consolidation": 0.9832214765100671,
+        "edema": 0.9261744966442953,
+        "pleural_effusion": 0.9546979865771812,
+        "pneumonia": 0.8758389261744967,
+        "pneumothorax": 0.9932885906040269
+      }
+    },
+    "mimic_train_pool": {
+      "image_count": 963,
+      "no_finding_count": 319,
+      "policy_prevalence": {
+        "u_ignore": {
+          "atelectasis": 0.21069868995633187,
+          "cardiomegaly": 0.2070063694267516,
+          "consolidation": 0.05813953488372093,
+          "edema": 0.13245033112582782,
+          "pleural_effusion": 0.24759871931696906,
+          "pneumonia": 0.07990867579908675,
+          "pneumothorax": 0.040667361835245046
+        },
+        "u_one": {
+          "atelectasis": 0.24922118380062305,
+          "cardiomegaly": 0.22429906542056074,
+          "consolidation": 0.07476635514018691,
+          "edema": 0.1838006230529595,
+          "pleural_effusion": 0.26791277258566976,
+          "pneumonia": 0.16303219106957426,
+          "pneumothorax": 0.0446521287642783
+        },
+        "u_zero": {
+          "atelectasis": 0.20041536863966772,
+          "cardiomegaly": 0.20249221183800623,
+          "consolidation": 0.05711318795430945,
+          "edema": 0.12461059190031153,
+          "pleural_effusion": 0.24091381100726894,
+          "pneumonia": 0.07268951194184839,
+          "pneumothorax": 0.040498442367601244
+        }
+      },
+      "raw_value_counts": {
+        "atelectasis": {
+          "missing": 717,
+          "negative": 6,
+          "positive": 193,
+          "uncertain": 47
+        },
+        "cardiomegaly": {
+          "missing": 688,
+          "negative": 59,
+          "positive": 195,
+          "uncertain": 21
+        },
+        "consolidation": {
+          "missing": 869,
+          "negative": 22,
+          "positive": 55,
+          "uncertain": 17
+        },
+        "edema": {
+          "missing": 694,
+          "negative": 92,
+          "positive": 120,
+          "uncertain": 57
+        },
+        "pleural_effusion": {
+          "missing": 595,
+          "negative": 110,
+          "positive": 232,
+          "uncertain": 26
+        },
+        "pneumonia": {
+          "missing": 707,
+          "negative": 99,
+          "positive": 70,
+          "uncertain": 87
+        },
+        "pneumothorax": {
+          "missing": 724,
+          "negative": 196,
+          "positive": 39,
+          "uncertain": 4
+        }
+      },
+      "study_count": 963,
+      "subject_count": 942,
+      "u_ignore_mask_coverage": {
+        "atelectasis": 0.9511941848390446,
+        "cardiomegaly": 0.9781931464174455,
+        "consolidation": 0.9823468328141225,
+        "edema": 0.940809968847352,
+        "pleural_effusion": 0.9730010384215991,
+        "pneumonia": 0.9096573208722741,
+        "pneumothorax": 0.995846313603323
+      }
+    },
+    "nih_dev_10k": {
+      "nih_dev_10k_test": {
+        "image_count": 2000,
+        "no_finding_count": 1094,
+        "patient_count": 567,
+        "positives": {
+          "atelectasis": 196,
+          "cardiomegaly": 47,
+          "consolidation": 99,
+          "edema": 35,
+          "pleural_effusion": 260,
+          "pneumonia": 12,
+          "pneumothorax": 96
+        },
+        "prevalence": {
+          "atelectasis": 0.098,
+          "cardiomegaly": 0.0235,
+          "consolidation": 0.0495,
+          "edema": 0.0175,
+          "pleural_effusion": 0.13,
+          "pneumonia": 0.006,
+          "pneumothorax": 0.048
+        }
+      },
+      "nih_dev_10k_train": {
+        "image_count": 7000,
+        "no_finding_count": 3805,
+        "patient_count": 1851,
+        "positives": {
+          "atelectasis": 769,
+          "cardiomegaly": 156,
+          "consolidation": 278,
+          "edema": 140,
+          "pleural_effusion": 919,
+          "pneumonia": 112,
+          "pneumothorax": 297
+        },
+        "prevalence": {
+          "atelectasis": 0.10985714285714286,
+          "cardiomegaly": 0.022285714285714287,
+          "consolidation": 0.039714285714285716,
+          "edema": 0.02,
+          "pleural_effusion": 0.13128571428571428,
+          "pneumonia": 0.016,
+          "pneumothorax": 0.04242857142857143
+        }
+      },
+      "nih_dev_10k_val": {
+        "image_count": 1000,
+        "no_finding_count": 566,
+        "patient_count": 312,
+        "positives": {
+          "atelectasis": 118,
+          "cardiomegaly": 18,
+          "consolidation": 32,
+          "edema": 13,
+          "pleural_effusion": 134,
+          "pneumonia": 1,
+          "pneumothorax": 28
+        },
+        "prevalence": {
+          "atelectasis": 0.118,
+          "cardiomegaly": 0.018,
+          "consolidation": 0.032,
+          "edema": 0.013,
+          "pleural_effusion": 0.134,
+          "pneumonia": 0.001,
+          "pneumothorax": 0.028
+        }
+      }
+    },
+    "nih_dev_2k": {
+      "nih_dev_2k_test": {
+        "image_count": 400,
+        "no_finding_count": 166,
+        "patient_count": 82,
+        "positives": {
+          "atelectasis": 31,
+          "cardiomegaly": 7,
+          "consolidation": 30,
+          "edema": 14,
+          "pleural_effusion": 86,
+          "pneumonia": 11,
+          "pneumothorax": 27
+        },
+        "prevalence": {
+          "atelectasis": 0.0775,
+          "cardiomegaly": 0.0175,
+          "consolidation": 0.075,
+          "edema": 0.035,
+          "pleural_effusion": 0.215,
+          "pneumonia": 0.0275,
+          "pneumothorax": 0.0675
+        }
+      },
+      "nih_dev_2k_train": {
+        "image_count": 1400,
+        "no_finding_count": 759,
+        "patient_count": 395,
+        "positives": {
+          "atelectasis": 129,
+          "cardiomegaly": 25,
+          "consolidation": 75,
+          "edema": 30,
+          "pleural_effusion": 174,
+          "pneumonia": 21,
+          "pneumothorax": 70
+        },
+        "prevalence": {
+          "atelectasis": 0.09214285714285714,
+          "cardiomegaly": 0.017857142857142856,
+          "consolidation": 0.05357142857142857,
+          "edema": 0.02142857142857143,
+          "pleural_effusion": 0.12428571428571429,
+          "pneumonia": 0.015,
+          "pneumothorax": 0.05
+        }
+      },
+      "nih_dev_2k_val": {
+        "image_count": 200,
+        "no_finding_count": 113,
+        "patient_count": 66,
+        "positives": {
+          "atelectasis": 29,
+          "cardiomegaly": 13,
+          "consolidation": 4,
+          "edema": 7,
+          "pleural_effusion": 29,
+          "pneumonia": 0,
+          "pneumothorax": 8
+        },
+        "prevalence": {
+          "atelectasis": 0.145,
+          "cardiomegaly": 0.065,
+          "consolidation": 0.02,
+          "edema": 0.035,
+          "pleural_effusion": 0.145,
+          "pneumonia": 0.0,
+          "pneumothorax": 0.04
+        }
+      }
+    }
+  },
+  "primary_labels": [
+    "atelectasis",
+    "cardiomegaly",
+    "consolidation",
+    "edema",
+    "pleural_effusion",
+    "pneumonia",
+    "pneumothorax"
+  ],
+  "primary_uncertainty_policy": "u_zero",
+  "recommendation": "Primary experiment: train and evaluate using common7 labels. Secondary ablation: train NIH14 source head only if common7-compatible outputs are handled explicitly.",
+  "safe_to_proceed": true,
+  "seed": 2027,
+  "stage": "stage4_label_harmonization",
+  "status": "DONE",
+  "warnings": [
+    "K=50 u_zero infeasible for: pneumothorax",
+    "K=50 u_one infeasible for: pneumothorax",
+    "K=50 u_ignore infeasible for: pneumothorax",
+    "mimic_test has fewer than 50 positives for pneumothorax."
+  ]
+}

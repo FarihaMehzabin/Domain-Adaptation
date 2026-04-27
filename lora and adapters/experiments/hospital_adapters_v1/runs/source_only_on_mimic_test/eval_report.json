@@ -1,0 +1,167 @@
+{
+  "run_name": "source_only_on_mimic_test",
+  "checkpoint": "/workspace/checkpoints/nih_2k_densenet121_best.pt",
+  "manifest": "/workspace/experiments/policyB_common5_v1/manifests/mimic_common5_policyB_test.csv",
+  "label_policy": "uignore_blankzero",
+  "device": "cuda",
+  "image_size": 224,
+  "batch_size": 16,
+  "num_workers": 2,
+  "seed": 2027,
+  "label_names": [
+    "Atelectasis",
+    "Cardiomegaly",
+    "Consolidation",
+    "Edema",
+    "Effusion"
+  ],
+  "manifest_summary": {
+    "manifest_path": "/workspace/experiments/policyB_common5_v1/manifests/mimic_common5_policyB_test.csv",
+    "split_name": "test",
+    "label_policy": "uignore_blankzero",
+    "path_column": "abs_path",
+    "subject_column": "subject_id",
+    "study_column": "study_id",
+    "dicom_column": "dicom_id",
+    "num_images": 596,
+    "num_subjects": 268,
+    "num_studies": 596,
+    "num_dicoms": 596,
+    "label_counts": {
+      "Atelectasis": {
+        "positives": 170,
+        "negatives": 394,
+        "masked": 32,
+        "n_valid": 564
+      },
+      "Cardiomegaly": {
+        "positives": 159,
+        "negatives": 424,
+        "masked": 13,
+        "n_valid": 583
+      },
+      "Consolidation": {
+        "positives": 56,
+        "negatives": 530,
+        "masked": 10,
+        "n_valid": 586
+      },
+      "Edema": {
+        "positives": 128,
+        "negatives": 424,
+        "masked": 44,
+        "n_valid": 552
+      },
+      "Effusion": {
+        "positives": 219,
+        "negatives": 350,
+        "masked": 27,
+        "n_valid": 569
+      }
+    }
+  },
+  "evaluations": [
+    {
+      "run_name": "source_only_on_mimic_test",
+      "model_name": "source_only",
+      "checkpoint": "/workspace/checkpoints/nih_2k_densenet121_best.pt",
+      "adapter_checkpoint": null,
+      "manifest_path": "/workspace/experiments/policyB_common5_v1/manifests/mimic_common5_policyB_test.csv",
+      "split_name": "test",
+      "label_policy": "uignore_blankzero",
+      "label_names": [
+        "Atelectasis",
+        "Cardiomegaly",
+        "Consolidation",
+        "Edema",
+        "Effusion"
+      ],
+      "num_images": 596,
+      "num_subjects": 268,
+      "num_studies": 596,
+      "num_dicoms": 596,
+      "metrics": {
+        "loss": 0.709928945239474,
+        "bce_loss": 0.709928945239474,
+        "macro_auroc": 0.6183347016415374,
+        "macro_auprc": 0.35409527167647575,
+        "mean_ap": 0.35409527167647575,
+        "micro_auroc": null,
+        "micro_auprc": null,
+        "defined_auroc_labels": 5,
+        "defined_auprc_labels": 5,
+        "valid_label_count": 5,
+        "invalid_auroc_labels": [],
+        "invalid_auprc_labels": [],
+        "per_label": {
+          "Atelectasis": {
+            "positives": 170,
+            "negatives": 394,
+            "masked": 32,
+            "n_valid": 564,
+            "valid": true,
+            "auroc": 0.5766721409375933,
+            "auprc": 0.3498619120595764,
+            "auroc_defined": true,
+            "auprc_defined": true,
+            "probability_mean": 0.6610439419746399,
+            "probability_std": 0.0806829109787941
+          },
+          "Cardiomegaly": {
+            "positives": 159,
+            "negatives": 424,
+            "masked": 13,
+            "n_valid": 583,
+            "valid": true,
+            "auroc": 0.56499940666904,
+            "auprc": 0.3170648584445834,
+            "auroc_defined": true,
+            "auprc_defined": true,
+            "probability_mean": 0.33953171968460083,
+            "probability_std": 0.12703217566013336
+          },
+          "Consolidation": {
+            "positives": 56,
+            "negatives": 530,
+            "masked": 10,
+            "n_valid": 586,
+            "valid": true,
+            "auroc": 0.5131738544474393,
+            "auprc": 0.11712259505086883,
+            "auroc_defined": true,
+            "auprc_defined": true,
+            "probability_mean": 0.5279083847999573,
+            "probability_std": 0.1468309909105301
+          },
+          "Edema": {
+            "positives": 128,
+            "negatives": 424,
+            "masked": 44,
+            "n_valid": 552,
+            "valid": true,
+            "auroc": 0.7392025353773585,
+            "auprc": 0.43068498603039956,
+            "auroc_defined": true,
+            "auprc_defined": true,
+            "probability_mean": 0.4584781229496002,
+            "probability_std": 0.19303089380264282
+          },
+          "Effusion": {
+            "positives": 219,
+            "negatives": 350,
+            "masked": 27,
+            "n_valid": 569,
+            "valid": true,
+            "auroc": 0.6976255707762558,
+            "auprc": 0.5557420067969506,
+            "auroc_defined": true,
+            "auprc_defined": true,
+            "probability_mean": 0.5573850274085999,
+            "probability_std": 0.12152199447154999
+          }
+        }
+      },
+      "predictions_csv": "/workspace/experiments/hospital_adapters_v1/runs/source_only_on_mimic_test/predictions_source_only.csv"
+    }
+  ]
+}

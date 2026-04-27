@@ -1,0 +1,204 @@
+{
+  "achieved_positives_by_k": {
+    "20": {
+      "Atelectasis": 20,
+      "Cardiomegaly": 22,
+      "Consolidation": 20,
+      "Edema": 20,
+      "Effusion": 26
+    },
+    "5": {
+      "Atelectasis": 5,
+      "Cardiomegaly": 6,
+      "Consolidation": 5,
+      "Edema": 6,
+      "Effusion": 7
+    }
+  },
+  "adaptation_val_csv": "/workspace/manifests/mimic_common5_val.csv",
+  "failure_reasons": [],
+  "goal": "Create clean K-shot support sets from MIMIC train_pool.",
+  "input_files": {
+    "test_csv": "/workspace/manifests/mimic_common5_test.csv",
+    "train_pool_csv": "/workspace/manifests/mimic_common5_train_pool.csv",
+    "val_csv": "/workspace/manifests/mimic_common5_val.csv"
+  },
+  "k_values": [
+    5,
+    20
+  ],
+  "label_order": [
+    "Atelectasis",
+    "Cardiomegaly",
+    "Consolidation",
+    "Edema",
+    "Effusion"
+  ],
+  "leakage_checks": {
+    "dicom_overlap": {
+      "train_pool_vs_test": {
+        "count": 0,
+        "examples": []
+      },
+      "train_pool_vs_val": {
+        "count": 0,
+        "examples": []
+      },
+      "val_vs_test": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "image_overlap": {
+      "train_pool_vs_test": {
+        "count": 0,
+        "examples": []
+      },
+      "train_pool_vs_val": {
+        "count": 0,
+        "examples": []
+      },
+      "val_vs_test": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "image_path_columns": {
+      "test": "abs_path",
+      "train_pool": "abs_path",
+      "val": "abs_path"
+    },
+    "label_binary": {
+      "test": {
+        "Atelectasis": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Cardiomegaly": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Consolidation": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Edema": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Effusion": {
+          "invalid_count": 0,
+          "invalid_values": []
+        }
+      },
+      "train_pool": {
+        "Atelectasis": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Cardiomegaly": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Consolidation": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Edema": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Effusion": {
+          "invalid_count": 0,
+          "invalid_values": []
+        }
+      },
+      "val": {
+        "Atelectasis": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Cardiomegaly": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Consolidation": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Edema": {
+          "invalid_count": 0,
+          "invalid_values": []
+        },
+        "Effusion": {
+          "invalid_count": 0,
+          "invalid_values": []
+        }
+      }
+    },
+    "study_overlap": {
+      "train_pool_vs_test": {
+        "count": 0,
+        "examples": []
+      },
+      "train_pool_vs_val": {
+        "count": 0,
+        "examples": []
+      },
+      "val_vs_test": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "subject_overlap": {
+      "train_pool_vs_test": {
+        "count": 0,
+        "examples": []
+      },
+      "train_pool_vs_val": {
+        "count": 0,
+        "examples": []
+      },
+      "val_vs_test": {
+        "count": 0,
+        "examples": []
+      }
+    }
+  },
+  "manifest_dir": "/workspace/manifests",
+  "out_dir": "/workspace/reports",
+  "safe_to_continue": true,
+  "seed": 2027,
+  "status": "DONE",
+  "support_files": {
+    "20": "/workspace/manifests/mimic_support_k20_seed2027.csv",
+    "5": "/workspace/manifests/mimic_support_k5_seed2027.csv"
+  },
+  "support_sizes_by_k": {
+    "20": {
+      "reached_k": {
+        "Atelectasis": true,
+        "Cardiomegaly": true,
+        "Consolidation": true,
+        "Edema": true,
+        "Effusion": true
+      },
+      "total_images_selected": 30,
+      "total_studies_selected": 30,
+      "total_subjects_selected": 29
+    },
+    "5": {
+      "reached_k": {
+        "Atelectasis": true,
+        "Cardiomegaly": true,
+        "Consolidation": true,
+        "Edema": true,
+        "Effusion": true
+      },
+      "total_images_selected": 7,
+      "total_studies_selected": 7,
+      "total_subjects_selected": 7
+    }
+  },
+  "warnings": []
+}

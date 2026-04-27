@@ -1,0 +1,217 @@
+{
+  "mode": "train",
+  "device": "cuda",
+  "epochs": 3,
+  "batch_size": 16,
+  "learning_rate": 0.0001,
+  "image_size": 224,
+  "seed": 2027,
+  "model_info": {
+    "pretrained_requested": true,
+    "pretrained_used": true,
+    "pretrained_error": null
+  },
+  "pos_weight": [
+    9.852713584899902,
+    55.0,
+    17.66666603088379,
+    45.66666793823242,
+    7.0459771156311035
+  ],
+  "best_epoch": 1,
+  "best_val_loss": 1.7558441400527953,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.142151324408395,
+      "val_loss": 1.7558441400527953,
+      "val_macro_auroc": 0.6842588152523581,
+      "val_macro_auprc": 0.1704658063631225
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.7994424223899841,
+      "val_loss": 2.440522427558899,
+      "val_macro_auroc": 0.686256887888962,
+      "val_macro_auprc": 0.18394978180614888
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5768948452813285,
+      "val_loss": 2.5726859080791473,
+      "val_macro_auroc": 0.6887522316305927,
+      "val_macro_auprc": 0.18633875035121888
+    }
+  ],
+  "manifest_check": {
+    "splits": {
+      "train": {
+        "manifest_path": "manifests/nih_dev_2k_train.csv",
+        "split_name": "train",
+        "path_column": "abs_path",
+        "patient_column": "Patient ID",
+        "image_id_column": "image_id",
+        "num_images": 1400,
+        "num_patients": 395,
+        "label_counts": {
+          "Atelectasis": 129,
+          "Cardiomegaly": 25,
+          "Consolidation": 75,
+          "Edema": 30,
+          "Effusion": 174
+        }
+      },
+      "val": {
+        "manifest_path": "manifests/nih_dev_2k_val.csv",
+        "split_name": "val",
+        "path_column": "abs_path",
+        "patient_column": "Patient ID",
+        "image_id_column": "image_id",
+        "num_images": 200,
+        "num_patients": 66,
+        "label_counts": {
+          "Atelectasis": 29,
+          "Cardiomegaly": 13,
+          "Consolidation": 4,
+          "Edema": 7,
+          "Effusion": 29
+        }
+      },
+      "test": {
+        "manifest_path": "manifests/nih_dev_2k_test.csv",
+        "split_name": "test",
+        "path_column": "abs_path",
+        "patient_column": "Patient ID",
+        "image_id_column": "image_id",
+        "num_images": 400,
+        "num_patients": 82,
+        "label_counts": {
+          "Atelectasis": 31,
+          "Cardiomegaly": 7,
+          "Consolidation": 30,
+          "Edema": 14,
+          "Effusion": 86
+        }
+      }
+    },
+    "overlap": {
+      "train_vs_val": {
+        "patient_overlap": 0,
+        "image_overlap": 0
+      },
+      "train_vs_test": {
+        "patient_overlap": 0,
+        "image_overlap": 0
+      },
+      "val_vs_test": {
+        "patient_overlap": 0,
+        "image_overlap": 0
+      }
+    }
+  },
+  "val_metrics": {
+    "loss": 1.7558441400527953,
+    "macro_auroc": 0.6842588152523581,
+    "macro_auprc": 0.1704658063631225,
+    "defined_auroc_labels": 5,
+    "defined_auprc_labels": 5,
+    "per_label": {
+      "Atelectasis": {
+        "positives": 29,
+        "negatives": 171,
+        "auroc": 0.641661625327687,
+        "auprc": 0.22735008688973324,
+        "auroc_defined": true,
+        "auprc_defined": true
+      },
+      "Cardiomegaly": {
+        "positives": 13,
+        "negatives": 187,
+        "auroc": 0.6799670917317976,
+        "auprc": 0.14389888931213474,
+        "auroc_defined": true,
+        "auprc_defined": true
+      },
+      "Consolidation": {
+        "positives": 4,
+        "negatives": 196,
+        "auroc": 0.5803571428571428,
+        "auprc": 0.029040812657317512,
+        "auroc_defined": true,
+        "auprc_defined": true
+      },
+      "Edema": {
+        "positives": 7,
+        "negatives": 193,
+        "auroc": 0.7342709104367136,
+        "auprc": 0.06872234631675757,
+        "auroc_defined": true,
+        "auprc_defined": true
+      },
+      "Effusion": {
+        "positives": 29,
+        "negatives": 171,
+        "auroc": 0.7850373059084493,
+        "auprc": 0.3833168966396695,
+        "auroc_defined": true,
+        "auprc_defined": true
+      }
+    }
+  },
+  "test_metrics": {
+    "loss": 1.332240047454834,
+    "macro_auroc": 0.6574373236308799,
+    "macro_auprc": 0.15490072891242618,
+    "defined_auroc_labels": 5,
+    "defined_auprc_labels": 5,
+    "per_label": {
+      "Atelectasis": {
+        "positives": 31,
+        "negatives": 369,
+        "auroc": 0.5385086108925605,
+        "auprc": 0.13753710812936906,
+        "auroc_defined": true,
+        "auprc_defined": true
+      },
+      "Cardiomegaly": {
+        "positives": 7,
+        "negatives": 393,
+        "auroc": 0.5761541257724464,
+        "auprc": 0.09653449584721208,
+        "auroc_defined": true,
+        "auprc_defined": true
+      },
+      "Consolidation": {
+        "positives": 30,
+        "negatives": 370,
+        "auroc": 0.763063063063063,
+        "auprc": 0.16964323991381414,
+        "auroc_defined": true,
+        "auprc_defined": true
+      },
+      "Edema": {
+        "positives": 14,
+        "negatives": 386,
+        "auroc": 0.7450037009622502,
+        "auprc": 0.06723976452603127,
+        "auroc_defined": true,
+        "auprc_defined": true
+      },
+      "Effusion": {
+        "positives": 86,
+        "negatives": 314,
+        "auroc": 0.6644571174640794,
+        "auprc": 0.3035490361457045,
+        "auroc_defined": true,
+        "auprc_defined": true
+      }
+    }
+  },
+  "artifacts": {
+    "best_checkpoint": "/workspace/checkpoints/nih_2k_densenet121_best.pt",
+    "last_checkpoint": "/workspace/checkpoints/nih_2k_densenet121_last.pt",
+    "val_predictions_csv": "/workspace/outputs/nih_2k_val_predictions.csv",
+    "test_predictions_csv": "/workspace/outputs/nih_2k_test_predictions.csv",
+    "loss_curve_png": "/workspace/reports/mini_stage_b_loss_curve.png"
+  }
+}

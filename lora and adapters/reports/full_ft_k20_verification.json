@@ -1,0 +1,125 @@
+{
+  "status": "VERIFIED_COMPLETE",
+  "json_report_path": "/workspace/reports/full_ft_k20_seed2027.json",
+  "markdown_report_path": "/workspace/reports/full_ft_k20_seed2027.md",
+  "prediction_files": {
+    "val": "/workspace/outputs/full_ft_k20_seed2027_val_predictions.csv",
+    "test": "/workspace/outputs/full_ft_k20_seed2027_test_predictions.csv"
+  },
+  "json_report_exists": true,
+  "markdown_report_exists": true,
+  "prediction_file_exists": {
+    "val": true,
+    "test": true
+  },
+  "recomputed_metrics_available": true,
+  "checks": {
+    "markdown": {
+      "contains_run_name": true,
+      "contains_status_done": true,
+      "contains_safe_to_continue_yes": true
+    },
+    "json": {
+      "status_done": true,
+      "safe_to_continue": true,
+      "prediction_file_paths_match": true,
+      "manifest_paths_match": true,
+      "label_order_match": true
+    },
+    "splits": {
+      "val": {
+        "present": true,
+        "metrics_comparison": {
+          "macro_auroc_matches": true,
+          "macro_auprc_matches": true,
+          "per_label": {
+            "Atelectasis": {
+              "positives_match": true,
+              "negatives_match": true,
+              "auroc_match": true,
+              "auprc_match": true,
+              "all_match": true
+            },
+            "Cardiomegaly": {
+              "positives_match": true,
+              "negatives_match": true,
+              "auroc_match": true,
+              "auprc_match": true,
+              "all_match": true
+            },
+            "Consolidation": {
+              "positives_match": true,
+              "negatives_match": true,
+              "auroc_match": true,
+              "auprc_match": true,
+              "all_match": true
+            },
+            "Edema": {
+              "positives_match": true,
+              "negatives_match": true,
+              "auroc_match": true,
+              "auprc_match": true,
+              "all_match": true
+            },
+            "Effusion": {
+              "positives_match": true,
+              "negatives_match": true,
+              "auroc_match": true,
+              "auprc_match": true,
+              "all_match": true
+            }
+          },
+          "all_match": true
+        },
+        "match_method": "dicom_id"
+      },
+      "test": {
+        "present": true,
+        "metrics_comparison": {
+          "macro_auroc_matches": true,
+          "macro_auprc_matches": true,
+          "per_label": {
+            "Atelectasis": {
+              "positives_match": true,
+              "negatives_match": true,
+              "auroc_match": true,
+              "auprc_match": true,
+              "all_match": true
+            },
+            "Cardiomegaly": {
+              "positives_match": true,
+              "negatives_match": true,
+              "auroc_match": true,
+              "auprc_match": true,
+              "all_match": true
+            },
+            "Consolidation": {
+              "positives_match": true,
+              "negatives_match": true,
+              "auroc_match": true,
+              "auprc_match": true,
+              "all_match": true
+            },
+            "Edema": {
+              "positives_match": true,
+              "negatives_match": true,
+              "auroc_match": true,
+              "auprc_match": true,
+              "all_match": true
+            },
+            "Effusion": {
+              "positives_match": true,
+              "negatives_match": true,
+              "auroc_match": true,
+              "auprc_match": true,
+              "all_match": true
+            }
+          },
+          "all_match": true
+        },
+        "match_method": "dicom_id"
+      }
+    }
+  },
+  "reasons": []
+}

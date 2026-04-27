@@ -1,0 +1,1185 @@
+{
+  "repo_summary": {
+    "root": "/workspace",
+    "main_folders": [
+      "checkpoints/",
+      "configs/ (empty)",
+      "data/",
+      "logs/",
+      "manifests/",
+      "outputs/",
+      "reports/",
+      "runs/ (present, effectively unused)",
+      "scripts/",
+      "src/cxr_transfer/ (placeholder package directories only)",
+      "tests/"
+    ],
+    "training_scripts": [
+      "scripts/train_nih_2k_baseline.py",
+      "scripts/adapt_head_only_mimic.py",
+      "scripts/adapt_full_finetune_mimic.py"
+    ],
+    "evaluation_scripts": [
+      "scripts/evaluate_nih_on_mimic.py"
+    ],
+    "dataset_preprocessing_scripts": [
+      "scripts/check_mimic_common5.py",
+      "scripts/create_mimic_kshot_support.py"
+    ],
+    "config_files": [],
+    "config_dirs_present_but_empty": [
+      "configs/data",
+      "configs/experiment",
+      "configs/model"
+    ],
+    "notebooks": [],
+    "result_log_checkpoint_folders": [
+      "reports/",
+      "logs/",
+      "outputs/",
+      "checkpoints/",
+      "runs/"
+    ],
+    "artifact_counts": {
+      "manifest_csv": 62,
+      "report_json": 26,
+      "report_md": 20,
+      "prediction_csv": 12,
+      "checkpoint": 10,
+      "log": 9,
+      "image": 9,
+      "other": 2,
+      "json": 2,
+      "stdout_stderr_log": 1
+    },
+    "notes": [
+      "The executable research logic lives in standalone scripts under scripts/.",
+      "No YAML/TOML experiment configs were found; run settings are embedded in JSON reports and checkpoint metadata.",
+      "No TensorBoard event files, wandb directories, or notebooks were found."
+    ]
+  },
+  "datasets_detected": [
+    {
+      "name": "NIH ChestXray14",
+      "location": "data/nih_chest_xray14/",
+      "manifests": [
+        "manifests/nih_dev_2k_train.csv",
+        "manifests/nih_dev_2k_val.csv",
+        "manifests/nih_dev_2k_test.csv",
+        "manifests/nih_dev_10k_train.csv",
+        "manifests/nih_dev_10k_val.csv",
+        "manifests/nih_dev_10k_test.csv",
+        "manifests/nih_patient_split.csv"
+      ],
+      "labels_available": [
+        "Atelectasis",
+        "Cardiomegaly",
+        "Effusion",
+        "Pneumonia",
+        "Pneumothorax",
+        "Consolidation",
+        "Edema",
+        "Infiltration",
+        "Mass",
+        "Nodule",
+        "Emphysema",
+        "Fibrosis",
+        "Pleural_Thickening",
+        "Hernia"
+      ],
+      "labels_used_in_completed_runs": [
+        "Atelectasis",
+        "Cardiomegaly",
+        "Consolidation",
+        "Edema",
+        "Effusion"
+      ],
+      "split_protocol": "Patient-level split with frontal AP/PA images only. 2k subset: 1400 train / 200 val / 400 test images."
+    },
+    {
+      "name": "MIMIC-CXR-JPG",
+      "location": "data/mimic_cxr/",
+      "manifests": [
+        "manifests/mimic_common5_train_pool.csv",
+        "manifests/mimic_common5_val.csv",
+        "manifests/mimic_common5_test.csv",
+        "manifests/mimic_support_k5_seed2027.csv",
+        "manifests/mimic_support_k20_seed2027.csv",
+        "manifests/mimic_target_*_common7_{uignore,uone,uzero}.csv"
+      ],
+      "labels_available_raw": [
+        "Atelectasis",
+        "Cardiomegaly",
+        "Consolidation",
+        "Edema",
+        "Pleural Effusion",
+        "Pneumonia",
+        "Pneumothorax",
+        "Enlarged Cardiomediastinum",
+        "Fracture",
+        "Lung Lesion",
+        "Lung Opacity",
+        "No Finding",
+        "Pleural Other",
+        "Support Devices"
+      ],
+      "labels_used_in_completed_runs": [
+        "Atelectasis",
+        "Cardiomegaly",
+        "Consolidation",
+        "Edema",
+        "Effusion"
+      ],
+      "canonical_common7_candidate": [
+        "atelectasis",
+        "cardiomegaly",
+        "consolidation",
+        "edema",
+        "pleural_effusion",
+        "pneumonia",
+        "pneumothorax"
+      ],
+      "split_protocol": "Official MIMIC split CSV, filtered to frontal AP/PA views, then split into train_pool / val / test with zero subject/study/dicom overlap."
+    },
+    {
+      "name": "CheXpert",
+      "location": "data/chexpert/",
+      "manifests": [
+        "data/chexpert/train.csv",
+        "data/chexpert/valid.csv"
+      ],
+      "labels_used_in_completed_runs": [],
+      "status": "Present locally but not referenced by any completed training or evaluation script."
+    }
+  ],
+  "labels_detected": [
+    {
+      "label_set": "common5_completed_runs",
+      "labels": [
+        "Atelectasis",
+        "Cardiomegaly",
+        "Consolidation",
+        "Edema",
+        "Effusion"
+      ],
+      "mapping": {
+        "Pleural Effusion (MIMIC)": "Effusion"
+      },
+      "used_by_runs": [
+        "mini_stage_b_train",
+        "mini_stage_d_nih_to_mimic",
+        "head_only_k5_seed2027",
+        "head_only_k20_seed2027",
+        "full_ft_k5_seed2027",
+        "full_ft_k20_seed2027"
+      ]
+    },
+    {
+      "label_set": "common7_planned",
+      "labels": [
+        "atelectasis",
+        "cardiomegaly",
+        "consolidation",
+        "edema",
+        "pleural_effusion",
+        "pneumonia",
+        "pneumothorax"
+      ],
+      "uncertainty_policies_found": [
+        "u_ignore",
+        "u_one",
+        "u_zero",
+        "raw"
+      ],
+      "used_by_completed_runs": [],
+      "notes": "Common7 manifests and stage5 scaffolding exist, but no completed common7 model run was found."
+    }
+  ],
+  "experiments": [
+    {
+      "run_id": "mini_stage_b_train",
+      "status": "DONE",
+      "date_time_utc": "2026-04-27T07:26:07.643981+00:00",
+      "dataset_setup": "NIH ChestXray14 dev-2k common5 source baseline",
+      "source_train_dataset": "NIH ChestXray14 dev-2k",
+      "target_test_dataset": "NIH ChestXray14 dev-2k test",
+      "labels_used": [
+        "Atelectasis",
+        "Cardiomegaly",
+        "Consolidation",
+        "Edema",
+        "Effusion"
+      ],
+      "split_protocol": "Patient-level split, frontal AP/PA only, 1400/200/400 images for train/val/test.",
+      "model_backbone": "torchvision DenseNet-121",
+      "pretrained_weights_used": "ImageNet pretrained DenseNet121_Weights.DEFAULT (confirmed used)",
+      "classifier_head_type": "Single linear multilabel classifier (5 outputs)",
+      "adaptation_method": "source_only_training",
+      "frozen_vs_trainable_layers": "All layers trainable",
+      "loss_function": "BCEWithLogitsLoss(pos_weight=class imbalance from NIH train split)",
+      "optimizer": "Adam",
+      "learning_rate": 0.0001,
+      "batch_size": 16,
+      "image_resolution": 224,
+      "augmentations": "None. Resize(224,224) + ToTensor + ImageNet mean/std normalization.",
+      "epochs_requested": 3,
+      "epochs_ran": 3,
+      "random_seed": 2027,
+      "checkpoint_path": "/workspace/checkpoints/nih_2k_densenet121_best.pt",
+      "support_manifest": null,
+      "support_size_images": null,
+      "metrics_reported": [
+        "loss",
+        "macro AUROC",
+        "macro AUPRC",
+        "per-label AUROC/AUPRC"
+      ],
+      "val_macro_auroc": 0.6842588152523581,
+      "val_macro_auprc": 0.1704658063631225,
+      "test_macro_auroc": 0.6574373236308799,
+      "test_macro_auprc": 0.15490072891242618,
+      "val_per_label_metrics": {
+        "Atelectasis": {
+          "positives": 29,
+          "negatives": 171,
+          "auroc": 0.641661625327687,
+          "auprc": 0.22735008688973324,
+          "auroc_defined": true,
+          "auprc_defined": true
+        },
+        "Cardiomegaly": {
+          "positives": 13,
+          "negatives": 187,
+          "auroc": 0.6799670917317976,
+          "auprc": 0.14389888931213474,
+          "auroc_defined": true,
+          "auprc_defined": true
+        },
+        "Consolidation": {
+          "positives": 4,
+          "negatives": 196,
+          "auroc": 0.5803571428571428,
+          "auprc": 0.029040812657317512,
+          "auroc_defined": true,
+          "auprc_defined": true
+        },
+        "Edema": {
+          "positives": 7,
+          "negatives": 193,
+          "auroc": 0.7342709104367136,
+          "auprc": 0.06872234631675757,
+          "auroc_defined": true,
+          "auprc_defined": true
+        },
+        "Effusion": {
+          "positives": 29,
+          "negatives": 171,
+          "auroc": 0.7850373059084493,
+          "auprc": 0.3833168966396695,
+          "auroc_defined": true,
+          "auprc_defined": true
+        }
+      },
+      "test_per_label_metrics": {
+        "Atelectasis": {
+          "positives": 31,
+          "negatives": 369,
+          "auroc": 0.5385086108925605,
+          "auprc": 0.13753710812936906,
+          "auroc_defined": true,
+          "auprc_defined": true
+        },
+        "Cardiomegaly": {
+          "positives": 7,
+          "negatives": 393,
+          "auroc": 0.5761541257724464,
+          "auprc": 0.09653449584721208,
+          "auroc_defined": true,
+          "auprc_defined": true
+        },
+        "Consolidation": {
+          "positives": 30,
+          "negatives": 370,
+          "auroc": 0.763063063063063,
+          "auprc": 0.16964323991381414,
+          "auroc_defined": true,
+          "auprc_defined": true
+        },
+        "Edema": {
+          "positives": 14,
+          "negatives": 386,
+          "auroc": 0.7450037009622502,
+          "auprc": 0.06723976452603127,
+          "auroc_defined": true,
+          "auprc_defined": true
+        },
+        "Effusion": {
+          "positives": 86,
+          "negatives": 314,
+          "auroc": 0.6644571174640794,
+          "auprc": 0.3035490361457045,
+          "auroc_defined": true,
+          "auprc_defined": true
+        }
+      },
+      "best_metric_summary": "Best checkpoint selected by NIH val loss at epoch 1 (not by AUROC/AUPRC).",
+      "trust_level": "MEDIUM",
+      "notes": [
+        "Metrics in the JSON report exactly match recomputation from saved prediction CSVs.",
+        "Validation AUROC continued improving after the selected epoch, so checkpoint selection is misaligned with AUROC/AUPRC reporting."
+      ]
+    },
+    {
+      "run_id": "mini_stage_d_nih_to_mimic",
+      "status": "DONE",
+      "date_time_utc": "2026-04-27T08:00:41.191786+00:00",
+      "dataset_setup": "NIH source checkpoint evaluated on MIMIC common5 without adaptation",
+      "source_train_dataset": "NIH ChestXray14 dev-2k source checkpoint",
+      "target_test_dataset": "MIMIC-CXR common5 val/test",
+      "labels_used": [
+        "Atelectasis",
+        "Cardiomegaly",
+        "Consolidation",
+        "Edema",
+        "Effusion"
+      ],
+      "split_protocol": "MIMIC official split filtered to frontal AP/PA, using val for inspection and test for held-out evaluation.",
+      "model_backbone": "torchvision DenseNet-121",
+      "pretrained_weights_used": "NIH source checkpoint originally initialized from ImageNet-pretrained DenseNet-121",
+      "classifier_head_type": "Single linear multilabel classifier (5 outputs)",
+      "adaptation_method": "no_adaptation",
+      "frozen_vs_trainable_layers": "No training performed",
+      "loss_function": "BCEWithLogitsLoss for reporting only",
+      "optimizer": null,
+      "learning_rate": null,
+      "batch_size": 16,
+      "image_resolution": 224,
+      "augmentations": "None. Resize(224,224) + ToTensor + ImageNet mean/std normalization.",
+      "epochs_requested": null,
+      "epochs_ran": null,
+      "random_seed": 2027,
+      "checkpoint_path": "/workspace/checkpoints/nih_2k_densenet121_best.pt",
+      "support_manifest": null,
+      "support_size_images": null,
+      "metrics_reported": [
+        "loss",
+        "macro AUROC",
+        "macro AUPRC",
+        "per-label AUROC/AUPRC"
+      ],
+      "val_macro_auroc": 0.6790064157830206,
+      "val_macro_auprc": 0.26331649088315073,
+      "test_macro_auroc": 0.6102987726213751,
+      "test_macro_auprc": 0.33119314037550796,
+      "val_per_label_metrics": {
+        "Atelectasis": {
+          "positives": 194,
+          "negatives": 764,
+          "auroc": 0.6243185620985588,
+          "auprc": 0.262793953341996,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.6297054886817932,
+          "probability_std": 0.09436541795730591
+        },
+        "Cardiomegaly": {
+          "positives": 205,
+          "negatives": 753,
+          "auroc": 0.6467139571794123,
+          "auprc": 0.2835499787426393,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.33794358372688293,
+          "probability_std": 0.14068830013275146
+        },
+        "Consolidation": {
+          "positives": 52,
+          "negatives": 906,
+          "auroc": 0.6708481915435559,
+          "auprc": 0.08854571362782274,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.5037018656730652,
+          "probability_std": 0.17245705425739288
+        },
+        "Edema": {
+          "positives": 131,
+          "negatives": 827,
+          "auroc": 0.7398949574014417,
+          "auprc": 0.27283900141541084,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.43299487233161926,
+          "probability_std": 0.21391628682613373
+        },
+        "Effusion": {
+          "positives": 249,
+          "negatives": 709,
+          "auroc": 0.7132564106921339,
+          "auprc": 0.4088538072878848,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.4946097433567047,
+          "probability_std": 0.1430799514055252
+        }
+      },
+      "test_per_label_metrics": {
+        "Atelectasis": {
+          "positives": 170,
+          "negatives": 426,
+          "auroc": 0.5728182822424744,
+          "auprc": 0.33052995544598585,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.6615024209022522,
+          "probability_std": 0.08030159771442413
+        },
+        "Cardiomegaly": {
+          "positives": 159,
+          "negatives": 437,
+          "auroc": 0.5618640530777312,
+          "auprc": 0.30834173213392885,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.3404190242290497,
+          "probability_std": 0.12689565122127533
+        },
+        "Consolidation": {
+          "positives": 56,
+          "negatives": 540,
+          "auroc": 0.5109457671957672,
+          "auprc": 0.11530170107865098,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.5289117097854614,
+          "probability_std": 0.14628827571868896
+        },
+        "Edema": {
+          "positives": 128,
+          "negatives": 468,
+          "auroc": 0.720486111111111,
+          "auprc": 0.37649649412763864,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.4653698205947876,
+          "probability_std": 0.1939888596534729
+        },
+        "Effusion": {
+          "positives": 219,
+          "negatives": 377,
+          "auroc": 0.6853796494797912,
+          "auprc": 0.5252958190913354,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.5595223903656006,
+          "probability_std": 0.12022153288125992
+        }
+      },
+      "best_metric_summary": "Direct evaluation of the NIH epoch-1 val-loss checkpoint.",
+      "trust_level": "MEDIUM",
+      "notes": [
+        "Metrics match recomputation from saved prediction CSVs.",
+        "This is the source-only target-hospital baseline used for later adaptation comparisons."
+      ]
+    },
+    {
+      "run_id": "head_only_k5_seed2027",
+      "status": "DONE",
+      "date_time_utc": "2026-04-27T10:28:23.332376+00:00",
+      "dataset_setup": "NIH->MIMIC common5 few-shot adaptation, K=5 positives per label (7 support images total)",
+      "source_train_dataset": "NIH ChestXray14 dev-2k source checkpoint",
+      "target_test_dataset": "MIMIC-CXR common5 val/test",
+      "labels_used": [
+        "Atelectasis",
+        "Cardiomegaly",
+        "Consolidation",
+        "Edema",
+        "Effusion"
+      ],
+      "split_protocol": "Support set greedily sampled from MIMIC train_pool only, zero subject/study/dicom overlap to val/test.",
+      "model_backbone": "torchvision DenseNet-121",
+      "pretrained_weights_used": "NIH source checkpoint",
+      "classifier_head_type": "Single linear multilabel classifier (5 outputs)",
+      "adaptation_method": "head_only_few_shot",
+      "frozen_vs_trainable_layers": "Only classifier.weight and classifier.bias trainable (5,125 trainable parameters)",
+      "loss_function": "BCEWithLogitsLoss()",
+      "optimizer": "Adam(model.classifier.parameters())",
+      "learning_rate": 0.0001,
+      "batch_size": 8,
+      "image_resolution": 224,
+      "augmentations": "None. Resize(224,224) + ToTensor + ImageNet mean/std normalization.",
+      "epochs_requested": 50,
+      "epochs_ran": 11,
+      "random_seed": 2027,
+      "checkpoint_path": "/workspace/checkpoints/head_only_k5_seed2027_best.pt",
+      "support_manifest": "/workspace/manifests/mimic_support_k5_seed2027.csv",
+      "support_size_images": 7,
+      "metrics_reported": [
+        "loss",
+        "macro AUROC",
+        "macro AUPRC",
+        "per-label AUROC/AUPRC"
+      ],
+      "val_macro_auroc": 0.6786669426702152,
+      "val_macro_auprc": 0.263085163686402,
+      "test_macro_auroc": 0.6102280669589095,
+      "test_macro_auprc": 0.3311111150528484,
+      "val_per_label_metrics": {
+        "Atelectasis": {
+          "positives": 194,
+          "negatives": 764,
+          "auroc": 0.6238867598639823,
+          "auprc": 0.2622538273036821,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.6333978176116943,
+          "probability_std": 0.09366393089294434
+        },
+        "Cardiomegaly": {
+          "positives": 205,
+          "negatives": 753,
+          "auroc": 0.6459301007352702,
+          "auprc": 0.2830088313587619,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.34772181510925293,
+          "probability_std": 0.14201834797859192
+        },
+        "Consolidation": {
+          "positives": 52,
+          "negatives": 906,
+          "auroc": 0.6709543216165732,
+          "auprc": 0.08858394599566427,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.5051044225692749,
+          "probability_std": 0.17264798283576965
+        },
+        "Edema": {
+          "positives": 131,
+          "negatives": 827,
+          "auroc": 0.7398395746605501,
+          "auprc": 0.27325496418686335,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.441694438457489,
+          "probability_std": 0.21451124548912048
+        },
+        "Effusion": {
+          "positives": 249,
+          "negatives": 709,
+          "auroc": 0.7127239564747,
+          "auprc": 0.4083242495870383,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.5057072043418884,
+          "probability_std": 0.14273527264595032
+        }
+      },
+      "test_per_label_metrics": {
+        "Atelectasis": {
+          "positives": 170,
+          "negatives": 426,
+          "auroc": 0.5728251864125932,
+          "auprc": 0.3306655418684795,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.6648134589195251,
+          "probability_std": 0.07971195131540298
+        },
+        "Cardiomegaly": {
+          "positives": 159,
+          "negatives": 437,
+          "auroc": 0.5618208770490624,
+          "auprc": 0.30774070185032437,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.35023555159568787,
+          "probability_std": 0.12804925441741943
+        },
+        "Consolidation": {
+          "positives": 56,
+          "negatives": 540,
+          "auroc": 0.5105820105820107,
+          "auprc": 0.1152013693943664,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.5305963158607483,
+          "probability_std": 0.1464889645576477
+        },
+        "Edema": {
+          "positives": 128,
+          "negatives": 468,
+          "auroc": 0.7203024839743589,
+          "auprc": 0.3763271946206186,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.4744070768356323,
+          "probability_std": 0.19412527978420258
+        },
+        "Effusion": {
+          "positives": 219,
+          "negatives": 377,
+          "auroc": 0.6856097767765221,
+          "auprc": 0.5256207675304534,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.570498526096344,
+          "probability_std": 0.11937318742275238
+        }
+      },
+      "best_metric_summary": "Best checkpoint selected by target val macro AUROC at epoch 1.",
+      "trust_level": "MEDIUM",
+      "notes": [
+        "Best epoch was epoch 1; later head-only training consistently worsened target validation metrics.",
+        "Support set has 0 negative examples for Effusion, so this adaptation run is scientifically weak even though it is technically valid."
+      ]
+    },
+    {
+      "run_id": "head_only_k20_seed2027",
+      "status": "DONE",
+      "date_time_utc": "2026-04-27T10:42:56.281278+00:00",
+      "dataset_setup": "NIH->MIMIC common5 few-shot adaptation, K=20 positives per label (30 support images total)",
+      "source_train_dataset": "NIH ChestXray14 dev-2k source checkpoint",
+      "target_test_dataset": "MIMIC-CXR common5 val/test",
+      "labels_used": [
+        "Atelectasis",
+        "Cardiomegaly",
+        "Consolidation",
+        "Edema",
+        "Effusion"
+      ],
+      "split_protocol": "Support set greedily sampled from MIMIC train_pool only, zero subject/study/dicom overlap to val/test.",
+      "model_backbone": "torchvision DenseNet-121",
+      "pretrained_weights_used": "NIH source checkpoint",
+      "classifier_head_type": "Single linear multilabel classifier (5 outputs)",
+      "adaptation_method": "head_only_few_shot",
+      "frozen_vs_trainable_layers": "Only classifier.weight and classifier.bias trainable (5,125 trainable parameters)",
+      "loss_function": "BCEWithLogitsLoss()",
+      "optimizer": "Adam(model.classifier.parameters())",
+      "learning_rate": 0.0001,
+      "batch_size": 8,
+      "image_resolution": 224,
+      "augmentations": "None. Resize(224,224) + ToTensor + ImageNet mean/std normalization.",
+      "epochs_requested": 50,
+      "epochs_ran": 11,
+      "random_seed": 2027,
+      "checkpoint_path": "/workspace/checkpoints/head_only_k20_seed2027_best.pt",
+      "support_manifest": "/workspace/manifests/mimic_support_k20_seed2027.csv",
+      "support_size_images": 30,
+      "metrics_reported": [
+        "loss",
+        "macro AUROC",
+        "macro AUPRC",
+        "per-label AUROC/AUPRC"
+      ],
+      "val_macro_auroc": 0.6780296339719187,
+      "val_macro_auprc": 0.2627532959902074,
+      "test_macro_auroc": 0.6103803858906348,
+      "test_macro_auprc": 0.33193575396996733,
+      "val_per_label_metrics": {
+        "Atelectasis": {
+          "positives": 194,
+          "negatives": 764,
+          "auroc": 0.6232188157823717,
+          "auprc": 0.2617031134736755,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.6326341032981873,
+          "probability_std": 0.09342903643846512
+        },
+        "Cardiomegaly": {
+          "positives": 205,
+          "negatives": 753,
+          "auroc": 0.6442911281702458,
+          "auprc": 0.2820683660095271,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.37242451310157776,
+          "probability_std": 0.1450343281030655
+        },
+        "Consolidation": {
+          "positives": 52,
+          "negatives": 906,
+          "auroc": 0.6706147053829172,
+          "auprc": 0.08872690599035304,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.5063471794128418,
+          "probability_std": 0.17139843106269836
+        },
+        "Edema": {
+          "positives": 131,
+          "negatives": 827,
+          "auroc": 0.7399226487718877,
+          "auprc": 0.2733019291457679,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.4394150972366333,
+          "probability_std": 0.21537818014621735
+        },
+        "Effusion": {
+          "positives": 249,
+          "negatives": 709,
+          "auroc": 0.7121008717521708,
+          "auprc": 0.40796616533171354,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.5345041155815125,
+          "probability_std": 0.14127454161643982
+        }
+      },
+      "test_per_label_metrics": {
+        "Atelectasis": {
+          "positives": 170,
+          "negatives": 426,
+          "auroc": 0.5727699530516431,
+          "auprc": 0.33112160500758037,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.6639000177383423,
+          "probability_std": 0.07928328216075897
+        },
+        "Cardiomegaly": {
+          "positives": 159,
+          "negatives": 437,
+          "auroc": 0.5624541254695392,
+          "auprc": 0.31159152136548895,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.37512654066085815,
+          "probability_std": 0.13058795034885406
+        },
+        "Consolidation": {
+          "positives": 56,
+          "negatives": 540,
+          "auroc": 0.5104828042328042,
+          "auprc": 0.11468656862176953,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.5320702791213989,
+          "probability_std": 0.14548653364181519
+        },
+        "Edema": {
+          "positives": 128,
+          "negatives": 468,
+          "auroc": 0.7208032852564102,
+          "auprc": 0.376796799541877,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.4718538224697113,
+          "probability_std": 0.19504143297672272
+        },
+        "Effusion": {
+          "positives": 219,
+          "negatives": 377,
+          "auroc": 0.685391761442777,
+          "auprc": 0.5254822753131211,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.5986822843551636,
+          "probability_std": 0.1167902871966362
+        }
+      },
+      "best_metric_summary": "Best checkpoint selected by target val macro AUROC at epoch 1.",
+      "trust_level": "MEDIUM",
+      "notes": [
+        "Best epoch was again epoch 1; the extra support images did not materially improve over source-only.",
+        "The support set still has only 4 Effusion negatives, so class balance remains fragile."
+      ]
+    },
+    {
+      "run_id": "full_ft_k5_seed2027",
+      "status": "DONE",
+      "date_time_utc": "2026-04-27T11:34:54.413965+00:00",
+      "dataset_setup": "NIH->MIMIC common5 few-shot adaptation, K=5 positives per label (7 support images total)",
+      "source_train_dataset": "NIH ChestXray14 dev-2k source checkpoint",
+      "target_test_dataset": "MIMIC-CXR common5 val/test",
+      "labels_used": [
+        "Atelectasis",
+        "Cardiomegaly",
+        "Consolidation",
+        "Edema",
+        "Effusion"
+      ],
+      "split_protocol": "Support set greedily sampled from MIMIC train_pool only, zero subject/study/dicom overlap to val/test.",
+      "model_backbone": "torchvision DenseNet-121",
+      "pretrained_weights_used": "NIH source checkpoint",
+      "classifier_head_type": "Single linear multilabel classifier (5 outputs)",
+      "adaptation_method": "full_finetune_few_shot",
+      "frozen_vs_trainable_layers": "All DenseNet parameters trainable (6,958,981 trainable parameters)",
+      "loss_function": "BCEWithLogitsLoss()",
+      "optimizer": "Adam(model.parameters())",
+      "learning_rate": 1e-05,
+      "batch_size": 8,
+      "image_resolution": 224,
+      "augmentations": "None. Resize(224,224) + ToTensor + ImageNet mean/std normalization.",
+      "epochs_requested": 50,
+      "epochs_ran": 22,
+      "random_seed": 2027,
+      "checkpoint_path": "/workspace/checkpoints/full_ft_k5_seed2027_best.pt",
+      "support_manifest": "/workspace/manifests/mimic_support_k5_seed2027.csv",
+      "support_size_images": 7,
+      "metrics_reported": [
+        "loss",
+        "macro AUROC",
+        "macro AUPRC",
+        "per-label AUROC/AUPRC"
+      ],
+      "val_macro_auroc": 0.6972387890569642,
+      "val_macro_auprc": 0.2803464133202719,
+      "test_macro_auroc": 0.6239150765094617,
+      "test_macro_auprc": 0.34360227826389284,
+      "val_per_label_metrics": {
+        "Atelectasis": {
+          "positives": 194,
+          "negatives": 764,
+          "auroc": 0.6681802234576564,
+          "auprc": 0.3003123746516395,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.5162157416343689,
+          "probability_std": 0.10834475606679916
+        },
+        "Cardiomegaly": {
+          "positives": 205,
+          "negatives": 753,
+          "auroc": 0.6491173517312863,
+          "auprc": 0.3028854815918944,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.3751865327358246,
+          "probability_std": 0.14434435963630676
+        },
+        "Consolidation": {
+          "positives": 52,
+          "negatives": 906,
+          "auroc": 0.6788503990490746,
+          "auprc": 0.08955751272643692,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.35243675112724304,
+          "probability_std": 0.1640358865261078
+        },
+        "Edema": {
+          "positives": 131,
+          "negatives": 827,
+          "auroc": 0.7531406629314085,
+          "auprc": 0.2847521647901409,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.25526687502861023,
+          "probability_std": 0.1727260798215866
+        },
+        "Effusion": {
+          "positives": 249,
+          "negatives": 709,
+          "auroc": 0.7369053081153953,
+          "auprc": 0.4242245328412475,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.4417858123779297,
+          "probability_std": 0.1527290642261505
+        }
+      },
+      "test_per_label_metrics": {
+        "Atelectasis": {
+          "positives": 170,
+          "negatives": 426,
+          "auroc": 0.5910107705053853,
+          "auprc": 0.3438110305858373,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.5519818067550659,
+          "probability_std": 0.09483233094215393
+        },
+        "Cardiomegaly": {
+          "positives": 159,
+          "negatives": 437,
+          "auroc": 0.5829627390872587,
+          "auprc": 0.3235346032765588,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.3788674771785736,
+          "probability_std": 0.13852828741073608
+        },
+        "Consolidation": {
+          "positives": 56,
+          "negatives": 540,
+          "auroc": 0.5254960317460317,
+          "auprc": 0.10120052416189841,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.3798731863498688,
+          "probability_std": 0.15095315873622894
+        },
+        "Edema": {
+          "positives": 128,
+          "negatives": 468,
+          "auroc": 0.7349926549145299,
+          "auprc": 0.40968192309266005,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.27855637669563293,
+          "probability_std": 0.16714559495449066
+        },
+        "Effusion": {
+          "positives": 219,
+          "negatives": 377,
+          "auroc": 0.6851131862941026,
+          "auprc": 0.5397833102025096,
+          "auroc_defined": true,
+          "auprc_defined": true,
+          "probability_mean": 0.5086970925331116,
+          "probability_std": 0.13665755093097687
+        }
+      },
+      "best_metric_summary": "Best checkpoint selected by target val macro AUROC at epoch 12.",
+      "trust_level": "MEDIUM",
+      "notes": [
+        "This is the best completed target-side run in the repository.",
+        "It improves the no-adaptation baseline by +0.0136 macro AUROC and +0.0124 macro AUPRC on MIMIC test.",
+        "Best checkpoint is selected by AUROC, not AUPRC; val AUPRC peaks later than the chosen epoch."
+      ]
+    },
+    {
+      "run_id": "full_ft_k20_seed2027",
+      "status": "DONE",
+      "date_time_utc": "2026-04-27T11:53:42.630403+00:00",
+      "dataset_setup": "NIH->MIMIC common5 few-shot adaptation, K=20 positives per label (30 support images total)",
+      "source_train_dataset": "NIH ChestXray14 dev-2k source checkpoint",
+      "target_test_dataset": "MIMIC-CXR common5 val/test",
+      "labels_used": [
+        "Atelectasis",
+        "Cardiomegaly",
+        "Consolidation",
+        "Edema",
+        "Effusion"
+      ],
+      "split_protocol": "Support set greedily sampled from MIMIC train_pool only, zero subject/study/dicom overlap to val/test.",
+      "model_backbone": "torchvision DenseNet-121",
+      "pretrained_weights_used": "NIH source checkpoint",
+      "classifier_head_type": "Single linear multilabel classifier (5 outputs)",
+      "adaptation_method": "full_finetune_few_shot",
+      "frozen_vs_trainable_layers": "All DenseNet parameters trainable",
+      "loss_function": "BCEWithLogitsLoss()",
+      "optimizer": "Adam(model.parameters())",
+      "learning_rate": 1e-05,
+      "batch_size": 8,
+      "image_resolution": 224,
+      "augmentations": "None. Resize(224,224) + ToTensor + ImageNet mean/std normalization.",
+      "epochs_requested": 50,
+      "epochs_ran": 13,
+      "random_seed": 2027,
+      "checkpoint_path": "/workspace/checkpoints/full_ft_k20_seed2027_best.pt",
+      "support_manifest": "/workspace/manifests/mimic_support_k20_seed2027.csv",
+      "support_size_images": 30,
+      "metrics_reported": [
+        "training log with val loss/AUROC/AUPRC",
+        "checkpoint metadata"
+      ],
+      "val_macro_auroc": 0.6981429758138025,
+      "val_macro_auprc": null,
+      "test_macro_auroc": null,
+      "test_macro_auprc": null,
+      "val_per_label_metrics": {},
+      "test_per_label_metrics": {},
+      "best_metric_summary": "Best saved checkpoint metadata shows val macro AUROC 0.6981 at epoch 3; no completed final evaluation artifacts exist.",
+      "trust_level": "DO NOT USE",
+      "notes": [
+        "Training log and checkpoints exist, but the run never produced final prediction CSVs or a valid completed report.",
+        "Current JSON report records an I/O failure and the driver log never records a successful end for this run."
+      ]
+    }
+  ],
+  "best_results": [
+    {
+      "category": "source_base_model",
+      "run_id": "mini_stage_b_train",
+      "dataset": "NIH ChestXray14 dev-2k test",
+      "macro_auroc": 0.6574373236308799,
+      "macro_auprc": 0.15490072891242618,
+      "notes": "Checkpoint selected by source val loss at epoch 1."
+    },
+    {
+      "category": "target_no_adaptation",
+      "run_id": "mini_stage_d_nih_to_mimic",
+      "dataset": "MIMIC common5 test",
+      "macro_auroc": 0.6102987726213751,
+      "macro_auprc": 0.33119314037550796,
+      "notes": "Direct source-only transfer baseline."
+    },
+    {
+      "category": "few_shot_head_only",
+      "run_id": "head_only_k20_seed2027",
+      "dataset": "MIMIC common5 test",
+      "macro_auroc": 0.6103803858906348,
+      "macro_auprc": 0.33193575396996733,
+      "notes": "Marginally above source-only on test AUPRC but effectively flat overall."
+    },
+    {
+      "category": "few_shot_full_finetune",
+      "run_id": "full_ft_k5_seed2027",
+      "dataset": "MIMIC common5 test",
+      "macro_auroc": 0.6239150765094617,
+      "macro_auprc": 0.34360227826389284,
+      "notes": "Best reliable target-side result found."
+    }
+  ],
+  "red_flags": [
+    {
+      "severity": "high",
+      "issue": "Target-side common5 manifests use U-zero and convert blank/NaN MIMIC labels to 0.",
+      "evidence": {
+        "train_pool": {
+          "rows": 963,
+          "all_five_raw_labels_missing": 386,
+          "pct_all_five_raw_labels_missing": 40.08
+        },
+        "val": {
+          "rows": 958,
+          "all_five_raw_labels_missing": 367,
+          "pct_all_five_raw_labels_missing": 38.31
+        },
+        "test": {
+          "rows": 596,
+          "all_five_raw_labels_missing": 131,
+          "pct_all_five_raw_labels_missing": 21.98
+        }
+      },
+      "why_it_matters": "A large fraction of MIMIC rows have all five raw target labels blank before conversion: 40.08% train_pool, 38.31% val, 21.98% test. If blanks should be masked rather than treated as negatives, every target-side result changes."
+    },
+    {
+      "severity": "high",
+      "issue": "The repository contains two incompatible label setups: common5 completed runs versus common7 staged manifests with multiple uncertainty policies.",
+      "evidence": {
+        "completed_runs_label_set": [
+          "Atelectasis",
+          "Cardiomegaly",
+          "Consolidation",
+          "Edema",
+          "Effusion"
+        ],
+        "planned_common7_label_set": [
+          "atelectasis",
+          "cardiomegaly",
+          "consolidation",
+          "edema",
+          "pleural_effusion",
+          "pneumonia",
+          "pneumothorax"
+        ],
+        "policies_found": [
+          "u_ignore",
+          "u_one",
+          "u_zero",
+          "raw"
+        ]
+      },
+      "why_it_matters": "Comparing common5/U-zero results against common7 or masked-label results would be scientifically invalid."
+    },
+    {
+      "severity": "medium",
+      "issue": "Source and adaptation checkpoints are selected with inconsistent criteria.",
+      "evidence": {
+        "source_baseline_selection": "NIH val loss",
+        "adaptation_selection": "MIMIC val macro AUROC",
+        "paper_metrics_reported": [
+          "macro AUROC",
+          "macro AUPRC"
+        ]
+      },
+      "why_it_matters": "This weakens source-only versus adaptation comparisons, and AUROC-selected checkpoints are not necessarily AUPRC-optimal."
+    },
+    {
+      "severity": "medium",
+      "issue": "Target adaptation drops class-imbalance handling even on tiny support sets.",
+      "evidence": {
+        "source_loss": "BCEWithLogitsLoss(pos_weight=NIH train class imbalance)",
+        "adaptation_loss": "BCEWithLogitsLoss() without pos_weight",
+        "k5_support_counts": {
+          "Atelectasis": 5,
+          "Cardiomegaly": 6,
+          "Consolidation": 5,
+          "Edema": 6,
+          "Effusion": 7
+        },
+        "k20_support_counts": {
+          "Atelectasis": 20,
+          "Cardiomegaly": 22,
+          "Consolidation": 20,
+          "Edema": 20,
+          "Effusion": 26
+        },
+        "k5_effusion_negatives": 0,
+        "k20_effusion_negatives": 4
+      },
+      "why_it_matters": "K=5 has zero Effusion negatives and K=20 has only four, so head-only/full-ft adaptation can become badly biased."
+    },
+    {
+      "severity": "medium",
+      "issue": "No training augmentations are applied in any completed training script.",
+      "evidence": "All train/val/test pipelines use only resize -> tensor -> ImageNet normalization.",
+      "why_it_matters": "This is a weak baseline for chest X-ray transfer and may exaggerate overfitting on tiny support sets."
+    },
+    {
+      "severity": "medium",
+      "issue": "Reproducibility metadata is incomplete.",
+      "evidence": {
+        "config_files_found": 0,
+        "wandb_found": false,
+        "tensorboard_found": false,
+        "package_source_files_under_src": 0
+      },
+      "why_it_matters": "Seeds are saved, but there are no committed configs, environment snapshots, or run commands. Reproducing exactly from the repo alone is still manual."
+    },
+    {
+      "severity": "high",
+      "issue": "full_ft_k20_seed2027 is incomplete and should not be used as a result.",
+      "evidence": {
+        "report_status": "DONE",
+        "failure_reasons": [],
+        "best_checkpoint_exists": true,
+        "prediction_csvs_exist": false
+      },
+      "why_it_matters": "It has no trustworthy final val/test report or prediction files."
+    }
+  ],
+  "usable_for_paper": [
+    {
+      "run_id": "mini_stage_b_train",
+      "reason": "Valid source-domain baseline with checkpoint, predictions, and metrics that recompute exactly from saved CSVs."
+    },
+    {
+      "run_id": "mini_stage_d_nih_to_mimic",
+      "reason": "Valid no-adaptation target-hospital baseline with saved predictions and reproducible metrics."
+    },
+    {
+      "run_id": "head_only_k5_seed2027",
+      "reason": "Valid few-shot negative baseline showing head-only adaptation does not improve over source-only under the current setup."
+    },
+    {
+      "run_id": "head_only_k20_seed2027",
+      "reason": "Second few-shot negative baseline; useful to show that simply adding more positive support without changing the method does not help."
+    },
+    {
+      "run_id": "full_ft_k5_seed2027",
+      "reason": "Best completed target-side result with checkpoint, predictions, and exact metric consistency checks."
+    }
+  ],
+  "rerun_needed": [
+    {
+      "run_id": "full_ft_k20_seed2027",
+      "reason": "The run is incomplete: there are checkpoints and a training log, but no valid finished report or test predictions."
+    },
+    {
+      "run_id": "stage5_source_baseline",
+      "reason": "The common7 source baseline stage is only PARTIAL and produced no checkpoint or metrics."
+    },
+    {
+      "run_id": "mini_stage_d_nih_to_mimic + head_only_k5_seed2027 + head_only_k20_seed2027 + full_ft_k5_seed2027",
+      "reason": "Re-run these if the blank/uncertain MIMIC label policy changes after audit, because every target-side common5 metric depends on that preprocessing choice."
+    }
+  ],
+  "recommended_next_step": "Decide and document the MIMIC blank/uncertain-label policy first, then regenerate the target manifests before trusting or extending any target-side result."
+}

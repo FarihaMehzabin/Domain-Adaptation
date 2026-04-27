@@ -1,0 +1,19 @@
+{
+  "base_dir": "experiments/policyB_common5_v1",
+  "experiment_namespace": "policyB_common5_v1",
+  "label_policy": "uignore_blankzero",
+  "label_set": "common5",
+  "labels": [
+    "Atelectasis",
+    "Cardiomegaly",
+    "Consolidation",
+    "Edema",
+    "Effusion"
+  ],
+  "notes": "All official Policy B reruns must write only inside experiments/policyB_common5_v1.",
+  "primary_metric": "macro_auprc",
+  "secondary_metric": "macro_auroc",
+  "seed": 2027,
+  "selection_split": "val",
+  "test_split": "test"
+}

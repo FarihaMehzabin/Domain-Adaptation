@@ -1,0 +1,60 @@
+# NIH Baseline Dry Run
+
+## Executive Summary
+
+```json
+{
+  "safe_to_proceed": true,
+  "stage": "stage1_train_nih_baseline_dry_run",
+  "status": "DONE"
+}
+```
+
+## Warnings
+
+```json
+[
+  "Dry-run only; real source training is not implemented in Stage 1."
+]
+```
+
+## Failure Conditions
+
+```json
+[]
+```
+
+## Details
+
+```json
+{
+  "config_keys": [
+    "experiment"
+  ],
+  "created_at_utc": "2026-04-27T06:03:57.120522+00:00",
+  "debug": true,
+  "dry_run": true,
+  "failure_reasons": [],
+  "fake_batch": {
+    "image_dtype": "torch.float32",
+    "image_finite": true,
+    "image_shape": [
+      1,
+      64,
+      64
+    ],
+    "label_binary": true,
+    "label_shape": [
+      7
+    ],
+    "num_samples": 32
+  },
+  "safe_to_proceed": true,
+  "seed": 2027,
+  "stage": "stage1_train_nih_baseline_dry_run",
+  "status": "DONE",
+  "warnings": [
+    "Dry-run only; real source training is not implemented in Stage 1."
+  ]
+}
+```

@@ -1,0 +1,4985 @@
+{
+  "status": "DONE",
+  "generated_at_utc": "2026-04-27T12:21:10.322836+00:00",
+  "root": "/workspace",
+  "labels": [
+    "Atelectasis",
+    "Cardiomegaly",
+    "Consolidation",
+    "Edema",
+    "Effusion"
+  ],
+  "policies": {
+    "current_uzero_blankzero": {
+      "short_name": "Policy A",
+      "table_name": "A",
+      "description": "1->1/m1, 0->0/m1, -1->0/m1, blank->0/m1",
+      "uncertain_label": 0,
+      "uncertain_mask": 1,
+      "blank_label": 0,
+      "blank_mask": 1
+    },
+    "uignore_blankzero": {
+      "short_name": "Policy B",
+      "table_name": "B",
+      "description": "1->1/m1, 0->0/m1, -1->0/m0, blank->0/m1",
+      "uncertain_label": 0,
+      "uncertain_mask": 0,
+      "blank_label": 0,
+      "blank_mask": 1
+    },
+    "uignore_blankignore": {
+      "short_name": "Policy C",
+      "table_name": "C",
+      "description": "1->1/m1, 0->0/m1, -1->0/m0, blank->0/m0",
+      "uncertain_label": 0,
+      "uncertain_mask": 0,
+      "blank_label": 0,
+      "blank_mask": 0
+    },
+    "uone_blankzero": {
+      "short_name": "Policy D",
+      "table_name": "D",
+      "description": "1->1/m1, 0->0/m1, -1->1/m1, blank->0/m1",
+      "uncertain_label": 1,
+      "uncertain_mask": 1,
+      "blank_label": 0,
+      "blank_mask": 1
+    }
+  },
+  "manifests": {
+    "val": {
+      "common5_path": "/workspace/manifests/mimic_common5_val.csv",
+      "target_raw_path": "/workspace/manifests/mimic_target_query.csv",
+      "n_rows": 958,
+      "raw_summary": {
+        "Atelectasis": {
+          "positive_raw": 194,
+          "negative_raw": 4,
+          "uncertain_raw": 52,
+          "blank_raw": 708
+        },
+        "Cardiomegaly": {
+          "positive_raw": 205,
+          "negative_raw": 63,
+          "uncertain_raw": 29,
+          "blank_raw": 661
+        },
+        "Consolidation": {
+          "positive_raw": 52,
+          "negative_raw": 27,
+          "uncertain_raw": 24,
+          "blank_raw": 855
+        },
+        "Edema": {
+          "positive_raw": 131,
+          "negative_raw": 98,
+          "uncertain_raw": 60,
+          "blank_raw": 669
+        },
+        "Effusion": {
+          "positive_raw": 249,
+          "negative_raw": 94,
+          "uncertain_raw": 27,
+          "blank_raw": 588
+        }
+      },
+      "all_blank_count": 367,
+      "all_blank_pct": 0.38308977035490605,
+      "converted_positive_rows": 472,
+      "cross_check": {
+        "common5_manifest": "/workspace/manifests/mimic_common5_val.csv",
+        "target_manifest": "/workspace/manifests/mimic_target_query.csv",
+        "rows_checked": 958,
+        "labels": {
+          "Atelectasis": {
+            "common5_raw_column": "raw_Atelectasis",
+            "target_raw_column": "Atelectasis",
+            "matches": true,
+            "mismatch_count": 0
+          },
+          "Cardiomegaly": {
+            "common5_raw_column": "raw_Cardiomegaly",
+            "target_raw_column": "Cardiomegaly",
+            "matches": true,
+            "mismatch_count": 0
+          },
+          "Consolidation": {
+            "common5_raw_column": "raw_Consolidation",
+            "target_raw_column": "Consolidation",
+            "matches": true,
+            "mismatch_count": 0
+          },
+          "Edema": {
+            "common5_raw_column": "raw_Edema",
+            "target_raw_column": "Edema",
+            "matches": true,
+            "mismatch_count": 0
+          },
+          "Effusion": {
+            "common5_raw_column": "raw_Pleural_Effusion",
+            "target_raw_column": "Pleural Effusion",
+            "matches": true,
+            "mismatch_count": 0
+          }
+        }
+      }
+    },
+    "test": {
+      "common5_path": "/workspace/manifests/mimic_common5_test.csv",
+      "target_raw_path": "/workspace/manifests/mimic_target_test.csv",
+      "n_rows": 596,
+      "raw_summary": {
+        "Atelectasis": {
+          "positive_raw": 170,
+          "negative_raw": 7,
+          "uncertain_raw": 32,
+          "blank_raw": 387
+        },
+        "Cardiomegaly": {
+          "positive_raw": 159,
+          "negative_raw": 54,
+          "uncertain_raw": 13,
+          "blank_raw": 370
+        },
+        "Consolidation": {
+          "positive_raw": 56,
+          "negative_raw": 21,
+          "uncertain_raw": 10,
+          "blank_raw": 509
+        },
+        "Edema": {
+          "positive_raw": 128,
+          "negative_raw": 79,
+          "uncertain_raw": 44,
+          "blank_raw": 345
+        },
+        "Effusion": {
+          "positive_raw": 219,
+          "negative_raw": 70,
+          "uncertain_raw": 27,
+          "blank_raw": 280
+        }
+      },
+      "all_blank_count": 131,
+      "all_blank_pct": 0.2197986577181208,
+      "converted_positive_rows": 413,
+      "cross_check": {
+        "common5_manifest": "/workspace/manifests/mimic_common5_test.csv",
+        "target_manifest": "/workspace/manifests/mimic_target_test.csv",
+        "rows_checked": 596,
+        "labels": {
+          "Atelectasis": {
+            "common5_raw_column": "raw_Atelectasis",
+            "target_raw_column": "Atelectasis",
+            "matches": true,
+            "mismatch_count": 0
+          },
+          "Cardiomegaly": {
+            "common5_raw_column": "raw_Cardiomegaly",
+            "target_raw_column": "Cardiomegaly",
+            "matches": true,
+            "mismatch_count": 0
+          },
+          "Consolidation": {
+            "common5_raw_column": "raw_Consolidation",
+            "target_raw_column": "Consolidation",
+            "matches": true,
+            "mismatch_count": 0
+          },
+          "Edema": {
+            "common5_raw_column": "raw_Edema",
+            "target_raw_column": "Edema",
+            "matches": true,
+            "mismatch_count": 0
+          },
+          "Effusion": {
+            "common5_raw_column": "raw_Pleural_Effusion",
+            "target_raw_column": "Pleural Effusion",
+            "matches": true,
+            "mismatch_count": 0
+          }
+        }
+      }
+    }
+  },
+  "split_policy_summary": {
+    "val": {
+      "current_uzero_blankzero": {
+        "split": "val",
+        "policy_name": "current_uzero_blankzero",
+        "policy_short_name": "Policy A",
+        "rows_with_no_valid_labels": 0,
+        "rows_with_no_valid_labels_pct": 0.0,
+        "rows_with_at_least_one_positive": 472,
+        "rows_with_at_least_one_positive_pct": 0.49269311064718163,
+        "valid_label_count": 5,
+        "total_valid_label_instances": 4790,
+        "total_possible_label_instances": 4790,
+        "valid_label_fraction": 1.0,
+        "per_label": {
+          "Atelectasis": {
+            "n_valid": 958,
+            "n_positive": 194,
+            "n_negative": 764,
+            "is_valid_label": true,
+            "n_uncertain_raw": 52,
+            "n_blank_raw": 708
+          },
+          "Cardiomegaly": {
+            "n_valid": 958,
+            "n_positive": 205,
+            "n_negative": 753,
+            "is_valid_label": true,
+            "n_uncertain_raw": 29,
+            "n_blank_raw": 661
+          },
+          "Consolidation": {
+            "n_valid": 958,
+            "n_positive": 52,
+            "n_negative": 906,
+            "is_valid_label": true,
+            "n_uncertain_raw": 24,
+            "n_blank_raw": 855
+          },
+          "Edema": {
+            "n_valid": 958,
+            "n_positive": 131,
+            "n_negative": 827,
+            "is_valid_label": true,
+            "n_uncertain_raw": 60,
+            "n_blank_raw": 669
+          },
+          "Effusion": {
+            "n_valid": 958,
+            "n_positive": 249,
+            "n_negative": 709,
+            "is_valid_label": true,
+            "n_uncertain_raw": 27,
+            "n_blank_raw": 588
+          }
+        }
+      },
+      "uignore_blankzero": {
+        "split": "val",
+        "policy_name": "uignore_blankzero",
+        "policy_short_name": "Policy B",
+        "rows_with_no_valid_labels": 0,
+        "rows_with_no_valid_labels_pct": 0.0,
+        "rows_with_at_least_one_positive": 472,
+        "rows_with_at_least_one_positive_pct": 0.49269311064718163,
+        "valid_label_count": 5,
+        "total_valid_label_instances": 4598,
+        "total_possible_label_instances": 4790,
+        "valid_label_fraction": 0.9599164926931106,
+        "per_label": {
+          "Atelectasis": {
+            "n_valid": 906,
+            "n_positive": 194,
+            "n_negative": 712,
+            "is_valid_label": true,
+            "n_uncertain_raw": 52,
+            "n_blank_raw": 708
+          },
+          "Cardiomegaly": {
+            "n_valid": 929,
+            "n_positive": 205,
+            "n_negative": 724,
+            "is_valid_label": true,
+            "n_uncertain_raw": 29,
+            "n_blank_raw": 661
+          },
+          "Consolidation": {
+            "n_valid": 934,
+            "n_positive": 52,
+            "n_negative": 882,
+            "is_valid_label": true,
+            "n_uncertain_raw": 24,
+            "n_blank_raw": 855
+          },
+          "Edema": {
+            "n_valid": 898,
+            "n_positive": 131,
+            "n_negative": 767,
+            "is_valid_label": true,
+            "n_uncertain_raw": 60,
+            "n_blank_raw": 669
+          },
+          "Effusion": {
+            "n_valid": 931,
+            "n_positive": 249,
+            "n_negative": 682,
+            "is_valid_label": true,
+            "n_uncertain_raw": 27,
+            "n_blank_raw": 588
+          }
+        }
+      },
+      "uignore_blankignore": {
+        "split": "val",
+        "policy_name": "uignore_blankignore",
+        "policy_short_name": "Policy C",
+        "rows_with_no_valid_labels": 402,
+        "rows_with_no_valid_labels_pct": 0.4196242171189979,
+        "rows_with_at_least_one_positive": 472,
+        "rows_with_at_least_one_positive_pct": 0.49269311064718163,
+        "valid_label_count": 5,
+        "total_valid_label_instances": 1117,
+        "total_possible_label_instances": 4790,
+        "valid_label_fraction": 0.23319415448851774,
+        "per_label": {
+          "Atelectasis": {
+            "n_valid": 198,
+            "n_positive": 194,
+            "n_negative": 4,
+            "is_valid_label": true,
+            "n_uncertain_raw": 52,
+            "n_blank_raw": 708
+          },
+          "Cardiomegaly": {
+            "n_valid": 268,
+            "n_positive": 205,
+            "n_negative": 63,
+            "is_valid_label": true,
+            "n_uncertain_raw": 29,
+            "n_blank_raw": 661
+          },
+          "Consolidation": {
+            "n_valid": 79,
+            "n_positive": 52,
+            "n_negative": 27,
+            "is_valid_label": true,
+            "n_uncertain_raw": 24,
+            "n_blank_raw": 855
+          },
+          "Edema": {
+            "n_valid": 229,
+            "n_positive": 131,
+            "n_negative": 98,
+            "is_valid_label": true,
+            "n_uncertain_raw": 60,
+            "n_blank_raw": 669
+          },
+          "Effusion": {
+            "n_valid": 343,
+            "n_positive": 249,
+            "n_negative": 94,
+            "is_valid_label": true,
+            "n_uncertain_raw": 27,
+            "n_blank_raw": 588
+          }
+        }
+      },
+      "uone_blankzero": {
+        "split": "val",
+        "policy_name": "uone_blankzero",
+        "policy_short_name": "Policy D",
+        "rows_with_no_valid_labels": 0,
+        "rows_with_no_valid_labels_pct": 0.0,
+        "rows_with_at_least_one_positive": 521,
+        "rows_with_at_least_one_positive_pct": 0.5438413361169102,
+        "valid_label_count": 5,
+        "total_valid_label_instances": 4790,
+        "total_possible_label_instances": 4790,
+        "valid_label_fraction": 1.0,
+        "per_label": {
+          "Atelectasis": {
+            "n_valid": 958,
+            "n_positive": 246,
+            "n_negative": 712,
+            "is_valid_label": true,
+            "n_uncertain_raw": 52,
+            "n_blank_raw": 708
+          },
+          "Cardiomegaly": {
+            "n_valid": 958,
+            "n_positive": 234,
+            "n_negative": 724,
+            "is_valid_label": true,
+            "n_uncertain_raw": 29,
+            "n_blank_raw": 661
+          },
+          "Consolidation": {
+            "n_valid": 958,
+            "n_positive": 76,
+            "n_negative": 882,
+            "is_valid_label": true,
+            "n_uncertain_raw": 24,
+            "n_blank_raw": 855
+          },
+          "Edema": {
+            "n_valid": 958,
+            "n_positive": 191,
+            "n_negative": 767,
+            "is_valid_label": true,
+            "n_uncertain_raw": 60,
+            "n_blank_raw": 669
+          },
+          "Effusion": {
+            "n_valid": 958,
+            "n_positive": 276,
+            "n_negative": 682,
+            "is_valid_label": true,
+            "n_uncertain_raw": 27,
+            "n_blank_raw": 588
+          }
+        }
+      }
+    },
+    "test": {
+      "current_uzero_blankzero": {
+        "split": "test",
+        "policy_name": "current_uzero_blankzero",
+        "policy_short_name": "Policy A",
+        "rows_with_no_valid_labels": 0,
+        "rows_with_no_valid_labels_pct": 0.0,
+        "rows_with_at_least_one_positive": 413,
+        "rows_with_at_least_one_positive_pct": 0.6929530201342282,
+        "valid_label_count": 5,
+        "total_valid_label_instances": 2980,
+        "total_possible_label_instances": 2980,
+        "valid_label_fraction": 1.0,
+        "per_label": {
+          "Atelectasis": {
+            "n_valid": 596,
+            "n_positive": 170,
+            "n_negative": 426,
+            "is_valid_label": true,
+            "n_uncertain_raw": 32,
+            "n_blank_raw": 387
+          },
+          "Cardiomegaly": {
+            "n_valid": 596,
+            "n_positive": 159,
+            "n_negative": 437,
+            "is_valid_label": true,
+            "n_uncertain_raw": 13,
+            "n_blank_raw": 370
+          },
+          "Consolidation": {
+            "n_valid": 596,
+            "n_positive": 56,
+            "n_negative": 540,
+            "is_valid_label": true,
+            "n_uncertain_raw": 10,
+            "n_blank_raw": 509
+          },
+          "Edema": {
+            "n_valid": 596,
+            "n_positive": 128,
+            "n_negative": 468,
+            "is_valid_label": true,
+            "n_uncertain_raw": 44,
+            "n_blank_raw": 345
+          },
+          "Effusion": {
+            "n_valid": 596,
+            "n_positive": 219,
+            "n_negative": 377,
+            "is_valid_label": true,
+            "n_uncertain_raw": 27,
+            "n_blank_raw": 280
+          }
+        }
+      },
+      "uignore_blankzero": {
+        "split": "test",
+        "policy_name": "uignore_blankzero",
+        "policy_short_name": "Policy B",
+        "rows_with_no_valid_labels": 0,
+        "rows_with_no_valid_labels_pct": 0.0,
+        "rows_with_at_least_one_positive": 413,
+        "rows_with_at_least_one_positive_pct": 0.6929530201342282,
+        "valid_label_count": 5,
+        "total_valid_label_instances": 2854,
+        "total_possible_label_instances": 2980,
+        "valid_label_fraction": 0.9577181208053691,
+        "per_label": {
+          "Atelectasis": {
+            "n_valid": 564,
+            "n_positive": 170,
+            "n_negative": 394,
+            "is_valid_label": true,
+            "n_uncertain_raw": 32,
+            "n_blank_raw": 387
+          },
+          "Cardiomegaly": {
+            "n_valid": 583,
+            "n_positive": 159,
+            "n_negative": 424,
+            "is_valid_label": true,
+            "n_uncertain_raw": 13,
+            "n_blank_raw": 370
+          },
+          "Consolidation": {
+            "n_valid": 586,
+            "n_positive": 56,
+            "n_negative": 530,
+            "is_valid_label": true,
+            "n_uncertain_raw": 10,
+            "n_blank_raw": 509
+          },
+          "Edema": {
+            "n_valid": 552,
+            "n_positive": 128,
+            "n_negative": 424,
+            "is_valid_label": true,
+            "n_uncertain_raw": 44,
+            "n_blank_raw": 345
+          },
+          "Effusion": {
+            "n_valid": 569,
+            "n_positive": 219,
+            "n_negative": 350,
+            "is_valid_label": true,
+            "n_uncertain_raw": 27,
+            "n_blank_raw": 280
+          }
+        }
+      },
+      "uignore_blankignore": {
+        "split": "test",
+        "policy_name": "uignore_blankignore",
+        "policy_short_name": "Policy C",
+        "rows_with_no_valid_labels": 150,
+        "rows_with_no_valid_labels_pct": 0.2516778523489933,
+        "rows_with_at_least_one_positive": 413,
+        "rows_with_at_least_one_positive_pct": 0.6929530201342282,
+        "valid_label_count": 5,
+        "total_valid_label_instances": 963,
+        "total_possible_label_instances": 2980,
+        "valid_label_fraction": 0.3231543624161074,
+        "per_label": {
+          "Atelectasis": {
+            "n_valid": 177,
+            "n_positive": 170,
+            "n_negative": 7,
+            "is_valid_label": true,
+            "n_uncertain_raw": 32,
+            "n_blank_raw": 387
+          },
+          "Cardiomegaly": {
+            "n_valid": 213,
+            "n_positive": 159,
+            "n_negative": 54,
+            "is_valid_label": true,
+            "n_uncertain_raw": 13,
+            "n_blank_raw": 370
+          },
+          "Consolidation": {
+            "n_valid": 77,
+            "n_positive": 56,
+            "n_negative": 21,
+            "is_valid_label": true,
+            "n_uncertain_raw": 10,
+            "n_blank_raw": 509
+          },
+          "Edema": {
+            "n_valid": 207,
+            "n_positive": 128,
+            "n_negative": 79,
+            "is_valid_label": true,
+            "n_uncertain_raw": 44,
+            "n_blank_raw": 345
+          },
+          "Effusion": {
+            "n_valid": 289,
+            "n_positive": 219,
+            "n_negative": 70,
+            "is_valid_label": true,
+            "n_uncertain_raw": 27,
+            "n_blank_raw": 280
+          }
+        }
+      },
+      "uone_blankzero": {
+        "split": "test",
+        "policy_name": "uone_blankzero",
+        "policy_short_name": "Policy D",
+        "rows_with_no_valid_labels": 0,
+        "rows_with_no_valid_labels_pct": 0.0,
+        "rows_with_at_least_one_positive": 440,
+        "rows_with_at_least_one_positive_pct": 0.738255033557047,
+        "valid_label_count": 5,
+        "total_valid_label_instances": 2980,
+        "total_possible_label_instances": 2980,
+        "valid_label_fraction": 1.0,
+        "per_label": {
+          "Atelectasis": {
+            "n_valid": 596,
+            "n_positive": 202,
+            "n_negative": 394,
+            "is_valid_label": true,
+            "n_uncertain_raw": 32,
+            "n_blank_raw": 387
+          },
+          "Cardiomegaly": {
+            "n_valid": 596,
+            "n_positive": 172,
+            "n_negative": 424,
+            "is_valid_label": true,
+            "n_uncertain_raw": 13,
+            "n_blank_raw": 370
+          },
+          "Consolidation": {
+            "n_valid": 596,
+            "n_positive": 66,
+            "n_negative": 530,
+            "is_valid_label": true,
+            "n_uncertain_raw": 10,
+            "n_blank_raw": 509
+          },
+          "Edema": {
+            "n_valid": 596,
+            "n_positive": 172,
+            "n_negative": 424,
+            "is_valid_label": true,
+            "n_uncertain_raw": 44,
+            "n_blank_raw": 345
+          },
+          "Effusion": {
+            "n_valid": 596,
+            "n_positive": 246,
+            "n_negative": 350,
+            "is_valid_label": true,
+            "n_uncertain_raw": 27,
+            "n_blank_raw": 280
+          }
+        }
+      }
+    }
+  },
+  "runs": {
+    "nih_to_mimic": {
+      "run_id": "nih_to_mimic",
+      "display_name": "no adaptation",
+      "report_json_path": "/workspace/reports/mini_stage_d_nih_to_mimic.json",
+      "headline_eligible": true,
+      "artifacts": {
+        "val": {
+          "prediction_path": "/workspace/outputs/nih_to_mimic_val_predictions.csv",
+          "prediction_exists": true,
+          "match_method": "dicom_id",
+          "match_warnings": []
+        },
+        "test": {
+          "prediction_path": "/workspace/outputs/nih_to_mimic_test_predictions.csv",
+          "prediction_exists": true,
+          "match_method": "dicom_id",
+          "match_warnings": []
+        }
+      },
+      "missing_prediction_files": [],
+      "val": {
+        "current_uzero_blankzero": {
+          "run_id": "nih_to_mimic",
+          "split": "val",
+          "policy_name": "current_uzero_blankzero",
+          "policy_short_name": "Policy A",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 958,
+              "n_positive": 194,
+              "n_negative": 764,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.6243185620985588,
+              "auprc": 0.262793953341996,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 958,
+              "n_positive": 205,
+              "n_negative": 753,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.6467139571794123,
+              "auprc": 0.2835499787426393,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 958,
+              "n_positive": 52,
+              "n_negative": 906,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.6708481915435559,
+              "auprc": 0.08854571362782274,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 958,
+              "n_positive": 131,
+              "n_negative": 827,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.7398949574014417,
+              "auprc": 0.27283900141541084,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 958,
+              "n_positive": 249,
+              "n_negative": 709,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.7132564106921339,
+              "auprc": 0.4088538072878848,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 958,
+            "Cardiomegaly": 958,
+            "Consolidation": 958,
+            "Edema": 958,
+            "Effusion": 958
+          },
+          "macro_auroc": 0.6790064157830206,
+          "macro_auprc": 0.26331649088315073,
+          "micro_auroc": 0.6357947238375052,
+          "micro_auprc": 0.23430275782482382,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 472,
+          "rows_with_at_least_one_positive_pct": 0.49269311064718163,
+          "total_valid_label_instances": 4790,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 1.0
+        },
+        "uignore_blankzero": {
+          "run_id": "nih_to_mimic",
+          "split": "val",
+          "policy_name": "uignore_blankzero",
+          "policy_short_name": "Policy B",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 906,
+              "n_positive": 194,
+              "n_negative": 712,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.6311319935132631,
+              "auprc": 0.28095272650759184,
+              "is_valid_label": true,
+              "mask_fraction": 0.9457202505219207
+            },
+            "Cardiomegaly": {
+              "n_valid": 929,
+              "n_positive": 205,
+              "n_negative": 724,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.6492723352647891,
+              "auprc": 0.2918600866958381,
+              "is_valid_label": true,
+              "mask_fraction": 0.9697286012526096
+            },
+            "Consolidation": {
+              "n_valid": 934,
+              "n_positive": 52,
+              "n_negative": 882,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.6773940345368916,
+              "auprc": 0.09291522613127201,
+              "is_valid_label": true,
+              "mask_fraction": 0.9749478079331941
+            },
+            "Edema": {
+              "n_valid": 898,
+              "n_positive": 131,
+              "n_negative": 767,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.7523114742677429,
+              "auprc": 0.29780769137705043,
+              "is_valid_label": true,
+              "mask_fraction": 0.9373695198329853
+            },
+            "Effusion": {
+              "n_valid": 931,
+              "n_positive": 249,
+              "n_negative": 682,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.7178037663851888,
+              "auprc": 0.4218087752234073,
+              "is_valid_label": true,
+              "mask_fraction": 0.9718162839248434
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 906,
+            "Cardiomegaly": 929,
+            "Consolidation": 934,
+            "Edema": 898,
+            "Effusion": 931
+          },
+          "macro_auroc": 0.6855827207935752,
+          "macro_auprc": 0.2770689011870319,
+          "micro_auroc": 0.6430632795985914,
+          "micro_auprc": 0.24825422522053275,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 472,
+          "rows_with_at_least_one_positive_pct": 0.49269311064718163,
+          "total_valid_label_instances": 4598,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 0.9599164926931106
+        },
+        "uignore_blankignore": {
+          "run_id": "nih_to_mimic",
+          "split": "val",
+          "policy_name": "uignore_blankignore",
+          "policy_short_name": "Policy C",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 198,
+              "n_positive": 194,
+              "n_negative": 4,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.5657216494845362,
+              "auprc": 0.9878009679101581,
+              "is_valid_label": true,
+              "mask_fraction": 0.20668058455114824
+            },
+            "Cardiomegaly": {
+              "n_valid": 268,
+              "n_positive": 205,
+              "n_negative": 63,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.6542779713511421,
+              "auprc": 0.8490423511724885,
+              "is_valid_label": true,
+              "mask_fraction": 0.2797494780793319
+            },
+            "Consolidation": {
+              "n_valid": 79,
+              "n_positive": 52,
+              "n_negative": 27,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.7414529914529916,
+              "auprc": 0.8164843246259276,
+              "is_valid_label": true,
+              "mask_fraction": 0.0824634655532359
+            },
+            "Edema": {
+              "n_valid": 229,
+              "n_positive": 131,
+              "n_negative": 98,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.7303318273874435,
+              "auprc": 0.764859581709987,
+              "is_valid_label": true,
+              "mask_fraction": 0.23903966597077245
+            },
+            "Effusion": {
+              "n_valid": 343,
+              "n_positive": 249,
+              "n_negative": 94,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.7401948218405537,
+              "auprc": 0.8644413743061873,
+              "is_valid_label": true,
+              "mask_fraction": 0.35803757828810023
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 198,
+            "Cardiomegaly": 268,
+            "Consolidation": 79,
+            "Edema": 229,
+            "Effusion": 343
+          },
+          "macro_auroc": 0.6863958523033334,
+          "macro_auprc": 0.8565257199449496,
+          "micro_auroc": 0.717948717948718,
+          "micro_auprc": 0.8603584052197765,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 402,
+          "rows_with_no_valid_labels_pct": 0.4196242171189979,
+          "rows_with_at_least_one_positive": 472,
+          "rows_with_at_least_one_positive_pct": 0.49269311064718163,
+          "total_valid_label_instances": 1117,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 0.23319415448851774
+        },
+        "uone_blankzero": {
+          "run_id": "nih_to_mimic",
+          "split": "val",
+          "policy_name": "uone_blankzero",
+          "policy_short_name": "Policy D",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 958,
+              "n_positive": 246,
+              "n_negative": 712,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.6243891020370878,
+              "auprc": 0.3263435749978879,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 958,
+              "n_positive": 234,
+              "n_negative": 724,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.6416277093072673,
+              "auprc": 0.3118900316774861,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 958,
+              "n_positive": 76,
+              "n_negative": 882,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.6931763933643632,
+              "auprc": 0.13636551495091834,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 958,
+              "n_positive": 191,
+              "n_negative": 767,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.734718117094548,
+              "auprc": 0.3536682515579018,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 958,
+              "n_positive": 276,
+              "n_negative": 682,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.7086042755748225,
+              "auprc": 0.43785097412399543,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 958,
+            "Cardiomegaly": 958,
+            "Consolidation": 958,
+            "Edema": 958,
+            "Effusion": 958
+          },
+          "macro_auroc": 0.6805031194756179,
+          "macro_auprc": 0.31322366946163793,
+          "micro_auroc": 0.6431166006382018,
+          "micro_auprc": 0.2901410113578238,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 521,
+          "rows_with_at_least_one_positive_pct": 0.5438413361169102,
+          "total_valid_label_instances": 4790,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 1.0
+        }
+      },
+      "test": {
+        "current_uzero_blankzero": {
+          "run_id": "nih_to_mimic",
+          "split": "test",
+          "policy_name": "current_uzero_blankzero",
+          "policy_short_name": "Policy A",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 596,
+              "n_positive": 170,
+              "n_negative": 426,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.5728182822424744,
+              "auprc": 0.33052995544598585,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 596,
+              "n_positive": 159,
+              "n_negative": 437,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.5618640530777312,
+              "auprc": 0.30834173213392885,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 596,
+              "n_positive": 56,
+              "n_negative": 540,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.5109457671957672,
+              "auprc": 0.11530170107865098,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 596,
+              "n_positive": 128,
+              "n_negative": 468,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.720486111111111,
+              "auprc": 0.37649649412763864,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 596,
+              "n_positive": 219,
+              "n_negative": 377,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.6853796494797912,
+              "auprc": 0.5252958190913354,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 596,
+            "Cardiomegaly": 596,
+            "Consolidation": 596,
+            "Edema": 596,
+            "Effusion": 596
+          },
+          "macro_auroc": 0.6102987726213751,
+          "macro_auprc": 0.33119314037550796,
+          "micro_auroc": 0.6089149675242596,
+          "micro_auprc": 0.31918409650512525,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 413,
+          "rows_with_at_least_one_positive_pct": 0.6929530201342282,
+          "total_valid_label_instances": 2980,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 1.0
+        },
+        "uignore_blankzero": {
+          "run_id": "nih_to_mimic",
+          "split": "test",
+          "policy_name": "uignore_blankzero",
+          "policy_short_name": "Policy B",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 564,
+              "n_positive": 170,
+              "n_negative": 394,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.5766721409375933,
+              "auprc": 0.3498619120595764,
+              "is_valid_label": true,
+              "mask_fraction": 0.9463087248322147
+            },
+            "Cardiomegaly": {
+              "n_valid": 583,
+              "n_positive": 159,
+              "n_negative": 424,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.56499940666904,
+              "auprc": 0.3170648584445834,
+              "is_valid_label": true,
+              "mask_fraction": 0.9781879194630873
+            },
+            "Consolidation": {
+              "n_valid": 586,
+              "n_positive": 56,
+              "n_negative": 530,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.5131738544474393,
+              "auprc": 0.11712259505086883,
+              "is_valid_label": true,
+              "mask_fraction": 0.9832214765100671
+            },
+            "Edema": {
+              "n_valid": 552,
+              "n_positive": 128,
+              "n_negative": 424,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.7392025353773585,
+              "auprc": 0.43068498603039956,
+              "is_valid_label": true,
+              "mask_fraction": 0.9261744966442953
+            },
+            "Effusion": {
+              "n_valid": 569,
+              "n_positive": 219,
+              "n_negative": 350,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.6976255707762558,
+              "auprc": 0.5557420067969506,
+              "is_valid_label": true,
+              "mask_fraction": 0.9546979865771812
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 564,
+            "Cardiomegaly": 583,
+            "Consolidation": 586,
+            "Edema": 552,
+            "Effusion": 569
+          },
+          "macro_auroc": 0.6183347016415374,
+          "macro_auprc": 0.35409527167647575,
+          "micro_auroc": 0.6170443776620675,
+          "micro_auprc": 0.3402382321455224,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 413,
+          "rows_with_at_least_one_positive_pct": 0.6929530201342282,
+          "total_valid_label_instances": 2854,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 0.9577181208053691
+        },
+        "uignore_blankignore": {
+          "run_id": "nih_to_mimic",
+          "split": "test",
+          "policy_name": "uignore_blankignore",
+          "policy_short_name": "Policy C",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 177,
+              "n_positive": 170,
+              "n_negative": 7,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.5739495798319327,
+              "auprc": 0.9674684030778229,
+              "is_valid_label": true,
+              "mask_fraction": 0.29697986577181207
+            },
+            "Cardiomegaly": {
+              "n_valid": 213,
+              "n_positive": 159,
+              "n_negative": 54,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.610528767761472,
+              "auprc": 0.8046329512377757,
+              "is_valid_label": true,
+              "mask_fraction": 0.3573825503355705
+            },
+            "Consolidation": {
+              "n_valid": 77,
+              "n_positive": 56,
+              "n_negative": 21,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.5034013605442178,
+              "auprc": 0.7400126390943758,
+              "is_valid_label": true,
+              "mask_fraction": 0.12919463087248323
+            },
+            "Edema": {
+              "n_valid": 207,
+              "n_positive": 128,
+              "n_negative": 79,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.7665150316455696,
+              "auprc": 0.8380267141142588,
+              "is_valid_label": true,
+              "mask_fraction": 0.34731543624161076
+            },
+            "Effusion": {
+              "n_valid": 289,
+              "n_positive": 219,
+              "n_negative": 70,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.691324200913242,
+              "auprc": 0.8522263711203084,
+              "is_valid_label": true,
+              "mask_fraction": 0.4848993288590604
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 177,
+            "Cardiomegaly": 213,
+            "Consolidation": 77,
+            "Edema": 207,
+            "Effusion": 289
+          },
+          "macro_auroc": 0.6291437881392867,
+          "macro_auprc": 0.8404734157289082,
+          "micro_auroc": 0.6965261514441842,
+          "micro_auprc": 0.8702660127874657,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 150,
+          "rows_with_no_valid_labels_pct": 0.2516778523489933,
+          "rows_with_at_least_one_positive": 413,
+          "rows_with_at_least_one_positive_pct": 0.6929530201342282,
+          "total_valid_label_instances": 963,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 0.3231543624161074
+        },
+        "uone_blankzero": {
+          "run_id": "nih_to_mimic",
+          "split": "test",
+          "policy_name": "uone_blankzero",
+          "policy_short_name": "Policy D",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 596,
+              "n_positive": 202,
+              "n_negative": 394,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.5729318490224656,
+              "auprc": 0.38509252810448263,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 596,
+              "n_positive": 172,
+              "n_negative": 424,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.567285541904344,
+              "auprc": 0.33571546597724344,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 596,
+              "n_positive": 66,
+              "n_negative": 530,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.5283018867924529,
+              "auprc": 0.1313522049838925,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 596,
+              "n_positive": 172,
+              "n_negative": 424,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.7270321412900396,
+              "auprc": 0.4959845998563427,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 596,
+              "n_positive": 246,
+              "n_negative": 350,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.6957839721254355,
+              "auprc": 0.5789772306916092,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 596,
+            "Cardiomegaly": 596,
+            "Consolidation": 596,
+            "Edema": 596,
+            "Effusion": 596
+          },
+          "macro_auroc": 0.6182670782269476,
+          "macro_auprc": 0.38542440592271404,
+          "micro_auroc": 0.6212008616579775,
+          "micro_auprc": 0.3805863346695388,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 440,
+          "rows_with_at_least_one_positive_pct": 0.738255033557047,
+          "total_valid_label_instances": 2980,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 1.0
+        }
+      }
+    },
+    "head_only_k5_seed2027": {
+      "run_id": "head_only_k5_seed2027",
+      "display_name": "head_only_k5",
+      "report_json_path": "/workspace/reports/head_only_k5_seed2027.json",
+      "headline_eligible": true,
+      "artifacts": {
+        "val": {
+          "prediction_path": "/workspace/outputs/head_only_k5_seed2027_val_predictions.csv",
+          "prediction_exists": true,
+          "match_method": "dicom_id",
+          "match_warnings": []
+        },
+        "test": {
+          "prediction_path": "/workspace/outputs/head_only_k5_seed2027_test_predictions.csv",
+          "prediction_exists": true,
+          "match_method": "dicom_id",
+          "match_warnings": []
+        }
+      },
+      "missing_prediction_files": [],
+      "val": {
+        "current_uzero_blankzero": {
+          "run_id": "head_only_k5_seed2027",
+          "split": "val",
+          "policy_name": "current_uzero_blankzero",
+          "policy_short_name": "Policy A",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 958,
+              "n_positive": 194,
+              "n_negative": 764,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.6238867598639823,
+              "auprc": 0.2622538273036821,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 958,
+              "n_positive": 205,
+              "n_negative": 753,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.6459301007352702,
+              "auprc": 0.2830088313587619,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 958,
+              "n_positive": 52,
+              "n_negative": 906,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.6709543216165732,
+              "auprc": 0.08858394599566427,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 958,
+              "n_positive": 131,
+              "n_negative": 827,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.7398395746605501,
+              "auprc": 0.27325496418686335,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 958,
+              "n_positive": 249,
+              "n_negative": 709,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.7127239564747,
+              "auprc": 0.4083242495870383,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 958,
+            "Cardiomegaly": 958,
+            "Consolidation": 958,
+            "Edema": 958,
+            "Effusion": 958
+          },
+          "macro_auroc": 0.6786669426702152,
+          "macro_auprc": 0.263085163686402,
+          "micro_auroc": 0.6386004074859974,
+          "micro_auprc": 0.2364383035882819,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 472,
+          "rows_with_at_least_one_positive_pct": 0.49269311064718163,
+          "total_valid_label_instances": 4790,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 1.0
+        },
+        "uignore_blankzero": {
+          "run_id": "head_only_k5_seed2027",
+          "split": "val",
+          "policy_name": "uignore_blankzero",
+          "policy_short_name": "Policy B",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 906,
+              "n_positive": 194,
+              "n_negative": 712,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.6306469361751419,
+              "auprc": 0.28024181024726014,
+              "is_valid_label": true,
+              "mask_fraction": 0.9457202505219207
+            },
+            "Cardiomegaly": {
+              "n_valid": 929,
+              "n_positive": 205,
+              "n_negative": 724,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.6484570812558954,
+              "auprc": 0.2912903212599839,
+              "is_valid_label": true,
+              "mask_fraction": 0.9697286012526096
+            },
+            "Consolidation": {
+              "n_valid": 934,
+              "n_positive": 52,
+              "n_negative": 882,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.6774812489098203,
+              "auprc": 0.09293621927800162,
+              "is_valid_label": true,
+              "mask_fraction": 0.9749478079331941
+            },
+            "Edema": {
+              "n_valid": 898,
+              "n_positive": 131,
+              "n_negative": 767,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.7522318540561522,
+              "auprc": 0.29807618446512507,
+              "is_valid_label": true,
+              "mask_fraction": 0.9373695198329853
+            },
+            "Effusion": {
+              "n_valid": 931,
+              "n_positive": 249,
+              "n_negative": 682,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.7172561212592304,
+              "auprc": 0.4211486420563406,
+              "is_valid_label": true,
+              "mask_fraction": 0.9718162839248434
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 906,
+            "Cardiomegaly": 929,
+            "Consolidation": 934,
+            "Edema": 898,
+            "Effusion": 931
+          },
+          "macro_auroc": 0.6852146483312481,
+          "macro_auprc": 0.27673863546134225,
+          "micro_auroc": 0.6459071862590352,
+          "micro_auprc": 0.25051649207104587,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 472,
+          "rows_with_at_least_one_positive_pct": 0.49269311064718163,
+          "total_valid_label_instances": 4598,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 0.9599164926931106
+        },
+        "uignore_blankignore": {
+          "run_id": "head_only_k5_seed2027",
+          "split": "val",
+          "policy_name": "uignore_blankignore",
+          "policy_short_name": "Policy C",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 198,
+              "n_positive": 194,
+              "n_negative": 4,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.5631443298969072,
+              "auprc": 0.9877201197687532,
+              "is_valid_label": true,
+              "mask_fraction": 0.20668058455114824
+            },
+            "Cardiomegaly": {
+              "n_valid": 268,
+              "n_positive": 205,
+              "n_negative": 63,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.6531165311653118,
+              "auprc": 0.8485328535409871,
+              "is_valid_label": true,
+              "mask_fraction": 0.2797494780793319
+            },
+            "Consolidation": {
+              "n_valid": 79,
+              "n_positive": 52,
+              "n_negative": 27,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.7435897435897436,
+              "auprc": 0.8186660233427722,
+              "is_valid_label": true,
+              "mask_fraction": 0.0824634655532359
+            },
+            "Edema": {
+              "n_valid": 229,
+              "n_positive": 131,
+              "n_negative": 98,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.7299423586228384,
+              "auprc": 0.7647621237902592,
+              "is_valid_label": true,
+              "mask_fraction": 0.23903966597077245
+            },
+            "Effusion": {
+              "n_valid": 343,
+              "n_positive": 249,
+              "n_negative": 94,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.7392976159958985,
+              "auprc": 0.8642104508377041,
+              "is_valid_label": true,
+              "mask_fraction": 0.35803757828810023
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 198,
+            "Cardiomegaly": 268,
+            "Consolidation": 79,
+            "Edema": 229,
+            "Effusion": 343
+          },
+          "macro_auroc": 0.6858181158541399,
+          "macro_auprc": 0.8567783142560952,
+          "micro_auroc": 0.7167158954162564,
+          "micro_auprc": 0.8589989124502776,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 402,
+          "rows_with_no_valid_labels_pct": 0.4196242171189979,
+          "rows_with_at_least_one_positive": 472,
+          "rows_with_at_least_one_positive_pct": 0.49269311064718163,
+          "total_valid_label_instances": 1117,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 0.23319415448851774
+        },
+        "uone_blankzero": {
+          "run_id": "head_only_k5_seed2027",
+          "split": "val",
+          "policy_name": "uone_blankzero",
+          "policy_short_name": "Policy D",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 958,
+              "n_positive": 246,
+              "n_negative": 712,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.6237553667671509,
+              "auprc": 0.32587322406984026,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 958,
+              "n_positive": 234,
+              "n_negative": 724,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.6409430042026727,
+              "auprc": 0.3113825618011471,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 958,
+              "n_positive": 76,
+              "n_negative": 882,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.693295739348371,
+              "auprc": 0.13640279453639903,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 958,
+              "n_positive": 191,
+              "n_negative": 767,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.7344382478822092,
+              "auprc": 0.3537756271500924,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 958,
+              "n_positive": 276,
+              "n_negative": 682,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.7080252029410515,
+              "auprc": 0.4371169165621764,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 958,
+            "Cardiomegaly": 958,
+            "Consolidation": 958,
+            "Edema": 958,
+            "Effusion": 958
+          },
+          "macro_auroc": 0.6800915122282911,
+          "macro_auprc": 0.31291022482393105,
+          "micro_auroc": 0.6456548495306127,
+          "micro_auprc": 0.29224984118832087,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 521,
+          "rows_with_at_least_one_positive_pct": 0.5438413361169102,
+          "total_valid_label_instances": 4790,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 1.0
+        }
+      },
+      "test": {
+        "current_uzero_blankzero": {
+          "run_id": "head_only_k5_seed2027",
+          "split": "test",
+          "policy_name": "current_uzero_blankzero",
+          "policy_short_name": "Policy A",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 596,
+              "n_positive": 170,
+              "n_negative": 426,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.5728251864125932,
+              "auprc": 0.3306655418684795,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 596,
+              "n_positive": 159,
+              "n_negative": 437,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.5618208770490624,
+              "auprc": 0.30774070185032437,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 596,
+              "n_positive": 56,
+              "n_negative": 540,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.5105820105820107,
+              "auprc": 0.1152013693943664,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 596,
+              "n_positive": 128,
+              "n_negative": 468,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.7203024839743589,
+              "auprc": 0.3763271946206186,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 596,
+              "n_positive": 219,
+              "n_negative": 377,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.6856097767765221,
+              "auprc": 0.5256207675304534,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 596,
+            "Cardiomegaly": 596,
+            "Consolidation": 596,
+            "Edema": 596,
+            "Effusion": 596
+          },
+          "macro_auroc": 0.6102280669589095,
+          "macro_auprc": 0.3311111150528484,
+          "micro_auroc": 0.611970203021994,
+          "micro_auprc": 0.32287582016336114,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 413,
+          "rows_with_at_least_one_positive_pct": 0.6929530201342282,
+          "total_valid_label_instances": 2980,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 1.0
+        },
+        "uignore_blankzero": {
+          "run_id": "head_only_k5_seed2027",
+          "split": "test",
+          "policy_name": "uignore_blankzero",
+          "policy_short_name": "Policy B",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 564,
+              "n_positive": 170,
+              "n_negative": 394,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.5766796058524932,
+              "auprc": 0.3498486725617109,
+              "is_valid_label": true,
+              "mask_fraction": 0.9463087248322147
+            },
+            "Cardiomegaly": {
+              "n_valid": 583,
+              "n_positive": 159,
+              "n_negative": 424,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.5649845733950398,
+              "auprc": 0.31645951115780524,
+              "is_valid_label": true,
+              "mask_fraction": 0.9781879194630873
+            },
+            "Consolidation": {
+              "n_valid": 586,
+              "n_positive": 56,
+              "n_negative": 530,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.5128369272237197,
+              "auprc": 0.11702604980604259,
+              "is_valid_label": true,
+              "mask_fraction": 0.9832214765100671
+            },
+            "Edema": {
+              "n_valid": 552,
+              "n_positive": 128,
+              "n_negative": 424,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.7389261497641509,
+              "auprc": 0.43022517155166345,
+              "is_valid_label": true,
+              "mask_fraction": 0.9261744966442953
+            },
+            "Effusion": {
+              "n_valid": 569,
+              "n_positive": 219,
+              "n_negative": 350,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.6978082191780821,
+              "auprc": 0.555979315749098,
+              "is_valid_label": true,
+              "mask_fraction": 0.9546979865771812
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 564,
+            "Cardiomegaly": 583,
+            "Consolidation": 586,
+            "Edema": 552,
+            "Effusion": 569
+          },
+          "macro_auroc": 0.6182470950826972,
+          "macro_auprc": 0.35390774416526405,
+          "micro_auroc": 0.6202102099782142,
+          "micro_auprc": 0.3443955553645185,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 413,
+          "rows_with_at_least_one_positive_pct": 0.6929530201342282,
+          "total_valid_label_instances": 2854,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 0.9577181208053691
+        },
+        "uignore_blankignore": {
+          "run_id": "head_only_k5_seed2027",
+          "split": "test",
+          "policy_name": "uignore_blankignore",
+          "policy_short_name": "Policy C",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 177,
+              "n_positive": 170,
+              "n_negative": 7,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.5756302521008403,
+              "auprc": 0.968081727615274,
+              "is_valid_label": true,
+              "mask_fraction": 0.29697986577181207
+            },
+            "Cardiomegaly": {
+              "n_valid": 213,
+              "n_positive": 159,
+              "n_negative": 54,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.6107617051013275,
+              "auprc": 0.8044097896719222,
+              "is_valid_label": true,
+              "mask_fraction": 0.3573825503355705
+            },
+            "Consolidation": {
+              "n_valid": 77,
+              "n_positive": 56,
+              "n_negative": 21,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.504251700680272,
+              "auprc": 0.7401611960941124,
+              "is_valid_label": true,
+              "mask_fraction": 0.12919463087248323
+            },
+            "Edema": {
+              "n_valid": 207,
+              "n_positive": 128,
+              "n_negative": 79,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.7656249999999999,
+              "auprc": 0.8370342343405617,
+              "is_valid_label": true,
+              "mask_fraction": 0.34731543624161076
+            },
+            "Effusion": {
+              "n_valid": 289,
+              "n_positive": 219,
+              "n_negative": 70,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.690737116764514,
+              "auprc": 0.8517116423404376,
+              "is_valid_label": true,
+              "mask_fraction": 0.4848993288590604
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 177,
+            "Cardiomegaly": 213,
+            "Consolidation": 77,
+            "Edema": 207,
+            "Effusion": 289
+          },
+          "macro_auroc": 0.6294011549293907,
+          "macro_auprc": 0.8402797180124615,
+          "micro_auroc": 0.6951836869869658,
+          "micro_auprc": 0.8693040592851021,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 150,
+          "rows_with_no_valid_labels_pct": 0.2516778523489933,
+          "rows_with_at_least_one_positive": 413,
+          "rows_with_at_least_one_positive_pct": 0.6929530201342282,
+          "total_valid_label_instances": 963,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 0.3231543624161074
+        },
+        "uone_blankzero": {
+          "run_id": "head_only_k5_seed2027",
+          "split": "test",
+          "policy_name": "uone_blankzero",
+          "policy_short_name": "Policy D",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 596,
+              "n_positive": 202,
+              "n_negative": 394,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.572900437251847,
+              "auprc": 0.38519059909265696,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 596,
+              "n_positive": 172,
+              "n_negative": 424,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.5674500877577885,
+              "auprc": 0.33523802586780604,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 596,
+              "n_positive": 66,
+              "n_negative": 530,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.5278444825614638,
+              "auprc": 0.13121479720905307,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 596,
+              "n_positive": 172,
+              "n_negative": 424,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.7268264589732338,
+              "auprc": 0.4956767577963338,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 596,
+              "n_positive": 246,
+              "n_negative": 350,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.6958885017421603,
+              "auprc": 0.5791072106217717,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 596,
+            "Cardiomegaly": 596,
+            "Consolidation": 596,
+            "Edema": 596,
+            "Effusion": 596
+          },
+          "macro_auroc": 0.6181819936572986,
+          "macro_auprc": 0.38528547811752434,
+          "micro_auroc": 0.6242593410359668,
+          "micro_auprc": 0.38484344745243954,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 440,
+          "rows_with_at_least_one_positive_pct": 0.738255033557047,
+          "total_valid_label_instances": 2980,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 1.0
+        }
+      }
+    },
+    "head_only_k20_seed2027": {
+      "run_id": "head_only_k20_seed2027",
+      "display_name": "head_only_k20",
+      "report_json_path": "/workspace/reports/head_only_k20_seed2027.json",
+      "headline_eligible": true,
+      "artifacts": {
+        "val": {
+          "prediction_path": "/workspace/outputs/head_only_k20_seed2027_val_predictions.csv",
+          "prediction_exists": true,
+          "match_method": "dicom_id",
+          "match_warnings": []
+        },
+        "test": {
+          "prediction_path": "/workspace/outputs/head_only_k20_seed2027_test_predictions.csv",
+          "prediction_exists": true,
+          "match_method": "dicom_id",
+          "match_warnings": []
+        }
+      },
+      "missing_prediction_files": [],
+      "val": {
+        "current_uzero_blankzero": {
+          "run_id": "head_only_k20_seed2027",
+          "split": "val",
+          "policy_name": "current_uzero_blankzero",
+          "policy_short_name": "Policy A",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 958,
+              "n_positive": 194,
+              "n_negative": 764,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.6232188157823717,
+              "auprc": 0.2617031134736755,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 958,
+              "n_positive": 205,
+              "n_negative": 753,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.6442911281702458,
+              "auprc": 0.2820683660095271,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 958,
+              "n_positive": 52,
+              "n_negative": 906,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.6706147053829172,
+              "auprc": 0.08872690599035304,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 958,
+              "n_positive": 131,
+              "n_negative": 827,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.7399226487718877,
+              "auprc": 0.2733019291457679,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 958,
+              "n_positive": 249,
+              "n_negative": 709,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.7121008717521708,
+              "auprc": 0.40796616533171354,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 958,
+            "Cardiomegaly": 958,
+            "Consolidation": 958,
+            "Edema": 958,
+            "Effusion": 958
+          },
+          "macro_auroc": 0.6780296339719187,
+          "macro_auprc": 0.2627532959902074,
+          "micro_auroc": 0.6488258561202993,
+          "micro_auprc": 0.24392557001890847,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 472,
+          "rows_with_at_least_one_positive_pct": 0.49269311064718163,
+          "total_valid_label_instances": 4790,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 1.0
+        },
+        "uignore_blankzero": {
+          "run_id": "head_only_k20_seed2027",
+          "split": "val",
+          "policy_name": "uignore_blankzero",
+          "policy_short_name": "Policy B",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 906,
+              "n_positive": 194,
+              "n_negative": 712,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.6299519286458936,
+              "auprc": 0.27950119988177574,
+              "is_valid_label": true,
+              "mask_fraction": 0.9457202505219207
+            },
+            "Cardiomegaly": {
+              "n_valid": 929,
+              "n_positive": 205,
+              "n_negative": 724,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.6468467861474194,
+              "auprc": 0.2902990901134403,
+              "is_valid_label": true,
+              "mask_fraction": 0.9697286012526096
+            },
+            "Consolidation": {
+              "n_valid": 934,
+              "n_positive": 52,
+              "n_negative": 882,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.6770887842316414,
+              "auprc": 0.09305449742194212,
+              "is_valid_label": true,
+              "mask_fraction": 0.9749478079331941
+            },
+            "Edema": {
+              "n_valid": 898,
+              "n_positive": 131,
+              "n_negative": 767,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.7523413318470894,
+              "auprc": 0.2981507657179867,
+              "is_valid_label": true,
+              "mask_fraction": 0.9373695198329853
+            },
+            "Effusion": {
+              "n_valid": 931,
+              "n_positive": 249,
+              "n_negative": 682,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.7165848143306364,
+              "auprc": 0.4204124893855226,
+              "is_valid_label": true,
+              "mask_fraction": 0.9718162839248434
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 906,
+            "Cardiomegaly": 929,
+            "Consolidation": 934,
+            "Edema": 898,
+            "Effusion": 931
+          },
+          "macro_auroc": 0.6845627290405359,
+          "macro_auprc": 0.27628360850413347,
+          "micro_auroc": 0.6558689256916979,
+          "micro_auprc": 0.2581277162622123,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 472,
+          "rows_with_at_least_one_positive_pct": 0.49269311064718163,
+          "total_valid_label_instances": 4598,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 0.9599164926931106
+        },
+        "uignore_blankignore": {
+          "run_id": "head_only_k20_seed2027",
+          "split": "val",
+          "policy_name": "uignore_blankignore",
+          "policy_short_name": "Policy C",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 198,
+              "n_positive": 194,
+              "n_negative": 4,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.5682989690721649,
+              "auprc": 0.9878760276435012,
+              "is_valid_label": true,
+              "mask_fraction": 0.20668058455114824
+            },
+            "Cardiomegaly": {
+              "n_valid": 268,
+              "n_positive": 205,
+              "n_negative": 63,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.6522648083623693,
+              "auprc": 0.8469518388082986,
+              "is_valid_label": true,
+              "mask_fraction": 0.2797494780793319
+            },
+            "Consolidation": {
+              "n_valid": 79,
+              "n_positive": 52,
+              "n_negative": 27,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.7421652421652422,
+              "auprc": 0.8170441582169478,
+              "is_valid_label": true,
+              "mask_fraction": 0.0824634655532359
+            },
+            "Edema": {
+              "n_valid": 229,
+              "n_positive": 131,
+              "n_negative": 98,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.7294749961053123,
+              "auprc": 0.7642429469157327,
+              "is_valid_label": true,
+              "mask_fraction": 0.23903966597077245
+            },
+            "Effusion": {
+              "n_valid": 343,
+              "n_positive": 249,
+              "n_negative": 94,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.7377595488336325,
+              "auprc": 0.8633921534736395,
+              "is_valid_label": true,
+              "mask_fraction": 0.35803757828810023
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 198,
+            "Cardiomegaly": 268,
+            "Consolidation": 79,
+            "Edema": 229,
+            "Effusion": 343
+          },
+          "macro_auroc": 0.6859927129077442,
+          "macro_auprc": 0.855901425011624,
+          "micro_auroc": 0.7175616200886958,
+          "micro_auprc": 0.8591787052944466,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 402,
+          "rows_with_no_valid_labels_pct": 0.4196242171189979,
+          "rows_with_at_least_one_positive": 472,
+          "rows_with_at_least_one_positive_pct": 0.49269311064718163,
+          "total_valid_label_instances": 1117,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 0.23319415448851774
+        },
+        "uone_blankzero": {
+          "run_id": "head_only_k20_seed2027",
+          "split": "val",
+          "policy_name": "uone_blankzero",
+          "policy_short_name": "Policy D",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 958,
+              "n_positive": 246,
+              "n_negative": 712,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.6233442952407053,
+              "auprc": 0.3248256208349065,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 958,
+              "n_positive": 234,
+              "n_negative": 724,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.6396326202956036,
+              "auprc": 0.31050779782765625,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 958,
+              "n_positive": 76,
+              "n_negative": 882,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.6928631101563432,
+              "auprc": 0.13638053414382773,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 958,
+              "n_positive": 191,
+              "n_negative": 767,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.734540639057455,
+              "auprc": 0.3535962810778138,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 958,
+              "n_positive": 276,
+              "n_negative": 682,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.7073611288197542,
+              "auprc": 0.43627447301217004,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 958,
+            "Cardiomegaly": 958,
+            "Consolidation": 958,
+            "Edema": 958,
+            "Effusion": 958
+          },
+          "macro_auroc": 0.6795483587139722,
+          "macro_auprc": 0.31231694137927485,
+          "micro_auroc": 0.6533457579468351,
+          "micro_auprc": 0.2984371781875206,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 521,
+          "rows_with_at_least_one_positive_pct": 0.5438413361169102,
+          "total_valid_label_instances": 4790,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 1.0
+        }
+      },
+      "test": {
+        "current_uzero_blankzero": {
+          "run_id": "head_only_k20_seed2027",
+          "split": "test",
+          "policy_name": "current_uzero_blankzero",
+          "policy_short_name": "Policy A",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 596,
+              "n_positive": 170,
+              "n_negative": 426,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.5727699530516431,
+              "auprc": 0.33112160500758037,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 596,
+              "n_positive": 159,
+              "n_negative": 437,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.5624541254695392,
+              "auprc": 0.31159152136548895,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 596,
+              "n_positive": 56,
+              "n_negative": 540,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.5104828042328042,
+              "auprc": 0.11468656862176953,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 596,
+              "n_positive": 128,
+              "n_negative": 468,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.7208032852564102,
+              "auprc": 0.376796799541877,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 596,
+              "n_positive": 219,
+              "n_negative": 377,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.685391761442777,
+              "auprc": 0.5254822753131211,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 596,
+            "Cardiomegaly": 596,
+            "Consolidation": 596,
+            "Edema": 596,
+            "Effusion": 596
+          },
+          "macro_auroc": 0.6103803858906348,
+          "macro_auprc": 0.33193575396996733,
+          "micro_auroc": 0.621581660929934,
+          "micro_auprc": 0.3336639550576703,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 413,
+          "rows_with_at_least_one_positive_pct": 0.6929530201342282,
+          "total_valid_label_instances": 2980,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 1.0
+        },
+        "uignore_blankzero": {
+          "run_id": "head_only_k20_seed2027",
+          "split": "test",
+          "policy_name": "uignore_blankzero",
+          "policy_short_name": "Policy B",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 564,
+              "n_positive": 170,
+              "n_negative": 394,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.5766049567034935,
+              "auprc": 0.35034157683303535,
+              "is_valid_label": true,
+              "mask_fraction": 0.9463087248322147
+            },
+            "Cardiomegaly": {
+              "n_valid": 583,
+              "n_positive": 159,
+              "n_negative": 424,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.5655927376290495,
+              "auprc": 0.32023248036513785,
+              "is_valid_label": true,
+              "mask_fraction": 0.9781879194630873
+            },
+            "Consolidation": {
+              "n_valid": 586,
+              "n_positive": 56,
+              "n_negative": 530,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.5127021563342318,
+              "auprc": 0.11650233527487514,
+              "is_valid_label": true,
+              "mask_fraction": 0.9832214765100671
+            },
+            "Edema": {
+              "n_valid": 552,
+              "n_positive": 128,
+              "n_negative": 424,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.7395341981132076,
+              "auprc": 0.43086842388082225,
+              "is_valid_label": true,
+              "mask_fraction": 0.9261744966442953
+            },
+            "Effusion": {
+              "n_valid": 569,
+              "n_positive": 219,
+              "n_negative": 350,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.6972080887149381,
+              "auprc": 0.5555805508707046,
+              "is_valid_label": true,
+              "mask_fraction": 0.9546979865771812
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 564,
+            "Cardiomegaly": 583,
+            "Consolidation": 586,
+            "Edema": 552,
+            "Effusion": 569
+          },
+          "macro_auroc": 0.6183284274989841,
+          "macro_auprc": 0.35470507344491503,
+          "micro_auroc": 0.6298432245072441,
+          "micro_auprc": 0.3559634846803639,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 413,
+          "rows_with_at_least_one_positive_pct": 0.6929530201342282,
+          "total_valid_label_instances": 2854,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 0.9577181208053691
+        },
+        "uignore_blankignore": {
+          "run_id": "head_only_k20_seed2027",
+          "split": "test",
+          "policy_name": "uignore_blankignore",
+          "policy_short_name": "Policy C",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 177,
+              "n_positive": 170,
+              "n_negative": 7,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.5773109243697478,
+              "auprc": 0.9680013273771562,
+              "is_valid_label": true,
+              "mask_fraction": 0.29697986577181207
+            },
+            "Cardiomegaly": {
+              "n_valid": 213,
+              "n_positive": 159,
+              "n_negative": 54,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.6109946424411833,
+              "auprc": 0.8074703904264322,
+              "is_valid_label": true,
+              "mask_fraction": 0.3573825503355705
+            },
+            "Consolidation": {
+              "n_valid": 77,
+              "n_positive": 56,
+              "n_negative": 21,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.5034013605442177,
+              "auprc": 0.7388356419490093,
+              "is_valid_label": true,
+              "mask_fraction": 0.12919463087248323
+            },
+            "Edema": {
+              "n_valid": 207,
+              "n_positive": 128,
+              "n_negative": 79,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.766613924050633,
+              "auprc": 0.8374665911542803,
+              "is_valid_label": true,
+              "mask_fraction": 0.34731543624161076
+            },
+            "Effusion": {
+              "n_valid": 289,
+              "n_positive": 219,
+              "n_negative": 70,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.6901500326157861,
+              "auprc": 0.8521611682742298,
+              "is_valid_label": true,
+              "mask_fraction": 0.4848993288590604
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 177,
+            "Cardiomegaly": 213,
+            "Consolidation": 77,
+            "Edema": 207,
+            "Effusion": 289
+          },
+          "macro_auroc": 0.6296941768043136,
+          "macro_auprc": 0.8407870238362214,
+          "micro_auroc": 0.6959702410522083,
+          "micro_auprc": 0.8681634115803094,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 150,
+          "rows_with_no_valid_labels_pct": 0.2516778523489933,
+          "rows_with_at_least_one_positive": 413,
+          "rows_with_at_least_one_positive_pct": 0.6929530201342282,
+          "total_valid_label_instances": 963,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 0.3231543624161074
+        },
+        "uone_blankzero": {
+          "run_id": "head_only_k20_seed2027",
+          "split": "test",
+          "policy_name": "uone_blankzero",
+          "policy_short_name": "Policy D",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 596,
+              "n_positive": 202,
+              "n_negative": 394,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.5726114489621551,
+              "auprc": 0.3855835028964194,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 596,
+              "n_positive": 172,
+              "n_negative": 424,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.5682179684071962,
+              "auprc": 0.33895199260922704,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 596,
+              "n_positive": 66,
+              "n_negative": 530,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.5276157804459691,
+              "auprc": 0.13069377255863016,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 596,
+              "n_positive": 172,
+              "n_negative": 424,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.7273200965335673,
+              "auprc": 0.49614401204794717,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 596,
+              "n_positive": 246,
+              "n_negative": 350,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.6953890824622532,
+              "auprc": 0.5793222968556647,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 596,
+            "Cardiomegaly": 596,
+            "Consolidation": 596,
+            "Edema": 596,
+            "Effusion": 596
+          },
+          "macro_auroc": 0.6182308753622281,
+          "macro_auprc": 0.3861391153935777,
+          "micro_auroc": 0.6325820739110088,
+          "micro_auprc": 0.39542315395833216,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 440,
+          "rows_with_at_least_one_positive_pct": 0.738255033557047,
+          "total_valid_label_instances": 2980,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 1.0
+        }
+      }
+    },
+    "full_ft_k5_seed2027": {
+      "run_id": "full_ft_k5_seed2027",
+      "display_name": "full_ft_k5",
+      "report_json_path": "/workspace/reports/full_ft_k5_seed2027.json",
+      "headline_eligible": true,
+      "artifacts": {
+        "val": {
+          "prediction_path": "/workspace/outputs/full_ft_k5_seed2027_val_predictions.csv",
+          "prediction_exists": true,
+          "match_method": "dicom_id",
+          "match_warnings": []
+        },
+        "test": {
+          "prediction_path": "/workspace/outputs/full_ft_k5_seed2027_test_predictions.csv",
+          "prediction_exists": true,
+          "match_method": "dicom_id",
+          "match_warnings": []
+        }
+      },
+      "missing_prediction_files": [],
+      "val": {
+        "current_uzero_blankzero": {
+          "run_id": "full_ft_k5_seed2027",
+          "split": "val",
+          "policy_name": "current_uzero_blankzero",
+          "policy_short_name": "Policy A",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 958,
+              "n_positive": 194,
+              "n_negative": 764,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.6681802234576564,
+              "auprc": 0.3003123746516395,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 958,
+              "n_positive": 205,
+              "n_negative": 753,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.6491173517312863,
+              "auprc": 0.3028854815918944,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 958,
+              "n_positive": 52,
+              "n_negative": 906,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.6788503990490746,
+              "auprc": 0.08955751272643692,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 958,
+              "n_positive": 131,
+              "n_negative": 827,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.7531406629314085,
+              "auprc": 0.2847521647901409,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 958,
+              "n_positive": 249,
+              "n_negative": 709,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.7369053081153953,
+              "auprc": 0.4242245328412475,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 958,
+            "Cardiomegaly": 958,
+            "Consolidation": 958,
+            "Edema": 958,
+            "Effusion": 958
+          },
+          "macro_auroc": 0.6972387890569642,
+          "macro_auprc": 0.2803464133202719,
+          "micro_auroc": 0.7022957030379684,
+          "micro_auprc": 0.28716157291130595,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 472,
+          "rows_with_at_least_one_positive_pct": 0.49269311064718163,
+          "total_valid_label_instances": 4790,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 1.0
+        },
+        "uignore_blankzero": {
+          "run_id": "full_ft_k5_seed2027",
+          "split": "val",
+          "policy_name": "uignore_blankzero",
+          "policy_short_name": "Policy B",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 906,
+              "n_positive": 194,
+              "n_negative": 712,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.6764667554731844,
+              "auprc": 0.32040048411948163,
+              "is_valid_label": true,
+              "mask_fraction": 0.9457202505219207
+            },
+            "Cardiomegaly": {
+              "n_valid": 929,
+              "n_positive": 205,
+              "n_negative": 724,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.650296456003234,
+              "auprc": 0.3109971523375623,
+              "is_valid_label": true,
+              "mask_fraction": 0.9697286012526096
+            },
+            "Consolidation": {
+              "n_valid": 934,
+              "n_positive": 52,
+              "n_negative": 882,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.6856793999651143,
+              "auprc": 0.09466834964439401,
+              "is_valid_label": true,
+              "mask_fraction": 0.9749478079331941
+            },
+            "Edema": {
+              "n_valid": 898,
+              "n_positive": 131,
+              "n_negative": 767,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.7657274799207779,
+              "auprc": 0.30864683389800035,
+              "is_valid_label": true,
+              "mask_fraction": 0.9373695198329853
+            },
+            "Effusion": {
+              "n_valid": 931,
+              "n_positive": 249,
+              "n_negative": 682,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.7404338762675335,
+              "auprc": 0.43561159154849755,
+              "is_valid_label": true,
+              "mask_fraction": 0.9718162839248434
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 906,
+            "Cardiomegaly": 929,
+            "Consolidation": 934,
+            "Edema": 898,
+            "Effusion": 931
+          },
+          "macro_auroc": 0.7037207935259688,
+          "macro_auprc": 0.29406488230958716,
+          "micro_auroc": 0.7076808959432043,
+          "micro_auprc": 0.3015683221791523,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 472,
+          "rows_with_at_least_one_positive_pct": 0.49269311064718163,
+          "total_valid_label_instances": 4598,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 0.9599164926931106
+        },
+        "uignore_blankignore": {
+          "run_id": "full_ft_k5_seed2027",
+          "split": "val",
+          "policy_name": "uignore_blankignore",
+          "policy_short_name": "Policy C",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 198,
+              "n_positive": 194,
+              "n_negative": 4,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.6920103092783505,
+              "auprc": 0.9920730495640657,
+              "is_valid_label": true,
+              "mask_fraction": 0.20668058455114824
+            },
+            "Cardiomegaly": {
+              "n_valid": 268,
+              "n_positive": 205,
+              "n_negative": 63,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.6529616724738676,
+              "auprc": 0.8495542520498052,
+              "is_valid_label": true,
+              "mask_fraction": 0.2797494780793319
+            },
+            "Consolidation": {
+              "n_valid": 79,
+              "n_positive": 52,
+              "n_negative": 27,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.7592592592592592,
+              "auprc": 0.858417607808966,
+              "is_valid_label": true,
+              "mask_fraction": 0.0824634655532359
+            },
+            "Edema": {
+              "n_valid": 229,
+              "n_positive": 131,
+              "n_negative": 98,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.7430285091135691,
+              "auprc": 0.7741568006525297,
+              "is_valid_label": true,
+              "mask_fraction": 0.23903966597077245
+            },
+            "Effusion": {
+              "n_valid": 343,
+              "n_positive": 249,
+              "n_negative": 94,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.7657011022814663,
+              "auprc": 0.8628720702099693,
+              "is_valid_label": true,
+              "mask_fraction": 0.35803757828810023
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 198,
+            "Cardiomegaly": 268,
+            "Consolidation": 79,
+            "Edema": 229,
+            "Effusion": 343
+          },
+          "macro_auroc": 0.7225921704813026,
+          "macro_auprc": 0.8674147560570671,
+          "micro_auroc": 0.7699166056566777,
+          "micro_auprc": 0.8867547218172854,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 402,
+          "rows_with_no_valid_labels_pct": 0.4196242171189979,
+          "rows_with_at_least_one_positive": 472,
+          "rows_with_at_least_one_positive_pct": 0.49269311064718163,
+          "total_valid_label_instances": 1117,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 0.23319415448851774
+        },
+        "uone_blankzero": {
+          "run_id": "full_ft_k5_seed2027",
+          "split": "val",
+          "policy_name": "uone_blankzero",
+          "policy_short_name": "Policy D",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 958,
+              "n_positive": 246,
+              "n_negative": 712,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.6676429615419749,
+              "auprc": 0.36259504411763654,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 958,
+              "n_positive": 234,
+              "n_negative": 724,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.6366222788874721,
+              "auprc": 0.3278830304217386,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 958,
+              "n_positive": 76,
+              "n_negative": 882,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.6996210765007758,
+              "auprc": 0.14111762169947878,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 958,
+              "n_positive": 191,
+              "n_negative": 767,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.747585274783784,
+              "auprc": 0.36228688138583287,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 958,
+              "n_positive": 276,
+              "n_negative": 682,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.7291958859280037,
+              "auprc": 0.4489275315959672,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 958,
+            "Cardiomegaly": 958,
+            "Consolidation": 958,
+            "Edema": 958,
+            "Effusion": 958
+          },
+          "macro_auroc": 0.6961334955284022,
+          "macro_auprc": 0.32856202184413086,
+          "micro_auroc": 0.6916414891786755,
+          "micro_auprc": 0.33231320312306145,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 521,
+          "rows_with_at_least_one_positive_pct": 0.5438413361169102,
+          "total_valid_label_instances": 4790,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 1.0
+        }
+      },
+      "test": {
+        "current_uzero_blankzero": {
+          "run_id": "full_ft_k5_seed2027",
+          "split": "test",
+          "policy_name": "current_uzero_blankzero",
+          "policy_short_name": "Policy A",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 596,
+              "n_positive": 170,
+              "n_negative": 426,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.5910107705053853,
+              "auprc": 0.3438110305858373,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 596,
+              "n_positive": 159,
+              "n_negative": 437,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.5829627390872587,
+              "auprc": 0.3235346032765588,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 596,
+              "n_positive": 56,
+              "n_negative": 540,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.5254960317460317,
+              "auprc": 0.10120052416189841,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 596,
+              "n_positive": 128,
+              "n_negative": 468,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.7349926549145299,
+              "auprc": 0.40968192309266005,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 596,
+              "n_positive": 219,
+              "n_negative": 377,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.6851131862941026,
+              "auprc": 0.5397833102025096,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 596,
+            "Cardiomegaly": 596,
+            "Consolidation": 596,
+            "Edema": 596,
+            "Effusion": 596
+          },
+          "macro_auroc": 0.6239150765094617,
+          "macro_auprc": 0.34360227826389284,
+          "micro_auroc": 0.6538380199521615,
+          "micro_auprc": 0.3616239482656398,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 413,
+          "rows_with_at_least_one_positive_pct": 0.6929530201342282,
+          "total_valid_label_instances": 2980,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 1.0
+        },
+        "uignore_blankzero": {
+          "run_id": "full_ft_k5_seed2027",
+          "split": "test",
+          "policy_name": "uignore_blankzero",
+          "policy_short_name": "Policy B",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 564,
+              "n_positive": 170,
+              "n_negative": 394,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.5978948939982083,
+              "auprc": 0.36410086429565186,
+              "is_valid_label": true,
+              "mask_fraction": 0.9463087248322147
+            },
+            "Cardiomegaly": {
+              "n_valid": 583,
+              "n_positive": 159,
+              "n_negative": 424,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.5862554883113802,
+              "auprc": 0.33354771012008744,
+              "is_valid_label": true,
+              "mask_fraction": 0.9781879194630873
+            },
+            "Consolidation": {
+              "n_valid": 586,
+              "n_positive": 56,
+              "n_negative": 530,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.5283018867924528,
+              "auprc": 0.10343929906428517,
+              "is_valid_label": true,
+              "mask_fraction": 0.9832214765100671
+            },
+            "Edema": {
+              "n_valid": 552,
+              "n_positive": 128,
+              "n_negative": 424,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.7508844339622641,
+              "auprc": 0.4670561325241853,
+              "is_valid_label": true,
+              "mask_fraction": 0.9261744966442953
+            },
+            "Effusion": {
+              "n_valid": 569,
+              "n_positive": 219,
+              "n_negative": 350,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.6935681669928244,
+              "auprc": 0.561716850479345,
+              "is_valid_label": true,
+              "mask_fraction": 0.9546979865771812
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 564,
+            "Cardiomegaly": 583,
+            "Consolidation": 586,
+            "Edema": 552,
+            "Effusion": 569
+          },
+          "macro_auroc": 0.631380974011426,
+          "macro_auprc": 0.36597217129671095,
+          "micro_auroc": 0.6604006685104784,
+          "micro_auprc": 0.3817446211535246,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 413,
+          "rows_with_at_least_one_positive_pct": 0.6929530201342282,
+          "total_valid_label_instances": 2854,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 0.9577181208053691
+        },
+        "uignore_blankignore": {
+          "run_id": "full_ft_k5_seed2027",
+          "split": "test",
+          "policy_name": "uignore_blankignore",
+          "policy_short_name": "Policy C",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 177,
+              "n_positive": 170,
+              "n_negative": 7,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.6302521008403361,
+              "auprc": 0.9780620336885512,
+              "is_valid_label": true,
+              "mask_fraction": 0.29697986577181207
+            },
+            "Cardiomegaly": {
+              "n_valid": 213,
+              "n_positive": 159,
+              "n_negative": 54,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.6366177498252971,
+              "auprc": 0.8259917768710245,
+              "is_valid_label": true,
+              "mask_fraction": 0.3573825503355705
+            },
+            "Consolidation": {
+              "n_valid": 77,
+              "n_positive": 56,
+              "n_negative": 21,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.5289115646258504,
+              "auprc": 0.7788286723779684,
+              "is_valid_label": true,
+              "mask_fraction": 0.12919463087248323
+            },
+            "Edema": {
+              "n_valid": 207,
+              "n_positive": 128,
+              "n_negative": 79,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.8004351265822784,
+              "auprc": 0.8766412746457337,
+              "is_valid_label": true,
+              "mask_fraction": 0.34731543624161076
+            },
+            "Effusion": {
+              "n_valid": 289,
+              "n_positive": 219,
+              "n_negative": 70,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.6868232224396608,
+              "auprc": 0.8568398042201928,
+              "is_valid_label": true,
+              "mask_fraction": 0.4848993288590604
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 177,
+            "Cardiomegaly": 213,
+            "Consolidation": 77,
+            "Edema": 207,
+            "Effusion": 289
+          },
+          "macro_auroc": 0.6566079528626846,
+          "macro_auprc": 0.863272712360694,
+          "micro_auroc": 0.7305490502211813,
+          "micro_auprc": 0.880458933190142,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 150,
+          "rows_with_no_valid_labels_pct": 0.2516778523489933,
+          "rows_with_at_least_one_positive": 413,
+          "rows_with_at_least_one_positive_pct": 0.6929530201342282,
+          "total_valid_label_instances": 963,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 0.3231543624161074
+        },
+        "uone_blankzero": {
+          "run_id": "full_ft_k5_seed2027",
+          "split": "test",
+          "policy_name": "uone_blankzero",
+          "policy_short_name": "Policy D",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 596,
+              "n_positive": 202,
+              "n_negative": 394,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.596308488716892,
+              "auprc": 0.3991950427979365,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 596,
+              "n_positive": 172,
+              "n_negative": 424,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.5877715006581834,
+              "auprc": 0.3533114692491012,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 596,
+              "n_positive": 66,
+              "n_negative": 530,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.5446255002858776,
+              "auprc": 0.12265739659831054,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 596,
+              "n_positive": 172,
+              "n_negative": 424,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.7309263931548924,
+              "auprc": 0.5218949253472023,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 596,
+              "n_positive": 246,
+              "n_negative": 350,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.6900464576074332,
+              "auprc": 0.5788425809259274,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 596,
+            "Cardiomegaly": 596,
+            "Consolidation": 596,
+            "Edema": 596,
+            "Effusion": 596
+          },
+          "macro_auroc": 0.6299356680846557,
+          "macro_auprc": 0.39518028298369556,
+          "micro_auroc": 0.6540966102700316,
+          "micro_auprc": 0.4118787163072817,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 440,
+          "rows_with_at_least_one_positive_pct": 0.738255033557047,
+          "total_valid_label_instances": 2980,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 1.0
+        }
+      }
+    },
+    "full_ft_k20_seed2027": {
+      "run_id": "full_ft_k20_seed2027",
+      "display_name": "full_ft_k20",
+      "report_json_path": "/workspace/reports/full_ft_k20_seed2027.json",
+      "headline_eligible": true,
+      "artifacts": {
+        "val": {
+          "prediction_path": "/workspace/outputs/full_ft_k20_seed2027_val_predictions.csv",
+          "prediction_exists": true,
+          "match_method": "dicom_id",
+          "match_warnings": []
+        },
+        "test": {
+          "prediction_path": "/workspace/outputs/full_ft_k20_seed2027_test_predictions.csv",
+          "prediction_exists": true,
+          "match_method": "dicom_id",
+          "match_warnings": []
+        }
+      },
+      "missing_prediction_files": [],
+      "val": {
+        "current_uzero_blankzero": {
+          "run_id": "full_ft_k20_seed2027",
+          "split": "val",
+          "policy_name": "current_uzero_blankzero",
+          "policy_short_name": "Policy A",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 958,
+              "n_positive": 194,
+              "n_negative": 764,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.6679373347007072,
+              "auprc": 0.3060775313030715,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 958,
+              "n_positive": 205,
+              "n_negative": 753,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.6609464580701584,
+              "auprc": 0.30775011230787475,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 958,
+              "n_positive": 52,
+              "n_negative": 906,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.679635761589404,
+              "auprc": 0.09535398348714723,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 958,
+              "n_positive": 131,
+              "n_negative": 827,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.7438455929183936,
+              "auprc": 0.2797655477145802,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 958,
+              "n_positive": 249,
+              "n_negative": 709,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.738349731790349,
+              "auprc": 0.4262572181817422,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 958,
+            "Cardiomegaly": 958,
+            "Consolidation": 958,
+            "Edema": 958,
+            "Effusion": 958
+          },
+          "macro_auroc": 0.6981429758138025,
+          "macro_auprc": 0.28304087859888316,
+          "micro_auroc": 0.6999771119680699,
+          "micro_auprc": 0.2830988729641789,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 472,
+          "rows_with_at_least_one_positive_pct": 0.49269311064718163,
+          "total_valid_label_instances": 4790,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 1.0
+        },
+        "uignore_blankzero": {
+          "run_id": "full_ft_k20_seed2027",
+          "split": "val",
+          "policy_name": "uignore_blankzero",
+          "policy_short_name": "Policy B",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 906,
+              "n_positive": 194,
+              "n_negative": 712,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.6768142592378084,
+              "auprc": 0.3266716431540579,
+              "is_valid_label": true,
+              "mask_fraction": 0.9457202505219207
+            },
+            "Cardiomegaly": {
+              "n_valid": 929,
+              "n_positive": 205,
+              "n_negative": 724,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.661972779948794,
+              "auprc": 0.3161235559032953,
+              "is_valid_label": true,
+              "mask_fraction": 0.9697286012526096
+            },
+            "Consolidation": {
+              "n_valid": 934,
+              "n_positive": 52,
+              "n_negative": 882,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.6863335077620791,
+              "auprc": 0.10054239896704917,
+              "is_valid_label": true,
+              "mask_fraction": 0.9749478079331941
+            },
+            "Edema": {
+              "n_valid": 898,
+              "n_positive": 131,
+              "n_negative": 767,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.7573773102302019,
+              "auprc": 0.3052213902200081,
+              "is_valid_label": true,
+              "mask_fraction": 0.9373695198329853
+            },
+            "Effusion": {
+              "n_valid": 931,
+              "n_positive": 249,
+              "n_negative": 682,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.7427127866303926,
+              "auprc": 0.4393979320269047,
+              "is_valid_label": true,
+              "mask_fraction": 0.9718162839248434
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 906,
+            "Cardiomegaly": 929,
+            "Consolidation": 934,
+            "Edema": 898,
+            "Effusion": 931
+          },
+          "macro_auroc": 0.7050421287618551,
+          "macro_auprc": 0.29759138405426305,
+          "micro_auroc": 0.7059727949700626,
+          "micro_auprc": 0.2984916485401668,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 472,
+          "rows_with_at_least_one_positive_pct": 0.49269311064718163,
+          "total_valid_label_instances": 4598,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 0.9599164926931106
+        },
+        "uignore_blankignore": {
+          "run_id": "full_ft_k20_seed2027",
+          "split": "val",
+          "policy_name": "uignore_blankignore",
+          "policy_short_name": "Policy C",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 198,
+              "n_positive": 194,
+              "n_negative": 4,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.6121134020618557,
+              "auprc": 0.9893627800067513,
+              "is_valid_label": true,
+              "mask_fraction": 0.20668058455114824
+            },
+            "Cardiomegaly": {
+              "n_valid": 268,
+              "n_positive": 205,
+              "n_negative": 63,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.6857142857142856,
+              "auprc": 0.866670770473779,
+              "is_valid_label": true,
+              "mask_fraction": 0.2797494780793319
+            },
+            "Consolidation": {
+              "n_valid": 79,
+              "n_positive": 52,
+              "n_negative": 27,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.7720797720797721,
+              "auprc": 0.8617977160120645,
+              "is_valid_label": true,
+              "mask_fraction": 0.0824634655532359
+            },
+            "Edema": {
+              "n_valid": 229,
+              "n_positive": 131,
+              "n_negative": 98,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.7332138962455211,
+              "auprc": 0.7680519077571816,
+              "is_valid_label": true,
+              "mask_fraction": 0.23903966597077245
+            },
+            "Effusion": {
+              "n_valid": 343,
+              "n_positive": 249,
+              "n_negative": 94,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.7697598906263351,
+              "auprc": 0.8657920173687774,
+              "is_valid_label": true,
+              "mask_fraction": 0.35803757828810023
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 198,
+            "Cardiomegaly": 268,
+            "Consolidation": 79,
+            "Edema": 229,
+            "Effusion": 343
+          },
+          "macro_auroc": 0.7145762493455539,
+          "macro_auprc": 0.8703350383237108,
+          "micro_auroc": 0.7763247582742168,
+          "micro_auprc": 0.892405400515809,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 402,
+          "rows_with_no_valid_labels_pct": 0.4196242171189979,
+          "rows_with_at_least_one_positive": 472,
+          "rows_with_at_least_one_positive_pct": 0.49269311064718163,
+          "total_valid_label_instances": 1117,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 0.23319415448851774
+        },
+        "uone_blankzero": {
+          "run_id": "full_ft_k20_seed2027",
+          "split": "val",
+          "policy_name": "uone_blankzero",
+          "policy_short_name": "Policy D",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 958 rows by dicom_id.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 958,
+              "n_positive": 246,
+              "n_negative": 712,
+              "n_uncertain_raw": 52,
+              "n_blank_raw": 708,
+              "auroc": 0.6692301543801955,
+              "auprc": 0.36873154177523393,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 958,
+              "n_positive": 234,
+              "n_negative": 724,
+              "n_uncertain_raw": 29,
+              "n_blank_raw": 661,
+              "auroc": 0.6477074184256505,
+              "auprc": 0.3329766451191668,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 958,
+              "n_positive": 76,
+              "n_negative": 882,
+              "n_uncertain_raw": 24,
+              "n_blank_raw": 855,
+              "auroc": 0.6978010502446592,
+              "auprc": 0.14652203467484703,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 958,
+              "n_positive": 191,
+              "n_negative": 767,
+              "n_uncertain_raw": 60,
+              "n_blank_raw": 669,
+              "auroc": 0.7422063250441988,
+              "auprc": 0.3613920733000725,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 958,
+              "n_positive": 276,
+              "n_negative": 682,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 588,
+              "auroc": 0.7325853202431043,
+              "auprc": 0.4547011804458418,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 958,
+            "Cardiomegaly": 958,
+            "Consolidation": 958,
+            "Edema": 958,
+            "Effusion": 958
+          },
+          "macro_auroc": 0.6979060536675616,
+          "macro_auprc": 0.3328646950630324,
+          "micro_auroc": 0.6919850603623949,
+          "micro_auprc": 0.33206268603341293,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 521,
+          "rows_with_at_least_one_positive_pct": 0.5438413361169102,
+          "total_valid_label_instances": 4790,
+          "total_possible_label_instances": 4790,
+          "valid_label_fraction": 1.0
+        }
+      },
+      "test": {
+        "current_uzero_blankzero": {
+          "run_id": "full_ft_k20_seed2027",
+          "split": "test",
+          "policy_name": "current_uzero_blankzero",
+          "policy_short_name": "Policy A",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 596,
+              "n_positive": 170,
+              "n_negative": 426,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.5924330295498481,
+              "auprc": 0.3501723016806003,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 596,
+              "n_positive": 159,
+              "n_negative": 437,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.5937711382640358,
+              "auprc": 0.3353936963825382,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 596,
+              "n_positive": 56,
+              "n_negative": 540,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.5238756613756614,
+              "auprc": 0.10716615252001539,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 596,
+              "n_positive": 128,
+              "n_negative": 468,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.732688969017094,
+              "auprc": 0.400966380424696,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 596,
+              "n_positive": 219,
+              "n_negative": 377,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.6822910989184017,
+              "auprc": 0.5344925354726893,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 596,
+            "Cardiomegaly": 596,
+            "Consolidation": 596,
+            "Edema": 596,
+            "Effusion": 596
+          },
+          "macro_auroc": 0.6250119794250082,
+          "macro_auprc": 0.3456382132961079,
+          "micro_auroc": 0.6539826536763705,
+          "micro_auprc": 0.3565865853486726,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 413,
+          "rows_with_at_least_one_positive_pct": 0.6929530201342282,
+          "total_valid_label_instances": 2980,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 1.0
+        },
+        "uignore_blankzero": {
+          "run_id": "full_ft_k20_seed2027",
+          "split": "test",
+          "policy_name": "uignore_blankzero",
+          "policy_short_name": "Policy B",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 564,
+              "n_positive": 170,
+              "n_negative": 394,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.600522544042998,
+              "auprc": 0.3728140330025267,
+              "is_valid_label": true,
+              "mask_fraction": 0.9463087248322147
+            },
+            "Cardiomegaly": {
+              "n_valid": 583,
+              "n_positive": 159,
+              "n_negative": 424,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.5970837783315533,
+              "auprc": 0.3451977013045421,
+              "is_valid_label": true,
+              "mask_fraction": 0.9781879194630873
+            },
+            "Consolidation": {
+              "n_valid": 586,
+              "n_positive": 56,
+              "n_negative": 530,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.5271900269541779,
+              "auprc": 0.10979573694598978,
+              "is_valid_label": true,
+              "mask_fraction": 0.9832214765100671
+            },
+            "Edema": {
+              "n_valid": 552,
+              "n_positive": 128,
+              "n_negative": 424,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.7501289799528302,
+              "auprc": 0.4637663673798473,
+              "is_valid_label": true,
+              "mask_fraction": 0.9261744966442953
+            },
+            "Effusion": {
+              "n_valid": 569,
+              "n_positive": 219,
+              "n_negative": 350,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.6926679712981083,
+              "auprc": 0.5593424892615906,
+              "is_valid_label": true,
+              "mask_fraction": 0.9546979865771812
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 564,
+            "Cardiomegaly": 583,
+            "Consolidation": 586,
+            "Edema": 552,
+            "Effusion": 569
+          },
+          "macro_auroc": 0.6335186601159336,
+          "macro_auprc": 0.3701832655788993,
+          "micro_auroc": 0.6617371744359121,
+          "micro_auprc": 0.3791326479710323,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 413,
+          "rows_with_at_least_one_positive_pct": 0.6929530201342282,
+          "total_valid_label_instances": 2854,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 0.9577181208053691
+        },
+        "uignore_blankignore": {
+          "run_id": "full_ft_k20_seed2027",
+          "split": "test",
+          "policy_name": "uignore_blankignore",
+          "policy_short_name": "Policy C",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 177,
+              "n_positive": 170,
+              "n_negative": 7,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.604201680672269,
+              "auprc": 0.9749980355559015,
+              "is_valid_label": true,
+              "mask_fraction": 0.29697986577181207
+            },
+            "Cardiomegaly": {
+              "n_valid": 213,
+              "n_positive": 159,
+              "n_negative": 54,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.6696948520847891,
+              "auprc": 0.8353392776514362,
+              "is_valid_label": true,
+              "mask_fraction": 0.3573825503355705
+            },
+            "Consolidation": {
+              "n_valid": 77,
+              "n_positive": 56,
+              "n_negative": 21,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.5144557823129252,
+              "auprc": 0.7690531201608892,
+              "is_valid_label": true,
+              "mask_fraction": 0.12919463087248323
+            },
+            "Edema": {
+              "n_valid": 207,
+              "n_positive": 128,
+              "n_negative": 79,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.7941060126582279,
+              "auprc": 0.8724917049042291,
+              "is_valid_label": true,
+              "mask_fraction": 0.34731543624161076
+            },
+            "Effusion": {
+              "n_valid": 289,
+              "n_positive": 219,
+              "n_negative": 70,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.6966731898238747,
+              "auprc": 0.8591893899887076,
+              "is_valid_label": true,
+              "mask_fraction": 0.4848993288590604
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 177,
+            "Cardiomegaly": 213,
+            "Consolidation": 77,
+            "Edema": 207,
+            "Effusion": 289
+          },
+          "macro_auroc": 0.6558263035104173,
+          "macro_auprc": 0.8622143056522328,
+          "micro_auroc": 0.7390532964303456,
+          "micro_auprc": 0.8860336433719305,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": false,
+          "micro_auprc_comparable": false,
+          "comparability_note": "All five labels remain valid, but some label instances are masked.",
+          "rows_with_no_valid_labels": 150,
+          "rows_with_no_valid_labels_pct": 0.2516778523489933,
+          "rows_with_at_least_one_positive": 413,
+          "rows_with_at_least_one_positive_pct": 0.6929530201342282,
+          "total_valid_label_instances": 963,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 0.3231543624161074
+        },
+        "uone_blankzero": {
+          "run_id": "full_ft_k20_seed2027",
+          "split": "test",
+          "policy_name": "uone_blankzero",
+          "policy_short_name": "Policy D",
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "match_note": "Matched 596 rows by dicom_id.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "n_valid": 596,
+              "n_positive": 202,
+              "n_negative": 394,
+              "n_uncertain_raw": 32,
+              "n_blank_raw": 387,
+              "auroc": 0.6010830778509323,
+              "auprc": 0.4114924648405287,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Cardiomegaly": {
+              "n_valid": 596,
+              "n_positive": 172,
+              "n_negative": 424,
+              "n_uncertain_raw": 13,
+              "n_blank_raw": 370,
+              "auroc": 0.5976991004826677,
+              "auprc": 0.3634900353330072,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Consolidation": {
+              "n_valid": 596,
+              "n_positive": 66,
+              "n_negative": 530,
+              "n_uncertain_raw": 10,
+              "n_blank_raw": 509,
+              "auroc": 0.5486563750714695,
+              "auprc": 0.1311857356161204,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Edema": {
+              "n_valid": 596,
+              "n_positive": 172,
+              "n_negative": 424,
+              "n_uncertain_raw": 44,
+              "n_blank_raw": 345,
+              "auroc": 0.7352457218078104,
+              "auprc": 0.5201194759333218,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            },
+            "Effusion": {
+              "n_valid": 596,
+              "n_positive": 246,
+              "n_negative": 350,
+              "n_uncertain_raw": 27,
+              "n_blank_raw": 280,
+              "auroc": 0.6912311265969803,
+              "auprc": 0.5797412487436815,
+              "is_valid_label": true,
+              "mask_fraction": 1.0
+            }
+          },
+          "valid_labels": [
+            "Atelectasis",
+            "Cardiomegaly",
+            "Consolidation",
+            "Edema",
+            "Effusion"
+          ],
+          "valid_counts": {
+            "Atelectasis": 596,
+            "Cardiomegaly": 596,
+            "Consolidation": 596,
+            "Edema": 596,
+            "Effusion": 596
+          },
+          "macro_auroc": 0.6347830803619721,
+          "macro_auprc": 0.40120579209333196,
+          "micro_auroc": 0.6579221124461464,
+          "micro_auprc": 0.4140423700870211,
+          "macro_auroc_defined": true,
+          "macro_auprc_defined": true,
+          "micro_auroc_defined": true,
+          "micro_auprc_defined": true,
+          "macro_auroc_comparable": true,
+          "macro_auprc_comparable": true,
+          "micro_auroc_comparable": true,
+          "micro_auprc_comparable": true,
+          "comparability_note": "All label instances remain in the evaluation set.",
+          "rows_with_no_valid_labels": 0,
+          "rows_with_no_valid_labels_pct": 0.0,
+          "rows_with_at_least_one_positive": 440,
+          "rows_with_at_least_one_positive_pct": 0.738255033557047,
+          "total_valid_label_instances": 2980,
+          "total_possible_label_instances": 2980,
+          "valid_label_fraction": 1.0
+        }
+      }
+    }
+  },
+  "headline": {
+    "recommended_policy": "uignore_blankzero",
+    "recommended_policy_short_name": "Policy B",
+    "recommendation_reason": "Policy B is the conservative default here: it stops forcing uncertain `-1` targets to negative, preserves all five labels on both splits, and keeps the evaluation set substantially intact. Blank-zero remains an assumption and must be documented explicitly.",
+    "best_method_by_policy": {
+      "current_uzero_blankzero": {
+        "run_id": "full_ft_k20_seed2027",
+        "display_name": "full_ft_k20",
+        "macro_auprc": 0.3456382132961079,
+        "macro_auroc": 0.6250119794250082
+      },
+      "uignore_blankzero": {
+        "run_id": "full_ft_k20_seed2027",
+        "display_name": "full_ft_k20",
+        "macro_auprc": 0.3701832655788993,
+        "macro_auroc": 0.6335186601159336
+      },
+      "uignore_blankignore": {
+        "run_id": "full_ft_k5_seed2027",
+        "display_name": "full_ft_k5",
+        "macro_auprc": 0.863272712360694,
+        "macro_auroc": 0.6566079528626846
+      },
+      "uone_blankzero": {
+        "run_id": "full_ft_k20_seed2027",
+        "display_name": "full_ft_k20",
+        "macro_auprc": 0.40120579209333196,
+        "macro_auroc": 0.6347830803619721
+      }
+    },
+    "ranking_changes": true,
+    "ranking_metric": "test macro AUPRC",
+    "runs_that_need_repeating": [
+      "no adaptation: reevaluate existing NIH->MIMIC predictions under the new policy before citing target-side metrics",
+      "head_only_k5: rerun training and evaluation because support labels and model selection both used the current policy",
+      "head_only_k20: rerun training and evaluation because support labels and model selection both used the current policy",
+      "full_ft_k5: rerun training and evaluation because support labels and model selection both used the current policy",
+      "full_ft_k20: rerun training and evaluation because support labels and model selection both used the current policy"
+    ],
+    "full_ft_k20_verification_status": "VERIFIED_COMPLETE"
+  },
+  "full_ft_k20_verification": {
+    "status": "VERIFIED_COMPLETE",
+    "json_report_path": "/workspace/reports/full_ft_k20_seed2027.json",
+    "markdown_report_path": "/workspace/reports/full_ft_k20_seed2027.md",
+    "prediction_files": {
+      "val": "/workspace/outputs/full_ft_k20_seed2027_val_predictions.csv",
+      "test": "/workspace/outputs/full_ft_k20_seed2027_test_predictions.csv"
+    },
+    "json_report_exists": true,
+    "markdown_report_exists": true,
+    "prediction_file_exists": {
+      "val": true,
+      "test": true
+    },
+    "recomputed_metrics_available": true,
+    "checks": {
+      "markdown": {
+        "contains_run_name": true,
+        "contains_status_done": true,
+        "contains_safe_to_continue_yes": true
+      },
+      "json": {
+        "status_done": true,
+        "safe_to_continue": true,
+        "prediction_file_paths_match": true,
+        "manifest_paths_match": true,
+        "label_order_match": true
+      },
+      "splits": {
+        "val": {
+          "present": true,
+          "metrics_comparison": {
+            "macro_auroc_matches": true,
+            "macro_auprc_matches": true,
+            "per_label": {
+              "Atelectasis": {
+                "positives_match": true,
+                "negatives_match": true,
+                "auroc_match": true,
+                "auprc_match": true,
+                "all_match": true
+              },
+              "Cardiomegaly": {
+                "positives_match": true,
+                "negatives_match": true,
+                "auroc_match": true,
+                "auprc_match": true,
+                "all_match": true
+              },
+              "Consolidation": {
+                "positives_match": true,
+                "negatives_match": true,
+                "auroc_match": true,
+                "auprc_match": true,
+                "all_match": true
+              },
+              "Edema": {
+                "positives_match": true,
+                "negatives_match": true,
+                "auroc_match": true,
+                "auprc_match": true,
+                "all_match": true
+              },
+              "Effusion": {
+                "positives_match": true,
+                "negatives_match": true,
+                "auroc_match": true,
+                "auprc_match": true,
+                "all_match": true
+              }
+            },
+            "all_match": true
+          },
+          "match_method": "dicom_id"
+        },
+        "test": {
+          "present": true,
+          "metrics_comparison": {
+            "macro_auroc_matches": true,
+            "macro_auprc_matches": true,
+            "per_label": {
+              "Atelectasis": {
+                "positives_match": true,
+                "negatives_match": true,
+                "auroc_match": true,
+                "auprc_match": true,
+                "all_match": true
+              },
+              "Cardiomegaly": {
+                "positives_match": true,
+                "negatives_match": true,
+                "auroc_match": true,
+                "auprc_match": true,
+                "all_match": true
+              },
+              "Consolidation": {
+                "positives_match": true,
+                "negatives_match": true,
+                "auroc_match": true,
+                "auprc_match": true,
+                "all_match": true
+              },
+              "Edema": {
+                "positives_match": true,
+                "negatives_match": true,
+                "auroc_match": true,
+                "auprc_match": true,
+                "all_match": true
+              },
+              "Effusion": {
+                "positives_match": true,
+                "negatives_match": true,
+                "auroc_match": true,
+                "auprc_match": true,
+                "all_match": true
+              }
+            },
+            "all_match": true
+          },
+          "match_method": "dicom_id"
+        }
+      }
+    },
+    "reasons": []
+  }
+}

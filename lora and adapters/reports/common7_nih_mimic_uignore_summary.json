@@ -1,0 +1,65 @@
+{
+  "manifest_path": "/workspace/manifests/common7_nih_mimic_uignore.csv",
+  "rows": 114796,
+  "datasets": {
+    "mimic": 2676,
+    "nih": 112120
+  },
+  "splits": {
+    "mimic": {
+      "test": 676,
+      "train": 1000,
+      "val": 1000
+    },
+    "nih": {
+      "test": 22353,
+      "train": 78707,
+      "val": 11060
+    }
+  },
+  "patients": {
+    "mimic": 1639,
+    "nih": 30805
+  },
+  "positive_label_counts": {
+    "mimic": {
+      "atelectasis": 591,
+      "cardiomegaly": 589,
+      "consolidation": 178,
+      "edema": 399,
+      "pleural_effusion": 748,
+      "pneumonia": 229,
+      "pneumothorax": 137
+    },
+    "nih": {
+      "atelectasis": 11559,
+      "cardiomegaly": 2776,
+      "consolidation": 4667,
+      "edema": 2303,
+      "pleural_effusion": 13317,
+      "pneumonia": 1431,
+      "pneumothorax": 5302
+    }
+  },
+  "mask_coverage": {
+    "mimic": {
+      "atelectasis": 611,
+      "cardiomegaly": 782,
+      "consolidation": 252,
+      "edema": 701,
+      "pleural_effusion": 1053,
+      "pneumonia": 507,
+      "pneumothorax": 698
+    },
+    "nih": {
+      "atelectasis": 112120,
+      "cardiomegaly": 112120,
+      "consolidation": 112120,
+      "edema": 112120,
+      "pleural_effusion": 112120,
+      "pneumonia": 112120,
+      "pneumothorax": 112120
+    }
+  },
+  "missing_paths": 0
+}

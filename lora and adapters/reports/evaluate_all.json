@@ -1,0 +1,22 @@
+{
+  "config_keys": [
+    "experiment"
+  ],
+  "created_at_utc": "2026-04-27T06:03:58.211115+00:00",
+  "debug": true,
+  "dry_run": true,
+  "failure_reasons": [],
+  "metrics": {
+    "brier": 0.039999999675367603,
+    "ece": 0.1999999991884189,
+    "macro_auprc": 1.0,
+    "macro_auroc": 1.0
+  },
+  "safe_to_proceed": true,
+  "seed": 2027,
+  "stage": "stage1_evaluate_all_dry_run",
+  "status": "DONE",
+  "warnings": [
+    "Dry-run metrics use synthetic labels and predictions."
+  ]
+}

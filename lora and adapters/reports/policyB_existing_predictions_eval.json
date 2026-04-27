@@ -1,0 +1,676 @@
+{
+  "generated_at_utc": "2026-04-27T12:42:28.282759+00:00",
+  "official_policy": "uignore_blankzero",
+  "runs": {
+    "full_ft_k20_seed2027": {
+      "display_name": "full_ft_k20",
+      "prediction_files": {
+        "test": "/workspace/outputs/full_ft_k20_seed2027_test_predictions.csv",
+        "val": "/workspace/outputs/full_ft_k20_seed2027_val_predictions.csv"
+      },
+      "retrain_required": true,
+      "run_id": "full_ft_k20_seed2027",
+      "splits": {
+        "test": {
+          "macro_auprc": 0.3701832655788993,
+          "macro_auroc": 0.6335186601159336,
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "micro_auprc": null,
+          "micro_auroc": null,
+          "micro_note": "Micro metrics omitted because Policy B masks some label instances, so global micro is not directly comparable.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "auprc": 0.3728140330025267,
+              "auroc": 0.600522544042998,
+              "masked": 32,
+              "n_valid": 564,
+              "negatives": 394,
+              "positives": 170
+            },
+            "Cardiomegaly": {
+              "auprc": 0.3451977013045421,
+              "auroc": 0.5970837783315533,
+              "masked": 13,
+              "n_valid": 583,
+              "negatives": 424,
+              "positives": 159
+            },
+            "Consolidation": {
+              "auprc": 0.10979573694598978,
+              "auroc": 0.5271900269541779,
+              "masked": 10,
+              "n_valid": 586,
+              "negatives": 530,
+              "positives": 56
+            },
+            "Edema": {
+              "auprc": 0.4637663673798473,
+              "auroc": 0.7501289799528302,
+              "masked": 44,
+              "n_valid": 552,
+              "negatives": 424,
+              "positives": 128
+            },
+            "Effusion": {
+              "auprc": 0.5593424892615906,
+              "auroc": 0.6926679712981083,
+              "masked": 27,
+              "n_valid": 569,
+              "negatives": 350,
+              "positives": 219
+            }
+          },
+          "prediction_file": "/workspace/outputs/full_ft_k20_seed2027_test_predictions.csv",
+          "run_id": "full_ft_k20_seed2027",
+          "split": "test",
+          "total_masked_label_instances": 126,
+          "total_possible_label_instances": 2980
+        },
+        "val": {
+          "macro_auprc": 0.29759138405426305,
+          "macro_auroc": 0.7050421287618551,
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "micro_auprc": null,
+          "micro_auroc": null,
+          "micro_note": "Micro metrics omitted because Policy B masks some label instances, so global micro is not directly comparable.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "auprc": 0.3266716431540579,
+              "auroc": 0.6768142592378084,
+              "masked": 52,
+              "n_valid": 906,
+              "negatives": 712,
+              "positives": 194
+            },
+            "Cardiomegaly": {
+              "auprc": 0.3161235559032953,
+              "auroc": 0.661972779948794,
+              "masked": 29,
+              "n_valid": 929,
+              "negatives": 724,
+              "positives": 205
+            },
+            "Consolidation": {
+              "auprc": 0.10054239896704917,
+              "auroc": 0.6863335077620791,
+              "masked": 24,
+              "n_valid": 934,
+              "negatives": 882,
+              "positives": 52
+            },
+            "Edema": {
+              "auprc": 0.3052213902200081,
+              "auroc": 0.7573773102302019,
+              "masked": 60,
+              "n_valid": 898,
+              "negatives": 767,
+              "positives": 131
+            },
+            "Effusion": {
+              "auprc": 0.4393979320269047,
+              "auroc": 0.7427127866303926,
+              "masked": 27,
+              "n_valid": 931,
+              "negatives": 682,
+              "positives": 249
+            }
+          },
+          "prediction_file": "/workspace/outputs/full_ft_k20_seed2027_val_predictions.csv",
+          "run_id": "full_ft_k20_seed2027",
+          "split": "val",
+          "total_masked_label_instances": 192,
+          "total_possible_label_instances": 4790
+        }
+      }
+    },
+    "full_ft_k5_seed2027": {
+      "display_name": "full_ft_k5",
+      "prediction_files": {
+        "test": "/workspace/outputs/full_ft_k5_seed2027_test_predictions.csv",
+        "val": "/workspace/outputs/full_ft_k5_seed2027_val_predictions.csv"
+      },
+      "retrain_required": true,
+      "run_id": "full_ft_k5_seed2027",
+      "splits": {
+        "test": {
+          "macro_auprc": 0.36597217129671095,
+          "macro_auroc": 0.631380974011426,
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "micro_auprc": null,
+          "micro_auroc": null,
+          "micro_note": "Micro metrics omitted because Policy B masks some label instances, so global micro is not directly comparable.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "auprc": 0.36410086429565186,
+              "auroc": 0.5978948939982083,
+              "masked": 32,
+              "n_valid": 564,
+              "negatives": 394,
+              "positives": 170
+            },
+            "Cardiomegaly": {
+              "auprc": 0.33354771012008744,
+              "auroc": 0.5862554883113802,
+              "masked": 13,
+              "n_valid": 583,
+              "negatives": 424,
+              "positives": 159
+            },
+            "Consolidation": {
+              "auprc": 0.10343929906428517,
+              "auroc": 0.5283018867924528,
+              "masked": 10,
+              "n_valid": 586,
+              "negatives": 530,
+              "positives": 56
+            },
+            "Edema": {
+              "auprc": 0.4670561325241853,
+              "auroc": 0.7508844339622641,
+              "masked": 44,
+              "n_valid": 552,
+              "negatives": 424,
+              "positives": 128
+            },
+            "Effusion": {
+              "auprc": 0.561716850479345,
+              "auroc": 0.6935681669928244,
+              "masked": 27,
+              "n_valid": 569,
+              "negatives": 350,
+              "positives": 219
+            }
+          },
+          "prediction_file": "/workspace/outputs/full_ft_k5_seed2027_test_predictions.csv",
+          "run_id": "full_ft_k5_seed2027",
+          "split": "test",
+          "total_masked_label_instances": 126,
+          "total_possible_label_instances": 2980
+        },
+        "val": {
+          "macro_auprc": 0.29406488230958716,
+          "macro_auroc": 0.7037207935259688,
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "micro_auprc": null,
+          "micro_auroc": null,
+          "micro_note": "Micro metrics omitted because Policy B masks some label instances, so global micro is not directly comparable.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "auprc": 0.32040048411948163,
+              "auroc": 0.6764667554731844,
+              "masked": 52,
+              "n_valid": 906,
+              "negatives": 712,
+              "positives": 194
+            },
+            "Cardiomegaly": {
+              "auprc": 0.3109971523375623,
+              "auroc": 0.650296456003234,
+              "masked": 29,
+              "n_valid": 929,
+              "negatives": 724,
+              "positives": 205
+            },
+            "Consolidation": {
+              "auprc": 0.09466834964439401,
+              "auroc": 0.6856793999651143,
+              "masked": 24,
+              "n_valid": 934,
+              "negatives": 882,
+              "positives": 52
+            },
+            "Edema": {
+              "auprc": 0.30864683389800035,
+              "auroc": 0.7657274799207779,
+              "masked": 60,
+              "n_valid": 898,
+              "negatives": 767,
+              "positives": 131
+            },
+            "Effusion": {
+              "auprc": 0.43561159154849755,
+              "auroc": 0.7404338762675335,
+              "masked": 27,
+              "n_valid": 931,
+              "negatives": 682,
+              "positives": 249
+            }
+          },
+          "prediction_file": "/workspace/outputs/full_ft_k5_seed2027_val_predictions.csv",
+          "run_id": "full_ft_k5_seed2027",
+          "split": "val",
+          "total_masked_label_instances": 192,
+          "total_possible_label_instances": 4790
+        }
+      }
+    },
+    "head_only_k20_seed2027": {
+      "display_name": "head_only_k20",
+      "prediction_files": {
+        "test": "/workspace/outputs/head_only_k20_seed2027_test_predictions.csv",
+        "val": "/workspace/outputs/head_only_k20_seed2027_val_predictions.csv"
+      },
+      "retrain_required": true,
+      "run_id": "head_only_k20_seed2027",
+      "splits": {
+        "test": {
+          "macro_auprc": 0.35470507344491503,
+          "macro_auroc": 0.6183284274989841,
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "micro_auprc": null,
+          "micro_auroc": null,
+          "micro_note": "Micro metrics omitted because Policy B masks some label instances, so global micro is not directly comparable.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "auprc": 0.35034157683303535,
+              "auroc": 0.5766049567034935,
+              "masked": 32,
+              "n_valid": 564,
+              "negatives": 394,
+              "positives": 170
+            },
+            "Cardiomegaly": {
+              "auprc": 0.32023248036513785,
+              "auroc": 0.5655927376290495,
+              "masked": 13,
+              "n_valid": 583,
+              "negatives": 424,
+              "positives": 159
+            },
+            "Consolidation": {
+              "auprc": 0.11650233527487514,
+              "auroc": 0.5127021563342318,
+              "masked": 10,
+              "n_valid": 586,
+              "negatives": 530,
+              "positives": 56
+            },
+            "Edema": {
+              "auprc": 0.43086842388082225,
+              "auroc": 0.7395341981132076,
+              "masked": 44,
+              "n_valid": 552,
+              "negatives": 424,
+              "positives": 128
+            },
+            "Effusion": {
+              "auprc": 0.5555805508707046,
+              "auroc": 0.6972080887149381,
+              "masked": 27,
+              "n_valid": 569,
+              "negatives": 350,
+              "positives": 219
+            }
+          },
+          "prediction_file": "/workspace/outputs/head_only_k20_seed2027_test_predictions.csv",
+          "run_id": "head_only_k20_seed2027",
+          "split": "test",
+          "total_masked_label_instances": 126,
+          "total_possible_label_instances": 2980
+        },
+        "val": {
+          "macro_auprc": 0.27628360850413347,
+          "macro_auroc": 0.6845627290405359,
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "micro_auprc": null,
+          "micro_auroc": null,
+          "micro_note": "Micro metrics omitted because Policy B masks some label instances, so global micro is not directly comparable.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "auprc": 0.27950119988177574,
+              "auroc": 0.6299519286458936,
+              "masked": 52,
+              "n_valid": 906,
+              "negatives": 712,
+              "positives": 194
+            },
+            "Cardiomegaly": {
+              "auprc": 0.2902990901134403,
+              "auroc": 0.6468467861474194,
+              "masked": 29,
+              "n_valid": 929,
+              "negatives": 724,
+              "positives": 205
+            },
+            "Consolidation": {
+              "auprc": 0.09305449742194212,
+              "auroc": 0.6770887842316414,
+              "masked": 24,
+              "n_valid": 934,
+              "negatives": 882,
+              "positives": 52
+            },
+            "Edema": {
+              "auprc": 0.2981507657179867,
+              "auroc": 0.7523413318470894,
+              "masked": 60,
+              "n_valid": 898,
+              "negatives": 767,
+              "positives": 131
+            },
+            "Effusion": {
+              "auprc": 0.4204124893855226,
+              "auroc": 0.7165848143306364,
+              "masked": 27,
+              "n_valid": 931,
+              "negatives": 682,
+              "positives": 249
+            }
+          },
+          "prediction_file": "/workspace/outputs/head_only_k20_seed2027_val_predictions.csv",
+          "run_id": "head_only_k20_seed2027",
+          "split": "val",
+          "total_masked_label_instances": 192,
+          "total_possible_label_instances": 4790
+        }
+      }
+    },
+    "head_only_k5_seed2027": {
+      "display_name": "head_only_k5",
+      "prediction_files": {
+        "test": "/workspace/outputs/head_only_k5_seed2027_test_predictions.csv",
+        "val": "/workspace/outputs/head_only_k5_seed2027_val_predictions.csv"
+      },
+      "retrain_required": true,
+      "run_id": "head_only_k5_seed2027",
+      "splits": {
+        "test": {
+          "macro_auprc": 0.35390774416526405,
+          "macro_auroc": 0.6182470950826972,
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "micro_auprc": null,
+          "micro_auroc": null,
+          "micro_note": "Micro metrics omitted because Policy B masks some label instances, so global micro is not directly comparable.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "auprc": 0.3498486725617109,
+              "auroc": 0.5766796058524932,
+              "masked": 32,
+              "n_valid": 564,
+              "negatives": 394,
+              "positives": 170
+            },
+            "Cardiomegaly": {
+              "auprc": 0.31645951115780524,
+              "auroc": 0.5649845733950398,
+              "masked": 13,
+              "n_valid": 583,
+              "negatives": 424,
+              "positives": 159
+            },
+            "Consolidation": {
+              "auprc": 0.11702604980604259,
+              "auroc": 0.5128369272237197,
+              "masked": 10,
+              "n_valid": 586,
+              "negatives": 530,
+              "positives": 56
+            },
+            "Edema": {
+              "auprc": 0.43022517155166345,
+              "auroc": 0.7389261497641509,
+              "masked": 44,
+              "n_valid": 552,
+              "negatives": 424,
+              "positives": 128
+            },
+            "Effusion": {
+              "auprc": 0.555979315749098,
+              "auroc": 0.6978082191780821,
+              "masked": 27,
+              "n_valid": 569,
+              "negatives": 350,
+              "positives": 219
+            }
+          },
+          "prediction_file": "/workspace/outputs/head_only_k5_seed2027_test_predictions.csv",
+          "run_id": "head_only_k5_seed2027",
+          "split": "test",
+          "total_masked_label_instances": 126,
+          "total_possible_label_instances": 2980
+        },
+        "val": {
+          "macro_auprc": 0.27673863546134225,
+          "macro_auroc": 0.6852146483312481,
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "micro_auprc": null,
+          "micro_auroc": null,
+          "micro_note": "Micro metrics omitted because Policy B masks some label instances, so global micro is not directly comparable.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "auprc": 0.28024181024726014,
+              "auroc": 0.6306469361751419,
+              "masked": 52,
+              "n_valid": 906,
+              "negatives": 712,
+              "positives": 194
+            },
+            "Cardiomegaly": {
+              "auprc": 0.2912903212599839,
+              "auroc": 0.6484570812558954,
+              "masked": 29,
+              "n_valid": 929,
+              "negatives": 724,
+              "positives": 205
+            },
+            "Consolidation": {
+              "auprc": 0.09293621927800162,
+              "auroc": 0.6774812489098203,
+              "masked": 24,
+              "n_valid": 934,
+              "negatives": 882,
+              "positives": 52
+            },
+            "Edema": {
+              "auprc": 0.29807618446512507,
+              "auroc": 0.7522318540561522,
+              "masked": 60,
+              "n_valid": 898,
+              "negatives": 767,
+              "positives": 131
+            },
+            "Effusion": {
+              "auprc": 0.4211486420563406,
+              "auroc": 0.7172561212592304,
+              "masked": 27,
+              "n_valid": 931,
+              "negatives": 682,
+              "positives": 249
+            }
+          },
+          "prediction_file": "/workspace/outputs/head_only_k5_seed2027_val_predictions.csv",
+          "run_id": "head_only_k5_seed2027",
+          "split": "val",
+          "total_masked_label_instances": 192,
+          "total_possible_label_instances": 4790
+        }
+      }
+    },
+    "nih_to_mimic": {
+      "display_name": "no_adaptation",
+      "prediction_files": {
+        "test": "/workspace/outputs/nih_to_mimic_test_predictions.csv",
+        "val": "/workspace/outputs/nih_to_mimic_val_predictions.csv"
+      },
+      "retrain_required": false,
+      "run_id": "nih_to_mimic",
+      "splits": {
+        "test": {
+          "macro_auprc": 0.35409527167647575,
+          "macro_auroc": 0.6183347016415374,
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "micro_auprc": null,
+          "micro_auroc": null,
+          "micro_note": "Micro metrics omitted because Policy B masks some label instances, so global micro is not directly comparable.",
+          "n_rows": 596,
+          "per_label": {
+            "Atelectasis": {
+              "auprc": 0.3498619120595764,
+              "auroc": 0.5766721409375933,
+              "masked": 32,
+              "n_valid": 564,
+              "negatives": 394,
+              "positives": 170
+            },
+            "Cardiomegaly": {
+              "auprc": 0.3170648584445834,
+              "auroc": 0.56499940666904,
+              "masked": 13,
+              "n_valid": 583,
+              "negatives": 424,
+              "positives": 159
+            },
+            "Consolidation": {
+              "auprc": 0.11712259505086883,
+              "auroc": 0.5131738544474393,
+              "masked": 10,
+              "n_valid": 586,
+              "negatives": 530,
+              "positives": 56
+            },
+            "Edema": {
+              "auprc": 0.43068498603039956,
+              "auroc": 0.7392025353773585,
+              "masked": 44,
+              "n_valid": 552,
+              "negatives": 424,
+              "positives": 128
+            },
+            "Effusion": {
+              "auprc": 0.5557420067969506,
+              "auroc": 0.6976255707762558,
+              "masked": 27,
+              "n_valid": 569,
+              "negatives": 350,
+              "positives": 219
+            }
+          },
+          "prediction_file": "/workspace/outputs/nih_to_mimic_test_predictions.csv",
+          "run_id": "nih_to_mimic",
+          "split": "test",
+          "total_masked_label_instances": 126,
+          "total_possible_label_instances": 2980
+        },
+        "val": {
+          "macro_auprc": 0.2770689011870319,
+          "macro_auroc": 0.6855827207935752,
+          "match_method": "dicom_id",
+          "match_warnings": [],
+          "micro_auprc": null,
+          "micro_auroc": null,
+          "micro_note": "Micro metrics omitted because Policy B masks some label instances, so global micro is not directly comparable.",
+          "n_rows": 958,
+          "per_label": {
+            "Atelectasis": {
+              "auprc": 0.28095272650759184,
+              "auroc": 0.6311319935132631,
+              "masked": 52,
+              "n_valid": 906,
+              "negatives": 712,
+              "positives": 194
+            },
+            "Cardiomegaly": {
+              "auprc": 0.2918600866958381,
+              "auroc": 0.6492723352647891,
+              "masked": 29,
+              "n_valid": 929,
+              "negatives": 724,
+              "positives": 205
+            },
+            "Consolidation": {
+              "auprc": 0.09291522613127201,
+              "auroc": 0.6773940345368916,
+              "masked": 24,
+              "n_valid": 934,
+              "negatives": 882,
+              "positives": 52
+            },
+            "Edema": {
+              "auprc": 0.29780769137705043,
+              "auroc": 0.7523114742677429,
+              "masked": 60,
+              "n_valid": 898,
+              "negatives": 767,
+              "positives": 131
+            },
+            "Effusion": {
+              "auprc": 0.4218087752234073,
+              "auroc": 0.7178037663851888,
+              "masked": 27,
+              "n_valid": 931,
+              "negatives": 682,
+              "positives": 249
+            }
+          },
+          "prediction_file": "/workspace/outputs/nih_to_mimic_val_predictions.csv",
+          "run_id": "nih_to_mimic",
+          "split": "val",
+          "total_masked_label_instances": 192,
+          "total_possible_label_instances": 4790
+        }
+      }
+    }
+  },
+  "status": "DONE",
+  "summary": {
+    "best_existing_test_prediction": {
+      "display_name": "full_ft_k20",
+      "macro_auprc": 0.3701832655788993,
+      "macro_auroc": 0.6335186601159336,
+      "prediction_file": "/workspace/outputs/full_ft_k20_seed2027_test_predictions.csv",
+      "run_id": "full_ft_k20_seed2027"
+    },
+    "no_adaptation_test": {
+      "macro_auprc": 0.35409527167647575,
+      "macro_auroc": 0.6183347016415374,
+      "prediction_file": "/workspace/outputs/nih_to_mimic_test_predictions.csv"
+    },
+    "runs_requiring_reevaluation_only": [
+      {
+        "display_name": "no_adaptation",
+        "reason": "The source-trained model does not need retraining, but the target-side metrics must be reevaluated under Policy B.",
+        "run_id": "nih_to_mimic"
+      }
+    ],
+    "runs_requiring_retraining": [
+      {
+        "display_name": "head_only_k5",
+        "reason": "Support labels, adaptation training, and model selection were created under the old policy.",
+        "run_id": "head_only_k5_seed2027"
+      },
+      {
+        "display_name": "head_only_k20",
+        "reason": "Support labels, adaptation training, and model selection were created under the old policy.",
+        "run_id": "head_only_k20_seed2027"
+      },
+      {
+        "display_name": "full_ft_k5",
+        "reason": "Support labels, adaptation training, and model selection were created under the old policy.",
+        "run_id": "full_ft_k5_seed2027"
+      },
+      {
+        "display_name": "full_ft_k20",
+        "reason": "Support labels, adaptation training, and model selection were created under the old policy.",
+        "run_id": "full_ft_k20_seed2027"
+      }
+    ]
+  },
+  "warnings": []
+}

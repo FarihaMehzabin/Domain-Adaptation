@@ -1,0 +1,173 @@
+{
+  "generated_utc_date": "2026-04-27",
+  "label_policy": "uignore_blankzero",
+  "bug_fixed": true,
+  "safe_to_start_adaptation_reruns": true,
+  "bug_summary": [
+    "Policy B evaluation previously ignored per-label mask columns and treated masked entries as ordinary negatives.",
+    "That produced incorrect label counts, incorrect loss reduction, and old Policy A-like macro metrics.",
+    "The fix makes manifest validation, metrics, losses, reports, and prediction exports mask-aware for Policy B."
+  ],
+  "files_patched": [
+    "scripts/masked_multilabel_utils.py",
+    "scripts/experiment_namespace.py",
+    "scripts/evaluate_nih_on_mimic.py",
+    "scripts/adapt_head_only_mimic.py",
+    "scripts/adapt_full_finetune_mimic.py",
+    "scripts/adapt_lastblock_mimic.py",
+    "scripts/adapt_lora_mimic.py"
+  ],
+  "dry_run_status": {
+    "evaluate_nih_on_mimic.py --dry_run": "passed",
+    "adapt_head_only_mimic.py --dry_run --run_name policyB_head_only_k5_seed2027": "passed",
+    "adapt_full_finetune_mimic.py --dry_run --run_name policyB_full_ft_k5_seed2027": "passed"
+  },
+  "before_after_no_adaptation_metrics": {
+    "before": {
+      "val_macro_auroc": 0.679006578532193,
+      "val_macro_auprc": 0.2633158883957054,
+      "test_macro_auroc": 0.6102987726213751,
+      "test_macro_auprc": 0.33119314037550796
+    },
+    "after": {
+      "val_macro_auroc": 0.6855828905894089,
+      "val_macro_auprc": 0.2770682323624096,
+      "test_macro_auroc": 0.6183347016415374,
+      "test_macro_auprc": 0.35409527167647575
+    }
+  },
+  "before_after_label_counts": {
+    "val": {
+      "before": {
+        "Atelectasis": {
+          "positives": 194,
+          "negatives": 764
+        },
+        "Cardiomegaly": {
+          "positives": 205,
+          "negatives": 753
+        },
+        "Consolidation": {
+          "positives": 52,
+          "negatives": 906
+        },
+        "Edema": {
+          "positives": 131,
+          "negatives": 827
+        },
+        "Effusion": {
+          "positives": 249,
+          "negatives": 709
+        }
+      },
+      "after": {
+        "Atelectasis": {
+          "positives": 194,
+          "negatives": 712,
+          "masked": 52,
+          "n_valid": 906
+        },
+        "Cardiomegaly": {
+          "positives": 205,
+          "negatives": 724,
+          "masked": 29,
+          "n_valid": 929
+        },
+        "Consolidation": {
+          "positives": 52,
+          "negatives": 882,
+          "masked": 24,
+          "n_valid": 934
+        },
+        "Edema": {
+          "positives": 131,
+          "negatives": 767,
+          "masked": 60,
+          "n_valid": 898
+        },
+        "Effusion": {
+          "positives": 249,
+          "negatives": 682,
+          "masked": 27,
+          "n_valid": 931
+        }
+      }
+    },
+    "test": {
+      "before": {
+        "Atelectasis": {
+          "positives": 170,
+          "negatives": 426
+        },
+        "Cardiomegaly": {
+          "positives": 159,
+          "negatives": 437
+        },
+        "Consolidation": {
+          "positives": 56,
+          "negatives": 540
+        },
+        "Edema": {
+          "positives": 128,
+          "negatives": 468
+        },
+        "Effusion": {
+          "positives": 219,
+          "negatives": 377
+        }
+      },
+      "after": {
+        "Atelectasis": {
+          "positives": 170,
+          "negatives": 394,
+          "masked": 32,
+          "n_valid": 564
+        },
+        "Cardiomegaly": {
+          "positives": 159,
+          "negatives": 424,
+          "masked": 13,
+          "n_valid": 583
+        },
+        "Consolidation": {
+          "positives": 56,
+          "negatives": 530,
+          "masked": 10,
+          "n_valid": 586
+        },
+        "Edema": {
+          "positives": 128,
+          "negatives": 424,
+          "masked": 44,
+          "n_valid": 552
+        },
+        "Effusion": {
+          "positives": 219,
+          "negatives": 350,
+          "masked": 27,
+          "n_valid": 569
+        }
+      }
+    }
+  },
+  "masked_labels_excluded_confirmation": {
+    "manifest_guard_enforced": true,
+    "metrics_use_mask_equals_one_only": true,
+    "macro_metrics_average_only_valid_labels": true,
+    "masked_loss_reduction": "sum(masked_bce) / sum(mask)",
+    "micro_auroc": null,
+    "micro_auprc": null,
+    "prediction_csvs_include_mask_columns": true
+  },
+  "regenerated_artifacts": {
+    "report_json": "experiments/policyB_common5_v1/reports/policyB_no_adaptation_eval_seed2027.json",
+    "report_md": "experiments/policyB_common5_v1/reports/policyB_no_adaptation_eval_seed2027.md",
+    "val_predictions": "experiments/policyB_common5_v1/outputs/policyB_no_adaptation_eval_seed2027_val_predictions.csv",
+    "test_predictions": "experiments/policyB_common5_v1/outputs/policyB_no_adaptation_eval_seed2027_test_predictions.csv"
+  },
+  "warnings": [
+    "Micro AUROC and micro AUPRC remain intentionally disabled because a clearly mask-aware implementation has not been added yet.",
+    "The k=5 Policy B support manifest has some labels with only one class after masking. That affects metric validity for those labels but does not invalidate masked BCE loss.",
+    "Only the requested run artifacts inside experiments/policyB_common5_v1 were overwritten. Legacy root-level outputs were not modified."
+  ]
+}
